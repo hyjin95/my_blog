@@ -34,7 +34,7 @@ description: 2020.07.29 - 1일차에 배운것들 입니다.
 
 ### 자료형 int
 
-```text
+```java
 int a=1;
 int b=2;
 system.out.print=(a+b); //출력 3
@@ -42,7 +42,7 @@ int c=(a-b);
 system.out.print=(c); // 출력 3-1
 ```
 
-```text
+```java
 int a=1;
 int b=2;
 int c=(a-b);
