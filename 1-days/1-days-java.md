@@ -13,7 +13,7 @@ description: 2020.07.29 - 1일차에 배운것들 입니다.
 
 * JDK 설치
 * Eclipse 설치
-* CMD : java-version
+* CMD : java -version
 * Eclipse 실행후 text encoding &gt; UTF-8로 설정
 
 ### 개념
