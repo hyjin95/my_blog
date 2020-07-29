@@ -57,7 +57,7 @@ system.out.print(5);
 | :--- | :--- |
 | int | 정 |
 
-### 버그 확인하
+### 버그 확인하기.
 
 Breakpoint에 bookmark추가 후 Debug.As &gt; 1Java Application &gt; switch &gt; F6
 
