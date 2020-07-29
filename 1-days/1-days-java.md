@@ -61,3 +61,5 @@ system.out.print(5);
 
 Breakpoint에 bookmark추가 후 Debug.As &gt; 1Java Application &gt; switch &gt; F6
 
+후기 : 첫 날이라 따라가기 바빴지만, 시간이 갈수록 질문 및 여러가지를 더 시도할수 있는 개발자가 되 싶습니다.
+
