@@ -91,10 +91,10 @@ public class Quiz1 {
 
 	public static void main(String[] args) {
 		int a; //a는 정수다. 선언
-		a=5; //정수타입의 a에 5를 담았다. 재사용을 위한 초기
+		a = 5; //정수타입의 a에 5를 담았다. 재사용을 위한 초기
 		int b; //또 다른 변수 b를 정수로 선언했다.
-		b=a; //변수 b에 a에 담긴값을 대입했다. =는 대입연산자다. 
-		a=10;
+		b = a; //변수 b에 a에 담긴값을 대입했다. =는 대입연산자다. 
+		a = 10;
 		System.out.println("변수 a는"+a+"입니다.");//바뀌지않는다.
 		System.out.println("변수 b는"+b+"입니다.");//b는 15번에서 값이 결정되었다.
 	}
@@ -151,10 +151,10 @@ package book.ch2;
 public class Quiz2 {
 
 	public static void main(String[] args) {
-		int a=1;
-		int b=2;
-		int c=3;
-		int tot=a+b+c;
+		int a = 1;
+		int b = 2;
+		int c = 3;
+		int tot = a+b+c;
 		System.out.println(a+"+"+b+"+"+c+"="+tot);//1+2+3=6
 		System.out.println(a+"+"+b+"+"+c+"="+a+b+c);//1+2+3=123
 		System.out.println(a+"+"+b+"+"+c+"="+(a+b+c));//1+2+3=6
