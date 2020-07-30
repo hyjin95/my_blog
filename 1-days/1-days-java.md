@@ -1,5 +1,5 @@
 ---
-description: 2020.07.29 - 1일차에 배운것들 입니다.
+description: 2020.07.29 - 1일차
 ---
 
 # 1 Days - 설치 및 Java 자료형
