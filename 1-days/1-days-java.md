@@ -71,7 +71,6 @@ public class Tivoli {
 		//실행되지 않는다.
 		//printhln메소드는 JDK에 내장되어있는 메소드이다.
 		System.out.print(5);
-		// TODO Auto-generated method stub
 	}
 
 }
