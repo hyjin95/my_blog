@@ -84,6 +84,8 @@ public class Tivoli {
 | :--- | :--- |
 | int | 정수 |
 
+int는 정수만 담기때문에 3.14를 대입하면 0.14는 overflow된다.
+
 ### 버그 확인하기
 
 Breakpoint에 bookmark추가 후 Debug.As &gt; 1Java Application &gt; switch &gt; F6
