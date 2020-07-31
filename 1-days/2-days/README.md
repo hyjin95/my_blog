@@ -119,14 +119,14 @@ public class Quiz4 {
 		int tot = 0; //0으로 초기화
 		int a = 1;
 		for(int i=0;i<10;i=i+1) {
-			//System.out.println(i);
-			tot = tot+a; //tot=0+1, tot=1+1, tot=2+1
-			//System.out.println(tot+a);
-		  //System.out.println(tot);//1,3,6,~55 =10번 반복한다.
-		    a = a+1;			
+	        //System.out.println(i);
+		tot = tot+a; //tot=0+1, tot=1+1, tot=2+1
+		//System.out.println(tot+a);
+		//System.out.println(tot);//1,3,6,~55 =10번 반복한다.
+		a = a+1;			
 		}
-		System.out.println(tot);//55 =for문 밖이기때문에 최종 값만 도출된다.
-
+		System.out.println(tot);
+		//55 =for문 밖이기때문에 최종 값만 도출된다.
 	}
 
 }
@@ -152,14 +152,14 @@ package book.ch2;
 public class Quiz2 {
 
 	public static void main(String[] args) {
-		int a = 1;
-		int b = 2;
-		int c = 3;
-		int tot = a+b+c;
-		System.out.println(a+"+"+b+"+"+c+"="+tot);//1+2+3=6
-		System.out.println(a+"+"+b+"+"+c+"="+a+b+c);//1+2+3=123
-		System.out.println(a+"+"+b+"+"+c+"="+(a+b+c));//1+2+3=6
-		System.out.println("a+b*c===>"+(a+b*c));//a+b*c===>7
+	       int a = 1;
+	       int b = 2;
+	       int c = 3;
+	       int tot = a+b+c;
+	    System.out.println(a+"+"+b+"+"+c+"="+tot);//1+2+3=6
+	    System.out.println(a+"+"+b+"+"+c+"="+a+b+c);//1+2+3=123
+	    System.out.println(a+"+"+b+"+"+c+"="+(a+b+c));//1+2+3=6
+	    System.out.println("a+b*c===>"+(a+b*c));//a+b*c===>7
 	    System.out.println("(a+b)*c===>"+((a+b)*c));//(a+b)*c===>9
 
 	}
