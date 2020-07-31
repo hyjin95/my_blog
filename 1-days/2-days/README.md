@@ -37,7 +37,8 @@ public class Method1 {
 		Method1 m1 = new Method1();//클래스의 인스턴스화
 		m1.methodA();//클래스 안에 있는 메소드 호출
 		System.out.println("methodA 호출 성공");
-	}//main메소드가 없으면 이 클래스는 실행되지않는다. methodA라는 명령어만 가지고 있는 것이다.
+	}//main메소드가 없으면 이 클래스는 실행되지않는다.
+	 // methodA라는 명령어만 가지고 있는 것이다.
 }
 
 ```
