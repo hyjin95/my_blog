@@ -24,7 +24,7 @@ description: '다양한 참고, 서적 및 강의 링크'
 
 ### 리액트 : [https://thebook.io/080203/](https://thebook.io/080203/)
 
-## 면
+## 면접
 
 ### [https://github.com/JaeYeopHan/Interview\_Question\_for\_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
 
