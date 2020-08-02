@@ -9,14 +9,14 @@ description: 2020.07.31 - 3일차
 1. Primative Data Type : 기본형  정수형 : byte, short, int, long 문자형 : char 실수형 : float, double 논리형 : boolean
 2. Reference Type : 참조형
 
-### 지역변수, 전역변
+### 지역변수, 전역변수
 
 * RAM은 stack과 heap으로 구분할 수 있다.  stack : 공간이 더 작고, 인스턴스변수와 지변수가 저장된다. heap : 공간이 더 크며, 클래스와 클래스 안의 변수가 저장된다.
 * 로컬변수 :  메소드안에서 선언된 변수와 파라미터 변를 말하며, 메소드 범위인 "{-}" 중괄호 안에서만 유지된다. 메소드 밖에서는 값이 유지 되지 않고, 반드시 초기화를 해야한다.
 * 멤변수 : 클래스 영역 변수를 말하며, 인스턴스를 가지고 있는 동안에는 초기화 하지 않아 기본값으로 유지된다. 
 * 인스턴스 변수 : 클래스를 인스턴스화 할때 필요한 주소 개념으로 stack에 저장된다.
 * 같은 변수를 두 번 선언할 수 있다. \(지역변수, 전역변수\) 
-* 참고 링크 : [https://itellyhood.tistory.com/m/32](https://itellyhood.tistory.com/m/32)
+* 참고 링크 : [https://itellyhood.tistory.com/m/32](https://itellyhood.tistory.com/m/32) [http://tcpschool.com/java/java\_member\_field](http://tcpschool.com/java/java_member_field)
 
 ### i에 대하
 
@@ -24,7 +24,7 @@ description: 2020.07.31 - 3일차
 
 ### 변수를 이용해 코드 만들기
 
-#### 내가 한 것
+#### 나
 
 ```java
 package book.ch2;
@@ -83,7 +83,7 @@ public class Sonata_Teacher {
 * 메인메소드를 메인스레드\(Main Thread\)라고도 하며, 실행 우선순위 1번이다.
 * 수식을 사용할 때 괄호는 써도되고 안써도 되지만, 계산에 영향을 주는 때에는 주의해야한다.
 * speed를 클래스에서 int로 선언 했으므로, speedUP과 speedDown값을 초기화 할때에는 타입을 쓰지 않아도 된다.
-* 메인메소드에서 불러온 메소드 안에 speed가 수식으로 지정되어있기때문에 출력할때 speed만 출력하여도 값이 나다. \(현재속도\)
+* 메인메소드에서 불러온 메소드 안에 speed가 수식으로 지정되어있기때문에 출력할때 speed만 출력해도 값이 나온다. \(현재속도\)
 
 ### 전역변수와 지역변수
 
@@ -120,7 +120,7 @@ public class P49 {
 
 * 클래스멤버변로 i가 int타입으로 선언만 되었기 때문에 클래스에서 i는 기본 값인 0이 된다.
 * main thread안의 i와 methodB의 파라미터 i는 지역변수이다.
-*  p49는 인스턴스 변이다.
+*  p49는 인스턴스 변수이다.
 * methodA에서의 i 값은 선언, 초기화 되지않았기 때문에 클래스안의 인스턴변수 i값을 갖게된다. 이 i는 main Thread안에 호출되어도 값에 영향을 받지 않는다.
 * methodB는 파라미터에 int i 가 main Thread에 호출되면 초기화된 i 값에 영향을 받는다. 
 * float 타입을 사용할때는 값뒤에 f를 붙여야한다.
@@ -144,7 +144,8 @@ public class P77_1 {
 		//거짓말일때, x=2, y=1
 		System.out.println("x="+x+", y="+y);		
 		System.out.println("=======[[after]]=======");		
-		//위의 결과가 밑에 조건문에 영향을 끼친다. 똑같은 조건으로 하려면 다시 초기화를 해야한다.
+		//위의 결과가 밑에 조건문에 영향을 끼친다. 
+		//똑같은 조건으로 하려면 다시 초기화를 해야한다.
 		x = 1;
 		y = 2;
 		if((++x<y)&&(x>y--)) {//참일때
@@ -196,30 +197,28 @@ public class P77_1 {
 package book.ch3;
 
 public class Parameter1 {
-	//Parameter1 p2 = new Parameter1();//p2는 인스턴스변이다.
-	//값에 의한 호출로 지변 x에는 10이, 지변 y에는 20이 담긴다.
-	void methodA(int x, int y) {//x=10. y=20
+
+	int methodA(int x, int y) {//x=10. y=20
 		System.out.println("methodA호출 성공");
 		//p2.methodA(1,2);
 		System.out.println(x+y);
-		
-	}
-	//메소드 선언할때 반환 타입을 결정할 수 있다.
-	//리턴 타입이 있는 경우 실행문 마지막에 반드시 return이라는 예약어를
-	//써 주어야 한다.
-	//이때, 리턴 다음에는 값이나 변수명이 올 수 있다.
-	//단, 변수의 타입이 리턴의 타입과 반드시 일치해야 한다.
-	double methodB(double d1, double d2) {
-		System.out.print(d1+d2);
 		return 0;
+	}
+
+	double methodB(double d1, double d2) {
+		System.out.println(d1+d2);
+		return 0.0;
 	}
 	
 	public static void main(String[] args) {
 	//RAM영역에 Prameter1클래스를 로딩하기
-		Parameter1 p1 = new Parameter1();//p1은 인스턴스변이다.
-		p1.methodA(10, 20);
-		double hap = p1.methodA(10, 20);
-		double hap2 = p1.methodB(10, 20);
+		Parameter1 p1 = new Parameter1();
+		p1.methodA(10, 20);//methodA실행
+		int hap = p1.methodA(10, 20);//methodA실행
+		double hap2 = p1.methodB(10, 20);//methodB실행
+		
+		System.out.println(hap);
+		System.out.println(hap2);
 
 	}
 
@@ -228,6 +227,9 @@ public class Parameter1 {
 ```
 
 * 리턴 타입 : 메소드를 선언할때 반환 타입을 정할 수 있는데 이를 리턴타입이라 한다. 실행문 마지막에 반드시 return이라는 예약어를 써주어야 하며, return다음에 값이나 변수명이 올 수 있다. 이때, 변수의 타입이 리턴의 타입과 반드시 일치해야 한다.
+* 메서드는 호출되면 실행된다.
+* methodA와 B는 호출되어 10,20의 값을 넣어 진행되다가 0과 0.0으로 리턴되기 때문에 hap이 0, hap2가 0.0으로 출력된다.
+* 결과 출력 methodA호출 성공  30  methodA호출 성공  30 30.0  0  0.0
 
 ### System.out.print\(\)
 
@@ -253,10 +255,10 @@ public class Print {
 
 ```
 
-* print는 자바에서 제공되므로 반드시 파라미터의 갯수와 타입이 일치해야 문법에러를 피할 수 있다.
+* print는 자바에서 제공되어 반드시 파라미터의 갯수와 타입이 일치해야 문법에러를 피할 수 있다.
 * print\(\)처럼 파라미터가 비어있으면 출력되지 않는다.
 * println\(\)은 줄바꿈이 포함되어있어 출력된다.
 * 14번 처럼 인스턴스변수p1을 이용하여 다른 클래스의 메서드를 호출할 수 있다. 이 경우에는 print의 파라미터의 갯수와 타입이 Parameter1클래스 methodB 파라미터의 갯수와 타입이 일치하기때문에 출력 가능하다.
 
-후기 : 자료를 많이 찾아봐서 끝까지 이해하도록 노력하
+후기 : 자료를 많이 찾아봐서 끝까지 이해하도록 노력하자. 용어를 정확히 알고 쓰도록 하자.
 

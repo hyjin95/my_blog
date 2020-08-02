@@ -7,6 +7,7 @@
 ---
 
 * [KOSMO](1-days/README.md)
+  * [참고](1-days/undefined-2.md)
   * [단축키](1-days/undefined.md)
   * [1 Days - 설치 및 Java 자료형](1-days/1-days-java.md)
   * [2 Days - 인스턴스화, 변수, 초기화](1-days/2-days/README.md)
