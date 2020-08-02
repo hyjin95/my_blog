@@ -4,7 +4,11 @@ description: '다양한 참고, 서적 및 강의 링크'
 
 # 참고
 
-## 사이
+## 참고
+
+### [https://awesome-devblog.netlify.app/](https://awesome-devblog.netlify.app/)
+
+## 강
 
 ### 깃헙\(github\) : [https://github.com/](https://github.com/)
 
@@ -19,4 +23,8 @@ description: '다양한 참고, 서적 및 강의 링크'
 ## 서적
 
 ### 리액트 : [https://thebook.io/080203/](https://thebook.io/080203/)
+
+## 면
+
+### [https://github.com/JaeYeopHan/Interview\_Question\_for\_Beginner](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
 
