@@ -8,6 +8,8 @@ description: '다양한 참고, 서적 및 강의 링크'
 
 ### [https://awesome-devblog.netlify.app/](https://awesome-devblog.netlify.app/)
 
+### 자바스크립트 : [https://ko.javascript.info/](https://ko.javascript.info/)
+
 ## 강의
 
 ### 깃헙\(github\) : [https://github.com/](https://github.com/)
