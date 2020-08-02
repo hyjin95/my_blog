@@ -8,7 +8,11 @@ description: '다양한 참고, 서적 및 강의 링크'
 
 ### [https://awesome-devblog.netlify.app/](https://awesome-devblog.netlify.app/)
 
-### 자바스크립트 : [https://ko.javascript.info/](https://ko.javascript.info/)
+### 자바스크립트 
+
+###  [https://ko.javascript.info/](https://ko.javascript.info/)
+
+### \*\*\*\*[**https://github.com/trekhleb/javascript-algorithms/blob/master/README.ko-KR.md**](https://github.com/trekhleb/javascript-algorithms/blob/master/README.ko-KR.md)\*\*\*\*
 
 ## 강의
 
