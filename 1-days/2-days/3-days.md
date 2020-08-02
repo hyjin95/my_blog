@@ -11,15 +11,16 @@ description: 2020.07.31 - 3일차
 
 ### 지역변수, 전역변
 
-* RAM은 stack과 heap으로 구분할 수 있다.  stack : 공간이 더 작고, 인스턴스변수와 메소드 안의 변수가 저장된다. heap : 공간이 더 크며, 클래스와 클래스 안의 변수가 저장된다.
-* 지역변수 :  메소드안에서 선언된 변수를 말하며, 메소드 범위인 "{지역변수}" 중괄호 안에서만 유지된다. 메소드 밖에서는 값이 유지 되지 않고, 반드시 초기화를 해야한다.
-* 전역변수 : 메소드 안이 아닌, 클래스 밑에서 선언된 변수를 말하며, 인스턴스를 가지고 있는 동안에는 초기화 하지 않아 기본값으로 유지된다. 
+* RAM은 stack과 heap으로 구분할 수 있다.  stack : 공간이 더 작고, 인스턴스변수와 지변수가 저장된다. heap : 공간이 더 크며, 클래스와 클래스 안의 변수가 저장된다.
+* 로컬변수 :  메소드안에서 선언된 변수와 파라미터 변를 말하며, 메소드 범위인 "{-}" 중괄호 안에서만 유지된다. 메소드 밖에서는 값이 유지 되지 않고, 반드시 초기화를 해야한다.
+* 멤변수 : 클래스 영역 변수를 말하며, 인스턴스를 가지고 있는 동안에는 초기화 하지 않아 기본값으로 유지된다. 
 * 인스턴스 변수 : 클래스를 인스턴스화 할때 필요한 주소 개념으로 stack에 저장된다.
 * 같은 변수를 두 번 선언할 수 있다. \(지역변수, 전역변수\) 
+* 참고 링크 : [https://itellyhood.tistory.com/m/32](https://itellyhood.tistory.com/m/32)
 
 ### i에 대하
 
-* 타입 int 의 경우에 RAM에 저장되는 것들은 각각의 숫자 주소를 갖게 된다.  이를 불러올때, i를 사용하는데 전역변수가 아닌 지역변수로만 사용한다.
+* 타입 int 의 경우에 RAM에 저장되는 것들은 각각의 숫자 주소를 갖게 된다.  이를 불러올때, i를 사용하는데 이 i 지역변수로만 사용한다.
 
 ### 변수를 이용해 코드 만들기
 
@@ -90,7 +91,6 @@ public class Sonata_Teacher {
 package book.ch2;
 
 public class P49 {
-	//전역변수는 클래스 전역에서 사용할 수 있다.
 	int i; 
 		
 	public static void main(String[] args) {
@@ -118,12 +118,12 @@ public class P49 {
 
 ```
 
-* 전역변수\(global, member, instance variable\)로 i가 int타입으로 선언만 되었기 때문에 클래스에서 i는 기본 값인 0이 된다.
-* 지역변수\(local, automatic variable\)로는 main Thread의 i가 해당된다.
-* methodA에서의 i 값은 선언, 초기화 되지않았기 때문에 클래스안의 전역변수 i값을 갖게된다. 이 i는 methodA의 {-}안에 지정되었기때문에 main Thread안에 호출되어도 값에 영향을 받지 않는다.
-* methodB는 파라미터에 int i 가 선언되어 main Thread에 호출되면 main Thread에서 초기화된 i 값에 영향을 받는다. = 파라미터에 선언된 변수도 지역변이다.
+* 클래스멤버변로 i가 int타입으로 선언만 되었기 때문에 클래스에서 i는 기본 값인 0이 된다.
+* main thread안의 i와 methodB의 파라미터 i는 지역변수이다.
+*  p49는 인스턴스 변이다.
+* methodA에서의 i 값은 선언, 초기화 되지않았기 때문에 클래스안의 인스턴변수 i값을 갖게된다. 이 i는 main Thread안에 호출되어도 값에 영향을 받지 않는다.
+* methodB는 파라미터에 int i 가 main Thread에 호출되면 초기화된 i 값에 영향을 받는다. 
 * float 타입을 사용할때는 값뒤에 f를 붙여야한다.
-* 인스턴스 변수로 지역변수는 접근할 수 없고, 전역변수만 접근할 수 있다. 
 
 ### 대입, 증감 연산자, &과 &&, \|와 \|\|, if와 else
 
@@ -186,6 +186,9 @@ public class P77_1 {
 * 대입연산자 : = 같다 : ==
 * x = ++y;  /  x = --y;  :  증감연산자가 앞에 있으면 선 증감, 후 대입으로 이루어진다.
 * x = y++;  /  x = y--;  :  증감연산자가 뒤에 있으면 선 대입, 후 증감으로 이루어진다.
+* &와 \|는 조건 모두를 계산하기때문에 x와 y의 값이 계산이 모두 이루어진 뒤에 정해진다.
+* &&와 \|\|는 첫 조건이 false면 더이상 계산하지 않기 때문에 x와 y의 값이 진행되지 않는다.
+* if : \(~가 참이면\) {-} else\(거짓이면\){-}
 
 ### 리턴 타입과 값
 
@@ -193,9 +196,8 @@ public class P77_1 {
 package book.ch3;
 
 public class Parameter1 {
-	//Parameter1 p2 = new Parameter1();//p2는 전변이다.
-	//값에 의한 호출입니다.
-	//그래서 지변 x에는 10이 담기고, 지변y 에는 20이 담긴다.
+	//Parameter1 p2 = new Parameter1();//p2는 인스턴스변이다.
+	//값에 의한 호출로 지변 x에는 10이, 지변 y에는 20이 담긴다.
 	void methodA(int x, int y) {//x=10. y=20
 		System.out.println("methodA호출 성공");
 		//p2.methodA(1,2);
@@ -214,7 +216,7 @@ public class Parameter1 {
 	
 	public static void main(String[] args) {
 	//RAM영역에 Prameter1클래스를 로딩하기
-		Parameter1 p1 = new Parameter1();//p1은 지변이다.
+		Parameter1 p1 = new Parameter1();//p1은 인스턴스변이다.
 		p1.methodA(10, 20);
 		double hap = p1.methodA(10, 20);
 		double hap2 = p1.methodB(10, 20);
@@ -224,6 +226,10 @@ public class Parameter1 {
 }
 
 ```
+
+* 리턴 타입 : 메소드를 선언할때 반환 타입을 정할 수 있는데 이를 리턴타입이라 한다. 실행문 마지막에 반드시 return이라는 예약어를 써주어야 하며, return다음에 값이나 변수명이 올 수 있다. 이때, 변수의 타입이 리턴의 타입과 반드시 일치해야 한다.
+
+### System.out.print\(\)
 
 ```java
 package book.ch3;
@@ -239,11 +245,18 @@ public class Print {
 		System.out.println();
 		System.out.println("하나");
 		Parameter1 p1 = new Parameter1();
-		System.out.print("\n"+p1.methodB(1.5,  2.5));
+		System.out.print("\n"+p1.methodB(1.5,  2.5)); //4.0
 
 	}
 
 }
 
 ```
+
+* print는 자바에서 제공되므로 반드시 파라미터의 갯수와 타입이 일치해야 문법에러를 피할 수 있다.
+* print\(\)처럼 파라미터가 비어있으면 출력되지 않는다.
+* println\(\)은 줄바꿈이 포함되어있어 출력된다.
+* 14번 처럼 인스턴스변수p1을 이용하여 다른 클래스의 메서드를 호출할 수 있다. 이 경우에는 print의 파라미터의 갯수와 타입이 Parameter1클래스 methodB 파라미터의 갯수와 타입이 일치하기때문에 출력 가능하다.
+
+후기 : 자료를 많이 찾아봐서 끝까지 이해하도록 노력하
 
