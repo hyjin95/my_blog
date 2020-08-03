@@ -2,7 +2,7 @@
 description: 2020.08.03 - 4일차
 ---
 
-# 4Days -
+# 4Days - 메소드호출, static, 타입변환
 
 ### 복습 질문
 
