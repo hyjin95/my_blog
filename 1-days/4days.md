@@ -31,25 +31,80 @@ description: 2020.08.03 - 4일차
    * ID와 PW는 변수
    * 파라미터에는 사용자가 입력하는 값이 들어간다. 두 개 이상일 수 있다.
 
-### 클래스에서의 메소드 호출
+### 학습목
+
+* 메소드의 파라미터에 선언되는 변수가 무엇인지 설명할 수 있다.
+* 메인메소드에 클래스 안의 메소드를 호출 할 수 있다.
+
+### 변수와 인스턴스화 이용하기
+
+```java
+package book.ch3;
+
+public class SungJuk {
+	/*********************************************
+	 * 홍길동 학생의 국어, 수학, 영어 점수를 파라미터로 받아옵니다.
+	 * hap메소드를 설계할때, 리턴타입을 int로 한 이유는 avg메소드에서
+	 * 재사용하기 위함이다.
+	 * @param jumsu1 = 75
+	 * @param jumsu2 = 80
+	 * @param jumsu3 = 90
+	 * @return int
+	 *********************************************/
+	int hap(int jumsu1, int jumsu2, int jumsu3) {
+		int sum;
+		sum = jumsu1 + jumsu2 + jumsu3;
+		return sum;
+	}
+	double avg(double result) {
+		double answer;
+		answer = result/3;				
+		return answer;		
+	}
+
+	public static void main(String[] args) {
+		SungJuk sj = new SungJuk();
+		double result = sj.hap(75, 80, 90);
+		
+		System.out.println(sj.avg(result));			
+		
+	}
+
+}
+
+```
+
+* 사용 변수: hap, sum, avg, answer, result
+* 13번의 hap메소드는 리턴타입은 int이고, 세 파라미터의 합인 sum을 변수를 갖고있다.
+* 18번의 avg메소드의 리턴타입은 double이고,  result변수의 /3을 한 answer변수를 갖고있다.
+* int hap메소드의 파라미터와 변수들은 모두 int타입, double avg메소드의 파라미터와 변수들은 모두 double타입이다.
+* static main메소드에서 클래스를 인스턴스화하여 hap메소드에 값을 지정하여 이를 avg메소드에 대입하였다.
+* 결과출력 : 81.0
+
+### static 클래스에서의 메소드 호출
+
+static variable == class variable == 정적변수  
+static 메소드는 JDK에서 제공하는 메소드이고 그 외에는 사용자가 정의하는 메소드이다.  
+public : 공유하는,+  
+private : 비공유하는,-  
+public &gt; protected &gt; friendly &gt; private  
+접근제한자 / static / 타입 / 메소드이름 / \(파라미터\) ex\)\(String arg\[배\]\)
 
 ```java
 package book.ch2;
 //주석은 실행되지 않습니다.
-//주석에는 업무에 대한 내용과 담당자 이름, 버전정보 등 회사 고유 업무내용이 포함됩니다.
+//주석에는 업무에 대한 내용과 담당자 이름, 버전정보 등 회사 고유 업무내용이 포함된다.
 //따라서 배포할땐 XXX.class만 배표해야한다.
 public class Variable2 {
-	//전역변수의 위치. 지금 이 클래슨에 전역변수는 없다.
+	//전역변수의 위치. 지금 이 클래에 전역변수는 없다.
 	int i;//전변생성, 기본값으로 0을 갖는다.
 	/**********************************************
 	 * 로그인 버튼을 누르면 이 메소드를 호출합니다.
 	 * @param id - 사용자가 입력하는 값을 받는다.
 	 * @param pw - 사용자가 입력하는 비번을 받는다.
 	 * @return - id와 pw를 비교해서 모두 일치하면(교집합)
-	 * 학습목표
-	 * 나는 메소드의 파라미터 자리에 선언되는 변수가 무엇인지 
-	 * 설명할 수 있다.
-	 * 내 안에 있는 메소드라 하더라도 메인메소드에서 호출 하려면
+	 * 	 * 
+	 * 내 안에 있는 메소드 메인메소드에서 호출 하려면
 	 * 인스턴스화한 후 인스턴스변수.login("apple","123"); : 메소드호출
 	 * 회원가입 - 등록 - 오라클
 	 * 로그인 - 조회(찾기)
@@ -72,12 +127,20 @@ public class Variable2 {
 		v2.login("haha","123");//메인메소드에서는 인스턴스화 필수
 		v2.methodA(5);
 		v2.methodB();
-		System.out.println("전역변수 i: "+v2.i);
+		System.out.println("전역변수 i : "+v2.i);
 
 	}
 
 }
 ```
+
+* class밑의 int i 는 인스턴스변수로, 기본값 0을 갖는다.
+* methodA의 파라미터 i는 지역변수이다.
+* methodA는 메인 메소드가 아니기때문에 login메소드를 바로 호출 할 수 있다.
+* main 메소드는 다른 메소드를 호출하기 위해 인스턴스화가 필요하다.
+* 메인메소드에서 인스턴스변수 i를 호출하는 법 1. 27-29번, 36번 처럼 인스턴스변수i를 갖는 메소드를 만든다. 2. 37번 처럼 인스턴스화를 이용하여 바로 호출할 수 있다.
+* 35번 에서 methodA는 파라미터로 int i를 갖기때문에 정수 값을 넣어주어야 실행된다.
+* 출력결과 5 0 전역변수 i : 0
 
 ```java
 package book.ch2;
@@ -118,7 +181,12 @@ public class B {
 
 ```
 
-### Static 클래스
+* 한 클래스 안에는 여러 메소드를 선언할 수 있다.
+* 9번은 다른 클래스의 메소드는 인스턴스화 없이는 불러 올 수 없기때문에 실행불가능하다.
+* static main 메소드에서는 다른 메소드를 사용하기 위해서는 인스턴스화가 필요하다,
+* 출력결과 home 호출 성공 go호출 성공 home호출 성공
+
+### 타입 변
 
 ```java
 package book.ch2;
@@ -143,41 +211,15 @@ public class B {
 
 ```
 
-```java
-package book.ch3;
+* 타입변환 string타입의 문자를 int타입의 정수로 변환시켜주는 등..타입을 변환시켜준다. 자바에서 데이터 손실이 일어나는 변환은 실행되지 않는다.\(큰 자료형에서 작은 자료형으로\)
+* 예약어 : parse타입
+* 7번에서 int타입 val 변수는 문자인 "10"을 int타입으로 변환시켜 정수 10을 값으로 갖는다.
+* 8번에서 double타입 dval변수는 문자인 "3.14"를 double타입으로 변환시켜 실수를 값으로 갖는다.
+* 9번에서 String타입 sval변수는 문자 "10"을 값으로 갖는다.
+* 10번에서 int타입 val2변수는 위의 sval변수의 값을 int타입으로 변환시켜 정수의 값을 갖는다.
+* 결과출력 10 : 숫자 3.14 : 숫자 10 : 문자 10 : 숫자
 
-public class SungJuk {
-	/*********************************************
-	 * 홍길동 학생의 국어, 수학, 영어 점수를 파라미터로 받아옵니다.
-	 * hap메소드를 설계할때, 리턴타입을 int로 한 이유는 avg메소드에서
-	 * 재사용하기 위함이다.
-	 * @param jumsu1 = 75
-	 * @param jumsu2 = 80
-	 * @param jumsu3 = 90
-	 * @return int
-	 *********************************************/
-	int hap(int jumsu1, int jumsu2, int jumsu3) {
-		int sum;
-		sum = jumsu1 + jumsu2 + jumsu3;
-		return sum;
-	}
-	double avg(double result) {
-		double answer;
-		answer = result/3;				
-		return answer;		
-	}
-
-	public static void main(String[] args) {
-		SungJuk sj = new SungJuk();
-		double result = sj.hap(75, 80, 90);
-		
-		System.out.println(sj.avg(result));			
-		
-	}
-
-}
-
-```
+### JOption.showInputDialog 예약어와 타입변
 
 ```java
 package book.ch2;
@@ -214,6 +256,17 @@ public class Addition {
 
 ```
 
+* return type 정하기 : 응답 값
+* parameter type 정하기 : 사용자가 입력하는 요청 값
+* 10-11번에서 String타입 firstNumber변수는 인풋창에 입력되는 값을 문자 형태로 갖는다.
+* 13번에서 Stirng타입 secondNumber변수는 문자 "10"으로 초기화한다.
+* 20-21번에서 위의 두 변수의 String타입을 int타입으로 변환한다.
+* 결과출력 \(firstNumber을 5로 입력했을때\) 5 10 15
+
+### 예시를 만들어보자
+
+#### 입력값을 세번 곱하여 그 값을 창에 띄워주는 코드
+
 ```java
 package book.ch2;
 
@@ -237,6 +290,8 @@ public class Addition2 {
 }
 
 ```
+
+#### 입력값 3개를 곱하여 그 값을 창에 띄워주는 코
 
 ```java
 package book.ch2;
@@ -273,6 +328,10 @@ public class Addition3 {
 
 ```
 
+system.exit\(0\);은 자바 가상머신과의 연결고리를 끊는\(==0\)역할을 한다
+
+#### 입력된 두 숫자를 더하고 그 값을 출력하는 코드
+
 ```java
 package book.ch2;
 
@@ -299,6 +358,10 @@ public class C {
 }
 ```
 
+#### 선생님이 주신 예제 문
+
+달의 중력은 지구 중력의 17%에 불과합니다. 지구에서 몸무게가 100kg인 사람은 달에 가면 17kg밖에 안됩니다. 몸무게 N은 실수이고 키보드로부터 입력받습니다.
+
 ```java
 package book.ch2;
 
@@ -323,6 +386,8 @@ public class D {
 
 ```
 
+### 강제 형전환
+
 ```java
 package book.ch2;
 /*
@@ -338,7 +403,8 @@ public class E {
 		int i = 1;
 		double d = i;
 		//i = d;//double의 범위가  int보다 넓으므로 성립되지않는다.
-		i = (int)d;//강제 형전환, 왼쪽에 대입하므로 왼쪽 타입으로 강제형전환 하도록 한다.
+		//강제 형전환, 왼쪽에 대입하므로 왼쪽 타입으로 강제형전환 하도록 한다.
+		i = (int)d;
 		d = i;
 		float f = 1.5f;
 		i = (int)f;
@@ -352,6 +418,19 @@ public class E {
 }
 
 ```
+
+* a항 = b항 : 대입연산자의 오른쪽에 있는 값을 왼쪽에 대입한다.
+* 14번처럼 큰 타입의 변수를 작은 타입의 변수에 대입하는건 오류가 날 수 있다.
+* 강제 형전환 : 변수 = \(전환타입\)변수이름;
+* i는 int타입으로 정수 1값이고, d는 double로 실수 값을 갖기 때문에 12, 13번이 성립한다.
+* 16번에서 i는 int로 변환되어 소수점이 없는 1을 값으로 갖는다.
+* 17번에서 d는 정수 1을 값으로 갖는다.
+* 19번에서 i는 int로 변환되어 소수점이 없는 1을 값으로 갖는다.
+* 20번에서 f1은 float으로 변환 d의 1값을 갖는다.
+* 결과출력 1 1.0 \(float는 실수타입으로 소수점을 갖는다.\)
+* 참고 : [https://blog.naver.com/pdh6941/221771802609](https://blog.naver.com/pdh6941/221771802609)
+
+### 다음시간 맛보
 
 ```java
 package book.ch2;
@@ -375,5 +454,8 @@ public class E2 {
 
 ```
 
+* arg는 0부터 시작한다.
 * Run as - Run Copiguration - 메인클래스 선택 - Arguments
+
+후기 : 4일차에는 선생님이 주신 예제문제도 잘 풀었다. 앞으로도 주신 코드를 바탕으로 많은 시도를 하면서 공부를 해야겠다는 생각이 든다.
 
