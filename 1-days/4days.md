@@ -377,7 +377,3 @@ public class E2 {
 
 * Run as - Run Copiguration - 메인클래스 선택 - Arguments
 
-```java
-
-```
-
