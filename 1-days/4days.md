@@ -430,7 +430,7 @@ public class E {
 * 결과출력 1 1.0 \(float는 실수타입으로 소수점을 갖는다.\)
 * 참고 : [https://blog.naver.com/pdh6941/221771802609](https://blog.naver.com/pdh6941/221771802609)
 
-### 다음시간 맛보
+### 다음시간 맛보기
 
 ```java
 package book.ch2;
