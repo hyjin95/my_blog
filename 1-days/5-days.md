@@ -263,7 +263,7 @@ public class Test_random {
 * 질의어\(DQL : Data Query Language\) SELECT : 데이터 검색, 조희 \(==네이버지식인\)
 * 데이터조작어\(DML : Data Manipulation Language\) : 데이터에 변화를 일으킨다. INSERT : 데이터 입력, 등록 UPDATE : 데이터 수정 DELETE : 데이터 삭제, 탈퇴
 
-### 숙
+### 숙제
 
 1~100을 출력하는데, 5의 배수는 "fizz", 7의 배수는 "buzz", 5와7의 공배수는 "fizzbuzz"로 출력되도록 순서도를 그리고 코드를 작성하시오.
 
