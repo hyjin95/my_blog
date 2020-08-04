@@ -111,6 +111,8 @@ public class Quiz1 {
 * 10번에서 a 바뀌지만  b 이미 결정되었기때문에 영향을 받지않는다.
 * "같다" : ==
 
+### 조건문 사용\(for문\)
+
 ```java
 package book.ch2;
 
