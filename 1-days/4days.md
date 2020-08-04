@@ -186,7 +186,7 @@ public class B {
 * static main 메소드에서는 다른 메소드를 사용하기 위해서는 인스턴스화가 필요하다,
 * 출력결과 home 호출 성공 go호출 성공 home호출 성공
 
-### 타입 변
+### 타입 변환
 
 ```java
 package book.ch2;
@@ -219,7 +219,7 @@ public class B {
 * 10번에서 int타입 val2변수는 위의 sval변수의 값을 int타입으로 변환시켜 정수의 값을 갖는다.
 * 결과출력 10 : 숫자 3.14 : 숫자 10 : 문자 10 : 숫자
 
-### JOption.showInputDialog 예약어와 타입변
+### JOption.showInputDialog 예약어와 타입변환
 
 ```java
 package book.ch2;
