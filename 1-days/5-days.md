@@ -8,6 +8,8 @@ description: 2020.08.04 - 5일차
 
 * 조건문과 반복문을 자유롭게 사용할 수 있다.
 
+### for, if 이해하기
+
 ```java
 package book.ch4;
 
@@ -30,6 +32,8 @@ public class ForTest {
 
 ```
 
+### for, if 사용하기
+
 ```java
 package book.ch4;
 
@@ -39,7 +43,7 @@ public class IfTest extends Object//상속(의존적), 부모객체
                                    {
 
 	public static void main(String[] args) {
-		//사용자로부터 점수를 입력 받고, 점수 변수를 선언하세요.
+	        //사용자로부터 점수를 입력 받고, 점수 변수를 선언하세요.
 		//"점수를입력하세요."=객체
 		//String보다 상위이다.
 		String score = JOptionPane.showInputDialog("점수를 입력해주세요.");//요청=파라미터
@@ -77,6 +81,8 @@ public class IfTest extends Object//상속(의존적), 부모객체
 }
 
 ```
+
+### 예제 문제
 
 ```java
 package book.ch4;
