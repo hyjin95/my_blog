@@ -267,6 +267,38 @@ public class Test_random {
 
 1~100을 출력하는데, 5의 배수는 "fizz", 7의 배수는 "buzz", 5와7의 공배수는 "fizzbuzz"로 출력되도록 순서도를 그리고 코드를 작성하시오.
 
+```java
+package book.ch4;
+
+public class Test0805 {
+
+	public static void main(String[] args) {
+		
+		for(int i=1; i<=100; i=i+1) {
+			
+			if((i%5==0)&&(i%7==0)) {
+				System.out.println("fizzbuzz");
+			}//end of if
+			
+			else if(i%5==0) {
+				System.out.println("fizz");
+			}//end of else if
+			
+			else if(i%7==0) {
+				System.out.println("buzz");
+			}//end of else if
+			
+			else {
+				System.out.println(+i);
+			}
+		}//end of for
+
+	}
+
+}
+
+```
+
 후기 : 모르는 것을 검색하는 것도 중요하다. 검색 키워드를 바로 알고 검색하도록 하자!  
 새로배운 예약어 : JOptionPane.showInputDialog\("String"\); : 입력창 띄우기Integer.parseInt\(변수이름\); : int로 형전환
 
