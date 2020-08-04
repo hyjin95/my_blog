@@ -2,7 +2,7 @@
 description: 2020.08.03 - 4일차
 ---
 
-# 4Days - 메소드호출, static, 타입변환
+# 4Days - 메소드호출, static, 형전환
 
 ### 복습 질문
 
@@ -186,7 +186,7 @@ public class B {
 * static main 메소드에서는 다른 메소드를 사용하기 위해서는 인스턴스화가 필요하다,
 * 출력결과 home 호출 성공 go호출 성공 home호출 성공
 
-### 타입 변환
+### 형전환, 타입 변환
 
 ```java
 package book.ch2;
