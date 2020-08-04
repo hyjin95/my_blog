@@ -88,7 +88,7 @@ static 메소드는 JDK에서 제공하는 메소드이고 그 외에는 사용�
 public : 공유하는,+  
 private : 비공유하는,-  
 public &gt; protected &gt; friendly &gt; private  
-접근제한자 / static / 타입 / 메소드이름 / \(파라미터\) ex\)\(String arg\[배\]\)
+접근제한자 / static / 타입 / 메소드이름 / \(파라미터\) ex\)\(String arg\[배열\]\)
 
 ```java
 package book.ch2;
