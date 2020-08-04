@@ -201,7 +201,8 @@ public class Test_forif {
 ### 예제 문제 2
 
 0~9 사이의 임의의숫자를 채번하여 그 숫자를 맞추는 게임을 작성하시오.  
-필요한 정보는 검색하
+필요한 정보는 검색해서 작성하\(java.util.Random\)  
+먼저 메인메소드에 모두 작성하고, 메소드를 쪼개보도록 한다.
 
 ```java
 package book.ch4;
@@ -252,8 +253,22 @@ public class Test_random {
 ```
 
 * 참고 링크 : [https://hyeonstorage.tistory.com/160](https://hyeonstorage.tistory.com/160)
-* 임의 지정 클래스 : Random class import를 설정해주어야 하고, 클래스 객체 선언을 해주어야한다. Random 클래스이 = new Random\(\); 
+* 임의 지정 클래스 : Random class import를 설정해주어야 하고, 클래스 객체 선언을 해주어야한다. Random 클래스이름 = new Random\(\); 
+* 임의 지정 예약어 : next타입\(변수\);
 * 변수 갯수 : 4 input : 사용자가 입력한 string 변 num : 컴퓨터가 고른 임의의 숫자를 담는 변수 num1 : num에 값을줘서 나온 변수 num2 : input을 int로 형전환한 변
+* 만약 사용자입력값과 random 메소드 값이 같다면 정답, 아니라면 틀림을 출력한다.
+
+### SQL
+
+* 질의어\(DQL : Data Query Language\) SELECT : 데이터 검색, 조희 \(==네이버지식인\)
+* 데이터조작어\(DML : Data Manipulation Language\) : 데이터에 변화를 일으킨다. INSERT : 데이터 입력, 등록 UPDATE : 데이터 수정 DELETE : 데이터 삭제, 탈퇴
+
+### 숙
+
+1~100을 출력하는데, 5의 배수는 "fizz", 7의 배수는 "buzz", 5와7의 공배수는 "fizzbuzz"로 출력되도록 순서도를 그리고 코드를 작성하시오.
+
+후기 : 모르는 것을 검색하는 것도 중요하다. 검색 키워드를 바로 알고 검색하도록 하자!  
+새로배운 예약어 : JOptionPane.showInputDialog\("String"\); : 입력창 띄우기Integer.parseInt\(변수이름\); : int로 형변
 
   
 
