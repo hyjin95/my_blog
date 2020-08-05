@@ -8,6 +8,30 @@ description: 2020.08.05 - 6일차
 
 * while, for, do{}while문을 맞게 사용할 수 있다.
 
+### Oracle과 자바
+
+| men\_id\(string\) | men\_pw\(string\) | men\_name\(string\) |
+| :---: | :---: | :---: |
+| test | 1234 | ○○○ |
+| apple | abcd | △△△ |
+| ... | ... | ... |
+
+* **SELECT 컬럼명1, 컬럼명2** SELECT men\_name -&gt; men\_name은 리턴 값 이다. 위의 표에서는 ○○○과 같은 이름을 말한다.
+* **FROM 집합이름**
+* **WHERE 컬럼명=:x** 컬럼명=집합에 있는 컬럼명, x=값 WHERE men\_id=:id AND men\_pw=:pw 로그인 시 id와 pw둘다 필요하므로 and가 있어야 하고, 여기서 오른쪽항에 사용자가 입력하는 id와 pw는 변수이자 파라미터가된다.\(string type\) id와 pw는 사람마다 다른 값을 가지고 있고, 다른 사용자의 값도 받아줘야 하기 때문에 초기화를 해야한다. = 메소드안에 선언하는 지역변수이다.
+
+### 반복문 
+
+* for : for\(초기화, 조건, 증감연산\) {실행문}
+* while : while\(조건 {실행문, 증감연산}
+* do-while : do{실행문,증감연산}while\(조건식\);
+* \(조건\)의 위치 for과 while은 실행문이 조건문 뒤에있어서 조건문을 먼저 따진다. 조건을 먼저 따지기 때문에 조건에 부합되지 않으면 실행이 한번도 되지 않을 수 있다. do-while은 실행문의 조건문 앞에 있기때문에 조건을 따지기 전에 실행되므로 무조건 **한번은 실행**된다.
+* **for**  - for문 안에서 초기화 할때 타입을 선언하면 그 변수는 for문 밖에서는 사용될 수 없다. 주의하자.
+*  **while**  - 순서도에 가장 부합하는 반복문  조건식, 초기화, 증감연산을 따로 넣어 순서도의 진행 가장 비슷하게 작성된다.
+* **do-while**  - 첫 조건을 따지지 않는 코드에서 많이 사용한다. 예를 들어 컴퓨터가 지정한 임의의 수 3개를 사용자가 3번의 기회 동안 맞추는 게임 프로그램이라면,  일단 컴퓨터가 숫자를 한개씩 뽑는다. 이때 비교할 숫자가 없으므로 첫번째 뽑기에는 조건문이 필요하지 않다. - while문 뒤에 증감연산자가 없으면 다음으로 넘어가지 않기 때문에 무한히 반복된다.\(**무한루프**\) 그러므로 반드시 막아주는 증감연산자가 필요하다.
+
+### for문과 while문으로 결과값 같은 코드를 써보자
+
 ```java
 package book.ch4;
 
@@ -49,6 +73,15 @@ public class ScannerTest {
 
 ```
 
+* 사용된 클래스 : **Scanner** 클래스 JOptionPane.showInputDialog와 비슷한 역할을 한다. showInputDialog는 직접 입력창을 띄워주고, Scanner는 다음라인에 입력된 값을 가져온다. import해야한다. \(java.util.Scanner\)
+* 
+### 배열
+
+* 배열의 쓰임새  - 변수는 하나의 타입, 하나의 값만 담을 수 있다. 배열은 하나의 타입, **여러개의 값**을 담을 수 있다.
+* int is \[ \] = new int \[ 3 \]; ==int 타입의 is라는 이름의 배열은 int 타입인 방을 3개 갖는다. 첫번째 방의 기본값은 0이다.
+
+### 배열을 이해해보자
+
 ```java
 package book.ch4;
 
@@ -61,8 +94,9 @@ public class ArrayTest {
 		is[2] = 3;//3번 방 3으로 초기화
 		
 		double ds[] = new double[1];//방 1개생성
-		
-		for(int j=0;j<3;j++) {//j가 0이고 ++되는데 3이하면 is[j] 방의 값을 출력한다.
+
+		//j가 0이고 ++되는데 3이하면 is[j] 방의 값을 출력한다.
+		for(int j=0;j<3;j++) {
 			System.out.println(is[j]);
 			
 		}//end of for
@@ -72,6 +106,10 @@ public class ArrayTest {
 
 ```
 
+* 출력 결과 1 2 3
+
+### 배열과 do-while을 이용해 코드 작성하기
+
 ```java
 package book.ch4;
 
@@ -79,15 +117,16 @@ public class RandomTest {
 
 	public static void main(String[] args) {
 		int com[] = new int[3];
-		//Math.random클래스 사용. 실수범위라서 *10을 해준다. 범위는 0.0에서 1.0
+		//Math.random클래스 사용. 실수범위라서 *10을 해준다. 
+		//범위는 0.0에서 1.0
 		
-		for(int n=0;n<=9;n++) {//임의의 숫자로 방 세개를 채우는것을 10번 반복한다.
+		for(int n=0;n<=9;n++) {//임의의 숫자로 방 세개를 채우는것 10번 반복
 		
 		com[0] = (int)(Math.random()*10);
 		
 		do {
 			com[1] = (int)(Math.random()*10);
-		}while(com[0]==com[1]);//0번 방과 1번 방 값이 같으면 다시 반복한다.
+		}while(com[0]==com[1]);//0번 방과 1번 방 값이 같으면 다시 반복
 		
 		do {
 			com[2] = (int)(Math.random()*10);
@@ -103,6 +142,14 @@ public class RandomTest {
 }
 
 ```
+
+* 사용 클래스 : Math.random  Math.random 클래스는 패키지에 포함되어있어 import선언이 필요없다. Math가 제공하는 함수 중에 random 함수는 0.0~1.0사이의 숫자 값을 반환한다.
+* 위 코드에서는 int타입으로 출력하기 위해 \*10을 하였다.
+* 결과값으로 컴퓨터가 임의로 뽑은 중복되지않는 3개의 숫자 묶음이 10종류 출력된다.
+
+### 예제 문제
+
+컴퓨터가 1~10 중 임의의 숫자를 뽑고, 사용자가 숫자를 맞추는 코드를 작성하고 메소드를 쪼개보시오.
 
 ```java
 package book.ch4;
@@ -141,15 +188,17 @@ public class Test_random {
         	System.out.println("틀렸습니다.");
         }
         System.out.println(num1);
-        System.out.println(num2);
-        
-       
+        System.out.println(num2);          
 
 	}
 
 }
 
 ```
+
+### 5일차 숙제
+
+#### for문 메소드로 조각내기
 
 ```java
 package book.ch4;
@@ -190,6 +239,8 @@ public class Test0805_method_T {//메소드 조각내기
 
 
 ```
+
+#### 보고싶은 결과의 범위를 지정할 수 있게 하기\(파라미터 이용\)
 
 ```java
 package book.ch4;
@@ -233,6 +284,8 @@ public class Test0805_Parameter_T {//메소드 조각내기
 
 ```
 
+#### for문 while문으로 바꿔보기
+
 ```java
 package book.ch4;
 
@@ -273,6 +326,10 @@ public class Test0805_While_T {//메소드 조각내기
 }//end of Test0805_method_T
 
 ```
+
+### 예제 문제 2
+
+#### 오늘 배운 내용으로 구구단 프로그램 작성해보
 
 ```java
 package book.ch4;
@@ -330,28 +387,9 @@ public class Gugudan {
 
 ```
 
-```java
-package book.ch4;
+* 원하는 구구단 부분을 불러올 수 있게 작성했다.
 
-public class Shuffle {
-
-	public static void main(String[] args) {
-		int a =10, b = 100, c = 500;
-		int temp = 0;
-		temp =a;
-		a = b;
-		b = c;
-		c = temp;
-		
-		System.out.println("a = "+a);
-		System.out.println("b = "+b);
-		System.out.println("c = "+c);
-
-	}
-
-}
-
-```
+### 자바에서의 event 맛보기
 
 ```java
 package game.baseball;
@@ -466,4 +504,6 @@ public class BaseBallGame implements ActionListener{//5장
 }
 
 ```
+
+후기 : 중간중간 예제문제를 내주시고 배운것들과 검색을 활용하여 순서도를 그려보고, 코드를 혼자 짜서 결과가 나오면 뿌듯하다. 많은 예제에 도전해보자.
 
