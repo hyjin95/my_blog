@@ -2,7 +2,7 @@
 description: 2020.08.04 - 5일차
 ---
 
-# 5 Days - 조건문과 반복문, 연산자 활용, 객체와 DB Oracle설치
+# 5 Days - for, if문과 연산자 활용, 객체, DB Oracle설치
 
 ### 4일차 복습 질문
 
