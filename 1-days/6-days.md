@@ -505,5 +505,39 @@ public class BaseBallGame implements ActionListener{//5장
 
 ```
 
+### 숙제
+
+#### 피보나치 수열의 규칙을 찾아서 a1, a2, a3, ..., a10항까지 출력해주는 프로그램을 작성하시.\(for, if 사\)
+
+```java
+package test;
+
+public class Test08052 {
+	//피보나치 수열의 규칙을 찾아서 a1, a2, a3, ..., a10항까지 출력해주는 프로그램을 작성하시.(for, if 사)
+
+	public static void main(String[] args) {
+		
+		int i;
+		int num1, num2, sum;
+		num1 = 0;
+		num2 = 1;
+		sum = 1;
+		
+		for(i=0;i<=10;i++) {			
+			
+			System.out.println(sum);//1,1,2,3,5
+			sum = num1 + num2;//1,2,3,5
+			num1 = num2;//num1=1,1,2,3
+			num2 = sum;//num2=1,2,3,5
+			
+			
+		}//end of for
+
+	}
+
+}
+
+```
+
 후기 : 중간중간 예제문제를 내주시고 배운것들과 검색을 활용하여 순서도를 그려보고, 코드를 혼자 짜서 결과가 나오면 뿌듯하다. 많은 예제에 도전해보자.
 
