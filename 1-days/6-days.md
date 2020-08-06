@@ -2,7 +2,7 @@
 description: 2020.08.05 - 6일차
 ---
 
-# 6 Days - 반복문
+# 6 Days - 반복문과 배열
 
 ### 학습목표
 
@@ -390,6 +390,8 @@ public class Gugudan {
 * 원하는 구구단 부분을 불러올 수 있게 작성했다.
 
 ### 자바에서의 event 맛보기
+
+#### ActionListener 인터페이스
 
 ```java
 package game.baseball;

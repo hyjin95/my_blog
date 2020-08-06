@@ -14,5 +14,6 @@
   * [3 Days - 변수, 연산자와 리턴값](1-days/3-days.md)
   * [4 Days - 메소드호출, static, 형전환](1-days/4days.md)
   * [5 Days - for, if문과 연산자 활용, 객체, DB Oracle설치](1-days/5-days.md)
-  * [6 Days - 반복문](1-days/6-days.md)
+  * [6 Days - 반복문과 배열](1-days/6-days.md)
+  * [7 Days - JMenuBar, Event](1-days/7-days-jmenubar-event.md)
 
