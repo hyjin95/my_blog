@@ -12,11 +12,12 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 
 ### Eclipse IDE
 
-* system 단축키 : "sys" + ctrl + space bar
-* 복사 단축키 : ctrl + alt + ↓
-* 코드 줄 이동 단축키 : alt + 방향키
-* import 추가하기 : ctrl + shift + o
-* 지우기 : ctrl + d
+* system          : "sys" + ctrl + space bar
+* 복사               : ctrl + alt + ↓
+* 코드 줄 이동 : alt + 방향키
+* import 추가  : ctrl + shift + o
+* 지우기           : ctrl + d
+* 일괄처리       : alt + shift + a
 
 ### 깃북
 

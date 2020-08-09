@@ -23,7 +23,7 @@ description: 2020.07.31 - 3일차
 * 같은 변수를 두 번 선언할 수 있다. \(지역변수, 전역변수\) 
 * 참고 링크 : [https://itellyhood.tistory.com/m/32](https://itellyhood.tistory.com/m/32) [http://tcpschool.com/java/java\_member\_field](http://tcpschool.com/java/java_member_field)
 
-### i에 대하
+### i 이해하기
 
 * 타입 int 의 경우에 RAM에 저장되는 것들은 각각의 숫자 주소를 갖게 된다.  이를 불러올때, i를 사용하는데 이 i 지역변수로만 사용한다.
 

@@ -4,8 +4,65 @@ description: 2020.08.06 - 7일차
 
 # 7 Days - JMenuBar, Event
 
+### 6일차 복습
+
+* 변수 - 변수가 몇개 필요한지 말할 수 있다. - 변수의 위치를 정하고 초기화 할 수 있다. - 메소드 호출시 변수들을 파라미터로 초기화 할 수있다.
+* 메소드 - 메소드 선언 순서를 알고 있다.   \(제한자, 타입, 메소드이름, \(파라미터\), {}\) - 리턴타입, 파라미터에 원시형 타입을 사용할 수 있다.  - Object, 객체를 알고있다.
+
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+
+### Event
+
+* 참고 : 8 Day - BaseBallGame.java\(이하 BBG\)
+
+1. **Action Listner 인터페이스**를 클래스에 장착한다.=**이벤트 감지 -** 이벤트 처리 인터페이스가 다른 이벤트 소스도 있다. - 이벤트 소스 : 버튼,체크박스 등 이벤트가 일어나는 주소번지 - BBG에서는 여러 이벤트 소스를 처리하기 위해 메소드를 만들도록 한다. - **class 클래스이름 implements Action Listner{ }** - implements : 인터페이스 예약어 
+2. 이벤트를 처리할수 있는 메소드를 재정의 한다. - **public void actionPerformed \(ActionEvent e\){ }** - actionPerformed : callback 메소드 - callback 메소드 : 메인메소드안에서 개발자가 호출하지 않아도 JDK가 감지하면 자동으로 호출되는 메소드를 말한다. 예시로 main메소드도 개발자가 호출하여 실행하지 않고 시스템이 자동으로 호출해주는 callback메소드이다. - 이벤트 처리 기능을 메소드로 꺼내어 재사용성을 높여야한다.
+
+* **이벤트 핸들러** 클래스 A - 이벤트 처리를 장착한 클래스를 부르는 말이다. - 어떤 클래스의 뒤에 Action Listner이 있으면 그 클래스 안에서 이벤트 처리를 하겠다는 의미를 갖는다
+* 아자스 - 검색창의 자동완성기능과 같이 페이지의 새로고침이나 사용자의 요청없이도 반응해 주는것을 말한다.
+* 이벤트를 느끼는 주체 : sw, 자바가상머신 - 버튼을 누르는 것을 감지하는것은 개발자가 아니라 자바가상머신이다.
+* 이벤트가 어떤 인터페이스와 맞는지 찾아서 해당 인터페이스에 implements 해야한다.
+* callback메소드도 이벤트에 따라 다르다.
+* 이벤트에서 if를 사용하면 여러 이벤트를 대응시킬 수 있다. - if,if구문은 조건을 계속 따져야하기 때문에 시스템이 처리할 일이 많다. - if, else-if는 조건을 만족하면 넘어가기때문에 시스템이 처리할 일이 적다.
+
+### get예약어와 set예약어
+
+* get - get메소드는 거 리턴타입을 갖는다. - read의 역할로 리턴 값을 반환한다. 사용자가 담은 것을 꺼낸다. - print로 메소드호출이 가능하다. print\(get메소드\);
+* set - set메소드는 리턴타입을 갖지않는다.\(==void\) - write, save의 역할로 목적을 갖지 않는다. 사용자가 담은 것을 담는다. - 값, 파라미터가 필요하다.
+
+### random class
+
+* import 추가 한다.
+* Random r = new Random\(\); - r.nextInt\(int\):int-Random - r : 소유주의 개념으로 인스턴스변수나 클래스가 올 수 있다. - Integer.parseInt\(\)는 클래스의 개념으로 r의 자리에 올 수 있다.
+*  Integer.parseInt = static int parseInt\(string\) - int : 타입 - parseInt\(string\) : 메소드
+* Static 안에서 클래스 호출 시에는 인스턴스화를 해야하지만 그 외 메소드에서 호출은 인스턴스화 없이 첫문자를 대문자로 써서 호출한다. **I**nteger.parseInt
+
+### 사용자로부터 입력 값을 읽어오는 클래
+
+* BufferedReader br = new BufferedReader\(new.InputStreamReader \(system.in\)\);
+* Scanner 클래스
+
+### 변수를 지정하는 이유
+
+* 키보드\(입력\) -&gt; 읽기 -&gt; 처리 -&gt; 모니터\(출력\)
+* 처리 = 변수호출 - 저장된 변수기억 불러오기 - **변수 하나로 여러 값을 기억** 시킬수 있다. - ex\) mycar.color; mycar.wheelnum; ...
+
+### IO 패키지
+
+* IO == input, output
+* 읽고 쓰는, 카메라 필터와 같이 효과만 줄수 있는 역할을 하는 클래스들의 패키지
+* read\( \) : 한 글자만 읽어온다. readline\( \) : 한 문장을 읽어온다. 
+
+### toad 에서 날짜표시해보기
+
+* SELECT sysdate FROM dval - sysdate +1 : 다음날, 내일  - sysdate -1 : 전날, 어제
+
+### 다른 주소를 갖는 같은 클래스의 인스턴스 변수
+
 ```java
-package book.ch4;
 
 public class StringTest {
 
@@ -23,6 +80,8 @@ public class StringTest {
 }
 
 ```
+
+###  Math.random을 이용한 번호뽑기
 
 ```java
 package book.ch4;
@@ -53,6 +112,8 @@ public class RandomTest {
 }
 
 ```
+
+### 시스템이 랜덤 채번한 수를 사용자가 맞추는 프로그램
 
 ```java
 package report.ch4;
@@ -116,6 +177,8 @@ public class RandomGame {
 //}//end of while
 ```
 
+### 6일차 숙제의 여러방법
+
 ```java
 package book.ch4;
 
@@ -137,8 +200,7 @@ public class Test08052 {
 			sum = num1 + num2;//1,2,3,5
 			num1 = num2;//num1=1,1,2,3
 			num2 = sum;//num2=1,2,3,5
-			
-			
+						
 		}//end of for
 	}//methodA
 
@@ -196,9 +258,7 @@ public class Test08052 {
 			a2 = a3;
 			JOptionPane.showInputDialog(null,"after a1:"+a1+",a2:"+a2);
 		}
-	}
-
-	
+	}	
 	
 	public static void main(String[] args) {
 		Test08052 t08052 = new Test08052();
@@ -206,16 +266,16 @@ public class Test08052 {
 		//t08052.methodA();
 		//t08052.methodB();
 		//t08052.methodC();
-		t08052.methodT();
-		
-	
-		
-	
+		t08052.methodT();		
 		
 	}
 
 }
 ```
+
+### 숙제
+
+시스템이 10에서 -10사이의 정수 10개를 랜덤하게 채번하여 음수와 양수의 합계를 구하는 프로그램을 작성하시오
 
 ```java
 package report.ch4;
@@ -257,8 +317,7 @@ public class Report0806 {
 
 	public static void main(String[] args) {
 		Report0806 r0806 = new Report0806();
-		r0806.methodA();		
-		
+		r0806.methodA();			
 
 	}
 

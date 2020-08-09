@@ -8,6 +8,11 @@ description: 2020.08.05 - 6일차
 
 * while, for, do{}while문을 맞게 사용할 수 있다.
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  Eclipse : Eclipse.org Oracle Database 11g Toad DBA Suite for Oracle 11.5
+
 ### Oracle과 자바
 
 | men\_id\(string\) | men\_pw\(string\) | men\_name\(string\) |
