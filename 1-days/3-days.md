@@ -4,6 +4,11 @@ description: 2020.07.31 - 3일차
 
 # 3 Days - 변수, 연산자와 리턴값
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool : Eclipse : Eclipse.org
+
 ### 자료형의 종류
 
 1. Primative Data Type : 기본형  정수형 : byte, short, int, long 문자형 : char 실수형 : float, double 논리형 : boolean
