@@ -20,9 +20,13 @@ description: '다양한 참고, 서적 및 강의 링크'
 
 #### [http://tcpschool.com/java/java\_member\_field](http://tcpschool.com/java/java_member_field)
 
-## 강의
+### 깃 GIT
 
-#### 깃헙\(github\) : [https://github.com/](https://github.com/)
+#### [https://www.codeit.kr/learn/courses/version-control-with-git/2884](https://www.codeit.kr/learn/courses/version-control-with-git/2884)
+
+#### 깃헙\(github\) : [https://github.com](https://github.com/)
+
+## 강의
 
 #### 구름\(goorm\) : [https://edu.goorm.io/](https://edu.goorm.io/)
 
