@@ -179,3 +179,38 @@ public class DeptVOSimulation {
 
 ```
 
+```java
+package book.ch5;
+//실력에 차이가 나는걸 좋아하지 않는다.
+//틀을 짜두고 그 틀에 업무에 대한 코딩만 하게 한다.=framework(spring), 게임엔진 등..
+
+public class DeptVO {//VO = value object
+	    //private : 해당클래스에서만 사용가능
+		private int    deptno = 0;
+		private String dname  = null;//클래스는 선언시 초기값은 null이다.
+		private String loc    = null;//=건축허가가 낫지만 아직 건설되지 않은 부지
+		
+		//메소드를 public으로 풀어주어서 다른 클래스에서는 메소드로 정해진 값만 사용가능
+		public int getDeptno() {
+			return deptno;
+		}
+		public void setDeptno(int deptno) {
+			this.deptno = deptno;
+		}
+		public String getDname() {
+			return dname;
+		}
+		public void setDname(String dname) {
+			this.dname = dname;
+		}
+		public String getLoc() {
+			return loc;
+		}
+		public void setLoc(String loc) {
+			this.loc = loc;
+		}
+	
+}
+
+```
+
