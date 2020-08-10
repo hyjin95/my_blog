@@ -70,20 +70,18 @@ public class ScannerTest {
 			System.out.println("num = "+num);
 			i++;//이 단항증감식이 없다면 while문은 무한반복한다.
 			//i=4
-		}//end of while
-		
+		}//end of while		
 	}
-
 }
-
 ```
 
 * 사용된 클래스 : **Scanner** 클래스 JOptionPane.showInputDialog와 비슷한 역할을 한다. showInputDialog는 직접 입력창을 띄워주고, Scanner는 다음라인에 입력된 값을 가져온다. import해야한다. \(java.util.Scanner\)
-* 
+
 ### 배열
 
 * 배열의 쓰임새 - 변수는 하나의 타입, 하나의 값만 담을 수 있다. - 배열은 하나의 타입, **여러개의 값**을 담을 수 있다.
 * int is \[ \] = new int \[ 3 \]; ==int 타입의 is라는 이름의 배열은 int 타입인 방을 3개 갖는다. 첫번째 방의 기본값은 0이다.
+* 변수\(1타입, 1값\) -&gt; 배열\(1타입,n값\) -&gt; 객체배열\(n타입,n값\) -&gt; collection- -&gt; session\(시간, 연장세\), 쿠키\(장바구니, 담아두기\) - 객체배열 :  Tivoli\[ \] mycar = new Tivoli\[3\]; 이라면 똑같은 자동차 3대를 말한다. - collection은 다른 자동차까지 취급할 수 있다.
 
 ### 배열을 이해해보자
 
