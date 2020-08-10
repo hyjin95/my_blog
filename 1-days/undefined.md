@@ -18,8 +18,13 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 * import 추가  : ctrl + shift + o
 * 지우기           : ctrl + d
 * 일괄처리       : alt + shift + a
+* 들여쓰기       : 드래그 + tab
 
 ### 깃북
 
 * 줄 바꾸기 : shift + enter
+
+### Toad for Oracle
+
+* Describe : select + f4
 
