@@ -311,10 +311,13 @@ public class ObjectArray extends JFrame{
 ### java와 Oracle 연결
 
 1. 연결통로 만들기 - ==드라이버 로 - oracle에 연결하려면 orcleDriver.class가 있는지 확인한다.
-2. 메모리에 oracleDriver.class올리기 - 올리기 위해서 ID, PW, IP가 필요하다 - java 에서 Connection클래스를 이용한다.
+2. 메모리에 oracleDriver.class올리기 - 올리기 위해서 ID, PW, IP가 필요하다 - java 에서 Connection클래스를 이용한다. - java database connection == jdbc
 
 * Oracle 일꾼 : 옵티마이저
 * java     일꾼 : JVM
 * Oracle : Curser - SELECT문에서 커서가 있는 자리에 값이 있니? -있으면 true, 없으면 false를 반환한다. false는 break의 개념으로 빠져나온다.
 * Java : Resultset - java에서 oracle의 SELECT에 대응하는 인터페이스이다. - SELECT문의 Curser를 조작해서 커서가 값을 꺼내어 다음으로 가는 조작을 하는 인터페이스이다. - ==re.next\(\); : boolean타
+* java에서 DB서버와 연결되는 것에 관한 import는 모두 java.sql패키지를 사용해야한다.
+
+후기 : 힘들어도 매일 그날그날 정리하도록 노력하고있다. 미루지 말고 끝까지 가자!
 
