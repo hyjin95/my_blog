@@ -21,5 +21,5 @@
   * [8 Day - 야구 숫자 게임](1-days/8-day/README.md)
     * [야구 숫자 게임 코드](1-days/8-day/undefined.md)
   * [9 Days - Switch문, JAVA로 Oracle이해하기](1-days/9-days-switch.md)
-  * [10 Days - 메소드중복정의, 생성자](1-days/10-days.md)
+  * [10 Days - 객체 배열, 메서드중복정의, 생성자](1-days/10-days.md)
 
