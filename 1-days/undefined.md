@@ -19,7 +19,8 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 * 지우기           : ctrl + d
 * 일괄처리       : alt + shift + a
 * 들여쓰기       : 드래그 + tab
-* 검색 변경     : ctrl + f
+* 검색 및 변경 : ctrl + f
+* 범위 주석      : 드래그 + ctrl +shift + /
 
 ### 깃북
 
