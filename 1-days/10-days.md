@@ -139,3 +139,96 @@ public class Pride extends Object {//모든 클래스의 아버지, toString()�
 
 ```
 
+### 객체 배열 사용하
+
+```java
+package book.ch5;
+
+public class DeptVOSimulation {
+
+	public static void main(String[] args) {
+		//부서번호 10, 부서이름 accounting, 부서위치 newyork
+		DeptVO dVO = new DeptVO();//한번에 하나의 로우를 담는다.
+		DeptVO[] dVOS = new DeptVO[3];
+		
+		dVO.setDeptno(10);
+		dVO.setDname("Accounting");
+		dVO.setLoc("NEW YORK");
+		System.out.println(dVO.getDeptno());
+		System.out.println(dVO.getDname());
+		System.out.println(dVO.getLoc());
+		
+		dVOS[0] =dVO;//풍선을 넣어둠
+		
+		dVO = new DeptVO();//변수이름은 같아도 주소는 다르다. 복사, 이사 : 한번에 하나의 로우를 담는다.
+		dVO.setDeptno(20);
+		dVO.setDname("RESEARCH");		
+		dVO.setLoc("DALLAS");
+		System.out.println("===============");
+		System.out.println(dVO.getDeptno());
+		System.out.println(dVO.getDname());
+		System.out.println(dVO.getLoc());
+		
+		dVOS[1] =dVO;//20이 담긴다
+
+		dVO = new DeptVO();//주소 복사, 이사 : 한번에 하나의 로우를 담는다.
+		dVO.setDeptno(30);
+		dVO.setDname("SALES");		
+		dVO.setLoc("CHICAGO");
+		System.out.println("===============");
+		System.out.println(dVO.getDeptno());
+		System.out.println(dVO.getDname());
+		System.out.println(dVO.getLoc());
+		System.out.println("===============");
+
+		dVOS[2] =dVO;//30이 담긴다.
+		
+		for(int i=0;i<dVOS.length;i++) {//length가 있으면 원소의 갯수를 적어준다. = 세방에 원소가 3개, 3
+			DeptVO rVO =dVOS[i];
+			System.out.println(rVO.getDeptno()+", "+rVO.getDname()+", "+rVO.getLoc());
+		}
+	}//위의 부서번호,이름, 위치는 고정 값 
+	//값이 수정되었을때 죽은 값이 나오는 오류가 날 수 있어서 이런방법을 선호하지 않는다.
+	//부서가 여러 개인 경우에 이런방법은 쓸 수 없다.
+
+}//Eclipse에서 debug모드로 변화를 확인할 수 있다.
+
+```
+
+### 객체 배열과 for 문의 사용
+
+```java
+package book.ch5;
+
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class ObjectArray extends JFrame{
+	JButton jbtns[] = new JButton[10];//JButton은 string 타입이다. >19번
+	int     nums[]   = {0,1,2,3,4,5,6,7,8,9};
+	
+	public ObjectArray() {
+		initDisplay();
+	}
+	
+	public void initDisplay() {
+		this.setLayout(new GridLayout(1,10));
+		for(int i=0;i<jbtns.length;i++) {
+			jbtns[i]= new JButton(nums[i]+"");//버튼만들기 반복 / =객체배열 / 괄호안에 String 타입이 와야하기때문에 ""를 더한다.
+			this.add(jbtns[i]);//담는 부분도 반복
+		}
+		this.setSize(600,200);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new ObjectArray();
+
+	}
+
+}
+
+```
+
