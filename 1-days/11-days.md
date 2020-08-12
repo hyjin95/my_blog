@@ -147,14 +147,21 @@ public class DeptApp extends JFrame implements ActionListener, MouseListener {
 			System.out.println("조회 버튼 클릭 성공");
 			//java에서 select문 사용시, toad에서 단위테스트를 해본다.
 			//String은 원본이 바뀌지 않으므로 +=로 대입을 해줘야 삽입이 된다. +=가 없으면 삽입되지않고 원본이 유지된다.
-			String sql  = "SELECT deptno, dname, loc FROM dept";//내 것을 갖고온다.
-			       sql += " WHERE deptno >=?";//+=는 삽입 : where앞에 space가 없으면 deptWHERE로 인식하여 오류가 난다.
-			       sql += "    OR loc LIKE ? || %";//개발자가 정할수없는, 사용자가 정하는 값 =? ,WHERE는 두번 올수 없다. and 나 or 사용
+			String sql2  = "SELECT deptno, dname, loc FROM dept";//내 것을 갖고온다.
+			       sql2 += " WHERE deptno >=?";//+=는 삽입 : where앞에 space가 없으면 deptWHERE로 인식하여 오류가 난다.
+			       sql2 += "    OR loc LIKE ? || %";//개발자가 정할수없는, 사용자가 정하는 값 =? ,WHERE는 두번 올수 없다. and 나 or 사용
+			       
+			StringBuilder sql = new StringBuilder();
+			sql.append("SELECT deptno, dname, loc FROM dept");
+			sql.append(" WHERE deptno >=?");
+			sql.append("    OR loc LIKE ?");
+			       
 			try {
 				con = dbMgr.getConnection();//물리적으로 떨어져있는 거리를 연결
-				pstmt = con.prepareStatement(sql);//메모리에 로딩성공. 로딩 후에 읽어올 수 있다.==where92번
+				pstmt = con.prepareStatement(sql.toString());//메모리에 로딩성공. 로딩 후에 읽어올 수 있다.==where92번
 				pstmt.setInt(1, 30);//1=값의 개수, 30=값->값은 10-20-30 세번 돌지만. deptVO는 4칸 배열이라 4번돌려고 해서 오류가 발생한다.
-		        rs = pstmt.executeQuery();
+		        pstmt.setString(2,  "N%");
+				rs = pstmt.executeQuery();
 		        DeptVO dvo = null; //인스턴스화1 : 선언
 		        // DeptVO[] dvos = new DeptVO[4];//배열선언
 		        DeptVO[] dvos = null;//몇건이 있는지 알수 없으므로 null로선언
@@ -241,6 +248,7 @@ public class DeptApp extends JFrame implements ActionListener, MouseListener {
 	}
 
 }//end of class
+
 ```
 
 ```java
