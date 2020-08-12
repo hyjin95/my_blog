@@ -33,15 +33,17 @@ description: 2020.08.11 - 10일차
 
 ### 이중배열
 
-* String data\[ \] \[ \] = new String\[0\] \[3\];
+* String data\[ \] \[ \] = new String\[2\] \[3\];
 
 | 0,0 | 0,1 | 0,2 |
 | :---: | :---: | :---: |
 | 1,0 | 1,1 | 1,2 |
 
+* 2행, 3열의 배열 생
+* 변수의 갯수 : 2x3 = 6
 * 위의 table과 같이 이중배열인 경우 좌표값으로 두개의 값이 필요하다.
-* 일반 배열은 for문으로 끝난다.
-* 이중 배열은 for\(for\(\)\)문을 사용한다.
+* 일반 배열은 for문으로 끝난다. 방안의 값이 하나이므
+* 이중 배열은 for\(for\(\)\)문을 사용한다.  - 방안의 값이 두개이므로  for\(\){첫번째 값 for\(\){두번째 값}} 으로 구한다.
 
 ### 메서드 중복정의
 
@@ -315,7 +317,7 @@ public class ObjectArray extends JFrame{
 
 * Oracle 일꾼 : 옵티마이저
 * java     일꾼 : JVM
-* Oracle : Curser - SELECT문에서 커서가 있는 자리에 값이 있니? -있으면 true, 없으면 false를 반환한다. false는 break의 개념으로 빠져나온다.
+* Oracle : Curser - SELECT문에서 커서가 있는 자리에 값이 있니? -있으면 true, 없으면 false를 반환하는 논리형 메서드이. false는 break의 개념으로 빠져나온다.
 * Java : Resultset - java에서 oracle의 SELECT에 대응하는 인터페이스이다. - SELECT문의 Curser를 조작해서 다음으로 이동해서 는 조작을 하는 인터페이스이다. - ==rs.next\(\); : boolean타입 : 다음으로 가는 조작
 * java에서 DB서버와 연결되는 것에 관한 import는 모두 java.sql패키지를 사용해야한다.
 
