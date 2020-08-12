@@ -2,7 +2,7 @@
 description: 2020.08.12 - 11 일차
 ---
 
-# 11 Days - SELECT문과 Vector
+# 11 Days - SELECT문과 Vector, StringBuilder
 
 ### 복습
 
