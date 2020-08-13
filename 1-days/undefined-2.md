@@ -24,6 +24,8 @@ description: '다양한 참고, 서적 및 강의 링크'
 
 #### [http://tcpschool.com/java/java\_member\_field](http://tcpschool.com/java/java_member_field)
 
+#### [https://programmingsummaries.tistory.com/47?category=485242](https://programmingsummaries.tistory.com/47?category=485242)
+
 ### 깃 GIT
 
 #### [https://www.codeit.kr/learn/courses/version-control-with-git/2884](https://www.codeit.kr/learn/courses/version-control-with-git/2884)
