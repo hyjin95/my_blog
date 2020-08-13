@@ -2,7 +2,7 @@
 description: 2020.18.13 - 12일차
 ---
 
-# 12 Days -
+# 12 Days - 생성자, 객체 배열, API, 클래스, 인스턴스화 정리하기
 
 ```java
 package ocjp.basic;
