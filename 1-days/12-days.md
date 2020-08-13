@@ -8,6 +8,8 @@ description: 2020.18.13 - 12일차
 
 ### 배열 선언하기, 개선된 for \(변수명:배열명\)
 
+[https://java119.tistory.com/107](https://java119.tistory.com/107)
+
 ```java
 package ocjp.basic;
 //배열의 시작 인덱스는 항상 0이다.[0]
