@@ -6,6 +6,8 @@ description: 2020.18.13 - 12일차
 
 생성자의 역할, 활용, 객체배열 초기화, api보는법, 추상클래스와 인터페이스, 인스턴스화, 생성자와 인스턴스화, 상속관계, 디폴트 생성, overloading, overriding, 콜백메서
 
+### GitHub Repositories만들기
+
 ### 배열 선언하기, 개선된 for \(변수명:배열명\)
 
 [https://java119.tistory.com/107](https://java119.tistory.com/107)
@@ -46,7 +48,7 @@ public class IntArray {
 }
 ```
 
-### 생성자 이해하
+### 생성자 이해하기
 
 ```java
 package book.ch5;
