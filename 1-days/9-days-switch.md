@@ -6,11 +6,16 @@ description: 2020.08.10 - 9일차
 
 ### 복습
 
-연관되는 단어들을 모아보
+연관되는 단어들을 모아보자
 
 1. boolean - for문 : for\(초기화,조건식,증감연산\) : 반복, if문 : if\(조건식\) : 판단, while문, do-while문, 실행문, return값 : true or false, 논리형, 변수, &&, \|\|
 2. int\[ \] - 배열, 하나의 타입, 여러개의 값, 정수, for문, 파라미터, 인덱스 값, 랜덤, 주소번지, 방의 시작 값 : 0, 비교
 3. class - 메소드, 호출, import, 객체, 부모 자식, 인스턴스화, 클래스선언, 전역변수, 초기화 생략, Heap, 내 안의 메소드끼리 호출가능, static 메소드는 다른 메소드 호출시 인스턴스화 해야 호출가능
+
+### 용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 
 ### 객체 지향
 

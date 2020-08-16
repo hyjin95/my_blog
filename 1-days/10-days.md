@@ -11,6 +11,11 @@ description: 2020.08.11 - 10일차
 * **return 예약어, 반환형 -** int나 double, boolean등 과 같이 return값이 필요한 타입을 반환형이라고 한다. - return은 클래스 안에서 두가지 쓰임새로 사용될 수 있다. - if문의 break로서의 return : 메서드를 빠져나가는 흐름제어의 역할 - 메서드에서의 return : 응답의 의미로, 메서드를 재사용할수 있게 해준다. - 타입 void는 return값이 필요없다.
 * **main함수** - ****==main Thread  - thread : 첫번째가장 먼저 실행되는, 프로그램을 실행하는 함수이다. - 동시접속 기능이 필요하다면 필수 함수이다. - 한정된 자원을 같이 사용해야 할때. - ex\) 네비게이션, 게임, ...
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+
 ### 낙타 표기법
 
 * 자바에서 이름을 지을때 필요한 규약이다.

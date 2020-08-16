@@ -24,6 +24,7 @@
   * [10 Days - 객체 배열, 메서드중복정의, 생성자](1-days/10-days.md)
   * [11 Days - SELECT문과 Vector, StringBuilder](1-days/11-days/README.md)
     * [DeptApp.java](1-days/11-days/deptapp.java.md)
-  * [12 Days - 생성자, 객체 배열, API, 클래스, 인스턴스화 정리하기](1-days/12-days.md)
-  * [13 Days -](1-days/13-days.md)
+  * [12 Days - 객체배열과 for문, 생성자의 역할, Git사용](1-days/12-days.md)
+  * [13 Days - 클래스 쪼개기](1-days/13-days/README.md)
+    * [8Days 야구숫자게임 쪼개기](1-days/13-days/8days.md)
 
