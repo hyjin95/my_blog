@@ -2,7 +2,7 @@
 description: 2020.08.06 - 7일차
 ---
 
-# 7 Days - JMenuBar, Event
+# 7 Days - JMenuBar, Event, get, set
 
 ### 6일차 복습
 

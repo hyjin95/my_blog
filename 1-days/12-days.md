@@ -37,7 +37,7 @@ description: 2020.18.13 - 12일차
 * 참조 : [https://java119.tistory.com/107](https://java119.tistory.com/107)
 * 참고 : IntArray.java
 
-### 생성자의 역
+### 생성자의 역할
 
 * 코드를 작성할때에는 main을 최소화하고 인스턴스화와 호출을 이용해야한다.
 * 호출은 생성자를 이용하도록한다.

@@ -9,10 +9,6 @@ description: 2020.08.14 - 13일차
 * 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 
-## BookManager.java 쪼개기
-
-버튼을 누르는 Event 발생시 새 창을 띄우게한다.
-
 ### 클래스를 쪼갤때 고려해야 할 것
 
 1. 변수의 갯수와 위치
@@ -20,7 +16,72 @@ description: 2020.08.14 - 13일차
 3. 생성자 - 파라미터O,  리턴타입X - 역할 : 클래스와 클래스를 매칭시켜준다.
 4. 클래스의 상속관계
 
-### BookManager 의 경우
+### 예제
+
+Sub.java에서 Main.java의 등록버튼의 주소번지를 사용하는 두 가지 방법
+
+### 1. 메서드를 이용한다
+
+```java
+package bookapp;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Main extends JFrame {
+	JButton jbtn_add = new JButton("등록");
+	Main m = null;
+	
+	public Main getInstance() {
+	if(m!=null) { // null 체크를 하여 복사본이 만들어지는 것을 방지
+		m = new Main();// 하나 - 싱글톤
+	}
+	return m;
+	}
+	
+	public JButton getButton() {
+		return jbtn_add;
+	}
+	public static void main(String[] args) {
+		Main m = new Main();
+		Sub sub = new Sub(m);
+	}
+}
+```
+
+* 객체를 메서드라는 수단을 사용하여 주입 받겠다.
+* 11-15번 : 인스턴스화 주소번지를 하나로만 지정하는것을 싱글톤이라고 한다. 한정된 자원을 차례대로, 공평하게 여러 클래스가 사용하는 것이다.
+
+### 2. 생성자를 이용한다
+
+```java
+package bookapp;
+
+import java.util.Vector;
+
+import javax.swing.JDialog;
+
+public class Sub extends JDialog {
+	Main m = null;
+	
+	public Sub(Main m) {
+		this.m = m;
+		m.getButton().setText("가입");
+		this.add("North", m.getButton());
+		this.setTitle("Sub화면입니다.");
+		this.setSize(300, 200);
+		this.setVisible(true);				
+	}
+```
+
+* JDialog : 새 창을 띄우는 클래스
+* 12번 : setter, getter로 객체를 생성할 수 있다.
+
+## BookManager.java 쪼개기
+
+버튼을 누르는 Event 발생시 새 창을 띄우게한다.
+
+### 생각하기
 
 1. 입력을 누르면 새 '입력'창이, 수정을 누르면 새 '수정'창이, 보기를 누르면 새 '보기'창을 띄워야한다.
 2. 사용할 메서드 - public ActionPerformed\(ActionEvent\):void - public bookIns\(n개\):int : 건수를 입력하는 메서드이므로 int타입을 갖는다. \(책제목 등을 입력\) - public bookUpd\(n개\):int : 위와 같다. \(이름, 번호, 주소 등을 수정\) - public booksel\(\_.no\):BookVO : 책넘버를 검색하면 가격, 목차 등 여러 정보를 보여줘야한다. - public exit\( \); : 종료기능, 파라미터와 리턴타입은 없다.
@@ -163,7 +224,7 @@ public class BookCRUD extends JDialog {
 * 새 창\(JDialong\) 띄우기 클래스
 * 이 창은 평소에는 보이지 않다가 event 발생시 보여야 하므로 setVisible의 기본값은 false이다.
 
-### 숙
+### 숙제
 
 8일차에 만들었던 야구 숫자 게임을 4명의 팀원이서 클래스를 나누어 구현시켜보자.  
 main, ui, event, logic

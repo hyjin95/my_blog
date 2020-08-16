@@ -17,7 +17,7 @@
   * [4 Days - 메소드호출, static, 형전환](1-days/4days.md)
   * [5 Days - for, if문과 연산자 활용, 객체, DB Oracle설치](1-days/5-days.md)
   * [6 Days - 반복문과 배열](1-days/6-days-1.md)
-  * [7 Days - JMenuBar, Event](1-days/7-days-jmenubar-event.md)
+  * [7 Days - JMenuBar, Event, get, set](1-days/7-days-jmenubar-event.md)
   * [8 Day - 야구 숫자 게임](1-days/8-day/README.md)
     * [야구 숫자 게임 코드](1-days/8-day/undefined.md)
   * [9 Days - Switch문, JAVA로 Oracle이해하기](1-days/9-days-switch.md)
