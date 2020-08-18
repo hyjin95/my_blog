@@ -154,5 +154,5 @@ public class Main1 extends JFrame implements ActionListener {
 * 67-70번 : TextField에 "북쪽"외 다른 글 입력시 알림창과 Field를 리셋해주는 이벤트
 * 73-90번 : "서쪽\(버튼\)"클릭시 모든 버튼을 없애는 이벤트 
 * 91-93번 : "동쪽\(버튼\)"클릭시 "메뉴"로 문자열을 변경하는 이벤트
-* 95-110번 : "남쪽\(버튼\)"클릭시 TextField 입력창으로 바꿔주는 이벤트 - 사용 클래스 : Container cont = this.getContentPane\(\);    \(API : JFrame이 붙어있는 캔버스\) - **remove\(삭제할 화면정보\);** : ****클래스안의 메서드  - 삭제할 화면정보=null;까지 해주어야 주소번지까지 Candidate상태로 변환한다. - **Candidate** : 쓰레기값, 곧 전환될 값 - **revalidate\(\)**; : 갱신메서
+* 95-110번 : "남쪽\(버튼\)"클릭시 TextField 입력창으로 바꿔주는 이벤트 - 사용 클래스 : Container cont = this.getContentPane\(\);    \(API : JFrame이 붙어있는 캔버스\) - **remove\(삭제할 화면정보\);** : ****클래스안의 메서드  - 삭제할 화면정보=null;까지 해주어야 주소번지까지 Candidate상태로 변환한다. - **Candidate** : 쓰레기값, 곧 전환될 값 - **revalidate\(\)**; : 갱신메서드
 
