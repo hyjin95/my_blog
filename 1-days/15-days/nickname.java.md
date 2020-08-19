@@ -29,8 +29,15 @@ getter, setter, 생성자, 인스턴스화 분리, 배열, 이벤트처리, UI\(
 * DefaultTableModel : Data set, 데이터 꾸러미
 * 사람이 두명 -&gt; i는 두번 반복, 컬럼 종류도 2개 -&gt;  j도 두번 반복, 배열은 0부터 시작한다. - for\(  ;i&lt;2;  \) { for\(  ;j&lt;2;  \)}}
 * 변수\(좌표\) : i, j : 면\(셀\)의 값에 접근하는데 필요하다.
-* getValueAt\(i, j\) : 셀의 값을 읽어온다. - get의 리턴타입은 Object이고 get은 값을 꺼내오는 것이므로 파라미터 변수가 두개\(좌표\) 필요하다. - getValue\(i, j\);
+* getValueAt\(i, j\) : 셀의 값을 읽어온다. - get의 리턴타입은 Object이고 get은 값을 꺼내오는 것이므로 파라미터 변수가 두개\(좌표\) 필요하다. - Object는 int, double, boolean 까지 담을 수 있다. - getValue\(i, j\);
 * get으로 꺼내온 값을 set으로 저장해서 table 에 올린다. - setValueAt\(obj, i , j\); 
+
+### 성별을 입력하는 창 띄우기
+
+* 성별 : JLabel        : jlb\_gender
+* 입력 : JTextField : jtf\_gender : String타입
+* Lable과 TestField위치 지정하기 - Layout뭉개기 = null; - setBound\( x , y , width , height\);
+* 사용자가 입력창에 입력하는 값 가져오기 - **public void SetGender\(jtf\_gender.getText\( \) \);** - jtf에 쓰기 : jtf\_gender.SetText\( \) - \( \) : jtf에 무엇을 쓸까요? = get에서 반환된 obj값 = jtf\_gender.getText\( \); - getText는 반환타입이 String이다.
 
 ### NickNameList.java
 
