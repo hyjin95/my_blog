@@ -31,5 +31,5 @@
     * [Main1.java](1-days/14-days/main1.java.md)
     * [Exam1.java](1-days/14-days/exam1.java.md)
   * [15 Days - 추상클래스, 인터페이스, 구현체클래스, 다형성](1-days/15-days/README.md)
-    * [Untitled](1-days/15-days/untitled.md)
+    * [Duck - 추상클래스와 인터페이스](1-days/15-days/untitled.md)
 

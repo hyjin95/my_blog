@@ -1,4 +1,4 @@
-# Untitled
+# Duck - 추상클래스와 인터페이스
 
 ### FlyBehavior.java
 
@@ -16,9 +16,7 @@ public interface FlyBehavior {
 	public void fly();//바디가 없다 = 아직 결정할 수 없다.
 	public int methodA();//리턴타입과 파라미터만 존재한다.
 	public int methodA(int i);
-
 }
-
 ```
 
 ### FlyWithWings.java
@@ -194,7 +192,7 @@ public abstract class Duck {//abstract = 추상클래스
 
 ### DuckSimulation.java
 
-호
+호출
 
 ```java
 package duck;
@@ -218,6 +216,5 @@ public class DuckSimulation {
 		//myDuck.fly();
 	}
 }
-
 ```
 
