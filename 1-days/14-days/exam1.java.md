@@ -1,5 +1,7 @@
 # Exam1.java
 
+### 선언부분
+
 ```java
 package desigin.test;
 import java.awt.BorderLayout;
@@ -31,14 +33,14 @@ public class Exam1 extends JFrame implements ActionListener {
 	//테이블 추가하기
 	JTable            jtb_list = null;//버튼을 누르면 table생성 = 선언만하고 이벤트에서 생성=양식안의 테이블
 	JScrollPane       jsp_list = null;//jtable에 스크롤바 붙이기
-	DefaultTableModel dtm_list = null;//jtable안에 들어갈 데이터 설정하는데 필요한 클래스 =비닐위의 양식
-	//테이블은 row와 colum이 만나야 면이되고 면이 되어야 값을 넣을 수 있다. = 이중배열이 필요하다.
+	DefaultTableModel dtm_list = null;//jtable안의 데이터 설정에 필요한 클래스 = 기본 비닐 양식
+	//테이블은 row와 colum이 만나야 면이되고 면이 되어야 값을 넣을 수 있다. = 이중배열이 필요
 	String            cols[]   = {"성명","자바","오라클","HTML","총점","평균","석차"};//colum명
-	String            data[][] = null;//앞[]이row, 학생수가 결정되지 않았으므로 생성만 한다.
+	String            data[][] = null;//앞[]이row, 학생수가 결정되지 않아서 생성
 	
 	JPanel jp_north = new JPanel();//textfield와 버튼을 담는 속지
 	JPanel jp_south = new JPanel();
-	JTextField jtf_inwon = new JTextField();//화면이 열리자마자 보여져야 하니까 한번에 생성까지한다.
+	JTextField jtf_inwon = new JTextField();//화면이 열리자마자 보여져야 하니까 생성까지한다.
 	JButton jbtn_create  = new JButton("생성");
 	JButton jbtn_account = new JButton("처리");
 	JButton jbtn_exit    = new JButton("종료");
@@ -47,11 +49,19 @@ public class Exam1 extends JFrame implements ActionListener {
 	//화면을 갱신할때에는 Container를 활용하자 =제일 밑바닥의 속지
 	Container cont = this.getContentPane();
 	
-	//생성자
-	public Exam1() {
+```
 
-	}
-	
+* import, 클래스, 멤버변수 선언
+* 26번 : ActionListener인터페이스를 implements하고 JFrame추상클래스를 상속받는 클래스 정의
+* 29-31, 36-41번 : UI 선언
+* 33-34, 42번 : 데이터를 담는 배열 선언
+* 45번 : 이벤트처리시 화면 갱신을 위한 Container클래스 선
+
+### 생성자와 화면구현, 필요한 메서드 작성해보기
+
+```java
+	//생성자
+	public Exam1() { }	
 	//화면처리부
 	public void initDisplay() {
 		jbtn_create.addActionListener(this);//없으면 actionPerformed는 호출되지 않는다.
@@ -84,8 +94,23 @@ public class Exam1 extends JFrame implements ActionListener {
 		//차이에는 어떤 차이가 있는가
 		Exam1 e1 = new Exam1();//생성자에서 화면 메서드 호출
 		e1.initDisplay();//메인메서드에서 화면 메서드 호출
-	}
-	//두 클래스가 서로 상속관계이거나 인터페이스를 구현하는 구현체 클래스 이라면
+	}	
+```
+
+* 2번 : 디폴트생성
+* 4번 : 화면처리 메서드
+* 5-7번 : 이벤트 발생 감지하는 메서드 선언. 소유주의 이벤트가 감지되면 JVM이 eventPerformed를 호출
+* 10-19번 : 필요한 속지와 버튼, TextField등 붙이기
+* 20-21번 : 화면 구성 
+* 25번: 추후에 성적처리할 메서드 정의
+* 30번 : 메인 메서드
+* 33번 : 2번의 디폴트 생성자 호출\( initDisplay\(\);이 있으면 33번에서 호출된다.\)
+* 34번 : 인스턴스화, 인스턴스 변수를 이용한 화면 메서드 호출
+
+### 이벤트처리
+
+```java
+//두 클래스가 서로 상속관계이거나 인터페이스를 구현하는 구현체 클래스 이라면
 	//반드시 재정의 해야한다.=오버라이드
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -132,4 +157,17 @@ public class Exam1 extends JFrame implements ActionListener {
 //변수가 유지되어야 한다 : 전변, 변수가 때에따라 계속 변한다 : 지변
 //클래스 쪼개기 했을때, 외부에서 사용해야한다. : 전변
 ```
+
+* Exam1클래스는 actionListener를 impelements하고 있으므로 반드시 actionPerformed를 재정의해야한다.
+* 5번 : Object에 이벤트 감지를 꺼내어\(get\) 담는다.
+* 6-9번 : "처리"버튼 감지시 account메서드 호출
+* 11-13번 : "나가기"버튼 감지시 창 종료
+* 15번 : "생성"버튼 감지
+* 18번 : 예외처리
+* 19번 : inwon은 textField에 입력된 String을 int로 변화 시켜 갖는데 이는 사용자가 int가 아닌 값을 입력할 수 있다. 
+* 20-24번 : 해당 오류 처리, 알림창을 띄우고 입력창을 초기화한뒤, 이벤트 진행하지않고 빠져나간다.
+* 26-26번  : "생성"버튼이 눌리고나면 입력창과 "생성"버튼을 비활성화한다.
+* 28번 : data에 인원수 X 컬럼명수 자료 담기
+* 30-35번 : 데이터를 구현할 Table생성하고 붙이기
+* 36번 : 갱
 
