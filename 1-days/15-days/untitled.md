@@ -121,6 +121,7 @@ public class MallardDuck extends Duck {//Duck추상클래스를 아빠로 갖는
 ```
 
 * 구현체 클래스를 인스턴스화하여 불러와서 해당 메서드를 사용하는데, 이때에는 구현체 클래스에서 재정의된 메서드를 호출하게된다.
+* 15번 : 생성자
 * 18번 : FlyWithWings의 fly 메서드호출
 * 20번 : FlyNoWay의 fly 메서드 호출
 * Duck이라는 추상클래스를 parent로 갖는다. 
@@ -148,6 +149,10 @@ public class WoodDuck extends Duck {
 }
 ```
 
+* parent Duck추상클래스가 인터페이스를 인스턴스화 하여 담고있으므로 WoodDuck클래스 안의 메서드가 해당 구현체 클래스를 불러올 수 있다.
+* 6-9번 : Behavior인터페이스의 FlyNoWay구현체 클래스 fly 메서드를 호출하는 메서드이다.
+* 11-14번 : 부모 클래스의 추상메서드 구현부분이다.
+
 ### RubberDuck.java
 
 Duck 추상클래스를 상속하면서 구현체 클래스를 이용하는 클래스
@@ -169,6 +174,8 @@ public class RubberDuck extends Duck{
 	}
 }
 ```
+
+* WoodDuck과 비슷하지만 parent의 추상메서드를 재정의 하지 않았다.
 
 ### Duck.java
 
@@ -202,9 +209,18 @@ public abstract class Duck {//abstract = 추상클래스
 }
 ```
 
+* **abstract**가 붙으면 추상클래스이다.
+* 멤버변수선언, 생성이 가능하고 일반 메서드도 만들 수 있다. 추상메서드도 가질 수 있다.
+* 추상메서드는 타입 앞에 abstract가 붙는다.
+* 11번 : 인터페이스를 인스턴스화할 수 있다.
+* .
+* 17-19번 : 일반 메서드
+* 24-25번 : 추상메서
+* 
 ### DuckSimulation.java
 
-다향성, 메서드이름은 같지만 결과값이 다르다. 
+다향성, 메서드이름은 같지만 결과값이 다르다.   
+다형성 : Polymorphism -서로 다른 데이터형에 대하여 동일한 인터페이스를 제공하는 프로그래밍
 
 ```java
 package duck;
@@ -218,7 +234,7 @@ public class DuckSimulation {
 	public static void main(String[] args) {
 		//추상클래스도 구현체 클래스가 있어야 만 한다.
 		Duck myDuck = new MallardDuck();
-		myDuck.methodA();//FlyBehavior.fly()
+		myDuck.methodA();//=FlyBehavior.fly()
 		WoodDuck herDuck = new WoodDuck();
 		herDuck.methodA();
 		herDuck.swimming();
@@ -229,4 +245,9 @@ public class DuckSimulation {
 	}
 }
 ```
+
+* 출력결과
+* 11-12번 : 나는 날고 있어요. 나는 날지 못합니다. 나는 물위에 뜹니다.
+* 13-15번 : 나는 날지 못합니다. 나는 물에 가라앉습니다.
+* 16-18번 : 나는 날지 못합니다.
 
