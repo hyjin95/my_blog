@@ -4,6 +4,19 @@
 
 getter, setter, 생성자, 인스턴스화 분리, 배열, 이벤트처리, UI\(레이아웃\), 추상클래스, 인터페이스, override, 파라미터, 추상메서드, 일반메서드, 변수, 선언과 생성위
 
+### 그려보기
+
+| 대화명 | 성 |
+| :---: | :---: |
+| xxx | 여 |
+| aaa | 남 |
+| vvv | 남 |
+| ... | ... |
+
+* 필요한 화면구성 - dtm : DefaultTableModel : Header\(대화명, 성별\) 영역 초기화, 읽어오기 및 입력영역 - jtb : JTable : 이벤트 감지시 불러오는 영역 - jsp : JScrollPane
+*  Data : 배열, \[1\] \[2\]  - row : 1이지만 대화명이 늘어날수록 row도 증가해야한다. - cols : 목록을 늘리지 않는 한 2로 고정된다. - String\[ \] \[ \]
+* 생성자의 역할 - jtb와 jsp를 매칭시켜주는 역할 - ex\) \_ . addActionListener\( \);
+
 ### NickNameList.java
 
 ```java

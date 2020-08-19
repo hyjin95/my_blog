@@ -4,6 +4,15 @@ description: 2020.08.19 - 15일차
 
 # 15 Days - 상속, 추상클래스, 인터페이스, 구현체클래스, 다형성
 
+### 복습
+
+1. 화면 - Conteiner : 가장 밑바닥 - JFrame : 속지, 단독으로 화면을 나타낼 수 있다. - JPanel : 속지 위에서 화면을 구성해주는 클래스
+2. Jpanel 인스턴스화와 생성자 - Jpanel jp = new JPanel\(\); - JPanel의 DefaultLayout은 FlowLayout이다. - BorderLayout으로 set 하는 법 : 소유주 주소번지.setLayout\(new BorderLayout\(\)\);
+3. FlowLayout, BorderLayout - Flow : 정렬레이아웃, 버튼이 2개 있는 창을 확대하면 두번째 버튼이 오른쪽에, 축소하면 아래로 내려간다. - Border : setLayout클래스에서 기본적으로 사용되는 레이아웃, 동서남북 방향으로 배치한다. 파라미터로 int, int가 오면 여백을 의미한다.
+4. 인스턴스화 분리 - 선언 : A a = null; - 생성 : a = new A;
+
+### 추상클래스
+
 ### InstanceTest.java
 
 ```java
