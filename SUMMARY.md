@@ -27,5 +27,7 @@
   * [12 Days - 객체배열과 for문, 생성자의 역할, Git사용](1-days/12-days.md)
   * [13 Days - 클래스 쪼개기](1-days/13-days/README.md)
     * [8Days 야구숫자게임 쪼개기](1-days/13-days/8days.md)
-  * [14 Days - 코드 작성 순서, Container\(remove\(\),  revalidate\(\)\), Candidata](1-days/14-days.md)
+  * [14 Days - 코드 작성 순서, Container\(remove\(\),  revalidate\(\)\), Candidata](1-days/14-days/README.md)
+    * [Main1.java](1-days/14-days/main1.java.md)
+    * [Exam1.java](1-days/14-days/exam1.java.md)
 
