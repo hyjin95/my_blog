@@ -11,7 +11,35 @@ description: 2020.08.19 - 15일차
 3. FlowLayout, BorderLayout - Flow : 정렬레이아웃, 버튼이 2개 있는 창을 확대하면 두번째 버튼이 오른쪽에, 축소하면 아래로 내려간다. - Border : setLayout클래스에서 기본적으로 사용되는 레이아웃, 동서남북 방향으로 배치한다. 파라미터로 int, int가 오면 여백을 의미한다.
 4. 인스턴스화 분리 - 선언 : A a = null; - 생성 : a = new A;
 
+### 인스턴스화 위치
+
+* class 밑에 멤버변수로 선언 하면 모두가 가져다 쓸 수 있다.
+* 메서드나 생성자 안에서 선언하면 해당 영역 안에서만 사용이 가능하다.
+* 공통으로 사용해야하는 인스턴스 변수는 멤버변수로 선언하고, 사용되는 위치 전에 생성해주어야 NullException오류가 나지 않는다.
+* 참고 : InstanceTest.java
+
+### 상속
+
+* parent 클래스의 것들을 child클래스가 사용할 수 있다. = child클래스가 영역이 더 넓다.
+* 참고 : Father, Son.java
+
 ### 추상클래스
+
+* 클래스에 extends를 붙여 쓸 수 있다.
+* 상속의 개념을 갖는다. 기존 클래스가 child, 불러온 추상클래스가 parent가 된다.
+* child의 범위가 더 크므로 parent 주소번지 = new child\(\);가 성립한다.
+* 결합도가 높고, 자유롭지 못하다. 
+* 참고 : Duck.java - MallardDuck, WoodDuck, RubberDuck클래스 들이 Duck추상클래스를 parent로 상속한다.
+
+### 인터페이스
+
+* 클래스에 implements를 붙여 쓸 수 있다.
+* 인터페이스는 자기안에 메서드를 선언만 할 수 있다.
+* 그래서 구현체 클래스가 반드시 필요하다.
+* implements하면 override가 자동으로 따라온다.
+* 한 클래스 안에서 구현도 하고 사용도 해도되지만 구현체 클래스를 따로 만들어서 빼서 쓰는게 더 편리하다.
+* 결합도가 낮다, 비교적 자유롭다.
+* 참고 : FlyBehavior.java - FlyWithWings, FlyNoWay 클래스들이 FlyBehavior의 구현체 클래스들이다.
 
 ### InstanceTest.java
 
@@ -90,6 +118,16 @@ public class FatherSmulation {
 }
 ```
 
+* 26번은 상속관계시에만 성립한다.
+* 출력결과 : Son ---&gt; methodA 호출성공
+
+### 클래스 안의 클래스
+
+* 클래스 안에서 클래스 선언이 가능하다.
+* 안에 있는 클래스를 내부 클래스 라고 한다.
+* 반드시 외부 클래스를 인스턴스화 해야만 접근 가능하다.
+* 내부 클래스는 외부 클래스의 멤버변수들을 사용할 수 있다.
+
 ### Outter.java
 
 ```java
@@ -105,14 +143,11 @@ class Outter {
 	public void come() {
 		System.out.println("come 호출 성공");
 	}
-	//내부 클래스 라고 한다.
-	//반드시 외부 클래스를 인스턴스화 해야만 접근이 가능하다.
-	//외부 클래스의 멤버 변수를 사용할수 있다.
+
 	class Inner {//클래스 안에 클래스쓰기
 		public void go() {
 			System.out.println("go 호출 성공 : "+i);
-		}
-		
+		}		
 	}//end of Inner class
 }//end of Outter class
 
@@ -126,4 +161,10 @@ public class OutterTest {
 	}
 }
 ```
+
+* Inner클래스의 go메서드를 호출하는 방법
+* 24, 5-8번 : 생성자이용
+* 24-26 : 인스턴스화이용
+
+후기 : 인스턴스화 생성 위치에 따라 null오류가 날수 있으니 주의해야한다. 생성자와 추상클래스, 인터페이스를 더 활용해보도록 하자!
 

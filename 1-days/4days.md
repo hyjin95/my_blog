@@ -74,9 +74,7 @@ public class SungJuk {
 		System.out.println(sj.avg(result));			
 		
 	}
-
 }
-
 ```
 
 * 사용 변수: hap, sum, avg, answer, result
@@ -211,9 +209,7 @@ public class B {
 		System.out.println(val2);//문자를 숫자로 출력
 
 	}
-
 }
-
 ```
 
 * 타입변환 string타입의 문자를 int타입의 정수로 변환시켜주는 등..타입을 변환시켜준다. 자바에서 데이터 손실이 일어나는 변환은 실행되지 않는다.\(큰 자료형에서 작은 자료형으로\)
@@ -419,9 +415,7 @@ public class E {
 		System.out.println(f1);//1.0
 
 	}
-
 }
-
 ```
 
 * a항 = b항 : 대입연산자의 오른쪽에 있는 값을 왼쪽에 대입한다.
