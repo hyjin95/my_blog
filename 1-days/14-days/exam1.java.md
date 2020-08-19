@@ -25,11 +25,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-
-public class Exam1 extends JFrame implements ActionListener {//구현체 클래스=eventHandler클래스
+//구현체 클래스=eventHandler클래스
+public class Exam1 extends JFrame implements ActionListener {
 	//선언부 - 주의 : 선언부에서 메서드 호출이나 값에 대한 재정의는 불가능
 	//테이블 추가하기
-	JTable            jtb_list = null;//생성버튼을 누르면 table생성한다. 선언만하고 이벤트에서 생성해야한다.=양식안의 테이블
+	JTable            jtb_list = null;//버튼을 누르면 table생성 = 선언만하고 이벤트에서 생성=양식안의 테이블
 	JScrollPane       jsp_list = null;//jtable에 스크롤바 붙이기
 	DefaultTableModel dtm_list = null;//jtable안에 들어갈 데이터 설정하는데 필요한 클래스 =비닐위의 양식
 	//테이블은 row와 colum이 만나야 면이되고 면이 되어야 값을 넣을 수 있다. = 이중배열이 필요하다.

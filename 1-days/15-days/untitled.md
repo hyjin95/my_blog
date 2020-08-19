@@ -1,8 +1,8 @@
-# Duck - 추상클래스와 인터페이스
+# Duck.java - 추상클래스와 인터페이스 다형성
 
 ### FlyBehavior.java
 
-인터페이
+인터페이스
 
 ```java
 package duck;
@@ -21,7 +21,7 @@ public interface FlyBehavior {
 
 ### FlyWithWings.java
 
-구현체 클래
+구현체 클래스
 
 ```java
 package duck;
@@ -179,20 +179,18 @@ public abstract class Duck {//abstract = 추상클래스
 	//{ }가 있는, 바디가 있는 메서드가 일반 메서드이다.
 	public void display() {
 		System.out.println("나는 오리 입니다.");
-	}
-	
+	}	
 	//swimming 은 추상메서드이다
 	//인터페이스 에서는 abstract를 생략할 수 있지만(모두 다 추상메소드만 오므로)
 	//그런데 추상클래스는 일반 메서드도 같이 공존하므로 구분할 수 있어야한다.
 	//JVM이 인식하는 추상메서드는 abstract를 붙여야한다.
 	public abstract void swimming();
-
 }
 ```
 
 ### DuckSimulation.java
 
-호출
+다향성, 메서드이름은 같지만 결과값이 다르다. 
 
 ```java
 package duck;
