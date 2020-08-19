@@ -30,7 +30,7 @@
   * [14 Days - 코드 작성 순서, Container\(remove\(\),  revalidate\(\)\), Candidata](1-days/14-days/README.md)
     * [Main1.java](1-days/14-days/main1.java.md)
     * [Exam1.java](1-days/14-days/exam1.java.md)
-  * [15 Days - 생성자, 추상클래스, 인터페이스, 구현체클래스, 다형성](1-days/15-days/README.md)
+  * [15 Days - 상속, 추상클래스, 인터페이스, 구현체클래스, 다형성](1-days/15-days/README.md)
     * [Duck.java - 추상클래스와 인터페이스 다형성](1-days/15-days/untitled.md)
     * [NickName.java](1-days/15-days/nickname.java.md)
 
