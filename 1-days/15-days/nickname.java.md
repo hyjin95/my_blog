@@ -16,6 +16,21 @@ getter, setter, 생성자, 인스턴스화 분리, 배열, 이벤트처리, UI\(
 * 필요한 화면구성 - dtm : DefaultTableModel : Header\(대화명, 성별\) 영역 초기화, 읽어오기 및 입력영역 - jtb : JTable : 이벤트 감지시 불러오는 영역 - jsp : JScrollPane
 *  Data : 배열, \[1\] \[2\]  - row : 1이지만 대화명이 늘어날수록 row도 증가해야한다. - cols : 목록을 늘리지 않는 한 2로 고정된다. - String\[ \] \[ \]
 * 생성자의 역할 - jtb와 jsp를 매칭시켜주는 역할 - ex\) \_ . addActionListener\( \);
+* 이벤트 처리 순서 - implements : 구현체 클래스를 결정한다. - JButton 클릭 -&gt; 이벤트 발동 -&gt; 간섭해야함 -&gt; 타이밍필요 -&gt; LifeCycle흐름이해필요 -&gt; 문법에러해결 - 매칭 : \(this\) - 콜백메서드 재정의 : 메서드 이름이 정해진다. - jbtn\_save.addActionListener\(this\); - jbtn\_save : 이벤트 소스 : e.getSource - addAcionListener : 개발자가 매칭해주는 메서드 이름 - \( \) : Object : 클래스 ex\)this
+
+### Data와 Table
+
+| 대화명 | 성별 |
+| :---: | :---: |
+| test | 남 |
+| apple | 여 |
+
+* JTable : Form, 양식
+* DefaultTableModel : Data set, 데이터 꾸러미
+* 사람이 두명 -&gt; i는 두번 반복, 컬럼 종류도 2개 -&gt;  j도 두번 반복, 배열은 0부터 시작한다. - for\(  ;i&lt;2;  \) { for\(  ;j&lt;2;  \)}}
+* 변수\(좌표\) : i, j : 면\(셀\)의 값에 접근하는데 필요하다.
+* getValueAt\(i, j\) : 셀의 값을 읽어온다. - get의 리턴타입은 Object이고 get은 값을 꺼내오는 것이므로 파라미터 변수가 두개\(좌표\) 필요하다. - getValue\(i, j\);
+* get으로 꺼내온 값을 set으로 저장해서 table 에 올린다. - setValueAt\(obj, i , j\); 
 
 ### NickNameList.java
 
