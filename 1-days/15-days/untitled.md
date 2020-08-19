@@ -19,6 +19,10 @@ public interface FlyBehavior {
 }
 ```
 
+* 리턴타입이 있고 파라미터가 있는 메서드를 선언할 수 있다.
+* 인터페이스 안에는 클래스가 없으므로 메서드의 기능을 구현할수 없다.
+* 다른 클래스에서 FlyBehavior인터페이스 사용시, 구현체 클래스가 필요하다.
+
 ### FlyWithWings.java
 
 구현체 클래스
@@ -49,6 +53,8 @@ public class FlyWithWings implements FlyBehavior {
 }
 ```
 
+* FlyBehavior인터페이스의 메서드들을 implements로 받아와 구현해주는 구현체 클래스이다.
+
 ### FlyNoWay.java
 
 구현체 클래스2
@@ -77,6 +83,8 @@ public class FlyNoWay implements FlyBehavior {
 	}
 }
 ```
+
+* FlyBehavior인터페이스의 메서드들을 implements로 받아와 구현해주는 또다른 구현체 클래스이다.
 
 ### MallardDuck.java
 
@@ -111,6 +119,12 @@ public class MallardDuck extends Duck {//Duck추상클래스를 아빠로 갖는
 	}
 }
 ```
+
+* 구현체 클래스를 인스턴스화하여 불러와서 해당 메서드를 사용하는데, 이때에는 구현체 클래스에서 재정의된 메서드를 호출하게된다.
+* 18번 : FlyWithWings의 fly 메서드호출
+* 20번 : FlyNoWay의 fly 메서드 호출
+* Duck이라는 추상클래스를 parent로 갖는다. 
+* 23-26번 : Duck추상클래스의 추상메서드의 구현체부분이다.
 
 ### WoodDuck.java
 
