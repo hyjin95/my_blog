@@ -11,6 +11,11 @@ description: 2020.08.19 - 15일차
 3. FlowLayout, BorderLayout - Flow : 정렬레이아웃, 버튼이 2개 있는 창을 확대하면 두번째 버튼이 오른쪽에, 축소하면 아래로 내려간다. - Border : setLayout클래스에서 기본적으로 사용되는 레이아웃, 동서남북 방향으로 배치한다. 파라미터로 int, int가 오면 여백을 의미한다.
 4. 인스턴스화 분리 - 선언 : A a = null; - 생성 : a = new A;
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org
+
 ### 인스턴스화 위치
 
 * class 밑에 멤버변수로 선언 하면 모두가 가져다 쓸 수 있다.

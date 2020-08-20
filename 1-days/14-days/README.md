@@ -10,6 +10,11 @@ description: 2020.08.18 - 14일차
 2. 객체의 LifeCycle 이해 - ex\) 인스턴스화 new = 생성, 탄생
 3. 인스턴스화의 위치 - 멤버변수, 생성자, 메서드 - class 밑에서 선언만 할것인지, 생성까지 할것인지,  생성을 생성자에 할 것인지, 메서드에 할 것인지
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org
+
 ### 상속관계에서의 인스턴스화
 
 * A class 가 parent고 B class가 child 이면, - B b = new A\(\);가 성립한다. - 왼쪽 항에 항상 더 큰 class가 온다.

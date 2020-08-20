@@ -33,6 +33,7 @@
   * [15 Days - 상속, 추상클래스, 인터페이스, 구현체클래스, 다형성](1-days/15-days/README.md)
     * [Duck.java - 추상클래스와 인터페이스 다형성](1-days/15-days/untitled.md)
     * [NickName.java](1-days/15-days/nickname.java.md)
-  * [16 Days -](1-days/16-days/README.md)
+  * [16 Days - privat, static, API활용](1-days/16-days/README.md)
+    * [FunctionExam.java](1-days/16-days/functionexam.java.md)
     * [NickNameList.java](1-days/16-days/nicknamelist.java.md)
 

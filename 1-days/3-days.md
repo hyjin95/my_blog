@@ -52,9 +52,7 @@ public class Sonata {
 	  System.out.println(mycar.speedUp);//1
 	  System.out.println(hercar.speedDown);//-1
 	}
-
 }
-
 ```
 
 #### 선생님
