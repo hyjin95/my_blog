@@ -34,7 +34,8 @@ void m() {
 * NickName은 동시접속자들을 고려하여 멤버변수로 선언해야한다.
 * NickName은 private변수이지만 set, get메서드는 public이다.
 * 5번 : mVO는 set의 파라미터를 통해 "apple"을 담는다.
-* A : 안전성을 고려하여 private선언해야한다. 찾는 "사람"이라는 양식이 변하면 안되므로
+* A : 안전성을 고려하여 private선언해야한다. 찾는 "사람"이라는 양식이 변하면 안되므로 - = private는 get, set함수와 함께 주로 사용되고, 가져오는 값에 기준을 걸어야 할때에 사용한다.
+* 참고 : Company-CompanyTest.java
 
 ### 함수\(메서드\)의 생성과 호출
 
@@ -42,13 +43,13 @@ void m() {
 * level 2 : int 메서드이름\(\)return int;{}
 * level 3 : 클래스 메서드이름\(\)return;{}
 * 접근제한자 - private 함수 : 해당 클래스에서만 사용될 수 있다. - public 함수 :  다른 클래스에서 사용할 수 있다.
-* 참고 : FunctionExam1.java
+* 참고 : FunctionExam1.java, Company-CompanyTest.java
 
 ### 멤버변수와 지역변수 구분
 
 * static으로 선언된 멤버변수 : 다른 클래스, 함수에서 사용할 수 있다.
 * 클래스 밑에서 멤버변수로 초기화된 변수 : 다른 클래스, 함수에서 사용할 수 있다.
-* 참고 : LocalVariable.java
+* 참고 : LocalVariable.java, Company-CompanyTest.java
 
 ### Static
 
@@ -56,7 +57,7 @@ void m() {
 * **static** - static이 붙은 변수나 함수\(메서드\)를 싱글톤이라고 한다. 고정된 단 하나의 원본개념.
 * non-static영역에서는 static타입 변수를 사용할 수 있다.
 * static 영역에서는 non-static 영역은 사용할 수 없다.  - 인스턴스화를 통해야한다.
-* 참고 : LocalVariable.java
+* 참고 : LocalVariable.java, Company-CompanyTest.java
 
 ### LocalVariable.java
 
@@ -97,8 +98,6 @@ public class LocalVariable {
 
 ### Company.java-private static
 
-private : 해당 클래스에서만, static : 싱글톤, 단 하나의 원본
-
 ```java
 package book.ch6;
 
@@ -117,7 +116,6 @@ public class Company {
 		return instance;
 	}
 }
-//private는 데이터를 get으로 걸러 받을때, 조건을 걸어야할때 사용
 ```
 
 ```java
@@ -128,8 +126,10 @@ public class CompanyTest {
 	public static void main(String[] args) {
 		//Company cp = new Company(); //생성자가 private이므로 호출불가
 		Company cp1 = Company.getInstance();//static이므로 : 타입.메서드();
-		Company cp2 = Company.getInstance();//7번에서 인스턴스가 생성되었으므로 null이 아니다. 생성자를 호출하지 않는다.
-		System.out.println(cp1 == cp2);//싱글톤이므로 주소가 두개지만 하나를 바라보고있다. true이다.
+		Company cp2 = Company.getInstance();
+		//7번에서 인스턴스가 생성되었으므로 null이 아니다. 생성자를 호출하지 않는다.
+		System.out.println(cp1 == cp2);
+		//싱글톤이므로 주소가 두개지만 하나를 바라보고있다. true이다.
 	}
 }
 ```
