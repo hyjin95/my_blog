@@ -28,12 +28,14 @@ description: 2020.08.19 - 15일차
 * 클래스에 extends를 붙여 쓸 수 있다.
 * 상속의 개념을 갖는다. 기존 클래스가 child, 불러온 추상클래스가 parent가 된다.
 * child의 범위가 더 크므로 parent 주소번지 = new child\(\);가 성립한다.
-* 결합도가 높고, 자유롭지 못하다. 
+* 결합도가 높고, 자유롭지 못하다.
+* 단독 인스턴스화 불가능하다 -&gt; 추상클래스 주소번지 = new 추상클래스\(\); = 성립X 
 * 참고 : Duck.java - MallardDuck, WoodDuck, RubberDuck클래스 들이 Duck추상클래스를 parent로 상속한다.
 
 ### 인터페이스
 
 * 클래스에 implements를 붙여 쓸 수 있다.
+* 단독 인스턴스화가 불가능하다.
 * 인터페이스는 자기안에 메서드를 선언만 할 수 있다.
 * 그래서 구현체 클래스가 반드시 필요하다.
 * implements하면 override가 자동으로 따라온다.
