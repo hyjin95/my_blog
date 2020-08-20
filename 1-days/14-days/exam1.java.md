@@ -169,5 +169,5 @@ public class Exam1 extends JFrame implements ActionListener {
 * 26-26번  : "생성"버튼이 눌리고나면 입력창과 "생성"버튼을 비활성화한다.
 * 28번 : data에 인원수 X 컬럼명수 자료 담기
 * 30-35번 : 데이터를 구현할 Table생성하고 붙이기
-* 36번 : 갱
+* 36번 : 갱신
 

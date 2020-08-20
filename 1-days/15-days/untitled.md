@@ -1,8 +1,6 @@
 # Duck.java - 추상클래스와 인터페이스 다형성
 
-### FlyBehavior.java
-
-인터페이스
+### FlyBehavior-인터페이스
 
 ```java
 package duck;
@@ -23,9 +21,7 @@ public interface FlyBehavior {
 * 인터페이스 안에는 클래스가 없으므로 메서드의 기능을 구현할수 없다.
 * 다른 클래스에서 FlyBehavior인터페이스 사용시, 구현체 클래스가 필요하다.
 
-### FlyWithWings.java
-
-구현체 클래스
+### FlyWithWings-구현체클래스
 
 ```java
 package duck;
@@ -55,9 +51,7 @@ public class FlyWithWings implements FlyBehavior {
 
 * FlyBehavior인터페이스의 메서드들을 implements로 받아와 구현해주는 구현체 클래스이다.
 
-### FlyNoWay.java
-
-구현체 클래스2
+### FlyNoWay-구현체클래스2
 
 ```java
 package duck;
@@ -86,7 +80,7 @@ public class FlyNoWay implements FlyBehavior {
 
 * FlyBehavior인터페이스의 메서드들을 implements로 받아와 구현해주는 또다른 구현체 클래스이다.
 
-### MallardDuck.java
+### MallardDuck
 
 Duck 추상클래스를 상속하면서 구현체 클래스를 이용하는 클래스
 
@@ -127,7 +121,7 @@ public class MallardDuck extends Duck {//Duck추상클래스를 아빠로 갖는
 * Duck이라는 추상클래스를 parent로 갖는다. 
 * 23-26번 : Duck추상클래스의 추상메서드의 구현체부분이다.
 
-### WoodDuck.java
+### WoodDuck
 
 Duck 추상클래스를 상속하면서 구현체 클래스를 이용하는 클래스
 
@@ -153,7 +147,7 @@ public class WoodDuck extends Duck {
 * 6-9번 : Behavior인터페이스의 FlyNoWay구현체 클래스 fly 메서드를 호출하는 메서드이다.
 * 11-14번 : 부모 클래스의 추상메서드 구현부분이다.
 
-### RubberDuck.java
+### RubberDuck
 
 Duck 추상클래스를 상속하면서 구현체 클래스를 이용하는 클래스
 
@@ -177,7 +171,7 @@ public class RubberDuck extends Duck{
 
 * WoodDuck과 비슷하지만 parent의 추상메서드를 재정의 하지 않았다.
 
-### Duck.java
+### Duck.java-추상클래스
 
 추상클래스 : 일반 메서드 2개, 추상메서드 1
 
@@ -217,7 +211,7 @@ public abstract class Duck {//abstract = 추상클래스
 * 17-19번 : 일반 메서드
 * 24-25번 : 추상메서
 * 
-### DuckSimulation.java
+### DuckSimulation-메인
 
 다향성, 메서드이름은 같지만 결과값이 다르다.   
 다형성 : Polymorphism -서로 다른 데이터형에 대하여 동일한 인터페이스를 제공하는 프로그래밍
@@ -250,4 +244,6 @@ public class DuckSimulation {
 * 11-12번 : 나는 날고 있어요. 나는 날지 못합니다. 나는 물위에 뜹니다.
 * 13-15번 : 나는 날지 못합니다. 나는 물에 가라앉습니다.
 * 16-18번 : 나는 날지 못합니다.
+
+
 
