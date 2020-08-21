@@ -39,7 +39,7 @@ getter, setter, 생성자, 인스턴스화 분리, 배열, 이벤트처리, UI\(
 * Lable과 TestField위치 지정하기 - Layout뭉개기 = null; - setBound\( x , y , width , height\);
 * 사용자가 입력창에 입력하는 값 가져오기 - **public void SetGender\(jtf\_gender.getText\( \) \);** - jtf에 쓰기 : jtf\_gender.SetText\( \) - \( \) : jtf에 무엇을 쓸까요? = get에서 반환된 obj값 = jtf\_gender.getText\( \); - getText는 반환타입이 String이다.
 
-### NickNameList.java
+### NickNameList.java - 선언부
 
 ```java
 package desigin.test;
@@ -65,7 +65,6 @@ public class NickNameList extends JFrame implements MouseListener{
 		   ,{"apple", "여"}
 		   ,{"tomato", "여"}
 	};//end of data
-	
 	DefaultTableModel dtm = new DefaultTableModel(data, cols);
 	//테이블 생성시 데이터셋에 대한 헤더 초기화 부분이 필요하다. - btm이 이때 사용된다.
 	JTable jtb = new JTable(dtm);
@@ -73,6 +72,13 @@ public class NickNameList extends JFrame implements MouseListener{
 									 ,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 									 ,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 	
+```
+
+* NickNameList는 JFrame을 상속하고 MouseListener인터페이스를 import한다.
+* 선언부
+* 15번 : Sub클래스와 연결되는 부분이다. Sub창에는 주소번지를 파라미터로하는 생성자가 있다.
+
+```java
 	public NickNameList() {}
 	
 	public void initDisplay() {//this는 생략가능
@@ -90,20 +96,17 @@ public class NickNameList extends JFrame implements MouseListener{
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
 
 	@Override
