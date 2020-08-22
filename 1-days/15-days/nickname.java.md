@@ -321,13 +321,13 @@ public class MemberVO {
 		this.gender = gender;
 	}
 }
-//우클릭 - Source - Generate getter and setter - select all - last member - finish
 ```
 
 * 4,5번 : nickName, gender변수는 담는 값이 변하기 때문에 null로두고, 타입이 String이여야하기 때문에 private멤버변수로 선언한다.
 * 7번: 디폴트생성자, 생략가능
 * 9번 : 데이터를 파라미터로 갖는 생성자 - 데이터 컬럼명을 모두 파라미터에 넣어주어야한다.
-* 10,11번 : 입력된 파라미터들을 멤버변수에 대입, 초기화한다.
+* 10,11번 : 입력된 파라미터들을 멤버변수에 대입, 초기화한다. \(소스\) - 10,11번 드래그 후 우클릭으로 get, set함수를 만들 수 있다.
 * 14번 : String타입의 get함수는 nickName을 반환한다.  
-* 17번 : 
+* 17번 : String타입 파라미터를 갖는 set함수이다.
+* 18번 : 멤버변수 nickName에 입력된 nickName을 저장, 초기화한다.
 

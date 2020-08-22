@@ -28,10 +28,11 @@ description: 2020.08.06 - 7일차
 * callback메소드도 이벤트에 따라 다르다.
 * 이벤트에서 if를 사용하면 여러 이벤트를 대응시킬 수 있다. - if,if구문은 조건을 계속 따져야하기 때문에 시스템이 처리할 일이 많다. - if, else-if는 조건을 만족하면 넘어가기때문에 시스템이 처리할 일이 적다.
 
-### getter메서드와 setter
+### getter, setter 함
 
 * getter - read의 역할로 리턴 값을 반환한다. 사용자가 담은 것을 꺼낸다. - get메소드는 꺼낸 값을 반환하므로 리턴타입을 갖는다. - 꺼내오는 역할로 파라미터는 필요없다. - print로 메소드호출이 가능하다. print\(get메소드\);
 * setter - set메소드는 리턴타입을 갖지않는다.\(==void\) - write, save의 역할로 목적을 갖지 않는다. 사용자가 담은 것을 담는다. - 값, 파라미터가 필요하다.
+* 값을 담는 메서드의 구현문을 드래그 후 우클릭하면 get, set메서드를 자동생성한다. - 우클릭 - Source - Generate getter and setter - select all - last member - finish
 * 참고 : 15Days - NickNameList.java
 
 ### random class
