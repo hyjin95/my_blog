@@ -20,7 +20,7 @@ description: 2020.08.21 - 17일차
 
 * Connection 클래스  - 연결해주는 클래스로, 항상 먼저 객체 생성이 되어야 한다. - INSERT, UPDATE, DELETE에 사용되는 객체 - 실행 : executeUpdate\( \)
 * Statement 클래스 - INSERT, UPDATE, DELETE에 사용되는 객체 - 실행 : executeUpdate\( \)
-  * PreparedStatment 클래스 : 조회해주는 클래스 - pstmt = con.prepareStatement\( \); - pstmt.setString\(몇번째컬럼, 값\);
+  * PreparedStatment 클래스 : 조회해주는 클래스 - pstmt = con.prepareStatement\(sql.toString\(\)\); - pstmt.setString\(몇번째컬럼, 값\);
 * ResultSet 클래스 - SELECT에 사용되는 객체 - 실행 : executeQuery\( \)
 * 닫는 순서는 생성의 역순으로 한다.
 * 참고 : DBConnectionMgr.java
@@ -99,4 +99,6 @@ public class VectorTest {
 * rollback : 전단계로 되돌리기, commit한 이후에는 효과가 없다.
 * update dept set loc = '서울' - oracle에서 문자열은 ' '으로 표시한다. - dept의 loc컬럼이 모두 '서울'로 변경된다.
 * DELETE FROM dept WHERE deptno IN\(40,99\) - dept의 deptno중 40, 99번 데이터를 삭제한다.
+
+후기 : toad를 활용해서 DB를 연동하는 수업이 제일 어렵게 느껴지는것같다. 인터넷 검색과 책을 활용해서 최대한 정리하자!
 
