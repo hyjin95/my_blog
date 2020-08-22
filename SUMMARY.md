@@ -36,5 +36,8 @@
   * [16 Days - privat, static, API활용](1-days/16-days/README.md)
     * [FunctionExam.java](1-days/16-days/functionexam.java.md)
     * [NickNameList.java +](1-days/16-days/nicknamelist.java.md)
-  * [17 Days - toad data올리기,  java의 DB연동](1-days/17-days.md)
+  * [17 Days - toad data올리기,  java의 DB연동](1-days/17-days/README.md)
+    * [toad for oracle : table생성, data올리기](1-days/17-days/toad-for-oracle-table-data.md)
+    * [DBConnectionMGR.java](1-days/17-days/dbconnectionmgr.java.md)
+    * [Untitled](1-days/17-days/untitled.md)
 

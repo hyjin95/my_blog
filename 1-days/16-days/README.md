@@ -60,6 +60,7 @@ void m() {
 
 ### API활용
 
+* 함수를 사용\(소유\)하려면 인스턴스화를 해야한다. - 생성자의 파라미터의 타입과 갯수를 알아야한다. - API
 * 참고 : NickNameList.java+
 * Header = 컬럼명 -&gt; String cols\[ \] = {"대화명," "성별"} - 컬럼명을 String타입으로 직접작성해놓았다.
 * TableHeader를 사용해야할때, API를 살펴보자.
