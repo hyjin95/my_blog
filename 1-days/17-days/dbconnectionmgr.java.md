@@ -1,4 +1,4 @@
-# DBConnectionMGR.java
+# DBConnectionMgr.java
 
 ### 선언부
 
