@@ -58,6 +58,20 @@ void m() {
 * static 영역에서는 non-static 영역은 사용할 수 없다.  - 인스턴스화를 통해야한다.
 * 참고 : LocalVariable.java, Company-CompanyTest.java
 
+### API활용
+
+* 참고 : NickNameList.java+
+* Header = 컬럼명 -&gt; String cols\[ \] = {"대화명," "성별"} - 컬럼명을 String타입으로 직접작성해놓았다.
+* TableHeader를 사용해야할때, API를 살펴보자.
+* Header를 읽어올 수 있는 getTableHeader\( \);함수가 필요하다.
+* JTableHeader클래스는 해당 함수를 갖고있지않다. -&gt; JTable함수가 갖고있다.
+* getTableHeader함수의 리턴타입은 JTableHeader이다. -&gt; JTable은 양식만 빌려준다.
+* JTableHeader의 생성자를 살펴보면 TableColumnModel인데, 이 인터페이스 안에는 String타입의 메서드가 존재하지 않는다. -&gt; 우리가 정해놓은 컬럼명이 String타입이므로 사용할 수 없다.
+* JTableHeader jth = new JTableHeader\( \);  X
+* **JTableHeader jth = jtb.getTableHeader\(\);  O** - 선언부 : JTable.jtb = new JTable\(\); 인스턴스화 되어있다. - jtb.getTableHeader\(\); = JTable에 있는 getTableHeader\(\)메서드 ;호출
+
+
+
 ## 코드
 
 ### LocalVariable.java
@@ -149,5 +163,5 @@ public class CompanyTest {
 * 10번 : 7,8번의 인스턴스변수는 주소가 다르지만 Company의 getInstance메서드가 static이므로 같은 원본을 바라 보고있기때문에 true가 출력된다.
 * 출력 결과 : true
 
-
+후기 : 그날그날 정리할 수 있도록 노력하자 노력하는만큼 실력이 향상될것이다!
 

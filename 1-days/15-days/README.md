@@ -45,7 +45,7 @@ description: 2020.08.19 - 15일차
 * 클래스안에 구현메서드를 만들어 사용 가능하지만 구현체 클래스를 따로  빼서 쓰는게 더 편리하다.
 * 결합도가 낮다, 비교적 자유롭다.
 * **클래스 implements 인터페이스** - actionListener a = new NickNameList\(\);  - 왼쪽항이 더 크다, 오른쪽항에는 클래스가 와야 문법오류가 일어나지 않는다 - implements하면 override를 생성해주어야한다.
-* **개체.addActionListener\(new ActionListener\(actionPerformed\(\) \) \);** - add메서\(new 인터페이스\(추상메서드\(\)구현하 \) \);
+* **개체.addActionListener\(new ActionListener\(actionPerformed\(\) \) \);** - add메서드\(new 인터페이스\(추상메서드\(\)구현 \) \);
 * 참고 : FlyBehavior.java, NickNameList-Sub.java - FlyWithWings, FlyNoWay 클래스들이 FlyBehavior의 구현체 클래스들이다.
 
 ### 클래스 안의 클래스

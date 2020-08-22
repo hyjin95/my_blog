@@ -2,7 +2,7 @@
 description: 2020.08.21 - 17일차
 ---
 
-# 17 Days -
+# 17 Days - toad data올리기,  java의 DB연동
 
 ### 사용 프로그램
 
