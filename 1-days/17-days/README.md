@@ -77,10 +77,21 @@ public class VectorTest {
 
 * Direct - Host에 상대 ip를 입력, port입력\(기본갑 1521\), SID체크, id입력 -&gt; 접속
 
+### 진행로그 확인하기
+
+* Query Viewer
+
 ### 자식레코드
 
 * 자식 레코드가 발견되었습니다. \(계속 진행 =부모를 없애겠습니까?\) : 부모를 삭제할 수 없다.
 * deptno\(부모\), empno\(자식\) 일때, - 둘다 기본키 pk를 갖는다. - 자식은 왜래키\(foreign key\)를 갖는다.
 * ERD = 개체-관계 다이어그램, Entity-Relationship Diagram
 * UML : 모델링언어
+
+### 단어
+
+* commit : 내보내기
+* rollback : 전단계로 되돌리기, commit한 이후에는 효과가 없다.
+* update dept set loc = '서울' - oracle에서 문자열은 ' '으로 표시한다. - dept의 loc컬럼이 모두 '서울'로 변경된다.
+* DELETE FROM dept WHERE deptno IN\(40,99\) - dept의 deptno중 40, 99번 데이터를 삭제한다.
 
