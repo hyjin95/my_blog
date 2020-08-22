@@ -4,9 +4,6 @@ description: 2020.08.20 - 16일차
 
 # 16 Days - privat, static, API활용
 
-기 : private변수, public메서드, 재사용성\(함수의장점\), 지변의 유지  
-FunctionExam1.java : 메서드 오버로딩, 생성자, 전변,
-
 ### **복습**
 
 * 지역변수\(Automatic\) - stack에 저장된다. - FILO성격을 갖는다.\(first in last out\) - 지변이 사라지는때 : 함수가 호출되어 실행문이 끝났을때. 메서드 밖에서 유지되지 않는다. - 인스턴스화를 통해 지역변수를 사용할 수 있다. - 인스턴스화를 메서드 안에서 하면 되부 메서드에서는 사용할 수 없다.
@@ -35,7 +32,7 @@ void m() {
 * NickName은 private변수이지만 set, get메서드는 public이다.
 * 5번 : mVO는 set의 파라미터를 통해 "apple"을 담는다.
 * A : 안전성을 고려하여 private선언해야한다. 찾는 "사람"이라는 양식이 변하면 안되므로 - = private는 get, set함수와 함께 주로 사용되고, 가져오는 값에 기준을 걸어야 할때에 사용한다.
-* 참고 : Company-CompanyTest.java
+* 참고 : Company-CompanyTest.java, 15Days - NickNameList - memberVO.java
 
 ### 함수\(메서드\)의 생성과 호출
 
