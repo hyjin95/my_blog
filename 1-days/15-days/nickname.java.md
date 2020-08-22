@@ -290,9 +290,9 @@ public class NickNameListSub extends JDialog{
 * 5번 : 파라미터가 없는 get함수
 * 6번 : jtf\_gender멤버 변수에 읽어온값을 담는다.
 
-## MemberVO.java
+## MemberVO.java 
 
-컬럼명들이 갖고있는 get으로 값을 꺼내오고 set으로 저장하는 클래스
+### 데이터를 private멤버변수로 지정하는 클래스
 
 ```java
 package desigin.test;
@@ -323,4 +323,11 @@ public class MemberVO {
 }
 //우클릭 - Source - Generate getter and setter - select all - last member - finish
 ```
+
+* 4,5번 : nickName, gender변수는 담는 값이 변하기 때문에 null로두고, 타입이 String이여야하기 때문에 private멤버변수로 선언한다.
+* 7번: 디폴트생성자, 생략가능
+* 9번 : 데이터를 파라미터로 갖는 생성자 - 데이터 컬럼명을 모두 파라미터에 넣어주어야한다.
+* 10,11번 : 입력된 파라미터들을 멤버변수에 대입, 초기화한다.
+* 14번 : String타입의 get함수는 nickName을 반환한다.  
+* 17번 : 
 
