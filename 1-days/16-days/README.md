@@ -60,16 +60,11 @@ void m() {
 
 ```java
 package book.ch6;
-/*
- * methodA에 선언된 지변을 외부 다른 메서드에서 유지 또는 사용할 수 있나요?
- * 1)static으로 선언된 변수를 사용하는것.(전역변수이용)
- * 2)전변에서 초기화하기. this.i = i;(전역변수이용)
- * 사용불가합니다. static이나 전역변수만 가능해요
- */
+
 public class LocalVariable {
 	int i = 1;
 	//static int i = 2;//i가중복선언 되어있기때문에 이름을 다르게 해야한다.
-	static int j = 2;//=싱글톤이다.
+	static int j = 2;
 	
 	void methodA() {
 		int i;
@@ -84,14 +79,23 @@ public class LocalVariable {
 	public static void main(String[] args) {
 		//메인메서드에서 지역변수 i는 접근이 불가하다.
 		LocalVariable lv = new LocalVariable();
-		System.out.println(lv.i);//인스턴스변수로 접근가능한 변수는 전역변수 뿐이다. = 1출력
+		System.out.println(lv.i);
 		System.out.println(j);//2출력
 		j = 50;
 		lv.methodA();//j=2->50
-		System.out.println(lv.i);//위 methodA에서 전역변수가 10으로 변했으므로 10출력
+		System.out.println(lv.i);
 	}
 }
 ```
+
+* 6번 : int타입 멤버변수 j는 static이 붙은 싱글톤 변수이다.
+* 9번 : int i는 1이다.
+* 10번 : i는 10으로 초기화된 지역변수
+* 15번 : 멤버변수 i에 지역변수 i의 값10을 대입시킨다.
+* 23번 : j는 50으로 초기화된 지역변수
+* 24번 : methodA실행, 23번 다음에 실행되어 j는 50을 갖는다.
+* **인스턴스변수가 접근할 수 있는 변수는 멤버변수이다.**
+* 출력결과 - 21번 : lv.i는 methodA가 실행되기 전의 멤버변수 이므로 1 출력 - 22번 : 2출력 - 25번 : lv.i는 methodA가 실행된 후 멤버변수이므로 10 출력
 
 ### Company.java-private static
 
