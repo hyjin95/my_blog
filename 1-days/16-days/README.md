@@ -13,7 +13,9 @@ description: 2020.08.20 - 16일차
 * 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
 * 사용Tool : Eclipse : Eclipse.org
 
-### Private 멤버변수와 public 메서드
+## 이론
+
+### Private 멤버변수, public 메서드
 
 #### Public메서드로 풀어줄거면 왜 private로 선언을 하는가?
 
@@ -55,6 +57,8 @@ void m() {
 * non-static영역에서는 static타입 변수를 사용할 수 있다.
 * static 영역에서는 non-static 영역은 사용할 수 없다.  - 인스턴스화를 통해야한다.
 * 참고 : LocalVariable.java, Company-CompanyTest.java
+
+## 코드
 
 ### LocalVariable.java
 
@@ -119,14 +123,17 @@ public class Company {
 }
 ```
 
+* 7번 : private 디폴트 생성자
+* 11번 : Company타입인 메서드, 인스턴스변수를 반환한다.
+
 ```java
 package book.ch6;
 
 public class CompanyTest {
 
 	public static void main(String[] args) {
-		//Company cp = new Company(); //생성자가 private이므로 호출불가
-		Company cp1 = Company.getInstance();//static이므로 : 타입.메서드();
+		//Company cp = new Company(); //생성자 호출불가
+		Company cp1 = Company.getInstance();
 		Company cp2 = Company.getInstance();
 		//7번에서 인스턴스가 생성되었으므로 null이 아니다. 생성자를 호출하지 않는다.
 		System.out.println(cp1 == cp2);
@@ -134,4 +141,13 @@ public class CompanyTest {
 	}
 }
 ```
+
+* Company클래스의 디폴트 생성자가 private이므로 다른 클래스에서는 호출이 불가능하다.
+* Company의 getInstance메서드가 static메서드이다.  - 타입.메서드이름\( \); 으로 호
+* 7번 : 메서드 호출로 인스턴스화가 일어나고 생성자를 호출한다.
+* 8번 : 인스턴스화가 이미 일어났으므로 Company의 getInstance메서드가 실행되지 않는다.
+* 10번 : 7,8번의 인스턴스변수는 주소가 다르지만 Company의 getInstance메서드가 static이므로 같은 원본을 바라 보고있기때문에 true가 출력된다.
+* 출력 결과 : true
+
+
 
