@@ -26,7 +26,7 @@ description: 2020.08.19 - 15일차
 ### 상속
 
 * parent 클래스의 것들을 child클래스가 사용할 수 있다. = child클래스가 영역이 더 넓다.
-* 참고 : Father, Son.java
+* 참고 : InstanceTest.java, Father, Son.java
 
 ### 추상클래스
 
@@ -48,7 +48,17 @@ description: 2020.08.19 - 15일차
 * 결합도가 낮다, 비교적 자유롭다.
 * 참고 : FlyBehavior.java - FlyWithWings, FlyNoWay 클래스들이 FlyBehavior의 구현체 클래스들이다.
 
+### 클래스 안의 클래스
+
+* 클래스 안에서 클래스 선언이 가능하다.
+* 안에 있는 클래스를 내부 클래스 라고 한다.
+* 반드시 외부 클래스를 인스턴스화 해야만 접근 가능하다.
+* 내부 클래스는 외부 클래스의 멤버변수들을 사용할 수 있다.
+* 참고 : Outter.java
+
 ### InstanceTest.java
+
+상속, 인스턴스화의 분리, 생성 위치의 중요성
 
 ```java
 package desigin.test;
@@ -56,13 +66,9 @@ package desigin.test;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-//extends =상속, this(아빠꺼를 쓸수잇는 함수)를 쓸 수 있다. 
-//JFrame(아빠)을 상속받는 InstanceTest(자식)클래스이다.=아들 안에 아빠
-//예외 : static안에서는 this를 사용할 수 없다. : static=하나를 공유, 나눠쓰는것
-//ex)Integer.=클래스와 같이 static은 클래스안에 있지만 Heap내부에서 따로 존재한다.공간이 많지않다. 적게사용하자!
 public class InstanceTest extends JFrame {
 	//선언부의 타입과 생성부의 타입이 다를 수 있다. 
-	JButton jbtn_north = null;//사용되는 메서드에서 초기화 하지않으면 NullPointEception이 일어난다.
+	JButton jbtn_north = null;//사용되는 메서드에서 초기화 하지않으면 NullPointEception
 	JButton jbtn_south = null;
 	
 	public InstanceTest() {
@@ -77,19 +83,29 @@ public class InstanceTest extends JFrame {
 		if(jbtn_north!=null)//south버튼이 add되어있지않으므로 비어있다.
 			this.add("North", jbtn_north);
 		this.setTitle("인스턴스화 분리");
-		this.setSize(400, 500);//내거 아님, 아빠JFrame이 갖고있는 메서드
+		this.setSize(400, 500);//부모 JFrame이 갖고있는 메서드
 		this.setVisible(true);
 	}//end of initDisplay
 
 	public static void main(String[] args) {
 		InstanceTest it = new InstanceTest("남쪽");
 		it.initDisplay();
-		//JFrame jf = new InstanceTest();//왼쪽항에 큰 타입, 오른쪽 항에 작은 타입이 와야하므로 성립하지 않는다.
+		//JFrame jf = new InstanceTest();//왼쪽항에 큰 타입, 오른쪽 항에 작은 타입 성립하지 않는다.
 		//jf.initDisplay(); initDisplay가 아들한테 있지 아빠한테 없기때문에 호출불가 오류
 		//아빠타입 변수로는 아들타입에 선언된 메서드를 호출 할 수 없다.
 	}//end of main
 }//end of class
 ```
+
+* extends\(상속\) -&gt; this함수를 사용할 수 있다. \(부모개체를 사용할수 있는 함수\)
+* static이 붙은 함수 안에서는 this를 사용할 수 없다. - static함수는 클래스 안에있지만 Heap내부에서 따로 떨어져 존재하기 때문이다.  - static : 싱글톤, 하나를 공유하는 것
+* JFrame이 부모클래, InstanceTest가 자식클래스이다.
+* 자식클래스가 부모클래스를 모두 가지므로 영역이 더 크다.
+* 11번 : 디폴트 생성자
+* 15번 : 생성자 오버로딩, String타입 파라미터를 하나 갖고있다.
+* 19번 : initDisplay에서 this.가 붙은 모든 함수들은 부모 클래스에서 가지고온 함수들이다.
+* 28번 : String타입 파라미터를 하나 갖고있는 생성자 호출
+* 출력결과 : 버튼이 add되어있지않으므로 빈화면만 뜬다.
 
 ### Father.java , Son.java
 
@@ -127,13 +143,6 @@ public class FatherSmulation {
 
 * 26번은 상속관계시에만 성립한다.
 * 출력결과 : Son ---&gt; methodA 호출성공
-
-### 클래스 안의 클래스
-
-* 클래스 안에서 클래스 선언이 가능하다.
-* 안에 있는 클래스를 내부 클래스 라고 한다.
-* 반드시 외부 클래스를 인스턴스화 해야만 접근 가능하다.
-* 내부 클래스는 외부 클래스의 멤버변수들을 사용할 수 있다.
 
 ### Outter.java
 
