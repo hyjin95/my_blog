@@ -35,6 +35,6 @@
     * [NickNameList.java](1-days/15-days/nickname.java.md)
   * [16 Days - privat, static, API활용](1-days/16-days/README.md)
     * [FunctionExam.java](1-days/16-days/functionexam.java.md)
-    * [NickNameList.java](1-days/16-days/nicknamelist.java.md)
+    * [NickNameList.java +](1-days/16-days/nicknamelist.java.md)
   * [17 Days -](1-days/17-days.md)
 
