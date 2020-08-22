@@ -32,6 +32,7 @@ description: 2020.08.06 - 7일차
 
 * getter - read의 역할로 리턴 값을 반환한다. 사용자가 담은 것을 꺼낸다. - get메소드는 꺼낸 값을 반환하므로 리턴타입을 갖는다. - 꺼내오는 역할로 파라미터는 필요없다. - print로 메소드호출이 가능하다. print\(get메소드\);
 * setter - set메소드는 리턴타입을 갖지않는다.\(==void\) - write, save의 역할로 목적을 갖지 않는다. 사용자가 담은 것을 담는다. - 값, 파라미터가 필요하다.
+* 참고 : 15Days - NickNameList.java
 
 ### random class
 

@@ -1,4 +1,4 @@
-# NickName.java
+# NickNameList.java
 
 ### 사용된 낱말카드
 
@@ -39,7 +39,9 @@ getter, setter, 생성자, 인스턴스화 분리, 배열, 이벤트처리, UI\(
 * Lable과 TestField위치 지정하기 - Layout뭉개기 = null; - setBound\( x , y , width , height\);
 * 사용자가 입력창에 입력하는 값 가져오기 - **public void SetGender\(jtf\_gender.getText\( \) \);** - jtf에 쓰기 : jtf\_gender.SetText\( \) - \( \) : jtf에 무엇을 쓸까요? = get에서 반환된 obj값 = jtf\_gender.getText\( \); - getText는 반환타입이 String이다.
 
-### NickNameList.java - 선언부
+## NickNameList.java 
+
+### 선언부
 
 ```java
 package desigin.test;
@@ -53,7 +55,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-//디폴트 생성자는 생략가능 - 파라미터가 없으므로 JVM이 대신 해줄수 있기때문이다.
+//디폴트 생성자는 생략가능 - 파라미터가 없으므로 JVM이 대신 해줄수 있기때문
 public class NickNameList extends JFrame implements MouseListener{
 	NickNameList nnl = null;
 	NickNameListSub nnls = new NickNameListSub(this);
@@ -66,7 +68,7 @@ public class NickNameList extends JFrame implements MouseListener{
 		   ,{"tomato", "여"}
 	};//end of data
 	DefaultTableModel dtm = new DefaultTableModel(data, cols);
-	//테이블 생성시 데이터셋에 대한 헤더 초기화 부분이 필요하다. - btm이 이때 사용된다.
+	//테이블 생성시 데이터셋에 대한 헤더 초기화 부분이 필요하다. - dtm이 이때 사용된다.
 	JTable jtb = new JTable(dtm);
 	JScrollPane jsp = new JScrollPane(jtb
 									 ,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
@@ -74,9 +76,12 @@ public class NickNameList extends JFrame implements MouseListener{
 	
 ```
 
-* NickNameList는 JFrame을 상속하고 MouseListener인터페이스를 import한다.
-* 선언부
+* NickNameList는 JFrame을 상속하고 MouseListener인터페이스를 시행한다.
 * 15번 : Sub클래스와 연결되는 부분이다. Sub창에는 주소번지를 파라미터로하는 생성자가 있다.
+* Table의 행 : data\[ \]\[ \]   Table의 열: cols\[ \]
+* 24번 : DefaultTableModel클래스의 table생성자 중에 data, cols를 파라미터로 갖는 생성자 호출
+
+### 생성자, 화면구현, main Thread
 
 ```java
 	public NickNameList() {}
@@ -93,7 +98,15 @@ public class NickNameList extends JFrame implements MouseListener{
 		nnList = new NickNameList();
 		nnList.initDisplay();//한번만 호출		
 	}//end of main
+```
 
+* 1번 : 디폴트 생성자, 생략가능
+* 3번 : 화면구현 메서드
+* 4번 : JTable의 addMouseListener생성자를 호출
+
+### MouseListener인터페이스의 추상메서드 override
+
+```java
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub		
@@ -125,7 +138,8 @@ public class NickNameList extends JFrame implements MouseListener{
 				String nickName = (String)dtm.getValueAt(index[0], 0);
 				System.out.println("nickName : "+nickName);
 				NickNameListSub nnls = new NickNameListSub();
-				//이벤트가 일어낫을때 initDisplay호출이므로->true여도되지만 전변에 있을경우에는 반드시 false해주어야한다.
+				//이벤트가 일어낫을때 initDisplay호출이므로->true여도되지만 
+				//전변에 있을경우에는 반드시 false해주어야한다.
 			}			
 		}//end of if			
 	}
@@ -136,10 +150,21 @@ public class NickNameList extends JFrame implements MouseListener{
 		}
 }//end of class
 //Sub호출 -> 인스턴스화 -> 지변인지 전변인지(위치가 달라진다)
-//여기서는 77번 else에 해야하는데 그러면 지변이된다.
+//여기서는 28번 else에 해야하는데 그러면 지변이된다.
 ```
 
-### NickNameListSub.java
+* 사용할 메서드만 재정의한다.
+* 18번 : 읽어온 마우스 이벤트 e의 클릭 수가 ==2 라면
+* 19번: index배열은 JTable클래스안의 getSelectedRows메서드로 row를 읽어온다,
+* 20번 : index\(row\)의 길이가\(선택이\) 0 이라면
+* 22번 : 18번 if문 종료
+* 24번 : index\(row\)의 길이가\(선택이\)2개 이상이라면
+* 26번 : 18번 if문 종료
+* 28번 : 나머지의 경우, 1개를 선택했을 경우 - NickNameListSub의 디폴트 생성자 호출 - nnls는 지변으로 다른 함수에서는 사용할수 없다. - 이벤트가 일어났을때 Sub를 호출하기위함이다. 지역변수로 선언되었기때문에 Sub의 initDisplay함수가 true여도 이벤트가 일어나기 전에는 보이지 않지만, 멤버변수로 생성되었을때에는 반드시 false로 해두어야 보이지 않는다. 이때에는 이벤트 발생시 setvisible\(true\)를 적어주어야 한다.
+
+## NickNameListSub.java 
+
+### 선언부
 
 ```java
 package desigin.test;
@@ -156,10 +181,8 @@ import javax.swing.JTextField;
 
 public class NickNameListSub extends JDialog{
 	NickNameList nnl     = null;
-	JScrollPane  jspLine = null;//jp_center를 얹어야 하기때문에 생성을 분리해야한다.
-	//현재 중앙에 JScrollPane를 사용한 상태이고 그 이유는 테두리선을 활용하기 위함이다.
-	//그 위에 새로운 속지를 얹어서 추가적인 화면 컴포넌트를 배치할 수 있다.
-	//이때 Layout대신 일일이 좌표값을 활용하여 배치해본다.
+	JScrollPane  jspLine = null;
+
 	JPanel      jp_center  = new JPanel();
 	JLabel      jlb_gender = new JLabel("성별");
 	JTextField  jtf_gender = new JTextField();
@@ -167,7 +190,16 @@ public class NickNameListSub extends JDialog{
 	JPanel      jp_south   = new JPanel();
 	JButton     jbtn_save  = new JButton("저장");
 	JButton     jbtn_close = new JButton("닫기");
-	
+```
+
+* JDialog : 새 창을 띄워주는 클래스
+* NickNameListSub클래스는 JDialog를 상속한다.
+* 15번 : JScrollPane를 null로 선언한 이유는 jspLine에 jp\_center를 add하면 화면이 덮여저 버려져서 JScrollPane의 생성자를 이용해야 하기 때문에 생성을 나중에 해야한다.
+* 17, 21번 : JPanel은 버튼과 testfield를 붙이기 위한 속지이다.
+
+### 생성자
+
+```java
 	public NickNameListSub() {
 		initDisplay();
 	}
@@ -178,16 +210,24 @@ public class NickNameListSub extends JDialog{
 	public NickNameListSub(NickNameList nnl) {
 		this.nnl = nnl;
 	}
-	
+```
+
+* 1번 : 디폴트 생성자
+* 8번 : NickNameList의 주소번지를 파라미터로 하는 생성자
+* 9번 : 멤버변수의 nnl NickNamList 주소번지를 대입한다.
+
+### 화면구현 메서드 : setBounds, ActionListener 다른 사용법
+
+```java
 	public void initDisplay() {
-		//JDialog의 디폴트 레이아웃은 BorderLayout이다.
-		//직접 좌표값을 활용해서 배치할때에는 레이아웃이 필요없다.
-		jp_center.setLayout(null);//레이아웃 뭉개기
+	
+		jp_center.setLayout(null);
 		jlb_gender.setBounds(20, 20, 100, 20);//라벨이 입력창보다 왼쪽(앞)에 위치해야한다.
 		jtf_gender.setBounds(70, 20, 100, 20);
 		jp_center.add(jlb_gender);
 		jp_center.add(jtf_gender);
-		jspLine = new JScrollPane(jp_center);//위에서 라벨과 입력창의 위치를 결정한 후에, 사용되기 전에 생성되어야 한다.
+		jspLine = new JScrollPane(jp_center);
+		//위에서 라벨과 입력창의 위치를 결정한 후에, 사용되기 전에 생성되어야 한다.
 		
 		jbtn_save.addActionListener(new ActionListener() {
 			@Override
@@ -207,14 +247,32 @@ public class NickNameListSub extends JDialog{
 		this.setTitle("상세보기");
 		this.setSize(300, 200);
 		this.setVisible(true);
-		//전변에 인스턴스화를 하면 true면 누르지않아도보인다. 하지만 지금은 이벤트가 일어낫을때 호출되므로 지금은 true여도된다.
+		//전변에 인스턴스화를 하면 true면 누르지않아도보인다.
 	}//end of initDisplay
-	
+```
+
+* JDialog의 디폴트 레이아웃은 BorderLayout\(동,서,남,북\)이다.
+* 4번 : Layout 대신 일일이 좌표값을 설정해주어 배치하는 방법 - 직접 좌표값을 활용하므로 레이아웃이 필요없다. setLayout\(null\);은 기본 레이아웃을 뭉개기위한 작업이다.
+* 4,5번 : **setBounds\(x,y,whidth,height\)**함수로 좌표를 설정할 수 있다.
+* 8번 : jspLine을 jp\_center를 지닌채로 생성한다.
+* 11,17번 : **ActionListener인터페이스**를 사용하는 다른 방법 - implements한 경우 : actionListener a = new NickNameList\(\); 
+*  implements하지 않고 ActionLitener인터페이스를 사용하는 방법  
+  - **addActionListener\(new ActionListener\(actionPerformed\(\) \) \);**
+
+  - add메서드\(new 인터페이스\(추상메서드\(\)구현 \) \);  
+  - 사용할 개체에 add메서드를 붙인다.
+
+* 26번 : jspLine을 center에 add한것은, 그 테두리선을 활용하기 위함이다.
+* 28번 : true인 이유 : 이 클래스 화면을 호출하는 곳이 NickNameList의 이벤트가 일어난 뒤이기 때문 
+
+### 값 담아오기 : getter, setter함수
+
+```java
 	////////////////////[setter and getter[///////////////////
 	public void getGender(String gender) {
 		jtf_gender.setText(gender);
 	}	
-	public void getGender() {//get이지만 void인 이유는 getText하면 어차피 string으로 꺼내므로
+	public void getGender() {
 		jtf_gender.getText();//가져온값 member변수에 담기
 		MemberVO mVO = new MemberVO(null, jtf_gender.getText());//생성자의 파라미터를 사용한 초기화
 		//MemberVO mVO = new MemberVO();-메서드를 이용한 초기화
@@ -222,15 +280,17 @@ public class NickNameListSub extends JDialog{
 	}	
 	////////////////////[setter and getter[///////////////////	
 }//end of class
-//actionListener은 인터페이스로 단독으로 인스턴스화할 수 없다.
-//new actionListener 불가능
-//단, 클래스 안에 actionPerformed(구현체 클래스)가 있으면 그 안에서 사용할 수 있다.
-//actionListener a = new NickNamdDetail(); -implememts한 경우 액션리스너가 더 크므로 왼쪽항에
-//actionListener a = new actionListener();은 불가능하다. 오른쪽항에는 인터페이스가 아닌 클래스가 와야 에러가 나지않는다.
-//intitDisplay에서 actionPerformed메서드를 달았기때문에 가능한것이다.addActionListener(new ActionListener())=메서드(클래스);
 ```
 
-### MemberVO.java
+* getter함수 : 읽어오기, 리턴타입이 필수
+* setter함수 : 쓰기, 저장하기. 파라미터와 리턴타입 모두 필수
+* 2,5번 : get함수이지만 리턴타입이 void인 이유는 2번은 파라미터로 String타입을 갖고, 5번은 가져오는 값이 String이기 때문
+* 2번 : String타입 파라미터를 갖는 읽어오는 메서드
+* 3번 : jtf\_gender에 입력된 text를 파라미터인 gender지역변수에 저장하는 구현문 
+* 5번 : 파라미터가 없는 get함수
+* 6번 : jtf\_gender멤버 변수에 읽어온값을 담는다.
+
+## MemberVO.java
 
 컬럼명들이 갖고있는 get으로 값을 꺼내오고 set으로 저장하는 클래스
 

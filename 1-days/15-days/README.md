@@ -35,18 +35,18 @@ description: 2020.08.19 - 15일차
 * child의 범위가 더 크므로 parent 주소번지 = new child\(\);가 성립한다.
 * 결합도가 높고, 자유롭지 못하다.
 * 단독 인스턴스화 불가능하다 -&gt; 추상클래스 주소번지 = new 추상클래스\(\); = 성립X 
-* 참고 : Duck.java - MallardDuck, WoodDuck, RubberDuck클래스 들이 Duck추상클래스를 parent로 상속한다.
+* 참고 : Duck.java, NickNameList.java - MallardDuck, WoodDuck, RubberDuck클래스 들이 Duck추상클래스를 parent로 상속한다.
 
 ### 인터페이스
 
-* 클래스에 implements를 붙여 쓸 수 있다.
-* 단독 인스턴스화가 불가능하다.
-* 인터페이스는 자기안에 메서드를 선언만 할 수 있다.
-* 그래서 구현체 클래스가 반드시 필요하다.
-* implements하면 override가 자동으로 따라온다.
-* 한 클래스 안에서 구현도 하고 사용도 해도되지만 구현체 클래스를 따로 만들어서 빼서 쓰는게 더 편리하다.
+* 단독 인스턴스화가 불가능 : new 인터페이스이름 X
+* 인터페이스는 자기안에 메서드를 선언만 할 수 있다. : 추상메서
+* 그래서 구현체 클래스가 반드시 필요
+* 클래스안에 구현메서드를 만들어 사용 가능하지만 구현체 클래스를 따로  빼서 쓰는게 더 편리하다.
 * 결합도가 낮다, 비교적 자유롭다.
-* 참고 : FlyBehavior.java - FlyWithWings, FlyNoWay 클래스들이 FlyBehavior의 구현체 클래스들이다.
+* **클래스 implements 인터페이스** - actionListener a = new NickNameList\(\);  - 왼쪽항이 더 크다, 오른쪽항에는 클래스가 와야 문법오류가 일어나지 않는다 - implements하면 override를 생성해주어야한다.
+* **개체.addActionListener\(new ActionListener\(actionPerformed\(\) \) \);** - add메서\(new 인터페이스\(추상메서드\(\)구현하 \) \);
+* 참고 : FlyBehavior.java, NickNameList-Sub.java - FlyWithWings, FlyNoWay 클래스들이 FlyBehavior의 구현체 클래스들이다.
 
 ### 클래스 안의 클래스
 
