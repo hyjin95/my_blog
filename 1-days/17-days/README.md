@@ -18,6 +18,11 @@ description: 2020.08.21 - 17일차
 
 ### DB연동하기
 
+* Connection 클래스  - 연결해주는 클래스로, 항상 먼저 객체 생성이 되어야 한다. - INSERT, UPDATE, DELETE에 사용되는 객체 - 실행 : executeUpdate\( \)
+* Statement 클래스 - INSERT, UPDATE, DELETE에 사용되는 객체 - 실행 : executeUpdate\( \)
+  * PreparedStatment 클래스 : 조회해주는 클래스 - pstmt = con.prepareStatement\( \); - pstmt.setString\(몇번째컬럼, 값\);
+* ResultSet 클래스 - SELECT에 사용되는 객체 - 실행 : executeQuery\( \)
+* 닫는 순서는 생성의 역순으로 한다.
 * 참고 : DBConnectionMgr.java
 
 ## JAVA
