@@ -1,5 +1,7 @@
 # NickNameList.java +
 
+### + import
+
 ```java
 package desigin.test;
 
@@ -8,40 +10,29 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
+```
 
+### +선언부
+
+```java
 //디폴트 생성자는 생략가능 - 파라미터가 없으므로 JVM이 대신 해줄수 있기때문이다.
 public class NickNameList extends JFrame implements MouseListener, ActionListener{
 	NickNameList nnl = null;
 	NickNameListSub nnls = new NickNameListSub(this);
-	//table을 바로 보여주느냐 조회하면 보여주느냐, 선언과생성을 같이하느냐 따로하느냐
-	static NickNameList nnList = null;//인스턴스화를 하는 새로운 방법-33번
-	String cols[]   = {"대화명", "성별"};//선언과 생성 같이
-	String data[][] = {
-			{"test", "남"}
-		   ,{"apple", "여"}
-		   ,{"tomato", "여"}
-	};//end of data
-	
+
+	static NickNameList nnList = null;
+
 	DefaultTableModel dtm = new DefaultTableModel(data, cols);
-	//테이블 생성시 데이터셋에 대한 헤더 초기화 부분이 필요하다. - btm이 이때 사용된다.
+	
 	JTable jtb = new JTable(dtm);
 	JTableHeader jth = jtb.getTableHeader();
 	JScrollPane jsp = new JScrollPane(jtb
@@ -50,8 +41,8 @@ public class NickNameList extends JFrame implements MouseListener, ActionListene
 	//이미지를 불러오는 경로 = 반복
 	String imgPath = "C:\\workspace_java\\dev_java\\src\\desigin\\test\\";//절대경로, 상대경로
 	
-	Font       f           = new Font("굴림체",Font.BOLD,20);//API Font참고, static이라서 Font.클래스이름 하면 된다.
-	JPanel     jp_north    = new JPanel();
+	Font   f        = new Font("굴림체",Font.BOLD,20);//API Font참고, static이라서 Font.클래스이름 하면 된다.
+	JPanel jp_north = new JPanel();
 	//기본값이 없어서 값을 넣어줘야 크기를 볼수있다 -> 크기를 정해주자 
 	//BorderLayout-center : 꽉 찬다, flowLayout는 지정한다. 
 	//생성자 파라미터로 컬럼의 크기를 지정하여 TextField의 사이즈를 결정해주어야 한다. new TestField(25)
@@ -69,9 +60,11 @@ public class NickNameList extends JFrame implements MouseListener, ActionListene
 	
 	Icon icon = new ImageIcon(imgPath+"delete.gif");
 	JMenuItem jmi_exit   = new JMenuItem("나가기",icon);
-	
-	public NickNameList() {}
-	
+```
+
+### +화면구현 메서드
+
+```java
 	public void initDisplay() {//this는 생략가능
 		
 		jp_north.setLayout(new BorderLayout());//기본flowlayout에서 크기를 만들어주기위해 borderlayout으로 set해줌
@@ -104,34 +97,12 @@ public class NickNameList extends JFrame implements MouseListener, ActionListene
 		nnList.setJMenuBar(jmb);
 		nnList.add("North", jp_north);
 		nnList.add("Center", jsp);
-		nnList.setTitle("단톡명단");
-		nnList.setSize(450, 500);
-		nnList.setVisible(true);
 	}
+```
 
-	public static void main(String[] args) {
-		nnList = new NickNameList();
-		nnList.initDisplay();//한번만 호출		
-	}//end of main
+### +메서드로 기능 꺼내기
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
+```java
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if(e.getClickCount()==2) {
@@ -151,17 +122,17 @@ public class NickNameList extends JFrame implements MouseListener, ActionListene
 			}			
 		}//end of if			
 	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		}
 	//전체 조회 혹은 조건검색 구현 할때 똑같은이벤트가 필요하다 = 메서드로 꺼낸다.
 	//재사용할 수 있도록 메서드로 처리한다.
 	public void refreshData() {
 		NickNameListSub nnls = new NickNameListSub();
 		//이벤트가 일어낫을때 initDisplay호출이 -> true여도되지만 전변에 있을경우에는 반드시 false해주어야한다.
 	}
+```
+
+### +이벤트 처리
+
+```java
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		Object obj = ae.getSource();
@@ -187,7 +158,5 @@ public class NickNameList extends JFrame implements MouseListener, ActionListene
 		}		
 	}
 }//end of class
-//Sub호출 -> 인스턴스화 -> 지변인지 전변인지(위치가 달라진다)
-//여기서는 77번 else에 해야하는데 그러면 지변이된다.
 ```
 
