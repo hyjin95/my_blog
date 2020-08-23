@@ -58,7 +58,6 @@ public class ZipCodeDao {//조회하기
 		return zVOS;
 	}//end of getZipCodList
 }//end of class
-//중요한 코드 : 28,29,31,32,33
 ```
 
 * ZipCodeVO\[ \]타입인 getZipCodeList메서드는 String타입 dong을 파라미터로 갖고있다. - dong으로 조회하는 메서드이다.

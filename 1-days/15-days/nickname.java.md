@@ -143,7 +143,6 @@ public class NickNameList extends JFrame implements MouseListener{
 			}			
 		}//end of if			
 	}
-
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -195,7 +194,7 @@ public class NickNameListSub extends JDialog{
 * JDialog : 새 창을 띄워주는 클래스
 * NickNameListSub클래스는 JDialog를 상속한다.
 * 15번 : JScrollPane를 null로 선언한 이유는 jspLine에 jp\_center를 add하면 화면이 덮여저 버려져서 JScrollPane의 생성자를 이용해야 하기 때문에 생성을 나중에 해야한다.
-* 17, 21번 : JPanel은 버튼과 testfield를 붙이기 위한 속지이다.
+* 17, 21번 : JPanel은 버튼과 textfield를 붙이기 위한 속지이다.
 
 ### 생성자
 
@@ -282,7 +281,7 @@ public class NickNameListSub extends JDialog{
 }//end of class
 ```
 
-* getter함수 : 읽어오기, 리턴타입이 필수
+* getter함수 : 읽어오기. 리턴타입이 필수
 * setter함수 : 쓰기, 저장하기. 파라미터와 리턴타입 모두 필수
 * 2,5번 : get함수이지만 리턴타입이 void인 이유는 2번은 파라미터로 String타입을 갖고, 5번은 가져오는 값이 String이기 때문
 * 2번 : String타입 파라미터를 갖는 읽어오는 메서드
@@ -292,7 +291,7 @@ public class NickNameListSub extends JDialog{
 
 ## MemberVO.java 
 
-### 데이터를 private멤버변수로 지정하는 클래스
+### 데이터를 private멤버변수로 대입해주는 클래스
 
 ```java
 package desigin.test;
