@@ -21,6 +21,7 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 * 들여쓰기       : 드래그 + tab
 * 검색 및 변경 : ctrl + f
 * 범위 주석      : 드래그 + ctrl +shift + / 또는 드래그 + ctrl +/
+* get set           : 변수 드래그 -&gt; 우클릭 -&gt; Source -&gt; Generate Getter and Setter -&gt; select all -&gt; last member -&gt; Generate
 
 ### 깃북
 
@@ -29,4 +30,5 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 ### Toad for Oracle
 
 * Describe : select + f4
+* 실행         : ctrl + enter
 
