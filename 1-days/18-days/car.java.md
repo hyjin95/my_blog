@@ -1,4 +1,4 @@
-# Car.java
+# Car.java - 상속관계 이해
 
 
 
@@ -82,7 +82,6 @@ public class CarSimulation {
 //6번 : Car타입 mycar는 Pride풍선을 들고있다. -> 하지만 Car타입이므로 Pride의 메서드인 speedUp은 호출할 수 없다.(Pride풍선안에 Car풍선이 candidate된 느낌)
 //7번 : Pride 타입 himcar는 Pride풍선을 들고있다.
 //18번 : myCar의 타입이 Pride로 강제전환되어서 speedUp메서드를 호출할 수 있다. myCar는 Pride타입이면서 Pride풍선을 들고있다. 그 풍선을 himCar주소번지와 공유한다.
-//19번 : 
 
 ```
 

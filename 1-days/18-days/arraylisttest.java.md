@@ -1,4 +1,4 @@
-# ArrayListTest.java
+# ArrayListTest.java - 인터페이스, 인터페이스비교연산자
 
 ### List 인터페이스와 인터페이스 비교 연산자
 
