@@ -50,7 +50,7 @@ description: 2020.08.24 - 18일차
 * Animal : 추상클래스, 인터페이스, 사자 : 구현체메서드 - 클래스 중에는 인스턴스를 만들면 안되는 것도 있다. Lion, Tiger 객체를 만드는 것은 이해되지만 Animal은 정확히 어떤 객체인지 결정할 수 없다. 색, 크기, 다리 갯수 같은 것을 결정할 수 없다. = 추상클래스, 인터페이스
 * 참고 : Animal.java, ArrayListTest.java
 
-### ArrayList 인터페이스
+### ArrayList 인터페이스, Vector
 
 * List\( i \)
 * Read \|\| Write의 역할을 한다.
@@ -60,6 +60,8 @@ description: 2020.08.24 - 18일차
 * Vector는 멀티스레드에서 안전하다, 속도가 느리다. 스레드 경쟁이 일어난다. 공용화장실 = wait
 * list 는 싱글스레드에서 안전하다, 속도가 빠르다. 스레드 경쟁이 없다. 내 차의 네비게이션 
 * List인터페이스는 util에 있는 것을 사용한다.
+* 내 안에 있는 타입을 &lt;&gt;안에 직접 써주면 타입체크를 별도로 하지 않는다. = 제네릭  - 선언부에는 반드시 써야하고 생성부에서는 생략가능하며, 다이아몬드 연산자는 작성 = 오른쪽항 - **Vector v = new Vector\(\); Vector v = new Vector&lt;&gt;\(\);**  : 권장사항
+* 참고 : ZipCodeSearch.java
 
 ### 추상메서드
 

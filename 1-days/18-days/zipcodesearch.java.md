@@ -144,6 +144,8 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 
 ### 조회 메서드 구현
 
+#### 설정, 선언 부분
+
 ```java
 	//조회메서드
 	public void refreshData(String dong) {
@@ -152,24 +154,53 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 		StringBuilder sql = new StringBuilder();
 		sql.append("SELECT zipcode, address");
 		sql.append(" FROM zipcode_t");
-		sql.append(" WHERE 1=1");
+		sql.append(" WHERE 1=1");		
+```
+
+* 2번 : 조회메서드인 refrechData메서드는 String타입 파라미터를 하나 갖는다.
+* 3번 : 연결통로는 17 Days - DBConnectionMgr을 이용한다. dbmgr의 인스턴스화 메서드 호출
+* 4번 : 내 클래스의 con 에 대입
+* 사용되는 sql문은 StringBuilder타입으로 한다.
+* 6-8번 : 띄어쓰기 주의하기
+
+#### 검색조건
+
+```java
 		if(dong!=null) {
 			sql.append(" AND dong LIKE '%'||?||'%'");//전체검색
-		}
+		}		
+```
+
+* dong이 비어있는 값이 아니라면, sql에 전체검색 조건을 append한다.
+* "'%' \|\| ? \|\| '%'" : ?가 포함된 모든 데이터
+
+#### 예외처리 - 선언부, try
+
+```java
 		try {
-			//파라미터로 넘어온 select문을 스캔 -> ?갯수를 파악한다.
 			pstmt = con.prepareStatement(sql.toString());
-			//위에서 물음표 자리에 들어갈 값을 파라미터로 받아서 설정한다.1=?갯수
 			pstmt.setString(1, dong);
 			rs = pstmt.executeQuery();
-			//내 안에 있는 타입을 꺽쇠<>안에 직접 써주면 타입체크를 별도로 하지 않는다. = 제네릭
-			//선언부에는 반드시 써야하고 생성부에서는 생략가능하다.
-			//그러나 다이아몬드 연산자는 작성해준다 = 오른쪽항
+		
 			//Vector v = new Vector();
 			Vector<ZipCodeVO> v = new Vector<>();//권장사항
-			//List v2 = new Vector(); //같다, 선언부에 인터페이스 하지만 List는 copyinto를 쓸 수 없으므로 사용하지 않는다.
+			//List v2 = new Vector(); 
+			//같다, 선언부에 인터페이스 하지만 사용하지 않는다.
 			ZipCodeVO zVOS[] = null;
 			ZipCodeVO zVO = null;
+```
+
+* 파라미터로 넘어온 select문을 스캔하여 ?의 갯수를 파악한다. pstmt.setString\( \)의 파라미터로 설정한다.
+* 2번 : 검색문을 전달해줄 pstmt 생성
+* 3번 : 검색조건 \(?갯수, 찾는조건\)
+* 4번 : 검색하는 rs 생성
+* 7번 : 값을 담을수 있는 Vector 배열 생성
+* 8번 : List인터페이스를 사용해도되지만 후에 사용해야하는 copyinto를 사용할 수 없게된다.
+* 10-11번 : 객체배열, 배열 선언
+
+#### 검색 반복 및 값 담기
+
+```java
 			while(rs.next()) {
 				zVO = new ZipCodeVO();
 				zVO.setZipcode(rs.getInt("zipcode"));//숫자보다 문자열로 입력하는것이 직관적이다. 알아보기 편하다, 수정하기 좋다.
@@ -180,8 +211,20 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 			//부모가 가진 메서드를 재정의한것만 호출가능하기 때문이다. 타입이 부모이므로
 			zVOS = new ZipCodeVO[v.size()];
 			v.copyInto(zVOS);//copyinto메서드를 갖고있는건 Vector타입이다.
-			
-			//질문 : 두 번 조회할 경우 앞에 조회결과가 남아있어요. 초기화하는 방법
+```
+
+* rs.next\(\)로 커서를 조작하여 while문으로 반복한다.
+* 2번 : 배열 생성
+* 3번 : 배열에 int타입 zipcode를 set한다.
+* 4번 : 배열에 String타입 address를 set한다.
+* 5번 : Vector에 담긴 값들을 붙인다.
+* 9번 : while문 밖에서 v.size\(\)로 방의 갯수가 정해는 객체배열을 생성한다.
+* 10번 : Vector에 담긴 값들을 객체배열로 복사-붙여넣기 한다.
+
+#### 초기화방법과 결과를 table에 올리기
+
+```java
+//질문 : 두 번 조회할 경우 앞에 조회결과가 남아있어요. 초기화하는 방법
 			if(v.size() > 0) {
 				while(dtm_zipcode.getRowCount()>0) {
 					dtm_zipcode.removeRow(0);
@@ -195,7 +238,20 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 				oneRow.add(1,zVOS[x].getAddress());//1번째에 address
 				dtm_zipcode.addRow(oneRow);
 			}
-			
+```
+
+* 2번 : Vector에 값이 1개 이상 담겨져 있다면,
+* 3번 : dtm 우편번호의 row가 0개 이상인 동안에는
+* 4번 : dtm 우편번호의 row를 삭제한다.
+* 9번 : 객체배열의 방 갯수보다 작은 경우에,
+* 10번 : Object타입의 Vector타입인 oneRow 선언 및 생성
+* 11번 : oneRow의 0번째에 객체배열\[x번방\]의 우편번호를 꺼낸다.
+* 12번 : oneRow의 1번째에 객체배열\[x번방\]의 주소를 꺼낸다.
+* 13번 : dtm에 oneRow를 파라미터로하는 Row를 add한다.
+
+#### 예외처리 - catch
+
+```java
 		}catch(SQLException se) {
 			System.out.println(se.toString());
 			System.out.println("[[query]]=="+sql.toString());//toad에 돌려서 오타찾기
@@ -205,6 +261,12 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 		
 	}//end of refreshData
 ```
+
+* 1번 : sql문 Exception오류
+* 2번 : String으로 출력
+* 3번 : toda에 돌려서 오타를 찾을 수 있다.
+* 4번 : 다른 Esception오류
+* 5번 : String으로 출력
 
 ### 인터페이스 Override
 
