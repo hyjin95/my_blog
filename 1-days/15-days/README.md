@@ -32,7 +32,9 @@ description: 2020.08.19 - 15일차
 
 * 클래스에 extends를 붙여 쓸 수 있다.
 * 상속의 개념을 갖는다. 기존 클래스가 child, 불러온 추상클래스가 parent가 된다.
-* child의 범위가 더 크므로 parent 주소번지 = new child\(\);가 성립한다.
+* 상속관계이며, child의 범위가 더 크므로 parent 주소번지 = new child\(\);가 성립한다.
+* 추상메서드, 일반메서드 둘다 갖는다. -&gt; 구현체 클래스가 필요하다.
+* 추상메서드에는 abstract를 붙인다
 * 결합도가 높고, 자유롭지 못하다.
 * 단독 인스턴스화 불가능하다 -&gt; 추상클래스 주소번지 = new 추상클래스\(\); : 성립 X 
 * 참고 : Duck.java, NickNameList.java - MallardDuck, WoodDuck, RubberDuck클래스 들이 Duck추상클래스를 parent로 상속한다.
