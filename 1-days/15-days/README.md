@@ -56,6 +56,11 @@ description: 2020.08.19 - 15일차
 * 내부 클래스는 외부 클래스의 멤버변수들을 사용할 수 있다.
 * 참고 : Outter.java
 
+### 다형성
+
+* 다형성 : Polymorphism -서로 다른 데이터형에 대하여 동일한 인터페이스를 제공하는 프로그래밍
+* 참고 : DuckSimulation.java
+
 ### InstanceTest.java
 
 상속, 인스턴스화의 분리, 생성 위치의 중요성

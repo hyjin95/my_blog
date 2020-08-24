@@ -212,8 +212,7 @@ public abstract class Duck {//abstract = 추상클래스
 
 ### DuckSimulation-메인
 
-다향성, 메서드이름은 같지만 결과값이 다르다.   
-다형성 : Polymorphism -서로 다른 데이터형에 대하여 동일한 인터페이스를 제공하는 프로그래밍
+다형성, 메서드이름은 같지만 결과값이 다르다. 
 
 ```java
 package duck;
