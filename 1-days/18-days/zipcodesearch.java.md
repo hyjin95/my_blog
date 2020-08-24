@@ -254,3 +254,7 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 }//end of class
 ```
 
+* 사용할 메서드만 구현부분을 설정한다.
+* 2-7번 : 조회버튼 이벤트가 감지되면 입력된 값을 String타입 user로 받아와 조회메서드를 호출한다.
+* 12-15번 : 선언부 11번에서 설정한 TextField 값이 클릭시 초기화되는 이벤트
+
