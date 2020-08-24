@@ -1,4 +1,4 @@
-# Animal.java
+# Animal.java - 추상클래스
 
 ### Animal.java - 추상클래스
 
