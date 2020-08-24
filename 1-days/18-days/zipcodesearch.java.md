@@ -74,6 +74,9 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import com.util.DBConnectionMgr;
+```
+
+```java
 
 public class ZipCodeSearch extends JFrame implements MouseListener, ActionListener {
 	//선언부
@@ -95,6 +98,10 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 	JScrollPane jsp_zipcode = new JScrollPane(jtb_zipcode
 											  , JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 											  , JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);//스크롤바 제공
+
+```
+
+```java
 	//생성자
 	public ZipCodeSearch() {
 		initDisplay();
@@ -119,8 +126,10 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 	//메인메서드
 	public static void main(String[] args) {
 		ZipCodeSearch zcs = new ZipCodeSearch();
-	}//end of main
-	
+	}//end of main	
+```
+
+```java
 	//조회메서드
 	public void refreshData(String dong) {
 		DBConnectionMgr dbMgr  = DBConnectionMgr.getInstance();
@@ -179,8 +188,10 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 			System.out.println(e.toString());
 		}//end of try-catch
 		
-	}
+	}//end of refreshData
+```
 
+```java
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object obj = e.getSource();
