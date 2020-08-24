@@ -1,5 +1,7 @@
 # ArrayListTest.java
 
+### List 인터페이스와 인터페이스 비교 연산자
+
 ```java
 package book.ch8;
 
