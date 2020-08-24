@@ -413,9 +413,8 @@ public class E {
 		
 		System.out.println(i);//1
 		System.out.println(f1);//1.0
-
 	}
-}
+	}
 ```
 
 * a항 = b항 : 대입연산자의 오른쪽에 있는 값을 왼쪽에 대입한다.
