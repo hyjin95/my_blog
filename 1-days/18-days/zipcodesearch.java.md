@@ -2,6 +2,8 @@
 
 ### +NickNameListSub.java
 
+dong을 검색하면 우편번호와 주소를 보여주는 창을 구현하려고 한다.
+
 ```java
 package desigin.test;
 
@@ -39,15 +41,18 @@ public class NickNameListSub extends JDialog implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
 }//end of class
 ```
 
+* 15 Days - NickNameListSub.java에서 추가된 부분
+
 ## ZipCodeSearch.java
 
 #### 우편번호 검색시 자료보여주기, 참고 : ZipCodeVO.java
+
+### import
 
 ```java
 package desigin.test;
@@ -76,8 +81,9 @@ import javax.swing.table.DefaultTableModel;
 import com.util.DBConnectionMgr;
 ```
 
-```java
+### 선언부
 
+```java
 public class ZipCodeSearch extends JFrame implements MouseListener, ActionListener {
 	//선언부
 	//물리적으로 떨어져있는 db서버와 연결통로 만들기
@@ -98,8 +104,13 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 	JScrollPane jsp_zipcode = new JScrollPane(jtb_zipcode
 											  , JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 											  , JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);//스크롤바 제공
-
 ```
+
+* ZipCodeSearch클래스는 JFrame을 \(extends\)상속받고, MouseListener, ActionListener 인터페이스를 implements 한다.
+* 3-8번 : DB연동에 필요한 인터페이스를 선언한다.
+* 10-20번 : 화면에 필요한 것들을 생성한다.
+
+### 화면구현부
 
 ```java
 	//생성자
@@ -128,6 +139,10 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 		ZipCodeSearch zcs = new ZipCodeSearch();
 	}//end of main	
 ```
+
+* 디폴트 생성자, 기본화면구현, 메인메서드
+
+### 조회 메서드 구현
 
 ```java
 	//조회메서드
@@ -190,6 +205,8 @@ public class ZipCodeSearch extends JFrame implements MouseListener, ActionListen
 		
 	}//end of refreshData
 ```
+
+### 인터페이스 Override
 
 ```java
 	@Override

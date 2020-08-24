@@ -1,4 +1,4 @@
-# ArrayListTest.java - 인터페이스, 인터페이스비교연산자
+# ArrayListTest.java - 인터페이스비교연산자
 
 ### List 인터페이스와 인터페이스 비교 연산자
 
@@ -11,9 +11,7 @@ import java.util.List;
 public class ArrayListTest {
 
 	public static void main(String[] args) {
-		//Vector는 멀티스레드에서 안전하다, 속도가 느리다. 스레드 경쟁이 일어난다. 같이쓴다, 공용화장실 = wait
-		//list  는 싱글스레드에서 안전하다, 속도가 빠르다. 스레드 경쟁이 없다. 내 차의 네비게이션
-		//List인터페이스는 util에 있는 것을 사용한다.
+		
 		List list = new ArrayList();
 		Dog d = new Dog();
 		list.add(d);
@@ -32,4 +30,9 @@ public class ArrayListTest {
 	}//end of main
 }
 ```
+
+* List인터페이스는 add할때 순서대로 담는다.
+* 15번 : list.size = 방의 갯수
+* 17번 : 입력된 obj의 타입의 Dog와 같다면
+* 20번 : 입력된 obj의 타입이 Cat과 같다면
 
