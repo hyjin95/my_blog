@@ -37,6 +37,12 @@ description: 2020.08.26 - 19일차
 * StringBuilder 클래스는 싱글스레드에서 안전하다.
 * StringBuffer  클래스는 멀티스레드에서 안전하다.
 
+### UI & Server
+
+* initDisplay와 Server중 먼저 실행되어야 하는것은 무엇인가?
+* Server는 요청이 있을때까지 대기한다. -&gt; 화면먼저
+* 화면이 있어야 요청이 있을 수 있다.
+
 ## 스레드\(Thread\) 클래스
 
 ![&#xC77C;&#xBC18;&#xC801;&#xC778; &#xC9C4;&#xD589;&#xC21C;&#xC11C; = 1&#xCC28;&#xC120;](../../.gitbook/assets/thread1.png)
@@ -65,14 +71,6 @@ description: 2020.08.26 - 19일차
 * run메서드의 역할 - **순서**를 정해준다. \(순서대로 듣고, 차례대로 말한다.\) - **지속**되는 경우 \(ex\)네비게이션의 길 안내\)
 * 순서를 정해주고 지속을 유지해주는 것은 run메서드 안에서 일어나는 일이다. - 사용시 Override해야한다.
 
-## Thread 활용
-
-### TimeServer.java
-
-* TimeClient 클래스 - 클라이언트, 핸드폰 - 스레드를 Runnable인터페이스를 implement해서 사용한다. - run메서드 Override - 화면에 시간을 표시한다. -&gt; 1초마다 이루어지는 지속적인 작업
-* TimeServer 클래스 - 서버, 기지국 - 스레드를 extends Thread, 상속해서 사용한다. - run메서드 Override - 시간을 제공한다. String PushTime\( \);
-* Calenda 클래스 - API : util -&gt; Calenda -&gt; 생성자\(Timezone, Local\) 존재 -&gt; static 메서드 이므로 -&gt; static field에서 사용할 변수를 찾는다. -&gt; getInstance메서드가 있으므로 생성자를 통해 인스턴스화 한다.
-
 ## Socket
 
 ### ServerSoket
@@ -89,6 +87,25 @@ description: 2020.08.26 - 19일차
 * 서버의 ip와 port번호가 필요하다 -&gt; 서버에게 물어보자 -&gt; 인스턴스화
 * Socket s = server.accept\( \);
 * 소켓에 쓰여져있는 것을 읽어오려면 - InputSting : read의 역할 - OutputString : write의 역할 - 두가지가 필요하다.
+
+## Thread 활용
+
+### TimeServer.java
+
+* TimeClient 클래스 - 클라이언트, 핸드폰 - 스레드를 Runnable인터페이스를 implement해서 사용한다. - run메서드 Override - 화면에 시간을 표시한다. -&gt; 1초마다 이루어지는 지속적인 작업
+* TimeServer 클래스 - 서버, 기지국 - 스레드를 extends Thread, 상속해서 사용한다. - run메서드 Override - 시간을 제공한다. String PushTime\( \);
+* Calenda 클래스 - API : util -&gt; Calenda -&gt; 생성자\(Timezone, Local\) 존재 -&gt; static 메서드 이므로 -&gt; static field에서 사용할 변수를 찾는다. -&gt; getInstance메서드가 있으므로 생성자를 통해 인스턴스화 한다.
+
+### TimeServer2.java
+
+TimeServer보다 더 개선된, 더 안전한 Server 만들기
+
+* Server : TimeServer2 클래스 - JFrame, Runnable 상속 - run 메서드 Override
+* Server : TimeServerThread - ObjectOutputStream : oos - ObjectInputStream : ois
+* TimeServer2에서 Socket선언
+* TimeServerThread에서 TimeServer2 인스턴스화, 생성자를 이용한다. - TimeServer2의 멤버변수 사용가능 - Socket을 사용하기 위해 ts2의 주소번지를 생성자의 파라미터로 넘긴다.
+
+## 
 
 
 
