@@ -1,4 +1,6 @@
-# StarCraft - 추상클래스, 인터페이스 설계
+# StarCraft - 복습
+
+### Unit.java - 추상클래스
 
 ```java
 package book.ch9;
@@ -21,6 +23,8 @@ public abstract class Unit {//추상클래스
 }
 ```
 
+### Marine.java - 구상클래스
+
 ```java
 package book.ch9;
 
@@ -35,6 +39,10 @@ public class Marine extends Unit {//추상클래스를 상속받는 구상클래
 }
 ```
 
+* Unit의 추상메서드인 move를 반드시 Override해야한다.
+
+### Tank.java - 구상클래스2
+
 ```java
 package book.ch9;
 
@@ -47,8 +55,11 @@ public class Tank extends Unit {//추상클래스를 상속받는 구상클래�
 	
 	void chaneMode() {}//이동하면서 공격하는 모드
 }
-
 ```
+
+* Unit의 추상메서드인 move를 반드시 Override해야한다.
+
+### Dropship.java - 구상클래스3
 
 ```java
 package book.ch9;
@@ -66,6 +77,10 @@ public class Dropship extends Unit {//추상클래스를 상속받는 구상클�
 	void unload() {}
 }
 ```
+
+* Unit의 추상메서드인 move를 반드시 Override해야한다.
+
+### PlayerTest.java 
 
 ```java
 package book.ch9;
@@ -98,6 +113,13 @@ public class PlayerTest {
 }
 ```
 
+* 구상클래스로 실체화된 유닛들을 움직여보는 클래스
+* 출력결과 - 마린이 100,300으로 이동했다.  - 탱크가 100,300으로 이동했다.  - 마린이 100,300으로 이동했다.  - 드랍쉽이 100,300으로 이동했다.
+
+## 다중구현
+
+### Movable.java - 인터페이스
+
 ```java
 package book.ch9;
 
@@ -107,21 +129,28 @@ public interface Movable {//인터페이스
 }
 ```
 
+### Attackable.java - 인터페이스
+
 ```java
 package book.ch9;
-//상속은 단일상속만 가능하다.
-//인터페이스는 다중구현이 가능하다.
-//단일 상속의 단점을 보완하기 위함.
+
 public interface Attackable {//공격인터페이스
 	void atack(Unit u);
 }
 ```
 
+### Fightable.java -  인터페이스를 상속받는 인터페이스
+
 ```java
 package book.ch9;
-//인터페이스를 상속받는 인터페이스 = 다중구현
+
 public interface Fightable extends Movable, Attackable{ }
 ```
+
+* 인터페이스는 여러 인터페이스를 상속받을 수 있다. = 다중구현
+* 인터페이스 안에서나, 다른 클래스에서도 인터페이스는 여러개를 상속받을 수 있다.
+
+### Fighter.java - 추상클래스와 인터페이스의 Override
 
 ```java
 package book.ch9;
@@ -132,7 +161,7 @@ public class Figther extends Unit implements Fightable {
 	public void atack(Unit u) {
 		// TODO Auto-generated method stub		
 	}
-	//오버라이드할때 접근 제한자는 반드시 더 넓은 범위로 처리해야한다.
+	
 	//메서드 이름은 소문자로 하자
 	@Override
 	public void move(int x, int y) {
@@ -140,4 +169,7 @@ public class Figther extends Unit implements Fightable {
 	}
 }
 ```
+
+* 상속받고있는 Unit추상클래스에도 추상메서드가 있고, Fightable인터페이스에도 추상메서드가 있다.
+* 오버라이드 할때 접근제한자는 반드시 더 넓은 범위로 처리해야한다. - Unit, Movable은 같은 추상메서드를 갖는데 둘다 접근제한자가 없지만, Fighter클래스에서는 그보다 넓은 접근제한자인 public을 주어야만 오류가 생기지않는다.
 
