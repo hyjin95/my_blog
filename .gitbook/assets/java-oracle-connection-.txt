@@ -1,0 +1,19 @@
+1. 데이터 서버의  id, pw, ip 알아두고
+2. eclipse 폴더 우클릭 build path선택
+3. 목차 libaries 클릭 
+4. 버튼 add External JARS 클릭
+5. d > app > kosmo12 > product > 11.1.0 > db_1 > jdbc lib의
+   압축 풀지 않은 ojdbc6.jar선택
+6. apply and close 클릭
+7. eclipse에 이름.jdbc 패키지 생성
+8. DeptApp 클래스 생성 - Superclass : JFrame
+
+jdbc = jave database connection
+
+DB 서버와 연결되는 것에 관해서는 import가 java.sql에 되어야한다.
+
+java는 기본적으로 lang패키지를 갖고있고,
+java.lang은 대표적으로 String을 갖고있다.
+다른 패키지의 클래스는 import해야 불러 올 수 있다.
+
+oracl의 exception을 잡아주는 것 sql exception

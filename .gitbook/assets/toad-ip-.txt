@@ -1,0 +1,40 @@
+toad for oracle 
+다른 사람의 서버에 접속하기
+- 테스트하기 위함
+
+Direct에서 Host에 ip입력
+port입력 (기본값 1521) 
+SID 체크, id입력
+접속
+
+블록체인에서 중요하게 사용한다.
+
+toad 에서 table 만들기
+
+CREAT TABLE 
+varchar(10) : 10자리 
+constraints : 조건을 걸수 있다.
+
+ORACLE안에 집을 짓는단계
+-> table에 data 목록 연결해야한다.
+
+사진 : 5만건 DATA올리기
+
+
+드래그+f4 -> script table (이부분) 복사 -> eclipse -> 컬럼명만 남기고 지우기
+이부분 = 컬럼명
+-> 컬럼명 드래그 -> ctrl+shif+y(소문자로변경) x(대문자)
+
+접근제한자. 타입, =null;입력 -> 드래그 -> 우클릭 -> Source
+-> Generate Getter and Setters -> select all -> lastmember -> Generate
+
+oracle에서 진행 로그확인
+Query Viewer
+
+oracle
+commit - 내보내기
+rollback - 전단계로 되돌리기 : commit한 이후에는 안된다.
+update dept set loc='서울' - 지역이 전부 '서울'로 변경
+
+DELETE FROM dept WHERE deptno IN(40,99)
+- deptno의 40, 99 데이터를 삭제하겠다.

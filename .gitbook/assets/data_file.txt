@@ -1,0 +1,62 @@
+ALTER TABLE SCOTT.ZIPCODE_T --alter : data가 아닌 table의 구조를 수정할때 사용하는예약어 : ddl
+ DROP PRIMARY KEY CASCADE;
+
+DROP TABLE SCOTT.ZIPCODE_T CASCADE CONSTRAINTS;--drop : =delete : ddl
+
+CREATE TABLE SCOTT.ZIPCODE_T --create : table생성하는 예약어 : ddl
+(                                                                                     --table을 만드는 부분
+  UID_NO    NUMBER(5),
+  ZIPCODE   NUMBER(6)                           NOT NULL,
+  ZDO       VARCHAR2(10 BYTE)                   NOT NULL,
+  SIGU      VARCHAR2(30 BYTE),
+  DONG      VARCHAR2(30 BYTE),
+  RI        VARCHAR2(30 BYTE),
+  BUNGI     VARCHAR2(30 BYTE),
+  APTNAME   VARCHAR2(50 BYTE),
+  UPD_DATE  VARCHAR2(20 BYTE)                   NOT NULL,
+  ADDRESS   VARCHAR2(100 BYTE)                  NOT NULL
+)                                                                                     
+TABLESPACE USERS
+PCTUSED    0
+PCTFREE    10
+INITRANS   1
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+LOGGING 
+NOCOMPRESS 
+NOCACHE
+NOPARALLEL
+MONITORING;
+
+
+CREATE UNIQUE INDEX SCOTT.ZIPCODE_UIDNO_PK ON SCOTT.ZIPCODE_T
+(UID_NO)                                                                        --index를 만드는 부분
+LOGGING
+TABLESPACE USERS
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          64K
+            NEXT             1M
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+           )
+NOPARALLEL;
+
+
+ALTER TABLE SCOTT.ZIPCODE_T ADD (
+  CONSTRAINT ZIPCODE_UIDNO_PK
+  PRIMARY KEY
+  (UID_NO)
+  USING INDEX SCOTT.ZIPCODE_UIDNO_PK
+  ENABLE VALIDATE);

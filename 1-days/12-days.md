@@ -34,7 +34,7 @@ description: 2020.18.13 - 12일차
 ### 개선된 for문
 
 * **for\(변수명 : 배열명\)** - 변수명 : 객체배열 안에 들어있는 타입 / 변수이름 - 배열명 : Vector와같은 객체배열 이름
-* 전체 조회할 때 사용한다.
+* 전체 조회할 때 사용한다. - List인터페이스의 Vector나 ArrayList 같이 size가 유동적으로 변화하는 클래스에 사용한다.
 * 참조 : [https://java119.tistory.com/107](https://java119.tistory.com/107)
 * 참고 : IntArray.java
 

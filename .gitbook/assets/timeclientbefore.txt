@@ -1,0 +1,63 @@
+package book.ch8;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+//클라이언트
+public class TimeClient implements Runnable {
+	ObjectOutputStream out = null;
+	ObjectInputStream in = null;
+	//소켓 생성
+	Socket socket = null;
+	
+	public void init() {
+		
+	}
+
+	@Override
+	public void run() {
+		System.out.println("run 호출 성공");	
+		PrintWriter out = null;//말할때
+		BufferedReader in = null;//들을때
+		String timeStr = null;
+		try {
+			socket = new Socket("192.168.0.187"+ "", 3000);
+			out = new PrintWriter(socket.getOutputStream(), true);
+			in = new BufferedReader( new InputStreamReader(socket.getInputStream()));
+			while(true) {
+				while((timeStr = in.readLine()) != null) {
+					System.out.println(timeStr);
+				}
+				try {
+					Thread.sleep(1000);
+				}catch (InterruptedException e) {
+					
+				}
+			}
+		}catch (IOException ie) {//읽고 쓰기를 할 수 없는 상황
+			System.out.println("타임 서버에 접속할 수 없습닌다.");			
+		}finally {
+			try {
+				in.close();//자원반납
+				out.close();
+				socket.close();
+			} catch (Exception e) {
+				
+			}//end of try 
+		}//end of finally
+	}
+	
+	public static void main(String[] args) {
+		TimeClient tc = new TimeClient();
+		Thread th = new Thread(tc);//인터페이스는 인스턴스화가 불가능하므로 반드시 생성자를 통해 넘겨야 한다.
+		th.start();//콜벡메서드 호출하기
+	
+	}
+
+}

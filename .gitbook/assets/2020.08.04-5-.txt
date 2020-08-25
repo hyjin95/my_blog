@@ -1,0 +1,152 @@
+P38,P70,P91,P92
+ForTest.java, IfTest.java, Test_forif.java
+
+
+오늘의 학습목표
+ - 제어문을 만들기 위해 순서도를 그릴 수 있다.
+
+메소드 관찰
+ - ()괄호를 갖고잇으면 메소드이다.
+ 1. 듣기 : 파라미터
+ 2. 말하기 : return
+
+형변환, 타입전환
+ - 왼쪽항 = 오른쪽항
+      오른쪽항이 왼쪽항보다 타입이 작아야한다.
+ 
+ - 강제형전환 : 오른쪽항 타입이 더 클때.
+       i = (int)f : int==캐스트연산자 
+
+P70
+단항 - 삼항 연산자
+관계연산자 : 제어문(if) : 비교할때 : 결과값이 T또는 F로 반환된다, 깔때기 안에 사용된다.
+                  >, <, >=, <=, ==, !=
+
+코드를 할때, 순서도(설계도)를 만들어야 한다.
+ - 다이어그램, flow chart
+
+P91
+4장 제어 흐름 이해하기
+
+ - 제어 ---- 흐름  
+   강제      a->b
+   허락
+
+ - 제어 : 방향을 바꾸는 것, 방향을 바꾸려면 변수가 필요하다.
+       ex) 아이디 생성할때 중복검사를 하면, 컴퓨터가 등록된 아이디들을 검색한다.
+            이때, 500번째에서 같은 아이디가 발견되면 검색을 멈추는 것 == 제어
+ 
+ - 양방향 서비스 : 소통, 대화
+ - 단방향 서비스 : TV, 라디오는 일방적으로 송출
+ - 같은 시간대에 다른 채널을 보는것 : 선택 == if  :  true==1, false==0 (blooean)
+   불리언 : 논리형타입, T 또는 F값을 갖는다. 기본값 == false
+   이 결과 값에 따라 흐름이 바뀐다.
+ - 실행문 (변수) : 변수와 연산자 연결하기
+ - 코드에서 변수의 위치 : 메소드 {변수} == 깔때기의 실행문 안
+ - 변수의 역할 = 기억시키는 역할 = 값 재정의 할 수 있다.
+ - 상수 : 변하지 않는, 고정된 값 = 값을 재정의할 수 없다.
+
+1. 조건문 : if문, switch문, 삼항연산자
+               if문과 switch문은 자유롭게 바꾸며 사용할 수 있어야한다.
+2. 반목문 : for문, while문
+               for문과 while문은 자유롭게 바꾸며 사용할 수 있어야한다.
+
+P92
+조건문 = 양방향서비스, 소통, 사용자의 선택을 듣는다.
+ - 사용자의선택인 파라미터, 이를 기억시키기위한 변수.
+ - 만약 ~라면 : if,switch
+ - 그렇지 않다면 : else (if가 참이되는 경우를 제외한 나머지)
+    ex) 동서남북 : if, if-else, if-else, -f-else (P96,97)
+ - 판단,분기
+    - 선분조건 : 구간검색
+    - 점조건 : 값 비교(==)
+
+book.ch4 패키지
+ ForTest.java
+  - i가 1부터 5까지, 짝수 값을 모두 더한다.
+         - 변수 : 2개(i, sum)
+         - int i; , int sum = 0;
+
+ IfTest.java
+ - 모든 class의 부모는 Object(=객체)이다. 생략가능.
+   자식 객체들은 부모 객체를 사용할 수 있다.=메소드는 부모가 갖고있는 메소드를 사용할 수 있다.    
+ - class IfTest extends Object : class객체, 부모객체(자식을조작하려고한다.)
+   class 자식클래스이름 extend 부모클래스이름 { }
+ - extends : 상속(의존한다.결합도가 높아진다->재사용성이 떨어진다, 효율성이 떨어진다.)
+   내 메소드만으로 해결할 수 없어 다른 클래스의 메소드가 필요하다. = 재사용성이 떨어진다.
+ - showInputDialog( ) : 메소드, (파라미터==object==객체)
+
+예제문제 Test_random.java
+0~9 사이의 임의의숫자를 채번하여 그 숫자를 맞추는 게임을 작성하시오
+java.util.random
+ - 랜덤 클래스 https://hyeonstorage.tistory.com/160
+   int nextint(10) : 0이상. 10미만 
+ - 메인메소드에 다 만든다
+ - 메소드를 쪼갠다
+ - 짝수, 홀수 채번을 만든다.
+
+1.변수 선언 후 어떤 정보를 담는지 주석달기
+2. if문에 들어갈 질문을 한글로 적어본다
+3.반복문과 조건문이 둘다 필요한 경우 반드시 N-S chart를 그려본다.
+  N-S chart : 순서도. 낱말카드
+
+숙제
+fizz=5의배수 buzz=7의배수 fizzbuzz=5와7의 공배수 출력
+1-100출력시 위와 같이 출력되도록
+
+
+
+오라클 설치하기
+
+1.Oracle Database 11g 설치 (서버제품설치)
+   - win32_11g 압축풀기 -> 폴더 database -> setup관리자권한으로실행 -> 이름 : orcl11
+     -> 암호 abcd1234 -> 다음 -> 유료제품이라 메일로 수신 불가 -> 메일빈칸
+     -> metalink 체크하기 -> 다음 -> 윈도우 운영체제 체크, 서비스 팩 체크, 네트워크 구성요소 체크
+     -> 다음 -> 액세스허용 -> 설치 -> 액세스허용 -> framework설치 -> 암호관리 -> scott 체크 해제
+     -> tiger 입력 -> HR동일
+   - 암호관리창열기
+     CMD ->  sqlplus "/as sysdba" -> 경로 -> alter user scott account unlock; -> alter user scott identified by tiger;
+     -> alter user hr identified by tiger; -> SELECT username, account_status FROM dba_users;
+     - 밑의 목록에서 scoot, hr계정이 open되었음을 볼 수 있다.
+ - 컬럼과 로우를 이용해 Table생성(DB저장장소)한다. 
+   Table(구성요소 = row+column)
+ - Select 컬럼명
+ - From 집합이름
+ - log : 요청한 사용자만의 DB
+
+2.Toad DBA Suite for Oracle 11.5 설치
+   - oracle을 32비트를 설치햇으므로 32비트 설치 -> aceept -> 붉은것 체크해제 -> install
+   - Toad_for_Oracle_2015 : 라이센스 키
+
+3. Toad 켜기
+ - username : scott
+   password : tiger
+   nomal
+   save password 체크
+ - SELECT * FROM emp 입력 -> 하단 Data Grid 클릭 -> 입력문구 커서, ctrl + enter또는 F5
+   -> Session -> New Connection -> Direct -> Host : ip입력, port : 1521입력(디폴트값)
+   -> Service Name : orcl11
+
+
+교재 Oracle 11g프로그래밍
+P22
+ - Express Edition : 무료버전
+p25
+ SQL 유형
+ - 질의어(DQL : Data Query Language)
+    SELECT : 데이터 검색,조회 
+    ex) 네이버 지식인
+ - 데이터조작어(DML : Data Manipulation Language) : 데이터에 변화를 일으킨다.
+    INSERT : 데이터 입력, 등록
+    UPDATE : 데이터 수정
+    DELETE : 데이터 삭제, 탈퇴 	
+
+
+
+
+
+
+
+
+
+

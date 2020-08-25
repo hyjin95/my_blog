@@ -1,0 +1,64 @@
+안드로이드 스튜디오
+http://developer.android.com/studio
+
+선생님 git주소
+https://github.com/slalom0914
+선생님 저장소 주소
+https://github.com/slalom0914/java69.git
+
+저장소
+D:kosmo__git_java
+
+깃헙 이메일
+67004403+hyjin95@users.noreply.github.com
+
+작업지시서
+
+1. 로컬 pc에 공유할 폴더 이름 생성 (D:kosmo.git.javaj)
+2. Git 다운로드
+ - https://git-scm.com/download/win
+ - 도스 : git --version
+3. D:git2020_java_yj 우클릭 -> git bash -> git init입력
+   -> 숨겨진 파일 git에 공유할 파일 넣기
+   -> git bash에 : git colne 깃URL(.git빼고)
+4. 도스
+ - d:
+ - cd kosmo__git_java
+ - git init
+
+git 초기화
+ - 4명인 경우 한명의 서버에 세명이 바라보고있다.
+ - 파일 하나를 세명이 공유하려면 동기화해야한다.
+ - 세명이 동시에 내려받아 버전이 같아야한다. =형상관리(깃, 버전 관리)
+ - 한 명이 수정하면 다음사람도 이어쓸수 있게 한다. = commit
+ - 코드 올리는 사람 = add -> commit -> push
+ - 코드 동기화시키기(적용하기, 내려받기) = git pull
+
+서버를 제공하는 사람
+
+1. 레파짓트리(원격저장소) 생성하기
+- 이름짓기
+- 팀원명 넣기
+- public
+- read me 체크
+URL
+https://github.com/croce25/Kosmo_git_java.git
+
+2. 이 공간을 초기화
+ git puch origin master
+
+공유받는사람
+
+1. 공유받을, 바라볼 서버의 갯수에 맞게 폴더 생성
+ - 선생님 레파짓을 바라볼 파일
+ - 팀 레파짓을 바라볼 파일
+2. 파일들 안에는 숨긴파일 git을 꼭 생성해야한다.
+  숨겨진 git파일은 기록되는 파일로, 버전관리에 사용된다. (자동저장, 불러오기)
+  다른이름으로 저장 -> 다른 가지 = branch
+  원본 파일 = master "origin"
+
+공유받을 파일을 저장할 폴더 우클릭 - git bash
+- git clone git주소paste - .git지우기 - enter - 폴더생성되었는지 확인
+- git bash에서 git pull origin master -
+
+git init =로컬 저상소 생성 후 해당 폴더에 숨김파일을 저장할 수 있도록 초기화
