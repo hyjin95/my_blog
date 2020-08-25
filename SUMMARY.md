@@ -50,5 +50,5 @@
     * [StarCraft - 복습](1-days/19-days/starcraft.md)
     * [TimeServer.java - Socket](1-days/19-days/socket.md)
     * [TimeServer2.jav - Socket](1-days/19-days/timeserver2.jav-socket.md)
-  * [Untitled](1-days/untitled.md)
+  * [20 Days -](1-days/untitled.md)
 
