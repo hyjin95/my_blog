@@ -46,7 +46,7 @@
     * [Car.java - 상속관계 이해](1-days/18-days/car.java.md)
     * [ArrayListTest.java - 인터페이스비교연산자](1-days/18-days/arraylisttest.java.md)
     * [ZipCodeSearch.java - 우편번호 조회](1-days/18-days/zipcodesearch.java.md)
-  * [19 Days - 추상클래스, 인터페이스, Thread](1-days/19-days/README.md)
+  * [19 Days - 추상클래스, 인터페이스, Thread, Socket](1-days/19-days/README.md)
     * [StarCraft - 추상클래스, 인터페이스 설계](1-days/19-days/starcraft.md)
     * [Socket](1-days/19-days/socket.md)
   * [Untitled](1-days/untitled.md)
