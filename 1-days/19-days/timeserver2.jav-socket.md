@@ -119,7 +119,7 @@ public class TimeServerThread extends Thread {
 	}//end of 생성자
 	
 	//현재 입장해 있는 모든 친구들에게 모두 메세지를 전송한다.
-	public void broadCasting(String Msg) {
+	public void broadCasting(String Msg) {//모든 접속자에게 시간을 알려줄때까지
 		for(TimeServerThread tst:ts.globalList) {
 			try {
 				oos.writeObject(Msg);//메세지가 간다.
