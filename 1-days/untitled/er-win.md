@@ -79,15 +79,28 @@ description: CA ERWin Data Modeler
 
 ![](../../.gitbook/assets/t.png)
 
+* New... -&gt; 컬럼명 입력
+
 ![](../../.gitbook/assets/y.png)
+
+* 입력결과
+* pk = 부서번호
 
 
 
 ![](../../.gitbook/assets/u.png)
 
+* Datatype표시하기
+
+
+
 ![](../../.gitbook/assets/i.png)
 
+* 결과
+
 ![](../../.gitbook/assets/o.png)
+
+* 사원 집합을 만들어 관계를 표시하자
 
 ![](../../.gitbook/assets/p.png)
 

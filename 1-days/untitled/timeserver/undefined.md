@@ -1,12 +1,20 @@
 # 예제문제
 
+## 문제
+
+* 타입서버를 옆 친구 서버에 접속해서 출력하시오.
+*  UI -&gt; JOptionPane의 InputDialog를 활용하여 ip, port번호를 받아 처리하시오.
+* StringTokenzier클래스의  next\_ 생성자 중 파라미터가 두개 인것을 이용하시오.
+* 입력서식 : ip\#port 
+* String user = JOptionPane.showInputDialog\("'아이피주소\#포트번호'를 입력하세요."\);
+
+## 코드
+
+### FriendApp.java
+
 ```java
 package timeserver;
-//타임서버를 옆 친구 서버에 접속해서 출력하시오
-//UI -> JOptionPane의 InputDialog를 활용하여 ip, port번호를 받아 처리하시오
-//StfingTokenzier클래스의 next... 생성자 중에 파라미터가 두개 인것 
-//입력서식 ip#port
-//String user = JOptionPane.showInputDialog("'아이피주소#포트번호'를 입력하세요.");
+
 import java.awt.Font;
 import java.net.Socket;
 import java.util.StringTokenizer;
@@ -61,6 +69,8 @@ public class FriendApp extends JFrame{
 	}
 }
 ```
+
+### FriendClient.java
 
 ```java
 package timeserver;
@@ -120,6 +130,8 @@ public class FriendClient extends Thread {
    }
 }//end of class
 ```
+
+### FriendServer.java
 
 ```java
 package timeserver;
