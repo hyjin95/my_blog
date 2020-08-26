@@ -22,13 +22,15 @@ description: CA ERWin Data Modeler
 
 ### 설정
 
+* 읽기 모드에서는 저장이 안된다. 생성하기전에 저장을 미리 해놓고 진행하자
+
 ## 설정
 
 ![](../../.gitbook/assets/w.png)
 
 ![](../../.gitbook/assets/e.png)
 
-## 부서 - 사원
+## Test - 부서 & 사원
 
 ![](../../.gitbook/assets/r.png)
 
@@ -49,4 +51,12 @@ description: CA ERWin Data Modeler
 ![](../../.gitbook/assets/.png%20%282%29.png)
 
 ![](../../.gitbook/assets/.png%20%281%29.png)
+
+## PK와 FK, AK 
+
+![](../../.gitbook/assets/1-.png)
+
+![](../../.gitbook/assets/4%20%281%29.png)
+
+![](../../.gitbook/assets/3.png)
 
