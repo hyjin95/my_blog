@@ -140,7 +140,7 @@ public class LoginForm extends JFrame implements ActionListener {
 }//end of class
 ```
 
-## BookManager - 추가
+## BookManager - 추가한 부분
 
 ```java
 package design.book;

@@ -2,7 +2,7 @@
 
 ## 문제
 
-* 타입서버를 옆 친구 서버에 접속해서 출력하시오.
+* 타임서버를 옆 친구 서버에 접속해서 출력하시오.
 *  UI -&gt; JOptionPane의 InputDialog를 활용하여 ip, port번호를 받아 처리하시오.
 * StringTokenzier클래스의  next\_ 생성자 중 파라미터가 두개 인것을 이용하시오.
 * 입력서식 : ip\#port 
