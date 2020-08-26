@@ -110,12 +110,21 @@ description: 2020.08.25
 * Runnable를 implements하여 Thread는 표준에 정해진 것을 가져다 쓰면서 run메서드를 이용한다.
 * client에서 server에서 시간정보를 받아오고자 할때,  - 다른 client의 소켓들도 접속할 수 있고, 시간은 계속 출력되어야 한다. - 동시작업, 지속 - 소켓마다 Thread를 배정해준다. = List&lt;Thread&gt;
 
+### run메서드
+
+* Thread클래스, Runnable인터페이스 안에 있다.
+* run메서드는 시간을 건드리는 메서드로 동시 접속이 일어날때 순서대로 대기, 처리할 수 있게 해준다.
+* 소유주.Notify\( \) : 대기하던 손님들 진행시작
+* 소유주.Wair\( \) : 진행을 중단하고 대기시킨다.
+* start메서드를 사용하면 시작된다.
+
 ### Server로부터 시간을 받아보자
 
 1. **Thread를 상속하는 TimeServer 기동** - 인스턴스화 -&gt; 스레드호출\(=start\( \);\) - TimeServer ts = new TimeServer\( \); - 생성을 선언부에 하면 멤버변수의 성격을, 메서드에 탑재하면 지역변수의 성격을 갖는다.
-2. **run\( \); 호출** - start\( \); -&gt; run\( \);  - run메서드는 시간을 건드리는 메서드로 동시 접속이 일어날때 순서대로 대기, 처리할 수 있게 해준다. - ts.Notify\( \) : 대기하던 손님들 진행시작 - ts.Wair\( \) : 진행을 중단하고 대기시킨다.
+2. **run\( \); 호출** - start\( \); -&gt; run\( \); 
 3. **client = server.accept\( \);** - 클라이언트가 server에 자기 단말기의 Socket을 보내 접속 허락을 받는다. - 서버에 client socket이 있다. - 이를 담기 위해서는 socket에 out\(말하기\)와 in\(듣기\)가 필수적이다. - OutputStream, InputStream
 4. **APP화면에 시간정보 띄우기** - 시간을 나타내주는 Client 원본을 인스턴스화 해야한다. - TimeClient JLabel 생성자에 App의 JLabel을 this로 인스턴스화한다. - new TimeClient\(JLabel\); - App에서 Server와 Client를 인스턴스화 하여 기동시킨다. - run메서드 안에서 JLabel.setText\( \); 호출한다.
+5. 사용된 data, 자원은 반납한다.
 
 ### 응용 예제문제 
 
