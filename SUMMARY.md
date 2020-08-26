@@ -53,5 +53,6 @@
   * [20 Days](1-days/untitled/README.md)
     * [ER-Win](1-days/untitled/er-win.md)
     * [Toad](1-days/untitled/toad.md)
-    * [TimeServer](1-days/untitled/timeserver.md)
+    * [TimeServer](1-days/untitled/timeserver/README.md)
+      * [예제문제](1-days/untitled/timeserver/undefined.md)
 

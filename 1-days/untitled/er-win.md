@@ -70,7 +70,12 @@ description: CA ERWin Data Modeler
 
 ## Test - 부서 & 사원
 
+### Table, 집합 생성
+
 ![](../../.gitbook/assets/r.png)
+
+* 상단 Logical옆 네모난 버튼이 집합 생성 버튼이다.
+* 집합을 만들고 더블클릭하면 컬럼명 및 AK 추가할 수 있다.
 
 ![](../../.gitbook/assets/t.png)
 
