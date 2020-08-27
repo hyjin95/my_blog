@@ -62,7 +62,22 @@ description: 2020.08.27 - 21일차
 
 ### 인라인뷰
 
+* 인라인 뷰는 FROM절 안에서 사용되는 서브 쿼리이다.
+* FROM\(SELECT 컬럼명 FROM 집합\)
+* rownum을 묶어주거나, 원하는 row만을 뽑기위해 rownum을 초기화할때 사용한다.
+*  ex\)최근 입사한 5명의 사원을 검색하려면 아래와 같은 쿼리문을 실행하면 된다. - SELECT ROWNUM, EMPNO, ENAME, HIREDATE  - FROM \(SELECT \* FROM EMP ORDER BY HIREDATE DESC\)  - WHERE ROWNUM &lt;= 5;
+
 {% page-ref page="toad.md" %}
 
+## 카카오톡 구현
 
+* 메인화면 구현
+* id입력창, pw입력창 구현
+* 로그인, 회원가입 버튼 구현
+* 회원가입 memberShip 구현
+* 우편번호 조회 구현
+
+## 한줄일기
+
+세미 프로젝트와 병행하느라 시간이 눈코뜰새 없이 부족하지만 재미있다. 하루가 30시간이였으면 좋겠다는 생각을 한다.
 
