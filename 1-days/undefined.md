@@ -12,16 +12,18 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 
 ### Eclipse IDE
 
-* system          : "sys" + ctrl + space bar
-* 복사               : ctrl + alt + ↓
-* 코드 줄 이동 : alt + 방향키
-* import 추가  : ctrl + shift + o
-* 지우기           : ctrl + d
-* 일괄처리       : alt + shift + a
-* 들여쓰기       : 드래그 + tab
-* 검색 및 변경 : ctrl + f
-* 범위 주석      : 드래그 + ctrl +shift + / 또는 드래그 + ctrl +/
-* get set           : 변수 드래그 -&gt; 우클릭 -&gt; Source -&gt; Generate Getter and Setter -&gt; select all -&gt; last member -&gt; Generate
+* system       : "sys" + ctrl + space bar
+* 복사            : ctrl + alt + ↓
+* 코드 이동   : alt + 방향키
+* import        : ctrl + shift + o
+* 지우기        : ctrl + d
+* 일괄처리    : alt + shift + a
+* 들여쓰기    : 드래그 + tab
+* 검색&변경 : ctrl + f
+* 범위 주석   : 드래그 + ctrl +shift + / 또는 드래그 + ctrl +/
+* get set        : 변수 드래그 -&gt; 우클릭 -&gt; Source -&gt; Generate Getter and Setter -&gt; select all -&gt; last member 
+* 소문자로    : ctlr + shift + y
+* 대문자로    : ctlr + shift + x
 
 ### 깃북
 
