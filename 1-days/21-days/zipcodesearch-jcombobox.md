@@ -314,7 +314,7 @@ public void refreshData(String user, String dong) {
 	}
 ```
 
-## 테스트
+## 테스트 - ZipCodeDaoSimulation.java
 
 ```java
 package desigin.test;
