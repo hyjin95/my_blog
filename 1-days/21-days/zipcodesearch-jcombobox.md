@@ -314,3 +314,21 @@ public void refreshData(String user, String dong) {
 	}
 ```
 
+## 테스트
+
+```java
+package desigin.test;
+
+public class ZipCodeDaoSimulation {
+	
+	public static void main(String[] args) {
+		
+		ZipCodeSearch zc = new ZipCodeSearch();
+		String[] zdos = zc.getZdoList();
+		for(String s:zdos) {
+			System.out.println(s);
+		}
+	}		
+}
+```
+
