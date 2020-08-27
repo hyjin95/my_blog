@@ -1,7 +1,5 @@
 # ZipcodeSearch - JcomboBox, FocusListener
 
-
-
 ## ZipCodeSearch.java
 
 ### import
