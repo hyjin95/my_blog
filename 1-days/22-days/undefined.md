@@ -1,6 +1,6 @@
 # 문제풀이
 
-### 
+### Question 1
 
 ```java
 package scjp.method;
@@ -56,6 +56,11 @@ public class Q1 {
 	}
 }
 ```
+
+* class B extends A = B is a A = B풍선안에 A풍선
+* getNumbr메서드는 B와 A가 상속관계 이므로 오버라이딩 메서드이다.
+* A부모의 메서드를 B가 재정의 했다. legal
+* 부모의 타입을 바꿔버렸다 - 오류발생
 
 ```java
 package scjp.method;
