@@ -65,5 +65,6 @@
       * [ZipCodeSearch.java - 우편번호 조회](1-days/21-days/undefined/zipcodesearch.java.md)
   * [22 Days - 문제풀이 및 복습](1-days/22-days/README.md)
     * [Toad - 주석 옵션 편집](1-days/22-days/untitled-1.md)
+    * [Demo - 입력값 DB에서 가져오기](1-days/22-days/demo-db.md)
     * [문제풀이](1-days/22-days/undefined.md)
 
