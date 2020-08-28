@@ -13,27 +13,28 @@
 
 ![](../../.gitbook/assets/4.png)
 
-* object이름을 지정한다. next
+* object이름을 만들어둔 테이블로 지정한다.
+* Show Data - next
 
 ![](../../.gitbook/assets/5.png)
 
-* 목록이 text파일이므로 text파일 선택, 경로를 지정한다. next
+* 목록이 text파일이므로 text파일 선택, 경로를 지정한다. - next
 
 ![](../../.gitbook/assets/6.png)
 
-* next
+* 구분 기호 선택 - next
 
 ![](../../.gitbook/assets/7.png)
 
-* First row : 2 로 지정한다. next
+* First row : 2 : 1은 header이고 data는 2줄부터이다. - next
 
 ![](../../.gitbook/assets/8.png)
 
-* 선택창이 뜨면 그대로 ok한다.\(자동으로 선택한다\) next
+* 선택창이 뜨면 그대로 ok한다.\(자동으로 선택한다\) - next
 
 ![](../../.gitbook/assets/9.png)
 
-* key field를 지정해준다. next
+* key field를 지정해준다. - next
 * 이후에는 업로드를 진행해주는데 이때 처음에 만든 table을 벗어나거나 하면 안내팝업이 뜬다. 
 * all to yes 후 Alter Table에서 해당 부분을 수정한다.
 
