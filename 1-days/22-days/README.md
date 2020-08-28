@@ -24,6 +24,38 @@ description: 2020.08.28 - 21일차
 
 ### override, overloading
 
+```java
+package scjp.method;
+
+public class MethodOver {
+	public void setVar(int a, int b, float c) {
+		
+	}
+
+	public void setVar(int a, long b, float c) {//타입이 다르거나 파라미터갯수가 달라야만한다.
+		
+	}
+	
+	public void setVar(int a,float c) {//파라미터갯수가 다른경우
+		
+	}
+	
+	public int setVar(int a, int b, int c) {//타입이 다른경우
+		return a+b+c;
+	}
+	
+	public int setVar(int a, int b) {//타입과 파라미터가 다른경우 == 오버라이딩
+		return a+b;
+	}
+	
+	public static void main(String[] args) {
+		//대표적인 오버로딩의 예==print
+		System.out.println(5);
+		System.out.println();
+	}
+}
+```
+
 {% page-ref page="undefined.md" %}
 
 
