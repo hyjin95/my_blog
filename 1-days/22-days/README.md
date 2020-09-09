@@ -56,5 +56,7 @@ public class MethodOver {
 
 {% page-ref page="undefined.md" %}
 
+## 한줄일기
 
+코로나 사회적 거리두기 2.5단계에 의해 학원이 당분간 쉬게 되었다. 요즘에는 하루가 30시간이였으면 했으니까..재충전하고 열심히 다시 달려보자
 
