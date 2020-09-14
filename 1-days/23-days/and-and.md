@@ -56,6 +56,8 @@ public class BookTest {
 	}
 ```
 
+### 서브쿼리 & List타입
+
 ```java
 	/*
 	 * SELECT ename, sal FROM emp WHERE sal >= (SELECT sal FROM emp WHERE empno =:x) --7566
