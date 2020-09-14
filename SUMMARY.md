@@ -67,6 +67,7 @@
     * [Toad - 주석 옵션 편집](1-days/22-days/untitled-1.md)
     * [Demo - 입력값 DB에서 가져오기](1-days/22-days/demo-db.md)
     * [문제풀이](1-days/22-days/undefined.md)
-  * [23 Days - 서브쿼리, seq](1-days/23-days/README.md)
+  * [23 Days - 서브쿼리, seq, 인스턴스화 위치](1-days/23-days/README.md)
     * [Toad 서브쿼리, seq](1-days/23-days/toad.md)
+    * [자바 && 쿼리문](1-days/23-days/and-and.md)
 
