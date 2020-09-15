@@ -57,7 +57,10 @@ description: 2020.09.14 - 23일차
 
 {% page-ref page="toad.md" %}
 
+{% page-ref page="and-and.md" %}
 
+### 인스턴스화 & LifeCycle
 
-
+* 순제어 : 개발자 \|\| JVM이 LifeCycle을 해준다.
+* 역제어 : LifeCycle을 누가 대신 해준다.\(제어역전\)
 
