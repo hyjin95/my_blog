@@ -2,7 +2,7 @@
 description: 2020.09.15 - 24일차
 ---
 
-# 24 Days - 프로시저, 스칼라변수,
+# 24 Days - 프로시저, 스칼라변수,refCursor
 
 
 
