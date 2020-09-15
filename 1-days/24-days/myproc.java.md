@@ -1,5 +1,7 @@
 # MyProc.java 프로시저 테스트
 
+![](../../.gitbook/assets/5%20%287%29.png)
+
 ```java
 package oracle.db;
 
