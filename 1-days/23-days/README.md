@@ -18,6 +18,11 @@ description: 2020.09.14 - 23일차
 * oracle, RAM, 세션&쿠키
 * RAM - stack : 일시적 기억으로 값이 사라진다. - heap : Candidate직전까지는 유지된다. - Candidate : A a = null;
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+
 ## 필기
 
 ### oracle INSERT
