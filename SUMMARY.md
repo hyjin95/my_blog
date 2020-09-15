@@ -70,4 +70,5 @@
   * [23 Days - 서브쿼리, seq, 인스턴스화 위치](1-days/23-days/README.md)
     * [Toad 서브쿼리, seq](1-days/23-days/toad.md)
     * [자바 & 쿼리문](1-days/23-days/and-and.md)
+  * [24 Days -](1-days/24-days.md)
 
