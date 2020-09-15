@@ -1,6 +1,13 @@
 # MyProc.java 프로시저 테스트
 
+### oracle 참조
+
 ![](../../.gitbook/assets/5%20%287%29.png)
+
+* java 참조 클래스가 아닌 oracle 참조 클래스를 이용하려면, Build Path에 파일이 있어야만 사용가능하다.
+* 소스파일 우클릭 - BuildPath - Configure Build Path - Libraries
+
+## MyProc.java - 프로시저 테스트
 
 ```java
 package oracle.db;

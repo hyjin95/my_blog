@@ -2,7 +2,7 @@
 description: 2020.09.15 - 24일차
 ---
 
-# 24 Days - 프로시저, 스칼라변수,refCursor
+# 24 Days - 프로시저, 스칼라변수,refCursor, Vector, ArrayList
 
 ### 사용 프로그램
 
@@ -13,7 +13,7 @@ description: 2020.09.15 - 24일차
 
 ### DafaultTableModel method
 
-| method | 파라미 |
+| method | 파라미터 |
 | :---: | :---: |
 | addRow | Object\[ \] rowData |
 | addRow | Vector rowData |
