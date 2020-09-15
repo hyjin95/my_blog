@@ -11,7 +11,9 @@ description: 2020.09.15 - 24일차
 * 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 
-### Vector, addRow - 전체 데이터 갱신
+## 전체 데이터 갱신
+
+### Vector, addRow
 
 ```java
 	public void refreshData() {
@@ -45,7 +47,7 @@ description: 2020.09.15 - 24일차
 ```java
 	public List<BookVO> getBookList() {
 		StringBuilder sql = new StringBuilder();
-		List<BookVO> bList = new ArrayList<>();//List는 타입을 정해주어야 하기때문에 값이 여러 타입이라면 배열에 담아서 배열타입의 List에 담아야한다.
+		List<BookVO> bList = new ArrayList<>();
 		sql.append("SELECT b_no, b_name, author, b_info, publish FROM book2020");
 		try {
 			con = dbMgr.getConnection();
