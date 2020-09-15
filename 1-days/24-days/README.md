@@ -13,6 +13,15 @@ description: 2020.09.15 - 24일차
 
 ## 전체 데이터 갱신
 
+### DafaultTableModel method
+
+| method | 파라미 |
+| :---: | :---: |
+| addRow | Object\[ \] rowData |
+| addRow | Vector rowData |
+
+* List는 파라미터에 없다.
+
 ### Vector, addRow
 
 ```java
@@ -71,5 +80,30 @@ description: 2020.09.15 - 24일차
 		}
 		return bList;
 	}
+```
+
+### Object\[ \]
+
+```java
+public void reData() {
+      while(dtm_book.getRowCount()>0) {
+         dtm_book.removeRow(0);
+      }
+      List<BookVO> bList = beh.getBookList();
+      if(bList!=null && bList.size()>0) {
+         for(int i=0;i<bList.size();i++) {
+            //Vector oneRow = new Vector();
+            int x= 0;
+            Object[] oneRow = new Object[bList.size()];
+            BookVO bVO = bList.get(i);
+            oneRow[x]  = bVO.getB_no();
+            oneRow[x+1]= bVO.getName();
+            oneRow[x+2]= bVO.getAuthor();
+            oneRow[x+3]= bVO.getPublish();
+            oneRow[x+4]= bVO.getInfo();
+            dtm_book.addRow(oneRow);
+         }
+      }
+   }
 ```
 
