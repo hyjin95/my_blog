@@ -315,6 +315,3 @@ public class Test0805 {
 후기 : 모르는 것을 검색하는 것도 중요하다. 검색 키워드를 바로 알고 검색하도록 하자!  
 새로배운 예약어 : JOptionPane.showInputDialog\("String"\); : 입력창 띄우기Integer.parseInt\(변수이름\); : int로 형전환
 
-  
-
-
