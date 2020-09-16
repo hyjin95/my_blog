@@ -9,7 +9,7 @@ description: 2020.09.15 - 24일차
 * 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 
-## 전체 데이터 갱신
+## 자바 - 전체 데이터 갱신
 
 ### DafaultTableModel method
 
@@ -105,6 +105,35 @@ public void reData() {
    }
 ```
 
+## Toad & 자바
+
+### PL/SQL
+
+* Procedural Language
+* SQL을 확장한 절차적 언어로, 관계형 DB에서 PROCEDURE를 사용하는 언어이다. - SQL에서 사용할 수 없는 절차적 프로그래밍 기능을 갖는다.
+* **기본구조** **DECLARE\(선언부\)** : 변수, 상수, 커서 선언 **BEGIN\(실행부\)** : SQL을 절차적 형식으로 실행할 수 있는 절차적 언어인 제어문, 반복문, 함수 등의 로직 **EXCEPTION\(예외처리부\)**  **END;\(실행문 종료\) -** DECLARE절에서 변수 선언이 가능하고 BEGIN 실행문 안에서 초기화 할 수 있다.
+* 프로그램 종류 - **Procedure** : 리턴값을 n개 갖는 프로그램 - **Function**    : 리턴 값을 반드시 반환하는 프로그램 - **Trigger**       : 지정 이벤트 발생시 자동으로 실행되는 블록
+* 블록 단위로 실행된다, :  BEGIN 실행문 END;
+* 인자\(변수\)를 가질 수 있고, IF, LOOP제어문을 사용할 수 있으며, 예외처리가 가능하다.
+* 문장의 종료부분에 ;세미콜론을 사용해서 문장의 종료를 알려주어야한다.
+* 쿼리문 수행을 위해 / 입력이 있어야하며 블록 종결을 의미하기도한다.
+* SQL : DML, Query,  TCL 사용가능하다.
+
+### PROCEDURE
+
+* 동작을 일괄처리하는 기능을 한다.
+* 파라미터를 사용할 수 있고 속도가 빠르다.
+* 기본 구조 **CREATE OR REPLACE PROCEDURE 프로시저명\(생성\) IS 변수명 변수,타입 선언\(IN, OUT\) BEGIN 실행문; END;\(종료\)**
+* 파라미터의 IN은 사용자에게서 수집하는 값, OUT은 반환값이다.
+* 출력문 **variable 변수이름 타입 exec 프로시저명 \(:변수이름\) print 변수이름**
+* 출력문의 변수는 프로시저의 OUT 변수와 타입이 같아야만한다.
+
+### refCursor
+
+### 스칼라변수
+
+### 카테시안 곱
+
 {% page-ref page="cmd-and-toad.md" %}
 
 {% page-ref page="myproc.java.md" %}
@@ -112,4 +141,8 @@ public void reData() {
 
 
 후기 :  영화예매프로젝트가 완성되었다. 만족스러워!!
+
+{% page-ref page="../undefined-3.md" %}
+
+
 
