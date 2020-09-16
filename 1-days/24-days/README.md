@@ -2,7 +2,7 @@
 description: 2020.09.15 - 24일차
 ---
 
-# 24 Days - 프로시저, 스칼라변수,카테시안 곱,refCursor, Vector, ArrayList
+# 24 Days - PROCEDURE, 스칼라변수,카테시안 곱,refCursor, Vector, ArrayList
 
 ### 사용 프로그램
 

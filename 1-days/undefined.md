@@ -31,6 +31,8 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 
 ### Toad for Oracle
 
-* Describe : select + f4
-* 실행         : ctrl + enter
+* Describe : 테이블 + f4
+* 현재 커서가 가리키는 쿼리 실행 : ctrl + enter
+* 전체 쿼리를 순서대로 실행 : F5
+* 해당 커서가 가리키는 쿼리 or 블럭을 씌운 쿼리만 실행 : F9
 
