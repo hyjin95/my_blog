@@ -4,5 +4,3 @@
 
 ![](../../.gitbook/assets/2-2.png)
 
-![](../../.gitbook/assets/1-9.png)
-

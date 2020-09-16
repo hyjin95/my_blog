@@ -74,6 +74,8 @@ description: 2020.09.16 - 25일차
 
 ![](../../.gitbook/assets/1-4.png)
 
+![](../../.gitbook/assets/1-9.png)
+
 ![](../../.gitbook/assets/1-5.png)
 
 ![](../../.gitbook/assets/1-6.png)
