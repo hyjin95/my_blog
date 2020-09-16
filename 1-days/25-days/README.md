@@ -35,17 +35,17 @@ description: 2020.09.16 - 25일차
 
 ## 필기
 
-### DQL : 질의
+### DQL : 질의어
 
 | 문 | 기 |
 | :---: | :---: |
-| SELECT | 데이터 검색 및 조 |
+| SELECT | 데이터 검색 및 조회 |
 
-### DML : 조작
+### DML : 조작어
 
 | 문 | 기 |
 | :---: | :---: |
-| INSERT | 데이터 입 |
+| INSERT | 데이터 입력 |
 | UPDATE | 데이터 수정 |
 | DELETE | 데이터 삭제 |
 
@@ -54,10 +54,10 @@ description: 2020.09.16 - 25일차
 | 문 | 기능 |
 | :---: | :---: |
 | CREATE | DB객체 생성 |
-| ALTER | DB객체 변 |
-| DROP | DB객체 삭 |
-| RENAME | DB객체 이름 변 |
-| TRUNCATE | 데이터 및 저장공간 삭 |
+| ALTER | DB객체 변경 |
+| DROP | DB객체 삭제 |
+| RENAME | DB객체 이름 변경 |
+| TRUNCATE | 데이터 및 저장공간 삭제 |
 
 ### List & Table의 형태
 
