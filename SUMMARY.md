@@ -74,5 +74,5 @@
     * [PL/SQL - CMD & Toad](1-days/24-days/cmd-and-toad.md)
     * [MyProc.java 프로시저 테스트](1-days/24-days/myproc.java.md)
   * [25 Days - PL/SQL\(DECODE\), GROUP BY,](1-days/25-days/README.md)
-    * [Toad - Decode](1-days/25-days/toad-decode.md)
+    * [Toad - Decode, Sign, GROUP BY](1-days/25-days/toad-decode.md)
 
