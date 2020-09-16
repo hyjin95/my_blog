@@ -25,6 +25,10 @@
 * OUT되는 p\_rc를 refcursor로, exec\(실행\) 한다.
 * p\_rc를 출력
 
+![](../../.gitbook/assets/1111.png)
+
+* oracle에서 직접 호출 -&gt; 자바로 구현해야한다.
+
 ## Toad
 
 ### refcursor - 실행 및 출력
