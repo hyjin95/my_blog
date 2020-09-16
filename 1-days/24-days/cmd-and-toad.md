@@ -1,4 +1,4 @@
-# PL/SQL - CMD & Toad
+# PL/SQL - procedure &  refcursor
 
 ## CMD
 

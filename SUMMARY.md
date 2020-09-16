@@ -71,7 +71,7 @@
     * [Toad 서브쿼리, seq](1-days/23-days/toad.md)
     * [자바 & 쿼리문](1-days/23-days/and-and.md)
   * [24 Days - 프로시저, 스칼라변수,카테시안 곱,refCursor, Vector, ArrayList](1-days/24-days/README.md)
-    * [PL/SQL - CMD & Toad](1-days/24-days/cmd-and-toad.md)
+    * [PL/SQL - procedure &  refcursor](1-days/24-days/cmd-and-toad.md)
     * [MyProc.java 프로시저 테스트](1-days/24-days/myproc.java.md)
   * [25 Days - PL/SQL\(DECODE\), GROUP BY,](1-days/25-days/README.md)
     * [Toad - Decode, Sign, GROUP BY](1-days/25-days/toad-decode.md)
