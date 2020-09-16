@@ -9,7 +9,7 @@
 
 ## MyProc.java - 프로시저 테스트
 
-### 선언부
+### import
 
 ```java
 package oracle.db;
@@ -37,21 +37,33 @@ import oracle.jdbc.OracleTypes;
 * oracle.jdbc 참조 클래스는 Build Path 라이브러리에 해당 클래스가 있어야 참조될 수 있다.
 * java.sql.CallableStatement와 oracle.jdbc.OracleCallableStatement 둘다 import한 것은 서로 다른 메서드를 호출 하기 위함이다.
 
+### 선언부
+
 ```java
 public class MyProc {
 	//물리적으로 떨어져있는 오라클 서버와 연결통로를 확보할때 필요한 선언 - 인터페이스이다.
 	//왜냐하면 oracle제품, IP, PORT, SCOTT, TIGER, SID[orcl11] 을 결정할 수 없으므로
    Connection con = null;
+   
    //오라클에서 생성한 객체(프로시저)를 오라클 서버에 전달해준다. 
    //역할 - 인터페이스 : 프로시저가 각각 다르므로 결정할 수 없다.
    CallableStatement cstmt = null;
+   
    //자바에서 제공되는 커서는 오라클에서 제공되는 커서를 조작하는 것이므로 개선된 커서를 사용하기 위해 
    //마치 그래픽카드에 최신 드라이버를 설치하듯 새로운 인터페이스를 활용하는 것이다.
-   //callableStatement는 java.sql 인터페이스고 oracleCallableStatment는 orcle.jdbc 인터페이스이다.
-   
+   //callableStatement는 java.sql 인터페이스고 
+   //oracleCallableStatment는 orcle.jdbc 인터페이스이다.   
    OracleCallableStatement ocstmt = null;
-   DBConnectionMgr dbMgr = new DBConnectionMgr();//재사용성을 높이고 일괄처리가 가능해진다. -> 서버이전 대비
-   //커서를 활용할 경우 여러개의 로우를 받을 수 있으므로 List<DeptVO>를 선택했다.
+   
+   //재사용성을 높이고 일괄처리가 가능해진다. -> 서버이전 대비
+   DBConnectionMgr dbMgr = new DBConnectionMgr();
+```
+
+* 14번 : oracle에서 지정된 개선된 커서, refCursor를 사용하기 위해 선언된 인터페이스
+
+### PL/SQL 메서드
+
+```java
    public List<DeptVO> deptList(){
       List<DeptVO> dList = new ArrayList<>();
       try {
@@ -84,6 +96,11 @@ public class MyProc {
       }
       return dList;
    }
+```
+
+### Main 메서드
+
+```java
    public static void main(String[] args) {
       MyProc mp = new MyProc();
       List<DeptVO> dList = mp.deptList();
