@@ -17,7 +17,7 @@ public void set(String title, BookVO bVO, BookManager bm, boolean enable) {
 } 
 ```
 
-### 참조형 타입을 담아 실행되는 메서드
+### 참조형 타입을 파라미터로 담아 실행되는 메서드
 
 ```java
 //입력, 수정시에는 컬럼값을 수정 가능하도록 하고 상세조회시에는 불가능하게 셋팅하는 메서드 구현
