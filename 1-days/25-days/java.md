@@ -1,5 +1,7 @@
 # java 파라미터 활용
 
+### 파라미터\(String타입, VO타입, 클래스타입, 참조형타입\)
+
 ```java
 //부모 창에서 결정된 내용을 팝업창에서 사용하기 위한 메서드 선언하기
 //생성자가 아니라 메서드로 주소번지를 받는다.
@@ -14,6 +16,8 @@ public void set(String title, BookVO bVO, BookManager bm, boolean enable) {
 	this.setEditable(enable);
 } 
 ```
+
+### 참조형 타입을 담아 실행되는 메서드
 
 ```java
 //입력, 수정시에는 컬럼값을 수정 가능하도록 하고 상세조회시에는 불가능하게 셋팅하는 메서드 구현
