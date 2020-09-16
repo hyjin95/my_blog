@@ -118,6 +118,8 @@ description: 2020.09.16 - 25일차
 * -1 : 수식 결과가 음수이다. - 반환 결과 : 1, -1 , 1, -1, 0
 * Decode함수와 같이 사용하면 주식 현황판과 같이 전날과 같으면, 전날보다 올랐으면 등의 표시를 할 수 있다.
 
+{% page-ref page="toad-decode.md" %}
+
 ### Round 함수
 
 ![](../../.gitbook/assets/1-8.png)
@@ -139,7 +141,7 @@ description: 2020.09.16 - 25일차
 
 * 변수로 컬럼을 사용할 수 도 있다.
 
-{% page-ref page="toad-decode.md" %}
+{% page-ref page="toad-group-by.md" %}
 
 ## 필기 - java
 
