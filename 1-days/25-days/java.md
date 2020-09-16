@@ -22,11 +22,11 @@ public void set(String title, BookVO bVO, BookManager bm, boolean enable) {
 ```java
 //입력, 수정시에는 컬럼값을 수정 가능하도록 하고 상세조회시에는 불가능하게 셋팅하는 메서드 구현
 public void setEditable(boolean e) {
-	jtf_name.setEditable(e);
-	jtf_author.setEditable(e);
-	jtf_publish.setEditable(e);
-	jta_info.setEditable(e);
-	jtf_file.setEditable(e);
+	jtf_name.setEditable(e);//제목 입력창
+	jtf_author.setEditable(e);//작가 
+	jtf_publish.setEditable(e);//출판사 입력창
+	jta_info.setEditable(e);//정보 입력창
+	jtf_file.setEditable(e);//파일 
 }
 ```
 
