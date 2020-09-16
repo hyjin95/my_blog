@@ -21,7 +21,7 @@ description: 2020.08.22 ~ 2020.09.16
 
 ![](../.gitbook/assets/11.png)
 
-* DB 연동, NVL 중복검
+* DB 연동, NVL 중복검사
 
 ![](../.gitbook/assets/22.png)
 
@@ -43,7 +43,7 @@ description: 2020.08.22 ~ 2020.09.16
 
 ![](../.gitbook/assets/88.png)
 
-* DB연
+* DB연동
 
 ![](../.gitbook/assets/99.png)
 
@@ -61,5 +61,5 @@ description: 2020.08.22 ~ 2020.09.16
 
 ![](../.gitbook/assets/14.png)
 
-* DB연동, 중복검
+* DB연동, 중복검사
 
