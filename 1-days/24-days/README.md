@@ -20,7 +20,7 @@ description: 2020.09.15 - 24일차
 
 * List는 파라미터에 없다.
 
-### Vector, addRow
+### Vector, & addRow
 
 ```java
 	public void refreshData() {
@@ -80,7 +80,7 @@ description: 2020.09.15 - 24일차
 	}
 ```
 
-### Object\[ \]
+### Object\[ \] & addRow
 
 ```java
 public void reData() {
