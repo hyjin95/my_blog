@@ -73,4 +73,5 @@
   * [24 Days - 프로시저, 스칼라변수,refCursor, Vector, ArrayList](1-days/24-days/README.md)
     * [PL/SQL - CMD & Toad](1-days/24-days/cmd-and-toad.md)
     * [MyProc.java 프로시저 테스트](1-days/24-days/myproc.java.md)
+  * [25 Days -](1-days/25-days.md)
 
