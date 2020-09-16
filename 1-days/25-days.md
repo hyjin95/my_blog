@@ -2,5 +2,5 @@
 description: 2020.09.16 - 25일차
 ---
 
-# 25 Days -
+# 25 Days - PL/SQL\(DECODE\)
 
