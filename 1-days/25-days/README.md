@@ -20,3 +20,19 @@ description: 2020.09.16 - 25일차
 * List는 1차 배열로 로우를 담은 방이 오른쪽으로 늘어난다.
 * Table은 n차 배열로 로우가 밑으로 늘어난다.  - 합집합으로 SELECT한다.
 
+![](../../.gitbook/assets/1-2.png)
+
+![](../../.gitbook/assets/1-3.png)
+
+![](../../.gitbook/assets/3%20%288%29.png)
+
+![](../../.gitbook/assets/1-4.png)
+
+![](../../.gitbook/assets/1-5.png)
+
+![](../../.gitbook/assets/1-6.png)
+
+![](../../.gitbook/assets/1-7.png)
+
+![](../../.gitbook/assets/1-8.png)
+
