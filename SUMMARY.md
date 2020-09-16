@@ -76,4 +76,5 @@
   * [25 Days - PL/SQL\(DECODE\), GROUP BY,](1-days/25-days/README.md)
     * [Toad - Decode, Sign, GROUP BY](1-days/25-days/toad-decode.md)
     * [BookManagerEventHandler - procedure](1-days/25-days/bookmanagereventhandler-procedure.md)
+    * [java 파라미터 활용](1-days/25-days/java.md)
 
