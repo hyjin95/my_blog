@@ -145,11 +145,11 @@ description: 2020.09.16 - 25일차
 
 ## 필기 - java
 
-### SELECT 통로 & PROCEDURE 통로
+### SELECT  & PROCEDURE 전달자
 
 * SLECT문을 DB로 보내주는 통로 = PreparedStement PROCEDURE문을 DB로 보내주는 통로 = CallableStatement
 
-### PROCEDURE 통로
+### PROCEDURE 전달자
 
 * CallableStatemen : 자바 제공, PROCEDURE를 오라클 서버에 요청시 사용하는 인터페이스OracleCallableStatement : 오라클 제공 API, ojdbc6.jar가 라이브러리에 존재해야 한다.
 * 둘다 프로시저를 호출한다.
