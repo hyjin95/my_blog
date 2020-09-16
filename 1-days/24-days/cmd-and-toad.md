@@ -1,4 +1,4 @@
-# Toad&CMD - PL/SQL : procedure & refcursor
+# Toad&CMD - PL/SQL : procedure&refcursor
 
 ## CMD
 
@@ -11,6 +11,7 @@
 ![](../../.gitbook/assets/1%20%288%29.png)
 
 * OR REPLACE는 옵션으로 생략가능하다.
+* PROCEDUSER의 파라미터는 반드시 하나 이상을 갖고있어야한다.
 * proc\_dept인자를 프로시저로 생성한다.
 * refcusor인 p\_rc는 자바에서의 리턴값과 같은 역할이다.
 * IS : 선언부
