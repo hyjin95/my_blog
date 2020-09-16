@@ -108,7 +108,8 @@ public class MyProc {
          System.out.println(rdVO.getDeptno()+", "+rdVO.getDname()+", "+rdVO.getLoc());
       }
    }
-
 }
 ```
+
+* List를 for문으로 출력하기
 
