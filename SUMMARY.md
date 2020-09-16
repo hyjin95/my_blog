@@ -75,4 +75,5 @@
     * [MyProc.java 프로시저 테스트](1-days/24-days/myproc.java.md)
   * [25 Days - PL/SQL\(DECODE\), GROUP BY,](1-days/25-days/README.md)
     * [Toad - Decode, Sign, GROUP BY](1-days/25-days/toad-decode.md)
+    * [BookManagerEventHandler - procedure](1-days/25-days/bookmanagereventhandler-procedure.md)
 
