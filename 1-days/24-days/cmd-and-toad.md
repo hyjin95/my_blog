@@ -27,7 +27,7 @@
 
 ![](../../.gitbook/assets/1111.png)
 
-* oracle에서 직접 호출 -&gt; 자바로 구현해야한다.
+* oracle에서 직접 호출 성공 -&gt; 자바로 구현해야한다.
 
 ## Toad
 
