@@ -68,9 +68,11 @@ public class MyProc {
       List<DeptVO> dList = new ArrayList<>();
       try {
          con = dbMgr.getConnection();
+         
          //오라클 서버에 살고 있는 proc_dept객체를 자바 코드에서 호출하고 싶다면 
          //prepareCall메서드를 호출하세요.
          cstmt = con.prepareCall("{call proc_dept(?)}");
+         
          //오라클 프로시저에서는 파라미터와 리턴을 따로 사용하지 않고 
          //모두 파라미터 형태로 사용한다. - 자바에서도 가능하다.
          //원본의 주소번지를 파라미터로 넘겨서 그 파라미터 주소번지를 활용하여 
@@ -79,7 +81,8 @@ public class MyProc {
          //OUT[사용자가 입력한 조건값으로 조회한 결과를 화면으로 내보낼때]
          //, INOUT(멀티로 사용하므로 편리할것같지만 사용하지 않는다.)
          cstmt.registerOutParameter(1, OracleTypes.CURSOR);
-         //오라클서버에게 40번 프로시저 호출에 대한 처리를 요청하는 메서드 - execute
+         
+         //오라클서버에게 8번 프로시저 호출에 대한 처리를 요청하는 메서드 - execute
          cstmt.execute();
          ocstmt = (OracleCallableStatement)cstmt;
          ResultSet rs = ocstmt.getCursor(1);
@@ -97,6 +100,10 @@ public class MyProc {
       return dList;
    }
 ```
+
+* 8번 : 프로시저 호출 메서드
+* 오라클 프로시저는 리턴값도 파라미터에 넣는다.
+* 20번 : 8번 처리 메서드
 
 ### Main 메서드
 
