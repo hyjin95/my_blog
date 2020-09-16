@@ -35,6 +35,30 @@ description: 2020.09.16 - 25일차
 
 ## 필기
 
+### DQL : 질의
+
+| 문 | 기 |
+| :---: | :---: |
+| SELECT | 데이터 검색 및 조 |
+
+### DML : 조작
+
+| 문 | 기 |
+| :---: | :---: |
+| INSERT | 데이터 입 |
+| UPDATE | 데이터 수정 |
+| DELETE | 데이터 삭제 |
+
+### DDL : 정의어
+
+| 문 | 기능 |
+| :---: | :---: |
+| CREATE | DB객체 생성 |
+| ALTER | DB객체 변 |
+| DROP | DB객체 삭 |
+| RENAME | DB객체 이름 변 |
+| TRUNCATE | 데이터 및 저장공간 삭 |
+
 ### List & Table의 형태
 
 ![](../../.gitbook/assets/1-1%20%281%29.png)
