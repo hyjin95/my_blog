@@ -1,4 +1,4 @@
-# 도서관리 -
+# 도서관리 메뉴에 따른 화면 세팅 & SQL
 
 ## BookManagerEventHandler.java
 
