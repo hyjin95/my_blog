@@ -78,7 +78,7 @@
     * [Toad - GROUP BY, 변수=컬럼](1-days/25-days/toad-group-by.md)
     * [BookManagerEventHandler - procedure](1-days/25-days/bookmanagereventhandler-procedure.md)
     * [java 파라미터 활용](1-days/25-days/java.md)
-  * [26 Days -](1-days/26-days/README.md)
+  * [26 Days - DISTINCT, DUAL, NULL, ALIAS, NVL, TO\_CHAR, ORDER BY, LOOP](1-days/26-days/README.md)
     * [Toad - 문제풀이](1-days/26-days/toad.md)
   * [Untitled](1-days/untitled-1.md)
 
