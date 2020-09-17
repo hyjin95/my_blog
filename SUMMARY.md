@@ -80,5 +80,6 @@
     * [java 파라미터 활용](1-days/25-days/java.md)
   * [26 Days - DISTINCT, DUAL, NULL, ALIAS, NVL, TO\_CHAR, ORDER BY, LOOP](1-days/26-days/README.md)
     * [Toad - 문제풀이](1-days/26-days/toad.md)
+    * [DB 자원반납](1-days/26-days/db.md)
   * [Untitled](1-days/untitled-1.md)
 
