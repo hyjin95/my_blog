@@ -24,5 +24,21 @@
 
 ![](../../.gitbook/assets/2-6.png)
 
+### LOOP
+
+![](../../.gitbook/assets/6%20%284%29.png)
+
+### LOOP & PROCEDURE
+
+![](../../.gitbook/assets/6-2%20%281%29.png)
+
+### 실행
+
+![](../../.gitbook/assets/6-3.png)
+
+### 입력 값 이하의 수 중에서 짝수 값 총합
+
+![](../../.gitbook/assets/6-4.png)
+
 
 

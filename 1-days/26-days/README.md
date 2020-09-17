@@ -67,11 +67,11 @@ description: 2020.09.17 - 26일차
 
 ### LOOP
 
-![](../../.gitbook/assets/6%20%284%29.png)
+![](../../.gitbook/assets/6%20%285%29.png)
 
 ![](../../.gitbook/assets/6-2.png)
 
-![](../../.gitbook/assets/6-3.png)
+![](../../.gitbook/assets/6-3%20%281%29.png)
 
 {% page-ref page="toad.md" %}
 
