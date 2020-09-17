@@ -1,4 +1,4 @@
-# DB 자원반납
+# Java - DB 자원반납
 
 ### Connection 메서드
 
