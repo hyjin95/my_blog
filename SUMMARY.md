@@ -82,5 +82,6 @@
     * [Toad - 문제풀이](1-days/26-days/toad.md)
     * [Java - DB 자원반납](1-days/26-days/db.md)
     * [도서관리 메뉴에 따른 화면 세팅 & SQL](1-days/26-days/undefined.md)
+  * [27 Days - join](1-days/27-days-join.md)
   * [Untitled](1-days/untitled-1.md)
 

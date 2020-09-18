@@ -91,6 +91,9 @@ description: 2020.09.17 - 26일차
 
 ![](../../.gitbook/assets/5%20%288%29.png)
 
+* asc : 기본 오름차순, NULL값은 뒤로
+* desc : 내림차순, NULL값은 앞으로
+
 ### LOOP
 
 ![](../../.gitbook/assets/6%20%285%29.png)
