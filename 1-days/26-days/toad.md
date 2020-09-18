@@ -33,17 +33,28 @@
 
 ![](../../.gitbook/assets/2-4.png)
 
+* TEMP테이블에서 취미가 NULL인 사람은 모두 Hobby를 \|없음\|이라고 값을 치환하여 취미컬럼을 나타내시오
+* NVL\(치환시킬값, 치환할값\)
+* TEMP테이블에서 hobby가 NULL인 사원을 '등산'으로 치환하고 hobby가 등산인 사람의 이름을 나타내시오.
+* SELECT 이름, NVL\(취미를 등산으로 바꾸기\) FROM temp WHERE NVL\(취미를 등산으로 바꾸기\) = '등산'
+
 ### ALIAS
 
 ![](../../.gitbook/assets/2-5.png)
+
+* TEMP의 테이블에서 emp\_id와 emp\_name을 '사번', '성명'으로 나타내시오
 
 ### ORDER BY
 
 ![](../../.gitbook/assets/2-6.png)
 
-### LOOP 입력 값 이하의 수 중에서 짝수 값 총합
+* TEMP테이블을 직급명은 오름차순, 사번은 내림차순으로 나타내시오
+
+### LOOP
 
 ![](../../.gitbook/assets/6-4.png)
+
+* 파라미터 입력 값 이하의 수 중에서 짝수값을 더한 값을 나타내시오
 
 
 
