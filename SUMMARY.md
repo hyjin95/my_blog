@@ -83,5 +83,8 @@
     * [Java - DB 자원반납](1-days/26-days/db.md)
     * [도서관리 메뉴에 따른 화면 세팅 & SQL](1-days/26-days/undefined.md)
   * [27 Days - join, toad계정권한생성, DCL](1-days/27-days-join.md)
+  * [Toad -](1-days/toad.md)
+  * [Toad - DB관리 권한계정 생성](1-days/toad-db.md)
+  * [Toad - 숙제](1-days/toad-1.md)
   * [Untitled](1-days/untitled-1.md)
 
