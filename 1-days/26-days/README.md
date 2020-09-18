@@ -94,15 +94,42 @@ description: 2020.09.17 - 26일차
 * asc : 기본 오름차순, NULL값은 뒤로
 * desc : 내림차순, NULL값은 앞으로
 
-### LOOP
+### LOOP & MOD
 
 ![](../../.gitbook/assets/6%20%285%29.png)
 
+* LOOP : 반복문  **Loop 실행문 exit; END Loop;**
+* 실행문의 종료시점에 exit; 해야한다.
+* BASIC LOOP  : 조건식이 없는 반복작문 무한루프 할 수 있다. FOR LOOP      : COUNT를 사용하는 반복문 WHILE LOOP : 조건을 비교하는 반복문
+* MOD : 첫 파라미터를 두번째 값으로 나눈 값을 반환한다.
+* 프로시저로 저장하지 않으면 컴퓨터 종료시 사라진다.
+
 ![](../../.gitbook/assets/6-2.png)
 
+* 프로시저로 저장하면 재사용성이 좋아진다.
+* BEGIN 부분에서 n\_i를 입력되는 파라미터 p\_i로 초기화한다.
+
 ![](../../.gitbook/assets/6-3%20%281%29.png)
+
+* 실제로 값을 넣어 출력하기.
 
 {% page-ref page="toad.md" %}
 
 ## JAVA
+
+### DB자원반납 관리
+
+* DB연결할때 사용한 자원들은 반납해주어야한다.
+* Connection, PreparedStatement, ResultSet이 기본이다.
+
+{% page-ref page="db.md" %}
+
+### 인스턴스 연결과 메서드, 클래스 분리
+
+* 필요한 기능을 메서드, 클래스로 분리하기
+* 인스턴스 변수를 이용해 클래스-메서드 연결하기
+
+{% page-ref page="undefined.md" %}
+
+후기 : 세미프로젝트에서 DB를 맡았던 경험이 토대가 되어 수업을 따라가는데에 도움이 되었다.
 
