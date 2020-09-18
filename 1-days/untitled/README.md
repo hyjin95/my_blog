@@ -2,7 +2,7 @@
 description: 2020.08.25
 ---
 
-# 20 Days - pk, ak, fk, Server, Socket
+# 20 Days - pk, ak, fk, Server, Socket,ERD
 
 ### 복습
 

@@ -50,7 +50,7 @@
     * [StarCraft - 복습](1-days/19-days/starcraft.md)
     * [TimeServer.java - Socket](1-days/19-days/socket.md)
     * [TimeServer2.jav - Socket](1-days/19-days/timeserver2.jav-socket.md)
-  * [20 Days - pk, ak, fk, Server, Socket](1-days/untitled/README.md)
+  * [20 Days - pk, ak, fk, Server, Socket,ERD](1-days/untitled/README.md)
     * [ER-Win](1-days/untitled/er-win.md)
     * [Toad](1-days/untitled/toad.md)
     * [TimeServer](1-days/untitled/timeserver/README.md)
@@ -82,6 +82,6 @@
     * [Toad - 문제풀이](1-days/26-days/toad.md)
     * [Java - DB 자원반납](1-days/26-days/db.md)
     * [도서관리 메뉴에 따른 화면 세팅 & SQL](1-days/26-days/undefined.md)
-  * [27 Days - join](1-days/27-days-join.md)
+  * [27 Days - join, toad계정권한생성, DCL](1-days/27-days-join.md)
   * [Untitled](1-days/untitled-1.md)
 

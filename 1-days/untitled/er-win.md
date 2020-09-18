@@ -88,7 +88,8 @@ description: CA ERWin Data Modeler
 
 ![](../../.gitbook/assets/4%20%281%29.png)
 
-* 위 버튼을 누르고 부모집합 &gt; 자식집합 순으로 선택하면 자동으로 집합을 하나 생성해준다.
+* n : n관계선 클릭 - Many to Many Transform 버튼
+* 버튼을 누르고 부모집합 &gt; 자식집합 순으로 선택하면 자동으로 집합을 하나 생성해준다.
 
 ![](../../.gitbook/assets/3.png)
 
