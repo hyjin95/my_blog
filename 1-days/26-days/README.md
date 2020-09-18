@@ -4,6 +4,11 @@ description: 2020.09.17 - 26일차
 
 # 26 Days - DISTINCT, DUAL, NULL, ALIAS, NVL, TO\_CHAR, ORDER BY, LOOP
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+
 ## 복습
 
 ### JVM과 Oracle의 값 유지
@@ -31,11 +36,6 @@ description: 2020.09.17 - 26일차
 
 * 위치 :SELECT 실행문 FROM 테이블명
 * 실행문 : 산술연산자 + 컬럼 + 함수
-
-### 사용 프로그램
-
-* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
-* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 
 ## Toad
 
