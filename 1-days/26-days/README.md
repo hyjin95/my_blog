@@ -41,25 +41,51 @@ description: 2020.09.17 - 26일차
 
 ### DISTINCT
 
+* Oracle **중복제거** 예약어
+* 중복된 데이터를 한번씩만 출력한다.
+* SELECT distinct 컬럼명 FROM 테이블명
+
 ### Dual 테이블
 
 ![](../../.gitbook/assets/dual-sysdate.png)
 
-### NULL
+* CREATE 하지 않아도 자동으로 생성되는 테이블이다.
+* 결과를 한 행으로 출력해준다.
+
+### NULL & IS NOT NULL
 
 ![](../../.gitbook/assets/1%20%289%29.png)
+
+* 1번 : 결과 테이블이 모두 비어있다.
+* 2번 : 등산 만 출력된다.  -  hobby = NULL : 항상 false이다.
+* 3번 : 등산과 NULL 둘다 출력된다.
+* 4번 : 둘다 출력되지 않는다.  -  NOT IN 연산자에 NULL이 포함되면 어떤 경우에도 조회하지 못한다.
+* 5번 : 등산이 아닌 것이 출력되고, NULL이 아닌 것이 출력되므로 결과에는 등산 값도 포함되어 출력된다.\(합집합\)
 
 ### ALIAS
 
 ![](../../.gitbook/assets/2%20%288%29.png)
 
+* 컬럼명에 부여해주는 별칭이다. 
+* 변수에 수식이 사용될때 ALIAS명을 붙여주면 출력시 수식이 아닌 ALIAS명이 출력된다.
+* 띄어쓰기가 포함되는 경우에는 반드시 " " 를 붙여주어야 한다.
+
 ### NVL
 
 ![](../../.gitbook/assets/3%20%289%29.png)
 
-### TO\_CHAR
+* NULL을 0이나 지정된 값으로 변환해주는 함수
+
+### TO\_데이터타입
 
 ![](../../.gitbook/assets/4%20%289%29.png)
+
+* 형변환 함수
+* TO\_CHAR, TO\_NUMBER, TO\_DATE, ....
+
+![](../../.gitbook/assets/dual-sysdate.png)
+
+* 출력
 
 ### ORDER BY
 
