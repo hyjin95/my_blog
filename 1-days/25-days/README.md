@@ -107,8 +107,6 @@ description: 2020.09.16 - 25일차
 * 1과 1이 같으면 A, 다르면 B를 출력, 1과 2가 같으면 A출력, 다르면 B출력 - A B
 * 문자 1과 문자 1을 비교하는 sql - A
 
-![](../../.gitbook/assets/1-3.png)
-
 ### Sign 함수
 
 ![](../../.gitbook/assets/1-6.png)
@@ -140,6 +138,13 @@ description: 2020.09.16 - 25일차
 ![](../../.gitbook/assets/1-7.png)
 
 * 변수로 컬럼을 사용할 수 도 있다.
+
+### Describe화면 & 테이블수정
+
+![](../../.gitbook/assets/1-3.png)
+
+* Describe : 테이블명 + F4
+* 테이블 수정 : edit 테이블명
 
 {% page-ref page="toad-group-by.md" %}
 
