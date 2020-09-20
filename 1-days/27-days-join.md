@@ -2,7 +2,7 @@
 description: 2020.09.18 - 27일차
 ---
 
-# 27 Days - join, toad계정권한생성, DCL, 카디날리티, 옵티마이저모드, 힌트문, 무결성제약조건, rowid, group by, 실행계획
+# 27 Days - join, toad계정권한, DCL, Cadinality, Optimizer, hint, Explain Plan, 무결성제약조건, rowid, group by
 
 ### 사용 프로그램
 
@@ -127,6 +127,13 @@ description: 2020.09.18 - 27일차
 ![8](../.gitbook/assets/8%20%282%29.png)
 
 * 생산관리 시스템이나 영업관리 시스템같이 집계를 하거나 통계를 내는 곳에서 자주 사용한다. - 소계, 총계, 분기별 총계, 반기별 합계 등
+
+### DCL\(데이터 제어어\)
+
+* GRANT : DB객체에 대한 접근 권한부여
+* REVOKE  : 접근 권한 취소
+
+{% page-ref page="toad-db.md" %}
 
 ## JAVA
 

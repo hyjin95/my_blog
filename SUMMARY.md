@@ -82,7 +82,7 @@
     * [Toad - 문제풀이](1-days/26-days/toad.md)
     * [Java - DB 자원반납](1-days/26-days/db.md)
     * [도서관리 메뉴에 따른 화면 세팅 & SQL](1-days/26-days/undefined.md)
-  * [27 Days - join, toad계정권한생성, DCL, 카디날리티, 옵티마이저모드, 힌트문, 무결성제약조건, rowid, group by, 실행계획](1-days/27-days-join.md)
+  * [27 Days - join, toad계정권한, DCL, Cadinality, Optimizer, hint, Explain Plan, 무결성제약조건, rowid, group by](1-days/27-days-join.md)
   * [Toad - DB관리 권한계정 생성](1-days/toad-db.md)
   * [java - 상세보기SQL](1-days/toad.md)
   * [Toad - 숙제](1-days/toad-1.md)
