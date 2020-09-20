@@ -85,6 +85,6 @@
   * [27 Days - join, toad계정권한, DCL, Cadinality, Optimizer, hint, Explain Plan, 무결성제약조건, rowid, group by](1-days/27-days-join.md)
   * [Toad - DB관리 권한계정 생성](1-days/toad-db.md)
   * [java - 상세보기SQL](1-days/toad.md)
-  * [Toad - 숙제](1-days/toad-1.md)
+  * [Toad - LetItBe숙제](1-days/toad-1.md)
   * [Untitled](1-days/untitled-1.md)
 
