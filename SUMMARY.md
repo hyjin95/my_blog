@@ -73,7 +73,7 @@
   * [24 Days - PROCEDURE, 스칼라변수,카테시안 곱,refCursor, Vector, ArrayList](1-days/24-days/README.md)
     * [Toad&CMD - PL/SQL : procedure&refcursor](1-days/24-days/cmd-and-toad.md)
     * [MyProc.java 프로시저 테스트](1-days/24-days/myproc.java.md)
-  * [25 Days - SQL정의 & PL/SQL\(DECODE\) & GROUP BY](1-days/25-days/README.md)
+  * [25 Days - SQL정의 & PL/SQL\(DECODE\) & GROUP BY, refCursor](1-days/25-days/README.md)
     * [Toad - Decode, Sign](1-days/25-days/toad-decode.md)
     * [Toad - GROUP BY, 변수=컬럼](1-days/25-days/toad-group-by.md)
     * [BookManagerEventHandler - procedure](1-days/25-days/bookmanagereventhandler-procedure.md)

@@ -2,7 +2,7 @@
 description: 2020.09.16 - 25일차
 ---
 
-# 25 Days - SQL정의 & PL/SQL\(DECODE\) & GROUP BY
+# 25 Days - SQL정의 & PL/SQL\(DECODE\) & GROUP BY, refCursor
 
 ## 복습
 
@@ -178,11 +178,10 @@ description: 2020.09.16 - 25일차
 
 ### refCursor
 
-* oracle의 반환값을 변수에 담을 때
+* oracle의 반환값을 변수에 담을 때 row가 n개라면 sys-refCursor가 필요하다.
 * 위-변조를 방지하는 보안을 위해 변수는 private로 선언한다.
 * 이때 동시접속이 일어날 수 있는 상황이라면
 * setter, getter 메서드를 이용해서 받아와야한다. - 하나 가져오고 기다리던 다음 접속을 담는다.
-* row가 n개라면 sys-refCursor가 필요하다.
 
 {% page-ref page="java.md" %}
 
