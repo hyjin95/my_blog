@@ -15,5 +15,9 @@ description: 2020.09.21 - 28일차
 
 ### 
 
+{% page-ref page="toad-t\_giftpoint-t\_giftmem.md" %}
+
+
+
 ## Java
 
