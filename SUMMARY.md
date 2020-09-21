@@ -89,5 +89,6 @@
   * [28 Days - equi&outer join, vue](1-days/28-days/README.md)
     * [Toad - t\_giftpoint, t\_giftmem 숙제풀이](1-days/28-days/toad-t_giftpoint-t_giftmem.md)
     * [Toad - t\_worktime 풀이](1-days/28-days/toad-t_worktime.md)
+    * [java - Update, Delete](1-days/28-days/java-update-delete.md)
   * [Untitled](1-days/untitled-1.md)
 
