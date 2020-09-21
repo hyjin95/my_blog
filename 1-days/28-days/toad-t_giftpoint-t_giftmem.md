@@ -1,4 +1,4 @@
-# Toad - t\_giftpoint, t\_giftmem 숙제
+# Toad - t\_giftpoint, t\_giftmem 숙제풀이
 
 ### 문제1
 
