@@ -1,5 +1,7 @@
 # java - 상세보기SQL
 
+### getBookDetail - SQL메서드
+
 ```java
 public BookVO getBookDetail(int b_no) {
 		StringBuilder sql = new StringBuilder();
@@ -30,6 +32,8 @@ public BookVO getBookDetail(int b_no) {
 		return bVO;
 	}
 ```
+
+### 상세보기 - actionPerformed
 
 ```java
 else if("상세보기".equals(label)) {
