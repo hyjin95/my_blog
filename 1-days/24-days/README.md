@@ -133,7 +133,7 @@ public void reData() {
 
 ### 카테시안 곱
 
-![&#xCE74;&#xD14C;&#xC2DC;&#xC548; &#xACF1; &#xC608;&#xC2DC;](../../.gitbook/assets/1%20%2811%29.png)
+![&#xCE74;&#xD14C;&#xC2DC;&#xC548; &#xACF1; &#xC608;&#xC2DC;](../../.gitbook/assets/1%20%2812%29.png)
 
 * 양 쪽 테이블의 모든 행을 서로 연결한다.
 * 모든 경우의 수를 보여준다.  - 묻지마 조인 - 조건이 없다

@@ -86,6 +86,7 @@
     * [Toad - DB관리 권한계정 생성](1-days/27-days-join/toad-db.md)
     * [java - 상세보기SQL](1-days/27-days-join/toad.md)
     * [Toad - LetItBe숙제](1-days/27-days-join/toad-1.md)
-  * [28 Days -](1-days/28-days.md)
+  * [28 Days - equi&outer join, vue](1-days/28-days/README.md)
+    * [Toad - t\_giftpoint, t\_giftmem 숙제](1-days/28-days/toad-t_giftpoint-t_giftmem.md)
   * [Untitled](1-days/untitled-1.md)
 
