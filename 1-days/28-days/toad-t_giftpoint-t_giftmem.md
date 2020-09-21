@@ -6,9 +6,17 @@
 
 ![&#xBB38;&#xC81C; &#xC774;&#xD574; &#xBC0F; &#xC815;&#xB9AC;](../../.gitbook/assets/.png%20%283%29.png)
 
+* 집합이름 : t\_giftpoint, t\_giftmem
+* 상품포인트\[point\_nu\]를 주지 않는다. - 간접조건 -&gt; 서브쿼리를 사용해야한다.
+* 영화 티켓을 받을 수 있는 집합 : 상품집합 = t\_giftpoint
+* 사람의 명단과\(+, add\) 보유 포인트 : t\_giftmem
+* 잔여포인트 : 회원포인트 - 상품포인트
+
 ![JOIN](../../.gitbook/assets/1%20%2811%29.png)
 
 ![&#xC778;&#xB77C;&#xC778; &#xBDF0;](../../.gitbook/assets/1+.png)
+
+* 영화 티켓을 받을 수 있는 집합 : 상품집합 = t\_giftpoint
 
 ### 문제 1-2
 

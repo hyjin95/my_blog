@@ -2,7 +2,7 @@
 description: 2020.09.21 - 28일차
 ---
 
-# 28 Days - equi&outer join, vue, 인라인뷰
+# 28 Days - equi&outer join, vue, 인라인뷰, 도서관리 마무리
 
 ### 사용 프로그램
 
@@ -31,11 +31,44 @@ description: 2020.09.21 - 28일차
 
 * 크거나 같다. 또는 범위를 정할 때 사용하는 JOIN이다.
 
-### 
+### 뷰\(VUE\)
+
+* n개 테이블\(join 등\)이나 다른 뷰를 이용해 생성되는 가상테이블이다.
+* 이 테이블은 실질적으로 데이터를 디스크에 저장하지는 않고, 뷰가 정의된 쿼리문만 정의된다.
+
+### 인라인뷰
+
+* 여러개의 조건 중 하나만 비교하거나 할때 사용하면 집합 원소의 갯수를 줄일 수 있다.
+* SELECT 문이 FROM절 안에서 사용되면 인라인뷰라고 한다. - 이 때에는 SELECT한 컬럼이나 ALIAS명을 밖에서 사용할 수 있다. - FROM절은 집합이므로
+
+### 서브쿼리
+
+* 직접조건 대신 간접조건이 주어질때 사용한다.
+* WHERE절 안에 SELECT문이 사용되면 서브쿼리라고한다. - 이때에는 SELECT한 컬럼이나 ALIAS명을 밖에서 사용할 수 없다. - WHERE절은 조건이므로
 
 {% page-ref page="toad-t\_giftpoint-t\_giftmem.md" %}
 
-
+{% page-ref page="toad-t\_worktime.md" %}
 
 ## Java
+
+### 도서관리를 통한 학습목표
+
+1. 인스턴스화를 분리하고, 선언과 생성의 위치를 정할 수 있다.
+2. 생성자를 선택할 수 있다.
+3. 클래스나 DB의 연결되는 부분\(인터페이스\)을 처리할 수 있다. - 객체주입, 클래스 쪼개기
+
+### UPDATE문
+
+* UPDATE 테이블명 SET 컬럼 = 변경할값, ... WHERE 조건;
+
+### DELETE문
+
+* DELETE FROM 테이블명 WHERE 조건;
+
+{% page-ref page="java-update-delete.md" %}
+
+
+
+후기 : 
 
