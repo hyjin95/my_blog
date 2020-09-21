@@ -1,5 +1,7 @@
 # java - Update, Delete
 
+## Update
+
 ### 수정 - actionPerformed
 
 ```java
@@ -87,5 +89,60 @@ else if(obj == jbtn_save) {
 					  bm.refreshData();
 				  }
 			  }
+```
+
+## Delete
+
+### 삭제 - actionPerformed
+
+```java
+public void actionPerformed(ActionEvent e) {		
+		String label = e.getActionCommand();//입력 or수정 or상세보기가 들어옴
+		
+		else if("삭제".equals(label)) {
+			JOptionPane.showMessageDialog(bm, "삭제하시겠습니까?");
+			int status = 0;//삭제 유무를 담을 값
+			int indexs[] = bm.jtb.getSelectedRows();//선택 값을 int배열에 담는다.
+			//하나도 선택하지 않는다면
+			if(indexs.length == 0) {
+				JOptionPane.showMessageDialog(bm, "수정할 목록을 선택하세요.");
+				return;//0이면 if문 종료
+			}				
+			else {
+				//테이블에서 선택된 row의 b_no에 대해 삭제 요청을 한다.
+				//배열이므로 for문 사용
+				for(int i=0;i<bm.dtm.getRowCount();i++) {//row의 갯수만큼
+					if(bm.jtb.isRowSelected(i)) {//Jtable에서 선택된 row
+						//선택된 row의 번호 가져오기
+						Integer b_no = (Integer)bm.dtm.getValueAt(i, 0);
+						status = bookDelete(b_no);//초기값은 0이지만 1개 선택을 했다면 값을 갖는다.
+						bm.refreshData();
+					}
+				}
+			}//end of else
+		}//end of else
+```
+
+### Delete SQL
+
+```java
+public int bookDelete(int b_no) {
+		int result = 0;
+		StringBuilder sql = new StringBuilder();
+		sql.append("DELETE FROM book2020 WHERE b_no=?");
+		BookVO bVO = null;//NullPointerException이 발생할 수 있다.
+		try {
+			con = dbMgr.getConnection();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1,  b_no);
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException se) {//이 그물에 걸리는 에외는 모두 toad에서 잡히는 에러이다.
+			System.out.println("[[query]]"+sql.toString());
+		} catch (Exception e) {//그 외 나머지가 잡힌다.
+			e.printStackTrace();//stack영역에 쌓여있는 에러 메세지의 이력을 라인번호와 함께 출력
+		}
+		return result;
+	}
 ```
 
