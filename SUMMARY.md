@@ -88,5 +88,6 @@
     * [Toad - LetItBe숙제풀이](1-days/27-days-join/toad-1.md)
   * [28 Days - equi&outer join, vue](1-days/28-days/README.md)
     * [Toad - t\_giftpoint, t\_giftmem 숙제풀이](1-days/28-days/toad-t_giftpoint-t_giftmem.md)
+    * [Toad - t\_worktime 풀이](1-days/28-days/toad-t_worktime.md)
   * [Untitled](1-days/untitled-1.md)
 
