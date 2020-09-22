@@ -6,3 +6,15 @@
 
 ## 풀이
 
+![&#xC870;&#xAC74; 1](../../.gitbook/assets/time1.png)
+
+![&#xC870;&#xAC74; 2](../../.gitbook/assets/time1-2.png)
+
+![&#xC870;&#xAC74; 1 + &#xC870;&#xAC74; 2](../../.gitbook/assets/time1-3.png)
+
+## 번외
+
+![\(+\), outer join](../../.gitbook/assets/time-.png)
+
+![outer join + count](../../.gitbook/assets/time-1-1.png)
+

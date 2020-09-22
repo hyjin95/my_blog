@@ -24,6 +24,7 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 * get set        : 변수 드래그 -&gt; 우클릭 -&gt; Source -&gt; Generate Getter and Setter -&gt; select all -&gt; last member 
 * 소문자로    : ctlr + shift + y
 * 대문자로    : ctlr + shift + x
+* 글씨 키우기: ctlr + shift + +
 
 ### 깃북
 
