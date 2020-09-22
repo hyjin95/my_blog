@@ -90,7 +90,7 @@
     * [Toad - t\_giftpoint, t\_giftmem 숙제풀이](1-days/28-days/toad-t_giftpoint-t_giftmem.md)
     * [Toad - t\_worktime 숙제](1-days/28-days/toad-t_worktime.md)
     * [java - Update, Delete](1-days/28-days/java-update-delete.md)
-  * [29 Days -](1-days/29-days/README.md)
+  * [29 Days - WHERE-having,in,exists/ceil,](1-days/29-days/README.md)
     * [Toad - test02 숙제](1-days/29-days/toad-test02.md)
     * [Toad - test 11 풀이](1-days/29-days/toad-test-11.md)
   * [Untitled](1-days/untitled-1.md)
