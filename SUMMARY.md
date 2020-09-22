@@ -88,7 +88,8 @@
     * [Toad - LetItBe숙제풀이](1-days/27-days-join/toad-1.md)
   * [28 Days - equi&outer join, vue, 인라인뷰, 도서관리 마무리](1-days/28-days/README.md)
     * [Toad - t\_giftpoint, t\_giftmem 숙제풀이](1-days/28-days/toad-t_giftpoint-t_giftmem.md)
-    * [Toad - t\_worktime 풀이](1-days/28-days/toad-t_worktime.md)
+    * [Toad - t\_worktime 숙제](1-days/28-days/toad-t_worktime.md)
     * [java - Update, Delete](1-days/28-days/java-update-delete.md)
+  * [29 Days -](1-days/29-days.md)
   * [Untitled](1-days/untitled-1.md)
 

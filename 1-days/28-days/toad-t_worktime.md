@@ -1,4 +1,4 @@
-# Toad - t\_worktime 풀이
+# Toad - t\_worktime 숙제
 
 ## 문제
 

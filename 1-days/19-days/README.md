@@ -4,6 +4,11 @@ description: 2020.08.26 - 19일차
 
 # 19 Days - 추상클래스, 인터페이스, Thread, Socket
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+
 ## 복습
 
 * 참고 : StarCraft.java
@@ -25,6 +30,8 @@ description: 2020.08.26 - 19일차
 * implements I - 인터페이스를 implements하면 나는 구현체 클래스가 된다.
 * 인터페이스 : 행위는 특정개체에 종속적이면 안되는 것과 같이 추상적이여야한다. - Movable을 인터페이스로 한 이유는 Tank는 Marine과 다르게 움직이기 때문이다. - 유닛 추가, 수정이 가능하다.
 
+{% page-ref page="starcraft.md" %}
+
 ## 필기
 
 ### 콜백메서드 & 추상메서드
@@ -42,11 +49,6 @@ description: 2020.08.26 - 19일차
 * initDisplay와 Server중 먼저 실행되어야 하는것은 무엇인가?
 * Server는 요청이 있을때까지 대기한다. -&gt; 화면먼저
 * 화면이 있어야 요청이 있을 수 있다.
-
-### 사용 프로그램
-
-* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
-* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 
 ## 스레드\(Thread\) 클래스
 
