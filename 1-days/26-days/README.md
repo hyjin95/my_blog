@@ -94,6 +94,7 @@ description: 2020.09.17 - 26일차
 
 * asc : 기본 오름차순, NULL값은 뒤로
 * desc : 내림차순, NULL값은 앞으로
+* 문장의 마지막에 작성한다.
 
 ### LOOP & MOD
 
