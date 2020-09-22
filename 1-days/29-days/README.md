@@ -42,5 +42,11 @@ description: 2020.09.22 - 29일차
 * 단순 검색 및 추가 작업에 최적화된 키 값 저장 기법을 사용하며, 응답속도와 처리 효율에 있어 성능이 뛰어나다.
 * 분석함수와, 테이블간의 join을 지원하지 않는다.
 
+![1](../../.gitbook/assets/1%20%2813%29.png)
+
+![having](../../.gitbook/assets/having.png)
+
+![exists](../../.gitbook/assets/exists.png)
+
 ## JAVA
 
