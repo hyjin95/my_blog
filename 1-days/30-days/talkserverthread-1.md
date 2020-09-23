@@ -1,5 +1,7 @@
 # TalkServer
 
+### 선언부
+
 ```java
 package net.tomato_step1;
 
