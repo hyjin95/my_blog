@@ -3,6 +3,7 @@
 ### TalkServerTest - Thread가 없는 경우
 
 ```java
+public class TalkServerTest extends JFrame {
 public void init() {//서버소켓과 클라이언트 소켓을 연결한다.
 		boolean isStop = false;
 		try {
@@ -27,11 +28,17 @@ public void init() {//서버소켓과 클라이언트 소켓을 연결한다.
 		tst.init();
 		tst.initDisplay();//run메서드 이전에 호출되어야 한다.
 	}
+}
 ```
+
+* Thread를 상속받지 않는 클래스로, Thread가 main하나 뿐이다.
+* main에서 init메서드가 호출되고, init은 client접속 시까지 대기하기 때문에 화면메서드가 호출될 일이 없을 수 있다.
+* client가 접속했더라도 init메서드안의 while문 때문에 머물러지는 경우에는 화면메서드를 볼 수 없게 된다.
 
 ### TalkServer - Thread가 있는 경우
 
 ```java
+public class TalkServer extends JFrame implements Runnable {
 @Override
 	public void run() {//서버소켓과 클라이언트 소켓을 연결한다.
 		boolean isStop = false;
@@ -59,5 +66,7 @@ public void init() {//서버소켓과 클라이언트 소켓을 연결한다.
 		ts.initDisplay();//run메서드 이전에 호출되어야 한다.
 		th.start();//run메서드 호출 
 	}
+}
 ```
 
+* 
