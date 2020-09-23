@@ -113,6 +113,8 @@ public void reData() {
    }
 ```
 
+* Object타입 배열을 이용해 dtm에 addRow
+
 ## Toad & 자바
 
 ### PL/SQL
