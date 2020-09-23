@@ -39,7 +39,7 @@ public class TalkServer extends JFrame implements Runnable {
 			System.out.println("Server Ready ....\n");
 			while(!isStop) {
 				//서버에 접속해온 클라이언트 소켓에 대한 정보 받아내기
-				//36번에서 대기상태에 빠지므로 
+				//13번에서 대기상태에 빠지므로 
 				//run메서드를 먼저 호출할 경우 화면을 볼 기회가 아예 없을 수 있다.
 				client = server.accept();//소켓3
 				jta_log.append("접속해온 사람의 정보 : "+client);
@@ -53,6 +53,8 @@ public class TalkServer extends JFrame implements Runnable {
 		}//end of try		
 	}///////////////////////////////end of run()////////////////////////
 ```
+
+{% page-ref page="untitled-3.md" %}
 
 ### Main
 
