@@ -41,3 +41,15 @@ description: 2020.09.22 - 30일차
 * dead lock : 교착상태가 일어나 계속 기다리게되는 것 - wait메서드 사용시 발생하지 않도록 주의해야한다.
 * synchronzation : 동기화
 
+## TalkServer&TalkClient
+
+### Server기동 순서
+
+1. ServerSocket 생성  - TalkSever클래스
+2. Client 입장 - TalkClient클래스 - Client가 입장하려면 서버의 ip, port번호가 필요하다.
+3. Socket생성 - TalkServer클래스 - Socket이 null이 아니게되는 시점 - Client가 입장하는 순간 주소번지를 갖는다.
+
+### 접속순서\(Socket의 갯수\)
+
+* 서버가 서버 port번호를 파라미터로 하는 ServerSocket을 생성한다. --소켓1
+
