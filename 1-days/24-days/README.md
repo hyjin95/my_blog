@@ -24,8 +24,8 @@ description: 2020.09.15 - 24일차
 
 ```java
 	public void refreshData() {
-		//조회나 혹은 입력 후에 해당 메서드가 연속해서 호출될 수 있으므로 기존에 처리된 결과 화면을 초기화 해야한다.
-		//이미 테이블에 보여지는 테이터가 있는 경우 모두 삭제한다.
+		//조회나 혹은 입력 후에 해당 메서드가 연속해서 호출될 수 있으므로 
+		//기존에 처리된 결과 화면을 초기화 해야한다.
 		while(dtm.getRowCount()>0) {//초기화
 			//이런 부분들이 html, 안드로이드 web, app에서 활용된다.
 			dtm.removeRow(0);
@@ -34,7 +34,8 @@ description: 2020.09.15 - 24일차
 		List<BookVO> bList = handler.getBookList();
 		if(bList!=null && bList.size() >0) {
 			for(int i=0;i<bList.size();i++) {//dtm에 row순서대로 add하기
-				Vector oneRow = new Vector();//벡터는 타입을 가리지 않기때문에 바로 값을 받을 수 있다.
+				Vector oneRow = new Vector();
+				//벡터는 타입을 가리지 않기때문에 바로 값을 받을 수 있다.
 				BookVO bVO = bList.get(i);
 				oneRow.add(0, bVO.getno());
 				oneRow.add(1, bVO.getname());
@@ -43,11 +44,17 @@ description: 2020.09.15 - 24일차
 				dtm.addRow(oneRow);
 			}
 		}else {
-			JOptionPane.showMessageDialog(this, "데이터가 없습니다.","Warning", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, "데이터가 없습니다."
+			                 ,"Warning", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 	}
 ```
+
+* vector와 addrow를 이용한 페이지 새로고침 메서드 - 상세보기는 필요없지만 수정, 입력 후에는 메인 페이지가 새로고침 되어야한다. - 테이블에 띄워져있던 데이터는 모두 삭제한다.
+* 4-7번 : dtm에 로우가 있는 동안 삭제
+* 9번 : BookVO타입 List에 eventHandler에서 DB에서 데이터를 가져오는  메서드를 호출한다.
+* 10-20번 : 리스트에 값이 담겨있으면 Vector에 값을 순서대로 add해서 dtm에 addRow한다.
 
 ### ArrayList
 
@@ -69,9 +76,8 @@ description: 2020.09.15 - 24일차
 				bVO.setinfo(rs.getString("b_info"));
 				bVO.setPublish(rs.getString("publish"));
 				bList.add(bVO);
-			}
-			
-		} catch (SQLException se) {//이 그물에 걸리는 에외는 모두 toad에서 잡히는 에러이다.
+			}			
+		} catch (SQLException se) {//이 그물에 걸리는 예외는 모두 toad에서 잡히는 에러이다.
 			System.out.println("[[query]]"+sql.toString());
 		} catch (Exception e) {//그 외 나머지가 잡힌다.
 			e.printStackTrace();//stack영역에 쌓여있는 에러 메세지의 이력을 라인번호와 함께 출력
@@ -79,6 +85,8 @@ description: 2020.09.15 - 24일차
 		return bList;
 	}
 ```
+
+* ArrayList를 이용해 DB데이터를 받아오는 메서드
 
 ### Object\[ \] & addRow
 

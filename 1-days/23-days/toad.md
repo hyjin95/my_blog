@@ -22,7 +22,7 @@
 
 ## 쿼리문
 
-### nextval & currval
+### seq - nextval & currval
 
 ![](../../.gitbook/assets/2%20%286%29.png)
 
@@ -30,7 +30,7 @@
 * 안전하다.
 * 특히, 동시 접속자가 있는 경우에는 더욱 그렇다.
 
-### 서브쿼리
+### WHERE - 서브쿼리
 
 ![](../../.gitbook/assets/3%20%286%29.png)
 
