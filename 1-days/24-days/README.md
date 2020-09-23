@@ -113,7 +113,7 @@ public void reData() {
    }
 ```
 
-* Object타입 배열을 이용해 dtm에 addRow
+* Object타입 배열을 이용해 dtm에 addRow하는 메서드
 
 ## Toad & 자바
 
