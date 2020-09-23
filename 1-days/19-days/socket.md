@@ -30,7 +30,7 @@ public class TimeServer extends Thread {
 		//서버는 동시에 여러사람을 관리해야한다.
 		//순서를 놓치거나 어떤 사람을 배제시켜서 서비스를 제공받지 못하게 되면 안된다.
 		//ServerSoket을 그래서 준다.
-		//어느 한 사람도 놏피지 않고 접수를 받기 위해서 접수만 전담하는 소켓을 선언.
+		//어느 한 사람도 놓지 않고 접수를 받기 위해서 접수만 전담하는 소켓을 선언.
 		ServerSocket server = null;//java.net 사용
 		//클라이언트가 인스턴스화를 하면 = new Socket(192.168.0.244,8000) - ip, port
 		//서버소켓에 클라이언트의 소켓의 정보를 듣게 된다. ->없을수도잇다 -> 예외처리
@@ -89,7 +89,6 @@ public class TimeClient implements Runnable {
 		th.start();//콜벡메서드 호출하기
 	
 	}
-
 }
 ```
 
