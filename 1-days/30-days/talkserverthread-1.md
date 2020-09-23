@@ -18,13 +18,19 @@ public class TalkServer extends JFrame implements Runnable {
 	JTextArea   jta_log = new JTextArea(10,30);//log출력용 TextArea와 세트 Scroll
 	JScrollPane jsp_log = new JScrollPane(jta_log, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
 												 , JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-	//사용자가 접속할 수 있도록 서버를 먼저 기동시킨다.
-	ServerSocket server = null;//서버소켓 선언, 생성은 run메서드에서 한다. 소켓1
-	//접속한 클라이언트 소켓정보를 담을 소켓을 선언한다.
+	//사용자가 접속할 수 있도록 서버를 먼저 기동
+	ServerSocket server = null;
+	//접속한 클라이언트 소켓정보를 담을 소켓을 선언
 	Socket client = null;//소켓3
 	//List는 정해지지 않았으므로 인터페이스이다.
-	List<TalkServerThread> globalList = null;//멀티스레드를 관리하는 TalkServerThread에 client에게서 들은 것을 넘긴다.
+	List<TalkServerThread> globalList = null;
 ```
+
+* Server의 로그를 확인 할 수 있도록 JFrame을 상속받는다.
+* run메서드 활용을 위해 Runnable인터페이스를 implements한다.
+* 제일 먼저 ServerSocket생성, 선언은 run메서드에서 한다. --1번소켓
+* 그 다음 클라이언트 소켓 정보를 담을 소켓을 선언한다. --3번 소켓
+* Vector사용을 위해 List를 TalkServerThread타입으로 선언한다. - 멀티스레드 관리자인 tst타입으로 하는 이유는 List에 모든 접속자들을 담아야 하기 때문이다.
 
 ### Run\( \) Override
 
@@ -39,8 +45,7 @@ public class TalkServer extends JFrame implements Runnable {
 			System.out.println("Server Ready ....\n");
 			while(!isStop) {
 				//서버에 접속해온 클라이언트 소켓에 대한 정보 받아내기
-				//13번에서 대기상태에 빠지므로 
-				//run메서드를 먼저 호출할 경우 화면을 볼 기회가 아예 없을 수 있다.
+				//대기상태 이므로 run메서드를 먼저 호출할 경우 화면을 볼 기회가 없을 수 있다.
 				client = server.accept();//소켓3
 				jta_log.append("접속해온 사람의 정보 : "+client);
 				System.out.println("접속해온 사람의 정보 : "+client);				
@@ -54,18 +59,32 @@ public class TalkServer extends JFrame implements Runnable {
 	}///////////////////////////////end of run()////////////////////////
 ```
 
-{% page-ref page="untitled-3.md" %}
+* 접속 경합, 유지, 순서 처리를 위한 run메서드
+* 3번 : 선언되었던 List변수를 Vector로 생성한다.
+* 4번 : 기본 상태는 isStop = false이다.
+* 5번 : try문 시
+* 7번 : 서버소켓 생성 = 대문 열기 --대기상태 시작, 1번소켓 생성
+* 9번 : isStop상태가 true인 동안에 -- 대기상태
+* 12번 : 접속허용, 접속자의 정보를 받을 소켓 생성 및 대입 --대기상태 종료, 3번소켓 생성
+* 16번 : 멀티스레드 관리 클래스가 멤버변수 list와 socket들을 사용하기 위해 인스턴스화한다. - 단, 접속자 마다 다른 thread를 부여하기위해 while문 안에 인스턴스 변수를 생성한다. 
 
-### Main
+### Main&인터페이스 인스턴스화
 
 ```java
 	public static void main(String args[]) {
 		TalkServer ts = new TalkServer();
 		//인터페이스는 인스턴스화가 불가능하므로 반드시 생성자를 통해 넘겨야 한다.
 		Thread th = new Thread(ts);
-		ts.initDisplay();//run메서드 이전에 호출되어야 한다.
-		th.start();//run메서드 호출 
+		ts.initDisplay();
+		th.start();
 	}/////////////////////////////////////end of main///////////////////////////////
 }
 ```
+
+* Runnable인터페이스로 run메서드를 활용하기때문에 일반 인스턴스화를 하면 안된다.
+* thread의 run메서드를 구현한 자기자신의 주소번지를 Thread의 생성자 파라미터로 넘겨야한다.
+* 5번 : 화면을 구현하고
+* 6번 : ts에 구현된 th의 run메서드를 실행한다.
+
+{% page-ref page="untitled-3.md" %}
 

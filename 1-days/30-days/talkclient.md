@@ -1,5 +1,7 @@
 # TalkClient
 
+### 선언부
+
 ```java
 package net.tomato_step1;
 
@@ -31,12 +33,10 @@ public class TalkClient extends JFrame implements ActionListener{
 	String nickName = null;
 ```
 
-```java
-public void initDisplay() {
-	//사용자로부터 닉네입 입력받기
-	nickName = JOptionPane.showInputDialog("닉네임을 입력하세요.");
-}
-```
+* 23번 : Socket 선언 --2번 소켓
+* 28번 : nickName은 접속자마다 달라지되 접속중에는 유지되어야 하므로 멤버변수로 선언한다.
+
+### init 메서드 - 접속구현
 
 ```java
 public void init() {
@@ -53,11 +53,21 @@ public void init() {
 	}/////////////////////////////end of init/////////////////////////////////
 ```
 
+* Client에서는 한명만 관리되므로 경합이 일어나지 않아 run메서드가 아닌 일반 메서드로 구현
+* 접속할 socket에 서버의 ip와 port번호를 담아 생성한다. --소켓 2 생성
+* 5-6번 : 말하기, 듣기 기능을 생성한다.
+* 8번 : 서버에게 접속을 알리는 말하기
+
+### main메서드
+
 ```java
 public static void main(String args[]) {
 		TalkClient tc = new TalkClient();
 		tc.initDisplay();
-		tc.init();//접속 실행		
+		tc.init();
 	}/////////////////////////////////end of main//////////////////////////////
 ```
+
+* 3번 : 화면을 구현하고
+* 4번 : init메서드\(접속\)를 실행한다. 
 
