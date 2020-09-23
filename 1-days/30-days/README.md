@@ -2,7 +2,7 @@
 description: 2020.09.22 - 30일차
 ---
 
-# 30 Days -
+# 30 Days - Talk - Server, Socket
 
 ### 사용 프로그램
 

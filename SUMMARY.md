@@ -94,7 +94,7 @@
     * [Toad - test02 숙제](1-days/29-days/toad-test02.md)
     * [Toad - test 11 풀이](1-days/29-days/toad-test-11.md)
     * [Toad - t\_worktime 풀이](1-days/29-days/toad-t_worktime.md)
-  * [30 Days -](1-days/30-days/README.md)
+  * [30 Days - Talk - Server, Socket](1-days/30-days/README.md)
     * [TalkServer](1-days/30-days/talkserverthread-1.md)
     * [TalkClient](1-days/30-days/talkclient.md)
     * [TalkServerThread](1-days/30-days/talkserverthread.md)

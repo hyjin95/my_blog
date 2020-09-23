@@ -26,6 +26,8 @@ public class TalkServer extends JFrame implements Runnable {
 	List<TalkServerThread> globalList = null;//멀티스레드를 관리하는 TalkServerThread에 client에게서 들은 것을 넘긴다.
 ```
 
+### Run\( \) Override
+
 ```java
 	@Override
 	public void run() {//서버소켓과 클라이언트 소켓을 연결한다.
@@ -51,6 +53,8 @@ public class TalkServer extends JFrame implements Runnable {
 		}//end of try		
 	}///////////////////////////////end of run()////////////////////////
 ```
+
+### Main
 
 ```java
 	public static void main(String args[]) {
