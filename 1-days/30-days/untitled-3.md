@@ -69,4 +69,8 @@ public class TalkServer extends JFrame implements Runnable {
 }
 ```
 
-* 
+* JFrame을 상속받아야하므로 Thread는 Runnable인터페이스를 implements한다.
+* main스레드하나. Runnable스레드 하나, 즉 스레드가 두개 생성된다.
+* 스레드가 두개이므로 작업을 동시에 따로 수행이 가능하다.
+* 화면메서드가 init메서드 뒤에있어도 화면을 볼 수 있다.
+
