@@ -116,8 +116,8 @@ description: 2020.09.22 - 30일차
   </tbody>
 </table>
 
-* TalkClientThread : 말하기 -&gt; TalkServerThread : 듣기 T
-* alkClient : JFrame을 상속 -&gt; View가 있는 클래스이다 -&gt; event를 감지하는 클래스이다.  -&gt; actionPerformed = 말한다. -&gt; timeServer의 run = 듣는다. -&gt; run = 응답한다.
+* TalkClientThread : 말하기 -&gt; TalkServerThread : 듣기 
+* TalkClient : JFrame을 상속 -&gt; View가 있는 클래스이다 -&gt; event를 감지하는 클래스이다.  -&gt; actionPerformed = 말한다. -&gt; timeServer의 run = 듣는다. -&gt; run = 응답한다.
 
 ### TalkServerThread의 인스턴스화 위치
 
