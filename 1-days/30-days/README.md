@@ -2,7 +2,7 @@
 description: 2020.09.22 - 30일차
 ---
 
-# 30 Days - Talk - TimeLine, Server, Socket, Thread, oos, ois
+# 30 Days - Talk - TimeLine, Server, Socket, Thread, oos, ois, run
 
 ### 사용 프로그램
 
@@ -33,7 +33,7 @@ description: 2020.09.22 - 30일차
 * notify\( \) : 대기하던 single thread를 차례가 되어 호출한다.
 * notifyAll\( \) : 대기하던 모든 thread를 호출한다.
 * sleep\( \) : 일정시간 얼린다. 1000=1 
-* run\( \) 호출 : strat\( \);
+* run\( \) 호출 : strat\( \); - 직접 run메서드를 호출하지 않는다. - start함수와 run메서드 사이에 내부적으로 일어나는 작용이 있다. - 호출해주는 주체 : JVM
 * run\( \) 종료 : stop\( \);
 
 ### 메서드 접근제한자
