@@ -62,5 +62,9 @@ description: 2020.09.23 - 31일차
 
 * Server에서는 각각의 클라이언트 정보를 유지시켜야하고, 접속자에 따라 갯수가 유동적이여야 한다. - Vector
 
+## BandServer - Level 2
 
+![](../../.gitbook/assets/.png%20%288%29.png)
+
+### TalkClient에 구현된 화면에 입장시 입장 메세지, 퇴장시 퇴장 메세지, 테이블에 추가, 삭제 
 
