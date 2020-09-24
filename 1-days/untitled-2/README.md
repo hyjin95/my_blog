@@ -58,7 +58,7 @@ description: 2020.09.23 - 31일차
 
 ### Socket의 oos, ois구현
 
-![level 1 - 2](../../.gitbook/assets/sheet2.png)
+![level 1 -2](../../.gitbook/assets/sheet2.png)
 
 * Server에서는 각각의 클라이언트 정보를 유지시켜야하고, 접속자에 따라 갯수가 유동적이여야 한다. - Vector
 
