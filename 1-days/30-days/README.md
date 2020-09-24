@@ -2,7 +2,7 @@
 description: 2020.09.22 - 30일차
 ---
 
-# 30 Days - Talk - TimeLine, Server, Socket,
+# 30 Days - Talk - TimeLine, Server, Socket, Thread, oos, ois
 
 ### 사용 프로그램
 
@@ -14,7 +14,7 @@ description: 2020.09.22 - 30일차
 ### Thread 구현
 
 * 방법1 : extends Thread - 자바는 단일상속만 허용한다. - run메서드를 오버라이딩 하여 사용가능
-* 방법2 : implements Runnable - 다중구현이 가능하다. - 인터페이스 이므로 인스턴스화가 불가능 하기때문에 구현 오브젝트를 Thread생성자의 파라미터로 넘겨야 run메서드를 사용가능
+* 방법2 : implements Runnable - 다중구현이 가능하다. - 인터페이스 이므로 인스턴스화가 불가능 하기때문에 구현 오브젝트를 Thread생성자의 파라미터로 넘겨야 run메서드를 사용가능 - Thread의 생성자중에 Thread\(Runnable target\)을 사용 - Runnable target = 시작을 적용할 run메서드를 가진 객체
 * Thread클래스의 run메서드를 오버라이딩해서 사용하기 위함이다.
 * 서버쪽은 여러 접속을 처리해야하므로 thread가 있어야하고, 접속자의 입장에서도 병원-원무과-약국 순서로 가듯이 순서대로 서버에 접속해야하므로 thread가 필요하다.
 
