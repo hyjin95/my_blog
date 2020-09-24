@@ -25,8 +25,8 @@ public class BandServer extends JFrame implements Runnable {
 	//접속한 클라이언트 소켓정보를 담을 소켓을 선언한다.
 	Socket client = null;//소켓3
 	//List는 정해지지 않았으므로 인터페이스이다.
-	List<BandServerThread> globalList = null;//멀티스레드를 관리하는 TalkServerThread에 client에게서 들은 것을 넘긴다.
-	
+	List<BandServerThread> globalList = null;
+	//멀티스레드를 관리하는 TalkServerThread에 client에게서 들은 것을 넘긴다.	
 	Font f = new Font("돋움체", Font.BOLD,20);
 	
 	public void initDisplay() {//로그 출력 화면
@@ -36,7 +36,7 @@ public class BandServer extends JFrame implements Runnable {
 		this.setLocation(700, 250);
 		this.setSize(500, 400);
 		this.setVisible(true);
-	}//////////////////////////////////end of initDisplay////////////////////////////////////////
+	}////////////////////////end of initDisplay//////////////////////////
 	
 	@Override
 	public void run() {//서버소켓과 클라이언트 소켓을 연결한다.
@@ -59,7 +59,7 @@ public class BandServer extends JFrame implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}//end of try		
-	}////////////////////////////////////////end of run()/////////////////////////////////////////
+	}/////////////////////////end of run()////////////////////////
 	
 	public static void main(String args[]) {
 		BandServer bs = new BandServer();
@@ -68,9 +68,7 @@ public class BandServer extends JFrame implements Runnable {
 		bs.initDisplay();//run메서드 이전에 호출되어야 한다.
 		th.start();//run메서드 호출 
 	}////////////////////////////////////////end of main/////////////////////////////////////////
-
 }
-
 ```
 
 
