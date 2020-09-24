@@ -81,10 +81,10 @@ public class TalkServer extends JFrame implements Runnable {
 }
 ```
 
-* Runnable인터페이스로 run메서드를 활용하기때문에 일반 인스턴스화를 하면 안된다.
+* Runnable인터페이스로 run메서드를 활용하려면 일반 인스턴스화를 하면 안된다.
 * thread의 run메서드를 구현한 자기자신의 주소번지를 Thread의 생성자 파라미터로 넘겨야한다.
 * 5번 : 화면을 구현하고
-* 6번 : ts에 구현된 th의 run메서드를 실행한다.
+* 6번 : ts에 구현된 Thread-run메서드를 실행한다.
 
 {% page-ref page="untitled-3.md" %}
 
