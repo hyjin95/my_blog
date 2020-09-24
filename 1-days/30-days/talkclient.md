@@ -29,6 +29,13 @@ public class TalkClient extends JFrame implements ActionListener{
 	ObjectInputStream  ois = null;//듣기
 	ObjectOutputStream oos = null;//말하기
 	
+	String     cols[]          = {"대화명"};
+	String     data[][]        = new String [0][1];
+	DefaultTableModel dtm      = new DefaultTableModel(data, cols);
+	JTable     jtb         = new JTable(dtm);
+	JScrollPane jsp_nick = new JScrollPane(jtb, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED
+			   							      , JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+	
 	//닉네임 입력받아서 담기
 	String nickName = null;
 ```
