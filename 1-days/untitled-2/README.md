@@ -34,6 +34,8 @@ description: 2020.09.23 - 31일차
 
 ### Procedure
 
+{% page-ref page="toad-and-cmd-procedure.md" %}
+
 ## TalkServer - level 1
 
 ### TalkServer-Thread
