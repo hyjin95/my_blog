@@ -32,6 +32,8 @@ description: 2020.09.23 - 31일차
 * start함수와 run함수 사이에는 내부적으로 일어나는 작용이 있어 run메서드를 직접 호출해서 실행시키지 않는다.
 * 호출 해주는 주체 : JVM
 
+### Procedure
+
 ## TalkServer - level 1
 
 ### TalkServer-Thread

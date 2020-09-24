@@ -25,6 +25,7 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 * 소문자로    : ctlr + shift + y
 * 대문자로    : ctlr + shift + x
 * 글씨 크기   : ctlr + shift + +/-
+* project전체 검색 : ctrl + h
 
 ### 깃북
 
