@@ -14,10 +14,14 @@
 
 ## CMD
 
+### sqlplus&login
+
 ![cmd sql &#xB85C;&#xADF8;&#xC778;](../../.gitbook/assets/2%20%2810%29.png)
 
 * sqlplus
 * 아이디, 암호 
+
+### 실행 및 출력
 
 ![&#xC2E4;&#xD589; &#xBC0F; print](../../.gitbook/assets/3%20%2811%29.png)
 
