@@ -61,7 +61,7 @@ public class TalkServer extends JFrame implements Runnable {
 
 * 접속 경합, 유지, 순서 처리를 위한 run메서드
 * 3번 : 선언되었던 List변수를 Vector로 생성한다.
-* 4번 : 기본 상태는 isStop = false이다.
+* 4번 : while문 조건에 true를 넣기위해 선언
 * 5번 : try문 시
 * 7번 : 서버소켓 생성 = 대문 열기 --대기상태 시작, 1번소켓 생성
 * 9번 : isStop상태가 true인 동안에 -- 대기상태

@@ -99,6 +99,6 @@
     * [TalkServer](1-days/30-days/talkserverthread-1.md)
     * [TalkServerThread](1-days/30-days/talkserverthread.md)
     * [TalkClient](1-days/30-days/talkclient.md)
-  * [31 Days -](1-days/untitled-2.md)
+  * [31 Days - Thread-revel2, Tokenizer, swicth-default,](1-days/untitled-2.md)
   * [Untitled](1-days/untitled-1.md)
 
