@@ -23,7 +23,7 @@
 
 ### 실행 및 출력
 
-![&#xC2E4;&#xD589; &#xBC0F; print](../../.gitbook/assets/3%20%2811%29.png)
+![exec, print](../../.gitbook/assets/3%20%2812%29.png)
 
 * variable 변수이름 타입\(크기\); - 반환값을 담을 변수 선언 - 타입은 해당 프로시저의 반환값의 타입과 같아야한다.
 * exec 프로시저이름\(IN값, IN값, :선언한 변수\); - exec : 실행예약어
