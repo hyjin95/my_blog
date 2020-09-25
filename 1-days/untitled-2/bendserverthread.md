@@ -7,6 +7,12 @@
 
 선언부, 생성자 - 소켓동기화, 접속메세지 출력메서드
 
+* Thread가 배정된 접속자의 정보를 담은 Socket으로 기능을 수행하는 멀티스레드관리 클래스
+* BandServer의 run메서드 while문안에서 접속자socket마다 다른 주소번지의 Thread를 부여한다.
+* 접속자의 socket과 ServerSocket을 동기화 시켜준다. - this.client = bs.client\( \);
+* 접속자의 socket으로 ois, oos기능을 만든다.
+* this와 tst의 차이 : this=nickName 멤버변수에 현재 저장된 접속 Thread, tst= 모든 멀티스레드 - 최초 접속자는 this나 tst나 둘다 자기자신만 가르키므로 차이가 없다. - this : nickName에 담긴 single Thread - tst : ServerThread의 Vector에 담겨있는 multi  Thread
+
 {% page-ref page="../30-days/talkserverthread.md" %}
 
 ### level 2 - run메서드
@@ -45,9 +51,8 @@
 		} catch (Exception e) {
 			System.out.println("Exception -> "+e.toString());
 		}
-	}/////////////////////////////////////end of run////////////////////////////////////////////
-
+	}/////////////////////////////////end of run////////////////////////////////////
 }
-
 ```
 
+* 
