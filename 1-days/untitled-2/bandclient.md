@@ -4,7 +4,7 @@
 
 ## BandClient.java
 
-화면구현, main메서드 삭제,
+선언부, init, 화면구현, main메서드 삭제,
 
 {% page-ref page="../30-days/talkclient.md" %}
 
