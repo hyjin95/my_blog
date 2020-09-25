@@ -4,6 +4,8 @@
 
 ## BandClientThread.java
 
+### 선언부, 생성자
+
 ```java
 package net.tomato_step2;
 
@@ -17,7 +19,13 @@ public class BandClientThread extends Thread {
 	public BandClientThread(BandClient bc) {
 		this.bc = bc;
 	}
-	
+```
+
+### run 메서드
+
+ServerThread에서 말해준 msg를 Client화면에 내보내기
+
+```java
 	public void run() {
 		boolean isStop = false;
 		while(!isStop) {
@@ -26,11 +34,20 @@ public class BandClientThread extends Thread {
 				msg = (String)bc.ois.readObject();
 				StringTokenizer st = null;//해당사항이 없을 수 있어 생성은 따로한다.
 				int protocol = 0;
+```
+
+#### 메세지가 비어있으면
+
+```java
 				if(msg!=null) {
 					st = new StringTokenizer(msg,"#");
 					protocol = Integer.parseInt(st.nextToken());//번호를 선언해둔 변수에 담는다.
 				}///end of if
-				switch(protocol) {
+```
+
+#### 100번 이라면
+
+```java
 				case 100:{
 					String nickName = st.nextToken();
 					bc.jta_display.append(nickName+"님이 입장하셨습니다."+"\n");
@@ -38,11 +55,21 @@ public class BandClientThread extends Thread {
 					v.add(nickName);
 					bc.dtm.addRow(v);
 				}break;
+```
+
+#### 200번 이라면
+
+```java
 				case 200:{
 					String nickName = st.nextToken();
 					String chat = st.nextToken();
 					bc.jta_display.append("["+nickName+"]"+" : "+chat+"\n");
 				}break;
+```
+
+### 500번이라면, 마감
+
+```java
 				case 500:{
 					String nickName = st.nextToken();
 					bc.jta_display.append("["+nickName+"]"+"님이 퇴장하셨습니다."+"\n");					
@@ -57,10 +84,8 @@ public class BandClientThread extends Thread {
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-		}//end of while
-		
-	}//////////////////////////////////////end fo run////////////////////////////////////////
-
+		}//end of while		
+	}/////////////////////////////end fo run///////////////////////////////////
 }
 ```
 
