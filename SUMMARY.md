@@ -107,6 +107,7 @@
     * [BandClient](1-days/untitled-2/bandclient.md)
     * [BandClientThread](1-days/untitled-2/bandclientthread.md)
     * [BandDao](1-days/untitled-2/banddao.md)
-  * [32 Days -](1-days/32-days.md)
+  * [32 Days -](1-days/32-days/README.md)
+    * [setCarePosition](1-days/32-days/setcareposition.md)
   * [Untitled](1-days/untitled-1.md)
 
