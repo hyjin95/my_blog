@@ -78,3 +78,54 @@ public static void main(String args[]) {
 * 3번 : 화면을 구현하고
 * 4번 : init메서드\(접속\)를 실행한다. 
 
+### initDisplay - 화면구현메서드
+
+```java
+	public void initDisplay() {
+		//사용자로부터 닉네입 입력받기
+		nickName = JOptionPane.showInputDialog("닉네임을 입력하세요.");
+		jbtn_send  .addActionListener(this);
+	    jbtn_chat  .addActionListener(this);    
+	    jbtn_change.addActionListener(this);	   
+		jbtn_emo   .addActionListener(this);    
+		jbtn_close .addActionListener(this);
+		
+		jp_first_south.setLayout(new BorderLayout());
+		jp_first_south.add("Center", jtf_client);
+		jp_first_south.add("East", jbtn_send);
+		
+		jp_first.setLayout(new BorderLayout());
+		jp_first.add("Center", jsp_client);
+		jp_first.add("South", jp_first_south);
+		
+		jp_second_south.setLayout(new GridLayout(2,2,3,3));
+		jp_second_south.add(jbtn_chat);
+		jp_second_south.add(jbtn_change);
+		jp_second_south.add(jbtn_emo);
+		jp_second_south.add(jbtn_close);
+		
+		jp_second.setLayout(new BorderLayout());
+		jp_second.add("Center", jt_nick);
+		jp_second.add("South", jp_second_south);
+		
+		jta_client.setBackground(new Color(255,217,236));
+		jtf_client.setBackground(new Color(246,246,246));
+		jp_second_south.setBackground(new Color(218,217,255));
+		jt_nick.setBackground(new Color(218,217,255));
+		//jt_nick.setBackground(new Color(255,250,200));
+		jbtn_chat  .setBackground(new Color(234,234,234));
+		jbtn_change.setBackground(new Color(234,234,234));
+		jbtn_emo   .setBackground(new Color(234,234,234));
+		jbtn_close .setBackground(new Color(234,234,234));
+		jbtn_send  .setBackground(new Color(234,234,234));
+		
+		this.setLayout(new GridLayout(0,2,1,1));
+		this.add(jp_first);
+		this.add(jp_second);
+		this.setTitle("대화창");
+		this.setLocation(700, 250);
+		this.setSize(800, 550);
+		this.setVisible(true);
+	}/////////////////////////////end of initDisplay////////////////////////////
+```
+

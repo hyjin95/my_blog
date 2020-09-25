@@ -4,6 +4,8 @@
 
 ## BandClient.java
 
+### 선언부
+
 ```java
 package net.tomato_step2;
 
@@ -56,16 +58,81 @@ public class BandClient extends JFrame implements ActionListener{
 	JButton    jbtn_color      = new JButton("글자색");
 	JButton    jbtn_logout     = new JButton("로그아웃");
 	JButton    jbtn_close      = new JButton("종료");
-	
 	//닉네임 입력받아서 담기
 	String nickName = null;
-	
+```
+
+### 생성자
+
+```java
 	public BandClient() {}
 	
 	public BandClient(String nickName) {
 		this.nickName = nickName;
 	}
+```
+
+### 화면
+
+```java
+	public void initDisplay() {
+		//사용자로부터 닉네입 입력받기		
+		//nickName = JOptionPane.showInputDialog("닉네임을 입력하세요.");
+		jtf_msg    .addActionListener(this);
+		jbtn_send  .addActionListener(this);
+	    jbtn_chat  .addActionListener(this);    
+	    jbtn_change.addActionListener(this);	   
+		jbtn_emo   .addActionListener(this);    
+		jbtn_color   .addActionListener(this);    
+		jbtn_logout   .addActionListener(this);    
+		jbtn_close .addActionListener(this);
+		
+		jp_first_south.setLayout(new BorderLayout());
+		jp_first_south.add("Center", jtf_msg);
+		jp_first_south.add("East", jbtn_send);
+		
+		jp_first.setLayout(new BorderLayout());
+		jp_first.add("Center", jsp_display);
+		jp_first.add("South", jp_first_south);
+		
+		jp_second_south.setLayout(new GridLayout(3,2,3,3));
+		jp_second_south.add(jbtn_chat);
+		jp_second_south.add(jbtn_change);
+		jp_second_south.add(jbtn_emo);
+		jp_second_south.add(jbtn_color);
+		jp_second_south.add(jbtn_logout);
+		jp_second_south.add(jbtn_close);
+		
+		jp_second.setLayout(new BorderLayout());
+		jp_second.add("Center", jsp_nick);
+		jp_second.add("South", jp_second_south);
+		
+		jta_display.setBackground(new Color(255,217,236));
+		jtf_msg.setBackground(new Color(246,246,246));
+		jp_second_south.setBackground(new Color(218,217,255));
+		jtb.setBackground(new Color(218,217,255));
+		//jt_nick.setBackground(new Color(255,250,200));
+		jbtn_chat  .setBackground(new Color(234,234,234));
+		jbtn_change.setBackground(new Color(234,234,234));
+		jbtn_emo   .setBackground(new Color(234,234,234));
+		jbtn_color .setBackground(new Color(234,234,234));
+		jbtn_logout .setBackground(new Color(234,234,234));
+		jbtn_close .setBackground(new Color(234,234,234));
+		jbtn_send  .setBackground(new Color(234,234,234));
+		
+		this.setLayout(new GridLayout(0,2,1,1));
+		this.add(jp_first);
+		this.add(jp_second);
+		this.setTitle(nickName+" 님의 대화창입니다.");
+		this.setLocation(700, 250);
+		this.setSize(800, 550);
+		this.setVisible(true);
+	}//////////////////////////////end of initDisplay/////////////////////////////////////
 	
+
+```
+
+```java
 	public void initDisplay() {
 		//사용자로부터 닉네입 입력받기		
 		//nickName = JOptionPane.showInputDialog("닉네임을 입력하세요.");
