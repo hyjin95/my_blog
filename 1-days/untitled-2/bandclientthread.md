@@ -1,6 +1,8 @@
 # BandClientThread
 
+역할 : ServerThread에서 말하는 메세지를 받아서 화면에 띄워주는 멀티스레드 관리 클래스
 
+## BandClientThread.java
 
 ```java
 package net.tomato_step2;

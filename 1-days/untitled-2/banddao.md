@@ -1,5 +1,9 @@
 # BandDao
 
+역할 : DB연결과 Procedure호출 처리 클래스
+
+## BandDao.java
+
 ```java
 package net.tomato_step2;
 

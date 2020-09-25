@@ -1,6 +1,10 @@
-# BendServer
+# BandServer
 
+역할 : Server를 열고, 접속시 Thread를 부여해주는 클래스
 
+## BandServer.java
+
+### 선언부
 
 ```java
 package net.tomato_step2;
@@ -28,16 +32,11 @@ public class BandServer extends JFrame implements Runnable {
 	List<BandServerThread> globalList = null;
 	//멀티스레드를 관리하는 TalkServerThread에 client에게서 들은 것을 넘긴다.	
 	Font f = new Font("돋움체", Font.BOLD,20);
-	
-	public void initDisplay() {//로그 출력 화면
-		jta_log.setBackground(Color.orange);
-		jta_log.setFont(f);
-		this.add("Center", jsp_log);
-		this.setLocation(700, 250);
-		this.setSize(500, 400);
-		this.setVisible(true);
-	}////////////////////////end of initDisplay//////////////////////////
-	
+```
+
+### Run - 소켓생성, 접속 처리 메서드
+
+```java
 	@Override
 	public void run() {//서버소켓과 클라이언트 소켓을 연결한다.
 		globalList = new Vector<>();
@@ -60,14 +59,18 @@ public class BandServer extends JFrame implements Runnable {
 			e.printStackTrace();
 		}//end of try		
 	}/////////////////////////end of run()////////////////////////
-	
+```
+
+### main 메서드
+
+```java
 	public static void main(String args[]) {
 		BandServer bs = new BandServer();
 		//인터페이스는 인스턴스화가 불가능하므로 반드시 생성자를 통해 넘겨야 한다.
 		Thread th = new Thread(bs);
 		bs.initDisplay();//run메서드 이전에 호출되어야 한다.
 		th.start();//run메서드 호출 
-	}////////////////////////////////////////end of main/////////////////////////////////////////
+	}////////////////////////////////end of main/////////////////////////////////
 }
 ```
 

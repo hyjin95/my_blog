@@ -1,5 +1,9 @@
 # BandClient
 
+역할 : 접속자에게 대화창을 제공해주고, 입력값을 socket에 담아주는 클래스
+
+## BandClient.java
+
 ```java
 package net.tomato_step2;
 
