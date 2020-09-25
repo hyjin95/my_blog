@@ -5,13 +5,11 @@
 
 ## BandServerThread.java
 
-### 선언부
-
-### 생성자 - 소켓동기화, 접속메세지 출력메서드
+선언부, 생성자 - 소켓동기화, 접속메세지 출력메서드
 
 {% page-ref page="../30-days/talkserverthread.md" %}
 
-### level 2 - run메서
+### level 2 - run메서드
 
 ```java
 	public void run() {
