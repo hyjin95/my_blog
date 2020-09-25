@@ -83,9 +83,6 @@ public class BandClient extends JFrame implements ActionListener{
 				System.out.println(e2.toString());
 			}			
 		}//////////////////jbtn_close////////////////////////
-		
-	}/////////////////////////////end of actionPerformed//////////////////////////////////
-}
 
 ```
 
