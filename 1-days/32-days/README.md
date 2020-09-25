@@ -29,6 +29,11 @@ description: 2020.09.25 - 32일차
 * try-catch
 * 서버접속시 접속오류와 같이 오류가 발생할 소지가 있는 함수나 수식을 사용할 때에는 반드시 예외처리를 해주어야 한다. - ex\) int i, 5/i라는 수식을 사용할때에도, i에 0이올수 있으니 예외처리가 필요하다.
 
+### Server의 port
+
+1. local port : 서버의 port값, 서버쪽 대문
+2. port : 외부사용자의 port값, 사용자쪽 대문
+
 ## 필기
 
 ### setCarePosition
