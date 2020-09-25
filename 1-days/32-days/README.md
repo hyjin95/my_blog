@@ -4,3 +4,23 @@ description: 2020.09.25 - 32일차
 
 # 32 Days -
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
+* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+
+## 복습
+
+### Thread, Runnable 역할
+
+* 한정된 자원을 나눠야 해서 경합이 일어날때 순서대로 대기, 진행할 수 있게 해주는 클래스,인터페이스
+* run추상메서드를 Override해서 사용한다. - 소유주.strat\( \); : 소유주안의 run메서드 진행
+* Thread가 제공해주는 multi Thread에서 사용되는 메서드 - sleep\( \) : 정보를 담는 동안 재운다. millisec = 1000 = 1sec - wait\( \) : 해당 스레드의 순서가 아니라면 대기시킨다. - notify\( \) : 대기하던 스레드의 순서가 오면 깨워준다. - notifyAll\( \) : 대기하던 스레드의 순서가 오면 모든 스레드를 깨워준다.
+* dead lock - wait함수를 사용할때 발생할 수 있는 상태 - 순서가 와도 thread가 진행되지 않을때를 말한다.
+
+### Thread, Runnable 인스턴스화
+
+* Override되는 run메서드를 제외한 다른 메서드들을 사용하려면 인스턴스화를 해야한다.
+* Thread, Runnable은 추상메서드가 있으므로 생성자로 호출, 생성이 불가능하다.
+* 구현클래스로 생성을 해주어야한다. - Runnable r = 구현체래스\( \); - Thread th = 구현체클래스\( \);
+
