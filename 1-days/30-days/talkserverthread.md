@@ -69,11 +69,11 @@ public TalkServerThread(TalkServer ts) {
 ### broadCasting메서드
 
 ```java
-	public void broadCasting(String msg) { 
-		for(TalkServerThread tst : ts.globalList) {
-			tst.send(msg);			
-		}
-	}////////////////////////////end of broadCasting///////////////////////////////
+public void broadCasting(String msg) { 
+	for(TalkServerThread tst : ts.globalList) {
+		tst.send(msg);			
+	}
+}////////////////////////////end of broadCasting///////////////////////////////
 ```
 
 * 현재 입장해있는 모든 접속자들에게 메세지를 전송해주는 메서드이다. - 접속한 닉네임을 파라미터에 담아 현재 접속자 수만큼 말하기를 반복한다.  - for문으로 send함수 반복호출
