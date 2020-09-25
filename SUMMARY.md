@@ -107,7 +107,8 @@
     * [BandClient](1-days/untitled-2/bandclient.md)
     * [BandClientThread](1-days/untitled-2/bandclientthread.md)
     * [BandDao](1-days/untitled-2/banddao.md)
-  * [32 Days -](1-days/32-days/README.md)
-    * [setCarePosition](1-days/32-days/setcareposition.md)
+  * [32 Days - UI, setCarePosition](1-days/32-days/README.md)
+    * [setCaretPosition](1-days/32-days/setcareposition.md)
+    * [TomatoClientThread - img넣기](1-days/32-days/tomatoclientthread-img.md)
   * [Untitled](1-days/untitled-1.md)
 

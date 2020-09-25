@@ -2,7 +2,7 @@
 description: 2020.09.25 - 32일차
 ---
 
-# 32 Days -
+# 32 Days - UI, setCarePosition
 
 ### 사용 프로그램
 
@@ -34,13 +34,15 @@ description: 2020.09.25 - 32일차
 1. local port : 서버의 port값, 서버쪽 대문
 2. port : 외부사용자의 port값, 사용자쪽 대문
 
-## 필기
+## TomatoServer - Level3
 
-### setCarePosition
+### setCaretPosition
 
 * 스크롤바가 있는 입력, 출력화면에서 입,출력이 화면을 넘어갔을 때, 커서가 이 값을 따라가서 자동으로 스크롤을 내려주는 함수
 
 {% page-ref page="setcareposition.md" %}
 
+### 직관적인 이름 사용하기
 
+* Band클래스에서 
 

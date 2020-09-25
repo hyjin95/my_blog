@@ -1,4 +1,4 @@
-# setCarePosition
+# setCaretPosition
 
 ## 이해하기
 
@@ -8,7 +8,7 @@
 ### 기본형
 
 * 적용할 TextField, TextArea등 에 append\(문자열\) 다음에 위치한다.
-* textField명.setCarePosition\(\)
+* textField명.setCaretPosition\(\)
 
 ## Band에 적용
 
