@@ -111,7 +111,9 @@
     * [setCaretPosition](1-days/32-days/setcareposition.md)
     * [Protocol](1-days/32-days/protocol.md)
     * [TomatoClientThread - img넣기](1-days/32-days/tomatoclientthread-img.md)
-  * [33 Days -](1-days/33-days.md)
+  * [33 Days -](1-days/33-days/README.md)
+    * [1 : 1 대화 구현](1-days/33-days/1-1.md)
+    * [대화명 변경 구현](1-days/33-days/undefined.md)
   * [34 Days -](1-days/34-days.md)
   * [Untitled](1-days/untitled-1.md)
 
