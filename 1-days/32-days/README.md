@@ -2,7 +2,7 @@
 description: 2020.09.25 - 32일차
 ---
 
-# 32 Days - UI, setCarePosition
+# 32 Days - Tomato-level3, UI, setCarePosition
 
 ### 사용 프로그램
 
