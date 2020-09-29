@@ -25,3 +25,9 @@ description: 2020.09.28 - 33일차
 
 ## 1 : 1 대화 구현
 
+* ClientThread와 ServerThread의 run메서드에 protocol클래스의 구분번호를 사용해 연결한다.
+
+### TomatoClient
+
+1. 대화상대 선택하기  - actionListener인터페이스를 사용해   
+
