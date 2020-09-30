@@ -2,7 +2,7 @@
 description: 2020.09.25 - 32일차
 ---
 
-# 32 Days - Tomato-level3, UI, setCarePosition
+# 32 Days - Tomato-level3, UI, setCarePosition, paint
 
 ### 사용 프로그램
 
@@ -47,6 +47,16 @@ description: 2020.09.25 - 32일차
 * Band클래스에서 메세지를 구분할때 사용하던 번호 100, 200,...를 더 직관적인 이름을 부여한다.
 
 {% page-ref page="protocol.md" %}
+
+### paint
+
+* paint함수는 컴포넌트에 사용자가 직접 그림을 그릴 수 있게 해주는 함수이다.
+* 그림을 그리고자 하는 객체안에 paint를 오버라이딩 하여 사용한다.
+* 파라미터로 Grapics타입의 변수를 하나 갖는다.
+
+### Graphics
+
+* 화면 그리기에 필요한 그리기 메서드를 갖고 있다. - 직선, 사각형, 글자, 이미지
 
 후기 : 다음주는 추석이 있어 이틀만 수업을 듣는데 2주동안 자리별로 격일로 비대면 수업을 진행하기로 했다. 집에서도 집중하기!
 

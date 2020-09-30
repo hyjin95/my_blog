@@ -23,6 +23,13 @@ public class TomatoClient extends JFrame implements ActionListener{
 	};
 ```
 
+* 이미지 경로의 끝에 \\를 붙여 마감한다.
+* JTextAread에 이미지를 넣을 것이므로 JTextAread클래스 안에서 paint함수를 구현한다.
+* 13번 : Graphics 변수에 Image를 draw할 위치를 초기화한다.
+* 14번 : 그릴 곳에 Scroll이 구현되어 있으므로 viewPort를 이용해 보여질 부분을 가져온다.
+* 15번 : Graphics변수에 Image를 draw할 위치를 변수로 초기화한다.
+* 16번 : paint할 객체를 정한다.
+
 ### 화면구현
 
 ```java

@@ -107,7 +107,7 @@
     * [BandClient](1-days/untitled-2/bandclient.md)
     * [BandClientThread](1-days/untitled-2/bandclientthread.md)
     * [BandDao](1-days/untitled-2/banddao.md)
-  * [32 Days - Tomato-level3, UI, setCarePosition](1-days/32-days/README.md)
+  * [32 Days - Tomato-level3, UI, setCarePosition, paint](1-days/32-days/README.md)
     * [setCaretPosition](1-days/32-days/setcareposition.md)
     * [Protocol](1-days/32-days/protocol.md)
     * [TomatoClientThread - img넣기](1-days/32-days/tomatoclientthread-img.md)
