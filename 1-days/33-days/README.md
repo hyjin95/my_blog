@@ -2,7 +2,7 @@
 description: 2020.09.28 - 33일차
 ---
 
-# 33 Days -1대1대화, 대화명변경, 반복문 탈출, trim, set&getValueAt, JTextPane, windowListener
+# 33 Days -1대1대화, 대화명변경, 스타일변경, 반복문 탈출, trim, set&getValueAt, JTextPane, windowListener
 
 ### 사용 프로그램
 
@@ -107,11 +107,17 @@ description: 2020.09.28 - 33일차
 
 1.  기존에 화면으로 구현한 JTextArea 함수는 글씨 부분 변경이 되지 않는다. 
 2. JTextPane을 이용한다.
+3. JcolorChooser, colorSelectionModel, ChangeListener클래스를 사용한다.
+4. 기존 메세지 전달 부분에 스타일을 추가한다.
+
+### ChatServerThread
+
+1. 기존 메세지 전달 부분에 스타일을 추가해야한다.
 
 ### ChatClientThread
 
-1. 글자에 스타일을 입히기위한 작업 - insertString\(시작위치, 메세지, 서식\(스타일\)\)
-2. 예외처리가 필수 - e.printStackTrace\( \);
+1. 글자에 스타일을 입히기위한 작업 - SimpleAttrubuteSet함수를 이용해 스타일을 작성, 적용시킨다. - insertString\(시작위치, 메세지, 서식\(스타일\)\)
+2. 예외처리 필수 - e.printStackTrace\( \);
 
 {% page-ref page="undefined-1.md" %}
 
