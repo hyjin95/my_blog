@@ -128,3 +128,58 @@ public void initDisplay() {
 * 7-11번 : 구현메서드 - 9번 : Color타입 변수에 선택된 색상정보를 담는다. - 10번 : fontColor에 위의 변수의 값을 RGB로 꺼내 String으로 형전환하여 담는다.
 * 13번 : 색상모델에 구현메서드를 add한다.
 
+### actionPerformed-3
+
+```java
+if(obj==jbtn_send || obj == jtf_msg) {
+			try {
+				oos.writeObject(Protocol.MULTI+"#"+nickName
+							 				  +"#"+msg
+							 				  +"#"+fontColor
+							 			    +"#"+fontStyle
+							 				  +"#"+fontSize);
+				jtf_msg.setText("");
+			} catch (Exception e2) {
+				System.out.println(e2.toString());
+			}	
+		}////////////////////////jbtn_send, jtf_msg//////////////////////////
+```
+
+* 기존 채팅 전달 이벤트 oos에 추가한다.
+
+## ChatServerThread
+
+```java
+public void run() {//ChatServer에서 thread가 배분된 다음 호출된다.
+		//System.out.println("TalkServerthread run호출성공");//단위테스트
+		String msg = null;
+		boolean isStop = false;
+		try {
+			run_start://while문을 탈출하는 label을 만든다.
+			while(!isStop) {
+				msg = (String)ois.readObject();//듣기 시작
+				cs.jta_log.append(msg+"\n");
+				cs.jta_log.setCaretPosition(cs.jta_log.getDocument().getLength());
+				StringTokenizer st = null;
+				int protocol = 0;
+				if(msg!=null) {//메세지가 있다면
+					st = new StringTokenizer(msg,"#");
+					protocol = Integer.parseInt(st.nextToken());					
+				}//end of if
+				switch(protocol) {
+			  case Protocol.MULTI:{//다자간대화
+					String nickName  = st.nextToken();
+					String message   = st.nextToken();
+					String fontColor = st.nextToken();
+					String fontStyle = st.nextToken();
+					String fontSize  = st.nextToken();
+					String imgChoice = "";
+					
+					broadCasting(Protocol.MULTI+"#"+nickName+"#"+message+"#"+fontColor
+											   +"#"+fontStyle+"#"+fontSize);
+				}break;
+					
+```
+
+* 기존의 run메서드의 듣기, 말하기 부분에 추가한다.
+
