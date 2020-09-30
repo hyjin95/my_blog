@@ -183,3 +183,73 @@ public void run() {//ChatServer에서 thread가 배분된 다음 호출된다.
 
 * 기존의 run메서드의 듣기, 말하기 부분에 추가한다.
 
+## ChatClientThread
+
+### run - 듣기, 화면에 실행하기
+
+```java
+public void run() {
+		boolean isStop = false;
+		while(!isStop) {
+			try {
+				String msg = "";
+				msg = (String)cc.ois.readObject();
+				StringTokenizer st = null;//해당사항이 없을 수 있어 생성은 따로한다.
+				int protocol = 0;
+				if(msg!=null) {
+					st = new StringTokenizer(msg,"#");
+					protocol = Integer.parseInt(st.nextToken());//번호를 선언해둔 변수에 담는다.
+				}///end of if
+				switch(protocol) {
+				case Protocol.MULTI:{//일반 다자간 메세지
+					String nickName  = st.nextToken();
+					String message   = st.nextToken();
+					String fontColor = st.nextToken();
+					String fontStyle = st.nextToken();
+					String fontSize  = st.nextToken();
+					String styles[] = new String[3];
+					styles[0] = fontColor;
+					styles[1] = fontStyle;
+					styles[2] = fontSize;
+					SimpleAttributeSet sas = makeAttribute(styles);
+					try {
+						cc.sd_display.insertString(cc.sd_display.getLength(), "["+nickName+"]"
+																				+" : "+message+"\n", sas);
+					}catch (Exception e) {
+						System.out.println(e.toString());
+						}
+					}
+					cc.jtp_display.setCaretPosition(cc.sd_display.getLength());					
+				}break;				
+```
+
+* 20-24 : String배열에 스타일들을 담아 메서드에 한번에 보내 처리한다.
+* 25-17번 : 화면에 메세지를 띄우되, sas로 작성된 스타일 대로 insert한다.
+
+```java
+public SimpleAttributeSet makeAttribute(String style[]) {
+		SimpleAttributeSet sas = new SimpleAttributeSet();
+		//폰트컬러
+		sas.addAttribute(StyleConstants.CharacterConstants.Foreground, new Color(Integer.parseInt(style[0])));
+		//폰트타입
+		switch(style[1]) {
+		case "Font.ITALIC":
+			sas.addAttribute(StyleConstants.CharacterConstants.Italic, true);
+		break;
+		case "Font.BOLD":
+			sas.addAttribute(StyleConstants.CharacterConstants.Bold, true);
+		break;
+		}
+		//폰트사이즈
+		sas.addAttribute(StyleConstants.CharacterConstants.FontSize, Integer.parseInt(style[2]));
+		
+		return sas;
+	}
+```
+
+* 파라미터로 받은 속성, 스타일을 적용시키기위한 메서드
+* 2번 : 속성을 작성해주는 SimpleAttributeSet클래스 생성
+* 4번 :  위의 sas에 파라미터로 받아온 색상을 지정, 작성해준다.
+* 7-12번 : sas에 파라미터로 받은 style값에 따라 폰트를 작성한다.
+* 15번 : sas에 파라미터로 받은 폰트 사이즈를 작성한다. 
+
