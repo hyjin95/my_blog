@@ -2,7 +2,7 @@
 description: 2020.09.28 - 33일차
 ---
 
-# 33 Days - Chat-level4, Tomato-level3 1대1대화, 대화명변경, 반복문 탈출, trim, set&getValueAt
+# 33 Days - Chat-level4, Tomato-level3 1대1대화, 대화명변경, 반복문 탈출, trim, set&getValueAt, JTextPane
 
 ### 사용 프로그램
 
@@ -25,16 +25,28 @@ description: 2020.09.28 - 33일차
 
 ## 필기
 
-### trim함수
+### trim
 
 * 문자열.trim\( \);
 * 해당 문자열 앞과 뒤에 공백이 있다면 앞, 뒤 공백만 제거해주는 함수
 * 문자열 사이의 공백은 삭제되지 않는다.
 
-### get&setValueAt함수
+### get&setValueAt
 
 * 소유주.getValueAt\(값을 가져올 row, 컬럼의 좌표\) - 컬럼의 좌표에는 첫번째 컬럼의 로우라면 0, 두번째 컬럼의 로우라면 1,.....이 들어간다.
 * 소유주.setValueAt\(넣을 값, 넣어질 row, 컬럼의 좌표\)
+
+### JTextPane
+
+* Text화면에서 부분 text에 스타일을 적용할 때 사용하는 클래스이다.
+
+### styledDocument
+
+* 글씨체, 여백 등과 같은 서식, 스타일을 사용할 수 있는 클래스
+
+### insertString
+
+* insertString\(시작위치, 메세지, 서식\(스타일\)\)
 
 ## 1 : 1 대화 구현
 
@@ -75,5 +87,21 @@ description: 2020.09.28 - 33일차
 
 ### TomatoClientThread
 
-1. JTable의 dtm데이터도 새로고침한다. - for문으로 dtm의 데이터와 입력받은 afterName과 비교한다. - dtm.getRowCount\( \)함수 for문 조건을 걸고 - dtm.getValueAt\( \)함수로 데이터를 변경해준다. - break; 로 for문 탈출 
+1. JTable의 dtm데이터도 새로고침한다. - for문으로 dtm의 데이터와 입력받은 afterName과 비교한다. - dtm.getRowCount\( \)함수 for문 조건을 걸고 - dtm.getValueAt\( \)함수로 데이터를 변경해준다. - break; 로 for문 탈출
+2. client클래스의 화면의 title을 변경한다.
+3. client클래스의 멤버변수 nickName도 afterName의 값으로 초기화 한다. 
+
+{% page-ref page="undefined.md" %}
+
+## level4 - 입력화면 부분 색상변경
+
+### ChatClient
+
+1.  기존에 화면으로 구현한 JTextArea 함수는 글씨 부분 변경이 되지 않는다. 
+2. JTextPane을 이용한다.
+
+### ChatClientThread
+
+1. 글자에 스타일을 입히기위한 작업 - insertString\(시작위치, 메세지, 서식\(스타일\)\)
+2. 예외처리가 필수 - e.printStackTrace\( \);
 

@@ -111,7 +111,7 @@
     * [setCaretPosition](1-days/32-days/setcareposition.md)
     * [Protocol](1-days/32-days/protocol.md)
     * [TomatoClientThread - img넣기](1-days/32-days/tomatoclientthread-img.md)
-  * [33 Days - Chat-level4, Tomato-level3 1대1대화, 대화명변경, 반복문 탈출, trim, set&getValueAt](1-days/33-days/README.md)
+  * [33 Days - Chat-level4, Tomato-level3 1대1대화, 대화명변경, 반복문 탈출, trim, set&getValueAt, JTextPane](1-days/33-days/README.md)
     * [1 : 1 대화 구현](1-days/33-days/1-1.md)
     * [대화명 변경 구현](1-days/33-days/undefined.md)
   * [34 Days -](1-days/34-days.md)
