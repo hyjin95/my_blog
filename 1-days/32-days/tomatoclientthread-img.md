@@ -42,3 +42,7 @@ public void initDisplay() {
 		jta_display.setLineWrap(true);//자동줄바꿈처리
 ```
 
+* 5번 : jta\_display의 기본 배경을 투명하게 한다.
+* 6번 : jta\_display는 출력 화면이므로 입력기능을 비활성화시킨다.
+* 7번 : jta\_display에 자동 줄바꿈 설정을 활성화한다.
+
