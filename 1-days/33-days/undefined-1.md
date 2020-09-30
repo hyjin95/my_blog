@@ -94,6 +94,10 @@ public void initDisplay() {
 		}/////////////////////////jbtn_style//////////////////////////////////
 ```
 
+* 스타일버튼 클릭시 JDialog로 설정화면을 띄운다.
+* 7-9번 : TextField를 기본값을 넣어서, 버튼을 생성한다.
+* 26-33번 : 설정화면에 대한 반응값 - JTextField에 입력되는 text는 String이므로, Integer.parseInt함수를 이용해 형전환한다. 
+
 ### actionPerformed-2
 
 ```java
@@ -116,4 +120,11 @@ public void initDisplay() {
 			
 		}/////////////////////////jbtn_fcolor////////////////////////////////
 ```
+
+* 컬러 버튼 클릭시 JDialog로 설정화면을 띄운다.
+* 3번 : JColorChooser클래스로 색상 선택화면을 생성한다.
+* 4번 : ColorSelectionModel함수의 변수에 선택된 색상을 담는다.
+* 6번 : 변경이벤트를 읽어오는 ChangeListener인터페이스를 생성하면서 메서드를 구현한다.
+* 7-11번 : 구현메서드 - 9번 : Color타입 변수에 선택된 색상정보를 담는다. - 10번 : fontColor에 위의 변수의 값을 RGB로 꺼내 String으로 형전환하여 담는다.
+* 13번 : 색상모델에 구현메서드를 add한다.
 
