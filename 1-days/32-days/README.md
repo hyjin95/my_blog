@@ -2,7 +2,7 @@
 description: 2020.09.25 - 32일차
 ---
 
-# 32 Days - Tomato-level3, UI, setCarePosition, paint
+# 32 Days - Tomato-level3, UI, setCarePosition, paint, setOpaque&Editable&lineWrap
 
 ### 사용 프로그램
 
@@ -53,10 +53,20 @@ description: 2020.09.25 - 32일차
 * paint함수는 컴포넌트에 사용자가 직접 그림을 그릴 수 있게 해주는 함수이다.
 * 그림을 그리고자 하는 객체안에 paint를 오버라이딩 하여 사용한다.
 * 파라미터로 Grapics타입의 변수를 하나 갖는다.
+* paint메서드 안에 위치, Graphics타입을 설정한다.
 
 ### Graphics
 
 * 화면 그리기에 필요한 그리기 메서드를 갖고 있다. - 직선, 사각형, 글자, 이미지
+
+### setOpaque&editable&lineWrap
+
+* 모두 boolean타입 함수
+* 소유주.setOpaque\( \); - 소유주의 배경을 투명하게\(false\) 또는 불투명하게\(true\) 설정한다. - true로 적용되어야 색상지정이 가능하다.
+* 소유주.setEditable\( \); -  사용자가 소유주 부분에 텍스트를 입력할수 없게\(false\) 또는 있게\(true\) 설정한다.
+* 소유주.setLineWrap\( \); - 소유주 부분에 텍스트 입, 출력시 자동 줄바꿈 기능을 가능하게\(true\) 또는 불가능하게\(false\) 설정한다.
+
+{% page-ref page="tomatoclientthread-img.md" %}
 
 후기 : 다음주는 추석이 있어 이틀만 수업을 듣는데 2주동안 자리별로 격일로 비대면 수업을 진행하기로 했다. 집에서도 집중하기!
 
