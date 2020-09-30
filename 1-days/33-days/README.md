@@ -2,7 +2,7 @@
 description: 2020.09.28 - 33일차
 ---
 
-# 33 Days - Chat-level4, Tomato-level3 1대1대화, 대화명변경, 반복문 탈출, trim, set&getValueAt, JTextPane
+# 33 Days -1대1대화, 대화명변경, 반복문 탈출, trim, set&getValueAt, JTextPane, windowListener
 
 ### 사용 프로그램
 
@@ -47,6 +47,14 @@ description: 2020.09.28 - 33일차
 ### insertString
 
 * insertString\(시작위치, 메세지, 서식\(스타일\)\)
+
+### windowListener
+
+* 윈도우 이벤트를 담당하는 인터페이스
+* 여러 추상메서드 중 필요한 메서드만 구현하려면 - windowAdapter 클래스 이용 - 추상메서드가 오버라이딩 되어있는 클래스, 이 클래스를 통해 필요한 메서드만 재정의해 사용한다.
+* JFrame 사용시 화면의 X버튼으로 창을 닫으면 보기에는 닫히는것 같지만 JVM은 실제로 남아있다. - JVM에게는 아직 가동중인 프로세서 - setDefaultCloseOperation함수를 이용해 프로세서까지 닫는 기능이 필요하다.
+
+{% page-ref page="undefined-1.md" %}
 
 ## 1 : 1 대화 구현
 
@@ -93,7 +101,7 @@ description: 2020.09.28 - 33일차
 
 {% page-ref page="undefined.md" %}
 
-## level4 - 입력화면 부분 색상변경
+## level4 - 채팅창 글자 스타일 변경
 
 ### ChatClient
 
@@ -104,4 +112,8 @@ description: 2020.09.28 - 33일차
 
 1. 글자에 스타일을 입히기위한 작업 - insertString\(시작위치, 메세지, 서식\(스타일\)\)
 2. 예외처리가 필수 - e.printStackTrace\( \);
+
+{% page-ref page="undefined-1.md" %}
+
+후기 : 
 
