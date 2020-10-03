@@ -1,7 +1,5 @@
 # 이모티콘 구현
 
-
-
 ## PictureMessage.java
 
 이모티콘으로 사용할 이미지, gif 관리 클래스, 사용자가 화면의 이모티콘 버튼 클릭시 실행되는 화면
@@ -203,4 +201,43 @@ else if(obj==jbtn_emo) {//--3
 * 이모티콘 버튼을 누르면 구현해둔 이모티콘선택 화면을 띄운다.
 
 ## ChatServerThread
+
+### run메서드
+
+```java
+public void run() {//ChatServer에서 thread가 배분된 다음 호출
+		String msg = null;
+		boolean isStop = false;
+		try {
+			run_start: //while문 탈출라벨
+			while(!isStop) {
+				msg = (String)ois.readObject();//듣기 시작
+				cs.jta_log.append(msg+"\n");
+				cs.jta_log.setCaretPosition(cs.jta_log.getDocument().getLength());
+				StringTokenizer st = null;//선언과 생성을 왜 분리할까?
+				int protocol = 0;
+				if(msg!=null) {//메세지가 있다면
+					st = new StringTokenizer(msg,"#");//메세지가 없는경우에는 실행할 수 없다.
+					protocol = Integer.parseInt(st.nextToken());					
+				}//end of if
+				switch(protocol) {//protocol은 if문에서 token으로 꺼낸다
+				//default://case 없이 단위테스트하기
+				//System.out.println("protocol"+protocol);
+				case Protocol.MULTI:{//다자간대화
+					String nickName  = st.nextToken();
+					String message   = st.nextToken();
+					String fontColor = st.nextToken();
+					String fontStyle = st.nextToken();
+					String fontSize  = st.nextToken();
+					String imgChoice = "";
+					if(st.hasMoreTokens()) {//--깔대기 4
+						imgChoice = st.nextToken();//token이 남아 있다면 이모티콘이다.
+					}
+					broadCasting(Protocol.MULTI+"#"+nickName+"#"+message+"#"+fontColor
+											   +"#"+fontStyle+"#"+fontSize+"#"+imgChoice);//token이 없다면 ""로 둔다.
+				}break;
+					
+```
+
+* 10번에서 StringTokenizer를 선언하는 이유는 if문에서도 switch문에서도 사용해야하기 때문이다. - switch문을 이용하려면 구분번호인 protocol을 먼저 추출해야 한다.  - if문+Interger.parseInt\( \);
 
