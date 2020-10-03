@@ -240,4 +240,8 @@ public void run() {//ChatServer에서 thread가 배분된 다음 호출
 ```
 
 * 10번에서 StringTokenizer를 선언하는 이유는 if문에서도 switch문에서도 사용해야하기 때문이다. - switch문을 이용하려면 구분번호인 protocol을 먼저 추출해야 한다.  - if문+Interger.parseInt\( \);
+* 16-18 : switch문 단위테스트
+* 25번 : 우리는 이모티콘 멤버변수에 default값을 주었지만 주지않은 경우에는 nextToken이 공백이라 진행되지 않으므로 " "으로 초기화시킨다.
+* 26-28번 : 이모티콘을 받지않았으므로 token이 남아있다면 이모티콘 값이다. 그때 담는다.
+* 29번 : 말하기, 이모티콘 멤버변수에 기본값을 주거나, 주지않더라도 25-28번을 진행했으면 괜찮지만 그렇지 않은 경우에 이모티콘이 없다면 nullPointerException이 발생할 수 있다.
 

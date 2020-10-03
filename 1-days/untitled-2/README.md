@@ -80,7 +80,7 @@ description: 2020.09.23 - 31일차
 
 * default 사용
 * switch의 조건다음 구현문에 바로 default: 하면 case없이도 단위테스트가 가능하다.
-* ex\) switch\(조건\) { dafault : sysout구문} 
+* ex\) switch\(조건\) { dafault : System.out.println\( \) } 
 
 ### 프로시저
 
