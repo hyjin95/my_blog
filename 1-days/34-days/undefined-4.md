@@ -312,12 +312,16 @@ public void run() {
 ```
 
 * 1번 : 이모티콘을 구분하는 멤버변수의 값이 설정해둔 기본값이 아니라, 이모티콘이름 이라면
+* 3번 : 이모티콘이름을 담는 배열안의 이름 갯수만큼 반복한다.
+* 4,5번 : 배열안의 이름과 사용자가 선택한 이모티콘값이 같다면 sas2변수의 스타일을 Icon으로 set한다. Icon = new ImaegeIcon\(path+cc.pm.imgNames\[i\]\) - 스타일에 해당 이모티콘을 담는다.
+* 7번 : 사용자 화면에 이모티콘이 담긴 스타일을 출력한다.
+* 8번 : 다음 이모티콘 선택값을 위해 다시 기본값으로 초기화 한다.
 
 ### 일반 대화인 경우
 
 ```java
 		///////////////////////////일반 메세지 일때////////////////////////////////////
-		else if(imgChoice.equals("default")) {//이모티콘이 아닌 일반 메세지(dafault)를 담고 있다면
+		else if(imgChoice.equals("default")) {
 			SimpleAttributeSet sas = makeAttribute(styles);
 			try {
 				cc.sd_display.insertString(cc.sd_display.getLength(), "["+nickName+"]"+" : "+message+"\n", sas);
@@ -329,4 +333,7 @@ public void run() {
 	}break;
 ```
 
-* 
+* 2번 : 이모티콘을 구분하는 멤버변수의 값이 설정해둔 기본값이라면 일반대화인 경우이다.
+* 3번 : 이모티콘이 아닌 문자를 출력하므로 문자에 대한 style을 생성한다. 
+* 5번 : 사용자 화면에 대화 출력
+

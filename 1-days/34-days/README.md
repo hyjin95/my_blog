@@ -80,3 +80,17 @@
 
 ## 이모티콘 구현
 
+### PictureMessage
+
+* 
+### ChatClient
+
+* 
+### ChatServerThread
+
+* 
+### ChatClientThread
+
+* 
+후기 : 이제 추석연휴이다. 재충전의 시간을 갖고 체력도 비축하고 그동한 했던 정리에 부족한 부분들을 메꾸는 시간을 가지도록 해야겠다.
+
