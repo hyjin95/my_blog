@@ -141,6 +141,14 @@ description: 2020.09.22 - 30일차
 * ClientThread : single thread
 * TalkServerThread : multi thread
 
+### 입장 알림 구현
+
+1. 로그인이 성공하는 순간, 현재 접속자에게 채팅방 입장 메세지를 출력한다.
+2. '나'에게는 입장해있는 모든 접속자를 띄워준다. 접속자 모두에게 '나'의 입장 메세지를 띄운다.
+3. Client클래스에서 서버접속과 함께 100\#닉네임 메세지를 말한다. - oos.writeObject\(\);
+4. server클래스에서 접속이 성공하면 thread를 부여하고 socket을 생성한다.
+5. severThread클래스에서 접속된 thread의 말하기를 듣고, 다시 말한다. - ois.readObject\( \); - StringTokenizer - '나'에게 send메서드를 이용해 메세지를 말하고, 모두에게는 broadCasting메서드를 이용해 말한다. - 접속과 동시에 이루어져야 하므로 생성자에 구현한다.
+
 {% page-ref page="talkserverthread-1.md" %}
 
 {% page-ref page="talkclient.md" %}

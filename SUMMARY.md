@@ -99,7 +99,7 @@
     * [TalkServer](1-days/30-days/talkserverthread-1.md)
     * [TalkServerThread](1-days/30-days/talkserverthread.md)
     * [TalkClient](1-days/30-days/talkclient.md)
-  * [31 Days - Thread-revel2, Tokenizer, swicth-default, label](1-days/untitled-2/README.md)
+  * [31 Days - Thread-revel2, Tokenizer, swicth-default, label, 로그인-프로시저](1-days/untitled-2/README.md)
     * [Toad&CMD - procedure](1-days/untitled-2/toad-and-cmd-procedure.md)
     * [Login](1-days/untitled-2/login-1.md)
     * [BandServer](1-days/untitled-2/bendserver.md)
