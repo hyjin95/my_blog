@@ -290,34 +290,43 @@ public void run() {
 
 * 기존의 대화 처리 구문에서 구현한다.
 * 24번 : 이모티콘을 받는다. 없으면 " ", 있으면 이모티콘의 이름이 담긴다.
+* MutableAttributeSet 클래스타입의 변수를 simpleAttributeSet메서드로 구현한다. - 이모티콘을 위한 스타일 생성
 
-### run 메서드 -2
+### 이모티콘을 선택한 경우
 
 ```java
-					if(!imgChoice.equals("default")) {//default가 아닌 이모티콘을 담고있다면
-						int i = 0;
-						for(i=0;i<cc.pm.imgNames.length;i++) {
-							if(cc.pm.imgNames[i].equals(imgChoice)) {
-								StyleConstants.setIcon(sas2, new ImageIcon(path+cc.pm.imgNames[i]));
-								try {
-									cc.sd_display.insertString(cc.sd_display.getLength(), "\n", sas2);
-									cc.pm.imgChoice="default";
-								} catch (Exception e) {
-									System.out.println(e.toString());
-								}
-							}
-						}
-					}////////////////////////end of 이모티콘 일때/////////////////////////////////					
-					///////////////////////////일반 메세지 일때////////////////////////////////////
-					else if(imgChoice.equals("default")) {//이모티콘이 아닌 일반 메세지(dafault)를 담고 있다면
-						SimpleAttributeSet sas = makeAttribute(styles);
-						try {
-							cc.sd_display.insertString(cc.sd_display.getLength(), "["+nickName+"]"+" : "+message+"\n", sas);
-						} catch (Exception e) {
-							System.out.println(e.toString());
-						}
+		if(!imgChoice.equals("default")) {//default가 아닌 이모티콘을 담고있다면
+			int i = 0;
+			for(i=0;i<cc.pm.imgNames.length;i++) {
+				if(cc.pm.imgNames[i].equals(imgChoice)) {
+					StyleConstants.setIcon(sas2, new ImageIcon(path+cc.pm.imgNames[i]));
+					try {
+						cc.sd_display.insertString(cc.sd_display.getLength(), "\n", sas2);
+						cc.pm.imgChoice="default";
+					} catch (Exception e) {
+						System.out.println(e.toString());
 					}
-					cc.jtp_display.setCaretPosition(cc.sd_display.getLength());					
-				}break;
+				}
+			}
+		}////////////////////////end of 이모티콘 일때/////////////////////////////////					
 ```
 
+* 1번 : 이모티콘을 구분하는 멤버변수의 값이 설정해둔 기본값이 아니라, 이모티콘을 선택한 경우라면
+
+### 일반 대화인 경우
+
+```java
+		///////////////////////////일반 메세지 일때////////////////////////////////////
+		else if(imgChoice.equals("default")) {//이모티콘이 아닌 일반 메세지(dafault)를 담고 있다면
+			SimpleAttributeSet sas = makeAttribute(styles);
+			try {
+				cc.sd_display.insertString(cc.sd_display.getLength(), "["+nickName+"]"+" : "+message+"\n", sas);
+			} catch (Exception e) {
+				System.out.println(e.toString());
+			}
+		}
+		cc.jtp_display.setCaretPosition(cc.sd_display.getLength());					
+	}break;
+```
+
+* 
