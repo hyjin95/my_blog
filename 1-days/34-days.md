@@ -32,4 +32,49 @@
 
 ### 사용자의 접속경로
 
-1. 
+1. server에서 접속자의 socket생성 : new socket
+2. server에서 serverThread생성 : 생성자실행
+3. '나'입장, 현재 접속자 알림을 '나'에게 전송
+4. '나'포함 모두에게 입장 알림 전송
+5. 사용자가 client에서 문자, 버튼 입력
+6. actionPerformed실행 : 형식에 맞춰 oos.writeObject함수로 말하기
+7. serverThread의 run메서드가 청취
+8. run메서드가 구분protocol에 따라 broadCasting, send메서드로 말할 대상을 선정, 말하기
+9. clientThread의 run메서드가 청취
+10. run메서드가 구분protocol에 따라 출력, 응답 진행
+
+### ServerThread의 oos, ois
+
+* chatServer의 socket과 serverSocket을 동기화한다. - socket.accept\( \)함수를 통과하면 server의 socket은 접속자 정보를 수집한다. - serverThread는 해당 접속자의 정보가 담긴 socket으로 oos, ois를 생성한다.
+* 말하기, 듣기를 위해서는 반드시 해당 소켓객체가 생성되어있어야한다. - socket이 먼저
+* oos : ObjectOutputStream\(client.getOutputStream\); - client정보가 담긴 socket으로 oos 생성
+* ois : ObjectInputStream\(client.getInputStream\); - client정보가 담긴 socket으로 ois 생성
+* client정보가담긴 server의 socket이 null상태라면 nullPointerException이 발생한다.
+
+### ServerThread생성자
+
+* serverthread에서 말하기는 send, broadCasting메서드가, 듣기는 run함수가 처리한다.
+* 생성자의 역할 - 접속과 동시에 입장방송을 한다. : 로그인처리 - 단톡방 생성시 벡터에 접속자 thread를 추가한다. : 멀티스레드제어
+
+### ServerThread run메서드
+
+* Server의 run메서드 안에서 접속자 접속시 thread를 부여하고, 생성자를 호출한뒤 호출된다.
+* 입장이 정상적으로 이루어져야 소통이 이루어진다.
+
+### BroadCasting, send메서드
+
+* broadCasting - 멀티스레드 말하기용 - 조건 없이 Vector안의 모든 접속자에게 말한다.
+* send - 싱글스레드 말하기용 - 말하는 상대의 조건이 있는 경우에 사용한다.
+
+### 접속자 정보 유지
+
+1. DB, Oracle 연동
+2. server에 멤버변수로 구분가능한 변수를 둔다. : nickName
+3. 접속 변수마다 thread를 부여한다.
+4. Vector에 담아 관리, 유지한다.
+
+### 객체주입\(인스턴스화\)
+
+* server - serverThread가 server의 안에 주입
+* client - clientThread가 client의 안에 주입 - client가 login의 안에 주입 - pictureMessage가 client의 안에 주입 되어야한다.
+
