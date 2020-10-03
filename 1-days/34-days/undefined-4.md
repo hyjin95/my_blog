@@ -245,3 +245,79 @@ public void run() {//ChatServer에서 thread가 배분된 다음 호출
 * 26-28번 : 이모티콘을 받지않았으므로 token이 남아있다면 이모티콘 값이다. 그때 담는다.
 * 29번 : 말하기, 이모티콘 멤버변수에 기본값을 주거나, 주지않더라도 25-28번을 진행했으면 괜찮지만 그렇지 않은 경우에 이모티콘이 없다면 nullPointerException이 발생할 수 있다.
 
+## ChatClientThread
+
+### 선언부
+
+```java
+public class ChatClientThread extends Thread {
+	
+	String path = "C:\\Users\\user\\Desktop\\web\\work_space\\dev_java\\src\\net\\tomato_step4\\";
+```
+
+* 이모티콘 주소번지를 멤버변수에 선언, 생성한다.
+
+### run 메서드 -1
+
+```java
+public void run() {
+		boolean isStop = false;
+		while(!isStop) {
+			try {
+				String msg = "";
+				msg = (String)cc.ois.readObject();
+				StringTokenizer st = null;//해당사항이 없을 수 있어 생성은 따로한다.
+				int protocol = 0;
+				if(msg!=null) {
+					st = new StringTokenizer(msg,"#");
+					protocol = Integer.parseInt(st.nextToken());//번호를 선언해둔 변수에 담는다.
+				}///end of if
+				switch(protocol) {	
+				case Protocol.MULTI:{//일반 다자간 메세지
+					String nickName  = st.nextToken();
+					String message   = st.nextToken();
+					String fontColor = st.nextToken();
+					String fontStyle = st.nextToken();
+					String fontSize  = st.nextToken();
+					String styles[] = new String[3];
+					styles[0] = fontColor;
+					styles[1] = fontStyle;
+					styles[2] = fontSize;
+					String imgChoice = st.nextToken();
+					//JOptionPane.showMessageDialog(cc,"imgChoice : "+imgChoice);//단위테스트
+					MutableAttributeSet sas2 = new SimpleAttributeSet();//이모티콘을 위한 스타일
+```
+
+* 기존의 대화 처리 구문에서 구현한다.
+* 24번 : 이모티콘을 받는다. 없으면 " ", 있으면 이모티콘의 이름이 담긴다.
+
+### run 메서드 -2
+
+```java
+					if(!imgChoice.equals("default")) {//default가 아닌 이모티콘을 담고있다면
+						int i = 0;
+						for(i=0;i<cc.pm.imgNames.length;i++) {
+							if(cc.pm.imgNames[i].equals(imgChoice)) {
+								StyleConstants.setIcon(sas2, new ImageIcon(path+cc.pm.imgNames[i]));
+								try {
+									cc.sd_display.insertString(cc.sd_display.getLength(), "\n", sas2);
+									cc.pm.imgChoice="default";
+								} catch (Exception e) {
+									System.out.println(e.toString());
+								}
+							}
+						}
+					}////////////////////////end of 이모티콘 일때/////////////////////////////////					
+					///////////////////////////일반 메세지 일때////////////////////////////////////
+					else if(imgChoice.equals("default")) {//이모티콘이 아닌 일반 메세지(dafault)를 담고 있다면
+						SimpleAttributeSet sas = makeAttribute(styles);
+						try {
+							cc.sd_display.insertString(cc.sd_display.getLength(), "["+nickName+"]"+" : "+message+"\n", sas);
+						} catch (Exception e) {
+							System.out.println(e.toString());
+						}
+					}
+					cc.jtp_display.setCaretPosition(cc.sd_display.getLength());					
+				}break;
+```
+
