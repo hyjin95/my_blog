@@ -78,3 +78,5 @@
 * server - serverThread가 server의 안에 주입
 * client - clientThread가 client의 안에 주입 - client가 login의 안에 주입 - pictureMessage가 client의 안에 주입 되어야한다.
 
+## 이모티콘 구현
+
