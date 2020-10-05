@@ -66,6 +66,8 @@ public class MapTest {
 * 타입이 더 크더라도 제네릭타입이 다르면 성립하지 않는다.
 * 17번 : 동일한 Vector타입이지만 제네릭타입이 달라 성립하지 않는다.            
 
+### Map 인터페이스
+
 ```java
 		//웹서비스 or 모바일 서비스시에는 우선순위가 높은 편
 		//단점 : 순서가 없어 차례를 맞출 수 없다.
@@ -91,10 +93,26 @@ public class MapTest {
 		mapList.add(map);
 ```
 
-### Map 인터페이스
-
-```text
-
+```java
+		//one,two,three는 컬럼, 뒤의 value는 row가 된다.
+		//map에 있는 정보를 출력해보시오.
+		Object obj[] = map.keySet().toArray();//1줄로 나타내보기
+		Set<String> set = map.keySet();//2줄로 나타내보기 -1, Set클래스에서 toArray를 제공해준다.
+		Object obj2[] = set.toArray();//2줄로 나타내보기 -2
+		for(int i=0;i<obj.length;i++) {
+			String key = obj[i].toString();
+			System.out.println(map.get(key));
+		}
+		//ArrayList에 있는 정보를 출력해보시오.
+		for(int j=0;j<mapList.size();j++) {
+			Map rmap = mapList.get(j);
+			Object keys[] = rmap.keySet().toArray();//1줄로 나타내보기
+			for(int i=0;i<obj.length;i++) {
+				String key = keys[i].toString();
+				System.out.println(rmap.get(key));
+			}
+		}
+	}}
 ```
 
 * Map&lt;key, value&gt;
