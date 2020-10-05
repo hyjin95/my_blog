@@ -169,6 +169,8 @@ public class MapTest {
 * 11번 : ArrayList를 검색할 Map선언, 생성. j=List 방 번호
 * 12번 : 11번에서 검색된 방의 key값을 담은 배열 선언, 생성
 * 13번 : 검색되는 만큼 반복
+* 14번 : 방마다 key를 꺼내서 받는다.
+* 15번 : 14번에서 꺼낸 key로 rmap검색, 출력 반복
 
 {% page-ref page="map-list.md" %}
 
