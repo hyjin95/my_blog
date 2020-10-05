@@ -119,7 +119,9 @@
     * [이모티콘 구현](1-days/34-days/undefined-4.md)
   * [35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현\(상\)](1-days/untitled-3/README.md)
     * [ZipCodeSearch - Map, List](1-days/untitled-3/map-list.md)
-    * [대기실 구현\(상\)](1-days/untitled-3/undefined.md)
+    * [대기실 구현\(상\)](1-days/untitled-3/undefined/README.md)
+      * [Protocol](1-days/untitled-3/undefined/protocol.md)
+      * [Room](1-days/untitled-3/undefined/room.md)
   * [Untitled](1-days/untitled-4.md)
   * [Untitled](1-days/untitled-1.md)
 
