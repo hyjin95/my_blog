@@ -1,4 +1,4 @@
-# Room
+# Room - getter, setter
 
 ```java
 package net.tomato_step4;

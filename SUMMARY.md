@@ -121,7 +121,7 @@
     * [ZipCodeSearch - Map, List](1-days/untitled-3/map-list.md)
     * [대기실 구현\(상\)](1-days/untitled-3/undefined/README.md)
       * [Protocol](1-days/untitled-3/undefined/protocol.md)
-      * [Room](1-days/untitled-3/undefined/room.md)
+      * [Room - getter, setter](1-days/untitled-3/undefined/room.md)
   * [Untitled](1-days/untitled-4.md)
   * [Untitled](1-days/untitled-1.md)
 
