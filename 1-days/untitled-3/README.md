@@ -68,6 +68,15 @@ public class MapTest {
 
 ### Map 인터페이스
 
+* Map&lt;key, value&gt;
+* 대표적인 인터페이스 중 하나
+* 검색속도가 가장 빠른 인터페이스
+* 대표적인 구현체 클래스 : HashMap, HashTable
+* key : 값을 읽을\(꺼낼\) 수 있게 해주는 중복불가능한 key
+* ORM\(ObjectRelationMap\)솔루션 중 하나인 MyBatis\(오픈소스\)에서 많이 사용된다.
+
+### List 값유지, Map 검색
+
 ```java
 		//웹서비스 or 모바일 서비스시에는 우선순위가 높은 편
 		//단점 : 순서가 없어 차례를 맞출 수 없다.
@@ -114,13 +123,6 @@ public class MapTest {
 		}
 	}}
 ```
-
-* Map&lt;key, value&gt;
-* 대표적인 인터페이스 중 하나
-* 검색속도가 가장 빠른 인터페이스
-* 대표적인 구현체 클래스 : HashMap, HashTable
-* key : 값을 읽을\(꺼낼\) 수 있게 해주는 중복불가능한 key
-* ORM\(ObjectRelationMap\)솔루션 중 하나인 MyBatis\(오픈소스\)에서 많이 사용된다.
 
 ### syncronized
 
