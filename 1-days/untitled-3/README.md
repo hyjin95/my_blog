@@ -179,7 +179,19 @@ public class MapTest {
 
 {% page-ref page="map-list.md" %}
 
+## 대기실&단톡방 구현
 
+### Login
 
+* 
+### ChatClientVer2
+
+* 
+### WaitRoom
+
+* 
+### MessageRoom
+
+* 
 
 
