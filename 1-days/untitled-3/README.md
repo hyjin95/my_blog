@@ -32,7 +32,7 @@ description: 2020.10.05 - 35일차
 
 ## 필기
 
-## List 인터페이스
+### List 인터페이스
 
 * 대표적인 인터페이스 중 하나
 * 배열형태의 자료 구조
@@ -40,13 +40,11 @@ description: 2020.10.05 - 35일차
 * ArrayList - 동기화를 지원하지 않는다. - 읽기, 쓰기가 빠르다. - 싱글스레드에서 안전하다.
 * Vector - 동기화 지원, data의 안전성과 신뢰성이 높다. - 읽기, 쓰기가 느리다. - 동기화를 하면 시간이 더 걸린다. 조건을 비교하므로, 순서를 따져 대기시킨다. - 멀티스레드에서 안전하다.
 
+### List&lt;타입&gt;
+
 ```java
 public class MapTest {
-	synchronized void m() {}//동기화 메서드
-	void m2() {
-		//synchronized {}//부분동기화
-	}
-	
+
 	void methodA(List<Button> li) {}//권장사항O
 	void methodB(ArrayList<Integer> al) {}//권장사항X, ArrayList는 싱글스레드용으로 경합이 벌어질때 사용하면 버그의 원인이 될 수 있다.
 	void methodC(Vector<String> v) {}//권장사항X
@@ -106,6 +104,14 @@ public class MapTest {
 * ORM\(ObjectRelationMap\)솔루션 중 하나인 MyBatis\(오픈소스\)에서 많이 사용된다.
 
 ### syncronized
+
+```java
+public class MapTest {
+	synchronized void m() {}//동기화 메서드
+	void m2() {
+		//synchronized { }//부분동기화
+	}
+```
 
 * 스레드 동기화 메서드
 * 멀티스레드의 경우 동기화가 이루어지지않는 상태로 진행하게되면 스레드끼리 공유하는 data의 안정성과 신뢰도를 보장할 수 없다.
