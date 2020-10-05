@@ -2,7 +2,7 @@
 description: 2020.10.05 - 35일차
 ---
 
-# 35 Days - Map, List, iterator, syncronized 대기실 구현
+# 35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현\(상\)
 
 ### 사용 프로그램
 
@@ -63,8 +63,8 @@ description: 2020.10.05 - 35일차
 ### Enumeration&Iterator
 
 * 자료구조\(Collection\)에 저장된 값에 접근하거나 꺼낼때 사용되는 인터페이스
-* **enumeration**  - 웹 에서 사용 - 제거메서드가 없다.
-* **iterator** - 자바에서 사용 - remove\( \) : 제거메서드가 있다. - Fail-Fast Iterator : 다른 스레드에서 해당 스래드 자료를 수정하려고 하면                                          ConcurrentModificationException을 발생시켜 일관성을 보장하는 것
+* **enumeration**  - 웹 에서 사용 - 제거메서드가 없다. - hasMoreElements\( \) : 남은 데이터가 있으면 true, 없으면 false 반환. while문에서 사용 - nextElement\( \) : 자료구조의 다음 데이터 반환
+* **iterator** - 자바에서 사용 - 데이터 추출 방식을 표준화하여 코드의 재활용이 가능하다. - remove\( \) : 제거메서드가 있다. - hasNext\( \) : 남은 데이터가 있으면 true, 없으면 false 반환. while문에서 사용 - next\( \) : 자료구조의 다음 데이터 반환 - Fail-Fast Iterator : 다른 스레드에서 해당 스래드 자료를 수정하려고 하면                                          ConcurrentModificationException을 발생시켜 일관성을 보장하는 것
 
 ### syncronized
 

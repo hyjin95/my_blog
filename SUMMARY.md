@@ -117,8 +117,9 @@
     * [글자 스타일 변경 구현](1-days/33-days/undefined-1.md)
   * [34 Days - level4복습, 이모티콘구현](1-days/34-days/README.md)
     * [이모티콘 구현](1-days/34-days/undefined-4.md)
-  * [35 Days - Map, List, iterator, syncronized 대기실 구현](1-days/untitled-3/README.md)
+  * [35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현\(상\)](1-days/untitled-3/README.md)
     * [ZipCodeSearch - Map, List](1-days/untitled-3/map-list.md)
+    * [대기실 구현\(상\)](1-days/untitled-3/undefined.md)
   * [Untitled](1-days/untitled-4.md)
   * [Untitled](1-days/untitled-1.md)
 
