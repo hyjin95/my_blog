@@ -136,17 +136,18 @@ public class MapTest {
 
 * 계속 put되면서 사라지는 map의 값을 유지하려면 List를 사용한다.
 * map을 담기위해 map타입의 List를 ArrayList로 생성한다.
-* map의 제네릭의 key는 String타입이고, 값은 여러종류를 담기위해 Object타입으로 한다. 
+* map의 제네릭의 key는 String타입이고, 값은 여러종류를 담기위해 Object타입으로 한다.
+
+### List의 map값 모두 출력
 
 ```java
 		//one,two,three는 컬럼, 뒤의 value는 row가 된다.
-		//map에 있는 정보를 출력해보시오.
-		Object obj[] = map.keySet().toArray();//1줄로 나타내보기
-		Set<String> set = map.keySet();//2줄로 나타내보기 -1, Set클래스에서 toArray를 제공해준다.
-		Object obj2[] = set.toArray();//2줄로 나타내보기 -2
+		Object obj[] = map.keySet().toArray();//1줄
+		Set<String> set = map.keySet();//2줄-1
+		Object obj2[] = set.toArray();//2줄-2
 		for(int i=0;i<obj.length;i++) {
 			String key = obj[i].toString();
-			System.out.println(map.get(key));
+			System.out.println(map.get(key));//단위테스
 		}
 		//ArrayList에 있는 정보를 출력해보시오.
 		for(int j=0;j<mapList.size();j++) {
@@ -159,6 +160,15 @@ public class MapTest {
 		}
 	}}
 ```
+
+* Set클래스가 제공해주는 toArray\( \) 메서드를 이용해 추출할 수 있다.
+* 2번 : 권장사항
+* 5번 : 검색되는 만큼 반복
+* 6번 : key를 map에서 받아온다.
+* 10번 : ArrayList의 방 갯수만큼 반복
+* 11번 : ArrayList를 검색할 Map선언, 생성. j=List 방 번호
+* 12번 : 11번에서 검색된 방의 key값을 담은 배열 선언, 생성
+* 13번 : 검색되는 만큼 반복
 
 {% page-ref page="map-list.md" %}
 
