@@ -189,10 +189,14 @@ public class MapTest {
 * 
 ### WaitRoom
 
-* 
+* 대기실
+* JPanel 상속
+
 ### MessageRoom
 
-* 
+* 단톡방
+* JPanel 상
+
 {% page-ref page="undefined/" %}
 
 후기 : 
