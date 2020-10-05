@@ -30,6 +30,11 @@ description: 2020.10.05 - 35일차
 * 최상위 단위는 Object이지만 최근 여러 종류의 원소, 집합의 의미로 Element=E를 사용한다.
 * 의미적으로 Element가 Object보다 크다.
 
+### 기본 Layout
+
+* JFrame : BorderLayout
+* JPanel : FlowLayout
+
 ## 필기
 
 ### List 인터페이스
