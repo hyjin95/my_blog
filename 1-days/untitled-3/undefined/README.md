@@ -253,7 +253,6 @@ public class MessageRoom extends JPanel{
 		mr.initDisplay();
 	}
 }
-
 ```
 
 ## 
