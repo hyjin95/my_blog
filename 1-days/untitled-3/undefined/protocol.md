@@ -32,3 +32,5 @@ public class Protocol {
 
 ```
 
+* 추가되는 구분번호에 따라 수정했다.
+

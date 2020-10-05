@@ -2,7 +2,7 @@
 description: 2020.10.05 - 35일차
 ---
 
-# 35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현\(상\),  Container
+# 35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현\(상\),  Container, content, tabbed
 
 ### 사용 프로그램
 
@@ -50,7 +50,7 @@ description: 2020.10.05 - 35일차
 * **검색속도가 가장 빠른** 자료구조 인터페이스
 * 대표적인 구현체 클래스 : HashMap, HashTable
 * key : 값을 읽을\(꺼낼\) 수 있게 해주는 중복불가능한 key, 구분자 역할로 List보다 검색효율이 높다.
-* ORM\(ObjectRelationMap\)솔루션 중 하나인 MyBatis\(오픈소스\)에서 많이 사용된다.
+* **ORM**솔루션 중 하나인 MyBatis\(오픈소스\)에서 많이 사용된다.
 *  데이터 추가 : map.put\(key값, value값\);
 *  데이터 추출 : map.get\(key값\);
 * **HashMap**
@@ -85,6 +85,13 @@ public class MapTest {
 * 멀티스레드의 경우 동기화가 이루어지지않는 상태로 진행하게되면 스레드끼리 공유하는 data의 안정성과 신뢰도를 보장할 수 없다.
 * 여러 스레드가 하나의 자원을 사용할때 현재 데이터를 사용하는 스레드를 제외하고는 다른 스레드들은 데이터에 접근 할 수 없도록 막는 개념 : block, unblock
 * syncronized예약어를 과도하게 사용하게되면 성능저하가 일어난다.
+
+### ORM
+
+* ObjectRelationMap
+* 데이터베이스와 객체지향 프로그래밍 언어간에 호환되지 않는 데이터를 변환해주는 프로그래밍 기법
+* DB테이블과 매핑되는 객체를 만들어 그 객체에서 DB를 관리하는 것
+* Room  - SQLite위에 추상화 계층을 제공하는 라이브러리 - 적은 양의 정형화된 데이터를 로컬에서 캐시와 같이 데이터를 유지하는 것 - 장치가 네트워크에 액세스 할 수 없는 상태라도 계속 탐색이 가능하다. - 이후에 온라인 상태가 되면 그동안의 모든 컨텐츠 변경 내용이 서버에 동기화 된다.
 
 ### List&lt;타입&gt;
 
@@ -200,6 +207,10 @@ public class MapTest {
 * java GUI library Swing에서 제공하는 JFrame의 객체 메서드
 * contentPane : 일반 컴포넌트를 가질 수 있는 패널 - 프레임 객체의 getContentPane\( \)메서드를 이용해 얻을 수 있다.
 * Container con = this.getContentPane\( \); - this에 연결된 패널을 얻어\(알아내서\) 패널\(con\)을 붙인다.
+
+### JTabbedPane\( \)
+
+* 위에서 얻은 패널을 탭 형식으로 프레임에 보여주는 메서드
 
 ### Login
 
