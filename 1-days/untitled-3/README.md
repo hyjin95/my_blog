@@ -145,6 +145,8 @@ public class MapTest {
 
 ### List의 map값 모두 출력
 
+![List&amp;lt;Map&amp;gt;](../../.gitbook/assets/1%20%2815%29.png)
+
 ```java
 		//one,two,three는 컬럼, 뒤의 value는 row가 된다.
 		Object obj[] = map.keySet().toArray();//1줄
