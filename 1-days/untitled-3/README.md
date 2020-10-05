@@ -2,7 +2,7 @@
 description: 2020.10.05 - 35일차
 ---
 
-# 35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현\(상\)
+# 35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현\(상\),  Container
 
 ### 사용 프로그램
 
@@ -143,9 +143,12 @@ public class MapTest {
 * map을 담기위해 map타입의 List를 ArrayList로 생성한다.
 * map의 제네릭의 key는 String타입이고, 값은 여러종류를 담기위해 Object타입으로 한다.
 
-### List의 map값 모두 출력
+### List의 map값 
 
 ![List&amp;lt;Map&amp;gt;](../../.gitbook/assets/1%20%2815%29.png)
+
+* n개인 key를 Object타입의 배열에 담는다. - 소유주.keySet\( \)함수를 이용해 map의 key값을 set한다. - 소유주.toArray\( \)함수를 이용해 배열에 set한다. - 소유주.keySet\( \).toArray\( \);
+* n개의 key를 갖는 n개의 map을 List에 담아 유지한다. - List&lt;Map&lt; , &gt;&gt;
 
 ```java
 		//one,two,three는 컬럼, 뒤의 value는 row가 된다.
@@ -183,12 +186,31 @@ public class MapTest {
 
 ## 대기실&단톡방 구현
 
+### Container
+
+![](../../.gitbook/assets/1%20%2816%29.png)
+
+* javax.swing 패키지에서 제공되는 화면 클래스
+* Object를 상속하는 Window, JFrame의 부모 클래스
+* window\(창\)의 역할을 하고, 컨테이너가 될수 있는 컨포넌트는 JFramem JPanel, JApplet이 있다. - JFrame, JApplet : 최소화, 최대화, 닫기 버튼을 갖는 윈도우 구조의 최종 컨테이너 - JPanel : 투명 윈도우로 중간 컨테이너의 역할로서 JFrame이나 JApplet에 추가된다.
+* JPanel을 JFrame에 추가할때 사용하는 클래스  - getContentPane\( \)
+
+### getContentPane\( \)
+
+* java GUI library Swing에서 제공하는 JFrame의 객체 메서드
+* contentPane : 일반 컴포넌트를 가질 수 있는 패널 - 프레임 객체의 getContentPane\( \)메서드를 이용해 얻을 수 있다.
+* Container con = this.getContentPane\( \); - this에 연결된 패널을 얻어\(알아내서\) 패널\(con\)을 붙인다.
+
 ### Login
 
-* 
+* 로그인 성공시 새로운 clientVer2클래스로 연결한다.
+
 ### ChatClientVer2
 
-* 
+![](../../.gitbook/assets/2%20%2811%29.png)
+
+* 패널과 contentPane을 이용해 대기실과 단톡방 화면을 구현한다.
+
 ### WaitRoom
 
 * 대기실
@@ -197,7 +219,7 @@ public class MapTest {
 ### MessageRoom
 
 * 단톡방
-* JPanel 상
+* JPanel 상속
 
 {% page-ref page="undefined/" %}
 
