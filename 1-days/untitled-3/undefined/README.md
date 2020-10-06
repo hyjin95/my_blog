@@ -72,7 +72,7 @@ public class ChatClientVer2 extends JFrame {
 ```java
 	public ChatClientVer2() {}
 	
-	public ChatClientVer2(Login login) {
+	public ChatClientVer2(Login login) {//로그인 성공시 호출
 		this.login = login;
 		this.nickName = login.nickName;//접속자 동기화
 		try {
