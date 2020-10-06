@@ -164,7 +164,7 @@ public class MapTest {
 		Object obj2[] = set.toArray();//2줄-2
 		for(int i=0;i<obj.length;i++) {
 			String key = obj[i].toString();
-			System.out.println(map.get(key));//단위테스
+			System.out.println(map.get(key));//단위테스트
 		}
 		//ArrayList에 있는 정보를 출력해보시오.
 		for(int j=0;j<mapList.size();j++) {
