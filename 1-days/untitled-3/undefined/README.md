@@ -122,10 +122,16 @@ public class ChatClientVer2 extends JFrame {
 
 * 3번 : this\(JFrame\)의 title설정
 * 7-9번 : 접속자의 소켓으로 말하기, 듣기 구현
-* 12번 : 로컬 데이터를 유지시켜주는 Room타입의 변수를 선언, 생성한다.
+* 12번 : 단톡방 정보를 저장하는 저장소클래스 Room타입의 변수를 선언, 생성한다.
 * 13-17번 : room변수에 필요한 값을 저장, 초기한다.  - title\(단톡방명\), current\(현재 정원\), state\(상태\)
 * 18번 : 로그인 성공 알림 말하기, 로그인 후 일단 대기 상태이므로 Protocol.WAIT변수를 사용
 * 21번 : 서버의 말하기를 듣는 ClientThread클래스가 말해주는 것을 듣기위한 준비 - \(this\)로 접속자와 동기화, 연동한다.
+
+{% page-ref page="room.md" %}
+
+{% page-ref page="protocol.md" %}
+
+
 
 ### JFrame화면 구현&main
 
