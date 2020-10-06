@@ -122,7 +122,7 @@
     * [대기실 구현](1-days/untitled-3/undefined/README.md)
       * [Protocol 2](1-days/untitled-3/undefined/protocol.md)
       * [Room - getter, setter](1-days/untitled-3/undefined/room.md)
-  * [36 Days -](1-days/untitled-4/README.md)
-    * [단톡방 관리 구현](1-days/untitled-4/undefined.md)
+  * [36 Days - 단톡방 생성, 관리 구현,](1-days/untitled-4/README.md)
+    * [단톡방 생성, 관리 구현](1-days/untitled-4/undefined.md)
   * [Untitled](1-days/untitled-1.md)
 
