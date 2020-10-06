@@ -2,7 +2,7 @@
 description: 2020.10.05 - 35일차
 ---
 
-# 35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현\(상\),  Container, content, tabbed
+# 35 Days - Map, List, iterator, enumeration, syncronized, 대기실구현,  Container, content, tabbed
 
 ### 사용 프로그램
 
