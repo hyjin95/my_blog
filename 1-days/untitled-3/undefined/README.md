@@ -1,5 +1,11 @@
 # 대기실 구현
 
+## Room&Protocol
+
+{% page-ref page="room.md" %}
+
+{% page-ref page="protocol.md" %}
+
 ## Login
 
 ### 선언부
@@ -126,12 +132,6 @@ public class ChatClientVer2 extends JFrame {
 * 13-17번 : room변수에 필요한 값을 저장, 초기한다.  - title\(단톡방명\), current\(현재 정원\), state\(상태\)
 * 18번 : 로그인 성공 알림 말하기, 로그인 후 일단 대기 상태이므로 Protocol.WAIT변수를 사용
 * 21번 : 서버의 말하기를 듣는 ClientThread클래스가 말해주는 것을 듣기위한 준비 - \(this\)로 접속자와 동기화, 연동한다.
-
-{% page-ref page="room.md" %}
-
-{% page-ref page="protocol.md" %}
-
-
 
 ### JFrame화면 구현&main
 
@@ -288,10 +288,8 @@ public class WaitRoom extends JPanel implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
-
 }
 ```
 
@@ -325,5 +323,5 @@ public class MessageRoom extends JPanel{
 }
 ```
 
-* 토대만 구현, 36일차에 완성한다.
+* 토대만 구현, 37일차에 완성한다.
 
