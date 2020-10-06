@@ -115,5 +115,5 @@ public class ChatServerThread extends Thread {
 
 ## ChatClientThread
 
-* 37일차에 구
+* 37일차에 구현
 

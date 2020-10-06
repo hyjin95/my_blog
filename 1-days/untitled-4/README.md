@@ -43,7 +43,7 @@ description: 2020.10.06 - 36일차
 
 * 단위 테스트가가능 -&gt; 통합테스트 가능 -&gt; 운영서버에 배포, 이행이 가능
 
-## 톡방 생성, 관리 구현
+## 대기실&톡방 생성, 관리 구현
 
 ### Room
 
@@ -51,9 +51,6 @@ description: 2020.10.06 - 36일차
 * List 1 :  List&lt;ChatServerThread&gt; userList  - 톡방에 있는 접속자들의 thread정보가 담긴 List타입의 Vector - thread를 담고 있어 send의 oos를 사용할 수 있다. - 해당 톡방의 접속자들에게 말하려면 userList를 사용해야 할 것이다.
 * List 2 : List&lt;String&gt; nameList -  톡방에 있는 접속자들의 닉네임이 담긴 List타입의 Vector - String값일 뿐이므로 send의 oos를 사용할 수 없다.
 
-### ChatClilentVer2
-
-* 
 ### ChatServer
 
 * List : List&lt;Room&gt; roomList - 모든 톡방들의 정보를 담아 유지하는 List - 값이 담기는 곳   톡방이 생성되는곳, ChatServerThread클래스의 run메서드 안에 Protocol.CREATE case안에서
@@ -65,12 +62,27 @@ description: 2020.10.06 - 36일차
 
 ### ChatServerThread
 
-* 로그인에 성공하면 바로 채팅방에 접속되는 것이 아니라 대기실에 있게 된다. - 대기실에 입장했음을 서버에 알려 
+* 로그인에 성공하면 바로 채팅방에 접속되는 것이 아니라 대기실에 있게 된다. - clientVer2클래스에서 대기실에 입장했음을 말하는 것을 듣고 clientThread에 넘긴다.
 * 해당 톡방에 접속해있는 사람들에게만 전송하는 메서드를 구현해보자.
 
 ### ChatClientThreadVer2
 
+* ServerThread에서 대기실 입장을 알려주면 WaitRoom 클래스의 화면에 출력한다. - JTable에 대기실에 입장한 thread의 nickName과 위치\(대기 \|\| 대화방\)를 출력하자.
+
 {% page-ref page="undefined.md" %}
 
+## 대화방 입장 이벤트 구현
 
+### WaitRoom
+
+* 
+### ChatServerThread
+
+* 
+### ChatclientThread
+
+* 
+{% page-ref page="undefined-2.md" %}
+
+후기 : 
 
