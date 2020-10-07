@@ -23,8 +23,9 @@
 1. window 
 2. preferences
 3. General
-4. Workspace
-5. build
+4. Workspace : Refresh using native hooks or polling 체크
+5. build : save automatically before manual build 체크
+6. Apply and close
 
 ## 네이버 캡차API 활용
 
