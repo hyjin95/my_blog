@@ -33,7 +33,7 @@
 
 ### 캡차 제공 클래스
 
-* 캡차 키 발급 요청 ApiExamCaptchaNkey
-* 캡차 이미지 요청 ApiExamCaptchaImage
-* 사용자 입력값 검증 요청 ApiExamCaptchaNkeyResult - 사용자 입력값이 올바른 값인지 검증한 결과를 JSON형식으로 반환 - boolean타입 result변수로 반환
+* 캡차 키 발급 요청 클래스 : ApiExamCaptchaNkey - client ID와 client Secret을 넣어 출력하며 키 값이 출력된다.
+* 캡차 이미지 요청  클래스 : ApiExamCaptchaImage
+* 사용자 입력값 검증 요청 클래스 : ApiExamCaptchaNkeyResult - 사용자 입력값이 올바른 값인지 검증한 결과를 JSON형식으로 반환 - boolean타입 result변수로 반환
 
