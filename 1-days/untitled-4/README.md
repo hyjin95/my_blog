@@ -83,13 +83,24 @@ description: 2020.10.06 - 36일차
 
 ### WaitRoom
 
-* 
+* actionPerformed에서 입장버튼 클릭에 대한 이벤트 처리를 한다.
+* 방을 선택하지 않은 경우에 알림을 띄운다. - int 변수\[ \] = 해당jtable.getSelectedRow\( \);함수로 선택 값의 갯수를 담는다. - 변수.length가 0 이라면 선택값이 없는것이다. - 실행문 이후 return;으로 반드시 if문을 탈출시킨다.
+* 방 목록이 JTable에 표시되므로 JTable에서 값을 꺼내야한다. - 꺼낸값을 oos를 통해 말하기 해야하므로 try문 안에서 처리한다. - 해당Jtable.getRowCount\( \);함수로 방 목록의 갯수만큼 for문을 돌린다. - 해당JTable.isRowSelected\(i\)조건으로 if문을 돌린다. - String 변수 = \(String\)해당JTalbe의DTM.getValueAt\(i, 0\); 함수로 로우 값을 꺼낸다. - 선택된 i번째 로우 중 0번째 컬럼의 로우 값 - 필요한 정보가 수집됐으면 oos를 통해 서버에 전송한다. - 입장 protocol = Protocol.ROOM\_IN
+
 ### ChatServerThread
 
-* 
-### ChatclientThread
+* 위 waitRoom 클래스가 말한 값을 듣고 run메서드 안에서 처리한다.
+* 대기실의 대화방 목록에서 입장한 대화방의 인원수를 업데이트해야한다. - Room 클래스를 인스턴스화하여 전송받은 값으로 set해야 할 것이다.
+* 해당 대화방의 userList에 접속자의 thread를 추가해야한다. - Room 클래스를 인스턴스화하여 전송받은 값으로 add해야 할 것이다.
+* 해당 대화방의 nameList에 접속자의 닉네임을 추가해야한다. - Room 클래스를 인스턴스화하여 전송받은 값으로 add해야 할 것이다.
+* 방의 모든 접속자에게 입장 알림을 전송한다. - broadCasting
+* break;로 case를 끝내고 switch문을 탈출한다.
 
-* 
+### ChatclientThreadVer2
+
+* 위 serverThread에서 말한 값을 듣고 run메서드 안에서 출력한다.
+* 37일차에 구현
+
 {% page-ref page="undefined-2.md" %}
 
 후기 : 
