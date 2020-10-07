@@ -67,7 +67,15 @@ description: 2020.10.06 - 36일차
 
 ### ChatClientThreadVer2
 
-* ServerThread에서 대기실 입장을 알려주면 WaitRoom 클래스의 화면에 출력한다. - JTable에 대기실에 입장한 thread의 nickName과 위치\(대기 \|\| 대화방\)를 출력하자.
+* ServerThread에서 대기실 입장을 알려주면 WaitRoom 클래스의 화면에 출력한다. - JTable에 대기실에 입장한 thread의 nickName과 위치\(대기 \|\| 대화방\)를 출력하자. - Vector에 담아 dtm에 addRow한다.
+* ServerThread에서 방 생성을 알려주면 WaitRoom 클래스의 화면에 출력한다. - JTable에 생성된 방과 방의 현재입장인원을 출력하자. - Vector에 담아 dtm에 addRow한다.
+
+### 테이블 값 증가에 따른 스크롤바 이동
+
+* AdjustmentListener 인터페이스를 사용해 구현한다. - 스크롤바의 현재위치를 읽고 스크롤바가 이동될때 AdjustmentEvent가 발생한다.
+* 테이블의 세로 스크롤바만 이동할 여지가 있으므로 소유주.getVerticalScrollBar함수를 사용해서 소유주의 스크롤바에 addAdjustmentListener하여 adjustmentValueChanged메서드를 오버라이드 한다.
+* JScrollBar타입의 변수에 \(JScrollBar\)e.getSource\( \);하여 소스를 받아온다.
+* 변수.setValue\(변수.getMaximum\(\)\); 를 이용해 스크롤바의 최대위치에 set한다.
 
 {% page-ref page="undefined.md" %}
 
