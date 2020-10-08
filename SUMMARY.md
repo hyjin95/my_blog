@@ -125,8 +125,10 @@
   * [36 Days - 대기실&톡방 생성, 관리 구현, 방 입장 구현, 네이버 api](1-days/untitled-4/README.md)
     * [대기실&톡방 생성,관리 구현](1-days/untitled-4/undefined.md)
     * [대화방 입장 이벤트 구현](1-days/untitled-4/undefined-2.md)
-  * [37 Days - 네이버 서버 캡차API활용](1-days/untitled-5.md)
-  * [38 Days -](1-days/38-days.md)
+  * [37 Days - 네이버 서버 캡차API활용](1-days/untitled-5/README.md)
+    * [대기실&톡방 생성,관리 구현+](1-days/untitled-5/and-+.md)
+  * [38 Days -](1-days/38-days/README.md)
+    * [대화방 입장 이벤트 구현+](1-days/38-days/+.md)
   * [38 Days -](1-days/38-days-1.md)
   * [Untitled](1-days/untitled-1.md)
 
