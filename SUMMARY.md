@@ -129,6 +129,5 @@
     * [대기실&톡방 생성,관리 구현+](1-days/untitled-5/and-+.md)
   * [38 Days -](1-days/38-days/README.md)
     * [대화방 입장 이벤트 구현+](1-days/38-days/+.md)
-  * [38 Days -](1-days/38-days-1.md)
   * [Untitled](1-days/untitled-1.md)
 

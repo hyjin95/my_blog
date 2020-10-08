@@ -1,5 +1,5 @@
 ---
-description: 2020.10.08 - 37일차
+description: 2020.10.07 - 37일차
 ---
 
 # 37 Days - 네이버 서버 캡차API활용
