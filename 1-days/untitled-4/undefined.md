@@ -367,7 +367,7 @@ public class ChatServerThread extends Thread {
 * 24번 : 방이 생성되면 **ChatServer의 Vector인 roomList에 추가**해야한다.
 * 26번 : '내'가 생성한 방 정보에 대한 알림을 대기실의 모든 접속자에게 전송한다. - 대기실의 모든 접속자들의 화면에 해당 방이 보여져야한다.
 
-## ChatClientThread
+## ChatClientThreadVer2
 
 ```java
 public class ChatClientThreadVer2 extends Thread {

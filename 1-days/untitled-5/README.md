@@ -83,10 +83,10 @@ description: 2020.10.07 - 37일차
 
 ## 대기실&그룹방 구현 마무리
 
-1. 그룹방 생성시 생성자 외의 대기실 접속자들의 화면에도 생성된 그룹방이 나타나야한다. - ChatClientThread의 run메서드안에 case ROOM\_LIST 구현 - Protocol.ROOM\_LIST : 방 목록
+1. 그룹방 생성시 생성자 외의 대기실 접속자들의 화면에도 생성된 그룹방이 나타나야한다. - ChatClientThreadVer2의 run메서드안에 case ROOM\_LIST 구현 - Protocol.ROOM\_LIST : 방 목록
 2. 그룹방에 입장시, 입장한 사람의 화면은 대화방으로 변경되고, 상태도 대화방이름으로 변경돼야한다. - ChatServerThread의 run메서드안에 case ROOM\_INLIST 구현 - Protocol.ROOM\_INLIST : 방 입장인원 목록 - MessageRoom클래스에서 말하는 내용이다.
 
-{% page-ref page="and-+.md" %}
+{% page-ref page="and-+/" %}
 
 후기 : 채팅프로그램이 마무리 되었다! 배운것을 토대로 좀더 만져보고 구현해보는 시간을 가져야 겠다.
 
