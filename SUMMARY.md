@@ -122,7 +122,7 @@
     * [대기실 구현](1-days/untitled-3/undefined/README.md)
       * [Protocol 2](1-days/untitled-3/undefined/protocol.md)
       * [Room - getter, setter](1-days/untitled-3/undefined/room.md)
-  * [36 Days - 대기실&톡방 생성, 관리 구현, 방 입장 구현, 네이버 api](1-days/untitled-4/README.md)
+  * [36 Days - 대기실&톡방 생성, 관리 구현, 방 입장 구현, 네이버 api, Vector, ArrayList차이](1-days/untitled-4/README.md)
     * [대기실&톡방 생성,관리 구현](1-days/untitled-4/undefined.md)
     * [대화방 입장 이벤트 구현](1-days/untitled-4/undefined-2.md)
   * [37 Days - 네이버 서버 캡차API활용](1-days/untitled-5/README.md)

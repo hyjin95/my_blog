@@ -21,6 +21,9 @@ public class RoomSimulation {
 		Room room = new Room();
 ```
 
+* 9번 : Room의 getter, setter를 받아오기 위해 Room타입의 Vector를 생성한다.
+* 10번 : Room 클래스 인스턴스화 선언, 생성
+
 ### main 실행문
 
 ```java
@@ -52,6 +55,13 @@ public class RoomSimulation {
 		List<ChatServerThread> userList = new Vector<>();
 ```
 
+* 테스트를 위해 세가지 경우를 만들어 보았다.
+* 1,2번 : 대기실 화면에 표시할  정보는 방이름\(Title\)과 현재정원\(current\)이다.
+* 3번 : 방이 생성되면 여러 방을 관리하는 List에 add한다.
+* 4번 : String타입을 갖는 List타입의 Vector를 생성해 입장하는 접속자들의 이름을 담는다.
+* 5번 : room클래스의 이름을관리하는 List인 nameList에 위 Vector를 set한다.
+* 26번 : 접속자들의 정보 스레드를 관리할수 있는 ServerThread타입의 Vector를 생성한다.
+
 ### main 출력문
 
 ```java
@@ -71,6 +81,13 @@ public class RoomSimulation {
 }
 ```
 
+* 1번 : roomList는 그룹방이 생성될때마다 추가 되는 Vector이므로 size를 출력해보면 만들어진 그룹방의 갯수를 알 수 있다.
+* 3번 : 모든 방의 정보를 출력하기위해 roomList.size값 만큼 반복한다.
+* 4번 : Room 타입 r변수에 roomList에서 인덱스값 방의 정보를 꺼내 담는다.
+* 5,6번 : 위에서 정보가 담긴 Room타입 r변수에서 current\(현재인원\)과 방이름을 꺼내 출력한다.
+* 8번 : 방마다 그룹방안의 접속자 이름을 모두 출력하는 for문 - Room타입 r에 담긴 nameList의 size만큼 반복해야 모든 접속자가 표시될 수 있다.
+* 9번 : Room클래스를 이용해 nameList에서 인덱스 값 방의 정보를 출력한다.
+
 ## ChatClientVer2
 
 * 변동사항 없음
@@ -82,18 +99,6 @@ public class RoomSimulation {
 ### 선언부
 
 ```java
-/*
- * 왜 이벤트 처리시에는 인터페이스를 구현하는 것으로 설계를 했을까?
- * 버튼은 동일하지만 그 기능은 각각의 디바이스(장치)에 따라 다르다.
- * 장치마다 다르게 동작하도록 조작할 수도 있어야 할 것이다.
- * 상속을 하는 경우, 필요없는 메서드까지도 오버라이딩을 강요당할 수 있다.
- * 인터페이스의 경우에는 상속관계가 아니므로 강제조건없이 필요한 메서드만 오버라이딩할 수 있다.
- * 비교적 자유롭게 구현이 가능하고, 특정 클래스에 종속적이지 않게된다.
- * 재사용성, 이식성을 높이려면 인터페이스를 사용한다.
- * 결합도, 의존성이 낮아지므로 개발 기간을 단축할 수도 있고, 테스트 시에도 더 빠르게 해결할 수 있다.
- * 클래스 설계 시에 많이 활용되고 개발 4년차 이상 되었을때 설계를 담당한다.-업무를 알아야함
- * 게임엔진 설계나 프레임워크 개발할때에도 추상클래스나 인터페이스 중심의 설계/개발을 권장한다.
- */
 public class WaitRoom extends JPanel implements ActionListener{
 	
 	ChatClientVer2 ccv2 = null;
@@ -104,6 +109,14 @@ public class WaitRoom extends JPanel implements ActionListener{
 	int currentNum = 1;
 	Room room = null;
 ```
+
+* 이벤트를 처리하기위해 ActionListner를 impelements한다. - 인터페이스를 사용해 필요한 메서드만 구현해 사용한다.
+* 대기실 화면에 필요한 정보 : 구분하기위한 닉네임, 방이름, 현재정원
+* 위의 정보를 사용하기위해 그룹방관리 클래스이 dfjaskd\dls ddpddfkjdsklajfkld
+
+  속을 하는 경우, 필요없는 메서드까지도 오버라이딩을 강요당할 수 있다.
+
+  * 인터페이스의 경우
 
 ### actionPerformed - 톡방생성버튼 이벤트
 
