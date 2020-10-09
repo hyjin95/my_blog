@@ -146,6 +146,8 @@ public class ChatServer extends JFrame implements Runnable, ActionListener{
     List<Room> roomList = null;
 ```
 
+* 방 목록 관리를 위한 Room클래스 타입의 List를 선언한다.
+
 ### run 메서드
 
 ```java
@@ -153,6 +155,8 @@ public class ChatServer extends JFrame implements Runnable, ActionListener{
 	public void run() {//서버소켓과 클라이언트 소켓을 연결한다.
 		roomList = new Vector<Room>();
 ```
+
+* run메서드 안에 방 목록 List를 Vector로 생성한다.
 
 ## ChatServerThread
 
