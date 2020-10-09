@@ -112,11 +112,7 @@ public class WaitRoom extends JPanel implements ActionListener{
 
 * 이벤트를 처리하기위해 ActionListner를 impelements한다. - 인터페이스를 사용해 필요한 메서드만 구현해 사용한다.
 * 대기실 화면에 필요한 정보 : 구분하기위한 닉네임, 방이름, 현재정원
-* 위의 정보를 사용하기위해 그룹방관리 클래스이 dfjaskd\dls ddpddfkjdsklajfkld
-
-  속을 하는 경우, 필요없는 메서드까지도 오버라이딩을 강요당할 수 있다.
-
-  * 인터페이스의 경우
+* 위의 정보를 사용하기위해 그룹방관리 클래스인 Room클래스의 인스턴스를 선언해 놓는다.
 
 ### actionPerformed - 톡방생성버튼 이벤트
 
@@ -136,6 +132,10 @@ public class WaitRoom extends JPanel implements ActionListener{
 			}/////////end of if 단톡방 이름이 null이 아니라면/////////////////
 		}///////////////////jbtn_create 단톡방 생성 버튼 클릭시//////////////////
 ```
+
+* 톡방생성버튼에 대한 이벤트 구현부분
+* 5번 : 버튼이 눌리면 이름을 입력할수 있는 창을 띄운다.
+* 6-9번 : 이름이 입력되면 JFrame에 있는 소켓의 oos를 가져와 말하기 한다. - ChatClientVer2클래스에 구현된 oos를 사용해서 writeObject한다. - 방생성 구분번호 = Protocol.ROOM\_CREATE - 필요한 정보 : 구분번호, 방이름, 방인원 - 방인원은 default가 0명이므로 0을 전송한다.
 
 ## ChatServer
 
