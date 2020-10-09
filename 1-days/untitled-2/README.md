@@ -74,7 +74,14 @@ description: 2020.09.23 - 31일차
 * 300\# : 대화명변경 : 300\#현재닉네임\#변경닉네임\#변경알림문
 * 400\# : 이모티콘
 * 500\# : 종
-* \# : 구분자, 토큰의 역할 - 자바 API중 StringTokenizer클래스를 이요한다. - StringToken st = new StringToken\(처리할 Object, 구분자\); - st.nextToken\( \);으로 값을 빼온다, 값이 없으면 false를 반환
+* \# : 구분자, 토큰의 역할 - 자바 API중 StringTokenizer클래스를 이요한다.
+
+### StringTokenizer
+
+* 문자를 쪼개주는 클래스
+* **StringToken st = new StringToken\(처리할 Object, 구분자\);**
+* st.nextToken\( \);으로 값을 빼온다, 값이 없으면 false를 반환하는 메서드
+* st.hasMoreElements\(\), 다음 값이 남아있으면 true를 반환하는 메서드
 
 ### switch문 단위테스트
 

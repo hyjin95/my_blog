@@ -90,6 +90,36 @@ public class RoomSimulation {
 
 ## ChatClientVer2
 
+```java
+public void connect_process() {
+		//ㅇㅇ님의 대화창
+		this.setTitle(nickName+" 님의 대기실입니다.");
+		//oos, ois 생성
+		try {
+			//소켓 인스턴스화
+			socket = new Socket("192.168.123.7",4885);//소켓2	
+			oos = new ObjectOutputStream(socket.getOutputStream());//소켓2 말하기구현
+			ois = new ObjectInputStream(socket.getInputStream());//소켓2 듣기 구현
+			
+			//방 정보 초기화
+			Room room = new Room();
+			room.setTitle("스마트 웹모바일 엔지니어 과정 69기");//단위테스트용
+			//room.current = 10;
+			room.setCurrent(10);//권장사항 - 동시접속자를 처리하기 위함
+			//room.state = "대기";
+			room.setState("대기");
+			oos.writeObject(Protocol.WAIT+Protocol.seperator+nickName
+										 +Protocol.seperator+room.getState());//대기알림
+			//ChatClientThreadVer2 기동 = thread기동
+			ChatClientThreadVer2 cct2 = new ChatClientThreadVer2(this);
+			cct2.start();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	//////////////////////////end of connect_process/////////////////////////////
+```
+
 * 변동사항 없음
 
 {% page-ref page="../untitled-3/undefined/" %}
@@ -146,7 +176,8 @@ public class ChatServer extends JFrame implements Runnable, ActionListener{
     List<Room> roomList = null;
 ```
 
-* 방 목록 관리를 위한 Room클래스 타입의 List를 선언한다.
+* 방 목록 관리를 위한 Room클래스 타입의 List를 멤버변수로 선언한다.
+* ChatServer클래스에서 생성해야 관리가 가능하다 ServerThread는 스레드관리 클래스이므로
 
 ### run 메서드
 
@@ -179,7 +210,9 @@ public class ChatServerThread extends Thread {
 	String nickName = null;;
 ```
 
-### 생성자
+* clientThread로 넘겨야하는 정보인 현재 그룹방의 정보, 현재 인원수를 담는 변수를 멤버변수로 선언한다.
+
+### 생성자 - 접속성공시 실행
 
 ```java
 	public ChatServerThread(ChatServer cs) {//cs룰 객체주입받는다.
@@ -193,55 +226,85 @@ public class ChatServerThread extends Thread {
 			String msg = (String)ois.readObject();
 			cs.jta_log.append(msg+"\n");
 			cs.jta_log.setCaretPosition(cs.jta_log.getDocument().getLength());
-			//넘어오는정보 : 100#닉네임
+			//넘어오는정보 : 100#닉네임			
+```
+
+* 기존과 동일한 부분
+* msg = \(Protocol.WAIT+\|+nickName+\|+room.getState\( \) \); - state의 default는 "대기"이다.
+
+### 생성자 - 접속시 내정보 띄우기 
+
+```java
 			StringTokenizer st = null;
 			if(msg!=null) {
 				st = new StringTokenizer(msg,Protocol.seperator);
 			}
-			if(st.hasMoreElements()) {//boolean타입 있으면 true(진행)
+			if(st.hasMoreElements()) {
 				st.nextToken();//skip 100
 				nickName = st.nextToken();//닉네임
-				g_title = st.nextToken();//단톡방 이름
+				g_title = st.nextToken();//단톡방 이름 or "대기"
 			}
-			for(ChatServerThread cst : cs.globalList) {//입장하는 사람한테 모든 접속자를 알림
+			for(ChatServerThread cst : cs.globalList) {
 				String currentName = cst.nickName;
 				String currentState = cst.g_title;//접속자가 입장한 방의 이름으로 초기화
 				this.send(Protocol.WAIT+Protocol.seperator+currentName
 									   +Protocol.seperator+currentState);//this.nickName
 			}
-			System.out.println("방목록 관리 : "+cs.roomList.size());//값이 제대로 담겼는지 확인
-			//ROOM_LIST에 대한 처리 - 3단계 까지는 필요없던 코드
-			//현재 방 정보가 없다면 필요없는 코드 이므로
-			for(int i=0;i<cs.roomList.size();i++) {
-				Room room = cs.roomList.get(i);//room정보 인스턴스화
-				String title = room.title;
-				g_title = title;
-				int current =0;
-				if(room.userList!=null && room.userList.size()!=0) {//접속자가 있다면
-					current = room.userList.size();
-				}
-				g_current= current;
-				this.send(Protocol.ROOM_LIST+Protocol.seperator+g_title
-											+Protocol.seperator+g_current);
-			}
-			
-			cs.globalList.add(this);//나 자신의 스레드를 add하여 서버가 나에게 간섭할 수 있다.
-			//내가 입장한 후에 현재 접속자들의 접속 메세지를 처리하는 곳, 내가 처음에 입장한 경우에 실행
-			this.broadCasting(msg);//내가 입력한 메세지를 보내주는 것
-		} catch (Exception e) {
-			System.out.println(e.toString());
-		}
-	}///////////////////////////////end of TalkServerThread////////////////////////////
 ```
+
+* 생성자는 대기실에 입장과 동시에 이루어지므로 화면에 필요한 정보를 담아서 말해야한다. - 닉네임, 현재위치, 그룹방이름, 현재 정원
+* 1-4번 : StringTokenizer를 선언과 생성을 분리한다. - msg가 존재하는때에만 진행한다.
+* 5번 : msg가 존재하고 StringTokenizer에 다음 값이 존재 한다면, - hasMoreElements\( \)함수는 boolean타입으로 남은 값이 있다면 true를 반환하여 구현문을 진행한다.
+* 7,8번 : 닉네임, 그룹방이름 멤버변수를 가져온 값으로 초기화한다. - g\_title의 값은 은 "대기"아니면 현재접속자가 입장한 그룹방의 이름이다.
+* 10번 : ChatServer의 globalList, 즉 현재 접속자 모두만큼 반복한다.
+* 11,12번 : 접속자의 이름과 상태를 담을 변수를 선언, 생성한다. - 반복
+* 13번 : 현재 멤버변수 nickName인 '나'에게 send한다. -반복 - **'나'에게 모든 대기실 접속자의 닉네임과 상태를 전송한다.**
+
+### 생성자 - 접속시 방목록 띄우기
+
+```java
+		System.out.println("방목록 관리 : "+cs.roomList.size());
+		//ROOM_LIST에 대한 처리 - 3단계 까지는 필요없던 코드
+		//현재 방 정보가 없다면 필요없는 코드 이므로
+		for(int i=0;i<cs.roomList.size();i++) {
+			Room room = cs.roomList.get(i);//room정보 인스턴스화
+			String title = room.title;
+			g_title = title;
+			int current =0;
+			if(room.userList!=null && room.userList.size()!=0) {//접속자가 있다면
+				current = room.userList.size();
+			}
+			g_current= current;
+			this.send(Protocol.ROOM_LIST+Protocol.seperator+g_title
+										+Protocol.seperator+g_current);
+		}			
+		cs.globalList.add(this);//나 자신의 스레드를 add하여 서버가 나에게 간섭할 수 있다.
+		this.broadCasting(msg);//내가 입력한 메세지를 보내주는 것
+	} catch (Exception e) {
+		System.out.println(e.toString());
+	}
+}////////////////////////////end of TalkServerThread////////////////////////////
+```
+
+* 1번 : ChatServer의 roomList에 값이 제대로 담겼는지 확인하는 단위테스트문장.
+* 4번 : 생성된 그룹방이 하나라도 있다면
+* 5번 : Room클래스를 인스턴스화 하여 인스턴스 변수에 roomList의 i번째 방정보를 담는다. -반복
+* 6번 : i번째 방의 이름을 담는 변수를 선언, 생성한다. - 반복
+* 7번 : 멤버변수 g\_title을 가져온 방의 이름으로 초기화한다. - 반복
+* 8번 : 변수를 하나 생성해서 기본 인원수를 0으로 초기화한다. -반복 - 값이 이상해지지않도록 현재인원수를 꺼내기전에 계속 초기화해야한다.
+* 9번 : room.userList는 접속자정보가 담긴 Vector이므로 접속자가 있는경우 실행되는 if문이다. -반복
+* 10번 : 접속자가 있다면 current변수에 해당 방의 유저정보의 방 갯수를 담는다. -반복 - 화면에 표시할 현재 입장인원 담기, 반복될때마다 새로운방의 새로운 인원정보를 담는다.
+* 12번 : 멤버변수 g\_current에 가져온 현재 인원을 담는다. - 반복
+* 13번 : '나'에게 생성되어있는 방 이름, 현재 인원수를 전송한다. - 반복 - **'나'가 접속시** '**나'의 화면에 현재 존재하는 모든 그룹방을 표시해주기**
 
 ### roomCasting메서드 - 해당톡방에만 알림전송
 
 ```java
 //해당 톡방에 있는 사람들에게만 전송
 	public void roomCasting(String msg, String roomTitle) {
-		for(int i=0;i<cs.roomList.size();i++) {//전체 방 목록을 가져와서 비교해야한다.
-			Room room = cs.roomList.get(i);
-			//값이 확실한 파라미터를 앞에 써서 비교해야 nullPointer가 떨어지지 않고, 웹에서 멤버변수는 private로 선언하므로 get을 사용한다.
+		for(int i=0;i<cs.roomList.size();i++) {
+			Room room = cs.roomList.get(i); 
+
 			if(roomTitle.equals(room.getTitle())) {//방 목록중에 이름이 파라미터와 같니?
 				for(int j=0;j<room.userList.size();j++) {//해당 톡방에 접속한 사람(=thread)
 					ChatServerThread cst = room.userList.get(j);
@@ -255,6 +318,14 @@ public class ChatServerThread extends Thread {
 		}//end of for
 	}///////////////////////////end of roomCasting/////////////////////////////////////
 ```
+
+* 한 그룹방에 있는 접속자들에게만 말하는 메서드를 만들어보자
+* 3번 : 우선, 맞는 방에 전송해야 할 것이다. 전체 방목록을 가져와 비교한다. - ChatServer의 roomList.size만큼 반복한다.
+* 4번 : Room클래스를 인스턴스화하고, 인스턴스 변수에 ChatServer의 roomList Vector의 i번째 방의 정보를 담는다.
+* 6번 : 꺼내온 i번째 방이름과 파라미터로 받아온 방이름을 비교한다.-반복 - 값이 확실한 파라미터를 앞에 써서 비교해야 nullPoint가 떨어지지 않는다. - 웹에서 멤버변수는 Private로 선언하므로 만들어둔 Room클래스의 getter 메서드를이용해 값을 받아와야한다.
+* 7번 : 방이름이 같다면 이제 모든 접속자에게 보내기위한 반복문이 필요하다.  - Room클래스에서 userList의 size만큼 반복한다.
+* 8번 : ChatServerThread의 인스턴스변수에 userList의 i번째 방 정보를 담는다. - **userList는 nickname같은 값이 아닌 thread를 담는 Vector이므로 ChatServerThread타입에 담는다.**
+* 10번 : thread에 전송 - 방이름이 같은 모든 접속자 thread에게 말한다.
 
 ### run메서드 - case 방 생성
 
