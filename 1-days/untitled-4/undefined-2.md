@@ -16,6 +16,9 @@ public class WaitRoom extends JPanel implements ActionListener{
 	Room room = null;
 ```
 
+* 대화방 입장에 필요한 정보 : 닉네임, 방이름, 인원수
+* 방 관리 클래스인 Room클래스의 인스턴스변수도 선언한다.
+
 ### actionPerformed - 입장 버튼
 
 ```java
@@ -26,7 +29,6 @@ public class WaitRoom extends JPanel implements ActionListener{
 			//어느 방으로 갈거니?
 			int index[] = jtb_room.getSelectedRows();
 			if(index.length==0) {//방을 선택하지 않았을때
-				//파라미터 : 부모, 메세지--panel은 부모가 될수 없으므로 ChatClient2클래스를 사용
 				JOptionPane.showMessageDialog(ccv2, "입장할 방을 선택하세요."
 																			, "Error", JOptionPane.ERROR_MESSAGE);
 				return;
@@ -46,6 +48,14 @@ public class WaitRoom extends JPanel implements ActionListener{
 			jtb_room.clearSelection();//선택한 로우에 대한 초기화
 		}////////////////////////jbtn_in 입장 버튼 클릭시//////////////////////////////
 ```
+
+* 대기실에서 입장버튼 클릭시 이벤트가 발생한다.
+* 6번 : 방목록의 선택은이 JTable서 인지하므로 getSelectedRow\( \)함수를 이용해 int배열에 담는다. - 배열에 담는 이유는 방 선택값이 없는 경우를 정의하기 위함이다.
+* 7-10번 : 방을 선택하지 않은경우에 알림창을 띄운다. - showMessageDialog\(부모, 메세지, 알림창title, 알림타입\); - Panel은 자체로 존재할수 없으므로 JFrame을 상속받는 부모클래스 인스턴스변수를 파라미터로 한다. - 더 진행하지 못하므로 반드시 return;을 넣어 탈출시킨다. 
+* 11,12번 : 방이 선택되면 입장을 server에 전송해야하므로 예외처리 구문안에서 처리한다.
+* 13,14번 : JTable의 방목록중에서 i번째 방을 선택했다면, - JTable의 방목록을 getRowCount\( \)메서드와 for문으로 돌려 선택을 확인한다.  - JTable의 목록이 소유주이고, isRowSelected\(i\)메서드를 이용해 i번째 방이 선택되면 진행한다.
+* 15번 : 선택한 JTable의 로우는 i번째 이고, 값은 dtm에 들어있다. - 해당 JTable의 dtm.getValueAt메서드로 i번째 로우의 0번째 컬럼 값을 String타입 변수에 담는다. - getValueAt메서드로 꺼낸 값은 Object타입이므로 캐스팅연산자로 형전환한다.
+* 16번 : WaitRoom에는 소켓이 없으므로 ChatClientVer2클래스에 구현된 oos를 통해 말한다. - Protocol.ROOM\_IN+선택한 방이름+'나'의 nickName \(ccv2.nickName\)
 
 ## ChatServerThread
 
@@ -67,32 +77,18 @@ public class ChatServerThread extends Thread {
 	String nickName = null;;
 ```
 
+* 대화방 입장에 대해 필요한 정보인 현재인원수를 담을 int변수, 현재 방 이름을 담을 String변수, '나'의 닉네임을 담을 String변수가 필요하다.
+
 ### run메서드 
 
 ```java
 	public void run() {//ChatServer에서 thread가 배분된 다음 호출된다.
-		//System.out.println("TalkServerthread run호출성공");//단위테스트
-		String msg = null;
-		boolean isStop = false;
-		try {
-			run_start://while문을 탈출하는 label을 만든다.
-			while(!isStop) {
-				msg = (String)ois.readObject();//듣기 시작
-				cs.jta_log.append(msg+"\n");
-				cs.jta_log.setCaretPosition(cs.jta_log.getDocument().getLength());
-				StringTokenizer st = null;//선언과 생성을 왜 분리할까?
-				int protocol = 0;
-				if(msg!=null) {//메세지가 있다면
-					st = new StringTokenizer(msg,"|");//메세지가 없는경우에는 실행할 수 없다.
-					protocol = Integer.parseInt(st.nextToken());					
-				}//end of if
-				switch(protocol) {//protocol이 먼저 필요하므로 if문에서 token으로 꺼내야한다.
-				///////////////////////////방에 입장하기///////////////////////////////////
+				switch(protocol) {
+				///////////////////////////방에 입장하기////////////////////////////////
 				case Protocol.ROOM_IN:{
 					//클라이언트에서 전송된 메세지 읽어오기
 					String roomTitle = st.nextToken();
 					String nickName = st.nextToken();
-					//대기실 대화방 목록의 해당 대화방 인원수 업데이트--1
 					for(int i=0;i<cs.roomList.size();i++) {
 						Room room = cs.roomList.get(i);
 						if(roomTitle.equals(room.getTitle())) {
@@ -100,9 +96,9 @@ public class ChatServerThread extends Thread {
 							g_current = room.current+1;
 							//아래 코드가 없으면 인원수 업데이트가 일어나지 않는다.
 							room.setCurrent(g_current);
-							//해당 방의 userList에 '나'를 추가 해야한다.--2
+							//해당 방의 userList에 '나'를 추가--2
 							room.userList.add(this);
-							//해당 방의 nameList에 입장한 사람의 닉네임을 추가해야한다.--3
+							//해당 방의 nameList에 입장한 닉네임 추가--3
 							room.nameList.add(nickName);
 						}
 					}					
@@ -110,8 +106,18 @@ public class ChatServerThread extends Thread {
 								    	 		+Protocol.seperator+g_current
 								    	 		+Protocol.seperator+this.nickName);//--4
 				}break;
-				////////////////////////////end of 방입장///////////////////////////////
+				//////////////////////////end of 방입장//////////////////////////////
 ```
+
+* Protocol.ROOM\_IN의 경우에 듣는것은 입장할 방이름과 입장할 nickName이다.
+* 일단 **대기실의 대화방 목록의 현재 인원수를 업데이트**해야한다.
+* 8번 : 같은방인지 확인해야하므로 ChatServer가 관리하는 roomList의 size만큼 for문을 돌린다.
+* 9번 : 방관리 클래스 Room의 인스턴스변수를 roomList의 i번째 방으로 생성한다.-반복
+* 10번 : 읽어온 방이름과 roomList의 i번째 방의 title이 같다면, - 아니라면 for문을 반복한다.
+* 11번 : 멤버변수 g\_title을 방이름으로 초기화한다.
+* 12번 : 멤버변수 g\_current를 room.current에 +1하여 초기화한다. - room.current : 해당 방의 원래 인원수
+* 14-18번 : i번째 방의 변수들을 업데이트해야한다. - **인원수를 업데이트**하고, userList에 **입장한 thread\(this\)를 추가**하고, nameList에 **닉네임을 추가**한다.
+* 21번 : 방이름, 방인원수, 입장한 사람의 정보를 말한다. - Protocol.ROOM\_IN+g\_title+g\_current+this.nickName
 
 ## ChatClientThread
 

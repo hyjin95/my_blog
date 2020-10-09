@@ -297,7 +297,7 @@ public class ChatServerThread extends Thread {
 * 12번 : 멤버변수 g\_current에 가져온 현재 인원을 담는다. - 반복
 * 13번 : '나'에게 생성되어있는 방 이름, 현재 인원수를 전송한다. - 반복 - **'나'가 접속시** '**나'의 화면에 현재 존재하는 모든 그룹방을 표시해주기**
 
-### roomCasting메서드 - 해당톡방에만 알림전송
+### roomCasting메서드 - 해당방에만 전송
 
 ```java
 //해당 톡방에 있는 사람들에게만 전송
@@ -331,11 +331,10 @@ public class ChatServerThread extends Thread {
 
 ```java
 	public void run() {//ChatServer에서 thread가 배분된 다음 호출된다.
-		//System.out.println("TalkServerthread run호출성공");//단위테스트
 		String msg = null;
 		boolean isStop = false;
 		try {
-			run_start://while문을 탈출하는 label을 만든다.
+			run_start:///while문을 탈출하는 label
 			while(!isStop) {
 				msg = (String)ois.readObject();//듣기 시작
 				cs.jta_log.append(msg+"\n");
@@ -346,9 +345,8 @@ public class ChatServerThread extends Thread {
 					st = new StringTokenizer(msg,"|");//메세지가 없는경우에는 실행할 수 없다.
 					protocol = Integer.parseInt(st.nextToken());					
 				}//end of if
-				switch(protocol) {//protocol이 먼저 필요하므로 if문에서 token으로 꺼내야한다.
-				//default://case 없이 단위테스트하기
-					//System.out.println("protocol"+protocol);
+				switch(protocol) {
+				
 				case Protocol.ROOM_CREATAE:{//방 생성알림
 					String roomTitle = st.nextToken();//방제목
 					String currentNum = st.nextToken();//현재 인원수
@@ -363,6 +361,12 @@ public class ChatServerThread extends Thread {
 				////////////////////////////end of 방생성//////////////////////////////
 ```
 
+* 18번 : ROOM\_CREATE구분번호는 방생성시 화면에 방이름과 현재 인원을 띄우기 위함이다.
+* 19,20번 : 이를 위해 방이름과 현재인원을 담는 변수를 선언, 생성한다.
+* 22번 : 생성된 방을 **그룹방관리 클래스인 Room클래스에 반영**해야한다. - 만들어둔 Room클래스의 생성자 중에 파라미터로 방이름, 인원수를 갖는 생성자를 호출한다.
+* 24번 : 방이 생성되면 **ChatServer의 Vector인 roomList에 추가**해야한다.
+* 26번 : '내'가 생성한 방 정보에 대한 알림을 대기실의 모든 접속자에게 전송한다. - 대기실의 모든 접속자들의 화면에 해당 방이 보여져야한다.
+
 ## ChatClientThread
 
 ```java
@@ -375,6 +379,10 @@ public class ChatClientThreadVer2 extends Thread {
 	}
 ```
 
+* 새로만든 ChatClientVer2를 새로 객체주입을 통해 인스턴스화한다.
+
+### run메서드 - 공통부분
+
 ```java
 public void run() {
 		boolean isStop = false;
@@ -386,9 +394,16 @@ public void run() {
 				int protocol = 0;
 				if(msg!=null) {
 					st = new StringTokenizer(msg,"|");
-					protocol = Integer.parseInt(st.nextToken());//번호를 선언해둔 변수에 담는다.
+					protocol = Integer.parseInt(st.nextToken());//번호를 선언해둔 변수에 담는다
 				}
 				switch(protocol) {
+```
+
+* 11번 : nextToken으로 꺼낸 값은 String 타입이므로 Integer클래스의 parseInt함수로 형전환한다.
+
+### run메서드 - Protocol.WAIT
+
+```java
 				case Protocol.WAIT:{
 					String nickName = st.nextToken();
 					String state = st.nextToken();//대기 또는 방이름이 담기는 (상태)변수
@@ -397,7 +412,8 @@ public void run() {
 					v_nick.add(state);
 					ccv2.wr.dtm_wait.addRow(v_nick);
 					//테이블 목록이 늘어날 때 자동으로 스크롤바 이동하기 구현
-					ccv2.wr.jsp_wait.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {
+					ccv2.wr.jsp_wait.getVerticalScrollBar()
+					                    .addAdjustmentListener(new AdjustmentListener() {
 						@Override
 						public void adjustmentValueChanged(AdjustmentEvent e) {
 							JScrollBar jsb = (JScrollBar)e.getSource();
@@ -405,15 +421,31 @@ public void run() {
 						}						
 					});
 				}break;
+```
+
+* Protocol.WAIT의 경우에는 닉네임과 현재 위치를 듣게된다.
+* 4번 : 화면의 JTable의 dtm에 값을 담아야\(addRow\)해야 하므로 Vector를 선언, 상생한다. - String타입으로 한다. - 테이블에 컬럼이 두개이므로 Vector를 사용한다.
+* 5,6번 : 들은 값을 Vector에 담는다.
+* 7번 : JFrame이 있는 ChatClientVer2클래스의 dtm\_wait에 addRow한다.
+* 9번 : jsp\_wait라는 JTable의 JScrollBar클래스의 세로스크롤바의 값을 읽어온다. - 소유주.getVerticalScrollBar\( \)
+* 10번 : 읽어온 스크롤바에 AdjustmentListener인터페이스를 add하고 바로 추상메서드를 구현한다. - 소유주.addAdjustmentListener\(new AdjustmentListener\( \) {사용 메서드 오버라이드}
+* 12번 : 읽어온 스크롤바의 위치값이 변경되는 이벤트에 대한 구현문이다. - adjustmentValueChanged\( \)
+* 13번 : JScrollBar의 인스턴스 변수를 이벤트 source로 생성하는, 캐스팅연산자로 타입을 맞춰야한다.
+* 14번 : 생성한 스크롤바의 위치를 set한다. 최대위치로 - 소유주.getValue\(소유주.getMaximum\( \)\);
+
+### run메서드 - Protocol.ROOM\_CREATE
+
+```java
 				case Protocol.ROOM_CREATAE:{
 					JOptionPane.showMessageDialog(ccv2, "Client ROOM_CREATE");
 					String roomTitle = st.nextToken();
-					String currentNum = st.nextToken();//대기 또는 방이름
+					String currentNum = st.nextToken();
 					Vector<String> v_room = new Vector<>();
 					v_room.add(roomTitle);
 					v_room.add(currentNum);
 					ccv2.wr.dtm_room.addRow(v_room);
-					ccv2.wr.jsp_room.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener() {
+					ccv2.wr.jsp_room.getVerticalScrollBar()
+															.addAdjustmentListener(new AdjustmentListener() {
 						@Override
 						public void adjustmentValueChanged(AdjustmentEvent e) {
 							JScrollBar jsb = (JScrollBar)e.getSource();
@@ -427,6 +459,11 @@ public void run() {
 				e.printStackTrace();//에러메세지의 모든 히스토리 출력 - 어디서 에러가 난 것인지 보여준다.
 			}
 		}//end of while		
-	}////////////////////////////////////end of run//////////////////////////////////////
+	}/////////////////////////////////end of run///////////////////////////////////
 ```
+
+* Protocol.ROOM\_CREATE의 경우에는 생성된 방제목과 현재 인원수 정보를 듣게된다.
+* 5번 : dtm에 두개 컬럼의 값을 addRow하기 위해 String타입 Vector를 선언, 생성한다.
+* 6-8번 : Vector에 값을 담아 ChatClientVer2의 dtm\_room에 addRow한다.
+* 9-16번 : 테이블 증가에 따른 스크롤 자동이동 처리
 
