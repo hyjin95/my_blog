@@ -111,12 +111,6 @@ description: 2020.10.08 - 38일차
 * 관점지향 프로그래밍\(AOP, Aspect-Oriented Programming\) - 여러모듈에서 **공통적으로 사용하는 기능을 분리하여 관리**가 가능하다.
 * 배치 프레임워크 - 특정 시간대에 실행하거나 대용량의 자료를 처리하는데 쓰이는 일괄처리를 지원하는 배치프레임워크를 지원한다.
 
-### sqlSessionFactory
-
-* 물리적으로 떨어져있는 오라클 서버와 연결통로를 확보하는데 필요한 객체 - 연결통로로서 sqlSession객체 생성에 대해 필요한 사전처리
-* sqlSession은 위에서 연결되었을 때 개발자가 작성한 sql문 처리 요청을 하는데 필요한 객체 - sqlSession.commit\( \), sqlSession.rollback\( \)이 가능하다.
-* sqlSessionFactory가 먼저 메모리에 로딩 되어야\(인스턴스화 되어야\) selSession이 생성될 수 있다. - 서로 의존관계에 있다.
-
 ### VO & Map의 공통점
 
 * row가 존재한다,. index값과 key를 통한 검색이 가능한 자료구조이다.
@@ -127,7 +121,7 @@ description: 2020.10.08 - 38일차
 
 * 객체지향 언어 자바의 DB프로그래밍을 도와주는 개발 프레임워크
 * 개발자가 작성한 **SQL문과 자바객체를 매핑**해주는 기능을 제공한다.
-* **SQL명령어를 자바 코드에서 분리해 XML파일에 따로 관리**하는 특징을 갖는다.
+* **SQL명령어를 자바 코드에서 분리해 XML파일에 따로 관리**하는 특징을 갖는다. - 기존 Dao의 안에서 SQL문을 따로 분리한다.
 * 개발자가 지정한 SQL저장프로시저 = 스토어프로시저
 * JDBC코드와 수동으로 셋팅하는 파라미터와 결과 매핑을 제거한다.
 
@@ -140,10 +134,18 @@ description: 2020.10.08 - 38일차
 
 ### mybatis 제공
 
+* sqlSessionFactory 클래스 : 서버와의 연결통로
 * sqlSession : 조회\(SELECT\): 리턴타입\(1row \|\| 1값\(Object\) \|\| n개 row\)
-* 1개 row꺼내기 : selectOne\( \) : XXXVO
-* 1개 값 꺼내기  : selectOne\( \) : Object\(int, integer, String, XXXVO\)
-* n개 row꺼내기 : selectList\( \) : Map - 반환값은 Map타입인데 List타입으로 받는 이유
+* Reader : 문서를 읽는데 필요한 클래스
+* **sqlSession.selectOne\( \)** - 오직 하나의 객체, Object만을 리턴하는 메서드 - 1개 row : selectOne\( \) : XXXVO - 1개 값    : selectOne\( \) : Object\(int, integer, String, XXXVO\)
+* **sqlSession.selectList\( \)** - n개의 객체가 리턴될때 사용하는 메서드 - n개 row : selectList\( \) : Map - 반환값은 Map타입이지만 n개의 Map타입 값이 나올수 있으므로 List에 담는다. 
+
+### sqlSessionFactory
+
+* 물리적으로 떨어져있는 오라클 서버와 연결통로를 확보하는데 필요한 객체 - 연결통로로서 sqlSession객체 생성에 대해 필요한 사전처리
+* sqlSession은 위에서 연결되었을 때 개발자가 작성한 sql문 처리 요청을 하는데 필요한 객체 - sqlSession.commit\( \), sqlSession.rollback\( \)이 가능하다. - session변수.openSession\( \)메서드로 생성가능 - session변수.close\( \) 메서드로 닫아주어야한다.
+* sqlSessionFactory가 먼저 메모리에 로딩 되어야\(인스턴스화 되어야\) selSession이 생성될 수 있다. - 서로 의존관계에 있다.
+* build클래스로 sqlSessionFactory객체를 인스턴스화하여 사용한다. - SqlSessionFactory 변수이름 = new SqlSessionFactoryBuilder\( \).build\(Reader \|\| Writer\);
 
 ### 수동&자동
 
@@ -167,6 +169,25 @@ description: 2020.10.08 - 38일차
 * XML로 관리시 드라이버클래스, ip, port번호가 필요하다.
 * 주석 : ctrl + shift + /
 
+### XML 기본형태
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oracle.mybatis.DeptMapper">
+ <select id="getDeptList" parameterType="int" resultType="Map">
+   select deptno, dname, loc from dept
+ </select>
+</mapper>
+```
+
+1. SQL mapper파일은 XML타입이므로 XML선언이 온다.
+2. 태그 규칙을 정의한 DTD선언이온다.
+3. SQL mapper파일은 루트 엘리먼트 &lt;mapper&gt;를 작성하는 것으로 시작한다.  - &lt;mapper&gt;의  namespace속성은 자바의 패키지처럼 여러개의 SQL문을 묶는 용도로, mapper파일에 작성되는 모든 SQL문은 &lt;mapper&gt;의 하위에 있어야한다.
+4. SIUD, SQL문이 자리한다. 반드시 닫는 태그로 막아준다.
+
 {% page-ref page="xml.md" %}
 
 ### jar
@@ -176,9 +197,19 @@ description: 2020.10.08 - 38일차
 * jar를 이용해 클래스를 작성한다면 해당 jar가 서버에 존재하는지 확인해야한다.
 * jar추가하기 - Build Path -&gt; Cinfigure Build Path -&gt; Laibraries에서 추가
 
+### mapper
+
+* Mapper 인터페이스
+* 매핑파일에 기재된 SQL을 호출하기위한 인터페이스이다.
+* 패키지이름.인터페이스이름.ID - ID : 매핑할 메서드 이름
+
+{% page-ref page="sqlmapdeptdao-mybatis.md" %}
+
+{% page-ref page="sqlmapempdao-mybatis.md" %}
+
 ## Toad
 
 {% page-ref page="toad-t\_orderbasket-decode-and-sum.md" %}
 
-후기 : 
+후기 : 내일은 한글날! 잘 쉬고 오자 운동도하고!
 

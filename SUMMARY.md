@@ -134,7 +134,9 @@
     * [톡방 생성&입장 구현 마무리](1-days/untitled-5/and-+/README.md)
       * [MessageRoom 구현](1-days/untitled-5/and-+/messageroom.md)
   * [38 Days - MyBatis, XML, jar, VO와Map](1-days/38-days/README.md)
-    * [XML](1-days/38-days/xml.md)
+    * [SQLMapDeptDao - mybatis](1-days/38-days/sqlmapdeptdao-mybatis.md)
+    * [SQLMapEmpDao - mybatis](1-days/38-days/sqlmapempdao-mybatis.md)
+    * [XML - oracle, mysql](1-days/38-days/xml.md)
     * [Toad - t\_orderbasket, decode&sum](1-days/38-days/toad-t_orderbasket-decode-and-sum.md)
   * [Untitled](1-days/untitled-1.md)
 
