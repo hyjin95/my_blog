@@ -28,6 +28,10 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 * project전체 검색 : ctrl + h
 * 현재페이지 검색 : ctrl + f
 
+### xml
+
+* 주석 : ctrl + shift + /
+
 ### 깃북
 
 * 줄 바꾸기 : shift + enter

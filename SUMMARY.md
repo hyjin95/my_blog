@@ -133,7 +133,8 @@
     * [ViewURL - 웹 연결](1-days/untitled-5/undefined.md)
     * [톡방 생성&입장 구현 마무리](1-days/untitled-5/and-+/README.md)
       * [MessageRoom 구현](1-days/untitled-5/and-+/messageroom.md)
-  * [38 Days -](1-days/38-days/README.md)
-    * [대화방 입장 이벤트 구현+](1-days/38-days/+.md)
+  * [38 Days - MyBatis, XML, jar, VO와Map](1-days/38-days/README.md)
+    * [XML](1-days/38-days/xml.md)
+    * [Toad - t\_orderbasket, decode&sum](1-days/38-days/toad-t_orderbasket-decode-and-sum.md)
   * [Untitled](1-days/untitled-1.md)
 
