@@ -134,7 +134,7 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
 * 19번 : file이름만 넘어온것으로, JVM이 이미지를 찾으려면 확장자까지 필요하다. - String값은 원본이 변하지않으므로 반드시 대입연산자를 이용해 값을 변경한다.
 * 21번 : fileName가 새로고침 되었는지 단위테스트
 
-### actionPerformed - 확인,새로고침
+### actionPerformed - 새로고침
 
 ```java
 	@Override
@@ -143,31 +143,26 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
 		if(obj==jbtn_reload) {
 			System.out.println("새로고침 이벤트 호출");
 			String fileName = getImage();
-			//이미지 미리보기 시작 처리
 			ImageIcon originIcon = new ImageIcon(path+fileName);
-			//ImageIcon에서 Image 추출 하기
 			Image originImg = originIcon.getImage();
-			//추출된 이미지의 크기를 조절하여 새로운 Image 객체 생성
 			Image changeImg = originImg.getScaledInstance(350, 150, Image.SCALE_SMOOTH);
-			//새로운 Image로 ImageIcon객체 생성
 			ImageIcon icon = new ImageIcon(changeImg);
 			jlb.setIcon(icon);
-			//revalidate는 새 구성 요소가 추가되거나 이전 요소가 제거되면 컨테이너에서 호출된다.
-			//이 호출은 레이아웃 관리자에게 새 구성 요소 목록을 기반으로 재설정 하도록 지시하는 명령이다.
 			cont.revalidate();
 		}
 	}
 }
 ```
 
+* 4-11번 : 새로고침 이벤트가 발생하면 getImage메서드를 실행해 새로운 fileName을 받아와 jlb에 새 이미지를 set한다.
+* 12번 : cont.ravalidate\( \)메서드로 화면 레이아웃을 새 이미지로 재설정한다.
+
 ### Nkey, NkeyResult클래스에서 가져온 메서드
 
 ```java
 	//////////////////////////가져온 메서드 key 발급/////////////////////////////////
-	  //소켓통신 대신 웹통신을 한다.
-    //http프로토콜을 사용해 소켓을 직접 생성하고 관리할 필요가 없다.
     private static String get(String apiUrl, Map<String, String> requestHeaders){
-    	//네이버 서버와의 연결통로 확보 ->55번
+    	//네이버 서버와의 연결통로 확보
         HttpURLConnection con = connect(apiUrl);
         try {
             con.setRequestMethod("GET");
@@ -176,9 +171,9 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
             }
             //네이버에서 보내주는 응답코드를 받는다 - 100,200,300,... int타입
             int responseCode = con.getResponseCode();
-            //정상적으로 응답이 도착했는지 체크-200 ->57번
+            //정상적으로 응답이 도착했는지 체크
             if (responseCode == HttpURLConnection.HTTP_OK) { // 정상 호출
-            	//반환값으로 메서드 호출 ->80번
+            	  //반환값으로 메서드 호출
                 return readBody(con.getInputStream());
             } else { // 에러 발생
                 return readBody(con.getErrorStream());
@@ -189,9 +184,11 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
             con.disconnect();
         }
     }
+```
 
-    //네이버 서버에 건택하는 메서드
-    private static HttpURLConnection connect(String apiUrl){//apiUrl : 네이버 서버주소
+```java
+    //네이버 서버에 건택하는 메서드, apiUrl : 네이버 서버주소
+    private static HttpURLConnection connect(String apiUrl){
         try {
             URL url = new URL(apiUrl);
             return (HttpURLConnection)url.openConnection();
@@ -201,9 +198,12 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
             throw new RuntimeException("연결이 실패했습니다. : " + apiUrl, e);
         }
     }
+```
+
+```java
     /*
-     * @return 으로 받는것은 키 값이다.
-     * @param 으로 받는 것은 서버에서 전송된 정보이다.
+     * @return 으로 받는것은 키 값
+     * @param 으로 받는 것은 서버에서 전송된 정보
      */
     private static String readBody(InputStream body){
         InputStreamReader streamReader = new InputStreamReader(body);

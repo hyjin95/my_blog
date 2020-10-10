@@ -1,4 +1,6 @@
-# 쿼리스트링 구현
+# ViewURL - 웹 연결
+
+### 선언부
 
 ```java
 package naver.net;
@@ -10,14 +12,18 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class ViewURL {
+```
+
+### 생성자
+
+```java
 	public ViewURL(String strURL) {
 		try {
 			URL myURL = new URL(strURL);
 			URLConnection myCon = myURL.openConnection();
 			myCon.connect();
-			//브라우저는 마임타입을 통해서 해당 페이지에 대한 해석을 하게된다. 태그는 해석하고 내용만 출력해준다. 인터프리터의 역할을 브라우저가 한다.
-			//마임타입이 선언되어있어야 브라우저가 알맞는 해석을 할 수있다.
-			String headerType = myCon.getContentType();//mime type : 메인타입/서브타입 - text/html text/xml text/javascript = 마임타입
+			
+			String headerType = myCon.getContentType();//마임타
 			InputStream is = myCon.getInputStream();
 			//new를 통해 객체를 생성하는 경우는 단독으로 사용할때에만 사용가능하고,
 			//다른 디바이스나 다른 시스템(하드웨어 h/w)과 연계하여 요청과 응답을 처리할 때 필요하다.
@@ -40,6 +46,13 @@ public class ViewURL {
 			// TODO: handle exception
 		}
 	}
+```
+
+* 3,5번 : URL클래스에 접근할 URL을 파라미터로 넣어 서버와의 연결통로를 open한다.
+
+### main 메서드
+
+```java
 	//이렇게되면 해당 페이지의 정보가 외부에 노출될 수 있으므로 중요한 정보는 절대로 쿼리스트링으로 내보내지않는다.
 	//또한 스트립트 코드들도 노출이 되지 않도록 외부에 별도로 작성하고 import하여 사용한다.
 	//XXX.js, XXX.css로 따로 저장해둔다.

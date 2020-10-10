@@ -1,5 +1,7 @@
 # ApiExamCaptchaNkeyResult
 
+### 선언부
+
 ```java
 package naver.net;
 
@@ -15,15 +17,25 @@ import java.util.Map;
 
 // 네이버 캡차 API 예제 - 키발급, 키 비교
 public class ApiExamCaptchaNkeyResult {
+```
+
+* 캡차를 이용하는 이유는 접속하려는 사용자가 매크로가 아닌지 확인하기 위함이다.
+* 이를 인증하기위해서는 사용자의 입력값과 캡차 이미지 값을 비교해야한다.
+* 캡차 인증 클래스
+
+### 생성자
+
+```java
 	
 	public ApiExamCaptchaNkeyResult() {
-		String clientId = "YOUR_CLIENT_ID";//애플리케이션 클라이언트 아이디값";
-        String clientSecret = "YOUR_CLIENT_SECRET";//애플리케이션 클라이언트 시크릿값";
+		String clientId = "YOUR_CLIENT_ID";
+        String clientSecret = "YOUR_CLIENT_SECRET";
 
-        String code = "1"; // 키 발급시 0,  캡차 이미지 비교시 1로 세팅
+        String code = "1"; // 키 발급시 0,  캡차 이미지 비교시 1
         String key = "YOUR_CAPTCHA_KEY"; // 캡차 키 발급시 받은 키값
         String value = "YOUR_INPUT"; // 사용자가 입력한 캡차 이미지 글자값
-        String apiURL = "https://openapi.naver.com/v1/captcha/nkey?code=" + code + "&key=" + key + "&value=" + value;
+        String apiURL = "https://openapi.naver.com/v1/captcha/nkey?code=" + code 
+                                              + "&key=" + key + "&value=" + value;
 
         Map<String, String> requestHeaders = new HashMap<>();
         requestHeaders.put("X-Naver-Client-Id", clientId);
@@ -32,24 +44,15 @@ public class ApiExamCaptchaNkeyResult {
 
         System.out.println(responseBody);
 	}
+```
 
-//    public static void main(String[] args) {
-//        String clientId = "YOUR_CLIENT_ID";//애플리케이션 클라이언트 아이디값";
-//        String clientSecret = "YOUR_CLIENT_SECRET";//애플리케이션 클라이언트 시크릿값";
-//
-//        String code = "1"; // 키 발급시 0,  캡차 이미지 비교시 1로 세팅
-//        String key = "YOUR_CAPTCHA_KEY"; // 캡차 키 발급시 받은 키값
-//        String value = "YOUR_INPUT"; // 사용자가 입력한 캡차 이미지 글자값
-//        String apiURL = "https://openapi.naver.com/v1/captcha/nkey?code=" + code + "&key=" + key + "&value=" + value;
-//
-//        Map<String, String> requestHeaders = new HashMap<>();
-//        requestHeaders.put("X-Naver-Client-Id", clientId);
-//        requestHeaders.put("X-Naver-Client-Secret", clientSecret);
-//        String responseBody = get(apiURL, requestHeaders);
-//
-//        System.out.println(responseBody);
-//    }
+* 클래스 자체를 화면구현 클래스에서 사용하기 위해 main메서드를 생성자로 변경하였다.
+* 6번 : 이미지변경 용도 접속이므로 code값을 "1"로 하여 구분하도록 한다.
+* 7-8번 : 인증을 위해서는 키 값, 사용자의 입력String값, URL이 필요하다. - URL의 쿼리스트링에는 code와 key 값, 사용자 입력값이 들어간다.
 
+### get 메서드
+
+```java
     private static String get(String apiUrl, Map<String, String> requestHeaders){
         HttpURLConnection con = connect(apiUrl);
         try {
@@ -70,7 +73,11 @@ public class ApiExamCaptchaNkeyResult {
             con.disconnect();
         }
     }
+```
 
+### connect 메서드
+
+```java
     private static HttpURLConnection connect(String apiUrl){
         try {
             URL url = new URL(apiUrl);
@@ -81,7 +88,11 @@ public class ApiExamCaptchaNkeyResult {
             throw new RuntimeException("연결이 실패했습니다. : " + apiUrl, e);
         }
     }
+```
 
+### readBody 메서드
+
+```java
     private static String readBody(InputStream body){
         InputStreamReader streamReader = new InputStreamReader(body);
 
@@ -99,6 +110,5 @@ public class ApiExamCaptchaNkeyResult {
         }
     }
 }
-
 ```
 
