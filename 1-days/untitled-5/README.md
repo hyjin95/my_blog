@@ -28,6 +28,7 @@ description: 2020.10.07 - 37일차
 * URL이 요청해서 나온 값이 URL뒤에 String타입으로 붙는데, 이를 쿼리스트링이라 한다.
 * **oos를 사용하지 않고 사용자의 입력값을 서버에 전송하는 방법**이다.
 * 웹서버에 요청을 보낼때 주소뒤에 물음표를 붙이고, 변수이름 = 값&변수이름2 = 값2&변수이름3 = 값3 이런식으로 쿼리스트링을 작성한다. - String apiURL = "https://openapi.naver.com/v1/captcha/nkey?code=" + code + "&key=" + key + "&value=" + value;
+* URL에 정보를 담으므로 해당 페이지의 정보가 외부에 노출될 수 있다. - 중요한 정보는 절대로 쿼리스트링으로 내보내지 않는다. - 스크립트 코드도 노출되지 않도록 외부에 별도 작성하여 import로 사용한다.   XXX.js, XXX.css - 경로의 경우도 절대경로가 노출되면 서버정보가 외부에 노출되는 것이므로 상대경로를 사용한다.    상대경로를 사용해면 전체경로를 알수 없으므로
 
 ### http 프로토콜
 
@@ -63,9 +64,7 @@ description: 2020.10.07 - 37일차
 * MIME로 인코딩한 파일은 Content-type정보를 파일의 앞부분에 담는다. - Multipart Related MIME타입 - XML Media 타입 - Application 타입 - 오디오 타입 - Multipart 타입 - TEXT 타입 - file 타입\
 * 브라우저는 마임타입을 통해서 해당 페이지에 대한 해석을 하게된다. - 태그는 해석하고 내용만 출력해준다. - 인터프리너틔 역할을 브라우저가 한다.
 * 마임타입이 선언되어 있어야 브라우저가 알맞은 해석을 할 수 있다.
-* mime type : 메인타입/서브타입
-
-  \_    text/html text/xml text/javascript = 마임타입
+* mime type : 메인타입/서브타입  - text/html text/xml text/javascript = 마임타입
 
 {% page-ref page="undefined.md" %}
 
