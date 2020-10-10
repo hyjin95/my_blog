@@ -1,5 +1,7 @@
 # MessageRoom 구현
 
+### 선언부
+
 ```java
 package net.tomato_step4;
 
@@ -42,13 +44,21 @@ public class MessageRoom extends JPanel implements ActionListener{
 	JButton    jbtn_change 	   = new JButton("대화명 변경");
 	JButton    jbtn_emo        = new JButton("이모티콘");
 	JButton    jbtn_close      = new JButton("종료");
+```
 
+### 생성자
+
+```java
 	public MessageRoom() {}
 	public MessageRoom(ChatClientVer2 ccv2) {
 		this.ccv2 = ccv2;
 		initDisplay();
 	}
-	
+```
+
+### 화면구현
+
+```java
 	public void initDisplay() {
 		jbtn_send  .addActionListener(this);
 	    jbtn_chat  .addActionListener(this);    
@@ -92,11 +102,20 @@ public class MessageRoom extends JPanel implements ActionListener{
 		this.setSize(600, 500);
 		this.setVisible(true);
 	}
-	
+```
+
+### main 메서드
+
+```java
 	public static void main(String[] args) {
 		MessageRoom mr = new MessageRoom();
 		mr.initDisplay();
 	}
+```
+
+### actionPerformed
+
+```java
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object object = e.getSource();
