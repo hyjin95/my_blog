@@ -89,12 +89,13 @@ description: 2020.09.22 - 29일차
 * ceil\(10.4354\) -&gt; 11
 * ceil\(-10.1234\) -&gt; -10
 
-### WHERE - having
+### HAVING
 
 ![having](../../.gitbook/assets/having.png)
 
-* 그룹화된 결과에 조건을 걸 때 사용하는 if문 역할이다.
+* 그룹화된 결과에 조건을 걸 때 사용하는 if문 역할
 * GROUP BY절, AVG, SUM, MAX, COUNT 등...
+* 그룹화된 결과에 조건을 걸때 WHERE절은 사용할 수 없다.
 
 ### WHERE - IN, EXISTS
 
