@@ -140,6 +140,6 @@
     * [Toad - t\_orderbasket, decode&sum](1-days/38-days/toad-t_orderbasket-decode-and-sum.md)
   * [39 Days - toad복습, try-catch,](1-days/39-days/README.md)
     * [t\_orderbasket](1-days/39-days/t_orderbasket.md)
-  * [Untitled](1-days/untitled-6.md)
+  * [40 Days -](1-days/untitled-6.md)
   * [Untitled](1-days/untitled-1.md)
 

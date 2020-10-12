@@ -151,3 +151,7 @@ UNION ALL
 SELECT dname, loc FROM dept WHERE deptno = 30--집합 두개
 ```
 
+{% page-ref page="t\_orderbasket.md" %}
+
+후기 : 
+
