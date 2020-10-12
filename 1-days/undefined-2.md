@@ -37,7 +37,12 @@ maven mybatis페이지 : [https://mvnrepository.com/artifact/org.mybatis/mybatis
 ### w3schools
 
 w3schools 페이지 : [https://www.w3schools.com/](https://www.w3schools.com/)  
-- 
+- HTML, css, JavaScript, Python,... API
+
+### easyUI
+
+jeasyui 페이지 : [http://jeasyui.com/index.php](http://jeasyui.com/index.php)  
+- ui DEMO API
 
 ## 강의
 
