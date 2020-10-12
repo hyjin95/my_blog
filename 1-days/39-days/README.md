@@ -2,7 +2,7 @@
 description: 2020.10.10 - 39일차
 ---
 
-# 39 Days - toad복습,
+# 39 Days - toad복습, try-catch,
 
 ### 사용 프로그램
 
@@ -35,12 +35,6 @@ SELECT ename, deptno FROM emp
 GROUP BY ename, deptno
 
 --단, 예외인 경우가 존재한다. 어떤경우일까?
---그룹화 한 뒤에 그 결과에 대한 조건검색을 할때 WHERE절은 불가능하다. HAVING절 사용
-SELECT deptno, sum(sal) FROM emp
-GROUP BY deptno
-HAVING sum(sal)>10000
---부서별 연봉중 1000이상이것이 나오므로 의미있는 값이다.
-
 -- 힌트 : 중복을 제거하는 데이터를 조회해보자
 SELECT distinct(deptno) FROM emp
 
@@ -48,8 +42,22 @@ SELECT distinct(ename) FROM emp
 
 SELECT distinct(empno) FROM emp
 
+--그룹화 한 뒤에 그 결과에 대한 조건검색을 할때 WHERE절은 불가능하다. HAVING절 사용
+SELECT deptno, sum(sal) FROM emp
+GROUP BY deptno
+HAVING sum(sal)>10000
+--부서별 연봉중 1000이상이것이 나오므로 의미있는 값이다.
+
 --decode는 from절을 제외한 어디든 사용될 수 있다.
 --SELECT문 컬럼자리에, 
 --WHERE절에, WHRER절의 and, or다음에도 올 수 있다.
+
+--HAVING절에는  알리아스명은 사용할수 있을까?
+--인라인뷰에서 사용되면 사용할 수 있다.
+--인라인뷰 없이 FROM절 뒤에는 알리아스명을 사용할 수 없다.
+SELECT s_sal
+  FROM (SELECT deptno, sum(sal) s_sal FROM emp
+        GROUP BY deptno)
+WHERE s_sal>10000
 ```
 

@@ -226,5 +226,5 @@ public class SqlMapEmpDao {
 * 5번 : List안의 값을 모두 출력해보기 위해 List의 size만큼 for문안에서 출력문을 돌린다.
 * 6번 : List안에 n개의 Map타입 객체들이 들어있어 Map타입 변수를 선언해 i번째 방의 Map을 담는다.
 * 7번 : i번째 map의 모든 정보가 출력된다. 사원번호+이름+연봉
-* 8-10번 : i번째 map의각 get메서드로 꺼낸 값만 출력된다.
+* 8-10번 : i번째 map의각 get메서드로 꺼낸 값만 출력된다. key값은 대문자로 한다.
 

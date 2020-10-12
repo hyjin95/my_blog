@@ -29,10 +29,15 @@ description: '다양한 참고, 서적 및 강의 링크'
 [https://www.codeit.kr/learn/courses/version-control-with-git/2884](https://www.codeit.kr/learn/courses/version-control-with-git/2884)  
 깃헙\(github\) : [https://github.com](https://github.com/)
 
-### mybatis
+### mybatis Framework
 
 mybatis 페이지 : [https://mybatis.org/mybatis-3/ko/index.html](https://mybatis.org/mybatis-3/ko/index.html)  
 maven mybatis페이지 : [https://mvnrepository.com/artifact/org.mybatis/mybatis](https://mvnrepository.com/artifact/org.mybatis/mybatis)
+
+### w3schools
+
+w3schools 페이지 : [https://www.w3schools.com/](https://www.w3schools.com/)  
+- 
 
 ## 강의
 
