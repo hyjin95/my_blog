@@ -133,7 +133,7 @@
     * [ViewURL - 웹 연결](1-days/untitled-5/undefined.md)
     * [톡방 생성&입장 구현 마무리](1-days/untitled-5/and-+/README.md)
       * [MessageRoom 구현](1-days/untitled-5/and-+/messageroom.md)
-  * [38 Days - MyBatis, XML, jar, VO와Map](1-days/38-days/README.md)
+  * [38 Days - MyBatis, XML, jar, VO와Map, XML, Framework, SqlSession, mysql](1-days/38-days/README.md)
     * [SQLMapDeptDao - mybatis](1-days/38-days/sqlmapdeptdao-mybatis.md)
     * [SQLMapEmpDao - mybatis](1-days/38-days/sqlmapempdao-mybatis.md)
     * [XML - oracle, mysql](1-days/38-days/xml.md)
