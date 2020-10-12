@@ -4,13 +4,13 @@
 
 ## t\_orderbasket Table
 
-![](../../.gitbook/assets/1%20%2819%29.png)
+![](../../.gitbook/assets/1%20%2820%29.png)
 
 ## 문제 1
 
 #### t\_orderbasket 테이블에서 분석함수를 사용하지 않고 각 날짜별로 총 몇개의 물건이 얼만큼 팔렸고 총 매출액을 얼마인지 나타내시오. 윗줄 3줄은 날짜를, 마지막 줄에는 총계를 나타내는 SQL문을 작성하시오. 
 
-![&#xBB38;&#xC81C;1](../../.gitbook/assets/1%20%2820%29.png)
+![&#xBB38;&#xC81C;1](../../.gitbook/assets/1%20%2821%29.png)
 
 ### 1단계
 
@@ -105,7 +105,7 @@ ORDER BY DECODE(rno,1,indate_vc,2,'총계')
 
 #### 아래와 같은 테이블을 출력하는 SQL문을 작성하시오.
 
-![](../../.gitbook/assets/1%20%2818%29.png)
+![](../../.gitbook/assets/1%20%2819%29.png)
 
 ### 1단계
 

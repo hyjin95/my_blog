@@ -61,3 +61,69 @@ SELECT s_sal
 WHERE s_sal>10000
 ```
 
+## Explain plan & index
+
+### 1단계
+
+![1](../../.gitbook/assets/1%20%2818%29.png)
+
+```sql
+--explain plan
+--옵티마이저에게는 두가지 동작 모드가 있다.
+--1.룰베이스 옵티마이저 모드 : 15가지 기준에따라 순서를 정해 진행(ex index가 있으면 index 검색이 최우선), 기준을 조정할 수 있다. 수동카메라
+--2.비용기반 옵티마이저 모드 : 비용을계산한다. 통계정보가 많을수록 정확도가 높다. 자동카메라
+
+--pk제약조건 : not null, unique 
+--pk는 unique index를 지원받는다.
+SELECT empno FROM emp--1
+```
+
+### 2단계
+
+![2](../../.gitbook/assets/2%20%2814%29.png)
+
+```sql
+SELECT empno, ename FROM emp--2
+```
+
+### 3단계
+
+![3](../../.gitbook/assets/3%20%2814%29.png)
+
+```sql
+SELECT empno, ename FROM emp--3
+WHERE empno=7566
+--1.테이블을 먼저 드라이브 하는 것이 아니라 index를 드라이브한다.
+--2.index가 존재하더라도 저건절에서 묻지않으면 사용하지 않는다.
+--index를 사용하려면 해당 pk컬럼을 조건절에서 사용해야한다.
+```
+
+### 4단계
+
+![4](../../.gitbook/assets/4%20%2813%29.png)
+
+```sql
+--index를 무력화시킬 수 있다.옵티마이저를 조작할 수 있다.
+--좌변 pk를 가공하면 index로서 사용될수 없다.
+SELECT empno, ename FROM emp--4
+WHERE empno!=7566
+
+SELECT empno, ename FROM emp
+WHERE empno<>7566
+```
+
+### IN
+
+![IN](../../.gitbook/assets/in-.png)
+
+```sql
+--in구문
+--테이블을 한번만 읽어서 처리
+SELECT dname, loc FROM dept WHERE deptno IN(10,30)--집합 한개
+
+--테이블을 두번 읽어서 처리
+SELECT dname, loc FROM dept WHERE deptno = 10--집한 한개
+UNION ALL 
+SELECT dname, loc FROM dept WHERE deptno = 30--집합 두개
+```
+
