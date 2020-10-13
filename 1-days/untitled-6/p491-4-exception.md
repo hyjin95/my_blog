@@ -85,7 +85,7 @@ public class p491_3 {
 			System.out.println(e.getMessage());
 			e.printStackTrace();//라인번호도 같이 출력, throws한 경우도 출력
 		}finally {//제일 마지막에 추가할수 있는 예약어
-			System.out.println("예외가 발생하더라도 무조건 실행된다. 단, 가상버신과의 연결고리가 끊기면 예외");
+			System.out.println("예외가 발생하더라도 무조건 실행된다. 단, 가상머신과의 연결고리가 끊기면 예외");
 		}
 	}
 }
