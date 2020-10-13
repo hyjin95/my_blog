@@ -142,8 +142,8 @@ description: 2020.10.08 - 38일차
 
 ### sqlSessionFactory
 
-* 물리적으로 떨어져있는 오라클 서버와 연결통로를 확보하는데 필요한 객체 - 연결통로로서 sqlSession객체 생성에 대해 필요한 사전처리
-* sqlSession은 위에서 연결되었을 때 개발자가 작성한 sql문 처리 요청을 하는데 필요한 객체 - sqlSession.commit\( \), sqlSession.rollback\( \)이 가능하다. - session변수.openSession\( \)메서드로 생성가능 - session변수.close\( \) 메서드로 닫아주어야한다.
+* 물리적으로 떨어져있는 오라클 **서버와 연결통로를 확보**하는데 필요한 객체 - 연결통로로서 sqlSession객체 생성에 대해 필요한 사전처리
+* **sqlSession**은 위에서 연결되었을 때 개발자가 작성한 **sql문 처리 요청**을 하는데 필요한 객체 - sqlSession.commit\( \), sqlSession.rollback\( \)이 가능하다. - session변수.openSession\( \)메서드로 생성가능 - session변수.close\( \) 메서드로 닫아주어야한다.
 * sqlSessionFactory가 먼저 메모리에 로딩 되어야\(인스턴스화 되어야\) selSession이 생성될 수 있다. - 서로 의존관계에 있다.
 * build클래스로 sqlSessionFactory객체를 인스턴스화하여 사용한다. - SqlSessionFactory 변수이름 = new SqlSessionFactoryBuilder\( \).build\(Reader \|\| Writer\);
 
