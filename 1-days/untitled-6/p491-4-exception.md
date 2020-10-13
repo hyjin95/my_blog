@@ -2,6 +2,8 @@
 
 ### p491.java - 기본형
 
+![p491 Run](../../.gitbook/assets/p491.png)
+
 ```java
 package book.ch14;
 
@@ -10,10 +12,10 @@ public class p491 {
 	public static void main(String[] args) {
 		int arr[] = new int[3];
 		try {
-			for(int i=0;i<=3;i++) {//0,1,2,3 탈출
-				System.out.println("//////////////////");//어디서 탈출햇는지 보기 위함
-				arr[i] = i;//arr[3] = 3; ArrayIndexOutofBoundsException 발생
-				System.out.println("//////////////////");//어디서 탈출했는지 보기 위함
+			for(int i=0;i<=3;i++) {
+				System.out.println("//////////////////");
+				arr[i] = i;
+				System.out.println("//////////////////");
 				System.out.println(arr[i]);
 			}
 		}catch(Exception e) {
@@ -27,7 +29,9 @@ public class p491 {
 
 * 6번 : arr배열은 방이 3개인 배열이다. = 0, 1, 2
 * 7번 : 일부러 runtime에러를 발생시킬것이므로 try-catch문을 작성한다.
-* 8번 : 0, 1, 2, 3 = 4번 반복되는 for문
+* 8번 : 0, 1, 2, 3 = 4번 반복되는 for문 = 0, 1, 2, 3 -&gt; 탈출
+* 9,11번 : 어디서 에러가 발생하는지, 탈출하는지 알아보기위해 넣은 출력문
+* 10번 : i=3이 되는 네번째 반복문에서 ArrayIndexOutOfBoundsException이 발생한다. - arr\[3\] = 3; - 4번째인 3번방은 존재 하지않는다.
 
 ### p491\_2.java
 
