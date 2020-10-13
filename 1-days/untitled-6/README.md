@@ -35,6 +35,7 @@ description: 2020.10.13 - 40일차
 * MyBaits프레임워크가 제공하는 기능 중 하나
 * 동적SQL = Dynamic SQL
 * **사용될 SQL문이 runtime시에 결정**되는 SQL문을 말한다.
+* if문을 사용할 수 있게 해준다.
 
 ### API
 
