@@ -64,6 +64,8 @@ public class p491_2 {
 
 ### p491\_3.java - 3단계
 
+![p491\_3](../../.gitbook/assets/p491_3.png)
+
 ```java
 package book.ch14;
 
@@ -92,6 +94,8 @@ public class p491_3 {
 ```
 
 ### p491\_4 - 4단계
+
+![p491\_4](../../.gitbook/assets/p491_4.png)
 
 ```java
 package book.ch14;
