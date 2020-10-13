@@ -20,6 +20,14 @@ description: 2020.10.13 - 40일차
 
 ## MyBaits와 DB연동
 
+|  | MyBatis API | JDBC API |
+| :---: | :---: | :---: |
+| Connection | X  \(SqlSessionFactory\) | O |
+| PreparedStatment | X  \(SqlSession\) | O |
+| executeQuery | X \(selectOne, selectList, slectMap\) | O |
+| ResultSet | X | O |
+| While | X\(자동\) | O |
+
 {% page-ref page="../16-days/" %}
 
 후기 : 
