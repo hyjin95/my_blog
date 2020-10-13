@@ -138,7 +138,7 @@
     * [SQLMapEmpDao - mybatis](1-days/38-days/sqlmapempdao-mybatis.md)
     * [XML - oracle, mysql](1-days/38-days/xml.md)
     * [Toad - t\_orderbasket, decode&sum](1-days/38-days/toad-t_orderbasket-decode-and-sum.md)
-  * [39 Days - toad복습, try-catch,](1-days/39-days/README.md)
+  * [39 Days - toad복습, DECODE, GROUP BY](1-days/39-days/README.md)
     * [t\_orderbasket](1-days/39-days/t_orderbasket.md)
   * [40 Days -](1-days/untitled-6.md)
   * [Untitled](1-days/untitled-1.md)

@@ -2,7 +2,7 @@
 description: 2020.10.10 - 39일차
 ---
 
-# 39 Days - toad복습, try-catch,
+# 39 Days - toad복습, DECODE, GROUP BY
 
 ### 사용 프로그램
 
