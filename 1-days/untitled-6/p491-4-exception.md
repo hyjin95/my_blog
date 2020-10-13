@@ -33,7 +33,9 @@ public class p491 {
 * 9,11번 : 어디서 에러가 발생하는지, 탈출하는지 알아보기위해 넣은 출력문
 * 10번 : i=3이 되는 네번째 반복문에서 ArrayIndexOutOfBoundsException이 발생한다. - arr\[3\] = 3; - 4번째인 3번방은 존재 하지않는다.
 
-### p491\_2.java
+### p491\_2.java - 2단계
+
+![p491\_2](../../.gitbook/assets/p491_2.png)
 
 ```java
 package book.ch14;
@@ -44,9 +46,9 @@ public class p491_2 {
 		int arr[] = new int[3];//0,1,2
 		try {
 			for(int i=0;i<=3;i++) {//0,1,2,3 탈출
-				System.out.println("//////////////////");//어디서 탈출햇는지 보기 위함
-				arr[i] = i;//arr[3] = 3; 여기서 ArrayIndexOutofBoundsException 발생
-				System.out.println("//////////////////");//어디서 탈출했는지 보기 위함
+				System.out.println("//////////////////");
+				arr[i] = i;//arr[3] = 3; ArrayIndexOutofBoundsException 발생
+				System.out.println("//////////////////");
 				System.out.println(arr[i]);
 			}
 		}catch(ArrayIndexOutOfBoundsException ae) {
@@ -60,7 +62,7 @@ public class p491_2 {
 }
 ```
 
-### p491\_3.java
+### p491\_3.java - 3단계
 
 ```java
 package book.ch14;
@@ -71,9 +73,9 @@ public class p491_3 {
 		int arr[] = new int[3];//0,1,2
 		try {
 			for(int i=0;i<=3;i++) {//0,1,2,3 탈출
-				System.out.println("//////////////////");//어디서 탈출햇는지 보기 위함
-				arr[i] = i;//arr[3] = 3; 여기서 ArrayIndexOutofBoundsException 발생
-				System.out.println("//////////////////");//어디서 탈출했는지 보기 위함
+				System.out.println("//////////////////"); 
+				arr[i] = i;//arr[3] = 3; ArrayIndexOutofBoundsException 발생
+				System.out.println("//////////////////");
 				System.out.println(arr[i]);
 			}
 		}catch(ArrayIndexOutOfBoundsException ae) {
@@ -89,7 +91,7 @@ public class p491_3 {
 }
 ```
 
-### p491\_4
+### p491\_4 - 4단계
 
 ```java
 package book.ch14;
@@ -100,9 +102,9 @@ public class p491_4 {
 	public void methodA() throws ArrayIndexOutOfBoundsException{
 		int arr[] = new int[3];//0,1,2
 		for(int i=0;i<=3;i++) {//0,1,2,3 탈출
-			System.out.println("//////////////////");//어디서 탈출햇는지 보기 위함
-			arr[i] = i;//arr[3] = 3; 여기서 ArrayIndexOutofBoundsException 발생
-			System.out.println("//////////////////");//어디서 탈출했는지 보기 위함
+			System.out.println("//////////////////");
+			arr[i] = i;//arr[3] = 3; ArrayIndexOutofBoundsException 발생
+			System.out.println("//////////////////");
 			System.out.println(arr[i]);
 		}		
 	}
