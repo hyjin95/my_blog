@@ -1,13 +1,98 @@
 # MyBatisZipCodeSearch
 
+## MyBatisCommonFactory.java
+
+```java
+package com.util;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.Reader;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+//xml과 자바가 만나는 부분 설계 클래스 --공통팀
+public class MyBatisCommonFactory {
+	//선언부
+	//xml문서로부터 객체를 주입받아야 하므로 단독으로 인스턴스화해버리면 안된다.
+	public SqlSessionFactory sqlSessionFactory = null;
+	public SqlSession		 session = null;//오라클에 DML을 요청하는 클래스
+	//위 두 클래스는 서로 의존관계에 있다. 연결통로 생성 -> 요청클래스 생성이 이루어져야한다.
+	
+	//생성자
+	
+	//초기화
+	public void init() {
+		try {
+			//MapperConfig.xml문서에서 오라클 서버에 대한 정보를 스캔해야한다.--1
+			//물리적으로 떨어져있는 오라클과의 연결통로를 생성해야한다. = SqlSessionFactory(myBatis제공 클래스) --2
+			String resource ="oracle/mybatis/MapperConfig.xml";			
+			Reader reader = Resources.getResourceAsReader(resource);
+			//builder클래스로 sqlSessionFactory를 인스턴스화
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);//Factory클래스가 먼저 생성되어야한다.		
+			System.out.println("SqlSessionFactory(SqlSessionFactoryBean) "+sqlSessionFactory);//객체주입이 되었는지 확인하는 단위테스트, null이 나오면 안된다.
+		} catch (FileNotFoundException fe) {
+			System.out.println("FileNotFoundException : "+fe.getMessage());
+		} catch (IOException ie) {
+			System.out.println("IOException : "+ie.getMessage());
+		}
+	}
+	//싱글톤 패턴으로 개발을 전개해야 할 때는 메서드로 객체주입 받도록 한다.
+	public SqlSessionFactory getSqlSessionFactory() {
+		init();//sqlSessionFactory의 객체 생성이 일어난다.
+		return sqlSessionFactory;//init메서드를 거치지 않으면 null
+	}
+}
+```
+
+## ZipCode.XML
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oracle.mybatis.ZipCodeMapper">
+ <select id="getAddressList" parameterType="map" resultType="Map">
+ 		SELECT zipcode, address FROM zipcode_t
+	<where>
+	 <if test="zdo!=null and zdo.length()>0">
+	 	AND zdo=#{zdo}
+ 	 </if>
+	 <if test="dong!=null">
+	 	AND dong like '%'||#{dong}||'%'
+ 	 </if>
+ 	</where>
+ </select>
+</mapper>
+```
+
 ## MyBatisZipCodeSearch
+
+### 선언부
 
 ```java
 public class MyBatisZipCodeSearch extends JFrame{
 
-  SqlSessionFactory ssf = null;
+  MyBatisCommonFactory mcf = new MyBatisCommonFactory();
+	SqlSessionFactory ssf = null;
 	SqlSession Session = null;
 ```
+
+### 생성자
+
+```java
+//생성자
+	public MyBatisZipCodeSearch() {
+		System.out.println("MyBatisZipCodeSearch 호출 성공");
+		ssf = mcf.getSqlSessionFactory();
+		zdos3 = getZdoList();		
+	}
+```
+
+### refreshData 메서드 - 조회
 
 ```java
 //조회메서드
@@ -51,119 +136,7 @@ public class MyBatisZipCodeSearch extends JFrame{
 	}
 ```
 
-## 기존 ZipCodeSearch.java
+## 기존 ZipCodeSearch.java - refreshDate\( \)
 
-### 선언부
-
-```java
-package oracle.mybatis;
-
-public class ZipCodeSearch extends JFrame implements ItemListener,FocusListener,ActionListener, MouseListener {
-	//선언부
-	//물리적으로 떨어져있는 db서버와 연결통로 만들기
-	Connection        con   = null;
-	//위에서 연결되면 쿼리문을 전달할 전령 역할의 인터페이스 객체 생성
-	PreparedStatement pstmt = null;//insert, update, delete에 필요
-	//조회된 결과를 화면에 처리해야하므로 오라클에서 커서를 조작하기 위한 인터페이스 추가 
-	ResultSet         rs    = null;//select에서만 필요
-
-	String zdos3[] = null;
-	String zdo = null;
-	
-	ChatMemberShip memberShip = null;
-```
-
-### 생성자
-
-```java
-	//생성자
-	public ZipCodeSearch() {
-		zdos3 = getZdoList();//화면구성보다 먼저 호출되어야 한다.버튼정의이므로
-		//DB를 다녀온 후에 화면을 출력해야한다. 지역버튼은 그래야 정의되므로
-		//getZdoList메서드의 반환타입은 배열이다.		
-	}
-	public ZipCodeSearch(ChatMemberShip memberShip) {
-		this();//화면이 열릴때 디폰트생성자를 호출해야한다. 디폴트생성자를 호출하는법.
-		this.memberShip = memberShip;		
-	}
-```
-
-### refreshDate메서드 - 조회
-
-```java
-	//조회메서드
-	public void refreshData(String user, String dong) {
-		System.out.println("zdo : "+zdo+", dong : "+dong);
-		DBConnectionMgr dbMgr  = DBConnectionMgr.getInstance();
-		con = dbMgr.getConnection();
-		StringBuilder sql = new StringBuilder();
-		sql.append("SELECT zipcode, address");
-		sql.append(" FROM zipcode_t");
-		sql.append(" WHERE 1=1");
-		if(zdo!=null && zdo.length()>0) {//비어있지 않고, 하나 이상 값이 있으면
-			sql.append(" AND zdo=?");//WHERE절 다음에 붙으므로 AND절을 사용
-		}
-		if(dong!=null) {
-			sql.append(" AND dong LIKE '%'||?||'%'");//전체검색
-		}
-		//물음표의 갯수가 달라지므로 변수처리한다.
-		//물음표 자리는 배열이 아니므로 1부터이다.
-		int i = 1;
-		try {
-			//파라미터로 넘어온 select문을 스캔 -> ?갯수를 파악한다.
-			pstmt = con.prepareStatement(sql.toString());
-			//위에서 물음표 자리에 들어갈 값을 파라미터로 받아서 설정한다.1=?갯수
-			if(zdo!=null && zdo.length()>0) {//비어있지 않고, 하나 이상 값이 있으면
-				sql.append(" AND zdo=?");
-				pstmt.setString(i++, zdo);//콤보박스에서 가져온 값
-			}
-			if(dong!=null && dong.length()>0) {
-				pstmt.setString(i++, dong);//텍스트 필드에서 가져온 값
-			}
-			rs = pstmt.executeQuery();
-			//내 안에 있는 타입을 꺽쇠<>안에 직접 써주면 타입체크를 별도로 하지 않는다. = 제네릭
-			//선언부에는 반드시 써야하고 생성부에서는 생략가능하다.
-			//그러나 다이아몬드 연산자는 작성해준다 = 오른쪽항
-			//Vector v = new Vector();
-			Vector<Map<String,Object>> v = new Vector<>();//권장사항
-			//List v2 = new Vector(); //같다, 선언부에 인터페이스 하지만 List는 copyinto를 쓸 수 없으므로 사용하지 않는다.
-			Map<String,Object> rmap = null;
-			while(rs.next()) {
-				rmap = new HashMap<>();//Map은 오류발생한다.
-				rmap.put("zipcode",rs.getInt("zipcode"));//숫자보다 문자열로 입력하는것이 직관적이다. 알아보기 편하다, 수정하기 좋다.
-				rmap.put("address",rs.getString("address"));//숫자보다 문자열로 입력하는것이 직관적이다. 알아보기 편하다, 수정하기 좋다.
-				v.add(rmap);
-			}//end of while
-			//질문 : 두 번 조회할 경우 앞에 조회결과가 남아있어요. 초기화하는 방법
-			if(v.size() > 0) {
-				while(dtm_zipcode.getRowCount()>0) {
-					dtm_zipcode.removeRow(0);
-				}
-			}
-			Iterator<Map<String,Object>> iter = v.iterator();//vector에서 값꺼내서 HashMap타입의 iter에게 담는다.
-			Object keys[] = null;
-			//조회결과가 한 건도 없는 경우의 화면처리
-			if((v==null)||(v.size()<1)) {
-				//if((v==null)||(v.size()<1))예방코드 작성
-				JOptionPane.showMessageDialog(this, "조회결과가 없습니다.");
-				return;
-			}
-			else {
-				while(iter.hasNext()) {
-					HashMap data = (HashMap)iter.next();
-					keys = data.keySet().toArray();
-					Vector<Object> oneRow = new Vector<>();
-					oneRow.add(0,data.get(keys[0]));//1번 key값은 zipcode
-					oneRow.add(1,data.get(keys[1]));//2번 key값은 address
-					dtm_zipcode.addRow(oneRow);
-				}
-			}				
-		}catch(SQLException se) {
-			System.out.println(se.toString());
-			System.out.println("[[query]] == "+sql.toString());//toad에 돌려서 오타찾기
-		}catch(Exception e) {
-			System.out.println(e.toString());
-		}//end of try-catch		
-	}
-```
+{% page-ref page="../untitled-3/map-list.md" %}
 
