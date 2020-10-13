@@ -142,6 +142,6 @@
     * [t\_orderbasket](1-days/39-days/t_orderbasket.md)
   * [40 Days - 예외처리, mybatis와 DB연동, 싱글톤,](1-days/untitled-6/README.md)
     * [p491~4 Exception 예외처리](1-days/untitled-6/p491-4-exception.md)
-    * [Untitled](1-days/untitled-6/untitled.md)
+    * [MyBatisZipCodeSearch](1-days/untitled-6/untitled.md)
   * [Untitled](1-days/untitled-1.md)
 
