@@ -1,12 +1,14 @@
 # p491~4 Exception 예외처리
 
+### p491.java - 기본형
+
 ```java
 package book.ch14;
 
 public class p491 {
 	
 	public static void main(String[] args) {
-		int arr[] = new int[3];//0,1,2
+		int arr[] = new int[3];
 		try {
 			for(int i=0;i<=3;i++) {//0,1,2,3 탈출
 				System.out.println("//////////////////");//어디서 탈출햇는지 보기 위함
@@ -22,6 +24,12 @@ public class p491 {
 	}
 }
 ```
+
+* 6번 : arr배열은 방이 3개인 배열이다. = 0, 1, 2
+* 7번 : 일부러 runtime에러를 발생시킬것이므로 try-catch문을 작성한다.
+* 8번 : 0, 1, 2, 3 = 4번 반복되는 for문
+
+### p491\_2.java
 
 ```java
 package book.ch14;
@@ -47,6 +55,8 @@ public class p491_2 {
 	}
 }
 ```
+
+### p491\_3.java
 
 ```java
 package book.ch14;
@@ -74,6 +84,8 @@ public class p491_3 {
 	}
 }
 ```
+
+### p491\_4
 
 ```java
 package book.ch14;
