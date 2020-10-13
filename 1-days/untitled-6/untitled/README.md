@@ -20,9 +20,7 @@ public class MyBatisCommonFactory {
 	public SqlSessionFactory sqlSessionFactory = null;
 	public SqlSession		 session = null;//오라클에 DML을 요청하는 클래스
 	//위 두 클래스는 서로 의존관계에 있다. 연결통로 생성 -> 요청클래스 생성이 이루어져야한다.
-	
-	//생성자
-	
+		
 	//초기화
 	public void init() {
 		try {
@@ -55,6 +53,15 @@ public class MyBatisCommonFactory {
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="oracle.mybatis.ZipCodeMapper">
+ <select id="getZdoList" parameterType="map" resultType="Map">
+		SELECT '전체' zdo FROM dual
+		UNION ALL
+		SELECT zdo
+		  FROM (SELECT distinct(zdo) zdo
+		        FROM zipcode_t
+		        ORDER BY zdo asc)
+ </select>
+ 
  <select id="getAddressList" parameterType="map" resultType="Map">
  		SELECT zipcode, address FROM zipcode_t
 	<where>
@@ -79,6 +86,8 @@ public class MyBatisZipCodeSearch extends JFrame{
   MyBatisCommonFactory mcf = new MyBatisCommonFactory();
 	SqlSessionFactory ssf = null;
 	SqlSession Session = null;
+	
+	List<Map<String,Object>> zdoList = null;
 ```
 
 ### 생성자
@@ -88,11 +97,42 @@ public class MyBatisZipCodeSearch extends JFrame{
 	public MyBatisZipCodeSearch() {
 		System.out.println("MyBatisZipCodeSearch 호출 성공");
 		ssf = mcf.getSqlSessionFactory();
-		zdos3 = getZdoList();		
+		zdoList = getZdoList();		
 	}
 ```
 
-### refreshData 메서드 - 조회
+### getZdoList 메서드 
+
+```java
+public List<Map<String,Object>> getZdoList() {
+		
+		SqlSession sqlSession = mcf.getSqlSessionFactory().openSession();
+		List<Map<String,Object>> zdoList = new ArrayList<>();
+		
+		try {			
+			//myBatis에서 자동으로 담아준다.
+			zdoList = sqlSession.selectList("getZdoList");
+		} catch (Exception e) {
+			System.out.println("Exception : "+e.toString());
+		}		
+		return zdoList;
+	}//end of getZdoList
+```
+
+### initDispaly 메서드
+
+```java
+public void initDisplay() {
+		Vector<String> v = new Vector<>();
+		for(int i=0;i<zdoList.size();i++) {
+			String zdo = zdoList.get(i).toString();
+			v.add(zdo);
+		}
+		jcb_zdo2 = new JComboBox(v);
+}
+```
+
+### refreshData 메서드 
 
 ```java
 //조회메서드
@@ -137,4 +177,6 @@ public class MyBatisZipCodeSearch extends JFrame{
 ```
 
 ## 기존 ZipCodeSearch.java - refreshDate\( \)
+
+{% page-ref page="zipcodesearch.md" %}
 
