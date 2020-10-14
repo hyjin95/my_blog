@@ -1,4 +1,4 @@
-# Cinfig.properties
+# MyBatis API분석 - Cinfig.properties
 
 ## Configuration.XML
 
@@ -25,6 +25,8 @@
 	</mappers>
 </configuration>
 ```
+
+* MyBatis API가 제공하는 기본 XML설정 소스
 
 ## Config.properties
 
