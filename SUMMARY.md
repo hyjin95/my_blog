@@ -144,11 +144,10 @@
     * [p491~4 Exception 예외처리](1-days/untitled-6/p491-4-exception.md)
     * [MyBatisZipCodeSearch](1-days/untitled-6/untitled/README.md)
       * [ZipCodeSearch](1-days/untitled-6/untitled/zipcodesearch.md)
-  * [41 Days - Log4j, properties, MyBatisZipCodeSearch](1-days/41-days/README.md)
-    * [MyBatis API분석 - Cinfig.properties](1-days/41-days/properties.md)
+  * [41 Days - Log4j, properties, transaction, POOL, mybatis-insert, multiInsert, foreach](1-days/41-days/README.md)
+    * [MyBatis API - Cinfig.properties](1-days/41-days/properties.md)
     * [MyBatisZipCodeSearch 수정](1-days/41-days/mybatiszipcodesearch-2/README.md)
       * [MyBatisZipCodeSearch - Log4j - zdos3](1-days/41-days/mybatiszipcodesearch-2/mybatiszipcodesearch.md)
-    * [Log4j](1-days/41-days/log4j.md)
     * [insert, mutiInsert 구현](1-days/41-days/insert-mutiinsert.md)
   * [Untitled](1-days/untitled-1.md)
 

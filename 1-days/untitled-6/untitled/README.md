@@ -2,6 +2,8 @@
 
 ## MyBatisCommonFactory.java
 
+### 선언부
+
 ```java
 package com.util;
 
@@ -20,7 +22,11 @@ public class MyBatisCommonFactory {
 	public SqlSessionFactory sqlSessionFactory = null;
 	public SqlSession		 session = null;//오라클에 DML을 요청하는 클래스
 	//위 두 클래스는 서로 의존관계에 있다. 연결통로 생성 -> 요청클래스 생성이 이루어져야한다.
-		
+```
+
+### init 메서드 - DB연결
+
+```java
 	//초기화
 	public void init() {
 		try {
@@ -37,6 +43,11 @@ public class MyBatisCommonFactory {
 			System.out.println("IOException : "+ie.getMessage());
 		}
 	}
+```
+
+### getSqlSessionFactory - 싱글톤 패턴
+
+```java
 	//싱글톤 패턴으로 개발을 전개해야 할 때는 메서드로 객체주입 받도록 한다.
 	public SqlSessionFactory getSqlSessionFactory() {
 		init();//sqlSessionFactory의 객체 생성이 일어난다.

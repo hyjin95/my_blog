@@ -31,5 +31,7 @@ log4j.logger.java.sql.PreparedStatement=INFO
 log4j.logger.java.sql.ResultSet=INFO
 ```
 
+* zipcode.XML이 실행될때마다 추적 로그를 작성한다.
+
 
 

@@ -1,4 +1,4 @@
-# MyBatis API분석 - Cinfig.properties
+# MyBatis API - Cinfig.properties
 
 ## Configuration.XML
 
