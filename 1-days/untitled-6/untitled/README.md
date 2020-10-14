@@ -125,7 +125,10 @@ public List<Map<String,Object>> getZdoList() {
 public void initDisplay() {
 		Vector<String> v = new Vector<>();
 		for(int i=0;i<zdoList.size();i++) {
-			Map<String,Object> rmap = zdoList.get(i);
+			//Map의 value는 Object타입이므로 {ZDO=XXX}라는 구조체가 Obejct로서 덩어리로 담긴다.
+			//이를 그냥 String zdo = rmap.get("ZDO").toString();해서 출력하면 덩어리가 나온다.
+			Map<String,Object> rmap = zdoList.get(i);//map으로 key, value를 나눠 담아야한다.
+			//rmap.keySet().toArray();//직접 이런 구조를 설계해 보기, 사용자 정의 클래스 활용 연습
 			String zdo = rmap.get("ZDO").toString();
 			v.add(zdo);
 		}
