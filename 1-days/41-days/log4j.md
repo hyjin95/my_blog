@@ -30,3 +30,26 @@ public class Log4jTest {
 }
 ```
 
+```markup
+#log4j.properties
+log4j.rootCategory=info, stdout, file
+log4j.debug=false
+log4j.appender.stdout=com.p6spy.engine.logging.appender.StdoutLogger
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.ImmediateFlush=true
+log4j.appender.stdout.Target=System.err
+
+log4j.appender.stdout.layout.ConversionPattern=[%d] [%p] (%13F:%L) %3x - %m%n
+
+
+log4j.appender.file.DatePattern = '.'yyyy-MM-dd
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.ConversionPattern=[%d] [%p] (%13F:%L) %3x - %m%n
+
+log4j.logger.java.sql.Connection=INFO
+log4j.logger.java.sql.Statement=INFO
+log4j.logger.java.sql.PreparedStatement=INFO
+log4j.logger.java.sql.ResultSet=INFO
+```
+
