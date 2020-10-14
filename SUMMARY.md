@@ -144,6 +144,7 @@
     * [p491~4 Exception 예외처리](1-days/untitled-6/p491-4-exception.md)
     * [MyBatisZipCodeSearch](1-days/untitled-6/untitled/README.md)
       * [ZipCodeSearch](1-days/untitled-6/untitled/zipcodesearch.md)
-  * [41 Days -](1-days/41-days.md)
+  * [41 Days -](1-days/41-days/README.md)
+    * [properties](1-days/41-days/properties.md)
   * [Untitled](1-days/untitled-1.md)
 
