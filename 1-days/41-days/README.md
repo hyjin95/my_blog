@@ -12,6 +12,8 @@ description: 2020.10.14 - 41일차
 
 ## 복습
 
+### 설정
+
 ![](../../.gitbook/assets/1%20%2824%29.png)
 
 ## MyBatis, Properties
