@@ -126,7 +126,7 @@ public void initDisplay() {
 		Vector<String> v = new Vector<>();
 		for(int i=0;i<zdoList.size();i++) {
 			Map<String,Object> rmap = zdoList.get(i);
-			String zdo = rmap.get("zdo").toString();
+			String zdo = rmap.get("ZDO").toString();
 			v.add(zdo);
 		}
 		jcb_zdo2 = new JComboBox(v);
