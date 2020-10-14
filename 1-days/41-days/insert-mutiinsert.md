@@ -118,7 +118,7 @@ public class SqlMapDeptDao {
 			session.commit();
 			session.close();			
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.toString());
 		} finally {
 			session.close();
 		}
@@ -129,26 +129,26 @@ public class SqlMapDeptDao {
 		SqlMapDeptDao dDao = new SqlMapDeptDao();
 		List<Map<String, Object>> deptList = dDao.getDeptList();
 		System.out.println("deptList.size = "+deptList.size());
-		int result = dDao.deptInsert(40, "개발부", "서울");
-		System.out.println("result = "+result);
-		
+		//int result = dDao.deptInsert(40, "개발부", "서울");
+		//System.out.println("result = "+result);
+		int result=0;
 		List<Map<String, Object>> insertList = new ArrayList<>();
 		Map<String, Object> insertMap = new HashMap<>();
 		insertMap.put("deptno", 50);
 		insertMap.put("dname", "개발부");
-		insertMap.put("dloc", "대전");
+		insertMap.put("loc", "대전");
 		insertList.add(insertMap);
 		
 		insertMap = new HashMap<>();
 		insertMap.put("deptno", 60);
 		insertMap.put("dname", "개발부");
-		insertMap.put("dloc", "광주");
+		insertMap.put("loc", "광주");
 		insertList.add(insertMap);
 		
 		insertMap = new HashMap<>();
 		insertMap.put("deptno", 70);
 		insertMap.put("dname", "개발부");
-		insertMap.put("dloc", "울산");
+		insertMap.put("loc", "울산");
 		insertList.add(insertMap);
 		result = 0;
 		result = dDao.multiDeptInsert(insertList);
@@ -157,5 +157,19 @@ public class SqlMapDeptDao {
 }
 ```
 
-
+```java
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oracle.mybatis.DeptMapper">
+ <insert id="multiDeptInsert" parameterType="list">
+ 	insert all 
+ 	<foreach collection = "list" item="item" index="index" separator=" ">
+ 		into dept(deptno,dname,loc) values(#{item.deptno},#{item.dname},#{item.loc}) 
+ 	</foreach>
+ 	select * from dual
+ </insert>
+</mapper>
+```
 
