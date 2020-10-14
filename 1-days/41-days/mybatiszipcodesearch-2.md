@@ -9,6 +9,8 @@ public class MyBatisZipCodeSearch extends JFrame implements ItemListener,ActionL
 	SqlSessionFactory ssf = null;
 	SqlSession Session = null;
 	
+	String zdos3[] = null;
+	
 	List<Map<String,Object>> zdoList = null;
 	int size = 0;
 	Vector<String> v = null;
