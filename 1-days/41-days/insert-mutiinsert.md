@@ -1,6 +1,6 @@
 # insert, mutiInsert 구현
 
-## Insert
+## Insert - SqlMapDeptDao
 
 ```java
 package oracle.mybatis;
@@ -63,6 +63,8 @@ public class SqlMapDeptDao {
 }
 ```
 
+### dept.XML
+
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
@@ -77,5 +79,83 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </mapper>
 ```
 
-## multiInsert
+## multiInsert - SqlMapDeptDao
+
+```java
+package oracle.mybatis;
+
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.log4j.Logger;
+
+public class SqlMapDeptDao {
+	
+	//xml문서가 물리적으로 어디에 있는지를 알아야 한다.
+	String resource ="oracle/mybatis/MapperConfig.xml";
+	//myBatis에서 지원하는 클래스로
+	SqlSessionFactory sqlMapper = null;
+	
+	Logger logger = Logger.getLogger(SqlMapDeptDao.class);
+	
+	public int multiDeptInsert(List<Map<String,Object>> list){
+		
+		int result = 0;//0이면 등록 실패, 1이면 등록 성공
+		SqlSession session = null;
+		try {
+			Reader reader = Resources.getResourceAsReader(resource);
+			//build클래스로 sqlSessionFactory를 인스턴스할 수 있다.
+			sqlMapper = new SqlSessionFactoryBuilder().build(reader);
+			session = sqlMapper.openSession();			
+			result = session.insert("multiDeptInsert", list);			
+			session.commit();
+			session.close();			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		SqlMapDeptDao dDao = new SqlMapDeptDao();
+		List<Map<String, Object>> deptList = dDao.getDeptList();
+		System.out.println("deptList.size = "+deptList.size());
+		int result = dDao.deptInsert(40, "개발부", "서울");
+		System.out.println("result = "+result);
+		
+		List<Map<String, Object>> insertList = new ArrayList<>();
+		Map<String, Object> insertMap = new HashMap<>();
+		insertMap.put("deptno", 50);
+		insertMap.put("dname", "개발부");
+		insertMap.put("dloc", "대전");
+		insertList.add(insertMap);
+		
+		insertMap = new HashMap<>();
+		insertMap.put("deptno", 60);
+		insertMap.put("dname", "개발부");
+		insertMap.put("dloc", "광주");
+		insertList.add(insertMap);
+		
+		insertMap = new HashMap<>();
+		insertMap.put("deptno", 70);
+		insertMap.put("dname", "개발부");
+		insertMap.put("dloc", "울산");
+		insertList.add(insertMap);
+		result = 0;
+		result = dDao.multiDeptInsert(insertList);
+		System.out.println("result = "+result);
+	}
+}
+```
+
+
 
