@@ -1,4 +1,4 @@
-# properties
+# Cinfig.properties
 
 ## Configuration.XML
 
@@ -84,6 +84,5 @@ public class MyBatisCommonFactory {
 		return sqlSessionFactory;//init메서드를 거치지 않으면 null
 	}
 }
-
 ```
 
