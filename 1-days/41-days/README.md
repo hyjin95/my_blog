@@ -2,7 +2,7 @@
 description: 2020.10.14 - 41일차
 ---
 
-# 41 Days -
+# 41 Days - Log4j, properties, MyBatisZipCodeSearch
 
 ### 사용 프로그램
 
