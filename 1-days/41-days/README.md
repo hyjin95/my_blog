@@ -18,5 +18,5 @@ description: 2020.10.14 - 41일차
 
 ## MyBatisZipCodeSearch
 
-## Apach - log4j
+## Apache - log4j
 

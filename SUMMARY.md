@@ -147,5 +147,6 @@
   * [41 Days -](1-days/41-days/README.md)
     * [Cinfig.properties](1-days/41-days/properties.md)
     * [MyBatisZipCodeSearch 마무리](1-days/41-days/mybatiszipcodesearch.md)
+    * [Log4j](1-days/41-days/log4j.md)
   * [Untitled](1-days/untitled-1.md)
 
