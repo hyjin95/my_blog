@@ -26,6 +26,14 @@ description: 2020.10.14 - 41일차
 
 ## Apache - log4j
 
+### Log4j 란
+
+* Log for JAVA - 자바의 예외를 처리하기위해 디자인되었다.
+* 로그 출력을 다양한 대상으로 할수있도록 도와주는 오픈소스 도구
+* 멀티스레드 환경에서도 안전하다. thread-safe
+
+
+
 {% page-ref page="log4j.md" %}
 
 {% page-ref page="mybatiszipcodesearch-2/mybatiszipcodesearch.md" %}
