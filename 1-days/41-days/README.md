@@ -14,9 +14,19 @@ description: 2020.10.14 - 41일차
 
 ![](../../.gitbook/assets/1%20%2824%29.png)
 
-## MyBatis
+## MyBatis, Properties
+
+{% page-ref page="properties.md" %}
 
 ## MyBatisZipCodeSearch
 
+{% page-ref page="mybatiszipcodesearch-2/" %}
+
 ## Apache - log4j
+
+{% page-ref page="log4j.md" %}
+
+{% page-ref page="mybatiszipcodesearch-2/mybatiszipcodesearch.md" %}
+
+후기 : 
 
