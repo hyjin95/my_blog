@@ -31,6 +31,11 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 ### xml
 
 * 주석 : ctrl + shift + /
+* 줄 맞춤 : ctrl + shift + f
+
+### File
+
+* 주석 : \#
 
 ### 깃북
 
