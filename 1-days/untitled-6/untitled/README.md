@@ -81,7 +81,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 ### 선언부
 
 ```java
-public class MyBatisZipCodeSearch extends JFrame{
+public class MyBatisZipCodeSearch extends JFrame implements ItemListener,ActionListener{
 
   MyBatisCommonFactory mcf = new MyBatisCommonFactory();
 	SqlSessionFactory ssf = null;
