@@ -230,7 +230,7 @@ log4j.logger.java.sql.ResultSet=INFO
 
 ### for each문
 
-* List에 담긴 n개의 값을 한번에 insert할때 사용하는 구문이다.
+* List에 담긴 n개의 값을 한번에 DML문을 적용할때 사용하는 구문이다.
 * 요소 내부에서 key로 사용할 수 있는 것은 item과 index를 허용한다.
 * 파라미터로 List나 Map타입을 받을 수 있다. - MyBatis가 파라미터로 받은 List, Map변수를 자동으로 감싸 이름을 key로 사용한다. - List인스턴스는 "list'"를, 배열 인스턴스는 "array"를 key로 사용한다.
 
