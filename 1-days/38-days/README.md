@@ -2,7 +2,7 @@
 description: 2020.10.08 - 38일차
 ---
 
-# 38 Days - MyBatis, XML, jar, VO와Map, XML, Framework, SqlSession, mysql
+# 38 Days - MyBatis, XML, jar, VO와Map, XML, Framework, SqlSession, mysql, POJO
 
 ### 사용 프로그램
 
@@ -156,8 +156,14 @@ description: 2020.10.08 - 38일차
 ### POJO\(자바객체\)
 
 * Plain Old Java Object
-* 순수하게 자바로만 설계된 엔진
-* 자바빈즈\(Javabeans\)객체
+* 순수하게 자바로만 설계된 객체  
+  - Spring = 자바빈즈\(Javabeans\)객체  
+  - ORM 기술을 사용하기위해 프레임워크를 사용하는 순간 POJO라고 할 수 없다. 특정 '기술'에 종속된 것이므로
+
+  - 특정 기술의 클래스를 상속받거나, 직접 의존하게 되면서 가독성이 떨어지고 확장성이 떨어지는 단점이 생겼다.
+
+* 자바의 객체지향 장점을 살리는 오래된 방식의 순수한 자바객체
+* Spring 프레임워크는 'JPA'라는 표준 인터페이스를 정해 POJO를 유지 - ORM 프레임워크들이 JPA아래 구현, 실행된다.
 
 ### XML
 
