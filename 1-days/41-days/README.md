@@ -239,6 +239,13 @@ log4j.logger.java.sql.ResultSet=INFO
  	</foreach>
  	select * from dual
  </insert>
+ 
+ <delete id="multiDeptDelete" parameterType="list">
+   delete from dept where deptno in 
+   <foreach open="(" close=")" collection = "list" item="item" index="index" separator=",">
+ 		#{item.deptno}
+   </foreach>
+ </delete>
 </mapper>
 ```
 
@@ -250,9 +257,8 @@ log4j.logger.java.sql.ResultSet=INFO
 * **item**  - 전달받은 인자값을 다른 이르으로 재정의시\(foreach구문에서 사용할 변수명\) 
 * **open**  - 해당 구문이 시작할떄 넣을 문자\(foreach구문이 시작할때 넣을 문자\) 
 * **close**  - 해당 구문이 끝날떄 넣을 문자\(foreach 구문이 끝날 떄 넣을 문자\) 
-* **separator**  - 한번이상 반복할 떄 반복되는 사이에 해당문을 넣어준다.\(구분자\)
-* insert문 자체를 반복하는 것이 아니다. - 반복되는 부분을 into구문으로 자동으로 만들어주어 한번에 insert all해준다. - INSERT All     into dept\(컬럼1, 컬럼2, 컬럼3\)      values \(컬럼1값, 컬럼2값, 컬럼3값\)     into dept\(컬럼1, 컬럼2, 컬럼3\)      values \(컬럼1값2, 컬럼2값2, 컬럼3값2\)    .... - 이런식
-* index가 없으면 무한루프에 갖힌다.
+* **separator**  - 한번이상 반복할 떄 반복되는 사이에 해당문을 넣어준다.\(구분자\) - separator가 ','라고 한다면   insert구문은 foreach태그 안에 into 구문이 들어가므로 끝에 ,가 들어가는 순간 오류가 발생한다.   into dept\(-\) values\(-\), into ...가되므로 sql에러가 발생한다.  delete의 경우에는 foreach 태그안에 값만 들어가므로 끝에 ,를 넣어 구분하는 역할
+* insert문 자체를 반복하는 것이 아니다. - 반복되는 부분을 into구문으로 자동으로 만들어주어 한번에 insert all해준다. - INSERT All     into dept\(컬럼1, 컬럼2, 컬럼3\)      values \(컬럼1값, 컬럼2값, 컬럼3값\)     into dept\(컬럼1, 컬럼2, 컬럼3\)      values \(컬럼1값2, 컬럼2값2, 컬럼3값2\)    .... - 이런식으로 mybatis가 &lt;foreach&gt;태그로 자동으로 into구문을 n개만들어 insert all한다.
 
 {% page-ref page="insert-mutiinsert.md" %}
 
