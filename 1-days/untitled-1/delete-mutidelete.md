@@ -33,7 +33,8 @@ public int deptDelete(int value) {
 		try {
 			//value = 99;
 			result = session.delete("deptDelete", value);			
-			logger.info("result : "+result);				
+			logger.info("result : "+result);		
+			session.commit();			
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		} finally {
@@ -53,7 +54,8 @@ public int deptDelete2(DeptVO dVO) {
 			//dVO= new DeptVO();
 			//dVO.setDeptno(50);
 			result = session.delete("deptDelete2", dVO);			
-			logger.info("result : "+result);			
+			logger.info("result : "+result);	
+			session.commit();		
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		} finally {
@@ -73,7 +75,8 @@ public int deptDelete3(Map<String, Object> map) {
 			//map = new HashMap();
 			//map.put("deptno", 60);
 			result = session.delete("deptDelete3", map);			
-			logger.info("result : "+result);				
+			logger.info("result : "+result);	
+			session.commit();				
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		} finally {
@@ -91,7 +94,8 @@ public int multiDeptDelete(String[] deptnos) {
 		SqlSession session = sqlMapper.openSession();
 		try {
 			result = session.delete("multiDeptDelete", deptnos);	
-			logger.info("result : "+result);				
+			logger.info("result : "+result);	
+			session.commit();				
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		} finally {
