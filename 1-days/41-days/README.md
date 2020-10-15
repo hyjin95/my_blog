@@ -251,6 +251,7 @@ log4j.logger.java.sql.ResultSet=INFO
 * **open**  - 해당 구문이 시작할떄 넣을 문자\(foreach구문이 시작할때 넣을 문자\) 
 * **close**  - 해당 구문이 끝날떄 넣을 문자\(foreach 구문이 끝날 떄 넣을 문자\) 
 * **separator**  - 한번이상 반복할 떄 반복되는 사이에 해당문을 넣어준다.\(구분자\)
+* insert문 자체를 반복하는 것이 아니다. - 반복되는 부분을 into구문으로 자동으로 만들어주어 한번에 insert all해준다. - INSERT All     into dept\(컬럼1, 컬럼2, 컬럼3\)      values \(컬럼1값, 컬럼2값, 컬럼3값\)     into dept\(컬럼1, 컬럼2, 컬럼3\)      values \(컬럼1값2, 컬럼2값2, 컬럼3값2\)    .... - 이런식
 
 {% page-ref page="insert-mutiinsert.md" %}
 

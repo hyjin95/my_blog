@@ -2,7 +2,7 @@
 description: 2020.10.08 - 38일차
 ---
 
-# 38 Days - MyBatis, XML, jar, VO와Map, XML, Framework, SqlSession, mysql, POJO
+# 38 Days - MyBatis, XML, jar, VO와Map, XML, Framework, SqlSession구조, mysql, POJO
 
 ### 사용 프로그램
 
