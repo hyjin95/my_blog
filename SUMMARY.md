@@ -149,7 +149,7 @@
     * [MyBatisZipCodeSearch 수정](1-days/41-days/mybatiszipcodesearch-2/README.md)
       * [MyBatisZipCodeSearch - Log4j - zdos3](1-days/41-days/mybatiszipcodesearch-2/mybatiszipcodesearch.md)
     * [insert, mutiInsert 구현](1-days/41-days/insert-mutiinsert.md)
-  * [42Days - web, scope, sqlSession선언과 생성,](1-days/untitled-1/README.md)
+  * [42Days - web, scope, sqlSession선언과 생성, Android Studio](1-days/untitled-1/README.md)
     * [Delete, mutidelete](1-days/untitled-1/delete-mutidelete.md)
     * [Update](1-days/untitled-1/update.md)
   * [Untitled](1-days/untitled-7.md)
