@@ -108,6 +108,11 @@ description: 2020.10.14 - 41일차
 * **격리성\(Isolation\)** : - 두개 이상의 트랜잭션이 동시에 실행되고 있을때 어떤 트랜잭션이라도 다른 트랜잭션의 연산에 끼어들어서는 안된다. -  해당 트랜잭션이 완료되기 전까지 다른 트랜잭션은 해당 트랜잭션의 결과를 참조할 수 없다.
 * **지속성\(Durability\)**  - 트랜잭션이 완료된경우 시스템고장, 네트워크 에러 등으로 데이터가 유실되지  않고 영구적으로 반영,기록되어야한다.
 
+### MyBatis의 transaction
+
+* JDBC - JDBC의 commit, rollback을 처리하기위한 타입
+* MANAGED - 외부 컨테이너가 관리한다.
+
 ### namespace
 
 * &lt;book.title&gt;해리포터&lt;book.title/&gt; &lt;movie.title&gt;해리포터&lt;movie.title/&gt;
