@@ -44,6 +44,10 @@ w3schools 페이지 : [https://www.w3schools.com/](https://www.w3schools.com/)
 jeasyui 페이지 : [http://jeasyui.com/index.php](http://jeasyui.com/index.php)  
 - ui DEMO API
 
+### microsoft
+
+[https://docs.microsoft.com/ko-kr/sql/connect/jdbc/reference/setautocommit-method-sqlserverconnection?view=sql-server-ver15](https://docs.microsoft.com/ko-kr/sql/connect/jdbc/reference/setautocommit-method-sqlserverconnection?view=sql-server-ver15)
+
 ## 강의
 
 구름\(goorm\) : [https://edu.goorm.io/](https://edu.goorm.io/)  
