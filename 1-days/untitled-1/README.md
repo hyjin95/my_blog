@@ -12,6 +12,10 @@ description: 2020.10.15 - 42일차
 
 ## 복습
 
+![](../../.gitbook/assets/1%20%2825%29.png)
+
+![](../../.gitbook/assets/2%20%2816%29.png)
+
 ### 루트문서 dtd활용
 
 ### dept.XML
