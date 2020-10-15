@@ -56,6 +56,8 @@ public List<Map<String,Object>> getZdoList() {
 	}//end of getZdoList
 ```
 
+* SqlSession 은 메서드안에서 생성, 종료된다.
+
 ### refreshData 메서드
 
 ```java

@@ -149,6 +149,6 @@
     * [MyBatisZipCodeSearch 수정](1-days/41-days/mybatiszipcodesearch-2/README.md)
       * [MyBatisZipCodeSearch - Log4j - zdos3](1-days/41-days/mybatiszipcodesearch-2/mybatiszipcodesearch.md)
     * [insert, mutiInsert 구현](1-days/41-days/insert-mutiinsert.md)
-  * [42Days -](1-days/untitled-1.md)
+  * [42Days - web, scope](1-days/untitled-1.md)
   * [Untitled](1-days/untitled-7.md)
 
