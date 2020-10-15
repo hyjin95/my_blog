@@ -230,6 +230,12 @@ log4j.logger.java.sql.ResultSet=INFO
 
 ### for each문
 
+* List에 담긴 n개의 값을 한번에 insert할때 사용하는 구문이다.
+* 요소 내부에서 key로 사용할 수 있는 것은 item과 index를 허용한다.
+* 파라미터로 List나 Map타입을 받을 수 있다. - MyBatis가 파라미터로 받은 List, Map변수를 자동으로 감싸 이름을 key로 사용한다. - List인스턴스는 "list'"를, 배열 인스턴스는 "array"를 key로 사용한다.
+
+### foreach 제공 메서드
+
 ```markup
  <insert id="multiDeptInsert" parameterType="list">
  	insert all 
@@ -249,15 +255,12 @@ log4j.logger.java.sql.ResultSet=INFO
 </mapper>
 ```
 
-* List에 담긴 n개의 값을 한번에 insert할때 사용하는 구문이다.
-* 요소 내부에서 key로 사용할 수 있는 것은 item과 index를 허용한다.
-* 파라미터로 List나 Map타입을 받을 수 있다. - MyBatis가 파라미터로 받은 List, Map변수를 자동으로 감싸 이름을 key로 사용한다. - List인스턴스는 "list'"를, 배열 인스턴스는 "array"를 key로 사용한다.
 * **collection**  - 전달받은 인자값 반드시 Array또는 List가 되어야한다. 
 * **index**  - 목록의 위치값\(index, count, first, last, ....\)
 * **item**  - 전달받은 인자값을 다른 이르으로 재정의시\(foreach구문에서 사용할 변수명\) 
 * **open**  - 해당 구문이 시작할떄 넣을 문자\(foreach구문이 시작할때 넣을 문자\) 
 * **close**  - 해당 구문이 끝날떄 넣을 문자\(foreach 구문이 끝날 떄 넣을 문자\) 
-* **separator**  - 한번이상 반복할 떄 반복되는 사이에 해당문을 넣어준다.\(구분자\) - separator가 ','라고 한다면   insert구문은 foreach태그 안에 into 구문이 들어가므로 끝에 ,가 들어가는 순간 오류가 발생한다.   into dept\(-\) values\(-\), into ...가되므로 sql에러가 발생한다.  delete의 경우에는 foreach 태그안에 값만 들어가므로 끝에 ,를 넣어 구분하는 역할
+* **separator**  - 한번이상 반복할 떄 반복되는 사이에 해당문을 넣어준다.\(구분자\) - separator가 ','라고 한다면   insert구문은 foreach태그 안에 into 구문이 들어가므로 끝에 ,가 들어가는 순간 오류가 발생한다.   into dept\(-\) values\(-\), into ...가되므로 sql에러가 발생한다.  delete의 경우에는 foreach 태그안에 값만 들어가므로 끝에 ,를 넣어 구분하는 역할  사용자가 직접 forea태그의 값, 을 붙여버리면 마지막 값뒤에도 ,이 들어가 sql오류가 발생한다.
 * insert문 자체를 반복하는 것이 아니다. - 반복되는 부분을 into구문으로 자동으로 만들어주어 한번에 insert all해준다. - INSERT All     into dept\(컬럼1, 컬럼2, 컬럼3\)      values \(컬럼1값, 컬럼2값, 컬럼3값\)     into dept\(컬럼1, 컬럼2, 컬럼3\)      values \(컬럼1값2, 컬럼2값2, 컬럼3값2\)    .... - 이런식으로 mybatis가 &lt;foreach&gt;태그로 자동으로 into구문을 n개만들어 insert all한다.
 
 {% page-ref page="insert-mutiinsert.md" %}
