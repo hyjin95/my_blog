@@ -262,7 +262,7 @@ log4j.logger.java.sql.ResultSet=INFO
 
 * **collection**  - 전달받은 인자값 반드시 Array또는 List가 되어야한다. 
 * **index**  - 목록의 위치값\(index, count, first, last, ....\)
-* **item**  - 전달받은 인자값을 다른 이르으로 재정의시\(foreach구문에서 사용할 변수명\) 
+* **item**  - 전달받은 인자값의 이름 재정의시, 반복해서 다른 값을 넣을떄 - \(foreach구문에서 사용할 변수명\) 
 * **open**  - 해당 구문이 시작할떄 넣을 문자\(foreach구문이 시작할때 넣을 문자\) 
 * **close**  - 해당 구문이 끝날떄 넣을 문자\(foreach 구문이 끝날 떄 넣을 문자\) 
 * **separator**  - 한번이상 반복할 떄 반복되는 사이에 해당문을 넣어준다.\(구분자\) - separator가 ','라고 한다면   insert구문은 foreach태그 안에 into 구문이 들어가므로 끝에 ,가 들어가는 순간 오류가 발생한다.   into dept\(-\) values\(-\), into ...가되므로 sql에러가 발생한다.  delete의 경우에는 foreach 태그안에 값만 들어가므로 끝에 ,를 넣어 구분하는 역할  사용자가 직접 forea태그의 값, 을 붙여버리면 마지막 값뒤에도 ,이 들어가 sql오류가 발생한다.
