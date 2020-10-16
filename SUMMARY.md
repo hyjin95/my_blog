@@ -153,6 +153,6 @@
     * [Delete, mutidelete](1-days/untitled-1/delete-mutidelete.md)
     * [Update](1-days/untitled-1/update.md)
     * [hello.html](1-days/untitled-1/html.md)
-  * [43 Days - HTML구조, 태그, 플러그인,](1-days/untitled-7.md)
+  * [43 Days - HTML구조, 태그, 플러그인, 이미지, 링크, &lt;span&gt;, &lt;div&gt;](1-days/untitled-7.md)
   * [Untitled](1-days/untitled-8.md)
 
