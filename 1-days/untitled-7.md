@@ -33,6 +33,8 @@ description: 2020.10.16 - 43일차
 
 ### document
 
+### HTML특징
+
 ### 태그
 
 ![](../.gitbook/assets/2%20%2818%29.png)
@@ -49,8 +51,6 @@ html
 
 </body>
 ```
-
-### HTML특징
 
 ### Javascript
 
@@ -88,4 +88,6 @@ html
 </a>
 </body>
 ```
+
+후기 : 
 
