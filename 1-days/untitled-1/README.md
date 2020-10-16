@@ -2,7 +2,7 @@
 description: 2020.10.15 - 42일차
 ---
 
-# 42Days - web, scope, sqlSession선언과 생성, Android Studio
+# 42Days - web, scope, sqlSession선언과 생성, Android Studio, JSP, interpreter, html이론
 
 ### 사용 프로그램
 
