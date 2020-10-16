@@ -2,7 +2,7 @@
 
 ## 준비
 
-* GSON다운 JSON.jar추
+* GSON다운 JSON.jar추가해야한다.
 
 ## SqlMapDeptDao.java
 
