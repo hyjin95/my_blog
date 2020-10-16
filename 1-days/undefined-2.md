@@ -50,6 +50,10 @@ Bootstrap : [https://getbootstrap.com/](https://getbootstrap.com/)
 w3schools 페이지 : [https://www.w3schools.com/](https://www.w3schools.com/)  
 - HTML, css, JavaScript, Python,... API
 
+### javascript
+
+KOXO메뉴얼 : [http://koxo.com/lang/js/index.html](http://koxo.com/lang/js/index.html)
+
 ## 강의
 
 구름\(goorm\) : [https://edu.goorm.io/](https://edu.goorm.io/)  
