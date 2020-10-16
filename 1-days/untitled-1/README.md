@@ -63,10 +63,11 @@ description: 2020.10.15 - 42일차
 
 ![](../../.gitbook/assets/1%20%2825%29.png)
 
-* Page 영역 - 해당 페이지 에서만 유지
-* Request 영역 - 요청이 있는동안에만 유지, 응답이 끝나면 종료된다.
-* Session 영역 - 접속되어있는 그 시간동안에 유지 - 삭제, 재생성 할 필요가 없다. - SqlSession이 해당된다.
-* Application 영역 - 계속 유지된다, 전원이 OFF될 때 까지 - SqlSessionFactory가 해당된다. - 한번 생성되고나서는 애플리케이션이 실행되는 동안에는 유지되어야한다.
+* **Scope**  - 변수를 어떤 범위내에서 사용할지를 정하는 기 - 사용방법 : 값 저장-setAttribute, 값 읽기-getAttribute
+* **Page** 영역 - 해당 페이지 에서만 유지 - JSP페이지에서 pageContext라는 내장 객체로 사용가능하다.
+* **Request** 영역 - http 요청을 WAS가 받아서 응답이 끝날때까지 유지
+* **Session** 영역 - 웹 브라우저에 접속되어있는 그 시간동안에 유지 - 삭제, 재생성 할 필요가 없다. - SqlSession이 해당된다.
+* **Application** 영역 - 애플리케이션이 실행되는 동안에 계속 유지된다, 전원이 OFF될 때 까지 - SqlSessionFactory가 해당된다.
 
 ### JSP
 
