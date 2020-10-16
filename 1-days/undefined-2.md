@@ -39,14 +39,16 @@ maven mybatis페이지 : [https://mvnrepository.com/artifact/org.mybatis/mybatis
 w3schools 페이지 : [https://www.w3schools.com/](https://www.w3schools.com/)  
 - HTML, css, JavaScript, Python,... API
 
-### easyUI
-
-jeasyui 페이지 : [http://jeasyui.com/index.php](http://jeasyui.com/index.php)  
-- ui DEMO API
-
 ### microsoft
 
 [https://docs.microsoft.com/ko-kr/sql/connect/jdbc/reference/setautocommit-method-sqlserverconnection?view=sql-server-ver15](https://docs.microsoft.com/ko-kr/sql/connect/jdbc/reference/setautocommit-method-sqlserverconnection?view=sql-server-ver15)
+
+## UI
+
+### 오픈 소스
+
+easyUI : [http://jeasyui.com/index.php](http://jeasyui.com/index.php)  
+Bootstrap : [https://getbootstrap.com/](https://getbootstrap.com/)
 
 ## 강의
 
