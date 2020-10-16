@@ -2,7 +2,7 @@
 description: 2020.10.16 - 43일차
 ---
 
-# 43 Days - HTML구조, 태그, 플러그인, 이미지, 링크, &lt;span&gt;, &lt;div&gt;
+# 43 Days - HTML구조, 태그, 플러그인, 이미지, 링크, &lt;span&gt;, &lt;div&gt;, JSON
 
 ### 사용 프로그램
 
@@ -22,6 +22,20 @@ description: 2020.10.16 - 43일차
 
 * 로그인 페이지에서 로그인 값을 기억한다. -&gt; 상품페이지로 이동한다.
 * HTML이 말하고, JS가 기억하고 JAVA를 통해 DB로 연결된다.
+
+### 자바 웹 서비스 servlet
+
+* server + applet
+* 자바의 웹서비스 제공을 지원하는 API
+* 웹 서비스를 제공함으로서 local이 아니게되어 외부에서도 접속할 수 있게한다.
+* servlet은 html을 포함하고있어 html, css, JS, Java모두 작성 가능
+
+### HTML
+
+* View, 화면 계층을 담당하는 파일
+* 화면을 그리는데 Tag를 사용한다.
+* 태그들은 중복되어 사용될 수 있다. = id로 구분한다.
+* 변수를 지원하지 않는다.
 
 ## HTML
 
@@ -117,6 +131,8 @@ html
 
 ## **Javascript**
 
+### JS 선언
+
 ```markup
 <body>
 <!-- html 영역, java코드 작성 불가 -->
@@ -134,20 +150,79 @@ html
 * 4번 : 먼저 mime타입으로 선언이 이루어져야한다.
 * 4-8번 : 스크립트 영역으로 선언된 곳에는 //주석을 쓸 수 있다.
 
+### JS특징
+
+* 변수가 있다.
+* 변수선언 - var i = 10; - variable 생략가능 = 일관성이 떨어진다. - type이 필요없다. 컴파일하지않으므로
+* 컴파일하지않는다. - 잘못 선언하더라도 에러는 보이지않지만 화면에 출력되지않는다. - 타입 검사 없이 rumtime할때 타입이 결정된다.  - 실행 전까지 오류를 알 수 없다.
+
+### JS의 역할
+
+* HTML에서 구현한 화면에서 이벤트가 발생하면 브라우저에 이벤트 감지를 전달하는 역할 - html : eventSource - JS    : eventHandler
+* JS에서 해당 이벤트를 감지하기 위해 ID속성을 사용한다.
+
 ## GSON, JSON
+
+### GSON 라이브러리
+
+* JSON object와 JAVA Object의 연결을 돕는 자바 라이브러리
+* JSON구조로 직렬화된 데이터를 JAVA객체로 역직렬화, 직렬화 해준다.
+
+### JSON 형식
+
+* JS에서 객체를 표현하는 방법이다. - 키와 값이 쌍으로 이루어진 data object를 전달하기 위해 사람이 읽을 수 있는 텍스트를 사용하는 개방형 표준 포맷
+* 다른 여러 언어에서도 데이터를 주고 받을때 사용된다. - XML파일보다 가벼워 많이 사용한다.
+* select하는 자바파일의 build path에 GSON.jar를 추가해야한다.
+* table = datagrid,  JSON형식의 dataset을 html화면에 나타낸다. - html이 JS를 통해 data를 변수로 표현하기 위한 포맷
+* HTML의 JS영역에서 datagrid선언 후, data-option속성으로 url로 jar파일을 지정하면 사용가능해진다.
+
+### 테이블 구조
 
 ![&#xC624;&#xB77C;&#xD074;, &#xC790;&#xBC14;, html Table Data](../../.gitbook/assets/3%20%2816%29.png)
 
-### oracle : table
+* **oracle : table** - row+columns - UI는 지원하지 않는다. - select된 데이터를 테이블로 출력한다. = 유동적이다.
+* **java : table** - JTable + DefaultTableModel - 화면양식\(UI지원\) + JOSON\(JSON이 데이터를 지원한다.\) - dtm을 이용해 data를 출력한다.
+* **html : &lt;table&gt;** - &lt;body&gt;에는 자바의 List&lt;Map&gt;, List&lt;xxVO&gt;값을 꺼내 뿌리는 곳이다. - html은 변수가 없어 스스로 읽어올 수 가 없다. - JS가 대신 해준다. - map은 key, VO는 멤버변수로 구분하고, - html화면에서는 JS로 읽어온 데이터를 GSON, JSON이 제공해주는 datagrid\(dataSet\)함수를 이용해 유동적인 테이블을 출력한다. - &lt;footer&gt; : 꼬리글로, 활용빈도가 낮다, 없는 정보를 추가하는 용도
 
-* row+columns
-* UI는 지원하지 않는다.
+### 컬럼명=변수명
 
-### java : table
+* 구분과 편리한 사용을 위해 같은 것을 가리키는 다른 문서들의 이름을 통일하자
 
-* JTable + DefaultTableModel - 화면양식\(UI지원\) + JOSON\(JSON이 데이터를 지원한다.\)
+### &lt;table&gt;생성 - 1단
 
-### html : &lt;table&gt;
+```markup
+<table class="easyui-datagrid" style="width:400px;height:250px"
+        data-options="url:'datagrid_data.json',fitColumns:true,singleSelect:true">
+  <thead>
+    <tr>
+      <th data-options="field:'code',width:100">Code</th>
+      <th data-options="field:'name',width:100">Name</th>
+      <th data-options="field:'price',width:100,align:'right'">Price</th>
+      </tr>
+   </thead>
+</table>
+```
+
+{% page-ref page="dept-gson-json.md" %}
+
+### &lt;table&gt;생성 - 2단계
+
+```markup
+<table id="dg"></table>
+
+$('#dg').datagrid({
+    url:'datagrid_data.json',
+    columns:[[
+        {field:'code',title:'Code',width:100},
+        {field:'name',title:'Name',width:100},
+        {field:'price',title:'Price',width:100,align:'right'}
+    ]]
+});
+```
+
+## HTML 태그
+
+### &lt;table&gt;
 
 * &lt;th&gt; : 헤더, 가운데 정렬이 default 정렬 값, tableheader
 * &lt;tr&gt; : row의 갯수, tableroe
@@ -155,17 +230,21 @@ html
 * 상속관계, dom tree구조 - &lt;table&gt;안에 &lt;th&gt;, &lt;th&gt;안에 &lt;tr&gt;, &lt;tr&gt;안에 &lt;td&gt;를 사용할 수 있다.
 * DOM - Document Object Model - 브라우저가  dom tree구조를 제공한다.
 
-## HTML 태그
-
 ### &lt;span&gt;
 
 * 보여지지않는 태그
 * CSS영역으로, 부분적 style적용이 일어날때 사용한다.
+* HTML문서에서 인라인 요소들을 하나로 묶을때 사용하는 태그
+* 요소들을 그룹화하여 한번에 스타일을 적용하거나, 속성값을 공유하는 용도
+* 인라인 타입의 &lt;div&gt;라고도 볼 수 있다.
+* &lt;table&gt;에서는 셀 병합이 된다. - colspan : 가로 셀 병합 - rowspan : 세로 셀 병합
+
+{% page-ref page="less-than-span-greater-than.md" %}
 
 ### &lt;div&gt;
 
 * 보여지지않는 태그
-* 박스
+* 박스, 특정영역이나 구획을 정의할때 사용하는 태그 - CSS로 스타일링하거나 JS로 작업을 수행하기위한 일종의 컨테이너 - CSS와 웹 Layout을 설정하는데에도 사용된다.
 * AJAX에서 가장 사용빈도가 높은 태그이기도 하다.
 * div를 조작하기 위해 ID를 부여해서 사용한다.
 

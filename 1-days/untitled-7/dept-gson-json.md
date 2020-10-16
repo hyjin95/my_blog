@@ -60,7 +60,7 @@ public static void main(String[] args) {
 
 ### dept.json
 
-![WEB](../../.gitbook/assets/2%20%2819%29.png)
+![WEB](../../.gitbook/assets/2%20%2820%29.png)
 
 ```markup
 [
