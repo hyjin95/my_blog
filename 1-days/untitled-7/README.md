@@ -37,6 +37,11 @@ description: 2020.10.16 - 43일차
 * 태그들은 중복되어 사용될 수 있다. = id로 구분한다.
 * 변수를 지원하지 않는다.
 
+### 상대경로
+
+* ./ - 현재 선택파일이 있는 위치, 현재 선택파일이 갖고있는 것을 가리킨다.
+* ../ - 현재 선택파일의 상위 폴더, 선택파일을 갖는 폴더가 갖고있는 것을 가리킨다.
+
 ## HTML
 
 ### HTML구조
@@ -161,6 +166,12 @@ html
 * HTML에서 구현한 화면에서 이벤트가 발생하면 브라우저에 이벤트 감지를 전달하는 역할 - html : eventSource - JS    : eventHandler
 * JS에서 해당 이벤트를 감지하기 위해 ID속성을 사용한다.
 
+### JQuery
+
+* 더 간소화된 Javascript라이브러리라고 할 수 있다.
+* Javascript와 동일한 기능을 더 짧은 코드로 제공한다.
+* 자체 라이브러리도 있다. - jQuery GUI 라이브러리 : 윈도우 애플리케이션과같은 기능성 UI구현 - jQuery Mobile 라이브러리 : 모바일용 웹 애플리케이션 구현
+
 ## GSON, JSON
 
 ### GSON 라이브러리
@@ -174,21 +185,17 @@ html
 * 다른 여러 언어에서도 데이터를 주고 받을때 사용된다. - XML파일보다 가벼워 많이 사용한다.
 * select하는 자바파일의 build path에 GSON.jar를 추가해야한다.
 * table = datagrid,  JSON형식의 dataset을 html화면에 나타낸다. - html이 JS를 통해 data를 변수로 표현하기 위한 포맷
-* HTML의 JS영역에서 datagrid선언 후, data-option속성으로 url로 jar파일을 지정하면 사용가능해진다.
+* HTML의 JS영역에서 datagrid선언 후, data-option속성으로 url로 jar파일을 지정하면 사용가능해진다. - JSON의 jar파일 없이 코드를 실행하면 dataSet없이 빈 테이블만 출력된다.
+* 웹 스토어에서 JSON Viewer프로그램을 설치하면 사용하기 더 편리하다.
 
-### 테이블 구조
+### JSON의 datagrid사용하기
 
-![&#xC624;&#xB77C;&#xD074;, &#xC790;&#xBC14;, html Table Data](../../.gitbook/assets/3%20%2816%29.png)
+* 자바의 select파일에서 GSON라이브러리를 이용해 data를 출력
+* 출력된 모든 data를 복사 -&gt; html파일에 json타입 파일을 생성해 붙여넣기
+* ctrl+a : 전체선택, ctrl+shift+f : 정렬
+* JSON타입의 파일도 실행시키면 웹으로 볼 수 있다.
 
-* **oracle : table** - row+columns - UI는 지원하지 않는다. - select된 데이터를 테이블로 출력한다. = 유동적이다.
-* **java : table** - JTable + DefaultTableModel - 화면양식\(UI지원\) + JOSON\(JSON이 데이터를 지원한다.\) - dtm을 이용해 data를 출력한다.
-* **html : &lt;table&gt;** - &lt;body&gt;에는 자바의 List&lt;Map&gt;, List&lt;xxVO&gt;값을 꺼내 뿌리는 곳이다. - html은 변수가 없어 스스로 읽어올 수 가 없다. - JS가 대신 해준다. - map은 key, VO는 멤버변수로 구분하고, - html화면에서는 JS로 읽어온 데이터를 GSON, JSON이 제공해주는 datagrid\(dataSet\)함수를 이용해 유동적인 테이블을 출력한다. - &lt;footer&gt; : 꼬리글로, 활용빈도가 낮다, 없는 정보를 추가하는 용도
-
-### 컬럼명=변수명
-
-* 구분과 편리한 사용을 위해 같은 것을 가리키는 다른 문서들의 이름을 통일하자
-
-### &lt;table&gt;생성 - 1단
+### Javascript로 JSON data가져오기
 
 ```markup
 <table class="easyui-datagrid" style="width:400px;height:250px"
@@ -203,9 +210,7 @@ html
 </table>
 ```
 
-{% page-ref page="dept-gson-json.md" %}
-
-### &lt;table&gt;생성 - 2단계
+### JQuery로 JSON data가져오기
 
 ```markup
 <table id="dg"></table>
@@ -219,6 +224,26 @@ $('#dg').datagrid({
     ]]
 });
 ```
+
+* 1번 : table id부여, 바디가 없지만 테이블은 출력된다.
+* 3번 : table tag Object에 접근한다. - JQuery\(document.getElemnetByID\("\#dg\_dept"\)\) = $\("\#dg\_dept"\)로 작성가능
+* 4번 : JSON파일 지정
+* 여기서 id로 불러오는 table은 내장객체이다.
+
+### 테이블 구조
+
+![&#xC624;&#xB77C;&#xD074;, &#xC790;&#xBC14;, html Table Data](../../.gitbook/assets/3%20%2816%29.png)
+
+* **oracle : table** - row+columns - UI는 지원하지 않는다. - select된 데이터를 테이블로 출력한다. = 유동적이다.
+* **java : table** - JTable + DefaultTableModel - 화면양식\(UI지원\) + JOSON\(JSON이 데이터를 지원한다.\) - dtm을 이용해 data를 출력한다.
+* **html : &lt;table&gt;** - &lt;body&gt;에는 자바의 List&lt;Map&gt;, List&lt;xxVO&gt;값을 꺼내 뿌리는 곳이다. - html은 변수가 없어 스스로 읽어올 수 가 없다. - JS가 대신 해준다. - map은 key, VO는 멤버변수로 구분하고, - html화면에서는 JS로 읽어온 데이터를 GSON, JSON이 제공해주는 datagrid\(dataSet\)함수를 이용해 유동적인 테이블을 출력한다. - &lt;footer&gt; : 꼬리글로, 활용빈도가 낮다, 없는 정보를 추가하는 용도
+
+### 컬럼명=변수명
+
+* 구분과 편리한 사용을 위해 같은 것을 가리키는 다른 문서들의 이름을 통일하자
+* oracle 컬럼 = map key값 = VO의 멤버변수 = JSON feild이름
+
+{% page-ref page="dept-gson-json.md" %}
 
 ## HTML 태그
 
