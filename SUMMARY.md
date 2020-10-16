@@ -153,5 +153,6 @@
     * [Delete, mutidelete](1-days/untitled-1/delete-mutidelete.md)
     * [Update](1-days/untitled-1/update.md)
     * [HTML](1-days/untitled-1/html.md)
-  * [Untitled](1-days/untitled-7.md)
+  * [43 Days -](1-days/untitled-7.md)
+  * [Untitled](1-days/untitled-8.md)
 
