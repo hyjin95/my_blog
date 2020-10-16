@@ -14,6 +14,8 @@ description: 2020.10.16 - 43일차
 
 ### HTML구조
 
+![](../.gitbook/assets/html.png)
+
 ```markup
 <!DOCTYPE html>
 <html>
