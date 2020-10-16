@@ -26,5 +26,5 @@
 </html>
 ```
 
-
+* script타입에는 text, image, vdio, 등이 올 수 있다.
 
