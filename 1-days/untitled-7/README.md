@@ -138,13 +138,24 @@ html
 
 ![&#xC624;&#xB77C;&#xD074;, &#xC790;&#xBC14;, html Table Data](../../.gitbook/assets/3%20%2816%29.png)
 
+### oracle : table
+
+* row+columns
+* UI는 지원하지 않는다.
+
+### java : table
+
+* JTable + DefaultTableModel - 화면양식\(UI지원\) + JOSON\(JSON이 데이터를 지원한다.\)
+
+### html : &lt;table&gt;
+
+* &lt;th&gt; : 헤더, 가운데 정렬이 default 정렬 값, tableheader
+* &lt;tr&gt; : row의 갯수, tableroe
+* &lt;td&gt; : row를 컬럼별로 쪼개준다. align속성으로 정렬해야 정렬된다. tabledata
+* 상속관계, dom tree구조 - &lt;table&gt;안에 &lt;th&gt;, &lt;th&gt;안에 &lt;tr&gt;, &lt;tr&gt;안에 &lt;td&gt;를 사용할 수 있다.
+* DOM - Document Object Model - 브라우저가  dom tree구조를 제공한다.
+
 ## HTML 태그
-
-### &lt;table&gt;
-
-* Oracle : table - 
-* Java : table - 
-* Html : &lt;table&gt; - 
 
 ### &lt;span&gt;
 
