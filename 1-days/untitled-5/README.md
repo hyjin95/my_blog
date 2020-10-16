@@ -64,7 +64,7 @@ description: 2020.10.07 - 37일차
 * MIME로 인코딩한 파일은 Content-type정보를 파일의 앞부분에 담는다. - Multipart Related MIME타입 - XML Media 타입 - Application 타입 - 오디오 타입 - Multipart 타입 - TEXT 타입 - file 타입\
 * 브라우저는 마임타입을 통해서 해당 페이지에 대한 해석을 하게된다. - 태그는 해석하고 내용만 출력해준다. - 인터프리너틔 역할을 브라우저가 한다.
 * 마임타입이 선언되어 있어야 브라우저가 알맞은 해석을 할 수 있다.
-* mime type : 메인타입/서브타입  - text/html text/xml text/javascript = 마임타입
+* mime type : **메인타입/서브타입**  - text/html text/xml text/javascript = 마임타입 - ex\) 메인타입 : image 서브타입 : jpg, png, ......
 
 {% page-ref page="undefined.md" %}
 
