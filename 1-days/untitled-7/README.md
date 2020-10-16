@@ -27,7 +27,7 @@ description: 2020.10.16 - 43일차
 
 ### HTML구조
 
-![](../.gitbook/assets/html.png)
+![](../../.gitbook/assets/html.png)
 
 ```markup
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ description: 2020.10.16 - 43일차
 
 ### 태그
 
-![](../.gitbook/assets/3%20%2815%29.png)
+![](../../.gitbook/assets/3%20%2815%29.png)
 
 ```markup
 <body>
