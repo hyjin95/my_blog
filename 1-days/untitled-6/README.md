@@ -32,10 +32,9 @@ description: 2020.10.13 - 40일차
 
 ### MyBatis 동적SQL
 
-* MyBaits프레임워크가 제공하는 기능 중 하나
-* 동적SQL = Dynamic SQL
-* **사용될 SQL문이 runtime시에 결정**되는 SQL문을 말한다.
-* if문을 사용할 수 있게 해준다.
+* 동적SQL = Dynamic SQL : **사용될 SQL문이 runtime시에 결정되는 SQL문**을 말한다.
+* MyBaits프레임워크가 제공하는 동적SQL은 하나의 SQL문으로 여러 케이스르 처리할 수 있다. - ex\) 정렬조건에 따라 ORDER  BY절을 바꿔야하거나, 검색조건에 따라 WHERE절을 변경해야할때          동적 SQL기능을 이용하면 자동으로 변경되는 SQL문을 만들 수 있다.
+* * if문을 사용할 수 있게 해준다.
 
 ### API
 
