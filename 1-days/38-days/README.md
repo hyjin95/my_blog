@@ -177,6 +177,11 @@ description: 2020.10.08 - 38일차
 * XML로 관리시 드라이버클래스, ip, port번호가 필요하다.
 * 주석 : ctrl + shift + /
 
+### XML 사용
+
+1. XML문서를 스캔한다. - MapperConfig - &lt;property&gt;태그 안에서 속성들의 정보를 받아 유지한다. - FileNotFoundException발생시 이름이나 경로의 오타를 살펴본다.
+2. XML과 JAVA가 만나는 부분 - XML은 인스턴스화가 불가능하므로 ID로 연결, 구분한다. - ID를 통해 XML이 가진 속성, 정보에게 접근한다.
+
 ### XML 기본형태
 
 ```markup

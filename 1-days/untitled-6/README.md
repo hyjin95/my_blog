@@ -28,33 +28,12 @@ description: 2020.10.13 - 40일차
 * SqlSession  - sql처리 요청, 가져온 xml2을 오라클에게 요청, 말하기 한다.
 * SqlSessionFactory클래스가 먼저 메모리에 저장되어야 SqlSession을 사용할 수 있다. - 서로 의존관계에 있다. - 의존관계 = 스프링 핵심 키워드
 
+## 필기
+
 ### 예외처리
 
 * error 1 : compile error - 문법에러 발생시 실행불가
 * erroe 2 : runtime error - 문법에러가 아닌 논리오류, 실행 중에 에러가 발생한다.
-
-## MyBatis와 DB연동
-
-### API
-
-| JDBC API | MyBatis API |
-| :---: | :---: |
-| Connection | SqlSessionFactory |
-| PreparedStatment | SqlSession |
-| executeQuery | selectOne, selectList, slectMap |
-| ResultSet | X |
-| While | 자동 |
-
-### MyBatis 설정파일 작성
-
-* mybatis프레임워크가 참조하는 XML파일은 MyBatis설정파일과 SQL mapper파이롤 나뉜다.
-* mybatis설정파일 - 자체 connetion pool을 구축 - 여러 DB연결정보 설정을 통해 용도에 따라 DB를 골라 사용할 수 있다. - select결과 캐싱 - VO\(값 객체\)에 alias 부여
-
-### XML 문법검사
-
-* Java의 comfile, Oracle의 parsing과 같은 개념
-* 문법검사를  통과하면 DBMS의 옵티마이저가 dtd파일의 범위 내에서 실행계획을 세운다. - Cursor의 위치에 데이터 존재유무를 파악하고, 존재하면 패치, close한다.
-* 패치 : 램에 로딩 후, 램에서 데이터를 가져오는 것
 
 ### XML DTD, 스키마\(schema\)
 
@@ -91,11 +70,36 @@ description: 2020.10.13 - 40일차
 * 태그안에 속성을 담을 수 있고, dtd파일안의 태그를 사용할 수 있다.
 * 태그로 감싸\(마크\)서 사용하는 언어
 
+### XML 문법검사
+
+* Java의 comfile, Oracle의 parsing과 같은 개념
+* 문법검사를  통과하면 DBMS의 옵티마이저가 dtd파일의 범위 내에서 실행계획을 세운다. - Cursor의 위치에 데이터 존재유무를 파악하고, 존재하면 패치, close한다.
+* **패치** : 램에 로딩 후, 램에서 데이터를 가져오는 것
+
+## MyBatis와 DB연동
+
+### API
+
+| JDBC API | MyBatis API |
+| :---: | :---: |
+| Connection | SqlSessionFactory |
+| PreparedStatment | SqlSession |
+| executeQuery | selectOne, selectList, slectMap |
+| ResultSet | X |
+| While | 자동 |
+
+* 새로운 언어, 프레임워크 등을 사용하기 전에는 항상 API를 확인한다.
+
+### MyBatis 설정파일 작성
+
+* mybatis프레임워크가 참조하는 XML파일은 MyBatis설정파일과 SQL mapper파이롤 나뉜다.
+* mybatis설정파일 - 자체 connetion pool을 구축 - 여러 DB연결정보 설정을 통해 용도에 따라 DB를 골라 사용할 수 있다. - select결과 캐싱 - VO\(값 객체\)에 alias 부여
+
 ### MyBatis 동적SQL
 
 * 동적SQL = Dynamic SQL : **사용될 SQL문이 runtime시에 결정되는 SQL문**을 말한다.
 * MyBaits프레임워크가 제공하는 동적SQL은 하나의 SQL문으로 여러 케이스르 처리할 수 있다. - ex\) 정렬조건에 따라 ORDER  BY절을 바꿔야하거나, 검색조건에 따라 WHERE절을 변경해야할때          동적 SQL기능을 이용하면 자동으로 변경되는 SQL문을 만들 수 있다.
-* &lt;where&gt;의 값을 비교할 수 있다. - where : 조인검색시 조건값이  없으면 비교못하고 null을 반환하고, 조건 값이 존재해야 비교한다.
+* &lt;where&gt;의 값을 비교할 수 있다. - where : 조인검색시 조건값이  없으면 비교못하고 null을 반환하고, 조건 값이 존재해야 비교한다. - &lt;where&gt;if문&lt;/where&gt; 태그로 if문을 감싸면 where 1=1이런 조건 없이도 항상 if문이 진행된다.  - &lt;select id = ”findBlogWithTitleLike” parameterType=”Blog” resultType=”Blog”&gt;   SELECT \* FROM BLOG WHERE state = ‘ACTIVE’   &lt;if test="title!=null;&gt;   AND title like \#{title} &lt;/if&gt; &lt;/select&gt;
 * [https://atoz-develop.tistory.com/entry/MyBatis-%EB%8F%99%EC%A0%81-SQL-choose%EC%99%80-set%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%8F%99%EC%A0%81-SQL-%EB%A7%8C%EB%93%A4%EA%B8%B0](https://atoz-develop.tistory.com/entry/MyBatis-%EB%8F%99%EC%A0%81-SQL-choose%EC%99%80-set%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%8F%99%EC%A0%81-SQL-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 * &lt;if&gt;, &lt;choose&gt;, &lt;where&gt;, &lt;trim&gt;, &lt;set&gt;, &lt;foreach&gt;, &lt;bind name&gt;
 
