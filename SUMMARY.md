@@ -140,7 +140,7 @@
     * [Toad - t\_orderbasket, decode&sum](1-days/38-days/toad-t_orderbasket-decode-and-sum.md)
   * [39 Days - toad복습, DECODE, GROUP BY](1-days/39-days/README.md)
     * [t\_orderbasket](1-days/39-days/t_orderbasket.md)
-  * [40 Days - 예외처리, mybatis와 DB연동, 싱글톤, mybatis 동적쿼리](1-days/untitled-6/README.md)
+  * [40 Days - 예외처리, mybatis-DB연동,동적SQL, 싱글톤,XML DTD,스키마, xml설정파일, 스키마, DOM, ML](1-days/untitled-6/README.md)
     * [p491~4 Exception 예외처리](1-days/untitled-6/p491-4-exception.md)
     * [MyBatisZipCodeSearch](1-days/untitled-6/untitled/README.md)
       * [ZipCodeSearch](1-days/untitled-6/untitled/zipcodesearch.md)
