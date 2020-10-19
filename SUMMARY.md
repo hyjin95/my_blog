@@ -159,6 +159,6 @@
   * [44 Days - innerText, innerHTML, JS현재시간, onload, tag이해하기,](1-days/untitled-9/README.md)
     * [currentTime.html - 현재시간, onload](1-days/untitled-9/untitled-10.md)
     * [domImgTest.html](1-days/untitled-9/untitled.md)
-    * [Untitled](1-days/untitled-9/untitled-1.md)
+    * [guguDan.html](1-days/untitled-9/untitled-1.md)
   * [Untitled](1-days/untitled-8.md)
 
