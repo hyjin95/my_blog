@@ -2,7 +2,7 @@
 description: 2020.10.19 - 44일차
 ---
 
-# 44 Days -
+# 44 Days - innerText, innerHTML, JS현재시간,
 
 ### 사용 프로그램
 
