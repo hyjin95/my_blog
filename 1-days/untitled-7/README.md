@@ -2,7 +2,7 @@
 description: 2020.10.16 - 43일차
 ---
 
-# 43 Days - HTML구조, 태그, 플러그인, 이미지, 링크, &lt;span&gt;, &lt;div&gt;, JSON
+# 43 Days - HTML구조, 태그, 플러그인, 이미지, 링크, &lt;span&gt;, &lt;div&gt;, JSON, JS, JQuery
 
 ### 사용 프로그램
 

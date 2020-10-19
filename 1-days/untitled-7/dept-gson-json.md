@@ -35,6 +35,7 @@ public static void main(String[] args) {
 <head>
 <meta charset="UTF-8">
 <title>부서관리-시작화면</title>
+	<!-- JAVA의 import undefined, 404-->
 	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="../../themes/icon.css">
     <link rel="stylesheet" type="text/css" href="../../demo/demo.css">
@@ -53,9 +54,7 @@ public static void main(String[] args) {
         </tr>
     </thead>
 </table>
-
 </body>
-
 ```
 
 ### dept.json
