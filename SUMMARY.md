@@ -158,6 +158,6 @@
     * [인라인요소, &lt;span&gt;](1-days/untitled-7/less-than-span-greater-than.md)
   * [44 Days - innerText, innerHTML, JS현재시간, onload, tag이해하기,](1-days/untitled-9/README.md)
     * [currentTime.html - 현재시간, onload](1-days/untitled-9/untitled-10.md)
-    * [domTest.html](1-days/untitled-9/untitled.md)
+    * [domImgTest.html](1-days/untitled-9/untitled.md)
   * [Untitled](1-days/untitled-8.md)
 
