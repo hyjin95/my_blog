@@ -9,7 +9,7 @@
 </head>
 <body>
 <script type="text/javascript">//mime타입
-//여기에서 h1태그에 접근할 수 있을까? 아니요 생성되기 전이므로
+  //여기에서 h1태그에 접근할 수 있을까? 아니요 생성되기 전이므로
 	//var clock = document.getElementById("clock");
 	//alert(clock);//경고팝업 띄우는 함수, 반환값 없이 메세지만 출력 여기서는 null출력
 	//해결할 수 있는 방법이 있다. 윈도우 객체의 onload이벤트를 통해 dom트리 구성이 끝났을 때

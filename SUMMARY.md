@@ -156,9 +156,10 @@
   * [43 Days - HTML구조, 태그, 플러그인, 이미지, 링크, &lt;span&gt;, &lt;div&gt;, JSON, JS, JQuery](1-days/untitled-7/README.md)
     * [dept - GSON,JSON](1-days/untitled-7/dept-gson-json.md)
     * [인라인요소, &lt;span&gt;](1-days/untitled-7/less-than-span-greater-than.md)
-  * [44 Days - innerText, innerHTML, JS현재시간, onload, tag이해하기,](1-days/untitled-9/README.md)
+  * [44 Days - innerText, innerHTML, JS현재시간, onload, tag이해하기, DOM, JQuery, node, AJAX](1-days/untitled-9/README.md)
     * [currentTime.html - 현재시간, onload](1-days/untitled-9/untitled-10.md)
-    * [domImgTest.html](1-days/untitled-9/untitled.md)
-    * [guguDan.html](1-days/untitled-9/untitled-1.md)
+    * [domImgTest.html - dom, JS, onload](1-days/untitled-9/untitled.md)
+    * [guguDan.html - dom, &lt;form&gt;, &lt;input&gt;, onClick](1-days/untitled-9/untitled-1.md)
+  * [Untitled](1-days/untitled-10.md)
   * [Untitled](1-days/untitled-8.md)
 

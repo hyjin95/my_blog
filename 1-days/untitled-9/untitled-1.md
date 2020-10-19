@@ -1,4 +1,4 @@
-# guguDan.html
+# guguDan.html - dom, &lt;form&gt;, &lt;input&gt;, onClick
 
 ```markup
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
 		document.write("<br>");
 		document.write("시작단 : "+p_start);//전부 유효수치 정수이다.
 		document.write("<br>");
-		document.write("끝    단 : "+p_end.value);
+		document.write("끝단 : "+p_end.value);
 		//document.f_guguDan.submit();//전송 함수
 
 		for(let i = p_start; i <= p_end.value; i++) { 

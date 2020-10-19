@@ -1,4 +1,6 @@
-# domImgTest.html
+# domImgTest.html - dom, JS, onload
+
+## donImgTest.html
 
 ```markup
 <!DOCTYPE html>
@@ -28,4 +30,6 @@
 </body>
 </html>
 ```
+
+* alt 값은 해당 이미지가 없을때 브라우저에 표시되는 값
 
