@@ -85,7 +85,9 @@ description: 2020.10.20 45 일차
 
 * JSP파일에서 넘어온 응답이 화면에 출력될때에는 기존의 html파일이 아닌 새로운 파일에서 작성된다.
 
-### Event
+## Event
+
+### JS, JAVA Event
 
 <table>
   <thead>
