@@ -146,7 +146,9 @@ description: 2020.10.20 45 일차
 
 * html문서를 Object객체로 담아주는 document객체로 html 태그에 접근할 수 있다. - document.getElementById\("이벤트소스이름"\) - 이벤트소스 = 가입버튼, 전송버튼 등...
 * **이벤트소스이름.onsubmit\(처리될 파라미터\);**
-* 토글버튼 : 한번 버튼이 눌려지고 나면 초기화 전까지는 비활성화된다. - 이런 경우에는 함수를 재사용할 필요 없으므로 익명함수로 정의한다. - ~ = fucntion\( \){ 구현 - 변수초기화, if, for, ... }; --재사용하지 않으므로 ; 으로종료 - java에서의 내부클래스
+* 토글버튼 : 한번 버튼이 눌려지고 나면 초기화 전까지는 비활성화된다. - 이런 경우에는 함수를 재사용할 필요 없으므로 익명함수로 정의한다. - ~ = fucntion\( \){ 구현 - 변수초기화, if, for, ... }; --재사용하지 않으므로 ; 으로종료 - java에서의 내부클래스와 비슷하다.   btn\_send.addActionListener\(new ActionListener\( \){   public void actionPerformed\(ActionEvent e\){ 구현문}\);
+
+{% page-ref page="onsubmit.md" %}
 
 후기 : 
 
