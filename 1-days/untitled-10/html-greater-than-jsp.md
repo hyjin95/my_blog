@@ -1,6 +1,6 @@
 # HTML페이지 -&gt; JSP페이지
 
-
+## inputReadtest.html
 
 ```markup
 <!DOCTYPE html>
@@ -19,6 +19,8 @@
 </body>
 </html>
 ```
+
+### inputReadAction.jsp
 
 ```javascript
 <%@ page language="java" contentType="text/html; charset=UTF-8"
