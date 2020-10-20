@@ -112,7 +112,7 @@ description: 2020.10.19 - 44일차
 
 * HTML + JS + JQuery만으로 화면 그리기
 * step 1 : html - dataSet을 가질 수 없다.
-* step 2 : html+js
+* step 2 : html+js - 이벤트 처리를 할 수 있다.
 * step 3 : js - JS로만 구성된 화면\(라이브러리 : bootstrap, 프레임워크 : easyUI\) - 순수 JS로만 작성하면 코드가 길어진다. - 소스분석이 어려워진다.
 * step 4 : html+js+jquery
 
