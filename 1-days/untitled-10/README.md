@@ -85,7 +85,7 @@ description: 2020.10.20 45 일차
 
 * JSP파일에서 넘어온 응답이 화면에 출력될때에는 기존의 html파일이 아닌 새로운 파일에서 작성된다.
 
-## Event
+## JS Event
 
 ### JS, JAVA Event
 
@@ -123,6 +123,14 @@ description: 2020.10.20 45 일차
     </tr>
   </tbody>
 </table>
+
+### JS Event
+
+1. 이벤트를 적용할 태그에 id로 접근해야한다. - document.getElementById\(" "\)로 접근
+2. DOM tree가 완성 되어야 접근이 가능하다. - onload 이벤트핸들러를 사용해야한다. - 브라우저가 HTML파일을 DOM구성으로 다운로드 완료해야 접근할 수 있으므로
+3. JS에서 onload이벤트를 function\( \){ } 익명함수로 정의한다. - 단, 익명함수로 정의하면 재사용될 수 없다.
+
+### 문자열에 이벤트 구현하기
 
 후기 : 
 
