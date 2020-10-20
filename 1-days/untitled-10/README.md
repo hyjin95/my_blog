@@ -82,7 +82,7 @@ description: 2020.10.20 45 일차
 
 ### InputReadTest.html, Action.jsp 설계
 
-![&#xC124;&#xACC4;&#xB3C4;](../../.gitbook/assets/1%20%2831%29.png)
+![&#xC124;&#xACC4;&#xB3C4;](../../.gitbook/assets/1%20%2832%29.png)
 
 * JSP파일에서 넘어온 응답이 화면에 출력될때에는 기존의 html파일이 아닌 새로운 파일에서 작성된다.
 
