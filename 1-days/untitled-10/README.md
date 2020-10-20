@@ -66,6 +66,7 @@ description: 2020.10.20 45 일차
 
 * html문서를 동적으로 태그를 추가 할 수 있다. - document.createElement\("table"\)
 * 이런식의 동적 작동이 가능하므로 JS를 기반으로 하는 오픈소스 API가 생겨날 수 있다. - easyUI 등
+* 문자열은 ", '를 사용해야 문자열로 인식한다.
 
 ## 필기
 
@@ -128,9 +129,12 @@ description: 2020.10.20 45 일차
 
 1. 이벤트를 적용할 태그에 id로 접근해야한다. - document.getElementById\(" "\)로 접근
 2. DOM tree가 완성 되어야 접근이 가능하다. - onload 이벤트핸들러를 사용해야한다. - 브라우저가 HTML파일을 DOM구성으로 다운로드 완료해야 접근할 수 있으므로
-3. JS에서 onload이벤트를 function\( \){ } 익명함수로 정의한다. - 단, 익명함수로 정의하면 재사용될 수 없다.
+3. JS에서 onload이벤트를 function\( \){ } 익명함수로 정의한다. - 단, 익명함수로 정의하면 재사용될 수 없다. - window.onload = function\( \) { }
+4. 이벤트를 html문서의 head영역에 onload조건으로 구현한다. - 단위테스트 : function\( \) {alert\("호출성공"\)}
 
 ### 문자열에 이벤트 구현하기
+
+* 문자열 같은 경우에는 onClick을 걸고 head영역에서 onload조건으로 이벤트를 정의한다.
 
 후기 : 
 
