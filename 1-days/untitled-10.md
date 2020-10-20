@@ -69,6 +69,8 @@ description: 2020.10.20 45 일차
 
 ### MVC 패턴
 
+* Model-View-Controller
+
 ## 데이터 소통
 
 ### InputReadTest.html, Action.jsp 설계
