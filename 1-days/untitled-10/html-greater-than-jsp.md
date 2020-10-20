@@ -1,6 +1,6 @@
 # HTML페이지 -&gt; JSP페이지
 
-## inputReadtest.html
+## inputReadTest.html
 
 ```markup
 <!DOCTYPE html>
@@ -44,4 +44,8 @@
 ```
 
 ## 실행
+
+![inputReadTest.html](../../.gitbook/assets/4%20%2815%29.png)
+
+![inputReadAction.jsp](../../.gitbook/assets/5%20%2811%29.png)
 
