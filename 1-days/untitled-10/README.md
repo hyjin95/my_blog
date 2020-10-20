@@ -138,6 +138,8 @@ description: 2020.10.20 45 일차
 
 {% page-ref page="js.md" %}
 
+### onkeyup 이벤트핸들러 구현하기
+
 ### onsubmit 이벤트핸들러 구현하기
 
 | 이벤트 핸들러 | 이벤트 소스 |
