@@ -1,5 +1,7 @@
 # JS 문자열이벤트
 
+## clickEvent.html
+
 ```markup
 <!DOCTYPE html>
 <html>
@@ -28,4 +30,10 @@
 </body>
 </html>
 ```
+
+## 실행
+
+![](../../.gitbook/assets/3%20%2818%29.png)
+
+* A버튼을 누르면 A - 숫자가 증가, B버튼을 누르면 B - 숫자가 감소한다.
 
