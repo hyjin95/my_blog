@@ -99,7 +99,7 @@ description: 2020.10.19 - 44일차
 
 * 사용자가 직접 값을 입력하게 해주는 태그
 * 인라인 요소
-* 속성 - type : 종류 지정              text, password, button, submit\(양식제출용버튼\), reset, radio\(단일선택 컴포넌트\),               checkbox\(다중선택 컴포넌트\), file\(파일 업로드\), hidden\(사용자에게 보이지 않음\) - name - value : 기본 값
+* 속성 - type : 종류 지정              text, password, button, submit\(양식제출용버튼\), reset, radio\(단일선택 컴포넌트\), checkbox\(다중선택 컴포넌트\), file\(파일 업로드\), hidden\(사용자에게 보이지 않음\) - name - value : 기본 값
 
 ### error
 
