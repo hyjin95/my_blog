@@ -34,7 +34,7 @@
 		document.write("<br>");
 		document.write("시작단 : "+p_start);//전부 유효수치 정수이다.
 		document.write("<br>");
-		document.write("끝    단 : "+p_end.value);
+		document.write("끝    단 : "+p_end);
 	}
 </script>
 </head>
@@ -51,4 +51,8 @@
 </body>
 </html>
 ```
+
+## 실행
+
+![](../../.gitbook/assets/2%20%2822%29.png)
 
