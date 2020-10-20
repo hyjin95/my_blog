@@ -1,5 +1,7 @@
 # guguDan.html - dom, &lt;form&gt;, &lt;input&gt;, onClick
 
+## guguDan.html
+
 ```markup
 <!DOCTYPE html>
 <html>
@@ -39,4 +41,12 @@
 </body>
 </html>
 ```
+
+## 실행
+
+![1](../../.gitbook/assets/5%20%2810%29.png)
+
+![2](../../.gitbook/assets/6%20%287%29.png)
+
+![3](../../.gitbook/assets/7%20%284%29.png)
 
