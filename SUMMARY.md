@@ -165,7 +165,7 @@
     * [선생님 - 구구단 구현.html](1-days/untitled-10/untitled-12.md)
     * [HTML페이지 -&gt; JSP페이지 - inputRead](1-days/untitled-10/html-greater-than-jsp.md)
     * [JS 문자열이벤트 - html, onclick, &lt;span&gt;](1-days/untitled-10/js.md)
-    * [onkeyup 이벤트 핸들러 -](1-days/untitled-10/onkeyup.md)
+    * [onkeyup 이벤트 핸들러](1-days/untitled-10/onkeyup.md)
     * [onsubmit 이벤트 핸들러 - onclick, onload](1-days/untitled-10/onsubmit.md)
   * [Untitled](1-days/untitled-8.md)
 

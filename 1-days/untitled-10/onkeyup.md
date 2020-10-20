@@ -1,4 +1,4 @@
-# onkeyup 이벤트 핸들러 -
+# onkeyup 이벤트 핸들러
 
 ## onkeyupTest.html
 
