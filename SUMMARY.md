@@ -162,6 +162,6 @@
     * [domImgTest.html - dom, JS, onload](1-days/untitled-9/untitled.md)
     * [guguDan.html - dom, &lt;form&gt;, &lt;input&gt;, onClick](1-days/untitled-9/untitled-1.md)
   * [45 Days - URI](1-days/untitled-10/README.md)
-    * [Untitled](1-days/untitled-10/untitled-12.md)
+    * [t\_guguDan](1-days/untitled-10/untitled-12.md)
   * [Untitled](1-days/untitled-8.md)
 
