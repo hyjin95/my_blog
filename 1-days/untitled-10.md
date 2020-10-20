@@ -64,7 +64,7 @@ description: 2020.10.20 45 일차
 
 ## 데이터 전송
 
-### InputReadTest 설계
+### InputReadTest.html, Action.jsp 설계
 
 ![&#xC124;&#xACC4;&#xB3C4;](../.gitbook/assets/1%20%2831%29.png)
 
