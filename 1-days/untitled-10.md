@@ -60,7 +60,7 @@ description: 2020.10.20 45 일차
 
 ### URI
 
-![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image%20%281%29.png)
 
 ## 데이터 소통
 
