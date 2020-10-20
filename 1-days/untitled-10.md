@@ -33,7 +33,7 @@ description: 2020.10.20 45 일차
 * name 접근 : getElementByName\(" "\)
 * 또는 접근할 태그, 노드를 &lt;form&gt;으로 감싼다. - &lt;form&gt;태그는 일괄 전송이 가능하다. - 여러개 전송에 유리하다.
 * 또는 URL 쿼리스트링으로 접근한다. - xxx.html?id=test&pw=123 - 노출된다. - 주소를 가지고 링크를 걸 수 있다.
-* ID : JSP의 데이터 처리 영역에서만 사용된다.
+* ID : , JS영역이나 JSP의 데이터 처리 영역에서만 사용된다.
 * name : JSP는 물론 컨트롤러에서도 파라미터로 사용할 수 있다.
 * JSP로 만들어진 model에서 데이터를 처리하고, 응답을 View에서 화면에 처리해야하는데 이때 필요한 중간 통신다리가 컨트롤러이다.
 
@@ -60,6 +60,12 @@ description: 2020.10.20 45 일차
 
 * JSON으로 dataSet 구현 - 동기화 되지 않은 상태 - 현재 값이 아닌 과거 값이 나올 수 있다.
 * JSP로 dataSet 구현 - 동기화 지원
+* html스스로는 dataSet을 가질 수 없다.
+
+### JS
+
+* html문서를 동적으로 태그를 추가 할 수 있다. - document.createElement\("table"\)
+* 이런식의 동적 작동이 가능하므로 JS를 기반으로 하는 오픈소스 API가 생겨날 수 있다. - easyUI 등
 
 ## 필기
 
