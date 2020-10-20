@@ -74,3 +74,7 @@
 
 ## 실행
 
+![&#xD328;&#xC2A4;&#xC6CC;&#xB4DC;&#xAC00; &#xC77C;&#xCE58;&#xD558;&#xB294; &#xACBD;&#xC6B0;](../../.gitbook/assets/6%20%288%29.png)
+
+![&#xBE44;&#xBC00;&#xBC88;&#xD638;&#xAC00; &#xC77C;&#xCE58;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xACBD;&#xC6B0;](../../.gitbook/assets/7%20%284%29.png)
+
