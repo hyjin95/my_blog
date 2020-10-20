@@ -67,6 +67,8 @@ description: 2020.10.20 45 일차
 
 ![](../.gitbook/assets/image%20%281%29.png)
 
+### MVC 패턴
+
 ## 데이터 소통
 
 ### InputReadTest.html, Action.jsp 설계
