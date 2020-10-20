@@ -62,7 +62,7 @@ description: 2020.10.20 45 일차
 
 ![](../.gitbook/assets/image.png)
 
-## 데이터 전송
+## 데이터 소통
 
 ### InputReadTest.html, Action.jsp 설계
 
