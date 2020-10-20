@@ -56,6 +56,11 @@ description: 2020.10.20 45 일차
 * 서버에서도 전송된 값을 읽기 위해서는 JAVA가 필요하다. - JSP에서 request.getParameter\(" "\)로 파라미터를 읽어온다.
 * 서버가 DB에 저장하고, htm, html 마커 언어를 통해 화면에 응답한다.
 
+### HTML - JSP, JSON
+
+* JSON으로 dataSet 구현 - 동기화 되지 않은 상태 - 현재 값이 아닌 과거 값이 나올 수 있다.
+* JSP로 dataSet 구현 - 동기화 지원
+
 ## 필기
 
 ### URI
