@@ -33,6 +33,8 @@ description: 2020.10.19 - 44일차
 
 ### html
 
+![](../../.gitbook/assets/1%20%2829%29.png)
+
 * dom tree의 노드들은 RAM에 저장되어 상주하므로 서버를 거칠 필요 없이 get방식으로 꺼낼 수 있지만, 이 방식은 동기화는 이루어지지 않는다.
 * head영역 - title, JS, CSS, ...
 * body영역 - 보이는 영역, JS, CSS, TAG등 모두 사용가능
