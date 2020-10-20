@@ -160,6 +160,6 @@
     * [currentTime.html - 현재시간, onload](1-days/untitled-9/untitled-10.md)
     * [domImgTest.html - dom, JS, onload](1-days/untitled-9/untitled.md)
     * [guguDan.html - dom, &lt;form&gt;, &lt;input&gt;, onClick](1-days/untitled-9/untitled-1.md)
-  * [45 Days -](1-days/untitled-10.md)
+  * [45 Days - URI](1-days/untitled-10.md)
   * [Untitled](1-days/untitled-8.md)
 
