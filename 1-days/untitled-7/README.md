@@ -154,6 +154,7 @@ html
 * 브라우저가 읽을수 있어 화면을 구현할 수 있지만 html보다 번거롭다. - 6,7번 처럼 html에 적는 document.write메서드를 매번 사용해야 하므로
 * 4번 : 먼저 mime타입으로 선언이 이루어져야한다.
 * 4-8번 : 스크립트 영역으로 선언된 곳에는 //주석을 쓸 수 있다.
+* document.createElement\("table"\); - table 태그 생성
 
 ### JS특징
 
