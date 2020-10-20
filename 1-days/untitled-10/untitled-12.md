@@ -1,4 +1,4 @@
-# t\_guguDan.html
+# 선생님 - 구구단 구현.html
 
 ## guguDan.html
 

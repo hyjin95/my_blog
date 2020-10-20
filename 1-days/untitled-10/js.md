@@ -1,4 +1,4 @@
-# JS 문자열이벤트
+# JS 문자열이벤트 - html, onclick, &lt;span&gt;
 
 ## clickEvent.html
 
@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+    <!-- 0에게만 효과를 주기위해 <span>태그로 0에게만 id를 부여 -->
     <h1>A - <span id="count_a">0</span></h1>
     <h1>B - <span id="count_b">0</span></h1>
 	<button id="a">A</button>

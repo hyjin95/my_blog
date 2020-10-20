@@ -162,7 +162,7 @@
     * [domImgTest.html - dom, JS, onload](1-days/untitled-9/untitled.md)
     * [guguDan.html - dom, &lt;form&gt;, &lt;input&gt;, onClick](1-days/untitled-9/untitled-1.md)
   * [45 Days - URI](1-days/untitled-10/README.md)
-    * [t\_guguDan.html](1-days/untitled-10/untitled-12.md)
-    * [JS 문자열이벤트](1-days/untitled-10/js.md)
+    * [선생님 - 구구단 구현.html](1-days/untitled-10/untitled-12.md)
+    * [JS 문자열이벤트 - html, onclick, &lt;span&gt;](1-days/untitled-10/js.md)
   * [Untitled](1-days/untitled-8.md)
 
