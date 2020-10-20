@@ -1,4 +1,4 @@
-# onsubmit 이벤트 핸들러 -
+# onsubmit 이벤트 핸들러 - onclick, onload
 
 ## submitEvent.html
 
