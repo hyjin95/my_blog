@@ -27,4 +27,5 @@ description: 2020.10.21 - 46일차
 
 * JS가 table에 접근하기 위해 id를 사용한다. - name은 중복되지만 id는 유일한 값이므로
 * &lt;table id="dg-dept"&gt; - id는 값을 가져올 DB의 table명과 같이 해 구분하기 쉽도록 한다.
+* 이렇게 id를 부여하는 것은 JS에서 나머지를 구현하려는 것이다. - JQuery를 이용해 $\("\#id"\)로 호출할 수 있다.
 
