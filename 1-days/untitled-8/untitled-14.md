@@ -29,7 +29,7 @@
 
 ### level1 - html태그, JSON만으로 생성
 
-![](../../.gitbook/assets/1%20%2833%29.png)
+![level1](../../.gitbook/assets/1%20%2833%29.png)
 
 ```markup
 <!DOCTYPE html>
@@ -61,9 +61,9 @@
 
 ## level3 - JS를 이용한 dataSet
 
-### level3
+### level3 - JS에서 JSON dataSet불러오기
 
-![](../../.gitbook/assets/level3.png)
+![level3](../../.gitbook/assets/level3.png)
 
 ```markup
 <!DOCTYPE html>
@@ -99,9 +99,9 @@
 </html>
 ```
 
-### level3-1
+### level3-1- 상수값 넣고 rowstyler추가해보기
 
-![](../../.gitbook/assets/level3-1.png)
+![level3-1](../../.gitbook/assets/level3-1.png)
 
 ```markup
 <!DOCTYPE html>
@@ -122,15 +122,9 @@
 		window.onload = function(){//dom이 스캔할떄 초기화
 			$("#dg_dept").datagrid({
 				title:"부서관리"
-				//,url:"./dept.json"
-				,columns:[[
-							{field:'DEPTNO', title:'부서번호', width:100, align:'center'}
-							,{field:'DNAME', title:'부서명', width:80, align:'center'}
-							,{field:'LOC', title:'지역', width:80, align:'center'}
-						 ]]
 				,data: [
 					{DEPTNO:'119', DNAME:'소방서', LOC:'서울'}
-				   ,{DEPTNO:'112', DNAME:'경찰', LOC:'서울'}
+				 ,{DEPTNO:'112', DNAME:'경찰', LOC:'서울'}
 				]
 				,rowStyler: function(index,row){//방법1
 					if(row.DEPTNO>90){//소문자거나 deptno가 90보다 작으면 적용되지않는다.
