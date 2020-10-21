@@ -167,7 +167,8 @@
     * [JS 문자열이벤트 - html, onclick, &lt;span&gt;](1-days/untitled-10/js.md)
     * [onkeyup 이벤트 핸들러](1-days/untitled-10/onkeyup.md)
     * [onsubmit 이벤트 핸들러 - onclick, onload](1-days/untitled-10/onsubmit.md)
-  * [46 Days - &lt;table&gt;분석, WAS와 웹서버,](1-days/untitled-8.md)
+  * [46 Days - &lt;table&gt;분석, WAS와 웹서버,](1-days/untitled-8/README.md)
+    * [Untitled](1-days/untitled-8/untitled-14.md)
   * [Untitled](1-days/untitled-13.md)
   * [Untitled](1-days/untitled-12.md)
 
