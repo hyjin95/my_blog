@@ -29,7 +29,7 @@
 
 ### level1 - html태그, JSON만으로 생성
 
-![level1](../../.gitbook/assets/1%20%2834%29.png)
+![level1](../../.gitbook/assets/1%20%2835%29.png)
 
 ```markup
 <!DOCTYPE html>

@@ -125,28 +125,5 @@ description: 2020.10.21 - 46일차
 
 ## mime타입 분석
 
-### ranking.jsp
-
-```markup
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-<% String title = "자바서버페이지"; %>
-<table>
-	<tr><td><%=title %></td></tr>
-	<tr><td><% out.print(title); %></td></tr>
-</table>
-</body>
-</html>
-```
-
-* 1번 : 파일은 jsp파일로 생성했지만 mime타입을 살펴보면 sub타입이 html인것을 볼수 있다. - html취급을 받아 html태그들을 사용할 수 있다.
-
-후기 : 
+*  파일을 jsp파일로 생성했지만 mime타입에따라 다른 취급을 받기도 한다. 후기 : 
 
