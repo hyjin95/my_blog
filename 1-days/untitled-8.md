@@ -2,7 +2,7 @@
 description: 2020.10.21 - 46일차
 ---
 
-# 46 Days -
+# 46 Days - &lt;table&gt;분석, WAS와 웹서버,
 
 ### 사용 프로그램
 
@@ -57,4 +57,12 @@ description: 2020.10.21 - 46일차
 * datagrid안에 들어가는 값을 구현한다. - dataSet과 같다.
 * 웹에서는 JSON을 사용해 구현한다. - WAS에 JSON이 추가 되어 있어야 undefined가 일어나지 않는다.
 * JSON을 담기 위해 URL을 사용한다. - data-options="URL:파일명, URL:파일명, ..."
+
+## WAS와 웹서버
+
+### WAS
+
+### 웹서버
+
+### 차이점
 
