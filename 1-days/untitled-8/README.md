@@ -10,6 +10,12 @@ description: 2020.10.21 - 46일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 라이브러리 - JQuery
 
+## 학습목표
+
+* html과 JS의 역할에 대해 말할 수 있다. - html : 개발방법론에서 View계층 담당 - JS : Event와 View를 조작\(DOM\)하는 역할
+* JS의 선언 위치에 대해 설명할 수 있다. - head영역 : 멤버변수, 함수선언 등 - body영역 : 지역변수, 함수구현\(부분페이지에 대한 처리만 담당, 유지보수\)
+* mime타입에 대해 이해하고 페이지에 적절한 mime타입을 작성할 수 있다. - xxx.jsp가 xxx.html이나 xxx.xml이 될 수 있다. - 확장자를 보고 정하는 것이 아니라 mime타입을 보고 정체성을 정해야한다.
+
 ## &lt;table&gt;
 
 ### &lt;table&gt;
