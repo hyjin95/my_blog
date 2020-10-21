@@ -2,7 +2,7 @@
 description: 2020.10.21 - 46일차
 ---
 
-# 46 Days - &lt;table&gt;분석, WAS와 웹서버,
+# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석,
 
 ### 사용 프로그램
 
@@ -101,4 +101,12 @@ description: 2020.10.21 - 46일차
 ### 차이점
 
 ## HTML4와 HTML5
+
+{% page-ref page="html4-html5.md" %}
+
+## &lt;span&gt;과 &lt;div&gt;분석
+
+{% page-ref page="less-than-div-greater-than-less-than-span-greater-than.md" %}
+
+후기 : 
 
