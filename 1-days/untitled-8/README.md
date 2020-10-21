@@ -134,8 +134,12 @@ description: 2020.10.21 - 46일차
 
 ### onchange
 
+```markup
+<input type="text" size="20" value="컵밥" onchange="check(this)">
+```
+
 * JS에서는 같은 이름을 갖는 메서드를 중복 선언할 수 없다. - 메서드 오버로드, 오버라이드를 지원하지 않는다.
-* tag는 JS에서는 Element, DOM의 Node, java의 Object이다. - this를 사용할 수 있다. - value로 값을 갖는다.
+* tag는 JS에서는 Element, DOM의 Node, java의 Object이다. - this를 사용할 수 있다. - value로 값을 갖는다. - 위 코드에 this.value를 찍으면 컵밥 이 출력될 것이다.
 
 {% page-ref page="onchange.md" %}
 
