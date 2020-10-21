@@ -77,6 +77,10 @@
 </html>
 ```
 
+* CSS로 div, span의 기본 요소를 변경 할 수 있다.
+* 단 하나의 div, span에 효과를 적용하려면 id를 사용한다.
+* 서로 다른 div, span에 같은 효과를 주려면 class를 사용한다. - id는 유니크 해야한다.
+
 ## 실행
 
 ![](../../.gitbook/assets/span-div.png)
