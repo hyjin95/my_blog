@@ -167,7 +167,7 @@
     * [JS 문자열이벤트 - html, onclick, &lt;span&gt;](1-days/untitled-10/js.md)
     * [onkeyup 이벤트 핸들러](1-days/untitled-10/onkeyup.md)
     * [onsubmit 이벤트 핸들러 - onclick, onload](1-days/untitled-10/onsubmit.md)
-  * [46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange, 시멘](1-days/untitled-8/README.md)
+  * [46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange, window.onload, html5-시멘틱, Dom요소 선택자](1-days/untitled-8/README.md)
     * [&lt;table&gt; - datagrid level1-3](1-days/untitled-8/untitled-14.md)
     * [HTML4와 HTML5](1-days/untitled-8/html4-html5.md)
     * [&lt;div&gt;, &lt;span&gt;분석](1-days/untitled-8/less-than-div-greater-than-less-than-span-greater-than.md)

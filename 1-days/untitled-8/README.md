@@ -2,7 +2,7 @@
 description: 2020.10.21 - 46일차
 ---
 
-# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange, 시멘
+# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange, window.onload, html5-시멘틱, Dom요소 선택자
 
 ### 사용 프로그램
 
@@ -15,6 +15,90 @@ description: 2020.10.21 - 46일차
 * html과 JS의 역할에 대해 말할 수 있다. - html : 개발방법론에서 View계층 담당 - JS : Event와 View를 조작\(DOM\)하는 역할
 * JS의 선언 위치에 대해 설명할 수 있다. - head영역 : 멤버변수, 함수선언 등 - body영역 : 지역변수, 함수구현\(부분페이지에 대한 처리만 담당, 유지보수\)
 * mime타입에 대해 이해하고 페이지에 적절한 mime타입을 작성할 수 있다. - xxx.jsp가 xxx.html이나 xxx.xml이 될 수 있다. - 확장자를 보고 정하는 것이 아니라 mime타입을 보고 정체성을 정해야한다.
+
+## DOM 요소 선택자 - JS
+
+### Tag name
+
+* HTML 태그의 이름을 이용해 HTML요소를 선택한다.
+* document.getElementsByTagName\("li"\); - 모든 li 요소를 선택
+
+### ID
+
+* 여러 태그, 요소, Element중에서 단 하나의 요소를 위한 식별자
+* 문서내에서 유일한 값이여야한다.
+* 한 요소에게만 기능을 부여할때, 사용하면 해당 태그만을 참조한다.
+* document.getElementById\("even"\); - "even" ID를 갖는 요소만 선택
+
+### Class
+
+* 여러 요소들을 위한 식별자
+* 유일하지않고 중복될 수 있다.
+* 보통 style에서 스타일을 일괄적용하거나 할떄 사용된다.
+* document.getElementsByClassName\("odd"\); - "odd"클래스 명을 갖는 모든 요소 선택
+
+### Name 속성
+
+* HTML 태그 이름
+* 문서 내에서 중복되게, 여러번 부여해도되는 식별자
+* 요새는 사용하지 않는다.
+* document.getElementsByName\("first"\); - name 속성값이 "first"인 모든 요소 선택
+
+### CSS 선택자\(selector\)
+
+* CSS선택자\(id, class, 속성, 속성값 등\)을 querySelectorAll\( \)메서드를 사용해 선택한다.
+* document.querySelectorAll\("li.odd"\); - 클래스가 "odd"인 요소 중에서 &lt;li&gt;태그 요소들만 선택
+
+### 객체집합\(object collection\)
+
+* HTML DOM에서 제공해주는 객체집합을 이용해서도 요소를 선택할 수 있다.
+* document.title; - &lt;title&gt;태그 요소 선택
+
+## JQuery 분석
+
+### JS표준과 JQuery
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">JS&#xD45C;&#xC900;</th>
+      <th style="text-align:center">JQuery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">window.onload</td>
+      <td style="text-align:center">$(document).read</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">=function( ){ };</td>
+      <td style="text-align:center">(function( ){ });</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <p>CSS</p>
+        <p>html &#xD0DC;&#xADF8;&#xC548;&#xC5D0; &#xC9C1;&#xC811; &#xAD6C;&#xD604;(&#xC815;&#xC801;)</p>
+        <p>&#xBCC4;&#xB3C4; style&#xC0DD;&#xC131; &#xD6C4; &#xC801;&#xC6A9;(&#xB3D9;&#xC801;)</p>
+      </td>
+      <td style="text-align:center">
+        <p>CSS
+          <br />$(&#xD0DC;&#xADF8;&#xBA85;) : &#xBAA8;&#xB4E0; &#xD0DC;&#xADF8;&#xC5D0;&#xAC8C;
+          <br
+          />$(&quot;#id&quot;) : &#xD574;&#xB2F9; id &#xD558;&#xB098;&#xC5D0;&#xAC8C;&#xB9CC;
+          <br
+          />$( ).css(&quot;&#xC774;&#xB984;&quot;,&quot;&#xAC12;);</p>
+        <p></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### JQuery 선택자
+
+* 전체 : \(\*\)
+* 아이디 : \("\#Id명"\)
+* 클래스 : \(.클래스명\)
+* 요소\(태그이름\) : \(요소명\)
 
 ## &lt;table&gt;
 
@@ -109,11 +193,24 @@ description: 2020.10.21 - 46일차
 
 ## WAS와 웹서버
 
-### WAS
+### WAS\(Web Application Server\)
 
-### 웹서버
+* 동적 컨텐츠를 제공하기 위한 애플리케이션 서버
+* DB조회, 로직처리를 요구하는 컨텐츠를 처리한다.
+* JSP, Servlet이 구동 환경을 제공한다. - JSP, Servlet을 실행 시킬 수 있는 소프트 웨어 = 컨테이너
+* 동작 프로세서 : 웹서버로부터의 요청 -&gt; 컨테이너가 받아서 처리한다. -&gt; web.xml문서 참조로 해당 서블릿 스레드를 생성하고, httpServletRequest와 httpServletResponse객체를 생성해 전달한다.  -&gt; 컨테이너가 서블릿을 호출한다. -&gt; 호출된 서블릿의 작업을 담당하는 스레드는 전송 방식에 따라 dopost\( \)나 dpget\( \)을 호출한다. -&gt; 호출된 메서드는 생성된 동적 페이지를 response객체에 담아 컨테이너에 전송한다. -&gt; 컨테이너는 전달받은 response객체를 HTTPResponse형태로 변환해 웹서버에 전달한다. -&gt; 생성했던 스레드 종료, httpServlet 두 객체 소멸
+* 대표적인 WAS제품 : Tomcat, Jeus, JBoss - Tomcat은 Apache기능을 포함한다.
+
+### 웹서버\(Web Server\)
+
+* 클라이언트가 서버에 페이지를 요청하면 정적 컨텐츠를 제공하는 서버 - 정적 컨텐츠 : HTML, PNG, CSS 등...
+* 요청시 가장 먼저 요청을 처리하는 서버
+* Case : 컨텐츠 request  -&gt; 정적 컨텐츠 요쳥이라면 응답response  -&gt; 정적 컨텐츠 요청이 아니라면 WAS에게 요청을 넘기고, WAS가 처리해준 컨텐츠를 받아 웹서버가 응답 해준다.
+* 대표적인 웹 서버 제품 : Apache, nginx
 
 ### 차이점
+
+* 동적, 정적 페이지의 처리위치 - WAS에서도 정적페이지를 처리 할수는 있지만 부하가 많이 걸려 비효율적이다.
 
 ## HTML4와 HTML5
 
@@ -134,6 +231,15 @@ description: 2020.10.21 - 46일차
 
 ## HTML - JS Event
 
+### JavaScript - window.onload
+
+* HTML에서 HTML내의 요소에 접근해 다양한 기능을 구현하는 언어
+* HTML안에서 쓰이므로 절차지향적이고, 에러 체크가 없는 인터프리터의 특성을 갖는다. - 따라서 JS에서 선언과 생성, 사용되는 위치에 주의해야한다.
+* 생성된 태그에 접근하려면 생성된 태그의 뒤에 위치해야하는데, 보통 body에 태그는 생성되고, JS로 구현하는 기능은 head쪽으로 빼서 관리하는것이 일반적이다.
+* 이를 가능하게 해주는 메서드가 window.onload메서드이다.
+* 웹브라우저 담당 window객체가 문서가 모두 다운로드된 뒤에, 문서가 사용될때 실행되는 메서드
+* window.onload = fuction\( \){ }; 이런 형태로 함수를 붙여 사용한다. - 해당 기능이 태그의 선언보다 앞에 위치하지만 정상적으로 작동할 수 있도록
+
 ### onchange
 
 ```markup
@@ -145,52 +251,6 @@ description: 2020.10.21 - 46일차
 * onchange로 이벤트를 만들어 innerHTML과 value를 이용해 값을 출력해보자
 
 {% page-ref page="onchange.md" %}
-
-## JQuery 분석
-
-### JS표준과 JQuery
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:center">JS&#xD45C;&#xC900;</th>
-      <th style="text-align:center">JQuery</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">window.onload</td>
-      <td style="text-align:center">$(document).read</td>
-    </tr>
-    <tr>
-      <td style="text-align:center">=function( ){ };</td>
-      <td style="text-align:center">(function( ){ });</td>
-    </tr>
-    <tr>
-      <td style="text-align:center">
-        <p>CSS</p>
-        <p>html &#xD0DC;&#xADF8;&#xC548;&#xC5D0; &#xC9C1;&#xC811; &#xAD6C;&#xD604;(&#xC815;&#xC801;)</p>
-        <p>&#xBCC4;&#xB3C4; style&#xC0DD;&#xC131; &#xD6C4; &#xC801;&#xC6A9;(&#xB3D9;&#xC801;)</p>
-      </td>
-      <td style="text-align:center">
-        <p>CSS
-          <br />$(&#xD0DC;&#xADF8;&#xBA85;) : &#xBAA8;&#xB4E0; &#xD0DC;&#xADF8;&#xC5D0;&#xAC8C;
-          <br
-          />$(&quot;#id&quot;) : &#xD574;&#xB2F9; id &#xD558;&#xB098;&#xC5D0;&#xAC8C;&#xB9CC;
-          <br
-          />$( ).css(&quot;&#xC774;&#xB984;&quot;,&quot;&#xAC12;);</p>
-        <p></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### JQuery 선택자
-
-* 전체 : \(\*\)
-* 아이디 : \("\#Id명"\)
-* 클래스 : \(.클래스명\)
-* 요소\(태그이름\) : \(요소명\)
 
 ## Eclipse의 web 소스관리
 

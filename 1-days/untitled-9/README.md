@@ -119,13 +119,19 @@ description: 2020.10.19 - 44일차
 
 ### DOM
 
-* Document Object Model, 문서객체모델
+* Document Object Model, W3C 표준 문서객체모델
 * BOM중의 하나로, window객체의 하위 객체로 XML,HTML문서에 접근하기위한 인터페이스 일종
-* **HTML의 태그들을 JS가 접근할 수 있도록 문서 객체로 인식**해주는 document객체 지원 집합 - **웹 브라우저 내장객체**가 HTML페이지를 인식하는 방식중 하나라고 할 수 있다. - 원본 HTML문서의 객체 기반 표현 방식 - 단순 문서 파일인 HTML을 내용과 구조를 객체 모델로 변환해 다양한 프로그램에서 사용하게 한다.
+* **HTML의 태그들을 JS가 접근할 수 있도록 문서 객체로 인식**해주는 document객체 지원 집합 - **웹 브라우저 내장객체**가 HTML페이지를 인식하는 방식중 하나라고 할 수 있다. - 원본 HTML문서의 객체 기반 표현 방식 - 단순 문서 파일인 HTML을 내용과 구조를 객체 모델로 변환해 다양한 프로그램에서 사용하게 한다. - 문서 내의 모든 요소를 정의하고, 각각의 요소에 접근하는 방법을 제공한다.
 * **tree\(돔 트리, 노드 트리\)형식의 자료구조**를 갖는다. - 하나의 root node에서 시작된다. - root node는 부모노드를 갖지않고 자식 노드만을 갖는다. - 자식이 없는 요소 안의 컨텐츠 노드는 leafg node라 한다. - tree는 RAM에 저장된다.
 * DOM은 유효한 HTML문서의 인터페이스로, DOM을 생성하는 동안에 브라우저가 HTML코드를 교정해준다.
 * html문서 파싱 -&gt; 태그를 DOM 노드로 변환 -&gt; 외부 css파일과 스타일 요소 파싱 -&gt; 또 다른 트리 생성
 * DOM을 조작하는 객체 - ex\) img태그   &lt;img src="http://~" /&gt; - http://..... 은 절대경로이다.
+* 종류  
+  - Core DOM : 모든 문서 타입을 위한 DOM모델  
+  - HTML DOM : HTML문서를 위한 DOM모델, 모든 HTML요소는 HTML DOM을 통해 접근할 수 있다.
+
+  
+  - XML DOM : XML문서를 위한 DOM모델, 모든 XML요소는 XML DOM을 통해 접근할 수 있다.
 
 ### Node
 
@@ -224,6 +230,11 @@ description: 2020.10.19 - 44일차
 </body>
 </html>
 ```
+
+* JS는 DOM을 통해 HTML 태그, 요소에 접근하여 HTML문서에서 다음과 같은 작업을 수행한다.
+* 새로운 HTML요소나 속성 추가, 기존 요소나 속성 제거
+* 모든 HTML요소와 속성, CSS 변경가능
+* 새로운 HTML이벤트 추가, 반응 가능
 
 {% page-ref page="untitled.md" %}
 
