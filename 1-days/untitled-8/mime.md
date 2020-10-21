@@ -2,9 +2,9 @@
 
 ## ranking.jsp - html
 
-![&#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2834%29.png)
+![&#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2835%29.png)
 
-![&#xAC1C;&#xBC1C;&#xC790;&#xB3C4;&#xAD6C;](../../.gitbook/assets/2%20%2824%29.png)
+![&#xAC1C;&#xBC1C;&#xC790;&#xB3C4;&#xAD6C;](../../.gitbook/assets/2%20%2825%29.png)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"

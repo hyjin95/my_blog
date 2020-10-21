@@ -2,9 +2,9 @@
 
 ## onchange.html - 1단
 
-![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2833%29.png)
+![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2834%29.png)
 
-![check &#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8; - &#xB2E4;&#xC12F;&#xAE00;&#xC790; &#xC785;&#xB825;&#xC2DC;](../../.gitbook/assets/2%20%2828%29.png)
+![check &#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8; - &#xB2E4;&#xC12F;&#xAE00;&#xC790; &#xC785;&#xB825;&#xC2DC;](../../.gitbook/assets/2%20%2829%29.png)
 
 ![check2 &#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8;](../../.gitbook/assets/3%20%2821%29.png)
 
@@ -44,9 +44,9 @@
 
 ## onchange - 2단계
 
-![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2837%29.png)
+![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2838%29.png)
 
-![check2 -&amp;gt; check&#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8;](../../.gitbook/assets/2%20%2826%29.png)
+![check2 -&amp;gt; check&#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8;](../../.gitbook/assets/2%20%2827%29.png)
 
 ```markup
 <!DOCTYPE html>

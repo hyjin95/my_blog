@@ -148,9 +148,40 @@ description: 2020.10.21 - 46일차
 
 ### JS표준과 JQuery
 
-| JS표준 | JQuery |
-| :--- | :--- |
-|  |  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">JS&#xD45C;&#xC900;</th>
+      <th style="text-align:center">JQuery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">window.onload</td>
+      <td style="text-align:center">$(document).read</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">=function( ){ };</td>
+      <td style="text-align:center">(function( ){ });</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <p>CSS</p>
+        <p>html &#xD0DC;&#xADF8;&#xC548;&#xC5D0; &#xC9C1;&#xC811; &#xAD6C;&#xD604;(&#xC815;&#xC801;)</p>
+        <p>&#xBCC4;&#xB3C4; style&#xC0DD;&#xC131; &#xD6C4; &#xC801;&#xC6A9;(&#xB3D9;&#xC801;)</p>
+      </td>
+      <td style="text-align:center">
+        <p>CSS
+          <br />$(&#xD0DC;&#xADF8;&#xBA85;) : &#xBAA8;&#xB4E0; &#xD0DC;&#xADF8;&#xC5D0;&#xAC8C;
+          <br
+          />$(&quot;#id&quot;) : &#xD574;&#xB2F9; id &#xD558;&#xB098;&#xC5D0;&#xAC8C;&#xB9CC;
+          <br
+          />$( ).css(&quot;&#xC774;&#xB984;&quot;,&quot;&#xAC12;);</p>
+        <p></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### JQuery 선택자
 
@@ -158,6 +189,14 @@ description: 2020.10.21 - 46일차
 * 아이디 : \("\#Id명"\)
 * 클래스 : \(.클래스명\)
 * 요소\(태그이름\) : \(요소명\)
+
+## Eclipse의 web 소스관리
+
+![&#xCCAB;&#xBC88;&#xC9F8;&#xACBD;&#xB85C;](../../.gitbook/assets/2%20%2824%29.png)
+
+![&#xB450;&#xBC88;&#xC9F8;&#xACBD;&#xB85C;](../../.gitbook/assets/1%20%2833%29.png)
+
+* 두 군데로 관리하고 있다.
 
   
 후기 : 
