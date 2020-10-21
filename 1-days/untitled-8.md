@@ -10,7 +10,7 @@ description: 2020.10.21 - 46일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 라이브러리 - JQuery
 
-## 복습
+## &lt;table&gt;
 
 ### &lt;table&gt;
 
