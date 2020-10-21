@@ -97,6 +97,10 @@ description: 2020.10.21 - 46일차
 * **이름이 같은 태그들은 브라우저가 자동으로 배열로 인식**한다.
 * 이를 활용해 쪽지함 checkBox를 구현해보자
 
+![](../../.gitbook/assets/messge.png)
+
+{% page-ref page="receivemessage.html-name.md" %}
+
 ## WAS와 웹서버
 
 ### WAS
