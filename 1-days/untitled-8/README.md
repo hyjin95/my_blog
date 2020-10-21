@@ -2,7 +2,7 @@
 description: 2020.10.21 - 46일차
 ---
 
-# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석,
+# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange
 
 ### 사용 프로그램
 
