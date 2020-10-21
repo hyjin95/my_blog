@@ -166,7 +166,7 @@ html
 
 ### JS의 역할
 
-* HTML에서 구현한 화면에서 이벤트가 발생하면 브라우저에 이벤트 감지를 전달하는 역할 - html : eventSource - JS    : eventHandler
+* HTML에서 구현한 화면에서 이벤트가 발생하면 브라우저에 이벤트 감지를 전달하는 역할 - html : eventSource - JS    : eventHandler - html이 먼저 메모리에 load가 완료 되어야 JS가 일할 수 있다 - html이 있어야 된다.
 * JS에서 해당 이벤트를 감지하기 위해 ID속성을 사용한다.
 
 ### JQuery
