@@ -55,23 +55,20 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-	function check(u_name){
-		if(u_name.value.length > 4){
-			alert("4자만 입력할 수 있습니다.")
-			u_name.value="";
-		}
-	}
-	function check2(sel){
-		document.getElementById("d_result").innerHTML = sel.value;	
+	function check(u_name, sel){
 		document.getElementById("t_menu").value = sel.value;	
+	}
+	function check2(sel){//sel=document.getElementById(menu)
+		document.getElementById("d_result").innerHTML = sel.value;	
+		check("111",sel);//내안의 메서드 재사용
 	}
 </script>
 </head>
-<!-- xml이라
-<% 
+<!-- 
+<% xml이라면
  String menu = request.getParameter("menu"; //abcde가 넘어간다. value가)
-%> -->
-<body> 
+%>-->
+<body>
 <!-- this=해당 태그에 대한 -->
 <input type="text" id="t_menu" size="20" value="저녁" onchange="check(this)">
 <select id="menu" name="menu" onchange="check2(this)">
@@ -86,6 +83,10 @@
 </body>
 </html>
 ```
+
+* innerHTML : body태그 안의 &lt;div&gt;로 innerHTML을 적용할 영역을 지정해  HTML 코드를 삽입 - &lt;div&gt;태그로 영역지정된 곳이 아니라면 사용할 수 없다. - 8번 처럼 value를 사용해서 값을 받는다.
+* 12번 파라미터의 111값은 위에서 작성한 함수를 재사용하기위해 넣은 의미 없는 값이다.
+* 24-28번에서 의미를 갖는 값, Value로 꺼내지는 값과 화면에 보여지기 위해 작성한 값을 구별해야한다.
 
 ## 
 
