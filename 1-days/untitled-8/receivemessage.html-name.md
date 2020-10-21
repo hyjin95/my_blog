@@ -136,11 +136,11 @@
 
 * 둘다 실행 화면은 같다.
 
-![1](../../.gitbook/assets/1%20%2834%29.png)
+![1](../../.gitbook/assets/1%20%2835%29.png)
 
 ![2](../../.gitbook/assets/2%20%2825%29.png)
 
-![3](../../.gitbook/assets/3%20%2821%29.png)
+![3](../../.gitbook/assets/3%20%2822%29.png)
 
 ![4](../../.gitbook/assets/4%20%2817%29.png)
 

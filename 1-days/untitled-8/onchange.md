@@ -36,3 +36,11 @@
 </html>
 ```
 
+## 실행
+
+![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2833%29.png)
+
+![check&#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8;](../../.gitbook/assets/2%20%2826%29.png)
+
+![check2 &#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8;](../../.gitbook/assets/3%20%2821%29.png)
+
