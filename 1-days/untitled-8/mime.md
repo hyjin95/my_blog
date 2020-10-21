@@ -23,8 +23,6 @@
 </table>
 </body>
 </html>
-
-
 ```
 
 ## xmlDataSet.jsp - xml

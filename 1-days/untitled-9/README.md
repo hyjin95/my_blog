@@ -131,13 +131,13 @@ description: 2020.10.19 - 44일차
 
 ![html node](../../.gitbook/assets/img_js_htmldom.png)
 
-* HTML **DOM은 노드들의 집합인 노트 트리라는 계층적 구조에 저장**된다. - tree구조에서 root 노드를 포함한 모든 개체를 node라고 표현한다.
+* HTML **DOM은 노드들의 집합인 노트 트리라는 계층적 구조에 저장**된다. - tree구조에서 root 태그 하위의 모든 개체\(태그\)를 node라고 표현한다.
 * **노드 : 계층 단위**, html정보가 저장된다.
 * HTML DOM은 노드를 정의하고 관계를 설명하는 역할
 * 모든 노드는 상속관계와 같이 계층적 관계를 맺는다.
 * root 노드를 제외한 모든 노드는 단 하나의 부모 노드만을 갖는다.
 
-### W3C HTML DOM표준
+### Node - W3C HTML DOM표준
 
 <table>
   <thead>
