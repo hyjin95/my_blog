@@ -1,6 +1,6 @@
 # &lt;table&gt; - datagrid level1
 
-## ㅣ
+## level1 - table 생성
 
 ![table data&#xAC00; &#xC5C6;&#xB2E4;](../../.gitbook/assets/table-border.png)
 
@@ -23,6 +23,11 @@
 </body>
 </html>
 ```
+
+* data는 없어  테두리 선을 나타내는 border마저 없으면 화면에 아무것도 나타나지 않는다.
+* 화면의 .은 border값에 의해 나타난 것
+
+### level1 - html태그, JSON만으로 생성
 
 
 
