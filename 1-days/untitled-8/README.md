@@ -69,6 +69,16 @@ description: 2020.10.21 - 46일차
 * JQuery.js를 먼저 script한 다음에 easyUI.js를 script해야한다. - 자바에서는 객체지향언어이므로 상관없지만 HTML은 절차지향적 언어이므로 - 서로 의존관계에 있다.  - 2번이 1번위에 있다면 undefined가 발생할 것이다.
 * min : 쓸모없는 공백을 모두 제거해 좀 더 가볍게 만든 파일, 가독성이 떨어진다.
 
+### JSON 구조
+
+```markup
+<records>
+    <record>
+        <deptno컬럼명>10값</deptno>
+```
+
+* 기존에는 xml을 사용해 data를 처리했는데 대용량에서는 속도가 느려 사용할수가 없었다.
+
 ## WAS와 웹서버
 
 ### WAS
