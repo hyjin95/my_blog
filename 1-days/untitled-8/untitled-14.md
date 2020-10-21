@@ -1,5 +1,7 @@
 # Untitled
 
+![](../../.gitbook/assets/table-border.png)
+
 ```markup
 <!DOCTYPE html>
 <html>
