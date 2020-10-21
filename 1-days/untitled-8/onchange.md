@@ -44,7 +44,7 @@
 
 ## onchange - 2단계
 
-![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2838%29.png)
+![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2839%29.png)
 
 ![check2 -&amp;gt; check&#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8;](../../.gitbook/assets/2%20%2827%29.png)
 

@@ -2,7 +2,7 @@
 description: 2020.10.21 - 46일차
 ---
 
-# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange
+# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange, 시멘
 
 ### 사용 프로그램
 
@@ -118,6 +118,8 @@ description: 2020.10.21 - 46일차
 ## HTML4와 HTML5
 
 {% page-ref page="html4-html5.md" %}
+
+* 시멘틱 태그를 활용해 UI그려보기
 
 ## &lt;span&gt;과 &lt;div&gt;분석
 
