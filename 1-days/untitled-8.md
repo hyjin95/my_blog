@@ -58,6 +58,16 @@ description: 2020.10.21 - 46일차
 * 웹에서는 JSON을 사용해 구현한다. - WAS에 JSON이 추가 되어 있어야 undefined가 일어나지 않는다.
 * JSON을 담기 위해 URL을 사용한다. - data-options="URL:파일명, URL:파일명, ..."
 
+### &lt;script JQuery - easyUI&gt;
+
+```markup
+<script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+```
+
+* JQuery.js를 먼저 script한 다음에 easyUI.js를 script해야한다. - 자바에서는 객체지향언어이므로 상관없지만 HTML은 절차지향적 언어이므로 - 서로 의존관계에 있다.  - 2번이 1번위에 있다면 undefined가 발생할 것이다.
+* min : 쓸모없는 공백을 모두 제거해 좀 더 가볍게 만든 파일, 가독성이 떨어진다.
+
 ## WAS와 웹서버
 
 ### WAS

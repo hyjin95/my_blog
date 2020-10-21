@@ -119,8 +119,8 @@ description: 2020.10.19 - 44일차
 
 ### DOM
 
-* Document Object Model
-* BOM중의 하나로, window객체의 하위 객체
+* Document Object Model, 문서객체모델
+* BOM중의 하나로, window객체의 하위 객체로 XML,HTML문서에 접근하기위한 인터페이스 일종
 * **HTML의 태그들을 JS가 접근할 수 있도록 문서 객체로 인식**해주는 document객체 지원 집합 - **웹 브라우저 내장객체**가 HTML페이지를 인식하는 방식중 하나라고 할 수 있다. - 원본 HTML문서의 객체 기반 표현 방식 - 단순 문서 파일인 HTML을 내용과 구조를 객체 모델로 변환해 다양한 프로그램에서 사용하게 한다.
 * **tree\(돔 트리, 노드 트리\)형식의 자료구조**를 갖는다. - 하나의 root node에서 시작된다. - root node는 부모노드를 갖지않고 자식 노드만을 갖는다. - 자식이 없는 요소 안의 컨텐츠 노드는 leafg node라 한다. - tree는 RAM에 저장된다.
 * DOM은 유효한 HTML문서의 인터페이스로, DOM을 생성하는 동안에 브라우저가 HTML코드를 교정해준다.
