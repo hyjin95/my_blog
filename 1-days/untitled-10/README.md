@@ -2,7 +2,7 @@
 description: 2020.10.20 45 일차
 ---
 
-# 45 Days - URI, html-JS Event,
+# 45 Days - URI, html-JS Event, MVC패턴
 
 ### 사용 프로그램
 
