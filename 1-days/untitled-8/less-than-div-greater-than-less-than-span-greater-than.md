@@ -52,6 +52,11 @@
 		height: 200px;
 		background-color: yellow;
 	}	
+	span.color{
+		width: 300px;
+		height: 200px;
+		background-color: red;
+	}	
 </style>
 </head>
 <body>
@@ -66,6 +71,8 @@
 	<span id="sp_4">Fourth Span</span>
 	<span id="sp_5">Five Span</span>
 	<span id="sp_6">Six Span</span>
+	<span id="sp_7" class="color">Seven Span</span>
+	<span id="sp_8" class="color">Eghit Span</span>
 </body>
 </html>
 ```
