@@ -170,7 +170,8 @@
   * [46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석,](1-days/untitled-8/README.md)
     * [&lt;table&gt; - datagrid level1-3](1-days/untitled-8/untitled-14.md)
     * [HTML4와 HTML5](1-days/untitled-8/html4-html5.md)
-    * [&lt;div&gt;, &lt;span&gt;](1-days/untitled-8/less-than-div-greater-than-less-than-span-greater-than.md)
+    * [&lt;div&gt;, &lt;span&gt;분석](1-days/untitled-8/less-than-div-greater-than-less-than-span-greater-than.md)
+    * [receiveMessage.html - 같은name 태그](1-days/untitled-8/receivemessage.html-name.md)
   * [Untitled](1-days/untitled-13.md)
   * [Untitled](1-days/untitled-12.md)
 
