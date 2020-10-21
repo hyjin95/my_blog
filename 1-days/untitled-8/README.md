@@ -140,6 +140,7 @@ description: 2020.10.21 - 46일차
 
 * JS에서는 같은 이름을 갖는 메서드를 중복 선언할 수 없다. - 메서드 오버로드, 오버라이드를 지원하지 않는다.
 * tag는 JS에서는 Element, DOM의 Node, java의 Object이다. - this를 사용할 수 있다. - value로 값을 갖는다. - 위 코드에 this.value를 찍으면 컵밥 이 출력될 것이다.
+* onchange로 이벤트를 만들어 innerHTML과 value를 이용해 값을 출력해보자
 
 {% page-ref page="onchange.md" %}
 
