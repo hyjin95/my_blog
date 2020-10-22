@@ -177,6 +177,7 @@
     * [naviBarStep1 - 시멘틱태그, &lt;li&gt;](1-days/untitled-8/navibarstep1-less-than-li-greater-than.md)
   * [47 Days - JSP, Servlet, css선택자, JQuery사용,](1-days/untitled-13/README.md)
     * [cssStep.hrml - CSS선택자](1-days/untitled-13/cssstep.hrml-css.md)
+    * [jQueryMembershipAction](1-days/untitled-13/jquerymembershipaction.md)
   * [Untitled](1-days/untitled-14.md)
   * [Untitled](1-days/untitled-12.md)
 

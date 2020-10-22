@@ -68,7 +68,7 @@ description: 2020.10.22 - 47일차
 
 ### Servlet
 
-### jQueryMemberShip.html, jsp
+### jQueryMemberShipAction.html, jsp
 
 * 요청 객체로 사용자가 입력한 값을 읽어올 수 있다.  
   - ex\) String id = request.getParameter\("mem\_id"\);
