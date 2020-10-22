@@ -113,7 +113,7 @@ description: 2020.10.22 - 47일차
 
 {% page-ref page="jquerymembershipaction.md" %}
 
-### JS와 JQuery onload, read, 멤버변
+### JS와 JQuery onload, read, 멤버변수
 
 | JS 표준 | JQuery API |
 | :--- | :--- |
