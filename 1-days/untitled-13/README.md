@@ -175,6 +175,8 @@ description: 2020.10.22 - 47일차
 
 * JS영역에서 배열 선언하고, 배열에 each문을 사용해 브라우저에 작성, 보이게 하기 - 브라우저에 작성 : output
 
+### JQuery로 노드에 접근해서 css, attribute부여하기
+
 ## HTML CSS선택자
 
 ### CSS선택자

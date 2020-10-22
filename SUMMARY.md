@@ -182,6 +182,7 @@
     * [여러 이미지에 CSS 반영 - cssStep3](1-days/untitled-13/css-cssstep3.md)
     * [JQuery each문 활용 - classTest](1-days/untitled-13/jquery-each-classtest.md)
     * [JQuery each문 활용 - arrayTest](1-days/untitled-13/jquery-each-arraytest.md)
+    * [JQuery로 노드에 css, attribute부여하기 - p164](1-days/untitled-13/jquery-css-attribute-p164.md)
     * [Untitled](1-days/untitled-13/untitled.md)
   * [Untitled](1-days/untitled-14.md)
   * [Untitled](1-days/untitled-12.md)
