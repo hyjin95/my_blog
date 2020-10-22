@@ -188,5 +188,9 @@ description: 2020.10.22 - 47일차
 
 {% page-ref page="cssstep.hrml-css.md" %}
 
+## CSS
+
+### img에 css 클래스 적용
+
  후기 : 허리가너무아프다
 
