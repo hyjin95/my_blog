@@ -57,14 +57,15 @@ description: 2020.10.22 - 47일차
 
 | JS 표준 | JQuery API |
 | :--- | :--- |
-| window.onload = " "; | $\(document\).ready\(기능\) |
+| window.onload = 기능; | $\(document\).ready\(기능\) |
 | window = 사용할 창 | document = 사용할 문서 |
-| onload | ready\(function\( \){ } \) |
+| onload = fucntion\( \){ }; | ready\(function\( \){ } \) |
 
+* onload와 ready하는 순간이 **멤버변수들이 초기화** 되는 순간이다.
 * 창이, 문서가 로딩되어 메모리에 스캔되면서 DOM tree 구성이 완료 되었을 
 * JS는 window, 창에 접근하는 것
 * JQuery는 document, 문서에 접근하는 것 - 문서에 접근한다는 것은 문서를 조작, 수정할 수있다는 것이다. - 창을 조작하는 것이 아니라 문서를 조작 해야하므로 문서에 접근하는 방법을를 사용해야한다.
-* Jquery에서 read메서드에 함수를 구현하면 문서가 닫히면 기능도 닫히게된다.
+* 페이지연결을 재사용하지 않는다면 read, onload 뒤에 함수로 바로 구현 할 수도 있다.
 
 ## JSP, Servlet
 
