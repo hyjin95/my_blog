@@ -55,40 +55,16 @@ description: 2020.10.22 - 47일차
 
 ### JS와 JQuery onload, read
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">JS &#xD45C;&#xC900;</th>
-      <th style="text-align:left">JQuery</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <p>window.onload = &quot; &quot;;</p>
-        <p></p>
-        <p>onload = &#xC774;&#xBCA4;&#xD2B8;</p>
-      </td>
-      <td style="text-align:left">
-        <p>$(document).ready</p>
-        <p>$</p>
-        <p>document =</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">window = &#xC0AC;&#xC6A9;&#xD560; &#xCC3D;</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| JS 표준 | JQuery API |
+| :--- | :--- |
+| window.onload = " "; | $\(document\).ready\(기능\) |
+| window = 사용할 창 | document = 사용할 문서 |
+| onload | ready\(function\( \){ } \) |
 
 * 창이, 문서가 로딩되어 메모리에 스캔되면서 DOM tree 구성이 완료 되었을 
 * JS는 window, 창에 접근하는 것
 * JQuery는 document, 문서에 접근하는 것 - 문서에 접근한다는 것은 문서를 조작, 수정할 수있다는 것이다. - 창을 조작하는 것이 아니라 문서를 조작 해야하므로 문서에 접근하는 방법을를 사용해야한다.
+* Jquery에서 read메서드에 함수를 구현하면 문서가 닫히면 기능도 닫히게된다.
 
 ## JSP, Servlet
 
