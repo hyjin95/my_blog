@@ -51,7 +51,7 @@ description: 2020.10.22 - 47일차
 
 ### JSP
 
-* HTML안에 자바코드를 사용해 동적으로 웹페이지를 생성할 수 있게 해주는 서버 쪽 페이지 - JSP파일이 요청하면 서버가 요청을 받아\(브라우저가\) 응답해야한다.
+* HTML안에 자바코드를 사용해 동적으로 웹페이지를 생성할 수 있게 해주는 서버 쪽 페이지, 백엔드의 자바와 프론트엔드의 html이 만나는 부분 - JSP파일이 요청하면 서버가 요청을 받아\(브라우저가\) 응답해야한다.
 * 기존에 있던 Servlet을 내장 객체로 정리해 갖고 있어 사용이 더 편리하다.
 * mime타입으로 사용언어를 구분한다. - text / teml, xml, java, css, javascript
 * HTML에 작성된 java코드는 Tomcat과같은 서버가 해석해 html에 접근하는 것이다. - 인스턴스화 없이도 내장 객체 document를 이용해 html에 접근할 수 있다.
@@ -71,9 +71,10 @@ description: 2020.10.22 - 47일차
 ### JSP와 HTML ID, name
 
 * 
-### JSP와 Java
+### JSP의 요청, 응답객체
 
 * request객체와 response객체가 없다면 웹서비스는 불가능하다.
+* **요청객체**의 역할 - **사용자가 입력한 값 읽어오기** - **저장소** 역할 : 요청이 유지되는 동안에만   Session.setAttribute\("id","test"\); -시간   request.setAttribute\("id","test"\); -저장 - **페이지를 이동**할 수 있다.   sendRedirect\(페이지이름:전송방식\);   전송방식 : get, post
 * Java에는 없고, JSP, Servlet은 갖고있다.
 
 ### jQueryMemberShipAction.html, jsp
@@ -88,6 +89,7 @@ description: 2020.10.22 - 47일차
     &lt;input type="text" name="mem\_id"&gt;  
     &lt;input type="text" name="mem\_pw"&gt;
 
+* 요청 객체에 무언가를 담을 수 있다. - request.setAttribute\("id","Test"\);
 * 응답 객체로 페이지를 이동한다.
 * name을 식별자로 사용해야한다.
 * 값을 담기위해 배열이 필요하다. - 같은 index를 갖는 값을 담기위해 List에 담아야한다. - index보다는 key가 직관적이므로 **Map을 사용**한다.
