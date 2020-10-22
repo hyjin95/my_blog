@@ -190,7 +190,7 @@ description: 2020.10.22 - 47일차
 
 ## CSS
 
-### img에 css 클래스 적용
+### 여러 img에 css 적용하기
 
 * head영역안에서 CSS영역에 스타일 클래스 생성
 * 여러 이미지인 경우 tag name을 사용해 스타일을 적용한다. - img\[src$=jpg\] - img배열 중에 jpg로 끝나는 개체에게 style을 적용할 수 있다.

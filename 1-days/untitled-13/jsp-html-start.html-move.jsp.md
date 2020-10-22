@@ -18,7 +18,7 @@
 
 * 기본형태
 
-![](../../.gitbook/assets/2%20%2830%29.png)
+![](../../.gitbook/assets/2%20%2831%29.png)
 
 * 이동 링트에 커서를 올리면 하단에 이동할 주소가 나타난다.
 
@@ -52,7 +52,7 @@
 </html>
 ```
 
-![](../../.gitbook/assets/5%20%2814%29.png)
+![](../../.gitbook/assets/5%20%2815%29.png)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -69,7 +69,7 @@
 
 ![1](../../.gitbook/assets/1%20%2841%29.png)
 
-![2](../../.gitbook/assets/2%20%2832%29.png)
+![2](../../.gitbook/assets/2%20%2833%29.png)
 
 ![&#xC774;&#xB3D9; &#xD074;&#xB9AD;&#xC2DC;](../../.gitbook/assets/3%20%2824%29.png)
 

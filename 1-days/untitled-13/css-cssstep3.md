@@ -1,4 +1,4 @@
-# 이미지에 css클래스 반영 - cssStep3
+# 여러 이미지에 CSS 반영 - cssStep3
 
 ![&#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2842%29.png)
 
