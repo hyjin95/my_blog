@@ -80,7 +80,7 @@ description: 2020.10.22 - 47일차
 
 ![](../../.gitbook/assets/1%20%2841%29.png)
 
-* 요청 객체로 사용자가 입력한 값을 읽어올 수 있다.  
+* 요청 객체가 제공하는 메서드로 사용자가 입력한 값을 읽어올 수 있다.  
   - ex\) String id = request.getParameter\("mem\_id"\);
 
            String pw = request.getParamenter\("mem\_pw"\);  
