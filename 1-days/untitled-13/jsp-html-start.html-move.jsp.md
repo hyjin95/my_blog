@@ -113,3 +113,52 @@
 
 ### 
 
+## 4단계 : 새 창 팝업창으로 띄우기
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var g_id;//멤버변수
+	var g_id2//멤버변수
+	function move(p_id){
+		alert("p_id : "+p_id+", g_id : "+g_id+", g_id2 : "+g_id2);
+		//location.href="move.jsp?mem_id= "+p_id;
+	}
+	function newWinTest(){
+		  newWin=window.open('jQueryMemberShip.html','popupName','toolbar=no,scrollbars=no,top=200,left=300,width=170,height=50');
+		  //var str='새창 열기/닫기 예제<BR><BR>';
+		  //str+='<CENTER><INPUT type=button value="닫기" onClick="window.close()"></CENTER>';
+		  //newWin.document.write(str);
+		}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload = function(){
+		g_id = document.getElementById("mem_id").value;
+		alert("g_id : "+g_id);
+	};
+	$(document).ready(function(){
+		g_id2 = $("#mem_id").val();
+		alert("g_id2 : "+g_id2)
+	});
+</script>
+<form name="f">
+<input type="text" id="mem_id" name="mem_id" value="haha">
+<!-- <a href="move.jsp?mem_id= ">이동</a> -->
+<!-- <a href="javascript:move(document.f.mem_id.value)">이동</a> -->
+<!-- window 브라우저로 고정해야 window로 해석한다. -->
+<a href="javascript:window.location.href='move.jsp'">이동</a>
+<FORM><INPUT type="button" value="새창 열기" onClick="newWinTest()"></FORM>
+</form>
+</body>
+</html>
+```
+
+
+
