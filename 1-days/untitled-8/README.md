@@ -29,6 +29,7 @@ description: 2020.10.21 - 46일차
 * 문서내에서 유일한 값이여야한다.
 * 한 요소에게만 기능을 부여할때, 사용하면 해당 태그만을 참조한다.
 * document.getElementById\("even"\); - "even" ID를 갖는 요소만 선택
+* JS, easyUI, bootstrap에서 사용하는 값
 
 ### Class
 
@@ -42,6 +43,7 @@ description: 2020.10.21 - 46일차
 * HTML 태그에 개발자가 부여한 이름
 * 문서 내에서 중복되게, 여러번 부여해도되는 식별자
 * document.getElementsByName\("first"\); - name 속성값이 "first"인 모든 요소 선택
+* JSP에서 사용하는 값
 
 ### CSS 선택자\(selector\)
 
