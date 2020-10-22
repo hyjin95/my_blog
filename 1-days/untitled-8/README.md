@@ -16,11 +16,15 @@ description: 2020.10.21 - 46일차
 * JS의 선언 위치에 대해 설명할 수 있다. - head영역 : 멤버변수, 함수선언 등 - body영역 : 지역변수, 함수구현\(부분페이지에 대한 처리만 담당, 유지보수\)
 * mime타입에 대해 이해하고 페이지에 적절한 mime타입을 작성할 수 있다. - xxx.jsp가 xxx.html이나 xxx.xml이 될 수 있다. - 확장자를 보고 정하는 것이 아니라 mime타입을 보고 정체성을 정해야한다.
 
-## DOM 요소 선택자 - JS
+## DOM 요소 선택자 - JS, CSS
+
+### 전체선택자
+
+* \*
 
 ### Tag name
 
-* HTML 태그의 이름을 이용해 HTML요소를 선택한다.
+* HTML 태그를 이용해 HTML요소를 선택한다.
 * document.getElementsByTagName\("li"\); - 모든 li 요소를 선택
 
 ### ID
@@ -29,6 +33,7 @@ description: 2020.10.21 - 46일차
 * 문서내에서 유일한 값이여야한다.
 * 한 요소에게만 기능을 부여할때, 사용하면 해당 태그만을 참조한다.
 * document.getElementById\("even"\); - "even" ID를 갖는 요소만 선택
+* \#ID
 
 ### Class
 
@@ -36,10 +41,11 @@ description: 2020.10.21 - 46일차
 * 유일하지않고 중복될 수 있다.
 * 보통 style에서 스타일을 일괄적용하거나 할떄 사용된다.
 * document.getElementsByClassName\("odd"\); - "odd"클래스 명을 갖는 모든 요소 선택
+* .class명
 
 ### Name 속성
 
-* HTML 태그 이름
+* HTML 태그에 개발자가 부여한 이름
 * 문서 내에서 중복되게, 여러번 부여해도되는 식별자
 * 요새는 사용하지 않는다.
 * document.getElementsByName\("first"\); - name 속성값이 "first"인 모든 요소 선택
