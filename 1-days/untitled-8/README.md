@@ -2,7 +2,7 @@
 description: 2020.10.21 - 46일차
 ---
 
-# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange, window.onload, html5-시멘틱, Dom요소 선택자
+# 46 Days - &lt;table&gt;분석, WAS와 웹서버, span과 div분석, JS Event-onchange, window.onload, html5-시멘틱, Dom JS선택자
 
 ### 사용 프로그램
 
@@ -16,11 +16,7 @@ description: 2020.10.21 - 46일차
 * JS의 선언 위치에 대해 설명할 수 있다. - head영역 : 멤버변수, 함수선언 등 - body영역 : 지역변수, 함수구현\(부분페이지에 대한 처리만 담당, 유지보수\)
 * mime타입에 대해 이해하고 페이지에 적절한 mime타입을 작성할 수 있다. - xxx.jsp가 xxx.html이나 xxx.xml이 될 수 있다. - 확장자를 보고 정하는 것이 아니라 mime타입을 보고 정체성을 정해야한다.
 
-## DOM 요소 선택자 - JS, CSS
-
-### 전체선택자
-
-* \*
+## DOM 요소 선택자 - JS
 
 ### Tag name
 
@@ -33,7 +29,6 @@ description: 2020.10.21 - 46일차
 * 문서내에서 유일한 값이여야한다.
 * 한 요소에게만 기능을 부여할때, 사용하면 해당 태그만을 참조한다.
 * document.getElementById\("even"\); - "even" ID를 갖는 요소만 선택
-* \#ID
 
 ### Class
 
@@ -41,7 +36,6 @@ description: 2020.10.21 - 46일차
 * 유일하지않고 중복될 수 있다.
 * 보통 style에서 스타일을 일괄적용하거나 할떄 사용된다.
 * document.getElementsByClassName\("odd"\); - "odd"클래스 명을 갖는 모든 요소 선택
-* .class명
 
 ### Name 속성
 
@@ -220,9 +214,16 @@ description: 2020.10.21 - 46일차
 
 ## HTML4와 HTML5
 
+### HTML
+
+* HyperText Markup Language - HyperText : 문서와 문서가 링크로 연결되어 있다. - Markup : 태그로 이루어져 있다.
+* HTML파일은 웹브라우저가 주체가 되어 로딩해서 웹 페이지를 생성한다.
+
 ### HTML5
 
-* * 시멘틱 태그를 활용해 UI그려보기
+* 차세대 웹 표준으로 멀티미디어 등 다양한 애플리케이션까지 제공하도록 진화한 **웹 프로그래밍 언어**
+* 모바일 웹의 핵심기술이고, Client Side Techronology기술의 중심이되는 HTML의 새로운 마크업 언어
+* 시멘틱 태그를 활용해 UI그려보기
 
 {% page-ref page="html4-html5.md" %}
 
