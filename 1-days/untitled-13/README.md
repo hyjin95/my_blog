@@ -68,6 +68,19 @@ description: 2020.10.22 - 47일차
 
 ### Servlet
 
+### jQueryMemberShip.html, jsp
+
+* 요청 객체로 사용자가 입력한 값을 읽어올 수 있다.  
+  - ex\) String id = request.getParameter\("mem\_id"\);
+
+           String pw = request.getParamenter\("mem\_pw"\);  
+  - html body   
+    &lt;input type="text" name="mem\_id"&gt;  
+    &lt;input type="text" name="mem\_pw"&gt;
+
+* 응답 객체로 페이지를 이동한다.
+* name을 식별자로 사용해야한다.
+
 ## HTML CSS선택자
 
 ### CSS선택자
@@ -85,16 +98,4 @@ description: 2020.10.22 - 47일차
 * 후손태그는 부모태그의 모든 하위태그, 하위태그의 하위태그 까지 모두 가리킨다.
 
 {% page-ref page="cssstep.hrml-css.md" %}
-
-## JSP
-
-* 요청 객체로 사용자가 입력한 값을 읽어올 수 있다.  
-  - ex\) String id = request.getParameter\("mem\_id"\);
-
-           String pw = request.getParamenter\("mem\_pw"\);  
-  - html body   
-    &lt;input type="text" name="mem\_id"&gt;  
-    &lt;input type="text" name="mem\_pw"&gt;
-
-* 응답 객체로 페이지를 이동한다.
 
