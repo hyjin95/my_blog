@@ -31,5 +31,37 @@
 
 ## 2단계 : get방식으로 요청 유지하기 
 
+![](../../.gitbook/assets/4%20%2818%29.png)
 
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function move(){
+		location.href="move.jsp?mem_id= "+document.getElementById("mem_id").value;
+	}
+</script>
+</head>
+<body>
+<input type="text" id="mem_id">
+<a href="move.jsp?mem_id= tomato">이동</a>
+</body>
+</html>
+```
+
+![](../../.gitbook/assets/5%20%2813%29.png)
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String mem_id = request.getParameter("mem_id");
+	out.print("사용자가 입력한 아이디는 "+mem_id+" 입니다.");
+%>
+```
+
+* URL을 보면 get방식으로 넘길수도 있음을 알 수 있다.
 
