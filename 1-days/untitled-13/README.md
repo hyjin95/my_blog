@@ -53,6 +53,43 @@ description: 2020.10.22 - 47일차
 * 주요 속성 - action : 파라미터 값을 전송할 곳 지정 - method : 전송방식 지정 \(post, get\)
 * 한 문서안에서 &lt;form&gt;을 여러개 지정할 수 있다. - 데이터를 한군데서 관리하는 것이 아니라 나눠서, 각 다른 테이블에 관리한다면 각기 다른 &lt;form&gt;이 전송을 담당한다.
 
+### JS와 JQuery onload, read
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">JS &#xD45C;&#xC900;</th>
+      <th style="text-align:left">JQuery</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p>window.onload = &quot; &quot;;</p>
+        <p></p>
+        <p>onload = &#xC774;&#xBCA4;&#xD2B8;</p>
+      </td>
+      <td style="text-align:left">
+        <p>$(document).ready</p>
+        <p>$</p>
+        <p>document =</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">window = &#xC0AC;&#xC6A9;&#xD560; &#xCC3D;</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>
+
+* 창이, 문서가 로딩되어 메모리에 스캔되면서 DOM tree 구성이 완료 되었을 
+* JS는 window, 창에 접근하는 것
+* JQuery는 document, 문서에 접근하는 것 - 문서에 접근한다는 것은 문서를 조작, 수정할 수있다는 것이다. - 창을 조작하는 것이 아니라 문서를 조작 해야하므로 jQuery를 사용해야한다.
+
 ## JSP, Servlet
 
 ### JSP
