@@ -94,6 +94,8 @@ description: 2020.10.22 - 47일차
 * **요청객체**의 역할 - **사용자가 입력한 값 읽어오기** - **저장소** 역할 : 요청이 유지되는 동안에만   Session.setAttribute\("id","test"\); -시간   request.setAttribute\("id","test"\); -저장 - **페이지를 이동**할 수 있다.   sendRedirect\(페이지이름:전송방식\);   전송방식 : get, post
 * Java에는 없고, JSP, Servlet은 갖고있다.
 
+## JQuery, JSP, HTML
+
 ### jQueryMemberShipAction.html, jsp
 
 ![](../../.gitbook/assets/1%20%2842%29.png)
@@ -126,6 +128,14 @@ description: 2020.10.22 - 47일차
 * JS는 window, 창에 접근하는 것
 * JQuery는 document, 문서에 접근하는 것 - 문서에 접근한다는 것은 문서를 조작, 수정할 수있다는 것이다. - 창을 조작하는 것이 아니라 문서를 조작 해야하므로 문서에 접근하는 방법을를 사용해야한다.
 * 페이지연결을 재사용하지 않는다면 read, onload 뒤에 함수로 바로 구현 할 수도 있다.
+
+### 기호 선언 : noConflict\(\)
+
+* $라는 기호는 JQuery, easyUI, bootstrap에서도 사용하므로 JQuery, easyUi. bootstrap모두를 사용해 코드를 작성하면 충돌이 일어나기도 한다.
+* JQuery 의 버전에 따라서도 충돌이 일어날 수 있다.
+* 이를 방지하기 위해 기호를 구분할떄 사용하는 함수
+* head영역에 멤버변수로 선언해 사용 - var jq1 = $.noConflict\(\);
+* 위와 같이 선언했다면, 해당 문서안에서 모든 $기호는 jp1로 작성해야한다.
 
 ## HTML CSS선택자
 
