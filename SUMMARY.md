@@ -175,6 +175,7 @@
     * [mime타입 분석](1-days/untitled-8/mime.md)
     * [onchange 이벤트 핸들러](1-days/untitled-8/onchange.md)
     * [naviBarStep1 - 시멘틱태그, &lt;li&gt;](1-days/untitled-8/navibarstep1-less-than-li-greater-than.md)
-  * [Untitled](1-days/untitled-13.md)
+  * [47 Days -](1-days/untitled-13.md)
+  * [Untitled](1-days/untitled-14.md)
   * [Untitled](1-days/untitled-12.md)
 
