@@ -131,6 +131,35 @@ description: 2020.10.22 - 47일차
 
 ### 기호 선언 : noConflict\(\)
 
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//JQuery는 버전이 자주 업데이트 된다. 
+	//버전에 따라 충돌 없이 양쪽 버전을 모두 사용할 수 있게 해주는 구문
+	//다른 언어에서도 $기호를 사용하기때문에 서로 충돌이 발생하기도 한다.easyui, bootstrap, jquery를 같이 사용할때
+	var jq1 = $.noConflict();//$대신에 jql을 사용할 수 있는것
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload = function(){
+		g_id = document.getElementById("mem_id").value;
+		alert("g_id : "+g_id);
+	};
+	jp1(document).ready(function(){
+		g_id2 = (jq1("#mem_id").val());//$대신에 선언해둔 변수 사용하기
+		alert("g_id2 : "+g_id2)
+	});
+	</script>
+	</body>
+</html>
+```
+
 * $라는 기호는 JQuery, easyUI, bootstrap에서도 사용하므로 JQuery, easyUi. bootstrap모두를 사용해 코드를 작성하면 충돌이 일어나기도 한다.
 * JQuery 의 버전에 따라서도 충돌이 일어날 수 있다.
 * 이를 방지하기 위해 기호를 구분할떄 사용하는 함수
