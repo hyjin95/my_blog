@@ -2,7 +2,7 @@
 description: 2020.10.22 - 47일차
 ---
 
-# 47 Days - JSP, Servlet,
+# 47 Days - JSP, Servlet, css선택자, JQuery사용,
 
 ### 사용 프로그램
 
