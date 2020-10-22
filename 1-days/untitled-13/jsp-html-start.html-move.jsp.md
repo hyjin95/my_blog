@@ -65,3 +65,11 @@
 
 * URL을 보면 get방식으로 넘길수도 있음을 알 수 있다.
 
+## 3단계 : JS : window.onload, JQuery : $\(document\)ready
+
+### window의 location
+
+* 페이지 호출 : XXX.html, XXX.jsp
+* 함수 호출 : javascript:method\( \);
+* 내장객체를 이용한 페이지 호출 : window.location href=" "
+
