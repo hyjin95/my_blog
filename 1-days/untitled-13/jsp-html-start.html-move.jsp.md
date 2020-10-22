@@ -164,5 +164,15 @@
 </html>
 ```
 
+## 4-2단계 : 연결된 문서를 현재창에 표시하기
 
+![&#xD604;&#xC7AC; &#xCC3D;&#xC774; &#xC0C8;&#xB85C;&#xACE0;&#xCE68;&#xB41C;&#xB2E4;.](../../.gitbook/assets/6%20%289%29.png)
+
+```javascript
+function newWinTest(){
+		  newWin=window.open('jQueryMemberShip.html', '_self');
+		}
+```
+
+* 수정
 
