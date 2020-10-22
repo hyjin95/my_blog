@@ -53,20 +53,6 @@ description: 2020.10.22 - 47일차
 * 주요 속성 - action : 파라미터 값을 전송할 곳 지정 - method : 전송방식 지정 \(post, get\)
 * 한 문서안에서 &lt;form&gt;을 여러개 지정할 수 있다. - 데이터를 한군데서 관리하는 것이 아니라 나눠서, 각 다른 테이블에 관리한다면 각기 다른 &lt;form&gt;이 전송을 담당한다.
 
-### JS와 JQuery onload, read
-
-| JS 표준 | JQuery API |
-| :--- | :--- |
-| window.onload = 기능; | $\(document\).ready\(기능\) |
-| window = 사용할 창 | document = 사용할 문서 |
-| onload = fucntion\( \){ }; | ready\(function\( \){ } \) |
-
-* onload와 ready하는 순간이 **멤버변수들이 초기화** 되는 순간이다. - head안에 선언된 var 변수=멤버변수 - html은 컴파일 하지 않으므로 타입은 적지 않는다.
-* 창이, 문서가 로딩되어 메모리에 스캔되면서 DOM tree 구성이 완료 되었을 
-* JS는 window, 창에 접근하는 것
-* JQuery는 document, 문서에 접근하는 것 - 문서에 접근한다는 것은 문서를 조작, 수정할 수있다는 것이다. - 창을 조작하는 것이 아니라 문서를 조작 해야하므로 문서에 접근하는 방법을를 사용해야한다.
-* 페이지연결을 재사용하지 않는다면 read, onload 뒤에 함수로 바로 구현 할 수도 있다.
-
 ## JSP, Servlet
 
 ### JSP
@@ -126,6 +112,20 @@ description: 2020.10.22 - 47일차
 * 값을 담기위해 배열이 필요하다. - 같은 index를 갖는 값을 담기위해 List에 담아야한다. - index보다는 key가 직관적이므로 **Map을 사용**한다.
 
 {% page-ref page="jquerymembershipaction.md" %}
+
+### JS와 JQuery onload, read, 멤버변
+
+| JS 표준 | JQuery API |
+| :--- | :--- |
+| window.onload = 기능; | $\(document\).ready\(기능\) |
+| window = 사용할 창 | document = 사용할 문서 |
+| onload = fucntion\( \){ }; | ready\(function\( \){ } \) |
+
+* onload와 ready하는 순간이 **멤버변수들이 초기화** 되는 순간이다. - head안에 선언된 var 변수=멤버변수 - html은 컴파일 하지 않으므로 타입은 적지 않는다. - onload와 read가 일어나기 전에는 브라우저가 스캔하기 이전이므로 null, 미정인 값이다.
+* 창이, 문서가 로딩되어 메모리에 스캔되면서 DOM tree 구성이 완료 되었을 
+* JS는 window, 창에 접근하는 것
+* JQuery는 document, 문서에 접근하는 것 - 문서에 접근한다는 것은 문서를 조작, 수정할 수있다는 것이다. - 창을 조작하는 것이 아니라 문서를 조작 해야하므로 문서에 접근하는 방법을를 사용해야한다.
+* 페이지연결을 재사용하지 않는다면 read, onload 뒤에 함수로 바로 구현 할 수도 있다.
 
 ## HTML CSS선택자
 
