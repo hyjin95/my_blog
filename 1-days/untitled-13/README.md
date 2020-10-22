@@ -98,7 +98,7 @@ description: 2020.10.22 - 47일차
 
 ### jQueryMemberShipAction.html, jsp
 
-![](../../.gitbook/assets/1%20%2842%29.png)
+![](../../.gitbook/assets/1%20%2843%29.png)
 
 * 요청 객체가 제공하는 메서드로 사용자가 입력한 값을 읽어올 수 있다.  
   - ex\) String id = request.getParameter\("mem\_id"\);
@@ -191,6 +191,13 @@ description: 2020.10.22 - 47일차
 ## CSS
 
 ### img에 css 클래스 적용
+
+* head영역안에서 CSS영역에 스타일 클래스 생성
+* 여러 이미지인 경우 tag name을 사용해 스타일을 적용한다. - img\[src$=jpg\] - img배열 중에 jpg로 끝나는 개체에게 style을 적용할 수 있다.
+
+{% page-ref page="css-cssstep3.md" %}
+
+
 
  후기 : 허리가너무아프다
 
