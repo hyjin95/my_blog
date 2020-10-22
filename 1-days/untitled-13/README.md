@@ -68,6 +68,14 @@ description: 2020.10.22 - 47일차
 
 ### Servlet
 
+### JSP와 HTML ID, name
+
+* 
+### JSP와 Java
+
+* request객체와 response객체가 없다면 웹서비스는 불가능하다.
+* Java에는 없고, JSP, Servlet은 갖고있다.
+
 ### jQueryMemberShipAction.html, jsp
 
 ![](../../.gitbook/assets/1%20%2841%29.png)
