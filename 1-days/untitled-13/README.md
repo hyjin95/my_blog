@@ -145,5 +145,5 @@ description: 2020.10.22 - 47일차
 
 {% page-ref page="cssstep.hrml-css.md" %}
 
- 후기 : 
+ 후기 : 허리가너무아프다
 
