@@ -69,8 +69,10 @@ description: 2020.10.22 - 47일차
 3. WAS제품이 java코드를 해석해 브라우저에 적용되도록 해준다.
 4. java코드를 작성했으므로 컴파일이 일어나고, print를 사용해 처음 화면과 다른 화면페이지에 출력된다.
 
-* \(입구\)a.html이 브라우저에게 jsp호출 말하기 -&gt; 페이지 이동 -&gt; JSP이 서버에 요청, 처리 -&gt; 페이지이동 -&gt; b.html 화면이 출력\(출구\) - 요청, Session이 유지되는 동안에는 url이 변하지 않는다. - 응답이 왔다는 것은 기존 Session이 종료되고 새로운 Session인 브라우저가 열리는 것이다.
+* \(입구\)a.html이 브라우저에게 jsp호출 말하기 -&gt; 페이지 이동 -&gt; JSP이 서버에 요청, 처리 -&gt; 페이지이동 -&gt; b.html 화면이 출력\(출구\) - 요청, Session이 유지되는 동안에는 url이 변하지 않는다. - url이 변한다는 것은 기존 Session이 종료되고 새로운 Session인 브라우저가 열리는 것이다.\(요청이 유지 되지 않고 끊겼다.\)
 * JSP - \(JSP API\) -&gt; Java - \(Servlet API\) -&gt; Class
+
+{% page-ref page="jsp-html-start.html-move.jsp.md" %}
 
 ### Servlet
 
@@ -104,8 +106,6 @@ description: 2020.10.22 - 47일차
 * 값을 담기위해 배열이 필요하다. - 같은 index를 갖는 값을 담기위해 List에 담아야한다. - index보다는 key가 직관적이므로 **Map을 사용**한다.
 
 {% page-ref page="jquerymembershipaction.md" %}
-
-### HTML과 JSP연결 - start.html
 
 ## HTML CSS선택자
 
