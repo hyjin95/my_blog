@@ -61,6 +61,8 @@
 </html>
 ```
 
+* 단, 이렇게 구현하게되면 쪽지의 갯수가 3개 이하면 오류가 발생할 것이다.
+
 ## receiveMessage\_2.html
 
 ```markup
@@ -75,23 +77,23 @@
 		//전체체크박스 선택
 		if(document.f_receive.checkAll.checked==1){//checkbox는 체크되면 1(true), 해제되면 0(false)
 			if(size==1){
-				document.f_receive.checkAll.checked==1;
-				document.f_receive.from.checked==1;
+				document.f_receive.checkAll.checked = 1;
+				document.f_receive.from.checked = 1;
 			}else {
 				for(var i=0;i<size;i++){
-					document.f_receive.checkAll.checked==1;
-					document.f_receive.from[i].checked=1;
+					document.f_receive.checkAll.checked = 1;
+					document.f_receive.from[i].checked = 1;
 				}
 			}
 		}
 		//전체체크박스 해제
 		else if(document.f_receive.checkAll.checked==0){
 			if(size==1){
-				document.f_receive.checkAll.checked==0;
-				document.f_receive.from.checked==0;
+				document.f_receive.checkAll.checked = 0;
+				document.f_receive.from.checked = 0;
 			}else {
 				for(var i=0;i<size;i++){
-					document.f_receive.from[i].checked=0;
+					document.f_receive.from[i].checked = 0;
 				}
 			}
 		}
@@ -106,7 +108,7 @@
 		<thead>받은쪽지함</thead>
 		<tr height="100px">
 		    <!-- checkbox함수의 파라미터로 넘기는 값은 DB연동없이 test만 할 것이므로 상수를 이욯 -->
-			<th height="50px"><input type="checkbox" name="checkAll" onclick="checkTest(3)"></th>
+			<th height="50px"><input type="checkbox" name="checkAll" onclick="checkTest(1)"></th>
 			<th>순번</th>
 			<th>보낸이</th>
 		</tr>
@@ -115,6 +117,7 @@
 			<td>1</td>
 			<td>뽀로로</td>
 		</tr>
+		<!-- 
 		<tr align="center">
 			<td><input type="checkbox" name="from"></td>
 			<td>2</td>
@@ -125,6 +128,7 @@
 			<td>3</td>
 			<td>핑구</td>
 		</tr>
+		-->
 	</table>
 </form>
 </center>
@@ -134,7 +138,7 @@
 
 ## 실행
 
-* 둘다 실행 화면은 같다.
+###  raceiveMessage.html
 
 ![1](../../.gitbook/assets/1%20%2836%29.png)
 
@@ -145,4 +149,8 @@
 ![4](../../.gitbook/assets/4%20%2817%29.png)
 
 ![5](../../.gitbook/assets/5%20%2812%29.png)
+
+### receiveMessage\_2.html
+
+![row&#xAC00; 1&#xAC1C;&#xC5EC;&#xB3C4; &#xC624;&#xB958;&#xB098;&#xC9C0; &#xC54A;&#xC74C;](../../.gitbook/assets/1%20%2841%29.png)
 

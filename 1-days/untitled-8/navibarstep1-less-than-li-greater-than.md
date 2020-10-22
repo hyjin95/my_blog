@@ -2,7 +2,7 @@
 
 ## naviBarStep1.html
 
-![&#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2837%29.png)
+![&#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2840%29.png)
 
 ```markup
 <!DOCTYPE html>
@@ -43,6 +43,24 @@
 		font-weight: bold;
 		border-left: 1px solid #FFFFFF;
 		border-right: 1px solid #EAEAEA;7777
+	}
+	#content{
+		width: 960px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#content > #main_section{
+		width: 750px;
+		float: left;
+	}
+	#main_section > article.main_article{
+		margin-botton: 10px;
+		padding: 20px;
+		border: 1px solid black;
+	}
+	#content > #main_aside{
+		width: 200px;
+		float: right;
 	}
 </style>
 </head>
