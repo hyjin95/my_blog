@@ -166,6 +166,10 @@ description: 2020.10.22 - 47일차
 * head영역에 멤버변수로 선언해 사용 - var jq1 = $.noConflict\(\);
 * 위와 같이 선언했다면, 해당 문서안에서 모든 해당 언어의 $기호는 jp1로 작성해야한다.
 
+### JQuery each문
+
+* for문 대신에 사용한다.
+
 ## HTML CSS선택자
 
 ### CSS선택자
