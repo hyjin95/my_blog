@@ -41,7 +41,6 @@ description: 2020.10.21 - 46일차
 
 * HTML 태그에 개발자가 부여한 이름
 * 문서 내에서 중복되게, 여러번 부여해도되는 식별자
-* 요새는 사용하지 않는다.
 * document.getElementsByName\("first"\); - name 속성값이 "first"인 모든 요소 선택
 
 ### CSS 선택자\(selector\)

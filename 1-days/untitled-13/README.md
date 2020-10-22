@@ -64,6 +64,7 @@ description: 2020.10.22 - 47일차
 4. java코드를 작성했으므로 컴파일이 일어나고, print를 사용해 처음 화면과 다른 화면페이지에 출력된다.
 
 * \(입구\)html이 브라우저에게 jsp호출 말하기 -&gt; 페이지 이동 -&gt; JSP이 서버에 요청, 처리 -&gt; 페이지이동 -&gt; 화면에 출력\(출구\)
+* JSP - \(JSP API\) -&gt; Java - \(Servlet API\) -&gt; Class
 
 ### Servlet
 
@@ -85,7 +86,15 @@ description: 2020.10.22 - 47일차
 
 {% page-ref page="cssstep.hrml-css.md" %}
 
-## JQuery 사용
+## JSP
 
+* 요청 객체로 사용자가 입력한 값을 읽어올 수 있다.  
+  - ex\) String id = request.getParameter\("mem\_id"\);
 
+           String pw = request.getParamenter\("mem\_pw"\);  
+  - html body   
+    &lt;input type="text" name="mem\_id"&gt;  
+    &lt;input type="text" name="mem\_pw"&gt;
+
+* 응답 객체로 페이지를 이동한다.
 
