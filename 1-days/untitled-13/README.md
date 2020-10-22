@@ -113,7 +113,7 @@ description: 2020.10.22 - 47일차
 * name을 식별자로 사용해야한다.
 * 값을 담기위해 배열이 필요하다. - 같은 index를 갖는 값을 담기위해 List에 담아야한다. - index보다는 key가 직관적이므로 **Map을 사용**한다.
 
-{% page-ref page="jquerymembershipaction.md" %}
+{% page-ref page="untitled.md" %}
 
 ### JS와 JQuery onload, read, 멤버변수
 
@@ -178,6 +178,8 @@ description: 2020.10.22 - 47일차
 
 * JS영역에서 배열 선언하고, 배열에 each문을 사용해 브라우저에 작성, 보이게 하기 - 브라우저에 작성 : output
 
+{% page-ref page="jquery-each-arraytest.md" %}
+
 ## HTML CSS선택자
 
 ### CSS선택자
@@ -205,7 +207,13 @@ description: 2020.10.22 - 47일차
 
 {% page-ref page="css-cssstep3.md" %}
 
+### 배열에 css 부여하기
 
+* each문 사용
+
+{% page-ref page="jquery-each-classtest.md" %}
+
+* index 사용
 
  후기 : 허리가너무아프다
 
