@@ -220,7 +220,9 @@ description: 2020.10.21 - 46일차
 
 ## HTML4와 HTML5
 
-* 시멘틱 태그를 활용해 UI그려보기
+### HTML5
+
+* * 시멘틱 태그를 활용해 UI그려보기
 
 {% page-ref page="html4-html5.md" %}
 
