@@ -169,6 +169,11 @@ description: 2020.10.22 - 47일차
 ### JQuery each문
 
 * for문 대신에 사용한다.
+* 같은 태그를 사용하는 개체들에게 CSS클래스 부여하기
+
+{% page-ref page="jquery-each-classtest.md" %}
+
+* JS영역에서 배열 선언하고, 배열에 each문을 사용해 브라우저에 작성, 보이게 하기 - 브라우저에 작성 : output
 
 ## HTML CSS선택자
 

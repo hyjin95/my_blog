@@ -180,6 +180,8 @@
     * [jQueryMembershipAction](1-days/untitled-13/jquerymembershipaction.md)
     * [JSP, HTML 연결 - start.html, move.jsp](1-days/untitled-13/jsp-html-start.html-move.jsp.md)
     * [여러 이미지에 CSS 반영 - cssStep3](1-days/untitled-13/css-cssstep3.md)
+    * [JQuery each문 활용 - classTest](1-days/untitled-13/jquery-each-classtest.md)
+    * [JQuery each문 활용 - arrayTest](1-days/untitled-13/jquery-each-arraytest.md)
     * [Untitled](1-days/untitled-13/untitled.md)
   * [Untitled](1-days/untitled-14.md)
   * [Untitled](1-days/untitled-12.md)
