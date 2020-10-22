@@ -80,7 +80,7 @@ description: 2020.10.22 - 47일차
 
 * &lt;form&gt;태그와 액션을 활용하는 서버와 클라이언트의 호출 관계에서는 각 태그들을 식별하기위한 식별자로 name을 사용해야한다.
 * id는 중복값을 가지면 안되므로 배열로 생성되는 것 자체가 말이안되고, name은 중복될 수 있기 때문에 name을 key값으로 하는 Map에 사용자들의 정보를 담을 수 있다.
-* 또한 요청객체가 제공하는 메서드가 name을 받는다.
+* 또한 요청객체가 제공하는 메서드가 name을 받는다. - String getParameter\(String name\);   name으로 전송된 파라미터값을 리턴   HttpServeletRequest객체가 제공 - String getParameterValues\(String paramName\)   여러개 파라미터 값을 처리
 
 ### JSP의 요청, 응답객체
 
