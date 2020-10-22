@@ -70,6 +70,8 @@ description: 2020.10.22 - 47일차
 
 ### jQueryMemberShipAction.html, jsp
 
+![](../../.gitbook/assets/1%20%2841%29.png)
+
 * 요청 객체로 사용자가 입력한 값을 읽어올 수 있다.  
   - ex\) String id = request.getParameter\("mem\_id"\);
 
@@ -80,6 +82,7 @@ description: 2020.10.22 - 47일차
 
 * 응답 객체로 페이지를 이동한다.
 * name을 식별자로 사용해야한다.
+* 값을 담기위해 배열이 필요하다. - 같은 index를 갖는 값을 담기위해 List에 담아야한다. - index보다는 key가 직관적이므로 **Map을 사용**한다.
 
 ## HTML CSS선택자
 
