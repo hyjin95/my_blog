@@ -31,7 +31,7 @@
 
 ## 2단계 : get방식으로 요청 유지하기 
 
-![](../../.gitbook/assets/4%20%2818%29.png)
+![](../../.gitbook/assets/4%20%2819%29.png)
 
 ```markup
 <!DOCTYPE html>
@@ -52,7 +52,7 @@
 </html>
 ```
 
-![](../../.gitbook/assets/5%20%2813%29.png)
+![](../../.gitbook/assets/5%20%2814%29.png)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -114,6 +114,10 @@
 ### 
 
 ## 4단계 : 새 창 팝업창으로 띄우기
+
+![&#xC0C8;&#xCC3D; &#xC5F4;&#xAE30; &#xBC84;&#xD2BC;&#xC744; &#xB204;&#xB974;&#xBA74;](../../.gitbook/assets/4%20%2818%29.png)
+
+![&#xD31D;&#xC5C5;&#xCC3D;&#xC73C;&#xB85C; &#xD574;&#xB2F9; &#xD30C;&#xC77C;&#xC774; &#xB744;&#xC6CC;&#xC9C4;&#xB2E4;](../../.gitbook/assets/5%20%2813%29.png)
 
 ```markup
 <!DOCTYPE html>
