@@ -152,5 +152,5 @@
 
 ### receiveMessage\_2.html
 
-![row&#xAC00; 1&#xAC1C;&#xC5EC;&#xB3C4; &#xC624;&#xB958;&#xB098;&#xC9C0; &#xC54A;&#xC74C;](../../.gitbook/assets/1%20%2842%29.png)
+![row&#xAC00; 1&#xAC1C;&#xC5EC;&#xB3C4; &#xC624;&#xB958;&#xB098;&#xC9C0; &#xC54A;&#xC74C;](../../.gitbook/assets/1%20%2843%29.png)
 

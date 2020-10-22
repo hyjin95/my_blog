@@ -62,6 +62,8 @@ description: 2020.10.22 - 47일차
 * mime타입으로 사용언어를 구분한다. - text / teml, xml, java, css, javascript
 * HTML에 작성된 java코드는 Tomcat과같은 서버가 해석해 html에 접근하는 것이다. - 인스턴스화 없이도 내장 객체 document를 이용해 html에 접근할 수 있다.
 
+### Servlet
+
 ### JSP 동작방식
 
 1. HTML\(View\)에서 브라우저에다가 JSP파일을 말하기한다. -&gt; 페이지 이동
@@ -72,9 +74,13 @@ description: 2020.10.22 - 47일차
 * \(입구\)a.html이 브라우저에게 jsp호출 말하기 -&gt; 페이지 이동 -&gt; JSP이 서버에 요청, 처리 -&gt; 페이지이동 -&gt; b.html 화면이 출력\(출구\) - 요청, Session이 유지되는 동안에는 url이 변하지 않는다. - url이 변한다는 것은 기존 Session이 종료되고 새로운 Session인 브라우저가 열리는 것이다.\(요청이 유지 되지 않고 끊겼다.\)
 * JSP - \(JSP API\) -&gt; Java - \(Servlet API\) -&gt; Class
 
-{% page-ref page="jsp-html-start.html-move.jsp.md" %}
+### 페이지 호출하기
 
-### Servlet
+* 페이지 호출 : XXX.html, XXX.jsp
+* 함수 호출 : javascript:method\( \);
+* 내장객체를 이용한 페이지 호출 : window.location href=" "; - 브라우저가 제공하는 location 객체 - window를 적어주지 않으면 브라우저가 다른 location객체를 사용할 수 도 있으므로 window로 해석해야한다고 알려주는 것이다.
+
+{% page-ref page="jsp-html-start.html-move.jsp.md" %}
 
 ### JSP와 HTML ID, name
 
@@ -90,7 +96,7 @@ description: 2020.10.22 - 47일차
 
 ### jQueryMemberShipAction.html, jsp
 
-![](../../.gitbook/assets/1%20%2841%29.png)
+![](../../.gitbook/assets/1%20%2842%29.png)
 
 * 요청 객체가 제공하는 메서드로 사용자가 입력한 값을 읽어올 수 있다.  
   - ex\) String id = request.getParameter\("mem\_id"\);

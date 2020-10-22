@@ -65,11 +65,51 @@
 
 * URL을 보면 get방식으로 넘길수도 있음을 알 수 있다.
 
-## 3단계 : JS : window.onload, JQuery : $\(document\)ready
+## 3단계 : JS : window.onload, JQuery : $\(document\)ready 호출
 
-### window의 location
+![1](../../.gitbook/assets/1%20%2841%29.png)
 
-* 페이지 호출 : XXX.html, XXX.jsp
-* 함수 호출 : javascript:method\( \);
-* 내장객체를 이용한 페이지 호출 : window.location href=" "
+![2](../../.gitbook/assets/2%20%2832%29.png)
+
+![&#xC774;&#xB3D9; &#xD074;&#xB9AD;&#xC2DC;](../../.gitbook/assets/3%20%2824%29.png)
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var g_id;//멤버변수
+	var g_id2//멤버변수
+	function move(p_id){
+		alert("p_id : "+p_id+", g_id : "+g_id+", g_id2 : "+g_id2);
+		//location.href="move.jsp?mem_id= "+p_id;
+	}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	window.onload = function(){
+		g_id = document.getElementById("mem_id").value;
+		alert("g_id : "+g_id);
+	};
+	$(document).ready(function(){
+		g_id2 = $("#mem_id").val();
+		alert("g_id2 : "+g_id2)
+	})
+</script>
+<form name="f">
+<input type="text" id="mem_id" name="mem_id" value="haha">
+<!-- <a href="move.jsp?mem_id= ">이동</a> -->
+<!-- <a href="javascript:move(document.f.mem_id.value)">이동</a> -->
+<!-- window 브라우저로 고정해야 window로 해석한다. -->
+<a href="javascript:window.location.href='move.jsp'">이동</a>
+</form>
+</body>
+</html>
+```
+
+### 
 
