@@ -128,6 +128,9 @@ description: 2020.10.22 - 47일차
 * JS는 window, 창에 접근하는 것
 * JQuery는 document, 문서에 접근하는 것 - 문서에 접근한다는 것은 문서를 조작, 수정할 수있다는 것이다. - 창을 조작하는 것이 아니라 문서를 조작 해야하므로 문서에 접근하는 방법을를 사용해야한다.
 * 페이지연결을 재사용하지 않는다면 read, onload 뒤에 함수로 바로 구현 할 수도 있다.
+* JQuery로 노드에 접근해서 ready를 사용해서 css, attribute부여하기
+
+{% page-ref page="jquery-css-attribute-p164.md" %}
 
 ### 기호 선언 : noConflict\(\)
 
@@ -174,8 +177,6 @@ description: 2020.10.22 - 47일차
 {% page-ref page="jquery-each-classtest.md" %}
 
 * JS영역에서 배열 선언하고, 배열에 each문을 사용해 브라우저에 작성, 보이게 하기 - 브라우저에 작성 : output
-
-### JQuery로 노드에 접근해서 css, attribute부여하기
 
 ## HTML CSS선택자
 
