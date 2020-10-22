@@ -68,7 +68,7 @@ description: 2020.10.21 - 46일차
   <tbody>
     <tr>
       <td style="text-align:center">window.onload</td>
-      <td style="text-align:center">$(document).read</td>
+      <td style="text-align:center">$(document).ready</td>
     </tr>
     <tr>
       <td style="text-align:center">=function( ){ };</td>
