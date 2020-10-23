@@ -184,6 +184,8 @@
     * [JQuery로 노드에 css, attribute부여하기 - p164](1-days/untitled-13/jquery-css-attribute-p164.md)
     * [배열에 index로 스타일 부여 - p169](1-days/untitled-13/index-p169.md)
     * [html, JSP 연결하기 - jQueryMemberShipAction](1-days/untitled-13/untitled.md)
-  * [48 Days -](1-days/untitled-14.md)
+  * [48 Days - 구글 지도 API, 페이지 이동,](1-days/untitled-14/README.md)
+    * [구글 지도 API](1-days/untitled-14/api.md)
+    * [Untitled](1-days/untitled-14/untitled.md)
   * [Untitled](1-days/untitled-12.md)
 
