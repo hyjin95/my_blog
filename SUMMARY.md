@@ -187,6 +187,6 @@
   * [48 Days - 구글 지도 API, 페이지 이동,](1-days/untitled-14/README.md)
     * [구글 지도 API](1-days/untitled-14/api.md)
     * [JSON을 활용해 요청 페이지에 응답받기](1-days/untitled-14/json.md)
-    * [Untitled](1-days/untitled-14/untitled.md)
+    * [easyui활용했을 떄 AJAX가 JSP를 거치면 - basic](1-days/untitled-14/untitled.md)
   * [Untitled](1-days/untitled-12.md)
 
