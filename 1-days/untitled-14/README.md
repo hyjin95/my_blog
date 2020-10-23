@@ -58,5 +58,27 @@ description: 2020.10.23 - 48일차
 
 {% page-ref page="api.md" %}
 
-### 
+## Attribute속성 조작, JQuery ready로 덮기
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attrTest.html-속성 조작:속성초기화, 강제변환 </title>
+<script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//dom이 구성된 다음(하단의 img3개 파일이 로드된 다음) 로드되므로 src가 밑의 주소로 덮어씌워진다
+			var src = $('img').attr('src','/images/babyApech.png');//src외부에서 사용가능하게 선언하기 attr속성부여하기 (속성, 값)
+		});
+	</script>
+	<img src="/images/gasan.jpg" border="5px" width="300px" height="200px"/>
+	<img src="/images/namguro.jpg" border="5px" width="300px" height="200px"/>
+	<img src="/images/dealim.jpg" border="5px" width="300px" height="200px"/>
+</body>
+</html>
+```
 
