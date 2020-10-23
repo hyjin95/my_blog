@@ -45,6 +45,9 @@ description: 2020.10.23 - 48일차
 
 ![](../../.gitbook/assets/6%20%2811%29.png)
 
+* JSON의 역할 : 자바와 html, 사이에서 데이터를 주고 받을 수 있게 해주는 자바 라이브러리
+* JSON을 활용해 응답을 요청페이지에서 출력해보자
+
 {% page-ref page="json.md" %}
 
 ## 구글 지도 API 활용
