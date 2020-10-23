@@ -10,3 +10,10 @@ description: 2020.10.23 - 48일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 복습
+
+### 페이지 이동
+
+* 새로운 페이지로 이동 -  JSP : java제공, sendRedirect\("URL"\) - JS : window.location.href="XXX.jsp"
+* URL이 변경된다 -&gt; 연결이 끊겼다. -&gt;기존 페이지의 data을 사용할 수 없다.
+
