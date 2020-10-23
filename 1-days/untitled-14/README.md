@@ -43,6 +43,10 @@ description: 2020.10.23 - 48일차
 
 ### JSON을 이용해 요청페이지에 응답하기
 
+![](../../.gitbook/assets/6%20%2811%29.png)
+
+{% page-ref page="json.md" %}
+
 ## 구글 지도 API 활용
 
 ### 준비

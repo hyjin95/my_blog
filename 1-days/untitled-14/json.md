@@ -1,5 +1,9 @@
 # JSON을 활용해 요청 페이지에 응답받기
 
+## jsonShopInfo.jsp
+
+![&#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../.gitbook/assets/1%20%2845%29.png)
+
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -29,6 +33,12 @@
 %>
 
 ```
+
+* JSP파일안에 data 담아놓기
+* 사용할 java의 함수들과 Gson을 import해야한다.
+* 25번 구문으로 브라우저에 출력해보기
+
+## jsonShopTest.html
 
 ```markup
 <!DOCTYPE html>
@@ -69,4 +79,21 @@
 </body>
 </html>
 ```
+
+* 12번 : ajax를 활용해 요청화면과 응답화면이 똑같도록 한다.
+* 15,16번 : 받아온 정보를 찍어보면 Object덩어리로 들어온 것을 알 수 있다.
+* 19번 : 덩어리를 조각 내주는 JSON의 stringity\( \)함수를 사용해 분리한다.
+* 22번 : 분리된 조각들을 JSON의 parse함수를 이용해 배열인 객체로 접근할 수 있도록 해준다.
+* 23번 : 이때 length를 찍으면 3이 나오는 것을 알수 있다.
+* 24,26번 : for문을 돌려 배열안의 값을 출력해본다.
+
+## 실행
+
+![data&#xC5D0; &#xB2F4;&#xAE34;&#xAC83;&#xC740; Object &#xB369;&#xC5B4;&#xB9AC;](../../.gitbook/assets/2%20%2834%29.png)
+
+![Stringify&#xB85C; &#xC798;&#xB77C; Json.parse&#xB85C; &#xBCC0;&#xD658;&#xD574;&#xBCF8; &#xBC30;&#xC5F4;&#xC758; &#xBC29;&#xC758; &#xAC2F;&#xC218;&#xB294; 3&#xAC1C;](../../.gitbook/assets/3%20%2827%29.png)
+
+![25&#xBC88; &#xAD6C;&#xBB38;, &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xC774;&#xB807;&#xAC8C; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.](../../.gitbook/assets/4%20%2821%29.png)
+
+![16&#xBC88; &#xAD6C;&#xBB38;, &#xB9C8;&#xC9C0;&#xB9C9;&#xC5D0; &#xCC0D;&#xD788;&#xB294; &#xAC12;](../../.gitbook/assets/5%20%2816%29.png)
 
