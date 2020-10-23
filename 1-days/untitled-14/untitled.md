@@ -63,3 +63,13 @@
 이상해
 ```
 
+## 실행
+
+![&#xCF54;&#xB4DC;&#xB97C; &#xBCF4;&#xBA74; easyui &#xC544;&#xC774;&#xB514;&#xB97C; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.](../../.gitbook/assets/1%20%2845%29.png)
+
+![&#xAE30;&#xBCF8; &#xC804;&#xC1A1;&#xBC84;&#xD2BC;](../../.gitbook/assets/2%20%2835%29.png)
+
+![&#xC804;&#xC1A1;2 alert](../../.gitbook/assets/3%20%2828%29.png)
+
+![&#xACB0;&#xACFC;](../../.gitbook/assets/4%20%2821%29.png)
+
