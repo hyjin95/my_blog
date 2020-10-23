@@ -19,7 +19,8 @@ description: 2020.10.23 - 48일차
 * 새로운 페이지로 이동
 * 요청 -&gt; URL변화 -&gt; 값 전달\(전송\)
 * URL이 변경된다 -&gt; 연결이 끊겼다. -&gt;기존 페이지의 data을 사용할 수 없다.
-* 방법 -  JSP : java제공, sendRedirect\("URL"\) - JS : window.location.href="XXX.jsp" - AJAX - &lt;form&gt; - fetch
+* 페이지 요청 방법 -  JSP : java제공, sendRedirect\("URL"\) - JS : window.location.href="XXX.jsp" - AJAX - &lt;form&gt; - fetch
+* 데이터 전송 - 쿼리스트링 : ?를 작성해 시작하고, &을 사용해 여러 데이터를 보낼 수 있다.    &의 갯수만큼의 종류, 타입이 담기지만 쿼리스트링으로 변환되면 String타입이 되므로       CastingException이 발생할 수 있다. - callback 메서드 :  
 
 
 
