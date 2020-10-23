@@ -210,6 +210,7 @@ description: 2020.10.22 - 47일차
 ### 배열에 css 부여하기
 
 * each문 사용
+* JQuery로만 작성해보기
 
 {% page-ref page="jquery-each-classtest.md" %}
 

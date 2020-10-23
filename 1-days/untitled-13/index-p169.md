@@ -1,4 +1,4 @@
-# 배열에 index로 스타일 부여 - p169
+# JQuery만으로 배열에 index로 스타일 부여 - p169
 
 ### p169.html
 
