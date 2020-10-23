@@ -65,7 +65,7 @@ description: 2020.10.23 - 48일차
 
 {% page-ref page="api.md" %}
 
-## Attribute속성 조작, JQuery ready로 덮기
+## Attribute속성 조작, JQuery ready로 강제변환
 
 ```markup
 <!DOCTYPE html>
@@ -89,6 +89,9 @@ description: 2020.10.23 - 48일차
 </html>
 ```
 
-* 
+* 12번에 선언된 src는 외부에서 재사용할 수 있도록 담는 변수이다.
+* 처음 이 html문서가 브라우저에 로드되면 15-17번의 세 이미지가 나타날 것이다.
+* 로드된 뒤에 10번 코드가 실행되기 때문에 결국 세 이미지는 JQuery로 부여한 속성으로 바뀐다. - img태그의 src속성을 해당 값으로 강제전환
+
 후기: 
 
