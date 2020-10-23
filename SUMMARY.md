@@ -175,7 +175,7 @@
     * [mime타입 분석](1-days/untitled-8/mime.md)
     * [onchange 이벤트 핸들러](1-days/untitled-8/onchange.md)
     * [naviBarStep1 - 시멘틱태그, &lt;li&gt;](1-days/untitled-8/navibarstep1-less-than-li-greater-than.md)
-  * [47 Days - JSP, Servlet, css선택자, JQuery사용, class부여, JSP, Servlet, css선택자,](1-days/untitled-13/README.md)
+  * [47 Days - JSP, Servlet, css선택자, JQuery사용, css class부여, css선택자, onload, ready, each문](1-days/untitled-13/README.md)
     * [cssStep.hrml - CSS선택자](1-days/untitled-13/cssstep.hrml-css.md)
     * [JSP, HTML 연결 - start.html, move.jsp](1-days/untitled-13/jsp-html-start.html-move.jsp.md)
     * [여러 이미지에 CSS 반영 - cssStep3](1-days/untitled-13/css-cssstep3.md)
