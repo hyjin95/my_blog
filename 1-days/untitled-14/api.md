@@ -45,6 +45,8 @@
 
 ## Step1 : callback 메서드를 외부로 빼서 ready사용하기
 
+### mepTestStep1.html
+
 ```markup
 <!DOCTYPE html>
 <html>
@@ -93,6 +95,65 @@
   		});
   	</script>
     <div id="d_map"></div><!-- map을 body, 화면에 구현하기위한 박스 지정 -->
+  </body>
+</html>
+```
+
+## Step2 : JQuery를 사용해 마커, 이벤트, 말풍선 구현
+
+### mapTestStep2 : 마커와 말풍선 구현
+
+![](../../.gitbook/assets/7%20%287%29.png)
+
+```markup
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+    <title>Simple Map-Step2[말풍선]</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTqrhOtBTvXfFWDXp3N6TDFYvMF1i49Os&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      /*태그선택자, 요소선택자*/
+      html, body {
+        height: 100%;
+        margin: 0;/*div와 창 사이의 여백*/
+        padding: 0;/*map과 div사이의 여백*/
+      }
+    </style>
+    <script>
+      var map;//var myCar = new Sonata();가능, map을 생성하기위한 객체 생성 : 재사용을 위한 선언, 이 문서에서는 없어도 실행됨
+      var marker;//marker객체 생성
+
+      function initMap() {//브라우저에서 제공하는 map객체 생성
+    	  //구글 제공 함수이므로 앞에 소유주 google의 maps가 제공한다고 붙여야 사용가능하다.
+    	  var infoWindow = new google.maps.InfoWindow();//윈도우 창을 띄워주는 함수
+    	//Map(object=위치, {,}); { }는 안에 열거형 연산자로 값이 n개 올때 사용한다.
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 37.47866863504121, lng: 126.87865107049127 },
+          zoom: 8,
+        });
+    	marker = new google.maps.Marker({
+    		position: new google.maps.LatLng(37.47866863504121, 126.87865107049127)
+    		,map: map
+    		,title: "현재 내 위치"
+    	});
+    	infoWindow.open(map, marker);//창이 열리는 부분
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div><!-- map을 body, 화면에 구현하기위한 박스 지정 -->
   </body>
 </html>
 ```
