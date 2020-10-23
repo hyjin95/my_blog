@@ -175,7 +175,7 @@
     * [mime타입 분석](1-days/untitled-8/mime.md)
     * [onchange 이벤트 핸들러](1-days/untitled-8/onchange.md)
     * [naviBarStep1 - 시멘틱태그, &lt;li&gt;](1-days/untitled-8/navibarstep1-less-than-li-greater-than.md)
-  * [47 Days - JSP, Servlet, css선택자, JQuery사용,](1-days/untitled-13/README.md)
+  * [47 Days - JSP, Servlet, css선택자, JQuery사용, class부여, JSP, Servlet, css선택자,](1-days/untitled-13/README.md)
     * [cssStep.hrml - CSS선택자](1-days/untitled-13/cssstep.hrml-css.md)
     * [JSP, HTML 연결 - start.html, move.jsp](1-days/untitled-13/jsp-html-start.html-move.jsp.md)
     * [여러 이미지에 CSS 반영 - cssStep3](1-days/untitled-13/css-cssstep3.md)
@@ -184,6 +184,6 @@
     * [JQuery로 노드에 css, attribute부여하기 - p164](1-days/untitled-13/jquery-css-attribute-p164.md)
     * [배열에 index로 스타일 부여 - p169](1-days/untitled-13/index-p169.md)
     * [html, JSP 연결하기 - jQueryMemberShipAction](1-days/untitled-13/untitled.md)
-  * [Untitled](1-days/untitled-14.md)
+  * [48 Days -](1-days/untitled-14.md)
   * [Untitled](1-days/untitled-12.md)
 
