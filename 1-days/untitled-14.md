@@ -12,6 +12,12 @@ description: 2020.10.23 - 48일차
 
 ## 복습
 
+### HTML접근 함수
+
+* document가 받는 문서는 해당 html문서이다. 다른 언어로 html에 접근하려면 html을 객체화 해야한다.
+* 브라우저가 DOM 트리형식으로 html을 구성 완료해야한다.
+* JQuery : ready함수
+
 ## 페이지 이동 step1
 
 ### 페이지 이동
