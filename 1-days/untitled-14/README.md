@@ -41,6 +41,8 @@ description: 2020.10.23 - 48일차
 * callback 메서드 :  system에서 호출한다. 이 방식을 사용할 때는 라이프사이클을 알아야한다. - callback=메서드이름
 * cookie : data를 유지해주는 것
 
+### JSON을 이용해 요청페이지에 응답하기
+
 ## 구글 지도 API 활용
 
 ### 준비
