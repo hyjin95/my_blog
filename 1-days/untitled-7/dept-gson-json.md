@@ -1,4 +1,4 @@
-# dept - GSON,JSON
+# dept.json - GSON,JSON
 
 ## 준비
 
