@@ -158,7 +158,9 @@
 </html>
 ```
 
-### mapTestStep2-1 : 마커와 말풍선 구현
+### mapTestStep2-1 : 마커의 말풍선에 이미지 구현, 링크걸기
+
+![](../../.gitbook/assets/8%20%283%29.png)
 
 ```markup
 <!DOCTYPE html>
