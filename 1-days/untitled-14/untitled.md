@@ -44,7 +44,7 @@
 </script>
 <!-- 아이디는 인라인 요소이지만 화면에서는 input 밑에 나타난다. easyui가 코드를 추가 작성하기 때문 -->
 <!-- iconCls를 바꿀 수 있다 두번째 import link가 연관되어있을것이다! -->
-아이디1 : <input class="easyui-textbox" id=mem_id" n"ame="mem_id" data-options="iconCls:'icon-man'" style="width:200px">
+아이디1 : <input class="easyui-textbox" id="mem_id" name="mem_id" data-options="iconCls:'icon-man'" style="width:200px">
 <hr>
 아이디2 : <input id="emp_id" name="emp_id" style="width:200px" value="tomato">
 <button onclick="test()">전송</button>
@@ -54,6 +54,9 @@
 </body>
 </html>
 ```
+
+* 첫번째 아이디 입력 칸은 easyui class로 생성한 노드이다.
+* 처음 브라우저에 로딩 될때에는 id가 mem\_id이지만 35번 라인으로 인해 로드가 완료 된 뒤에 easyui가 부여하는 새로운 id를 갖게 된다.
 
 ### basicAction.jsp
 

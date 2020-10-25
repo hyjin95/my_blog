@@ -55,6 +55,19 @@ description: 2020.10.22 - 47일차
 
 ## JSP, Servlet
 
+|  | JSP | Servlet |
+| :--- | :--- | :--- |
+| 요청 | request | javax,servlet.http.HttpServletRequest |
+| 출력 | response | javax,servlet.http.HttpServletResponse |
+| 출력스트림 | out | javax,servlet.jsp.JspWriter |
+
+### 동적 페이지,CGI
+
+* 사용자가 요청한 시점에 페이지를 생성해 전달해주는 페이지 - 일반적으로 웹 서버는 정적 페이지만 제공한다.
+* 웹 서버가 동적 페이지를 구현하게 도와주는 애플리케이션 : Servlet, JSP, ....
+* 도움을 받아 동적 페이지를 생성하는 애플리케이션이 CGI이다.
+* Common Gateway Interface - 웹 서버와 프로그램간의 교환방식 - 서버에서 다른 프로그램을 불러 새 정보를 동적 생성하고 그 결과를 클라이언트에게 넘겨주는 방법 - html의 get, post방법을 사용해 웹 브라우저의 출력 화면을 생성한다.
+
 ### JSP
 
 * HTML안에 자바코드를 사용해 동적으로 웹페이지를 생성할 수 있게 해주는 서버 쪽 페이지, 백엔드의 자바와 프론트엔드의 html이 만나는 부분 - JSP파일이 요청하면 서버가 요청을 받아\(브라우저가\) 응답해야한다.
@@ -63,6 +76,12 @@ description: 2020.10.22 - 47일차
 * HTML에 작성된 java코드는 Tomcat과같은 서버가 해석해 html에 접근하는 것이다. - 인스턴스화 없이도 내장 객체 document를 이용해 html에 접근할 수 있다.
 
 ### Servlet
+
+* 웹용 자바.
+* client의 요청을 처리, 그 결과를 반환, 전송해 동적으로 작동하는 자바 프로그램이다. - html을 사용해 요청에 응답\(java안의 html\) - java의 thread를 이용해 동작 - MCV패턴에서 Controller를 담당한다. - http프로토콜 지원\(javax,servlet.http.HttpServlet클래스를 상속받음\)
+* Servlet클래스의 구현 규칙을 지키면서 JAVA를 사용해 웹을 만드는 웹 프로그래밍 기술 - Servlet클래스 구현 규칭: 요청 처리 및 결과 전송
+* JSP이전에 JSP의 역할을 하는 기술이다.
+* HTML이 변경될 떄마다 Servlet을 다시 컴파일 해야한다는 단점이 있다.
 
 ### JSP 동작방식
 
@@ -73,6 +92,25 @@ description: 2020.10.22 - 47일차
 
 * \(입구\)a.html이 브라우저에게 jsp호출 말하기 -&gt; 페이지 이동 -&gt; JSP이 서버에 요청, 처리 -&gt; 페이지이동 -&gt; b.html 화면이 출력\(출구\) - 요청, Session이 유지되는 동안에는 url이 변하지 않는다. - url이 변한다는 것은 기존 Session이 종료되고 새로운 Session인 브라우저가 열리는 것이다.\(요청이 유지 되지 않고 끊겼다.\)
 * JSP - \(JSP API\) -&gt; Java - \(Servlet API\) -&gt; Class
+
+### Servlet 동작방식
+
+![](../../.gitbook/assets/993a7f335a04179d20.png)
+
+1. 클라이언트가 URL입력시 HTTP Request객체가 Servlet Container로 전송한다.
+2. 요청을 받은 Servlet Container는 HttpServletRequest, HttpServletResponse객체를 생성
+3. web.xml 설정 파일 기반으로 요청된 URL이 어느 서블릿에 대한 요청인지 구분
+4. 해당 서블릿에서 메서드 호출, 클라이언트의 전송방식에 따라 doGet\( \), doPost\( \) 호출
+5. doGet\( \), doPost\( \)메서드는 동적 페이지를 생성 후, HttpServletResponse객체에 응답한다.
+6. 응답이 끝나면 HttpServletRequest, HttpServletResponse객체를 소멸시킨다.
+
+### Servlet Container
+
+* 서블릿이 스스로 작동하지는 않고 서블릿을 관리해주는 Container가 필요하다.
+* 서블릿이 어떤 기능을 수행하는 정의서이고, 서블릿 컨테이너는 요청에 따라 알맞는 정의서를 수행하게 해주는 관리자이다.
+* 클라이언트의 request와 reponse를 위해 웹서버와 소켓으로 통신한다.
+* WAS의 웹 서버 통신으로 JSP, Servlet의 작동 환경을 제공한다.
+* 역할 - 웹서버와의 통신지원\(소켓생성, 말하기, 듣기 기능을  API로 제공한다,\) - 서블릿 life Cycle관리  \(서블릿 클래스 인스턴스화-&gt;초기화-&gt;요청시 적절한 서블릿 메서드 호출-&gt;Garbage Collection 진행\) - 멀티스레드 지원, 관리\(요청시마다 자바 스레드 생성, 운영해준다.\)
 
 ### 페이지 호출하기
 

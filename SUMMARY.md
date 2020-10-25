@@ -184,9 +184,10 @@
     * [JQuery로 노드에 css, attribute부여하기 - p164](1-days/untitled-13/jquery-css-attribute-p164.md)
     * [JQuery만으로 배열에 index로 스타일 부여 - p169](1-days/untitled-13/index-p169.md)
     * [html, JSP 연결하기 - jQueryMemberShipAction](1-days/untitled-13/untitled.md)
-  * [48 Days - 구글 지도 API, 페이지 이동,](1-days/untitled-14/README.md)
+  * [48 Days - 구글 지도 API, 페이지 이동,attr속성 조작, JQuery read 값 강제변환](1-days/untitled-14/README.md)
     * [구글 지도 API](1-days/untitled-14/api.md)
     * [JSON을 활용해 요청 페이지에 응답받기](1-days/untitled-14/json.md)
     * [easyui활용했을 떄 AJAX가 JSP를 거치면 - basic](1-days/untitled-14/untitled.md)
   * [Untitled](1-days/untitled-12.md)
+  * [Untitled](1-days/untitled-15.md)
 
