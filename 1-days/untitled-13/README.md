@@ -120,6 +120,8 @@ description: 2020.10.22 - 47일차
 
 {% page-ref page="jsp-html-start.html-move.jsp.md" %}
 
+* 참고 : [https://araikuma.tistory.com/279](https://araikuma.tistory.com/279)
+
 ### JSP와 HTML ID, name
 
 * &lt;form&gt;태그와 액션을 활용하는 서버와 클라이언트의 호출 관계에서는 각 태그들을 식별하기위한 식별자로 name을 사용해야한다.
