@@ -10,6 +10,18 @@ description: 2020.10.29 - 49일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 복습
+
+### 경로
+
+```markup
+<img src="../../images/babyApech.png"/>
+<img src="http://192.168.0.187:9000/images/wood.jpg"/>
+```
+
+* 절대경로 : http프로토콜이름부터 파일명까지 모든 경로 전부 작성
+* 상대경로 : 현재 내가 바라보는 경로부터 따져서 작성 - ./ : 현재 내가 바라보는 경로 - ../ : 현재 나를 바라보는 나의 상위경로
+
 ## 필기
 
 ### &lt;div&gt;, 시멘틱태그
@@ -24,7 +36,7 @@ description: 2020.10.29 - 49일차
 
 ![](../.gitbook/assets/2%20%2836%29.png)
 
-* margin - 물체 간의 빈 공간, 웹 사이트에서 볼 수 있는 여백 공간, 간격 - 고정값을 줄수도, 가변값을 줄 수도 있다,
+* margin - 물체 간의 빈 공간, 웹 사이트에서 볼 수 있는 여백 공간, 간격 - 고정값을 줄수도, 가변값을 줄 수도 있다.
 * padding - div와 div안의 Object\(Node, 내용\)와의 여백
 * 웹사이트에서 특정 요소에 두께, 빈공간, 간격을 줄 떄 사용한다.
 
