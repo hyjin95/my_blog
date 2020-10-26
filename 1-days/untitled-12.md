@@ -2,7 +2,7 @@
 description: 2020.10.29 - 49일차
 ---
 
-# 49 Days -
+# 49 Days - margin, padding, query, Servelt, Jsp, 웹 서비스, req,res객체,
 
 ### 사용 프로그램
 
@@ -99,11 +99,10 @@ description: 2020.10.29 - 49일차
 
 {% page-ref page="untitled-10/" %}
 
-### request객체
+### request, response객체
 
-* Servlet의 내장객체로, WAS는 포함하고 있다. - HttpServletReques객체
-* request.getParameter함수로 입력값을 받아 올 수 있다.
-* Session이 유지되는 동안 값을 저장한다.
+* Servlet의 내장객체로, WAS는 포함하고 있다. - HttpServletReques, HttpServletResponse객체
+* request.getParameter함수로 입력값을 받아 올 수 있다. - Session이 유지되는 동안 값을 저장한다.
 * 자바의 상위 객체는 Object이므로 서버와 통신하기위해 http프로토콜이 필요하다. - request와 response 객체가 필요하므로
 
 {% page-ref page="untitled-13/" %}
