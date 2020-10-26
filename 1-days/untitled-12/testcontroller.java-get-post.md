@@ -1,4 +1,4 @@
-# TestController.java - Get, Post방식
+# TestController.java - Get, Post방식, mime type
 
 ## TestController.java
 
