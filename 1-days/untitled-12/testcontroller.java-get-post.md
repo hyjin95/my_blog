@@ -54,9 +54,58 @@ public class TestController extends HttpServlet {
 		PrintWriter out = res.getWriter();
 		out.print("<b>Post전송으로 요청된 웹페이지 입니다.</b>");
 	}
-
 }
 ```
 
+* java로 Servlet을 상속받아 Servlet파일을 생성해 post, get방식 전송 메서드를 만들어 요청에 따라 해당 메서드를 진행한다. 
+* 기본 전송방법은 get방식
+
 ## web.xml
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+<!-- 
+sever.xml은 톰캣서버가 기동할떄 디폴트, 기본으로 읽게되는데
+xml의 규칙 내에서 포트번호를 결정하고 프로젝트를 배치한다. 
+-->
+<!-- log4j 환경파일 등록하기 -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name><!-- 객체주입 -->
+		<param-value>/WEB-INF/classes/log4j.properties</param-value><!-- 톰캣서버가 읽을 수 있게 한다. -->
+	</context-param>
+<!-- DD파일(Deployment Discriptor) = 배치서술자 -->
+	<servlet>
+		<servlet-name>testMgr</servlet-name>
+		<servlet-class>web.mvc.TestController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>testMgr</servlet-name>
+		<url-pattern>/test/test.do</url-pattern><!-- url -->
+		<!-- 웹서비스를 할때에 자바를 인스턴스화할 수 없으므로 url로 접근한다. 이를 위해 xml dd파일에 url을 생성해야한다. -->
+	</servlet-mapping>
+</web-app>
+```
+
+* Servlet을 사용해서 자바의 웹 서버를 사용하기 위해서는 web.xml, DD파일\(배치서술자\)에 Servlet class를 작성해 url을 만들어 주어야 한다.
+
+## memberShip.html
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>memberShip.html</title>
+</head>
+<body>
+<form method="post" action="/test/test.do">
+<!-- 전송해주는 버튼이 필요 submit-->
+<input type="submit" value="전송">
+</form>
+</body>
+</html>
+```
+
+* Post방식을 사용하려면 반드시 &lt;form&gt;태그로 감싸 전송하거나, JS를 사용해야만한다.
 
