@@ -81,6 +81,13 @@ description: 2020.10.29 - 49일차
 * 자바는 서버를 갖고 있지 않다. - response, request객체를 갖고 있지 않다.  - Web을 구현할 수 없다.
 * Servlet을 활용해 이를 가능하게 한다. - Servlet이 서버를 갖고있지는 않지만 요청, 응답하면서 서버를 사용할 수 있게 해준다. - 서버 : WAS\(Tomcat 등\)
 * 자바 + servlet으로 서버에서 data를 가져올 수 있다.
-* 응답을 브라우저\(태그만 인식\)에 출력하기위해 print함수를 지원한다. - out.print함수를 사용해 브라우저에 태그를 작성할 수 있다. - out.print\("&lt;td&gt;"+list.get\("DEPTNO"\).toString\(\)+"&lt;/td&gt;"\); - out : java, list : java, &lt;td&gt; : html 섞여있어 분리하기 힘들다. - 태그에 " " 를 붙여주어야 해서 불편하다는 단점이 있다.
-* 이를 도와주는 것이 JSP이다.
+* 응답을 브라우저\(태그만 인식\)에 출력하기위해 print함수를 지원한다. - out.print함수를 사용해 브라우저에 태그를 작성할 수 있다. - Servlet : out.print\("&lt;td&gt;"+list.get\("DEPTNO"\).toString\(\)+"&lt;/td&gt;"\); - out : java, list : java, &lt;td&gt; : html 섞여있어 분리하기 힘들다. - 태그에 " " 를 붙여주어야 해서 불편하다는 단점이 있다.
+* 이를 도와주는 것이 JSP이다. - JSP : &lt;td&gt;&lt;%=list.get\("DEPTNO"\).toString\( \)%&gt;&lt;/td&gt;
+* 서블릿 - 인터페이스로서 컨트롤타워의 역할\(일은 하지않고 지시하는 Controllar\)
+* 자바 - Model
+* JSP - 뷰를 제공해 출력, 응답한다.\(View\)
+
+{% page-ref page="untitled-10/" %}
+
+후기 : 
 
