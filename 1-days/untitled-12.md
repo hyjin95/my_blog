@@ -22,6 +22,11 @@ description: 2020.10.29 - 49일차
 * 절대경로 : http프로토콜이름부터 파일명까지 모든 경로 전부 작성 - 프로젝트이름과 같이 모든 경로 앞에 붙는 이름은 설정을 /로 바꿔 생략가능
 * 상대경로 : 현재 내가 바라보는 경로부터 따져서 작성 - ./ : 현재 내가 바라보는 경로 - ../ : 현재 나를 바라보는 나의 상위경로
 
+### dataSet
+
+* html에서는 JSON이 처리한다.
+* 자바에서 ArrayList의 그림과 같다.
+
 ## &lt;div&gt;
 
 ### &lt;div&gt;, 시멘틱태그
@@ -62,7 +67,7 @@ description: 2020.10.29 - 49일차
 
 |  | typeA | typeB | typeC |
 | :---: | :---: | :---: | :---: |
-| 사용 | JS X,  | Html 태그 + JS | html X, Js로만 |
+| 사용 | JS X | Html 태그 + JS | html X |
 | 확장자 | html | html | html |
 | 화면 | O | O | X |
 | 데이터 | JSON | JSON | JSON |
