@@ -31,10 +31,25 @@ description: 2020.10.29 - 49일차
 
 ### log4j
 
+```markup
+<!-- log4j 환경파일 등록하기 서버가 기동된 동안에는 계속 유지된다. -->
+<context-param>
+		<param-name>log4jConfigLocation</param-name><!-- 객체주입 -->
+		<param-value>/WEB-INF/classes/log4j.properties</param-value>
+		<!-- 톰캣서버가 읽을 수 있게 한다. -->
+	</context-param>
+```
+
 * 디버깅 능력
 * 힌트를 제공해준다. - 시간, 클래스명, 라인번호, 메서드이름, select문
 * Logger가 필요하다.
 * apache가 제공하는 log4j.jar를 사용 프로젝트 lib안에 배포해야한다. - 배포하는 서버에서 작동되어야 하기 때문에 배포하는 프로젝트 파일안에 존재해야한다.
+* 배치서술자 dd파일 안에서 WAS서버가 log4j를 읽어 사용할 수 있도록 한다.
+
+### 서버의 유지
+
+* 서버를 종료했다가 킬때마다 class들을 전부 컴파일한다. - 프로젝드 - build - classes
+* 서버는 24시간 유지되어야한다.
 
 ## &lt;div&gt;
 
@@ -86,6 +101,11 @@ description: 2020.10.29 - 49일차
 * 확장자가 html이라면 자바 코드를 사용할 수 없다. - 확장자를 JSP로 바꿔 자바코드를 사용한다. - JSP를 인스턴스화 할 수 없으므로 재사용이 불가능하다. - Servlet을 통해 해결한다.
 * html은 정적, JSP, Servlet은 동적\(동기화\)을 구현 - html의 처리주체 : 클라이언트-브라우저 - JSP, Servlet의 처리주체 : 서버
 * html 태그로만 data를 로드하면, 화면이 로드되자마자 data를 로드해준다. - JS없이는 시점을 정할 수 없다.
+
+### datagrid
+
+* JSP, Servlet을 이용하면 동기화된 실시간 data를 가져온다.
+* JSON을 이용하면 정적, 동기화되지 않은 과거의 data를 보여준다.
 
 ### dataSet - 시점
 
