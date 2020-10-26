@@ -2,7 +2,7 @@
 description: 2020.10.29 - 49일차
 ---
 
-# 49 Days - margin, padding, query, Servelt, Jsp, 웹 서비스, req,res객체, 배치서술자 DD파일, 정적,동적 data
+# 49 Days - margin, padding, query, Servelt, Jsp, 웹 서비스, req,res객체, 배치서술자 DD파일, 정적,동적 data, mime type
 
 ### 사용 프로그램
 
@@ -101,6 +101,9 @@ description: 2020.10.29 - 49일차
 * 확장자가 html이라면 자바 코드를 사용할 수 없다. - 확장자를 JSP로 바꿔 자바코드를 사용한다. - JSP를 인스턴스화 할 수 없으므로 재사용이 불가능하다. - Servlet을 통해 해결한다.
 * html은 정적, JSP, Servlet은 동적\(동기화\)을 구현 - html의 처리주체 : 클라이언트-브라우저 - JSP, Servlet의 처리주체 : 서버
 * html 태그로만 data를 로드하면, 화면이 로드되자마자 data를 로드해준다. - JS없이는 시점을 정할 수 없다.
+* 웹 기반이면 dataset은 모두 JSON형식을 사용한다.
+
+{% page-ref page="../untitled-7/" %}
 
 ### datagrid
 
