@@ -62,7 +62,7 @@
 		<tr>
 			<th width="100%" colspan="2" align="center">
 			<button id="btn_add">가입</button>
-			<button onClick="cancel()">취소</button>
+			<button type="button" onClick="cancel()">취소</button>
 			</th>
 		</tr>
 	</table>
@@ -71,6 +71,8 @@
 </body>
 </html>
 ```
+
+* 60번에서 취소 버튼에 type=button을 넣어주지 않으면 form submit이 실행되어 취소버튼의 기능을 수행하지 않을 수 있다. 
 
 ## 실행
 
