@@ -25,5 +25,6 @@ description: 2020.10.29 - 49일차
 ![](../.gitbook/assets/2%20%2836%29.png)
 
 * margin - 물체 간의 빈 공간, 웹 사이트에서 볼 수 있는 여백 공간, 간격
-* padding - div와 div안의 Object\(Node, 내용\)간의 여백.
+* padding - div와 div안의 Object\(Node, 내용\)와의 여백
+* 웹사이트에서 특정 요소에 두께, 빈공간, 간격을 줄 떄 사용한다.
 
