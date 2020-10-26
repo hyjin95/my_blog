@@ -60,6 +60,8 @@ description: 2020.10.29 - 49일차
 
 ### 주의사항
 
+![](../.gitbook/assets/3%20%2829%29.png)
+
 * 외부 API를 사용할 때에는 import, link한 뒤에 실행시켜 뒤에 쿼리스트링을 붙여 새로고침했을떄 모든 import가 200번이 뜨는지 확인해야한다.
 
 ### html,java - typeA, B, C
