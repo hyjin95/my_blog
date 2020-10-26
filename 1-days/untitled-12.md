@@ -76,11 +76,11 @@ description: 2020.10.29 - 49일차
 1. html에서는 JSON이 처리한다. - 자바에서 ArrayList의 그림과 같다. - html에서 구현하면 화면 로딩이 끝났을때 바로 data를 보여준다.
 2. JS - 사용할 떄를, 시점을 구분할 수 있다. - 버튼이 눌렸을 떄 data를 보여준다.
 
-### Java의 server Servlet
+### Java의 server Servlet, JSP
 
 * 자바는 서버를 갖고 있지 않다.
 * response, request객체를 갖고 있지 않다.  - Web을 구현할 수 없다.
 * Servlet을 활용해 이를 가능하게 한다. - Servlet이 서버를 갖고있지는 않지만 요청, 응답하여 서버를 사용할 수 있게 해준다. - 서버 : WAS\(Tomcat 등\)
 * 자바 + servlet으로 서버에서 data를 가져올 수 있다.
-* 응답을 브라우저\(태그만 인식\)에 출력하기위해 print 기능의 함수를 지원한다.
+* 응답을 브라우저\(태그만 인식\)에 출력하기위해 print함수를 지원한다. - out.print함수를 사용해 브라우저에 태그를 작성할 수 있다. - out.print\("&lt;td&gt;"+list.get\("DEPTNO"\).toString\(\)+"&lt;/td&gt;\);
 
