@@ -119,7 +119,7 @@ description: 2020.10.29 - 49일차
 
 * HttpServlet을 상속받는 자바를 Servlet이라 한다.
 * doGet, doPost함수를 지원해준다. 리턴타입 : void
-* WAS Tomcat을 받으면 생성되는 JSP, Servlet파일을 사용할 프로젝트 안에 부여한다. - C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib
+* WAS Tomcat을 받으면 생성되는 JSP, Servlet파일을 사용할 프로젝트 안에 부여한다. - C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib - jsp-apo.jar, servlet-api.jar
 
 후기 : 
 
