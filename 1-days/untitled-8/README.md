@@ -200,7 +200,7 @@ description: 2020.10.21 - 46일차
 * DB조회, 로직처리를 요구하는 컨텐츠를 처리한다.
 * JSP, Servlet이 구동 환경을 제공한다. - JSP, Servlet을 실행 시킬 수 있는 소프트 웨어 = 컨테이너
 * 동작 프로세서 : 웹서버로부터의 요청 -&gt; 컨테이너가 받아서 처리한다. -&gt; web.xml문서 참조로 해당 서블릿 스레드를 생성하고, httpServletRequest와 httpServletResponse객체를 생성해 전달한다.  -&gt; 컨테이너가 서블릿을 호출한다. -&gt; 호출된 서블릿의 작업을 담당하는 스레드는 전송 방식에 따라 dopost\( \)나 doget\( \)을 호출한다. -&gt; 호출된 메서드는 생성된 동적 페이지를 response객체에 담아 컨테이너에 전송한다. -&gt; 컨테이너는 전달받은 response객체를 HTTPResponse형태로 변환해 웹서버에 전달한다. -&gt; 생성했던 스레드 종료, httpServlet 두 객체 소멸
-* 대표적인 WAS제품 : Tomcat, Jeus, JBoss - Tomcat은 Apache기능을 포함한다.
+* 대표적인 WAS제품 : Tomcat, Jeus, JBoss - Tomcat은 Apache기능을 포함한다. - Tomcat에서 테스트하고 JEUS서버로 배포한다.
 
 ### 웹서버\(Web Server\)
 
