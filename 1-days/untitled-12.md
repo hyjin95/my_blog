@@ -107,5 +107,19 @@ description: 2020.10.29 - 49일차
 
 {% page-ref page="untitled-13/" %}
 
+### 위치, 역할, 설계\(개발방법론\)
+
+### 1. html은 전송방식을 표기한다.
+
+* html의 태그는 UI/UX를 그리기 위함이다. - 브라우저는 태그를 인식해 화면을 출력한다.
+* 태그안에는 전송방식이 있다. Post, Get - 사용자, 업무담당자 가 서버에게 전송
+* data - header - header에 body가 어떤 정보를 담는지 작은 정보를 담는다. - get방식, 제약이 있다. - header에는 버전정보가 있어야 한다. 어떤 브라우저를 사용해야하는지 등
+
+### 2. Servlet 상속
+
+* HttpServlet을 상속받는 자바를 Servlet이라 한다.
+* doGet, doPost함수를 지원해준다. 리턴타입 : void
+* WAS Tomcat을 받으면 생성되는 JSP, Servlet파일을 사용할 프로젝트 안에 부여한다. - C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib
+
 후기 : 
 
