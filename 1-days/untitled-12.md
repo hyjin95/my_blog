@@ -95,7 +95,7 @@ description: 2020.10.29 - 49일차
 * 서블릿 - 인터페이스로서 컨트롤타워의 역할\(일은 하지않고 지시하는 Controllar\)
 * 자바 - Model
 * JSP - 뷰를 제공해 출력, 응답한다.\(View\)
-* **요청 -&gt; Servlet\(req\) -&gt; Java -&gt; Dao -&gt; myBatis -&gt; Oracle -&gt; Dao -&gt; Java -&gt; JSP\(res\) -&gt;응답** - 요청과 응답을 분리해 독립적으로 만들어 ui, 로직의 개발이 따로 이루어질 수 있도록 한다. - 독립성, 재사용성, 의존도 - 수정, 관리, 개발이 용이하다.
+* **요청 -&gt; Servlet\(req\) -&gt; Java -&gt; Dao -&gt; myBatis -&gt; Oracle -&gt; Dao -&gt; Java -&gt; JSP\(res\) -&gt;응답** - 요청과 응답을 분리해 독립적으로 만들어 ui, 로직의 개발이 따로 이루어질 수 있도록 한다. - 독립성, 재사용성, 의존도 - 수정, 관리, 개발이 용이하다. - 참고 : [https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html](https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html)
 
 {% page-ref page="untitled-10/" %}
 
