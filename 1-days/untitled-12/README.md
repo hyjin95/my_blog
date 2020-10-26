@@ -104,7 +104,7 @@ description: 2020.10.29 - 49일차
 * Servlet은 브라우저에서 직접 호출\(인스턴스화\)할 수 없다. - 자바기반이므로
 * 브라우저는 URL로 Java, Servlet에 접근해 요청을 한다.
 * 톰캣 서버는 java기반의 웹 서비스를 제공하는 서버이다. - 톰캣안에 servlet-api.jar, jsp-api.jar를 가지고 있기때문에
-* URL패턴을 등록할 수 있는, 설정파일 web.xml에 sevlet class를 등록해야한다 - WAS제품이 대신 인스턴스화해주고 싱글톤 패턴으로 관리까지 해준다.
+* URL패턴을 등록할 수 있는, 설정파일 web.xml에 sevlet class를 등록해야한다 - WAS제품이 대신 인스턴스화해주고 싱글톤 패턴으로 관리까지 해준다. - WAS제품이 url-pattern에 등록된 이름으로 doGet\(req, res\)를 주입해준다.
 
 {% page-ref page="web.xml.md" %}
 
