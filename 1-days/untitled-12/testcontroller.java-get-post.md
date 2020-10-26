@@ -39,6 +39,8 @@ public class TestController extends HttpServlet {
 	{
 		logger.info("doGet 호출성공");
 		//응답객체를 통해 마임타입을 지정할 수 있고, 한글 인코딩도 추가할 수 있다.
+		//mime타입으로 text이지만 html, xml, Json일 수 있다. 확장자가 아닌 subtype으로 판단한다.
+		//브라우저가 마임 타입에 따라 해석할수 없는 타입은 다운로드 한다.
 		res.setContentType("text/html;charset=utf-8");
 		PrintWriter out = res.getWriter();
 		//브라우저에 쓰기 
