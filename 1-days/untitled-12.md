@@ -24,8 +24,8 @@ description: 2020.10.29 - 49일차
 
 ### dataSet
 
-* html에서는 JSON이 처리한다.
-* 자바에서 ArrayList의 그림과 같다.
+1. html에서는 JSON이 처리한다. - 자바에서 ArrayList의 그림과 같다. - html에서 구현하면 화면 로딩이 끝났을때 바로 data를 보여준다.
+2. JS - 사용할 떄를, 시점을 구분할 수 있다. - 버튼이 눌렸을 떄 data를 보여준다.
 
 ## &lt;div&gt;
 
