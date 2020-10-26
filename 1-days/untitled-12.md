@@ -24,7 +24,7 @@ description: 2020.10.29 - 49일차
 
 ### 웹 서비스
 
-* 제공 주체 : 서버 - WAS\(Tomcat 등\) - 요청 : request, 응답 : response를 내장객체로 인스턴스화없이 사용한다. - Servlet이 제공, WAS는 Servlet을 포함한다.
+* 제공 주체 : 서버 - WAS\(Tomcat 등\) - 소통이 이뤄져야 한다. - 요청 : request, 응답 : response를 내장객체로 인스턴스화없이 사용한다. - Servlet이 제공, WAS는 Servlet을 포함한다.
 * 받는 사람 : 사용자, 업무담당자
 * 웹 서비스 환경설정 - xxx.xml - 컴파일 하지 않아 버전관리를 하지 않아도 되어 편리하다. - 일괄 관리가 가능하다.
 
