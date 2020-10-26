@@ -190,6 +190,7 @@
     * [easyui활용했을 떄 AJAX가 JSP를 거치면 - basic](1-days/untitled-14/untitled.md)
   * [49 Days - margin, padding, query, Servelt, Jsp, 웹 서비스, req,res객체,](1-days/untitled-12/README.md)
     * [web.xml](1-days/untitled-12/web.xml.md)
+    * [TestController.java - Get, Post방식](1-days/untitled-12/testcontroller.java-get-post.md)
   * [Untitled](1-days/untitled-16.md)
   * [Untitled](1-days/untitled-15.md)
 
