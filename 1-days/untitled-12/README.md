@@ -136,5 +136,7 @@ description: 2020.10.29 - 49일차
 
 ### Get, Post 방식
 
+{% page-ref page="testcontroller.java-get-post.md" %}
+
 후기 : 
 
