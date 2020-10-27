@@ -2,6 +2,8 @@
 
 ## 올바르지 않은 형식
 
+![](../../.gitbook/assets/4%20%2824%29.png)
+
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -27,6 +29,8 @@
 ```
 
 ## 올바른 형식
+
+![](../../.gitbook/assets/5%20%2817%29.png)
 
 ```markup
 <%@ page language="java" contentType="application/json; charset=UTF-8"
