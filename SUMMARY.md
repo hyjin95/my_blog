@@ -191,6 +191,8 @@
   * [49 Days - margin, padding, query, Servelt, Jsp, 웹서비스, req,res, 배치서술자 DD파일, 정적,동적 data전송, mime type](1-days/untitled-12/README.md)
     * [web.xml](1-days/untitled-12/web.xml.md)
     * [TestController.java - Get, Post방식, mime type](1-days/untitled-12/testcontroller.java-get-post.md)
-  * [50 Days - 페이지이동2,](1-days/untitled-16.md)
+  * [50 Days - 페이지이동2,](1-days/untitled-16/README.md)
+    * [JSON 형식](1-days/untitled-16/json.md)
   * [Untitled](1-days/untitled-15.md)
+  * [Untitled](1-days/untitled-17.md)
 
