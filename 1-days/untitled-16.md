@@ -2,7 +2,7 @@
 description: 2020.10.27 - 50일차
 ---
 
-# 50 Days -
+# 50 Days - 페이지이동2,
 
 ### 사용 프로그램
 
@@ -56,6 +56,7 @@ description: 2020.10.27 - 50일차
 
 ### data
 
+* easyui API가 제공하는 datagrid, data-options
 * data-grid : 양식, 껍데기
 * data-options : 데이터 요청 - data-options="url:'xxx.json \|\| xxx.jsp'"
 * JSP는 정적 데이터를 JSP는 동적 데이터를 읽는다. - WAS가 주체가 되어 처리
@@ -65,4 +66,18 @@ description: 2020.10.27 - 50일차
 
 * java에서는 listener인터페이스를 사용해 구현하고, html에서는 JS로 구현한다.
 * HTML에서는 JS없이 태그만으로는 로드와 동시에 구현되는 이벤트만 구현할 수 있다.
+
+## 페이지 이동2
+
+### 요청, 출력 - 다른페이지
+
+![](../.gitbook/assets/1%20%2848%29.png)
+
+### 요청, 출력 - 같은페이지
+
+![](../.gitbook/assets/2%20%2837%29.png)
+
+### include  - 같은페이지, 처리는 다른페이지
+
+![](../.gitbook/assets/3%20%2830%29.png)
 

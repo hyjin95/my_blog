@@ -2,7 +2,7 @@
 description: 2020.10.23 - 48일차
 ---
 
-# 48 Days - 구글 지도 API, 페이지 이동,attr속성 조작, JQuery read 값 강제변환
+# 48 Days - 구글 지도 API, 페이지 이동1,attr속성 조작, JQuery read 값 강제변환
 
 ### 사용 프로그램
 
