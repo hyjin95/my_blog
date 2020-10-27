@@ -73,11 +73,16 @@ description: 2020.10.27 - 50일차
 
 ![](../.gitbook/assets/1%20%2848%29.png)
 
+* 
 ### 요청, 출력 - 같은페이지
 
 ![](../.gitbook/assets/2%20%2837%29.png)
 
+* 
 ### include  - 같은페이지, 처리는 다른페이지
 
 ![](../.gitbook/assets/3%20%2830%29.png)
+
+* 
+
 
