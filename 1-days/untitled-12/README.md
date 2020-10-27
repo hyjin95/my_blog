@@ -2,7 +2,7 @@
 description: 2020.10.29 - 49일차
 ---
 
-# 49 Days - margin, padding, query, Servelt, Jsp, 웹 서비스, req,res객체, 배치서술자 DD파일, 정적,동적 data, mime type
+# 49 Days - margin, padding, query, Servelt, Jsp, 웹서비스, req,res, 배치서술자 DD파일, 정적,동적 data전송, mime type
 
 ### 사용 프로그램
 
