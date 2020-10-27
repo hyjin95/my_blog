@@ -102,7 +102,7 @@ description: 2020.10.27 - 50일차
 
 ### JS로만 구현
 
-### html+JS구
+### html+JS구현
 
 ### html+JS 의 기준
 
