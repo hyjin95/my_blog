@@ -49,9 +49,8 @@ description: 2020.10.27 - 50일차
 * req, res객체를 WAS에게서 주입받아 내장객체로 갖는다.
 * 단점 - doGet, doPost 두가지 메서드만 갖는다. - 다른 메서드를 가질 수 있기는 하지만, req와 res를 사용할 수 없다. 
 
-### JSP
+### 요청과 응답
 
-* html에 java코드를 작성할 수 있다.
-
-
+1. 요청과 응답이 같은 html,URL에서 일어난다.
+2. 요청과 응답이 서로 다른 html,URL에서 일어난다. - 페이지이동, URL이 변경된다. - 요청이 끊어져 유지되지않는다. - location.href\("xxx.html"\)   sendRedirect\("xxx.html"\)   AJAX - **session, cookie**를 사용하면 요청이 끊어졌다 하더라도 유지할 수 있다.
 
