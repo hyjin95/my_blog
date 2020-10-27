@@ -18,7 +18,7 @@
 
 * import
 
-## html 태그로만 구현
+## html 태그 중심 구현
 
 ```markup
 <head>
@@ -65,7 +65,7 @@
 </html>
 ```
 
-## JS로만 구현
+## JS중심 구현
 
 ```markup
 <!DOCTYPE html>
