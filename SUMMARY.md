@@ -193,6 +193,7 @@
     * [TestController.java - Get, Post방식, mime type](1-days/untitled-12/testcontroller.java-get-post.md)
   * [50 Days - 페이지이동2,](1-days/untitled-16/README.md)
     * [JSON 형식](1-days/untitled-16/json.md)
+    * [A,B,CzipcodeList - HTML, JS](1-days/untitled-16/a-b-czipcodelist-html-js.md)
   * [Untitled](1-days/untitled-15.md)
   * [Untitled](1-days/untitled-17.md)
 
