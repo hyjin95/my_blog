@@ -51,6 +51,7 @@ description: 2020.10.27 - 50일차
 
 ### JSP
 
-* 
+* html에 java코드를 작성할 수 있다.
+
 
 
