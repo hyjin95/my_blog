@@ -111,5 +111,5 @@ description: 2020.10.27 - 50일차
 
 {% page-ref page="a-b-czipcodelist-html-js.md" %}
 
-후기 : 일찍 자자 
+후기 : 일찍 자자 수업에 더 집중하기!
 
