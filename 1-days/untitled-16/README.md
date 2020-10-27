@@ -73,6 +73,11 @@ description: 2020.10.27 - 50일차
 
 {% page-ref page="json.md" %}
 
+### 조건
+
+* 점 조건 : =
+* 선분조건 : between A and B, A에서 B까지 사이에서
+
 ## 페이지 이동2
 
 ### 요청, 출력 - 다른페이지
