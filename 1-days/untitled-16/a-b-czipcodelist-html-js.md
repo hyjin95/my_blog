@@ -20,6 +20,8 @@
 
 ## html 태그 중심 구현
 
+![&#xC870;&#xD68C;&#xBC84;&#xD2BC;&#xC744; &#xB20C;&#xB7EC;&#xC57C; data&#xAC00; &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.](../../.gitbook/assets/6%20%2812%29.png)
+
 ```markup
 <head>
 <meta charset="UTF-8">
@@ -66,6 +68,8 @@
 ```
 
 ## JS중심 구현
+
+![](../../.gitbook/assets/7%20%288%29.png)
 
 ```markup
 <!DOCTYPE html>
