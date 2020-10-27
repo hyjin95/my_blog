@@ -25,7 +25,7 @@ description: 2020.10.27 - 50일차
 * page : 해당 페이지에서만 기억
 * request : 요청이 유지되는 동안 기억, 페이지를 이동하더라도 URL이 바뀌지 않는다.
 * session : 브라우저에 접속되어 있는 동안 서버 측에 저장 - cookie : 소비자가 선택한 값을 클라이언트 측에 저장한다. Ex\) 장바구니
-* application : 애플리케이션, 서버가 실행하는 동안 저장
+* application : 애플리케이션, 서버가 실행하는 동안 저장, 서버가 부하된다.
 
 {% page-ref page="untitled-1/" %}
 
@@ -53,4 +53,10 @@ description: 2020.10.27 - 50일차
 
 1. 요청과 응답이 같은 html,URL에서 일어난다.
 2. 요청과 응답이 서로 다른 html,URL에서 일어난다. - 페이지이동, URL이 변경된다. - 요청이 끊어져 유지되지않는다. - location.href\("xxx.html"\)   sendRedirect\("xxx.html"\)   AJAX - **session, cookie**를 사용하면 요청이 끊어졌다 하더라도 유지할 수 있다.
+
+### JSON data
+
+* data-grid : 양식, 껍데기
+* data-options : 데이터 요청 - data-options="url:'xxx.json'"
+* html\(브라우저\)은 양식을 담고, JSON\(서버\)은 t실질적 data를 갖는다.
 
