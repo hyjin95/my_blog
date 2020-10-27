@@ -2,7 +2,7 @@
 description: 2020.10.27 - 50일차
 ---
 
-# 50 Days - 페이지이동2,
+# 50 Days - 페이지이동2, html+js+json으로 dept목록구현, onSelect, onDblClickCell, pagination
 
 ### 사용 프로그램
 

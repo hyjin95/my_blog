@@ -109,3 +109,94 @@
 
 ## html+JS구현
 
+![](../../.gitbook/assets/1%20%2849%29.png)
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>부서관리-typeB[태그+JS 코딩연습예제]</title>
+	<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/color.css">
+    <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/demo/demo.css">
+    <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript">
+    var g_deptno=0;//선언 delete에 ?를 찾기 위한 변수
+    //조회
+    function getTest(){
+		$("#dg_test").datagrid({				
+			url:"../dept.json"				
+		});
+	}
+    //입력
+	function add(){
+		$("#display").text("add호출");
+	}
+    //수정
+	function edit(){
+		$("#display").text("edit호출");
+		
+	}
+    //삭제
+	function remove(){
+		$("#display").de
+		//delete from dept where deptno=?
+	}
+    </script>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){//ready가 있으면 순서에 상관없지만 ready 없이 body에 구현하려면 해당 id의 선언,생성 뒤에 와야한다.
+		//$("#pp_dept").pagination({
+		//	total:20
+		//	,pageSize:10
+		//	,pageList:[3,7,10]
+		//});
+		$("#dg_dept").datagrid({
+			title:"부서관리"
+			,url:"../dept.json"
+			,fitColumns:true
+			,singleSelect:true
+			,toolbar:"#tb_dept"
+			,pagination:"#pp_dept"
+			//function(index=몇번째, field=컬럼명, value=값)
+			,onSelect: function(index,row){
+				//var row2 = $("#dg_dept").datagrid("getSelected");//선택된 row를 반환하는 getSelected 단위테스트
+				//g_deptno = row2.DEPTNO;//단위테스트
+				//alert(index+", "+row+", " +row.DEPTNO+", "+row2.DNAME);//단위테스트
+				g_deptno = row.DEPTNO;
+			}///////////////end of onSelect
+			,onDblClickCell: function(index,field,value){
+				//alert(value);//단위테스트
+				if("LOC"==field){
+					location.href="../deptDelete.jsp?deptno="+g_deptno//페이지 이동,URL이 바뀐다.
+				}
+			}
+		});/////////////////end of datagrid
+	});/////////////////////end of ready-스캔완료
+</script>
+<table id="dg_dept" class="easyui-datagrid" style="width:700px; height:250px">
+    <thead>
+        <tr>
+            <th data-options="field:'DEPTNO',width:100">부서번호</th>
+            <th data-options="field:'DNAME',width:100">부서명</th>
+            <th data-options="field:'LOC',width:100,align:'right'">지역</th>
+        </tr>
+    </thead>
+</table>
+<div id="tb_dept">
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="getDeptList()">조회</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addDept()">입력</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editDept()">수정</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="removeDept()">삭제</a>
+</div>
+<div id="pp_dept">
+</div>
+</div>
+</body>
+</html>
+```
+
