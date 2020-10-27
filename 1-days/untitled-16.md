@@ -54,9 +54,15 @@ description: 2020.10.27 - 50일차
 1. 요청과 응답이 같은 html,URL에서 일어난다.
 2. 요청과 응답이 서로 다른 html,URL에서 일어난다. - 페이지이동, URL이 변경된다. - 요청이 끊어져 유지되지않는다. - location.href\("xxx.html"\)   sendRedirect\("xxx.html"\)   AJAX - **session, cookie**를 사용하면 요청이 끊어졌다 하더라도 유지할 수 있다.
 
-### JSON data
+### data
 
 * data-grid : 양식, 껍데기
-* data-options : 데이터 요청 - data-options="url:'xxx.json'"
-* html\(브라우저\)은 양식을 담고, JSON\(서버\)은 t실질적 data를 갖는다.
+* data-options : 데이터 요청 - data-options="url:'xxx.json \|\| xxx.jsp'"
+* JSP는 정적 데이터를 JSP는 동적 데이터를 읽는다. - WAS가 주체가 되어 처리
+* html\(브라우저\)은 양식을 담고, JSON, JSP\(서버\)은 실질적 data를 갖는다.
+
+### event
+
+* java에서는 listener인터페이스를 사용해 구현하고, html에서는 JS로 구현한다.
+* HTML에서는 JS없이 태그만으로는 로드와 동시에 구현되는 이벤트만 구현할 수 있다.
 
