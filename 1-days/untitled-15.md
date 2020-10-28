@@ -24,7 +24,7 @@ description: 2020.10.28 - 51일차
 * 배치\(import\)
 * 한글처리
 
-## empManager, textboxTest
+## empManager - Dialog
 
 ### 작업지시서
 
@@ -34,11 +34,14 @@ description: 2020.10.28 - 51일차
 * empManager.html 로 페이지를 생성한다. - 2단계 : empMagager.jsp
 * html에 테이블 생성 - html : table, easyui : datagrid\(Object로 제공\)
 * 바인딩 - &lt;input class="easyui-datagrid" \|\| "easyui-textbox"/&gt; - easyui를 사용하면 개발자가 부여한 input태그의 id는 처음 로드되었을 때만 살아 있고, ready나 onload, event 등이 발생하면 easyui가 제공하는 id로 덮여 씌워진다.
+* Dialog API를 확인하면서 코드를 작성한다. - closed:true\(창 닫기\), false\(창열기\)
 
 ### &lt;label&gt;
 
 * html - &lt;label&gt;이름&lt;/label&gt;   &lt;input type="text"&gt;
 * easyui - &lt;input label="이름"&gt;
+
+## textboxTest
 
 ## 넥사크로 설정1 - framework를 사용하지 않을때
 
