@@ -17,6 +17,13 @@ description: 2020.10.28 - 51일차
 * **HTML**\(처리주체-클라이언트\) - 절차지향언어, 컴파일\(문법체크\)하지않는다. - 화면, 입력 값을 읽고 응답을 화면에 쓴다. - html : input, easyui : textbox - easyui.js와 같은 API를 사용하면 화면 생성시 별도의 태그를 생성해준다. - html **id는 JS**가 사용한다. **name은 서버\(자바-servlet,jsp\)**에서 사용한다. - name으로 JAVA와 소통한다.
 * **JS** - 동적처리의 시작, html의 event담당 - &lt;head&gt;: 호출, &lt;body&gt;:선언 후 -&gt; 시점 설계가 중요하다. - &lt;head&gt;는 시점에 호출하는 것이고, &lt;body&gt;는 순서대로 실행된다. - &lt;body&gt;에서 id에 접근시 선언 위에 코드를 작성하려면 onload\(JS\), ready\(Jquery\)사용 - 페이지 이동시 파라미터로 data를 넘기고 응답을 리턴한다.
 
+### server.xml
+
+* 사용할 서버에 대한 설정 xml파일
+* 커넥션 풀 설정
+* 배치\(import\)
+* 한글처리
+
 ## empManager, textboxTest
 
 ### 작업지시서
