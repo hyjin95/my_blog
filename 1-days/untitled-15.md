@@ -17,3 +17,14 @@ description: 2020.10.28 - 51일차
 * **HTML**\(처리주체-클라이언트\) - 화면, 입력 값을 읽고 응답을 화면에 쓴다. - html : input, easyui : textbox - easyui.js와 같은 API를 사용하면 화면 생성시 별도의 태그를 생성해준다. - html **id는 JS**가 사용한다. **name은 서버\(자바-servlet,jsp\)**에서 사용한다. - name으로 JAVA와 소통한다.
 * **JS** - 동적처리의 시작, html의 event담당 - &lt;head&gt;:ready \|\| 호출, &lt;body&gt;:선언 후 -&gt; 시점 설계가 중요하다. - &lt;head&gt;는 시점을 넣어줘야하고, &lt;body&gt;는 순서대로 실행된다. - 페이지 이동시 파라미터로 data를 넘기고 응답을 리턴한다.
 
+## deptList
+
+### 작업지시서
+
+* dataset으로 소통, 출력이 이루어져야한다. ui솔루션을 사용해 다양한 표현을 해보자
+* emp.json\(xml\)의 dataSet\(xml\)을 사용해본다.
+* JS기반의 ui 솔루션 : easyui\(API\), bootstrap\(반응형 웹\)
+* empManager.html 로 페이지를 생성한다. - 2단계 : empMagager.jsp
+* html에 테이블 생성 - html : table, easyui : datagrid\(Object로 제공\)
+* 바인딩 - &lt;input class="easyui-datagrid" \|\| "easyui-textbox"/&gt; - easyui를 사용하면 개발자가 부여한 input태그의 id는 처음 로드되었을 때만 살아 있고, ready나 onload, event 등이 발생하면 easyui가 제공하는 id로 덮여 씌워진다.
+
