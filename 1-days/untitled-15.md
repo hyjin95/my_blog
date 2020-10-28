@@ -40,3 +40,9 @@ description: 2020.10.28 - 51일차
 * html - &lt;label&gt;이름&lt;/label&gt;   &lt;input type="text"&gt;
 * easyui - &lt;input label="이름"&gt;
 
+## 넥사크로
+
+### 넥사크로
+
+* 자바 언어가 아닌 UI솔루션이므로 jsp, servlet을 사용해 자바와 연결한다.
+
