@@ -48,7 +48,11 @@ description: 2020.10.28 - 51일차
 * html - &lt;label&gt;이름&lt;/label&gt;   &lt;input type="text"&gt;
 * easyui - &lt;input label="이름"&gt;
 
+{% page-ref page="untitled.md" %}
+
 ## textboxTest, datagrid
+
+{% page-ref page="textboxtest-deptview-textbox-datagrid.md" %}
 
 ## 넥사크로 설정1 - framework를 사용하지 않을때
 
