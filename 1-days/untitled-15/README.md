@@ -68,6 +68,7 @@ description: 2020.10.28 - 51일차
 
 * Eclipse같은 Tool
 * 깃과 연동 가능
+* 정적 작업 
 
 ### 설치 및 설정
 
@@ -84,4 +85,7 @@ description: 2020.10.28 - 51일차
 ![General - Workspace](../../.gitbook/assets/2%20%2838%29.png)
 
 ![General - Workspace - Build](../../.gitbook/assets/3%20%2831%29.png)
+
+* visual studio code와 연동해서 사용할 때에도 필요하다. 자동 동기화 시켜준다.
+* Eclipse : 동적 작업 
 
