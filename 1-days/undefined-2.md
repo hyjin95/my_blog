@@ -62,6 +62,11 @@ w3schools 페이지 : [https://www.w3schools.com/](https://www.w3schools.com/)
 
 KOXO메뉴얼 : [http://koxo.com/lang/js/index.html](http://koxo.com/lang/js/index.html)
 
+### Visual Studio Code
+
+[https://code.visualstudio.com/](https://code.visualstudio.com/)  
+- eclipse같은 프로그램, 깃 지원
+
 ## 강의
 
 구름\(goorm\) : [https://edu.goorm.io/](https://edu.goorm.io/)  
