@@ -71,6 +71,12 @@ description: 2020.10.28 - 51일차
 
 ### 설치 및 설정
 
+![](../.gitbook/assets/4%20%2825%29.png)
+
+1. 구글 - Visual Studio Code 검색
+2. Window - System Installer - 64 bit 설치
+3. 관리자 모드로 실행 
+
 ## Eclipse-Git 설정
 
 ### Preferences - 동기화 설정
