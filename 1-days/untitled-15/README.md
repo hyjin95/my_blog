@@ -39,6 +39,10 @@ description: 2020.10.28 - 51일차
 
 * Dialog API를 확인하면서 코드를 작성한다. - closed:true\(창 닫기\), false\(창 열기\) - modal:true\(dialog 뒷 화면 비활성화\). false\(활성화\)
 
+### datebox
+
+* required옵션 : 
+
 ### &lt;label&gt;
 
 * html - &lt;label&gt;이름&lt;/label&gt;   &lt;input type="text"&gt;
