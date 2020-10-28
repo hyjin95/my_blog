@@ -24,7 +24,7 @@ description: 2020.10.28 - 51일차
 * 배치\(import\)
 * 한글처리
 
-## empManager - Dialog, numberox
+## empManager - Dialog, NumberBox
 
 ### 작업지시서
 
