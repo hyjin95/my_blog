@@ -2,7 +2,7 @@
 description: 2020.10.28 - 51일차
 ---
 
-# 51 Days - 넥사크로설정1
+# 51 Days - 넥사크로설정1, visual studio code설정, eclipse-Git설정,
 
 ### 사용 프로그램
 
@@ -53,7 +53,7 @@ description: 2020.10.28 - 51일차
 * 자바 언어가 아닌 UI솔루션이므로 jsp, servlet을 사용해 자바와 연결한다.
 * Servlet을 지원한다. - 자바코드, req, res객체 지원
 
-### 설치
+### 설치 및 설정
 
 ![](../.gitbook/assets/1%20%2850%29.png)
 
@@ -61,4 +61,21 @@ description: 2020.10.28 - 51일차
 2. 다운로드 - 압축 풀기
 3. Eclipse에 dynamic project 생성 - 위 이미지 창까지 진행시 체크박스 체크하기\(설정파일 생성\)
 4. 넥사크로 파일에서 jar파일을 생성한 프로젝트의 WecContetn - WEB-INF - lib 폴더 안에 배포
+
+## Visual Studio Code 설정
+
+### visual Studio Code
+
+* Eclipse같은 Tool
+* 깃과 연동 가능
+
+### 설치 및 설정
+
+## Eclipse-Git 설정
+
+### Preferences - 동기화 설정
+
+![General - Workspace](../.gitbook/assets/2%20%2838%29.png)
+
+![General - Workspace - Build](../.gitbook/assets/3%20%2831%29.png)
 

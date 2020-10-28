@@ -43,8 +43,6 @@ maven mybatis페이지 : [https://mvnrepository.com/artifact/org.mybatis/mybatis
 [https://web.postman.co](https://web.postman.co/build)  
 - json파일 get, post보내기 확인
 
-
-
 ## UI
 
 ### 오픈 소스

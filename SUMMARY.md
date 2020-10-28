@@ -194,6 +194,6 @@
   * [50 Days - 페이지이동2, html+js+json으로 dept목록구현, onSelect, onDblClickCell, pagination](1-days/untitled-16/README.md)
     * [JSON 형식](1-days/untitled-16/json.md)
     * [A,B,CzipcodeList - HTML, JS](1-days/untitled-16/a-b-czipcodelist-html-js.md)
-  * [51 Days - 넥사크로설정1](1-days/untitled-15.md)
+  * [51 Days - 넥사크로설정1, visual studio code설정, eclipse-Git설정,](1-days/untitled-15.md)
   * [Untitled](1-days/untitled-17.md)
 
