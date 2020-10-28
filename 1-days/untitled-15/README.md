@@ -44,7 +44,7 @@ description: 2020.10.28 - 51일차
 * html - &lt;label&gt;이름&lt;/label&gt;   &lt;input type="text"&gt;
 * easyui - &lt;input label="이름"&gt;
 
-## textboxTest
+## textboxTest, datagrid
 
 ## 넥사크로 설정1 - framework를 사용하지 않을때
 
@@ -55,7 +55,7 @@ description: 2020.10.28 - 51일차
 
 ### 설치 및 설정
 
-![](../.gitbook/assets/1%20%2850%29.png)
+![](../../.gitbook/assets/1%20%2850%29.png)
 
 1. 네이버 - 투비소프트 검색 - UI/UX - 넥사크로 플랫폼
 2. 다운로드 - 압축 풀기
@@ -71,7 +71,7 @@ description: 2020.10.28 - 51일차
 
 ### 설치 및 설정
 
-![](../.gitbook/assets/4%20%2825%29.png)
+![](../../.gitbook/assets/4%20%2825%29.png)
 
 1. 구글 - Visual Studio Code 검색
 2. Window - System Installer - 64 bit 설치
@@ -81,7 +81,7 @@ description: 2020.10.28 - 51일차
 
 ### Preferences - 동기화 설정
 
-![General - Workspace](../.gitbook/assets/2%20%2838%29.png)
+![General - Workspace](../../.gitbook/assets/2%20%2838%29.png)
 
-![General - Workspace - Build](../.gitbook/assets/3%20%2831%29.png)
+![General - Workspace - Build](../../.gitbook/assets/3%20%2831%29.png)
 
