@@ -2,7 +2,7 @@
 description: 2020.10.28 - 51일차
 ---
 
-# 51 Days -
+# 51 Days - 넥사크로설정1
 
 ### 사용 프로그램
 
@@ -40,10 +40,19 @@ description: 2020.10.28 - 51일차
 * html - &lt;label&gt;이름&lt;/label&gt;   &lt;input type="text"&gt;
 * easyui - &lt;input label="이름"&gt;
 
-## 넥사크로
+## 넥사크로 설정1 - framework를 사용하지 않을때
 
 ### 넥사크로
 
 * 자바 언어가 아닌 UI솔루션이므로 jsp, servlet을 사용해 자바와 연결한다.
 * Servlet을 지원한다. - 자바코드, req, res객체 지원
+
+### 설치
+
+![](../.gitbook/assets/1%20%2850%29.png)
+
+1. 네이버 - 투비소프트 검색 - UI/UX - 넥사크로 플랫폼
+2. 다운로드 - 압축 풀기
+3. Eclipse에 dynamic project 생성 - 위 이미지 창까지 진행시 체크박스 체크하기\(설정파일 생성\)
+4. 넥사크로 파일에서 jar파일을 생성한 프로젝트의 WecContetn - WEB-INF - lib 폴더 안에 배포
 
