@@ -28,3 +28,8 @@ description: 2020.10.28 - 51일차
 * html에 테이블 생성 - html : table, easyui : datagrid\(Object로 제공\)
 * 바인딩 - &lt;input class="easyui-datagrid" \|\| "easyui-textbox"/&gt; - easyui를 사용하면 개발자가 부여한 input태그의 id는 처음 로드되었을 때만 살아 있고, ready나 onload, event 등이 발생하면 easyui가 제공하는 id로 덮여 씌워진다.
 
+### &lt;label&gt;
+
+* html - &lt;label&gt;이름&lt;/label&gt;   &lt;input type="text"&gt;
+* easyui - &lt;input label="이름"&gt;
+
