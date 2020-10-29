@@ -155,10 +155,10 @@ description: 2020.10.29 - 52일차
 
 ### Eclipse와 동기화 
 
-![](../.gitbook/assets/11%20%281%29.png)
-
-1. nexacro - Tools - Options - Generate - 경로버튼 - 사용할 Eclipse의 프로젝트 폴더와 같은 위치 지정
-2. nexacro - 동기화할 파일 실행 - URL저장 - 사용할 Eclipse jsp파일에 url입력 후 열어보기 - ulr경로 ip, port번호 수정 -&gt; 파일 경로 추가 
+![nexa&#xC800;&#xC7A5;&#xACBD;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xAE30;](../.gitbook/assets/11%20%281%29.png)
 
 ![Eclipse - nexa&#xC758; &#xC800;&#xC7A5;&#xACBD;&#xB85C;](../.gitbook/assets/12%20%281%29.png)
+
+1. nexacro - Tools - Options - Generate - 경로버튼 - 사용할 Eclipse의 프로젝트 폴더와 같은 위치 지정 - 기존의 Eclipse파일 밑에 Base폴더에 js확장자 파일이 생긴것을 알 수 있다.
+2. nexacro - 동기화할 파일 실행 - URL저장 - 사용할 Eclipse jsp파일에 url입력 후 열어보기 - ulr경로 ip, port번호 수정 -&gt; 파일 경로 추가  
 
