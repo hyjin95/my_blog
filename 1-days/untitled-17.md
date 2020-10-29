@@ -49,6 +49,13 @@ description: 2020.10.29 - 52일차
 * jar : 서버에 배포하는 파일 - class덩어리 - JAVA자체를 배포해버리면 정보, 주석 등이 노출되어 버린다.
 * jsp = html, xml, json타입을 담을 수 있는 파일
 
+### myBatis - HTML, JSP 연동 주의사항
+
+* NullPointerException발생시
+
+1. WEB-INF / lib아래 ojdbc6.jar 와 myBatis.jar가 존재하더라도 반드시 build path메뉴에서 두개의 jar파일을 등록해 줄 것.
+2. Configuration.xml 파일에서 드라이버 클래스 명이나 계정 정보, 서버의 IP주소, 포트번호가 일치하는지 반드시 확인 할 것.
+
 ## API활용
 
 ### API 사용
