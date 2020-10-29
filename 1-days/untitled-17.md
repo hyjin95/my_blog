@@ -29,6 +29,13 @@ description: 2020.10.29 - 52일차
 
 * HTML : &lt;head&gt;, &lt;body&gt;의 차이점 - **재사용성 : &lt;head&gt;안에서 함수를 선언, &lt;body&gt;는 함수를 호출**한다. - &lt;head&gt;안에서 전역변수를 선언할 수 있다.   전역변수를 식별자\(pk\)로서 where절에 조건으로 사용할 수 있다.   global variable = member variable
 
+## 필기
+
+### API 활용
+
+* API를 사용하려면 해당 API의 jar파일을 부여해주어야 한다. - WEB-INF의 lib폴더 안에 배치, 사용시 import, link - myBatis.jar, ojdbcd.jar, log4j.jar, ......
+* API에서 제공하는 class들은 변수, 메서드를 갖는다.
+
 ### 
 
 * $\("\#아이디"\).객체이름\( \);
