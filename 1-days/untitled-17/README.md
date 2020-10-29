@@ -216,7 +216,7 @@ description: 2020.10.29 - 52일차
 1. nexacro - Tools - Options - Generate - 경로버튼 - 사용할 Eclipse의 프로젝트 폴더와 같은 위치 지정 - 기존의 Eclipse파일 밑에 Base폴더에 js확장자 파일이 생긴것을 알 수 있다.
 2. nexacro - 동기화할 파일 실행 - URL저장 - 사용할 Eclipse jsp파일에 url입력 후 열어보기 - ulr경로 ip, port번호 수정 -&gt; 파일 경로 추가  
 
-## PrintJson - JSP 
+## PrintJson - 서버 연결시
 
 ### Web.xml
 
@@ -252,6 +252,13 @@ xml의 규칙 내에서 포트번호를 결정하고 프로젝트를 배치한�
 * 파일이 수정되었을 경우 반드시 서버를 재 기동 해야 반영된다.
 * 서블릿 클래스를 web.xml에 등록할떄 사용하는 태그 - &lt;servlet&gt; &lt;servlet-class&gt;
 * 서블릿을 브라우저에서 호출할떄 등록해야하는 태그  - &lt;servlet-mapping&gt; &lt;url-pattern&gt;
+
+### import, build path, jar배포
+
+* 사용될 jar파일을 해당 프로젝트의 WEB-INF의 lib폴더 안에 배포한다.
+* 해당 프로젝트의 build path 라이브러리에 해당 프로젝트가 갖고있는 jar를 add한다. - 다른 프로젝트의 것을 가져오면 읽지 못함 - ClassNotFoundException, NullPointerException
+* Configuration.xml mybatis.jar, ojdbc6.jar, log4j.jar
+* 서블릿 등록시 Web.xml문서에서 읽는 순서는 url-pattern이 등록된 부분부터 먼저 읽고, 그 안에 등록된 서블릿이름으로 &lt;servlet&gt;태그를 찾는다. - 따라서 서블릿 이름을 서로 다르게 입력할 경우 에러 발생
 
 후기 : 
 
