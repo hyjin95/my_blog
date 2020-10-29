@@ -54,6 +54,10 @@ description: 2020.10.28 - 51일차
 
 ## textboxTest, datagrid
 
+### textbox
+
+* easyui제공 : [http://jeasyui.com/documentation/index.php\#](http://jeasyui.com/documentation/index.php#)
+
 {% page-ref page="textboxtest-deptview-textbox-datagrid.md" %}
 
 ## 넥사크로 설정1 - framework를 사용하지 않을때
