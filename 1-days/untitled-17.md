@@ -27,5 +27,5 @@ description: 2020.10.29 - 52일차
 
 ### 위치
 
-* HTML : &lt;head&gt;, &lt;body&gt;
+* HTML : &lt;head&gt;, &lt;body&gt;의 차이점 - **재사용성 : &lt;head&gt;안에서 함수를 선언, &lt;body&gt;는 함수를 호출**한다.
 
