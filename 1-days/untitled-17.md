@@ -60,3 +60,59 @@ description: 2020.10.29 - 52일차
 
 * 더 가까운, 더 나중에 부여된 속성이 적용된다. - &lt;tr width="300px"&gt; &lt;td width="200px"&gt;&lt;/td&gt;&lt;/tr&gt;   td의 width속성이 부여된다.
 
+## empManager
+
+### &lt;td&gt;에 style부여하기
+
+![&#xAE30;&#xC874;](../.gitbook/assets/2%20%2840%29.png)
+
+```markup
+<table border="0" width="100%">
+<!-- 조건 검색 화면 시작 -->
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td>
+						<input id="nb_empno" class="easyui-numberbox" value="0">
+						<input id="nb_sal" 	class="easyui-numberbox" value="0"	 data-options="groupSeparator:','"></td>
+						<input id="dd_hiredate" label="입사일자 : " class="easyui-datebox"   value="today" required="required" style="width:200px">
+					</td>
+				</tr>
+			</table>			
+		</td>		
+	</tr>
+<!-- 조건 검색 화면 끝 -->
+</table>
+```
+
+* 기존 화면
+
+![&#xC2A4;&#xD0C0;&#xC77C; &#xC801;&#xC6A9;](../.gitbook/assets/3%20%2833%29.png)
+
+```markup
+<table border="0" width="100%">
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td width="300px">
+						<label width="100px">사원번호 : </label>
+						<input id="nb_empno" class="easyui-numberbox" value="0">
+					</td>
+					<td width="300px">
+						<label width="100px">연봉 : </label>
+						<input id="nb_sal" 	class="easyui-numberbox" value="0"	 data-options="groupSeparator:','">
+					</td>
+					<td width="300px">					
+						<input id="dd_hiredate" label="입사일자 : " class="easyui-datebox"   value="today" required="required" style="width:200px">
+					</td>
+				</tr>
+			</table>			
+		</td>		
+	</tr>
+</table>
+```
+
+* 스타일과 여백을 주기위해 각 input태그를 &lt;td&gt;태그로 묶었다.
+
