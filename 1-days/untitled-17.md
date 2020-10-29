@@ -29,6 +29,13 @@ description: 2020.10.29 - 52일차
 
 * HTML : &lt;head&gt;, &lt;body&gt;의 차이점 - **재사용성 : &lt;head&gt;안에서 함수를 선언, &lt;body&gt;는 함수를 호출**한다. - &lt;head&gt;안에서 전역변수를 선언할 수 있다.   전역변수를 식별자\(pk\)로서 where절에 조건으로 사용할 수 있다.   global variable = member variable
 
+### data
+
+* Oracle - 역할 : 실질적인 DataSet - DataSet의 형태 : json, xml
+* JAVA - 역할 : Data 수집 - SQL - DML - DTM -json, xml - 이벤트 처리 : 이벤트를 감지해 data를 꺼내와야하므로
+* 화면 - 역할 : Data출력
+* 화면에서 Data를 출력하기 위해 DB에서 Data를 꺼내오려면 JAVA를 경유해야만 한다.
+
 ## API활용
 
 ### API 사용
