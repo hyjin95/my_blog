@@ -160,3 +160,5 @@ description: 2020.10.29 - 52일차
 1. nexacro - Tools - Options - Generate - 경로버튼 - 사용할 Eclipse의 프로젝트 폴더와 같은 위치 지정
 2. nexacro - 동기화할 파일 실행 - URL저장 - 사용할 Eclipse jsp파일에 url입력 후 열어보기 - ulr경로 ip, port번호 수정 -&gt; 파일 경로 추가 
 
+![Eclipse - nexa&#xC758; &#xC800;&#xC7A5;&#xACBD;&#xB85C;](../.gitbook/assets/12%20%281%29.png)
+
