@@ -42,7 +42,7 @@ description: 2020.10.29 - 52일차
 
 ### 내장객체
 
-![Tomcat &#xB0B4;&#xC7A5; jar&#xD30C;&#xC77C;](../../.gitbook/assets/1%20%2852%29.png)
+![Tomcat &#xB0B4;&#xC7A5; jar&#xD30C;&#xC77C;](../../.gitbook/assets/1%20%2853%29.png)
 
 * out은 브라우저의 내장객체, req,res는 WAS제품의 내장 객체
 * WAS 파일의 라이브러리를 확인해보면 JSP, Servelet엔진이 들어 있음을 알 수 있다. - WAS가 req, res내장객체를 지원한다. - WAS가 JSP - JAVA - Servlet소통을 지원한다.
@@ -216,7 +216,7 @@ description: 2020.10.29 - 52일차
 1. nexacro - Tools - Options - Generate - 경로버튼 - 사용할 Eclipse의 프로젝트 폴더와 같은 위치 지정 - 기존의 Eclipse파일 밑에 Base폴더에 js확장자 파일이 생긴것을 알 수 있다.
 2. nexacro - 동기화할 파일 실행 - URL저장 - 사용할 Eclipse jsp파일에 url입력 후 열어보기 - ulr경로 ip, port번호 수정 -&gt; 파일 경로 추가  
 
-## PrintJson - 서버 연결시
+## PrintJson - DB연결, JSON, JSP
 
 ### Web.xml
 
