@@ -2,7 +2,7 @@
 description: 2020.10.29 - 52일차
 ---
 
-# 52 Days -
+# 52 Days - combobox, table-style
 
 ### 사용 프로그램
 

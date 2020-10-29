@@ -2,7 +2,7 @@
 description: 2020.10.28 - 51일차
 ---
 
-# 51 Days - 넥사크로설정1, visual studio code설정, eclipse-Git설정,
+# 51 Days - 넥사크로설정1, visual studio code설정, eclipse-Git설정, date-number-textbox
 
 ### 사용 프로그램
 
