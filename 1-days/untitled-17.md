@@ -60,9 +60,9 @@ description: 2020.10.29 - 52일차
 
 * 더 가까운, 더 나중에 부여된 속성이 적용된다. - &lt;tr width="300px"&gt; &lt;td width="200px"&gt;&lt;/td&gt;&lt;/tr&gt;   td의 width속성이 부여된다.
 
-## empManager
+## empManager - table에 style
 
-### &lt;td&gt;에 style부여하기
+### 기존 화면
 
 ![&#xAE30;&#xC874;](../.gitbook/assets/2%20%2840%29.png)
 
@@ -87,6 +87,8 @@ description: 2020.10.29 - 52일차
 ```
 
 * 기존 화면
+
+### 스타일 적용화면
 
 ![&#xC2A4;&#xD0C0;&#xC77C; &#xC801;&#xC6A9;](../.gitbook/assets/3%20%2833%29.png)
 
@@ -115,4 +117,10 @@ description: 2020.10.29 - 52일차
 ```
 
 * 스타일과 여백을 주기위해 각 input태그를 &lt;td&gt;태그로 묶었다.
+
+## empManager - combobox
+
+### combobox
+
+* easyui제공 : [http://jeasyui.com/documentation/index.php\#](http://jeasyui.com/documentation/index.php#)
 
