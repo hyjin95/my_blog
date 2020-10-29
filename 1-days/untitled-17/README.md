@@ -216,5 +216,42 @@ description: 2020.10.29 - 52일차
 1. nexacro - Tools - Options - Generate - 경로버튼 - 사용할 Eclipse의 프로젝트 폴더와 같은 위치 지정 - 기존의 Eclipse파일 밑에 Base폴더에 js확장자 파일이 생긴것을 알 수 있다.
 2. nexacro - 동기화할 파일 실행 - URL저장 - 사용할 Eclipse jsp파일에 url입력 후 열어보기 - ulr경로 ip, port번호 수정 -&gt; 파일 경로 추가  
 
+## PrintJson - JSP 
+
+### Web.xml
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+<!-- 
+sever.xml은 톰캣서버가 기동할떄 디폴트, 기본으로 읽게되는데
+xml의 규칙 내에서 포트번호를 결정하고 프로젝트를 배치한다. 
+-->
+<!-- log4j 환경파일 등록하기 서버가 기동된 동안에는 계속 유지된다. -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name><!-- 객체주입 -->
+		<param-value>/WEB-INF/classes/log4j.properties</param-value><!-- 톰캣서버가 읽을 수 있게 한다. -->
+	</context-param>
+<!-- DD파일(Deployment Discriptor) = 배치서술자 -->
+	<servlet>
+		<servlet-name>commonJSON</servlet-name>
+		<servlet-class>com.util.PrintJson</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>commonJSON</servlet-name>
+		<url-pattern>/common/toJson.do</url-pattern><!-- url -->
+		<!-- 웹서비스를 할때에 자바를 인스턴스화할 수 없으므로 url로 접근한다. 이를 위해 xml dd파일에 url을 생성해야한다. -->
+	</servlet-mapping>
+</web-app>
+```
+
+* 배치서술자\(dd파일\)
+* 로그, 한글처리 설정
+* 클래스 정보 등록 : 객체주입을 자동으로 받기 위함
+* WAS서버가 기동 될때 제일 먼저 스캔하는 파일
+* 파일이 수정되었을 경우 반드시 서버를 재 기동 해야 반영된다.
+* 서블릿 클래스를 web.xml에 등록할떄 사용하는 태그 - &lt;servlet&gt; &lt;servlet-class&gt;
+* 서블릿을 브라우저에서 호출할떄 등록해야하는 태그  - &lt;servlet-mapping&gt; &lt;url-pattern&gt;
+
 후기 : 
 
