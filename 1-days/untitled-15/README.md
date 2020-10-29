@@ -37,10 +37,12 @@ description: 2020.10.28 - 51일차
 
 ### Dialog
 
+* easyui제공 : [http://jeasyui.com/documentation/index.php\#](http://jeasyui.com/documentation/index.php#)
 * Dialog API를 확인하면서 코드를 작성한다. - closed:true\(창 닫기\), false\(창 열기\) - modal:true\(dialog 뒷 화면 비활성화\). false\(활성화\)
 
 ### datebox
 
+* easyui제공 : [http://jeasyui.com/documentation/index.php\#](http://jeasyui.com/documentation/index.php#)
 * required옵션 : 
 
 ### &lt;label&gt;
