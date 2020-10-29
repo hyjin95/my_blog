@@ -197,6 +197,7 @@
   * [51 Days - 넥사크로설정1, visual studio code설정, eclipse-Git설정, date-number-textbox](1-days/untitled-15/README.md)
     * [TextboxTest, DeptView - textbox, datagrid](1-days/untitled-15/textboxtest-deptview-textbox-datagrid.md)
     * [empManager - text-date-number Box, emp.json](1-days/untitled-15/untitled.md)
-  * [52 Days - combobox, table-style, API활용, nexacro화면, nexa-Eclipse연동, 내장객체,](1-days/untitled-17.md)
+  * [52 Days - combobox, table-style, API활용, nexacro화면, nexa-Eclipse연동, 내장객체,](1-days/untitled-17/README.md)
+    * [empManager - combobox추가](1-days/untitled-17/empmanager-combobox.md)
   * [Untitled](1-days/untitled-18.md)
 
