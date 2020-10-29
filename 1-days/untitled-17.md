@@ -135,4 +135,13 @@ description: 2020.10.29 - 52일차
 
 ## 넥사크로
 
-* 
+### Front-End
+
+* xml기반의 UI/UX솔루션 - Web2.0 - DataSet객체를 별도 제공\(별도의 타입 제공\) - 마이플랫폼, 넥사크로, 엑스플랫폼, 트러스 폼 등
+* Javascript기반의 API - 오픈소스 - DataSet객체를 제공하지 않는다. - JSON출력 내용\(스크립트를 이용해 잘라 사용하거나 필요한 정보만 찾아 활용\)
+
+### 프로젝트 생성하기
+
+* File - New - 이름지정 - Frame지정 - 화면 template설정 
+* Form 생성하기 - Base폴더 - File - Form
+
