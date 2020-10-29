@@ -25,3 +25,5 @@ description: 2020.10.29 - 52일차
 * Servlet이 제공해주는 request, response객체 - 화면에 출력할 수 있는, 브라우저가 읽을 수 있게 하는 out내장객체를 지원한다.
 * dataSet은 json형식을 사용
 
+### 위치
+
