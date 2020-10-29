@@ -145,3 +145,18 @@ description: 2020.10.29 - 52일차
 * File - New - 이름지정 - Frame지정 - 화면 template설정 
 * Form 생성하기 - Base폴더 - File - Form
 
+### nexa화면 살펴보기
+
+![&#xD558;&#xB2E8;&#xC5D0; Design, Source, Script &#xD0ED;](../.gitbook/assets/7%20%289%29.png)
+
+![UI&#xADF8;&#xB9AC;&#xAE30; &#xB3C4;&#xAD6C;](../.gitbook/assets/6%20%2814%29.png)
+
+![](../.gitbook/assets/8%20%284%29.png)
+
+### Eclipse와 동기화 
+
+![](../.gitbook/assets/11%20%281%29.png)
+
+1. nexacro - Tools - Options - Generate - 경로버튼 - 사용할 Eclipse의 프로젝트 폴더와 같은 위치 지정
+2. nexacro - 동기화할 파일 실행 - URL저장 - 사용할 Eclipse jsp파일에 url입력 후 열어보기 - ulr경로 ip, port번호 수정 -&gt; 파일 경로 추가 
+
