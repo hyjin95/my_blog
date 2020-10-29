@@ -38,12 +38,16 @@ description: 2020.10.29 - 52일차
 * 화면 - 역할 : Data출력 - Http프로토콜을 이용해 조건을 전송한다. - 넥사크로같은 xml기반의 UI솔루션을 사용해 DataSet 중 xml구조를 가져와보자
 * 화면에서 Data를 출력하기 위해 DB에서 Data를 꺼내오려면 JAVA를 경유해야만 한다.
 
+## 필기
+
 ### 내장객체
 
 ![Tomcat &#xB0B4;&#xC7A5; jar&#xD30C;&#xC77C;](../.gitbook/assets/1%20%2852%29.png)
 
 * out은 브라우저의 내장객체, req,res는 WAS제품의 내장 객체
 * WAS 파일의 라이브러리를 확인해보면 JSP, Servelet엔진이 들어 있음을 알 수 있다. - WAS가 req, res내장객체를 지원한다. - WAS가 JSP - JAVA - Servlet소통을 지원한다.
+* jar : 서버에 배포하는 파일 - class덩어리 - JAVA자체를 배포해버리면 정보, 주석 등이 노출되어 버린다.
+* jsp = html, xml, json타입을 담을 수 있는 파일
 
 ## API활용
 
