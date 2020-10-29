@@ -32,7 +32,9 @@ description: 2020.10.29 - 52일차
 ### data
 
 * Oracle - 역할 : 실질적인 DataSet - DataSet의 형태 : json, xml - Http프로토콜을 
-* JAVA - 역할 : Data 수집 - SQL - DML - DTM -json, xml - 이벤트 처리 : 이벤트를 감지해 data를 꺼내와야하므로 - Servlet의 req, res객체를 주입받아 서버\(WAS\)에 DB data를 요청한다. - 화면 - JSP - JAVA - Servlet - DB
+* JAVA - 역할 : Data 수집 - SQL - DML - DTM -json, xml - 이벤트 처리 : 이벤트를 감지해 data를 꺼내와야하므로 - Servlet의 req, res객체를 주입받아 서버\(WAS\)에 DB data를 요청한다. - http통신을 지원해주는 Servlet과 JSP - 화면 - JSP - JAVA - Servlet - DB
+* Servlet은 화면에 출력하려면 하나하나 out.print해야 하므로 비효율적이라 사용하지 않는다.
+* Servlet기반으로 만들어진 JSP
 * 화면 - 역할 : Data출력 - Http프로토콜을 이용해 조건을 전송한다. - 넥사크로같은 xml기반의 UI솔루션을 사용해 DataSet 중 xml구조를 가져와보자
 * 화면에서 Data를 출력하기 위해 DB에서 Data를 꺼내오려면 JAVA를 경유해야만 한다.
 
@@ -125,7 +127,7 @@ description: 2020.10.29 - 52일차
 
 * 스타일과 여백을 주기위해 각 input태그를 &lt;td&gt;태그로 묶었다.
 
-## empManager - combobox
+## API활용 : easyui - combobox
 
 ### combobox
 
