@@ -35,6 +35,7 @@ description: 2020.10.29 - 52일차
 
 * API를 사용하려면 해당 API의 jar파일을 부여해주어야 한다. - WEB-INF의 lib폴더 안에 배치, 사용시 import, link - myBatis.jar, ojdbcd.jar, log4j.jar, ......
 * API에서 제공하는 class들은 변수, 메서드를 갖는다.
+* API에서 제공하는 함수를 사용할때에는 파라미터를 확인한다.
 
 ### 
 
