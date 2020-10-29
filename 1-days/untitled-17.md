@@ -56,3 +56,7 @@ description: 2020.10.29 - 52일차
 * &lt;태그 class="접두어\(제공자\)-제공 클래스이름&gt; - &lt;input class="easyiui-dategrid&gt;
 * JS에서 해당 태그에 접근할때 객체를 붙여 구체화 시켜준다.
 
+### 태그 속성 우선
+
+* 더 가까운, 더 나중에 부여된 속성이 적용된다. - &lt;tr width="300px"&gt; &lt;td width="200px"&gt;&lt;/td&gt;&lt;/tr&gt;   td의 width속성이 부여된다.
+
