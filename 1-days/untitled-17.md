@@ -33,7 +33,7 @@ description: 2020.10.29 - 52일차
 
 * Oracle - 역할 : 실질적인 DataSet - DataSet의 형태 : json, xml
 * JAVA - 역할 : Data 수집 - SQL - DML - DTM -json, xml - 이벤트 처리 : 이벤트를 감지해 data를 꺼내와야하므로
-* 화면 - 역할 : Data출력
+* 화면 - 역할 : Data출력 - 넥사크로같은 xml기반의 UI솔루션을 사용해 DataSet 중 xml구조를 가져와보자
 * 화면에서 Data를 출력하기 위해 DB에서 Data를 꺼내오려면 JAVA를 경유해야만 한다.
 
 ## API활용
