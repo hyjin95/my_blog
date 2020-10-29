@@ -69,7 +69,7 @@ description: 2020.10.29 - 52일차
 
 * 더 가까운, 더 나중에 부여된 속성이 적용된다. - &lt;tr width="300px"&gt; &lt;td width="200px"&gt;&lt;/td&gt;&lt;/tr&gt;   td의 width속성이 부여된다.
 
-## empManager - table에 style
+## empManager : table에 style부여
 
 ### 기존 화면
 
