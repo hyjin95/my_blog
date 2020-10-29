@@ -151,7 +151,7 @@ description: 2020.10.29 - 52일차
 
 ![UI&#xADF8;&#xB9AC;&#xAE30; &#xB3C4;&#xAD6C;](../.gitbook/assets/6%20%2814%29.png)
 
-![](../.gitbook/assets/8%20%284%29.png)
+![&#xC2E4;&#xD589; &#xB3C4;&#xAD6C; ctrl + F6](../.gitbook/assets/31.jpg)
 
 ### Eclipse와 동기화 
 
