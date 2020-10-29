@@ -27,3 +27,5 @@ description: 2020.10.29 - 52일차
 
 ### 위치
 
+* HTML : &lt;head&gt;, &lt;body&gt;
+
