@@ -197,5 +197,6 @@
   * [51 Days - 넥사크로설정1, visual studio code설정, eclipse-Git설정,](1-days/untitled-15/README.md)
     * [TextboxTest, DeptView - textbox, datagrid](1-days/untitled-15/textboxtest-deptview-textbox-datagrid.md)
     * [empManager - text-date-number Box, emp.json](1-days/untitled-15/untitled.md)
-  * [Untitled](1-days/untitled-17.md)
+  * [52 Days -](1-days/untitled-17.md)
+  * [Untitled](1-days/untitled-18.md)
 
