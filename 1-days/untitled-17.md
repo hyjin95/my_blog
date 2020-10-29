@@ -22,5 +22,5 @@ description: 2020.10.29 - 52일차
 ### 서버
 
 * JSP, Servlet을 이용해 html과 java가 연결된다. - 처리주체 : 서버, 동적이다. - JSP : Servlet을 이용해 html에 자바코드를 작성 - Servlet : 자바에 html코드를 작성
-* Servlet이 제공해주는 request, response객체
+* Servlet이 제공해주는 request, response객체 - 화면에 출력할 수 있는, 브라우저가 읽을 수 있게 하는 out내장객체를 지원한다.
 
