@@ -83,7 +83,7 @@ description: 2020.10.30 - 53일차
 5. SQL을 작성하고 쿼리를 실행하여 처리 결과를 ResultSet 객체에 담는다. - while\(re.next\)로 커서가 true인 동안 data를 set한다.
 6. Dataset을 PlatformData에 추가 -&gt; client화면으로 전송
 
-## JSP파일 Servelt파일로 변환
+## JSP\(xlml\)파일 Servelt파일로 변환
 
 ### nexa - xml \|\| Servlet 파일로 dataset 전송
 
@@ -91,10 +91,14 @@ description: 2020.10.30 - 53일차
 * 브라우저가 가장 먼저 스캔하는 것 = web.xml
 * JSP는 URL을 갖고있어 URL로 바로 호출이 가능하다. Servlet은 URL을 갖고있지 않아 web.xml 배치서술자에서 url-pattern을 부여해줘 그 url로 접근한다.
 
+### nexacro 제공
+
+* PlatformData - 서블릿에서 처리된 결과를 담아 화면에 출력하는 클래스 - 넥사크로에서 이벤트를 감지하면 해당 요청에 대한 처리결과를 별도로 전달할 수 있는 클래스를 제공한다.
+
 ### 순서
 
 1. web.xml배치 서술자에 servlet파일 클래스명, url-pattern 매핑
-2. java class로 HttpServlet을 상속받는 서블릿파일 생성
+2. java class로 superclass - HttpServlet을 상속받는 서블릿파일 선언 - 온라인 서버 제공을 위해 WAS의 req, res를 부여받는 Servlet에게서 객체를 주입받아 사용한다.
 3. &lt;%@ page import %&gt;를 import한다. - ctrl + shift + o
 
 {% page-ref page="nexa-xml-dataset.md" %}

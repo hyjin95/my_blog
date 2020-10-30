@@ -49,7 +49,7 @@ this.fn_callback = function(svcID,errCD, errMSG) {
 
 ```
 
-* this.transaction\(page\(화면\)이름, URL::jsp파일이름, 입력값, 화면출력값,"", 콜백함수이름\)
+* this.transaction\(page\(화면\)이름, URL::jsp파일이름, 입력값, 리턴값,"", 콜백함수이름\)
 
 ## select\_emp.jsp - xml / nexa-API
 
@@ -236,11 +236,18 @@ public class select_emp extends HttpServlet {
 ### doGet메서드
 
 ```java
+	//서블릿에 대한 자원관리는 톰캣서버가 싱글턴 패턴으로 관리해준다.
+	//라이프사이클도 톰캣이 관리하므로 예외처리를 할 필요 없다. 할 수 없다.
 	public void doGet(HttpServletRequest req, HttpServletResponse res) 
 	throws ServletException, IOException {
+		//http://192.168.0.187:9000/nexa2020/emp/empManagerAction.do 라는 url호출시 실행
+		//if문을 사용해야하는 경우, Servlet은 get, post메서드만 가질 수 있으므로
+		//http://192.168.0.187:9000/nexa2020/emp/empManagerAction.do?menu=1
+		//http://192.168.0.187:9000/nexa2020/emp/empManagerAction.do?munu=2 이런식으로 구분실행
+		res.setContentType("text/xml;charset=utf-8");
+		
 		PlatformData out_pData = new PlatformData();
-		String sDept = (req.getParameter("sDept") == null) ? "" : req.getParameter("sDept");//sDept는 data일수도 dataSet일수도 있다.
-
+		
 		//넥사크로에서 제공되는 에러코드번호나 메세지를 관리하는 변수가 필요하다
 		int    nErrorCode  = 0;
 		String strErrorMsg = "START";
@@ -341,6 +348,8 @@ public class select_emp extends HttpServlet {
 		logger.info("doGet호출성공");
 	}
 ```
+
+* PlatformData : 넥사크로 제공 클래스, 이벤트 처리 결과를 화면에 출력해준다.
 
 ### doPost메서드
 
