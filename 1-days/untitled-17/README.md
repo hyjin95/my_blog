@@ -217,7 +217,8 @@ description: 2020.10.29 - 52일차
 
 1. nexacro - Tools - Options - Generate - 경로버튼 - 사용할 Eclipse의 프로젝트 폴더와 같은 위치 지정 - 기존의 Eclipse파일 밑에 Base폴더에 js확장자 파일이 생긴것을 알 수 있다.
 2. nexacro - 동기화할 파일 실행 - URL저장 - 사용할 Eclipse jsp파일에 url입력 후 열어보기 - ulr경로 ip, port번호 수정 -&gt; 파일 경로 추가 
-3. 이제 nexacro에서 작업하고, 저장한뒤 Generate - Application을 클릭하면 Eclipse와 동기화된다. 
+3. 이제 nexacro에서 작업하고, 저장한뒤 Generate - Application을 클릭하면 Eclipse와 동기화된다.
+4. 넥사크로 라이센스를 Eclipse 프로젝트 파일의 WEB\_INF파일의 calsses파일에 배포한다. 
 
 ## PrintJson - DB연결, JSON, JSP
 
