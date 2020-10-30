@@ -10,7 +10,7 @@ description: 2020.10.30 - 53일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Visual Studio Code
 * 사용 서버 - WAS : Tomcat
 
-## 복습
+## 필기
 
 ### 업무
 
@@ -35,12 +35,20 @@ description: 2020.10.30 - 53일차
 
 ### 페이지이동
 
-1. location.href - JS에서 사
-2. &lt;form action = xxx.jsp \|\| xxx.do&gt; - Tag에서 사용
+1. **location.href = xxx.jsp - JS에서 사용**
+2. **&lt;form action = xxx.jsp \|\| xxx.do&gt; - Tag에서 사용**
+3. **$ajax\(data-options="url:xxx.do"\) - AJAX에서 사용**
+4. java제공, sendRedirect\("URL"\) - JSP에서 사용
+5. fetch
 
 {% page-ref page="../untitled-14/" %}
 
 {% page-ref page="../untitled-16/" %}
+
+### 요청 처리 - jsp, servlet
+
+* JSP가 요청을 받았을떄 - 구조 : 화면 - 로직 - 재사용성이 떨어진다. - 반복코드가 많아 일괄처리에 불리함
+* Servlet이 요청을 받았을떄 - 
 
 ## nexacro - DatsSet
 
