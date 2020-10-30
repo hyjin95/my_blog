@@ -39,7 +39,7 @@ this.btn_search_onclick = function(
 	alert("조회 호출성공");
 	//page에대한(화면)이름, URL::jsp파일이름, 입력값(JSP파일안의 입력을 받는 변수), 화면출력값,"", 콜백함수이름
 	//"값"에서 "를 빼면 변수 취급해버린다. 값X
-	this.transaction("empSearch", "SvcURL::/emp/empManagerAction.do"
+	this.transaction("empSearch", "SvcURL::/emp/empManagerAction.do?id=test"
 						, "in_emp=ds_emp", "ds_emp=out_emp","","fn_callback");
 };
 
