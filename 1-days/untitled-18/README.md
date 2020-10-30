@@ -37,7 +37,7 @@ description: 2020.10.30 - 53일차
 
 ### 서비스 구성도
 
-![](../.gitbook/assets/.png%20%2811%29.png)
+![](../../.gitbook/assets/.png%20%2811%29.png)
 
 ### html과 xml의 dataset
 
@@ -45,7 +45,7 @@ description: 2020.10.30 - 53일차
 * easyui, 부트스트랩의 DataSet = JSON - 자바코드로 DataSet을 JSON형식으로 만들어준다.
 * 넥사크로의 DataSet = xml - 자바코드로 DataSet을 xml형식으로 만들어준다.
 
-## nexa의 Grid에 DataSet이 담기
+## nexa의 Grid에 DataSet 담는 순서
 
 ### nexacro UI
 
@@ -63,4 +63,8 @@ description: 2020.10.30 - 53일차
 4. 조회된 결과 ResultSet 데이타를 Dataset 형태로 변환 - nexacro는 자체 DataSet타입으로 Java를 사용한다.
 5. SQL을 작성하고 쿼리를 실행하여 처리 결과를 ResultSet 객체에 담는다. - while\(re.next\)로 커서가 true인 동안 data를 set한다.
 6. Dataset을 PlatformData에 추가 -&gt; client화면으로 전송
+
+### nexa - xml로 dataset 전송하기
+
+### nexa - Servlet으로 dataset전송하기
 
