@@ -26,9 +26,16 @@ description: 2020.10.30 - 53일차
 6. **MVC패턴** - 화면 : View, 로직: Model, Controller
 7. **Spring F/W** - 인스턴스화, 객체주입, 의존성주입, 클래스 쪼개기를 이용해 개발자가 조립하던 것을 해준다. - 한 프레임워크가 조립해주므로 통일감있다.
 
+### JSP -&gt; JAVA -&gt; Class
+
+* xxx.jsp는 인스턴스화 할 수 없다.
+* HTML에 자바코드를 추가하게 해주며, 문법검사를 하지 않으므로
+
 ## nexacro - DatsSet
 
 ### 서비스 구성도
+
+![](../.gitbook/assets/.png%20%2811%29.png)
 
 ## nexa의 Grid에 DataSet이 담기
 
