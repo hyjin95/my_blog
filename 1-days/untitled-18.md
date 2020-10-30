@@ -30,6 +30,8 @@ description: 2020.10.30 - 53일차
 
 * xxx.jsp는 인스턴스화 할 수 없다.
 * HTML에 자바코드를 추가하게 해주며, 문법검사를 하지 않으므로
+* WAS서버 제품이 jsp파일이 실행될때 jsp-api.jar파일을 이용해 jsp파일을 xxx.jsp.java로 변환시킨다.
+* 그 이후에 servlet-api.jar파일을 이용해 xxx.jsp.java를 xxx.class로 변환시킨다.
 
 ## nexacro - DatsSet
 
