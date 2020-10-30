@@ -33,6 +33,15 @@ description: 2020.10.30 - 53일차
 * WAS서버 제품이 jsp파일이 실행될때 jsp-api.jar파일을 이용해 jsp파일을 xxx.jsp.java로 변환시킨다.
 * 그 이후에 servlet-api.jar파일을 이용해 xxx.jsp.java를 xxx.class로 변환시킨다.
 
+### 페이지이동
+
+1. location.href - JS에서 사
+2. &lt;form action = xxx.jsp \|\| xxx.do&gt; - Tag에서 사용
+
+{% page-ref page="../untitled-14/" %}
+
+{% page-ref page="../untitled-16/" %}
+
 ## nexacro - DatsSet
 
 ### 서비스 구성도

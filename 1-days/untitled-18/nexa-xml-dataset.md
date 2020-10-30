@@ -49,6 +49,8 @@ this.fn_callback = function(svcID,errCD, errMSG) {
 
 ```
 
+* this.transaction\(page\(화면\)이름, URL::jsp파일이름, 입력값, 화면출력값,"", 콜백함수이름\)
+
 ## select\_emp.jsp - xml / nexa-API
 
 ```java
