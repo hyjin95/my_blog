@@ -30,7 +30,15 @@ description: 2020.10.30 - 53일차
 
 ### 서비스 구성도
 
-## nexa의 Grid에 DataSet이 담기는 순서
+## nexa의 Grid에 DataSet이 담기
+
+### nexacro UI
+
+* nexacro가 제공하는 grid의 dataSet에는 Object가 담길 것이다. - 그러므로 dataSet은 data의 타입을 갖고 있어야 한다.
+* 그래서 제일 먼저 **header\(컬럼\)**을 정한다.
+
+1. header에 타입을 정한다. \(컬럼타입\) -- 0번째, row는 1번째부터
+2. JSP가 while\(rs.next\)를 사용해 커서가 true인 동안에 row에 data를 set한다.
 
 ### JSP조회 서비스 페이지 생성
 
@@ -40,12 +48,4 @@ description: 2020.10.30 - 53일차
 4. 조회된 결과 ResultSet 데이타를 Dataset 형태로 변환 - nexacro는 자체 DataSet타입으로 Java를 사용한다.
 5. SQL을 작성하고 쿼리를 실행하여 처리 결과를 ResultSet 객체에 담는다. - while\(re.next\)로 커서가 true인 동안 data를 set한다.
 6. Dataset을 PlatformData에 추가 -&gt; client화면으로 전송
-
-### nexacro UI
-
-* nexacro가 제공하는 grid의 dataSet에는 Object가 담길 것이다. - 그러므로 dataSet은 data의 타입을 갖고 있어야 한다.
-* 그래서 제일 먼저, header\(컬럼\)을 정한다.
-
-1. header에 타입을 정한다. \(컬럼타입\) -- 0번째, row는 1번째부터
-2. JSP가 while\(rs.next\)를 사용해 커서가 true인 동안에 row에 data를 set한다.
 
