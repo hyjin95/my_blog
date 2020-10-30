@@ -2,7 +2,7 @@
 description: 2020.10.30 - 53일차
 ---
 
-# 53 Days - dataset:xml-json,
+# 53 Days - dataset:xml-json, 페이지이동3, JSP-&gt;Servlet, nexacro grid,
 
 ### 사용 프로그램
 
@@ -33,7 +33,9 @@ description: 2020.10.30 - 53일차
 * WAS서버 제품이 jsp파일이 실행될때 jsp-api.jar파일을 이용해 jsp파일을 xxx.jsp.java로 변환시킨다.
 * 그 이후에 servlet-api.jar파일을 이용해 xxx.jsp.java를 xxx.class로 변환시킨다.
 
-### 페이지이동
+## 페이지이동3
+
+### 페이지 이동 방법
 
 1. **location.href = xxx.jsp - JS에서 사용**
 2. **&lt;form action = xxx.jsp \|\| xxx.do&gt; - Tag에서 사용**
@@ -41,14 +43,14 @@ description: 2020.10.30 - 53일차
 4. java제공, sendRedirect\("URL"\) - JSP에서 사용
 5. fetch
 
-{% page-ref page="../untitled-14/" %}
-
-{% page-ref page="../untitled-16/" %}
-
 ### 요청 처리 - jsp, servlet
 
 * JSP가 요청을 받았을떄 - 구조 : 화면 - 로직 - 재사용성이 떨어진다. - 반복코드가 많아 일괄처리에 불리함
 * Servlet이 요청을 받았을떄 - 
+
+{% page-ref page="../untitled-14/" %}
+
+{% page-ref page="../untitled-16/" %}
 
 ## nexacro - DatsSet
 

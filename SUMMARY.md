@@ -200,7 +200,7 @@
   * [52 Days - combobox, table-style, API활용, nexacro화면, nexa-Eclipse연동, 내장객체,](1-days/untitled-17/README.md)
     * [empManager - combobox추가](1-days/untitled-17/empmanager-combobox.md)
     * [printJson.java - DB연동, JSON형식 출력하기](1-days/untitled-17/printjson.java-db-json.md)
-  * [53 Days - dataset:xml-json,](1-days/untitled-18/README.md)
+  * [53 Days - dataset:xml-json, 페이지이동3, JSP-&gt;Servlet, nexacro grid,](1-days/untitled-18/README.md)
     * [nexa - xml \|\| Servlet 파일로 dataset 전송](1-days/untitled-18/nexa-xml-dataset.md)
   * [Untitled](1-days/untitled-19.md)
 
