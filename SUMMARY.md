@@ -201,6 +201,6 @@
     * [empManager - combobox추가](1-days/untitled-17/empmanager-combobox.md)
     * [printJson.java - DB연동, JSON형식 출력하기](1-days/untitled-17/printjson.java-db-json.md)
   * [53 Days - dataset:xml-json,](1-days/untitled-18/README.md)
-    * [nexa - xml로 dataset 전송하기](1-days/untitled-18/nexa-xml-dataset.md)
+    * [nexa - xml \|\| Servlet 파일로 dataset 전송](1-days/untitled-18/nexa-xml-dataset.md)
   * [Untitled](1-days/untitled-19.md)
 

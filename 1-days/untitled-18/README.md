@@ -64,7 +64,11 @@ description: 2020.10.30 - 53일차
 5. SQL을 작성하고 쿼리를 실행하여 처리 결과를 ResultSet 객체에 담는다. - while\(re.next\)로 커서가 true인 동안 data를 set한다.
 6. Dataset을 PlatformData에 추가 -&gt; client화면으로 전송
 
-### nexa - xml로 dataset 전송하기
+### nexa - xml \|\| Servlet 파일로 dataset 전송
 
-### nexa - Servlet으로 dataset전송하기
+* JSP는 URL을 갖고있어 URL로 바로 호출이 가능하다.  Servlet은 URL을 갖고있지 않아 web.xml 배치서술자에서 url-pattern을 부여해주어 그 url로 접근한다.
+
+{% page-ref page="nexa-xml-dataset.md" %}
+
+후기 : 
 
