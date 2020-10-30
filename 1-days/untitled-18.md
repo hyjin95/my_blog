@@ -26,5 +26,17 @@ description: 2020.10.30 - 53일차
 6. **MVC패턴** - 화면 : View, 로직: Model, Controller
 7. **Spring F/W** - 인스턴스화, 객체주입, 의존성주입, 클래스 쪼개기를 이용해 개발자가 조립하던 것을 해준다. - 한 프레임워크가 조립해주므로 통일감있다.
 
-## nexacro - Eclipse
+## nexacro - DatsSet
+
+### 서비스 구성도
+
+### nexa의 Grid에 DataSet이 담기는 순서
+
+1. JSP조회 서비스 페이지 생성 --JSP에서 진행
+2. Get방식으로 전송된 조회조건값을 받는다. getParameter
+3. 조회 결과를 보낼 PlatformData를 생성
+4. 데이터베이스 설정 정보를 작성
+5. 조회된 결과 ResultSet 데이타를 Dataset 형태로 변환 - nexacro는 자체 DataSet타입으로 Java를 사용한다.
+6. SQL을 작성하고 쿼리를 실행하여 처리 결과를 ResultSet 객체에 담는다. - while\(re.next\)로 커서가 true인 동안 data를 set한다.
+7. Dataset을 PlatformData에 추가 -&gt; client화면으로 전송
 
