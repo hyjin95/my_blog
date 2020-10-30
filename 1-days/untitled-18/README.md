@@ -93,7 +93,7 @@ description: 2020.10.30 - 53일차
 
 ### 순서
 
-1. web.xml배치 서술자에 servlet파일 클래스명, url-pattern생성
+1. web.xml배치 서술자에 servlet파일 클래스명, url-pattern 매핑
 2. java class로 HttpServlet을 상속받는 서블릿파일 생성
 3. &lt;%@ page import %&gt;를 import한다. - ctrl + shift + o
 
