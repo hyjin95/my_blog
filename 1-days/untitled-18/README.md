@@ -112,6 +112,7 @@ description: 2020.10.30 - 53일차
 1. web.xml배치 서술자에 servlet파일 클래스명, url-pattern 매핑
 2. java class로 superclass - HttpServlet을 상속받는 서블릿파일 선언 - 온라인 서버 제공을 위해 WAS의 req, res를 부여받는 Servlet에게서 객체를 주입받아 사용한다.
 3. &lt;%@ page import %&gt;를 import한다. - ctrl + shift + o
+4. API를 가져다 활용한다.
 
 {% page-ref page="nexa-xml-dataset.md" %}
 
