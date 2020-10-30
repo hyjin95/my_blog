@@ -28,17 +28,19 @@
 ## Nexacro
 
 ```java
-this.Edit00_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
-{
-	
+this.Edit00_onchanged = function(	
+													obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{	
 };
 
-this.btn_search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+this.btn_search_onclick = function(
+													obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	alert("조회 호출성공");
 	//page에대한(화면)이름, URL::jsp파일이름, 입력값(JSP파일안의 입력을 받는 변수), 화면출력값,"", 콜백함수이름
 	//"값"에서 "를 빼면 변수 취급해버린다. 값X
-	this.transaction("empSearch", "SvcURL::llll.emp", "in_emp=ds_emp", "ds_emp=out_emp","","fn_callback");
+	this.transaction("empSearch", "SvcURL::/emp/empManagerAction.do"
+						, "in_emp=ds_emp", "ds_emp=out_emp","","fn_callback");
 };
 
 this.fn_callback = function(svcID,errCD, errMSG) {
@@ -181,7 +183,7 @@ pRes.sendData();
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>select_emp</servlet-name>
-		<url-pattern>*.emp</url-pattern><!-- url -->
+		<url-pattern>/emp/empManagerAction.do</url-pattern><!-- url -->
 		<!-- 웹서비스를 할때에 자바를 인스턴스화할 수 없으므로 url로 접근한다. 이를 위해 xml dd파일에 url을 생성해야한다. -->
 	</servlet-mapping>	
 </web-app>

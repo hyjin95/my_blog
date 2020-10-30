@@ -66,7 +66,7 @@ description: 2020.10.30 - 53일차
 
 ### nexa - xml \|\| Servlet 파일로 dataset 전송
 
-* html\(화면\)은 처리주체가 브라우저이고, 브라우저는 URL로 파일을 호출한다. - main메서드는 사용하지 않는다. main메서드=local
+* html\(화면\)은 처리주체가 브라우저이고, 브라우저는 URL로 파일을 호출한다. - main메서드는 사용하지 않는다. main메서드\(exe파일\)=local - 온라인 통신을 위해 http프로토콜을 사용한다. = URL
 * 브라우저가 가장 먼저 스캔하는 것 = web.xml
 * JSP는 URL을 갖고있어 URL로 바로 호출이 가능하다. Servlet은 URL을 갖고있지 않아 web.xml 배치서술자에서 url-pattern을 부여해줘 그 url로 접근한다.
 
