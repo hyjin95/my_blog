@@ -39,6 +39,12 @@ description: 2020.10.30 - 53일차
 
 ![](../.gitbook/assets/.png%20%2811%29.png)
 
+### html과 xml의 dataset
+
+* UI솔루션 - xml기반 : 넥사크로 - JS기반\(HTML\) : easyUI, 부트스트랩
+* easyui, 부트스트랩의 DataSet = JSON - 자바코드로 DataSet을 JSON형식으로 만들어준다.
+* 넥사크로의 DataSet = xml - 자바코드로 DataSet을 xml형식으로 만들어준다.
+
 ## nexa의 Grid에 DataSet이 담기
 
 ### nexacro UI
