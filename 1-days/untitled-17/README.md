@@ -220,6 +220,11 @@ description: 2020.10.29 - 52일차
 3. 이제 nexacro에서 작업하고, 저장한뒤 Generate - Application을 클릭하면 Eclipse와 동기화된다.
 4. 넥사크로 라이센스를 Eclipse 프로젝트 파일의 WEB\_INF파일의 calsses파일에 배포한다. 
 
+### nexa - Eclipse Jsp파일 호출하기
+
+* Nexacro - TypeDefinition - Services PrefixID 추가\(SvcURL\)
+* URL에 Eclipse에서 작성한 JSP파일 경로 작성 - ok  - URL : ip, port번호/프로젝트파일이름/파일이름
+
 ## PrintJson - DB연결, JSON, JSP
 
 ### Web.xml
