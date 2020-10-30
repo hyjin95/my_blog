@@ -49,3 +49,5 @@ description: 2020.10.30 - 53일차
 5. SQL을 작성하고 쿼리를 실행하여 처리 결과를 ResultSet 객체에 담는다. - while\(re.next\)로 커서가 true인 동안 data를 set한다.
 6. Dataset을 PlatformData에 추가 -&gt; client화면으로 전송
 
+* jsp가 xml파일을 생성한다. 
+
