@@ -18,7 +18,7 @@ description: 2020.11.02 - 54일차
 * html 역할 : 보이는 화면, 단방향\(정적\)
 * JS    역할 : 보이지않는 부분, html보완, 양방향\(동적\) - html과 JS는 상호보완적 관계 - 양방향 서비스를 하려면 제어문이 필수\(if, for\)
 * data - 자료 : 정제되지 않은, 방대한 자료 - 정보 : 정제된, 필요한 자료
-* 화면에 data를 어떻게 반영할 것인가 - dataSet, Json, xml, Servlet
+* 화면에 data를 어떻게 반영할 것인가 - dataSet, Json, xml, Servlet - easyui의 data-options = "url:'여기' " - 여기 : php, json, jsp, xml, ....
 
 ### servlet과 jsp
 
