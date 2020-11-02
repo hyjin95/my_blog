@@ -17,6 +17,7 @@ description: 2020.11.02 - 54일차
 1. 무엇을, 어떻게 전술세우기
 2. 역할 생각하기
 3. 교집합 찾아보기
+4. 관계 생각하기
 
 ### data와 html
 
@@ -33,4 +34,10 @@ description: 2020.11.02 - 54일차
 * 클라이언트 요청 - servlet - 서버 - JSP - 클라이언트에게 응답
 * JSP는 html에 자바코드를 작성 - WAS를 상속
 * Servelt은 자바에 html코드를 작성 - JAVA에 상속
+
+### dataSet
+
+* \[{"id":1, "text":"test"}\]
+* 의미 있는 정보는 text 정보
+* id는 유일한 값으로 DB의 PK역할, JAVA의 멤버변수 역할과 같다. 
 
