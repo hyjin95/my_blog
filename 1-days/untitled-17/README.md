@@ -269,5 +269,5 @@ xml의 규칙 내에서 포트번호를 결정하고 프로젝트를 배치한�
 * Configuration.xml mybatis.jar, ojdbc6.jar, log4j.jar
 * 서블릿 등록시 Web.xml문서에서 읽는 순서는 url-pattern이 등록된 부분부터 먼저 읽고, 그 안에 등록된 서블릿이름으로 &lt;servlet&gt;태그를 찾는다. - 따라서 서블릿 이름을 서로 다르게 입력할 경우 에러 발생
 
-후기 : 
+후기 : 건조해..
 

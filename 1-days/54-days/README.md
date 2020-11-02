@@ -127,6 +127,7 @@ description: 2020.11.02 - 54일차
 * php, aspx, jsp, do, ...여러 타입의 페이지들이 올 수 있다. - do : servlet
 * 역할 - 화면 - dataSet : JSON, XML, String
 * dataSet - String은 비효율적이다. - XML : 열린태그, 닫힌태그를 동반해 무겁다. - **JSON** : xml보다 가벼워 빠르다. - 대용량처리가 가능
+* 사용할 테이터셋의 valueField에 따라 대문자, 소문자도 구분해야한다.
 
 ### dataSet
 
@@ -134,6 +135,7 @@ description: 2020.11.02 - 54일차
 * 자바의 int가 orcale의 number인것과 같이 타입이 달라 반드시 매칭작업이 필요하다. - JSON으로 할 것이다.
 * JSON이라면 dataSet을 고려할 필요가 없다.
 * XML이라면 dataSet을 고려해야만한다. - ex\) 넥사크로, Flex
+* DataSet은 data-options로 채워주기 전에는 비어있는 상태이다. - data-options에서 배정된 field에서 헤더를 사용해 가져오는 것 - &lt;th&gt;
 
 ### text-value Field
 
@@ -168,5 +170,63 @@ description: 2020.11.02 - 54일차
 
 ## deptno로 dname출력하기 - JSON, JSP
 
-후기 : 
+* 
+{% page-ref page="step1-getemplist.jsp-json-jsp.md" %}
+
+## empManagerA,C,D - comboboxAPI, 
+
+### 생각해보기
+
+![](../../.gitbook/assets/3%20%2836%29.png)
+
+* 검색분류에서 항목을 클릭시 서버에 넘어가는 값는 valueField의 값이고, 화면에 출력되는 내용은 textField값 일 것이다.
+* Atype은 html만, B타입은 html+JS, C타입은 JS로만 구현해서 비교해보자 - Btype은 재사용성, 독립성이 높아 유지보수 업무시에 유리하다. - Ctype은 화면 가독성이 떨어질 것이다.
+
+### 시점
+
+1. &lt;table&gt; dom구성 완료
+2. JS가 해당 table에 접근하여 이벤트 구현
+   1. &lt;head&gt;영역 : function A = 호출시, 행위 발생시
+   2. &lt;body&gt;영역 : ready\(function A\) = 브라우저 로딩 완료 후 자동 진행
+
+### API 활용하기
+
+```markup
+<input id="cb_search" class="easyui-combobox" data-options="
+        					valueField: 'cols',	textField: 'label'">
+```
+
+* 위 코드로 easyui-combobox class를 갖는 input태그에 valueField와 textField를 지정한다.
+* valueField는 실제로 넘어가는 값, textField는 화면에 보여지는 값
+
+```markup
+<script type="text/javascript">   
+   $(document).ready(function (){	 
+	  $("#cb_search").combobox({ //콤보박스 초기화 및 설정
+		  data:[
+			   {cols:'empno', label:'사원번호'}
+			  ,{cols:'ename', label:'사원이름'}
+			  ,{cols:'sal'  , label:'급여'}
+		  ]
+	  	 ,onSelect:function(rec){//보박스에서 선택했을떄 @param:object로서 row의 주소번지를 갖는다. row.empno, row.ename
+	  		alert('당신이 선택한 검색조건은 '+rec.cols);
+			var url = '../getEmpList.jsp?cols='+rec.cols;
+	  	 }
+	  });
+</script>
+```
+
+* data와 이벤트는 따로 분리하여 구현하는 것이 좋겠다. = JS
+* 브라우저 로딩 후 콤보박스에 기본 값을 직접 넣어주고 : data : \[  {필드명:'값', 필드명:'값, ...}, {....} ,...\]
+* onSelect이벤트로 선택시 이벤트를 실행한다.
+* onSelect가 실행하는 함수의 파라미터는 object로서, 해당 row의 주소번지를 갖는다. - row.empno, row.ename, ....
+* 위 함수를 활용해 11번에서 jsp파일로 조건으로 사용될 변수를 쿼리스트링으로 넘긴다.
+
+### 사용한 datagrid API
+
+![API](../../.gitbook/assets/4%20%2830%29.png)
+
+* 참고 : [http://jeasyui.com/tutorial/datagrid/datagrid12.php](http://jeasyui.com/tutorial/datagrid/datagrid12.php)
+
+후기 : API보는 법을 발전 시키자 영어공부도 해야겠는데...
 
