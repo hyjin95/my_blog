@@ -166,5 +166,7 @@ description: 2020.11.02 - 54일차
 * 이 때 맨 위의 white space가 들어가는 문제가 발생한다. 
 * web.xml 배치서술자 문서에 처리하면 jsp문서 모두에 대해 제거 일괄적용이 가능하다.
 
+## deptno로 dname출력하기 - JSON, JSP
+
 후기 : 
 
