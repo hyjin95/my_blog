@@ -145,7 +145,7 @@
 				 }
         	   ,{field:'status',width:60,align:'center',editor:{type:'checkbox',options:{on:'P',off:''}}}
            ]]
-	   	   ,onClickCell: onClickCell
+	   	     ,onClickCell: onClickCell
        	   ,onEndEdit: onEndEdit
         });
    });
@@ -161,5 +161,5 @@
 ```
 
 * API를 활용해 해당 row를 선택했을 때 부서번호 cell에 combobox를 구현해보자
-* 함수는 &lt;head&gt;영역으로 빼 구현한다.
+* 함수는 &lt;head&gt;영역으로 빼 구현한다. -&gt; 재사용성, 독립성
 

@@ -245,5 +245,7 @@ description: 2020.11.02 - 54일차
 
 * 참고 : [http://jeasyui.com/tutorial/datagrid/datagrid12.php](http://jeasyui.com/tutorial/datagrid/datagrid12.php)
 
+{% page-ref page="empmanagera-c-d-combobox.md" %}
+
 후기 : API보는 법을 발전 시키자 영어공부도 해야겠는데...
 
