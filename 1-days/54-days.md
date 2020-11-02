@@ -93,7 +93,7 @@ description: 2020.11.02 - 54일차
 * textField - 값으로 꺼내 보여줄 data 식별자 이름
 * ex&gt; valueField="DEPTNO", textField="DNAME" - 눈에 보여지는 data는 DNAME값 이다. - SELECT dname FROM dept WHERE deptno = ? -&gt; \#{deptno}
 
-### 사용
+### 어떤 프로그램을 사용할까? - JSP, Servlet
 
 * JSP : 모든 타입을 사용할 수 있다. mimetype을 작성하므로 해석하기 좋다. - &lt;%@ contentType=" / " %&gt;
 * Oracle을 경우해야하는 경우에는 무엇을 사용해야 할까?
