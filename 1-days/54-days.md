@@ -132,6 +132,8 @@ description: 2020.11.02 - 54일차
 
 * dataSet은 **별도의 타입**이 있으므로 타입을 생각해야한다.
 * 자바의 int가 orcale의 number인것과 같이 타입이 달라 반드시 매칭작업이 필요하다. - JSON으로 할 것이다.
+* JSON이라면 dataSet을 고려할 필요가 없다.
+* XML이라면 dataSet을 고려해야만한다. - ex\) 넥사크로, Flex
 
 ### text-value Field
 
