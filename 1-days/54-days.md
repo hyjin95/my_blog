@@ -149,5 +149,5 @@ description: 2020.11.02 - 54일차
 ### combobox에 data가져오기
 
 1. html combobox에 url : xxx.jsp설정
-2. xxx.jsp 생성 - mim타입 : application/json - oracle연동에 필요한 소스 import - 
+2. xxx.jsp 생성 - mim타입 : application/json - oracle연동에 필요한 소스 import - 데이터를 Map, List에 담아 Json형식으로 변환 - out.print로 단위테스트
 
