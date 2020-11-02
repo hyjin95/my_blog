@@ -12,3 +12,19 @@ description: 2020.11.02 - 54일차
 
 ## 복습
 
+### data와 html
+
+* 역할에 대해 생각해보자
+* html 역할 : 보이는 화면, 단방향\(정적\)
+* JS    역할 : 보이지않는 부분, html보완, 양방향\(동적\) - html과 JS는 상호보완적 관계 - 양방향 서비스를 하려면 제어문이 필수\(if, for\)
+* data - 자료 : 정제되지 않은, 방대한 자료 - 정보 : 정제된, 필요한 자료
+* 화면에 data를 어떻게 반영할 것인가 - dataSet, Json, xml, Servlet
+
+### servlet과 jsp
+
+* req, res내장객체를 서버로부터 주입받아 내장객체로 갖는다.
+* Servlet으로는 화면을 구현하는데 불편해 JSP가 탄생
+* 클라이언트 요청 - servlet - 서버 - JSP - 클라이언트에게 응답
+* JSP는 html에 자바코드를 작성 - WAS를 상속
+* Servelt은 자바에 html코드를 작성 - JAVA에 상속
+
