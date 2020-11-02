@@ -168,12 +168,29 @@ description: 2020.11.02 - 54일차
 * 이 때 맨 위의 white space가 들어가는 문제가 발생한다. 
 * web.xml 배치서술자 문서에 처리하면 jsp문서 모두에 대해 제거 일괄적용이 가능하다.
 
-## deptno로 dname출력하기 - JSON, JSP
+## deptno로 dname출력 - JSON, JSP, combobox
 
-* 
+![](../../.gitbook/assets/1%20%2855%29.png)
+
+```markup
+<input id="cc1" class="easyui-combobox" data-options="
+        valueField: 'DEPTNO',
+        textField: 'DNAME',
+        url: '../datagrid/dept.json',
+        onSelect: function(rec){
+            var url = '../getEmpList.jsp?deptno='+rec.DEPTNO;
+        }">
+```
+
+* API를 살펴보자
+* valueField는 실제로 선택된 값, textField는 보여지는 값이다. 
+* 나중에 검색조건으로 사용하기위해 Jsp, Servlet파일로 넘어가는 값은 valueField의 값일 것이다.
+* json문서를 만들어 data를 넣어준다.
+* onSelect, 클릭시 이벤트를 구현할 수 있다. - 6번은 클릭시 jsp문서에게 쿼리스트링으로 값을 넘긴다. - jsp문서에서 request.getParameter로 해당 값을 받아 조건으로 사용할 수 있을 것이다.
+
 {% page-ref page="step1-getemplist.jsp-json-jsp.md" %}
 
-## empManagerA,C,D - comboboxAPI, 
+## empManagerA,C,D - combobox심화
 
 ### 생각해보기
 
