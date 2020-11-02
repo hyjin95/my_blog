@@ -87,5 +87,9 @@ description: 2020.11.02 - 54일차
 * 역할 - 화면 - dataSet : JSON, XML, String
 * dataSet - String은 비효율적이다. - XML : 열린태그, 닫힌태그를 동반해 무겁다. - **JSON** : xml보다 가벼워 빠르다. - 대용량처리가 가능
 
-### 
+### text-value Field
+
+* valueField - pk, 식별자 이름
+* textField - 값으로 꺼내 보여줄 data 식별자 이름
+* ex&gt; valueField="DEPTNO", textField="DNAME" - 눈에 보여지는 data는 DNAME값들 이다.
 
