@@ -124,7 +124,7 @@
            ,columns:[[
         	   	{field:'empno'   , title:'사원번호', width:100, editor:'text'}
         	   ,{field:'ename'	 , title:'사원이름', width:100, editor:'text'}
-        	   ,{field:'job'	 , title:'직급'   , width:100, editor:'text'}
+        	   ,{field:'job'	   , title:'직급'   , width:100, editor:'text'}
         	   ,{field:'mgr'     , title:'그룹번호', width:100, editor:'text'}
         	   ,{field:'hiredate', title:'입사일자', width:100, editor:'text'}
         	   ,{field:'sal'     , title:'급여'   , width:100, editor:'text'}
