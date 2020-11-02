@@ -2,6 +2,10 @@
 
 ## step1 - Atype, html
 
+![combobox](../../.gitbook/assets/1%20%2855%29.png)
+
+![&#xAC1C;&#xBC1C;&#xBD80; &#xC120;&#xD0DD;&#xC2DC;](../../.gitbook/assets/2%20%2843%29.png)
+
 ```markup
 <!DOCTYPE html>
 <html>
@@ -17,8 +21,8 @@
 </head>
 <body>
 <input id="cc1" class="easyui-combobox" data-options="
-        valueField: 'DNAME',
-        textField: 'DEPTNO',
+        valueField: 'DEPTNO',
+        textField: 'DNAME',
         url: '../datagrid/dept.json',
         onSelect: function(rec){
             var url = '../getEmpList.jsp?deptno='+rec.DEPTNO;
@@ -103,4 +107,6 @@
 	out.print(temp);
 %>
 ```
+
+
 
