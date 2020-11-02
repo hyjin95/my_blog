@@ -2,7 +2,7 @@
 description: 2020.11.02 - 54일차
 ---
 
-# 54 Days -
+# 54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet
 
 ### 사용 프로그램
 
@@ -86,7 +86,7 @@ description: 2020.11.02 - 54일차
 * 역할을 분리하여 효율적이 되었다.
 * JS코드가 필요하다.
 
-### url 역할, 어떤 dataSet을 사용할까? - xml, JSON
+### url 역할, xml,JSON : 어떤 dataSet을 사용할까?
 
 <table>
   <thead>
@@ -141,7 +141,7 @@ description: 2020.11.02 - 54일차
 * textField - 값으로 꺼내 보여줄 data 식별자 이름
 * ex&gt; valueField="DEPTNO", textField="DNAME" - 눈에 보여지는 data는 DNAME값 이다. - SELECT dname FROM dept WHERE deptno = ? -&gt; \#{deptno}
 
-### 어떤 프로그램을 사용할까? - JSP, Servlet
+### JSP, Servlet : 어떤 프로그램을 사용할까?
 
 * JSP : 모든 타입을 사용할 수 있다. mimetype을 작성하므로 해석하기 좋다. - &lt;%@ contentType=" / " %&gt;
 * Oracle을 경유해야하는 경우에는 무엇을 사용해야 할까? - 서블릿 - Oracle을 경유한다는 것은 JAVA코드를 사용한다는 것 - 서블릿으로 데이터를 담고 -&gt; JSP로 넘겨서 JSP가 화면에 응답을 출력해야한다. - senddirect : get방식, 유지되지 않는다  - forward를 사용하면 JAVA와 JSP가 서로 다른 소스지만 유지할 수 있다.
