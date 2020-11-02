@@ -42,5 +42,22 @@ description: 2020.11.02 - 54일차
 * 의미 있는 정보는 text 정보
 * id는 유일한 값으로 DB의 PK역할, JAVA의 멤버변수 역할과 같다. 
 
-## 필기
+## easyui - combobox
+
+### Atype
+
+* html
+
+### Btype
+
+* html + js
+
+### Ctype
+
+* js
+
+### A-B차이
+
+* UI 가독성
+* 단방향, 양방향 서비스에 어느 타입이 더 유리한지
 
