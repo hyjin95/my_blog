@@ -42,6 +42,11 @@ description: 2020.11.02 - 54일차
 * 의미 있는 정보는 text 정보
 * id는 유일한 값으로 DB의 PK역할, JAVA의 멤버변수 역할과 같다. 
 
+### session, cookie
+
+* session은 시간, cookie는 보안에 취약하다.
+* 다른 방법으로 data를 유지할 수 있을까? - JSP
+
 ## easyui - combobox
 
 ### A, B, C type
