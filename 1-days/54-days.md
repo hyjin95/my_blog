@@ -85,7 +85,7 @@ description: 2020.11.02 - 54일차
 
 * php, aspx, jsp, do, ...여러 타입의 페이지들이 올 수 있다.
 * 역할 - 화면 - dataSet : JSON, XML, String
-* dataSet - String은 비효율적이다. - XML : 열린태그, 닫힌태그를 동반해 무겁다. - JSON : xml보다 가볍다.
+* dataSet - String은 비효율적이다. - XML : 열린태그, 닫힌태그를 동반해 무겁다. - **JSON** : xml보다 가벼워 빠르다. - 대용량처리가 가능
 
 ### 
 
