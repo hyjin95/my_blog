@@ -81,5 +81,11 @@ description: 2020.11.02 - 54일차
 * 역할을 분리하여 효율적이 되었다.
 * JS코드가 필요하다.
 
+### url 역할
+
+* php, aspx, jsp, do, ...여러 타입의 페이지들이 올 수 있다.
+* 역할 - 화면 - dataSet : JSON, XML, String
+* dataSet - String은 비효율적이다. - 
+
 ### 
 
