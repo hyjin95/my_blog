@@ -92,6 +92,11 @@ description: 2020.11.02 - 54일차
 * 역할 - 화면 - dataSet : JSON, XML, String
 * dataSet - String은 비효율적이다. - XML : 열린태그, 닫힌태그를 동반해 무겁다. - **JSON** : xml보다 가벼워 빠르다. - 대용량처리가 가능
 
+### dataSet
+
+* dataSet은 **별도의 타입**이 있으므로 타입을 생각해야한다.
+* 자바의 int가 orcale의 number인것과 같이 타입이 달라 반드시 매칭작업이 필요하다.
+
 ### text-value Field
 
 * valueField - pk, 식별자 이름, 조건으로 사용할 값 - \#{deptno}로 넘어가는 값
@@ -102,4 +107,9 @@ description: 2020.11.02 - 54일차
 
 * JSP : 모든 타입을 사용할 수 있다. mimetype을 작성하므로 해석하기 좋다. - &lt;%@ contentType=" / " %&gt;
 * Oracle을 경유해야하는 경우에는 무엇을 사용해야 할까? - 서블릿 - Oracle을 경유한다는 것은 JAVA코드를 사용한다는 것 - 서블릿으로 데이터를 담고 -&gt; JSP로 넘겨서 JSP가 화면에 응답을 출력해야한다. - senddirect : get방식, 유지되지 않는다  - forward를 사용하면 JAVA와 JSP가 서로 다른 소스지만 유지할 수 있다.
+
+### combobox에 data가져오기
+
+1. html combobox에 url : xxx.jsp설정
+2. xxx.jsp 생성 - mim타입 : application/json - oracle연동에 필요한 소스 import - 
 
