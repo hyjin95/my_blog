@@ -55,3 +55,29 @@ description: 2020.11.02 - 54일차
 * UI 가독성
 * 단방향, 양방향 서비스에 어느 타입이 더 유리한지
 
+### combobox - 기본형태1
+
+```markup
+<input id="cc1" class="easyui-combobox" data-options="
+        valueField: 'id',
+        textField: 'text',
+        url: 'get_data1.php',
+        onSelect: function(rec){
+            var url = 'get_data2.php?id='+rec.id;
+            $('#cc2').combobox('reload', url);
+        }">
+```
+
+* html태그 안에 이벤트, url, 속성값들이 있어 JS코드가 필요하지 않다.
+* body코드가 길어져 지저분해진다.
+* html, JS의 역할 분리가 없어 업무분담을 할 수 없다.
+
+### combobox - 기본형태2
+
+```markup
+<input id="cc2" class="easyui-combobox" data-options="valueField:'id',textField:'text'">
+```
+
+* 역할을 분리하여 효율적이 되었다.
+* JS코드가 필요하다.
+
