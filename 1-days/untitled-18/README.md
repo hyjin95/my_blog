@@ -116,5 +116,5 @@ description: 2020.10.30 - 53일차
 
 {% page-ref page="nexa-xml-dataset.md" %}
 
-후기 : 
+후기 : 삼전 주식 샀더니 떨어졋다...지금 팔건 아니지만...ㅠㅠ
 
