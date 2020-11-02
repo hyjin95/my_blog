@@ -89,7 +89,7 @@ description: 2020.11.02 - 54일차
 
 ### text-value Field
 
-* valueField - pk, 식별자 이름
+* valueField - pk, 식별자 이름, 조건으로 사용할 값 - \#{deptno}로 넘어가는 값
 * textField - 값으로 꺼내 보여줄 data 식별자 이름
-* ex&gt; valueField="DEPTNO", textField="DNAME" - 눈에 보여지는 data는 DNAME값들 이다.
+* ex&gt; valueField="DEPTNO", textField="DNAME" - 눈에 보여지는 data는 DNAME값 이다. - SELECT dname FROM dept WHERE deptno = ? -&gt; \#{deptno}
 
