@@ -2,7 +2,7 @@
 description: 2020.11.02 - 54일차
 ---
 
-# 54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet
+# 54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet, JSP공백제거,
 
 ### 사용 프로그램
 
@@ -150,4 +150,11 @@ description: 2020.11.02 - 54일차
 
 1. html combobox에 url : xxx.jsp설정
 2. xxx.jsp 생성 - mim타입 : application/json - oracle연동에 필요한 소스 import - 데이터를 Map, List에 담아 Json형식으로 변환 - out.print로 단위테스트
+
+### JSP공백제거
+
+* JSP는 요구에 따라 JSON의 역할 혹은, XML의 역할도 자주 담당한다. 
+* 이 때 맨 위의 white space가 들어가는 문제가 발생한다. 
+* 이것을 제거하기 위해서는..... web.xml문서에 처리하면 jsp문서 모두에 대해 일괄적용이 가능
+* web.xml 배치서술자 파일에 jsp 파일에 대한 일괄적용이 가능
 

@@ -202,6 +202,6 @@
     * [printJson.java - DB연동, JSON형식 출력하기](1-days/untitled-17/printjson.java-db-json.md)
   * [53 Days - dataset:xml-json, 페이지이동3, JSP-&gt;Servlet, nexacro grid,](1-days/untitled-18/README.md)
     * [nexa - xml \|\| Servlet 파일로 dataset 전송](1-days/untitled-18/nexa-xml-dataset.md)
-  * [54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet](1-days/54-days.md)
+  * [54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet, JSP공백제거,](1-days/54-days.md)
   * [Untitled](1-days/untitled-19.md)
 
