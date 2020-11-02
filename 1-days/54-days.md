@@ -88,6 +88,42 @@ description: 2020.11.02 - 54일차
 
 ### url 역할, 어떤 dataSet을 사용할까? - xml, JSON
 
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center">JSON</th>
+      <th style="text-align:center">XML</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center">DataSet &#xACE0;&#xB824; X</td>
+      <td style="text-align:center">
+        <p>DataSet &#xACE0;&#xB824; O</p>
+        <p>(&#xCF54;&#xB4DC;&#xAC00; &#xCD94;&#xAC00; &#xB41C;&#xB2E4;.)</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <p>JSON API &#xCD94;&#xAC00; O</p>
+        <p>(google.gson)</p>
+      </td>
+      <td style="text-align:center">&#xBCC4;&#xB3C4; API&#xC81C;&#xACF5;, &#xCD94;&#xAC00;X</td>
+    </tr>
+    <tr>
+      <td style="text-align:center">
+        <p>&#xACF5;&#xAC04;&#xD655;&#xBCF4; &#xC5C6;&#xC774;</p>
+        <p>Map.put &#xBC14;&#xB85C; &#xB2F4;&#xAE30;</p>
+      </td>
+      <td style="text-align:center">
+        <p>dataSet&#xC774; &#xC874;&#xC7AC;&#xD558;&#xBBC0;&#xB85C;</p>
+        <p><b>addRow</b>&#xAC00; &#xBC18;&#xB4DC;&#xC2DC; &#xC6B0;&#xC120;</p>
+        <p>(&#xACF5;&#xAC04;&#xD655;&#xBCF4;)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 * php, aspx, jsp, do, ...여러 타입의 페이지들이 올 수 있다. - do : servlet
 * 역할 - 화면 - dataSet : JSON, XML, String
 * dataSet - String은 비효율적이다. - XML : 열린태그, 닫힌태그를 동반해 무겁다. - **JSON** : xml보다 가벼워 빠르다. - 대용량처리가 가능
@@ -95,7 +131,7 @@ description: 2020.11.02 - 54일차
 ### dataSet
 
 * dataSet은 **별도의 타입**이 있으므로 타입을 생각해야한다.
-* 자바의 int가 orcale의 number인것과 같이 타입이 달라 반드시 매칭작업이 필요하다.
+* 자바의 int가 orcale의 number인것과 같이 타입이 달라 반드시 매칭작업이 필요하다. - JSON으로 할 것이다.
 
 ### text-value Field
 
