@@ -83,7 +83,7 @@ description: 2020.11.02 - 54일차
 
 ### url 역할
 
-* php, aspx, jsp, do, ...여러 타입의 페이지들이 올 수 있다.
+* php, aspx, jsp, do, ...여러 타입의 페이지들이 올 수 있다. - do : servlet
 * 역할 - 화면 - dataSet : JSON, XML, String
 * dataSet - String은 비효율적이다. - XML : 열린태그, 닫힌태그를 동반해 무겁다. - **JSON** : xml보다 가벼워 빠르다. - 대용량처리가 가능
 
@@ -92,4 +92,9 @@ description: 2020.11.02 - 54일차
 * valueField - pk, 식별자 이름, 조건으로 사용할 값 - \#{deptno}로 넘어가는 값
 * textField - 값으로 꺼내 보여줄 data 식별자 이름
 * ex&gt; valueField="DEPTNO", textField="DNAME" - 눈에 보여지는 data는 DNAME값 이다. - SELECT dname FROM dept WHERE deptno = ? -&gt; \#{deptno}
+
+### 사용
+
+* JSP : 모든 타입을 사용할 수 있다. mimetype을 작성하므로 해석하기 좋다. - &lt;%@ contentType=" / " %&gt;
+* Oracle을 경우해야하는 경우에는 무엇을 사용해야 할까?
 
