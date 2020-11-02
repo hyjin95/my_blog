@@ -18,8 +18,9 @@ description: 2020.11.02 - 54일차
 2. 역할 생각하기
 3. 교집합 찾아보기
 4. 관계 생각하기
+5. 이벤트 중심의 코드분석
 
-### data와 html
+### data와 html - 2
 
 * 역할에 대해 생각해보자
 * html 역할 : 보이는 화면, 단방향\(정적\)
@@ -27,7 +28,7 @@ description: 2020.11.02 - 54일차
 * data - 자료 : 정제되지 않은, 방대한 자료 - 정보 : 정제된, 필요한 자료
 * 화면에 data를 어떻게 반영할 것인가 - dataSet, Json, xml, Servlet - easyui의 data-options = "url:'여기' " - 여기 : php, json, jsp, xml, ....
 
-### servlet과 jsp
+### servlet과 jsp - 3,4
 
 * req, res내장객체를 서버로부터 주입받아 내장객체로 갖는다.
 * Servlet으로는 화면을 구현하는데 불편해 JSP가 탄생
@@ -40,4 +41,6 @@ description: 2020.11.02 - 54일차
 * \[{"id":1, "text":"test"}\]
 * 의미 있는 정보는 text 정보
 * id는 유일한 값으로 DB의 PK역할, JAVA의 멤버변수 역할과 같다. 
+
+## 필기
 
