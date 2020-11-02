@@ -44,17 +44,11 @@ description: 2020.11.02 - 54일차
 
 ## easyui - combobox
 
-### Atype
+### A, B, C type
 
-* html
-
-### Btype
-
-* html + js
-
-### Ctype
-
-* js
+* A : html
+* B : html + js
+* C : js
 
 ### A-B차이
 
