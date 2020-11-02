@@ -153,8 +153,18 @@ description: 2020.11.02 - 54일차
 
 ### JSP공백제거
 
+```markup
+<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<trim-directive-whitespaces>true</trim-directive-whitespaces>
+		</jsp-property-group>
+	</jsp-config>
+```
+
 * JSP는 요구에 따라 JSON의 역할 혹은, XML의 역할도 자주 담당한다. 
 * 이 때 맨 위의 white space가 들어가는 문제가 발생한다. 
-* 이것을 제거하기 위해서는..... web.xml문서에 처리하면 jsp문서 모두에 대해 일괄적용이 가능
-* web.xml 배치서술자 파일에 jsp 파일에 대한 일괄적용이 가능
+* web.xml 배치서술자 문서에 처리하면 jsp문서 모두에 대해 제거 일괄적용이 가능하다.
+
+후기 : 
 
