@@ -81,7 +81,7 @@ description: 2020.11.02 - 54일차
 * 역할을 분리하여 효율적이 되었다.
 * JS코드가 필요하다.
 
-### url 역할
+### url 역할, 어떤 dataSet을 사용할까? - xml, JSON
 
 * php, aspx, jsp, do, ...여러 타입의 페이지들이 올 수 있다. - do : servlet
 * 역할 - 화면 - dataSet : JSON, XML, String
@@ -96,5 +96,5 @@ description: 2020.11.02 - 54일차
 ### 어떤 프로그램을 사용할까? - JSP, Servlet
 
 * JSP : 모든 타입을 사용할 수 있다. mimetype을 작성하므로 해석하기 좋다. - &lt;%@ contentType=" / " %&gt;
-* Oracle을 경우해야하는 경우에는 무엇을 사용해야 할까?
+* Oracle을 경유해야하는 경우에는 무엇을 사용해야 할까? - 서블릿 - Oracle을 경유한다는 것은 JAVA코드를 사용한다는 것 - 서블릿으로 데이터를 담고 -&gt; JSP로 넘겨서 JSP가 화면에 응답을 출력해야한다. - senddirect : get방식, 유지되지 않는다  - forward를 사용하면 JAVA와 JSP가 서로 다른 소스지만 유지할 수 있다.
 
