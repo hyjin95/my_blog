@@ -2,7 +2,7 @@
 description: 2020.11.02 - 54일차
 ---
 
-# 54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet, JSP공백제거,
+# 54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet, JSP공백제거, combobox심화
 
 ### 사용 프로그램
 

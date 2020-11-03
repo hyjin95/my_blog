@@ -202,7 +202,7 @@
     * [printJson.java - DB연동, JSON형식 출력하기](1-days/untitled-17/printjson.java-db-json.md)
   * [53 Days - dataset:xml-json, 페이지이동3, JSP-&gt;Servlet, nexacro grid,](1-days/untitled-18/README.md)
     * [nexa - xml \|\| Servlet 파일로 dataset 전송](1-days/untitled-18/nexa-xml-dataset.md)
-  * [54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet, JSP공백제거,](1-days/54-days/README.md)
+  * [54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet, JSP공백제거, combobox심화](1-days/54-days/README.md)
     * [step1, getEmpList.jsp - JSON, JSP](1-days/54-days/step1-getemplist.jsp-json-jsp.md)
     * [empManagerA,C,D - combobox심화](1-days/54-days/empmanagera-c-d-combobox.md)
   * [55 Days -](1-days/untitled-20.md)
