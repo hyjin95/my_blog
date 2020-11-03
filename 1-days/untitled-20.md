@@ -99,6 +99,11 @@ $("#cb_search").combobox({
 * request : 요청, get, forward - 타입 변수 = request.getParameter\("name"\) --리턴타입 고려 - JSP, Servlet에서 전송된 요청을 듣기 할떄 사용한다. - 서버가 들은 것을 개발자가 가져와 사용하는 것
 * response : 응답
 
+## 페이지 이동4
+
+* 
+{% page-ref page="untitled-16/" %}
+
 ## JSP 사용
 
 ## Servlet 사용
