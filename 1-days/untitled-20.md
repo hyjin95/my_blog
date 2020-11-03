@@ -60,3 +60,15 @@ $("#cb_search").combobox({
 * request : 요청, get, forward - 타입 변수 = request.getParameter\("name"\) --리턴타입 고려 - JSP, Servlet에서 전송된 요청을 듣기 할떄 사용한다. - 서버가 들은 것을 개발자가 가져와 사용하는 것
 * response : 응답
 
+### Server
+
+![](../.gitbook/assets/1%20%2856%29.png)
+
+* 서버가 바라보고있는 프로젝트들
+* 해당 프로젝트가 갖고있는 jar파일과 소스들을 사용해 프로젝트를 읽어 실행한다.
+* web.xml을 먼저 스캔하고, 브라우저에게 URL을 요청\(request\)한다.
+
+## JSP 사용
+
+## Servlet 사용
+
