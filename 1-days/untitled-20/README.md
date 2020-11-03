@@ -109,8 +109,9 @@ $("#cb_search").combobox({
 
 ### 페이지 이동4
 
-1. location.href = get방식 - location은 JS가 제공하는 Object
-2. request에 setAttribute를 이용해 값을 담아 request scope를 이용한다. - setAttribute\("이름", 값\)
+1. location.href = get방식 - location은 JS가 제공하는 Object - 페이지 이동이 일어난다.
+   1. String msg = new String\(" "\) - 
+   2. request에 setAttribute를 이용해 값을 담아 request scope를 이용한다. - setAttribute\("이름", 값\) - URL변화없이 내부적으로 페이지 이동이 일어난다.
 
 ### location.href
 
@@ -122,6 +123,11 @@ $("#cb_search").combobox({
 
 * request.setAttribute\("이름", 값\)
 * Object를 담을 수 있다. - List, 소나타, Map, ...
+
+### session
+
+* 공간이 작고 휘발성이다. - 대용량 불가능, 캐시 메모리에 저장되므로 용량이 많으면 터지거나 느려진다.
+* 서버에서 관리하므로 개발자가 마음대로 사용할 수 없다.
 
 ### 요청, 출력 - 다른페이지
 
