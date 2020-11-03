@@ -141,7 +141,5 @@ $("#cb_search").combobox({
 
 {% page-ref page="../untitled-16/" %}
 
-## JSP 사용
-
-## Servlet 사용
+후기 : 
 
