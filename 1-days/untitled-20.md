@@ -35,5 +35,10 @@ $("#cb_search").combobox({
 * 콤보박스 옆에 textbox를 만들어 사용자에게서 비교할 대상이 되는 값을 받아와야 할 것이다. - WHERE cols = textbox입력값
 * combobox에서 실제로 넘어가는 값은 valueField, 사용자에게 보여지는 값은 textField이다. - 넘어오는 data는 실제로 DB에 있는 컬럼명이여야 하고, 사용자에게는 text형태로 정의된 직관적인 값이여야 하기 때문이다.
 
+### 병합
+
+* 가로병합 : colspan = 병합할 셀 수
+* 세로병합 : rowspan = 병합할 셀 수
+
 
 
