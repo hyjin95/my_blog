@@ -101,6 +101,10 @@ $("#cb_search").combobox({
 
 ### SQL 화면 없이 단위테스트 - 쿼리스트링
 
+* Oracle에서 String은 ' ' 으로 인식한다. - cols=empno&keyword=7566 가능  - cols=empno&keyword=SMITH 불가능, 조건이 둘다 만족하지 않는다. - cols=ename&keyword='SMITH' 가능
+
+{% page-ref page="sql.md" %}
+
 ## JSP 사용
 
 ## Servlet 사용
