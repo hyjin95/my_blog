@@ -2,7 +2,7 @@
 description: 2020.11.02 - 55일차
 ---
 
-# 55 Days - combo-searchbox를 Jsp,Servlet에 넘겨 조건으로 사용하기, value-textField, get-post
+# 55 Days - combo-searchbox를 Jsp,Servlet에 넘겨 조건으로 사용하기, get-post, JSP-Servlet
 
 ### 사용 프로그램
 
