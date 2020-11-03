@@ -110,19 +110,18 @@ $("#cb_search").combobox({
 ### 페이지 이동4
 
 1. location.href = get방식 - location은 JS가 제공하는 Object - 페이지 이동이 일어난다.
-   1. String msg = new String\(" "\) - 
-   2. request에 setAttribute를 이용해 값을 담아 request scope를 이용한다. - setAttribute\("이름", 값\) - URL변화없이 내부적으로 페이지 이동이 일어난다.
 
 ### location.href
 
 * http비상태 프로토콜을 이용한 get방식으로는 값을 유지할 수 없다.
 * URL이 변경되면 새로운 페이지와 새로운 연결이 이뤄지고 기존 연결은 끊어지는 것이므로 새 페이지는 이전 페이지의 기억을 갖고있지않다.
-* 값을 유지할 수 없는 방식이다.
+* JS가 값을 전송하는 방법 - 쿼리스트링   request.getParameter - Attribute   request.setAttribute\("이름",값\)   request.getAttribute\("이름",값\)
 
 ### request.setAttribute
 
 * request.setAttribute\("이름", 값\)
 * Object를 담을 수 있다. - List, 소나타, Map, ...
+* 처리 페이지에서 값을 꺼낼때에는 getAttribute를 사용하는데, 반환값이 Object타입이므로 반드시 타입을 맞추는 과정이 필요하다. - String msg = \(String\)request.getAttribute\("이름"\);
 
 ### session
 
