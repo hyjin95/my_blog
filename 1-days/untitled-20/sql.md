@@ -2,6 +2,10 @@
 
 ## getEmpList.jsp
 
+![&#xCFFC;&#xB9AC;&#xC2A4;&#xD2B8;&#xB9C1;&#xC73C;&#xB85C; &#xB118;&#xAE34; &#xC870;&#xD68C; &#xAC80;&#xC0C9; &#xACB0;&#xACFC;](../../.gitbook/assets/.png%20%2813%29.png)
+
+![&#xC5C6;&#xB294; &#xC870;&#xAC74; &#xAC80;&#xC0C9; &#xC2DC;](../../.gitbook/assets/.png%20%2812%29.png)
+
 ```javascript
 <%@ page language="java" contentType="application/json; charset=UTF-8"
     pageEncoding="UTF-8"%>
