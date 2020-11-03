@@ -2,7 +2,7 @@
 description: 2020.10.29 - 52일차
 ---
 
-# 52 Days - combobox, table-style, API활용, nexacro화면, nexa-Eclipse연동, 내장객체,
+# 52 Days - combobox, table-style, API활용, nexacro화면, nexa-Eclipse연동, 내장객체, DB-JSON,JSP
 
 ### 사용 프로그램
 
