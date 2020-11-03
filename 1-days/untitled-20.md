@@ -63,6 +63,13 @@ $("#cb_search").combobox({
 * post : 다른 UI/UX제품들의 기본 전송방식, doPost함수를 사용
 * Servlet의 doGet, doPost의 리턴타입은 void이다.
 
+### Servlet doGet, doPost의 파라미터
+
+* doGet, doPost함수는 개발자가 호출하는것이 아니라 시스템이 부른다. = 콜백메서드
+* 사용자의 요청을 시스템이 JSP나 Servlet, html 등으로 처리하는데, html과 JSP은 자바코드를 사용할 수 없으므로 요청을 처리할 수 없다.  Servlet으로 요청을 처리하자
+* Servlet의 get, post함수는 req, res내장객체를 파라미터로 받고있다.
+* 이 객체들을 주입시켜주는 것이 바로 WAS이다.
+
 ### JSP
 
 * 인스턴스화를 하려면 이름을 알아야하는데, JSP는 WAS마다 명령규칙이 달라 이름이 달라진다. -  이름을 알 수 없으므로 인스턴스화가 불가능하다. - 보안상에서는 유리하다.
@@ -76,13 +83,6 @@ $("#cb_search").combobox({
 * Servlet을 실행하려면 브라우저가 필요하고, 브라우저는 URL이 필요하므로 web.xml배치서술자에 url을 등록해야한다. - web.xml에 등록하면 WAS 서버제품이 싱글톤으로 관리, 객체를 주입해준다.    자원관리, 라이프사이클 관리를 해준다.
 * 전송방식을 구분해주는 용도
 
-### Servlet doGet, doPost의 파라미터
-
-* doGet, doPost함수는 개발자가 호출하는것이 아니라 시스템이 부른다. = 콜백메서드
-* 사용자의 요청을 시스템이 JSP나 Servlet, html 등으로 처리하는데, html과 JSP은 자바코드를 사용할 수 없으므로 요청을 처리할 수 없다.  Servlet으로 요청을 처리하자
-* Servlet의 get, post함수는 req, res내장객체를 파라미터로 받고있다.
-* 이 객체들을 주입시켜주는 것이 바로 WAS이다.
-
 ### id, name 식별자
 
 * ID : 처리주체가 브라우저인 클라이언트 쪽에서 사용한다. - Ajax, JS, Xml, Html, CSS에서 사용한다.
@@ -92,8 +92,6 @@ $("#cb_search").combobox({
 
 * request : 요청, get, forward - 타입 변수 = request.getParameter\("name"\) --리턴타입 고려 - JSP, Servlet에서 전송된 요청을 듣기 할떄 사용한다. - 서버가 들은 것을 개발자가 가져와 사용하는 것
 * response : 응답
-
-### 
 
 ## JSP 사용
 
