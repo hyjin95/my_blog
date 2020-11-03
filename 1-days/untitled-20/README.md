@@ -136,9 +136,8 @@ $("#cb_search").combobox({
 
 ![](../../.gitbook/assets/2%20%2837%29.png)
 
-### include  - 같은페이지, 처리는 다른페이지
-
-![](../../.gitbook/assets/3%20%2830%29.png)
+1. forward
+2. 함수로 datagrid 갱신
 
 {% page-ref page="../untitled-16/" %}
 
