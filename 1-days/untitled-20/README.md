@@ -141,5 +141,10 @@ $("#cb_search").combobox({
 
 {% page-ref page="../untitled-16/" %}
 
+## MyBatis로 DB연동하기 - JSP, XML
+
+* where조건절에 필요한 정보 : cols, keyword
+* cols : empno, ename, sal  -  if문으로 경우의 수를 분리한다. - 화면에서 'cols'로 넘어오므로 emp   pmap.put\("uempno","empno"\)   key값은 u가 붙는다.
+
 후기 : 
 
