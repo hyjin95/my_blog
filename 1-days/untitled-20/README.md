@@ -118,6 +118,11 @@ $("#cb_search").combobox({
 * URL이 변경되면 새로운 페이지와 새로운 연결이 이뤄지고 기존 연결은 끊어지는 것이므로 새 페이지는 이전 페이지의 기억을 갖고있지않다.
 * 값을 유지할 수 없는 방식이다.
 
+### request.setAttribute
+
+* request.setAttribute\("이름", 값\)
+* Object를 담을 수 있다. - List, 소나타, Map, ...
+
 ### 요청, 출력 - 다른페이지
 
 ![](../../.gitbook/assets/1%20%2848%29.png)
