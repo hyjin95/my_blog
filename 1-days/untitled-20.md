@@ -70,6 +70,12 @@ $("#cb_search").combobox({
 * Servlet의 get, post함수는 req, res내장객체를 파라미터로 받고있다.
 * 이 객체들을 주입시켜주는 것이 바로 WAS이다.
 
+### 쿼리스트링
+
+* url : 'xxx.jsp?cols=값&name=값&name=값&......
+* jsp에서는 request.getParameter\("cols또는 다른 name"\) 으로 전송된 값을 받을 수 있다. = 듣기 - cols : empno, ename, ...
+* 이렇게 가져온 값을 where절에 조건으로 사용함으로서 동적쿼리를 완성할 수 있다.
+
 ### JSP
 
 * 인스턴스화를 하려면 이름을 알아야하는데, JSP는 WAS마다 명령규칙이 달라 이름이 달라진다. -  이름을 알 수 없으므로 인스턴스화가 불가능하다. - 보안상에서는 유리하다.
