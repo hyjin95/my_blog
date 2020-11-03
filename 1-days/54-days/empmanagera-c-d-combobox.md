@@ -56,6 +56,8 @@
 </html>
 ```
 
+* 태그안에서 이벤트를 JS없이 처리할 수는 있지만 에러가 발생하기 쉬워진다.
+
 ## empManagerCtype - html+Js
 
 ![API&#xB97C; &#xD65C;&#xC6A9;&#xD574; &#xD574;&#xB2F9; row&#xB97C; &#xC120;&#xD0DD;&#xD588;&#xC744; &#xB54C; &#xBD80;&#xC11C;&#xBC88;&#xD638; cell&#xC5D0; combobox&#xB97C; &#xAD6C;&#xD604;&#xD574;&#xBCF4;&#xC790;](../../.gitbook/assets/6%20%2815%29.png)
