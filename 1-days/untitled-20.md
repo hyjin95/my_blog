@@ -40,5 +40,23 @@ $("#cb_search").combobox({
 * 가로병합 : colspan = 병합할 셀 수
 * 세로병합 : rowspan = 병합할 셀 수
 
+### Get, Post - JSP, Servlet
 
+| UI/UX | JS | JSP | Servlet |
+| :---: | :---: | :---: | :---: |
+| 화면, View | 전송, Event | 모델1 | 모델2 |
+
+* JS가 전송해주는 방법은 두가지가 존재한다. - get : HTML의 기본 전송방식, doGet함수를 사용 - post : 다른 UI/UX제품들의 기본 전송방식, doPost함수를 사용
+* JSP - 인스턴스화를 하려면 이름을 알아야하는데, JSP는 WAS마다 명령규칙이 달라 이름이 달라진다.   이름을 알 수 없으므로 인스턴스화가 불가능하다. - 보안상에서는 유리하다. - 함수를 선언할 수는 있지만 인스턴스화가 불가능해 사용하기 불리하므로 로직, 업무를 처리하는 용도로는 사용하지 않는다. - JSON을 만들어주는 용도 - XML을 만들어주는 용도 - 화면을 출력해주는 용도
+* Servlet - req, res는 doGet과 doPost함수만이 주입받을 수 있는 객체이다. - 다른 함수를 선언할 수는 있지만 req, res객체를 주입 받을 수 없으므로 의미가 없다. - doGet, doPost함수만 정의해 사용하자 - 전송방식을 구분해주는 용도
+
+### id, name 식별자
+
+* ID : 처리주체가 브라우저인 클라이언트 쪽에서 사용한다. - Ajax, JS, Xml, Html, CSS에서 사용한다.
+* Name : 처리주체가 WAS인 서버 쪽에서 사용한다. - request.getParameter로 받을 수 있는 값이다. - JSP, Servlet, JAVA에서 사용한다.
+
+### request, response
+
+* request : 요청, get, forward - 타입 변수 = request.getParameter\("name"\) --리턴타입 고려 - JSP, Servlet에서 전송된 요청을 듣기 할떄 사용한다. - 서버가 들은 것을 개발자가 가져와 사용하는 것
+* response : 응답
 
