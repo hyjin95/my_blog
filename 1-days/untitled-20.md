@@ -12,7 +12,7 @@ description: 2020.11.02 - 55일차
 
 ## 복습
 
-### WHERE - AND, OR, 비교연산자
+### combobox, WHERE - AND, OR, 비교연산자
 
 ```javascript
 $("#cb_search").combobox({
@@ -32,6 +32,8 @@ $("#cb_search").combobox({
 * OR    : 합집합, 원소가 증가한다. - 데이터가 방대해질 수 있어 잘 사용하지 않는다. 시간이 오래걸릴 수 있다.
 * WHERE 비교할data 비교연산자 값
 * 위 코드에서는 WHERE cols = 값 이런식으로 사용할 수 있을 것이다. - cols는 사용자에 따라 변하는 data
+* 콤보박스 옆에 textbox를 만들어 사용자에게서 비교할 대상이 되는 값을 받아와야 할 것이다. - WHERE cols = textbox입력값
+* combobox에서 실제로 넘어가는 값은 valueField, 사용자에게 보여지는 값은 textField이다.
 
 
 
