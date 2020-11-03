@@ -105,6 +105,33 @@ $("#cb_search").combobox({
 
 {% page-ref page="sql.md" %}
 
+## 페이지 이동 4 - 코드구현
+
+### 페이지 이동4
+
+1. location.href = get방식 - location은 JS가 제공하는 Object
+2. request에 setAttribute를 이용해 값을 담아 request scope를 이용한다. - setAttribute\("이름", 값\)
+
+### location.href
+
+* http비상태 프로토콜을 이용한 get방식으로는 값을 유지할 수 없다.
+* URL이 변경되면 새로운 페이지와 새로운 연결이 이뤄지고 기존 연결은 끊어지는 것이므로 새 페이지는 이전 페이지의 기억을 갖고있지않다.
+* 값을 유지할 수 없는 방식이다.
+
+### 요청, 출력 - 다른페이지
+
+![](../../.gitbook/assets/1%20%2848%29.png)
+
+### 요청, 출력 - 같은페이지
+
+![](../../.gitbook/assets/2%20%2837%29.png)
+
+### include  - 같은페이지, 처리는 다른페이지
+
+![](../../.gitbook/assets/3%20%2830%29.png)
+
+{% page-ref page="../untitled-16/" %}
+
 ## JSP 사용
 
 ## Servlet 사용
