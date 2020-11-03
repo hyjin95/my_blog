@@ -205,9 +205,9 @@
   * [54 Days - DataSet타입, text-valueField, JSON-XMl, JSP-Servlet, JSP공백제거, combobox심화](1-days/54-days/README.md)
     * [step1, getEmpList.jsp - JSON, JSP](1-days/54-days/step1-getemplist.jsp-json-jsp.md)
     * [empManagerA,C,D - combobox심화](1-days/54-days/empmanagera-c-d-combobox.md)
-  * [55 Days - combo-searchbox를 Jsp,Servlet에 넘겨 조건으로 사용하기, get-post, JSP-Servlet](1-days/untitled-20/README.md)
+  * [55 Days - combo-searchbox를 Jsp,Servlet에 넘겨 조건으로 사용하기, get-post, JSP-Servlet, 페이지이동4-구현,forward](1-days/untitled-20/README.md)
     * [SQL 화면 없이 단위테스트 - 쿼리스트링](1-days/untitled-20/sql.md)
-    * [페이지 이동 4 - 코드 구현](1-days/untitled-20/4.md)
+    * [페이지 이동 4 - 코드 구현, forward](1-days/untitled-20/4.md)
   * [Untitled](1-days/untitled-21.md)
   * [Untitled](1-days/untitled-19.md)
 

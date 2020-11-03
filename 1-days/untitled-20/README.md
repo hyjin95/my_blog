@@ -2,7 +2,7 @@
 description: 2020.11.02 - 55일차
 ---
 
-# 55 Days - combo-searchbox를 Jsp,Servlet에 넘겨 조건으로 사용하기, get-post, JSP-Servlet
+# 55 Days - combo-searchbox를 Jsp,Servlet에 넘겨 조건으로 사용하기, get-post, JSP-Servlet, 페이지이동4-구현,forward
 
 ### 사용 프로그램
 
@@ -105,7 +105,7 @@ $("#cb_search").combobox({
 
 {% page-ref page="sql.md" %}
 
-## 페이지 이동 4 - 코드구현
+## 페이지 이동 4 - 코드구현, forward
 
 ### 페이지 이동4
 
