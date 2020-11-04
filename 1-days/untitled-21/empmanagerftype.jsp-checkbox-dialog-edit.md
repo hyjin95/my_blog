@@ -18,18 +18,12 @@
     <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/demo/demo.css">
     <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
-    <style type="text/css">
-        
+    <style type="text/css">        
        #d_msg {
           border: 5px solid pink;
           width: 700px;
           height: 120px;
        }
-       	#dlg_empINS {
-			width: 250px;
-			height: 380px;
-			padding: 30px 30px;
-	}
     </style>
 <!-- 공통코드 추가   끝  -->
    <script type="text/javascript">
@@ -48,104 +42,96 @@
    				,title: '입력'
    				,modal: true//배경, 뒷 화면 비활성화
    		   });
-       }     
-       function zipCodeSearch(){
-    	   
-       }
-       
-         function endEditing(){
-             if (editIndex == undefined){return true}
-             if ($('#dg_emp').datagrid('validateRow', editIndex)){
-                 $('#dg_emp').datagrid('endEdit', editIndex);
-                 editIndex = undefined;
-                 return true;
-             } else {
-                 return false;
-             }
-         }
-         function onClickCell(index, field){
-             if (editIndex != index){
-                 if (endEditing()){
-                     $('#dg_emp').datagrid('selectRow', index)
-                             .datagrid('beginEdit', index);
-                     var ed = $('#dg_emp').datagrid('getEditor', {index:index,field:field});
-                     if (ed){
-                         ($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
-                     }
-                     editIndex = index;
-                 } else {
-                     setTimeout(function(){
-                         $('#dg_emp').datagrid('selectRow', editIndex);
-                     },0);
-                 }
-             }
-         }
-         function onEndEdit(index, row){
-             var ed = $(this).datagrid('getEditor', {
-                 index: index,
-                 field: 'EMPNO'
-             });
-            // row.DEPTNO = $(ed.target).combobox('getText');
-         }
-		 
-         /* param1 : 사용자가 searchbox에 입력한 값
-         *  param2 : sreachbox에 등록한 name값, JSP나 서블릿에서 사용자가 입력한 값을 요청할때 사용한다.
-         *  -> request.getParameter("sb_keyword")
-         */
-         function empSearch(){
-        	 
-             $("#dg_emp").datagrid({            	
-            	url:'../../getEmpList2.jsp?cols='+$("#cb_search").val()+"&keyword="+$("#sb_keyword").val()//name을 쿼리스트링으로 넘긴다.
-            	,onLoadSuccess:function(temp){            		
-            		var result = JSON.stringify(temp);   
-   			 		alert("onload....."+result);
-            		var test = result.split('"rows":',2);
-            		var test2 = test[1].substring(0,test[1].length-1);
-   			 		alert("onload....."+test2); 
-   			 		var result2 = JSON.parse(test2);
-   			 		alert("onload....."+result2[0].ENAME);    			 		
-   			 	}		
-             });
-         }
-         
-       //너 조회할거야?
-         function empList(){
-            $("#d_msg").append("empList호출 성공<br>");
-            $("#dg_emp").datagrid({
-               url: "../emp.json"/* 서버의 이전이나 소스의 재사용성을 고려하여 상대경로로 작성할것. */   
-              
-            });         
-      }  
-       //////////////////////////////[[데이터그리드 입력|수정|삭제 구현]]//////////////////////////////////////
+       }   
+       function endEditing(){
+            if (editIndex == undefined){return true}
+            if ($('#dg_emp').datagrid('validateRow', editIndex)){
+                $('#dg_emp').datagrid('endEdit', editIndex);
+                editIndex = undefined;
+                return true;
+            } else {
+                return false;
+            }
+        }
+        function onClickCell(index, field){
+            if (editIndex != index){
+                if (endEditing()){
+                    $('#dg_emp').datagrid('selectRow', index)
+                            .datagrid('beginEdit', index);
+                    var ed = $('#dg_emp').datagrid('getEditor', {index:index,field:field});
+                    if (ed){
+                        ($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
+                    }
+                    editIndex = index;
+                } else {
+                    setTimeout(function(){
+                        $('#dg_emp').datagrid('selectRow', editIndex);
+                    },0);
+                }
+            }
+        }
+        function onEndEdit(index, row){
+            var ed = $(this).datagrid('getEditor', {
+                index: index,
+                field: 'EMPNO'
+            });
+           // row.DEPTNO = $(ed.target).combobox('getText');
+        }
+        /* param1 : 사용자가 searchbox에 입력한 값
+        *  param2 : sreachbox에 등록한 name값, JSP나 서블릿에서 사용자가 입력한 값을 요청할때 사용한다.
+        *  -> request.getParameter("sb_keyword")
+        */
+        function empSearch(){   	 
+            $("#dg_emp").datagrid({            	
+            url:'../../getEmpList2.jsp?cols='+$("#cb_search").val()+"&keyword="+$("#sb_keyword").val()//name을 쿼리스트링으로 넘긴다.
+            ,onLoadSuccess:function(temp){            		
+            	var result = JSON.stringify(temp);   
+   			 	    alert("onload....."+result);
+            	var test = result.split('"rows":',2);
+            	var test2 = test[1].substring(0,test[1].length-1);
+   			 	    alert("onload....."+test2); 
+   			 	    var result2 = JSON.parse(test2);
+   			 	    alert("onload....."+result2[0].ENAME);    			 		
+   			    }		
+            });
+        }
+        //너 조회할거야?
+        function empList(){
+           $("#d_msg").append("empList호출 성공<br>");
+           $("#dg_emp").datagrid({
+              url: "../emp.json"/* 서버의 이전이나 소스의 재사용성을 고려하여 상대경로로 작성할것. */    
+           });         
+        }  
+        //////////////////////////////[[데이터그리드 입력|수정|삭제 구현]]//////////////////////////////////////
        	function empUpdate(){
     	   //$.messeger.progress();
-    	   $("#dlg_empUPD").dialog('open')
-       }
+    	    $("#dlg_empUPD").dialog('open')
+        }
        	function insert(){
-			var row = $('#dg_emp').datagrid('getSelected');//선택한 row의 번호를 가져온다.=tbody
-			$("#d_msg").append('row : '+row+'<br>');//단위테스트용
-			if (row){//row = 0~n, row가 true라면, row를 선택했다면
-				var index = $('#dg_emp').datagrid('getRowIndex', row);
-			} else {
-				index = 0;
-			}
-			$('#dg_emp').datagrid('insertRow', {
-				index: index,
-				//넥사크로 DataSet header꾸미기와 유사
-				row: {
-					 CK:0
-					,EMPNO:0
-					,ENAME:''
-					,JOB:''
-					,SAL:0.0
-					,COMM:0.0
-					,DETPNO:''
-				}
-			});
-			$("#d_msg").append('index : '+index+'<br>');
-			$('#dg_emp').datagrid('selectRow',index);
-			$('#dg_emp').datagrid('beginEdit',index);
-		}
+			    var row = $('#dg_emp').datagrid('getSelected');//선택한 row의 번호를 가져온다.=tbody
+			    $("#d_msg").append('row : '+row+'<br>');//단위테스트용
+			    if (row){//row = 0~n, row가 true라면, row를 선택했다면
+				    var index = $('#dg_emp').datagrid('getRowIndex', row);
+			    } else {
+				    index = 0;
+			    }
+			    $('#dg_emp').datagrid('insertRow', {
+				    index: index,
+				    //넥사크로 DataSet header꾸미기와 유사
+				    row: {
+				    	 CK:0
+					    ,EMPNO:0
+					    ,ENAME:''
+					    ,JOB:''
+					    ,SAL:0.0
+					    ,COMM:0.0
+					    ,DETPNO:''
+				 }
+			 });
+			 $("#d_msg").append('index : '+index+'<br>');
+			 $('#dg_emp').datagrid('selectRow',index);
+			 $('#dg_emp').datagrid('beginEdit',index);
+		 }
         function getRowIndex(target){
 			$("#d_msg").append('target : '+target+'<br>');
         	var tr = $(target).closest('tr.datagrid-row');
@@ -201,9 +187,6 @@
         	   ,{field:'HIREDATE', title:'입사일자', width:100, editor:'text', hidden:'true'}
         	   ,{field:'COMM'    , title:'인센티브', width:100, editor:'text'}
         	   ,{field:'DEPTNO'  , title:'부서번호', width:100,
-        		   //formatter: function(value,row){
-				  //	  return row.DEPTNO||value;
-			 	  //},
         	   	  editor:{
 			  		 type:'combobox'
 			  		 ,options:{
@@ -229,9 +212,6 @@
                    }
                }
            ]]
-	   	   //,onClickCell: onClickCell
-       	   //,onEndEdit: onEndEdit
-       	   
        	   //////////////////////////////////////////[[데이터그리드 이벤트핸들러]]/////////////////////////////////////////////////
       	  /*
        	   ,onEndEdit:function(index,row){
@@ -288,8 +268,7 @@
         					textField: 'label'
         					">
 						<input id="sb_keyword" name="sb_keyword" class="easyui-searchbox" style="width:150px" 
-							   data-options="searcher:empSearch,prompt:'검색할 값 입력'"></input>
-        					
+							   data-options="searcher:empSearch,prompt:'검색할 값 입력'"></input>				
 					</td>					
 					<!-------------------- 끝 ----------------------->
 				</tr>
@@ -407,7 +386,26 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		</if>
 	</where>
  </select>
-
 </mapper>
 ```
+
+## 실행
+
+![&#xCD08;&#xAE30;&#xD654;&#xBA74;](../../.gitbook/assets/2%20%2846%29.png)
+
+![&#xC870;&#xD68C;&#xBC84;&#xD2BC;](../../.gitbook/assets/.png%20%2817%29.png)
+
+![&#xCD94;&#xAC00;&#xBC84;&#xD2BC; - Editor API](../../.gitbook/assets/.png%20%2816%29.png)
+
+![&#xC218;&#xC815;&#xBC84;&#xD2BC; - dialog](../../.gitbook/assets/.png%20%2819%29.png)
+
+![delete&#xBC84;&#xD2BC; - Editor API](../../.gitbook/assets/delete-.png)
+
+![&#xAC80;&#xC0C9; - empSearch\( \)](../../.gitbook/assets/.png%20%2818%29.png)
+
+![Stringfiy, Split](../../.gitbook/assets/.png%20%2815%29.png)
+
+![parse, &#xCEEC;&#xB7FC; &#xC9C0;&#xC815;&#xCD9C;&#xB825;&#xD574;&#xBCF4;&#xAE30;](../../.gitbook/assets/.png%20%2820%29.png)
+
+![&#xAC80;&#xC0C9;&#xACB0;&#xACFC;](../../.gitbook/assets/.png%20%2814%29.png)
 

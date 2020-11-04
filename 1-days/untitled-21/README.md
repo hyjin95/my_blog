@@ -14,7 +14,7 @@ description: 2020.11.04 - 56일차
 
 ### html과 jsp - 원본과 복사본
 
-![](../../.gitbook/assets/1%20%2857%29.png)
+![](../../.gitbook/assets/1%20%2858%29.png)
 
 * session ID가 같으면, 브라우저는 화면에 끼워넣기를 한다. 단, html의 경우에는 메모리에 있는 것을 가져오므로 기존의 데이터를 가져온다.
 * JSP는 이런 시점의 문제에서 비교적 자유롭다. JSP파일은 내부적으로 a.jsp -&gt; a.java -&gt; a.class순서로 컴파일 하므로 jsp파일이 수정되면 java, class파일도 새로 읽어 들인다.
@@ -79,6 +79,8 @@ function empSearch(){
 
 ### checkbox 추가
 
+![](../../.gitbook/assets/1%20%2857%29.png)
+
 *  API : [http://jeasyui.com/documentation/index.php\#](http://jeasyui.com/documentation/index.php#) - Form -&gt; checkbox - default : 0 = 체크되지 않은 상태
 * 체크박스를 추가할 datagrid가 load되는 시점에 체크박스 컬럼을 추가한다.
 * 모든 컬럼을 조회하는 함수가 있다면 해당 함수의 컬럼에도 추가한다.
@@ -95,6 +97,8 @@ function empSearch(){
 
 * 참고 : [http://jeasyui.com/tutorial/datagrid/datagrid12.php](http://jeasyui.com/tutorial/datagrid/datagrid12.php) - 하단의 zip을 다운받아 코드를 풀어보면 더 자세하게 살펴볼 수 있다.
 * 수정, 삭제, 저장 등을 지원해준다.
+
+{% page-ref page="empmanagerftype.jsp-checkbox-dialog-edit.md" %}
 
 ## 개발패턴
 
