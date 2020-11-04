@@ -2,7 +2,7 @@
 description: 2020.11.04 - 56일차
 ---
 
-# 56 Days -
+# 56 Days - 개발패턴:Action-JSP
 
 ### 사용 프로그램
 
