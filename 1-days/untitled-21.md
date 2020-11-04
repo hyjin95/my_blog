@@ -32,7 +32,7 @@ description: 2020.11.04 - 56일차
 
 ### 3. Action -&gt; JSP -&gt; Action -&gt; JSP
 
-* 기본 DB전체조회 -&gt; 화면 -&gt; DB검색 -&gt; 검색결과화면
+* 기본 DB전체조회 -&gt; 화면 -&gt; DB검색 -&gt; 검색결과화면 - ex\) 수정 : DB에서 기존 data를 가져와야 한다 = Action으로 시작
 
 ### 4. Action -&gt; Action -&gt; JSP
 
