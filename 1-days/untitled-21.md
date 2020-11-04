@@ -28,11 +28,11 @@ description: 2020.11.04 - 56일차
 
 ### 2. JSP -&gt; Action -&gt; JSP
 
-* 화면\(검색요청\) -&gt; DB검색 -&gt; 검색결과화면
+* 화면\(검색요청\) -&gt; DB검색 -&gt; 검색결과화면 - ex\) 수정 : 화면에 기본 조회를 깔아 놓고 놓아져있는 data를 골라서 수정한다. = JSP로 시작   DB를 경유하는 시작이 아니므로 cost가 적게 발생한다.
 
 ### 3. Action -&gt; JSP -&gt; Action -&gt; JSP
 
-* 기본 DB전체조회 -&gt; 화면 -&gt; DB검색 -&gt; 검색결과화면 - ex\) 수정 : DB에서 기존 data를 가져와야 한다 = Action으로 시작
+* 기본 DB전체조회 -&gt; 화면 -&gt; DB검색 -&gt; 검색결과화면 - ex\) 수정 : DB에서 기존 data를 가져와야 한다 = Action으로 시작   DB를 경유하는 시작이므로 시작부터 cost가 발생한다.
 
 ### 4. Action -&gt; Action -&gt; JSP
 
