@@ -24,16 +24,17 @@ description: 2020.11.04 - 56일차
 
 ### 1. JSP -&gt; JSP
 
-* 
+* DB를 거치지 않는 작업.
+
 ### 2. JSP -&gt; Action -&gt; JSP
 
-* 화면 -&gt; 검색 -&gt; 검색결과페이지
+* 화면\(검색요청\) -&gt; DB검색 -&gt; 검색결과화면
 
 ### 3. Action -&gt; JSP -&gt; Action -&gt; JSP
 
-* 기본 전체조회 -&gt; 기본 화면 -&gt; 검색 -&gt; 검색결과페이지
+* 기본 DB전체조회 -&gt; 화면 -&gt; DB검색 -&gt; 검색결과화면
 
 ### 4. Action -&gt; Action -&gt; JSP
 
-* 입력 -&gt; 조회 -&gt; 결과
+* DB입력 -&gt; DB조회 -&gt; 결과화면
 
