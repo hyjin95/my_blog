@@ -20,3 +20,20 @@ description: 2020.11.04 - 56일차
 
 ## empManagerFinal - JSP로 구현
 
+## 개발패턴
+
+### 1. JSP -&gt; JSP
+
+* 
+### 2. JSP -&gt; Action -&gt; JSP
+
+* 화면 -&gt; 검색 -&gt; 검색결과페이지
+
+### 3. Action -&gt; JSP -&gt; Action -&gt; JSP
+
+* 기본 전체조회 -&gt; 기본 화면 -&gt; 검색 -&gt; 검색결과페이지
+
+### 4. Action -&gt; Action -&gt; JSP
+
+* 입력 -&gt; 조회 -&gt; 결과
+
