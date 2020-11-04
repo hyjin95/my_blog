@@ -1,5 +1,7 @@
 # empManagerFtype.jsp - checkbox, dialog, Edit
 
+## empManagerFtype.jsp
+
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -379,5 +381,33 @@
 
 </body>
 </html>
+```
+
+## emp.xml
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="oracle.mybatis.EmpMapper">
+
+<select id="getEmpList" parameterType="map" resultType="map">
+	SELECT 0 CK, empno, ename, job, TO_CHAR(hiredate, 'YYYY-MM-DD') hiredate, mgr, sal, comm, deptno
+	  FROM emp	 
+	<where>
+		<if test='uempno !=null'>
+			and empno = #{keyword}
+		</if>
+		<if test='uename !=null and uename.length>0'><!-- 문자, 문자를 포함하니? -->
+			and ename LIKE '%'||#{keyword}||'%'
+		</if>
+		<if test='usal !=null'><!-- sal=값 존재하니? -->
+			and sal = #{keyword}
+		</if>
+	</where>
+ </select>
+
+</mapper>
 ```
 
