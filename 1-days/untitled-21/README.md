@@ -65,17 +65,19 @@ function empSearch(){
 
 ## UTF-8설정 - get, post전송
 
-## empManagerFinaltype - dialog:수정, Enable DataGrid Inline Editing
+* 같은 설정이더라도 전송 방식에 따라서 결과가 다를 수 있다.
 
-### API활용 - dialog, Enable DataGrid Inline Editing
+{% page-ref page="hangulconversion.java-utf-8-get-post.md" %}
+
+## empManagerFtype - checkbox, dialog, Enable DataGrid Inline Editing
+
+### API활용 - checkbox,dialog, Enable DataGrid Inline Editing
 
 1. 사용할 위치 확인
 2. script부분과 화면 부분 분리
 3. JS에서 접근할 id 확인
 
 * 참고 : [http://jeasyui.com/tutorial/datagrid/datagrid12.php](http://jeasyui.com/tutorial/datagrid/datagrid12.php)
-
-
 
 ## 개발패턴
 
