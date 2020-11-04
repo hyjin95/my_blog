@@ -77,7 +77,24 @@ function empSearch(){
 2. script부분과 화면 부분 분리
 3. JS에서 접근할 id 확인
 
-* 참고 : [http://jeasyui.com/tutorial/datagrid/datagrid12.php](http://jeasyui.com/tutorial/datagrid/datagrid12.php)
+### checkbox 추가
+
+*  API : [http://jeasyui.com/documentation/index.php\#](http://jeasyui.com/documentation/index.php#) - Form -&gt; checkbox - default : 0 = 체크되지 않은 상태
+* 체크박스를 추가할 datagrid가 load되는 시점에 체크박스 컬럼을 추가한다.
+* 모든 컬럼을 조회하는 함수가 있다면 해당 함수의 컬럼에도 추가한다.
+* 조회하는 SQL문에 체크박스 컬럼을 추가한다.
+
+### dialog 추가 : 수정
+
+*  API : [http://jeasyui.com/documentation/index.php\#](http://jeasyui.com/documentation/index.php#) - Window -&gt; dialog
+* dialog로 띄울 div에 calss='easyui-dialog'를 부여한다.
+* 수정하려는 목적의 dialog는 입력값을 DB에 전송해야 할 것이기 때문에 &lt;form&gt;태그로 감싼다.
+* 수정하려는 항목 중, 범위가 정해져 있는 항목은 DB에서 값을 가져와 combobox로 나타내준다.
+
+### Enable DataGrid Inline Editing
+
+* 참고 : [http://jeasyui.com/tutorial/datagrid/datagrid12.php](http://jeasyui.com/tutorial/datagrid/datagrid12.php) - 하단의 zip을 다운받아 코드를 풀어보면 더 자세하게 살펴볼 수 있다.
+* 수정, 삭제, 저장 등을 지원해준다.
 
 ## 개발패턴
 

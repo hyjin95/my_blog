@@ -1,4 +1,4 @@
-# MyBatis로 DB연동하기 - JSP, XML
+# empManagerDtype - JSP, MyBatis
 
 ## empManagerDtype - 화면
 
