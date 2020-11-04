@@ -2,7 +2,7 @@
 description: 2020.11.04 - 56일차
 ---
 
-# 56 Days - 개발패턴:Action-JSP
+# 56 Days - 개발패턴:Action-JSP, UTF-8.java, &lt;a&gt;, JSON-stringify, split, parse, substring, empManagerF
 
 ### 사용 프로그램
 

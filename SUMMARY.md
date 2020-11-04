@@ -209,7 +209,7 @@
     * [SQL 화면 없이 단위테스트 - 쿼리스트링](1-days/untitled-20/sql.md)
     * [페이지 이동 4 - 코드 구현, forward](1-days/untitled-20/4.md)
     * [empManagerDtype - JSP, MyBatis](1-days/untitled-20/mybatis-db-jsp-xml.md)
-  * [56 Days - 개발패턴:Action-JSP](1-days/untitled-21/README.md)
+  * [56 Days - 개발패턴:Action-JSP, UTF-8.java, &lt;a&gt;, JSON-stringify, split, parse, substring, empManagerF](1-days/untitled-21/README.md)
     * [HangulConversion.java : UTF-8변환, get, post](1-days/untitled-21/hangulconversion.java-utf-8-get-post.md)
     * [empManagerFtype.jsp - checkbox, dialog, Edit](1-days/untitled-21/empmanagerftype.jsp-checkbox-dialog-edit.md)
   * [Untitled](1-days/untitled-19.md)
