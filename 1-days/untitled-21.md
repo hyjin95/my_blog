@@ -34,8 +34,11 @@ function empSearch(){
             var test = result.split('"rows":',2);
             var test2 = test[1].substring(0,test[1].length-1);
    			 	  //alert("onload....."+test2); 
-   			 	  var result2 = JSON.parse(test2);
-   			 	  //alert("onload....."+result2[0].ENAME);    			 		
+   			 	  var jsonDoc = JSON.parse(test2);
+   			 	  //alert("onload....."+result2[0].ENAME); 
+     			 	for(var i=0;i>jsonDoc.length;i++){
+	            alert("empno : "+jsonDoc[i].JOB)
+            }	
    			 }		
      });
  }
@@ -47,8 +50,30 @@ function empSearch(){
 * **소유주.split\(구분자, 배열갯수\)** : String덩어리를 구분자를 사용해 나눠 배열로 담아준다. - 소유주 : 분리할 String data
 * **소유주.substring\(여기부터, 여기까지\)** : 지정된 구간 내의 문자열을 잘라내 담는다. - 소유주 : 필요한 값이 들어있는 배열\(방\)
 * **JSON.parse\(값\)** : 파라미터로 받은 data를 JSON형식으로 변환한다.
+* 12,13번 : 뽑아낸 n개의 row의 JOB컬럼 value를 출력해본다.
+* 이러한 함수들 사용 없이는 StringTokenizer와 같은 함수로 일일히 자르거나 해야한다.
 
-## empManagerFinal - JSP로 구현
+### onLoadSuccess - 이벤트핸들러\(인터셉트\)
+
+* onLoadSuccess:function 함수이름 \(파라미터\){실행, 구현문} - 일회성 함수라면 함수이름은 생략할 수 있다. - 파라미터에는 jsp에서 out.print된  data가 들어온다.   JSP의 mimtype이 application/json이라면 data는 json형식인 Object타입의 data이다.
+* datagrid에 사용하면 조회가 정상적으로 로드되었는지, 갱신 처리가 성공했는지 알 수 있다.
+
+### &lt;a&gt; 태그
+
+* href를 가질 수 있다.
+* 역할 - 문단이동 : 스크롤바를 이동시킬 필요 없이 목차를 누르면 해당 목차로 바로 이동하는 것 - link - JS함수 호출
+
+## empManagerFinaltype - dialog:수정, Enable DataGrid Inline Editing
+
+### API활용 - dialog, Enable DataGrid Inline Editing
+
+1. 사용할 위치 확인
+2. script부분과 화면 부분 분리
+3. JS에서 접근할 id 확인
+
+* 참고 : [http://jeasyui.com/tutorial/datagrid/datagrid12.php](http://jeasyui.com/tutorial/datagrid/datagrid12.php)
+
+
 
 ## 개발패턴
 
