@@ -16,6 +16,7 @@ description: 2020.11.04 - 56일차
 
 ![](../.gitbook/assets/1%20%2857%29.png)
 
-* 
+* session ID가 같으면, 브라우저는 화면에 끼워넣기를 한다. 단, html의 경우에는 메모리에 있는 것을 가져오므로 기존의 데이터를 가져온다.
+
 ## empManagerFinal - JSP로 구현
 
