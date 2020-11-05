@@ -103,7 +103,14 @@ t.textbox('textbox').bind('keydown', function(e){
 
 ## AJAX\( \)
 
-### ajax
+### Ajax
+
+* Axynchronous JavaScript And Xml 비동기 구현 방식
+* 웹 화면 갱신없이 필요한 데이터만 DB와 동기화하는 방식 - ex\) 네이버의 실시간 검색어 순위
+* 데이터 형식 : JSON, XML, CSV
+* 참고 : [http://www.nextree.co.kr/p9521/](http://www.nextree.co.kr/p9521/)
+
+### Ajax와 easyui-datagrid
 
 <table>
   <thead>
