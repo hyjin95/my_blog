@@ -212,5 +212,6 @@
   * [56 Days - 개발패턴:Action-JSP, UTF-8.java, &lt;a&gt;, JSON-stringify, split, parse, substring, empManagerF](1-days/untitled-21/README.md)
     * [HangulConversion.java : UTF-8변환, get, post](1-days/untitled-21/hangulconversion.java-utf-8-get-post.md)
     * [empManagerFtype.jsp - checkbox, dialog, Edit](1-days/untitled-21/empmanagerftype.jsp-checkbox-dialog-edit.md)
-  * [Untitled](1-days/untitled-19.md)
+  * [57 Days -](1-days/untitled-19.md)
+  * [Untitled](1-days/untitled-22.md)
 

@@ -118,3 +118,5 @@ function empSearch(){
 
 * DB입력 -&gt; DB조회 -&gt; 결과화면
 
+후기 : 영하1도, 미국 대선 ㄷㄷㄷㄷ
+
