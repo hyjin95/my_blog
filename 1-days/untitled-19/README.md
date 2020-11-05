@@ -56,6 +56,24 @@ description: 2020.11.05 - 57일차
 * &lt;table&gt;을 &lt;div&gt;로 감싸 div의 id로 &lt;table&gt;에 더 쉽게 접근할 수 도있고, Event를 한번에 적용할 수도 있다.
 * &lt;div&gt;에도 width설정이 있고, &lt;table&gt;에도 width설정이 있다면, &lt;table&gt;은 &lt;table&gt;의 width 설정을 따른다.
 
+## 필기
+
+### JS 변수선언
+
+```javascript
+<script type="text/javascript">
+
+      var g_cnt=0;//멤버변수
+      
+      function method( ){
+            var cnt=0;//지역변수
+            i=10;//지역변수
+        }
+ </script>
+```
+
+* 변수에 담긴 정보가 공유해야하는 정보라면 멤버변수로 선언해야한다.
+
 ## API활용 - easyui-textbox에 Enter구현
 
 ### API
