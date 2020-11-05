@@ -165,5 +165,10 @@ t.textbox('textbox').bind('keydown', function(e){
 * 목록에서 바로 data를 가져와도되지만 ajax를 사용해 DB에서 정보를 끌어와보자 - PK값인 EMPNO를 활용한다.
 * Ajax의 API를 살펴본다. - [https://api.jquery.com/jquery.ajax/\#jQuery-ajax-url-settings](https://api.jquery.com/jquery.ajax/#jQuery-ajax-url-settings) - data의 type을 설정할 수 있으니 JSON을 사용해보자 - dialog의 여러 input창을 한번에 DB에 전송하기위해 POST방식을 사용해보자
 
+### dialog와 popup의 차이
+
+* window와 popup은 다른 페이지이다.
+* window와 dialog는 같은 페이지이다. - dialog의 내부만 다른 것 - 그래서 hide\( \)해놓고 이벤트 발생시 show,open\( \)해주는 것 - window html에서 JS로 dialog내부 태그의 id에 접근 할 수 있다. 
+
 후기 : 
 
