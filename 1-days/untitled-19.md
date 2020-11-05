@@ -56,3 +56,16 @@ description: 2020.11.05 - 57일차
 * &lt;table&gt;을 &lt;div&gt;로 감싸 div의 id로 &lt;table&gt;에 더 쉽게 접근할 수 도있고, Event를 한번에 적용할 수도 있다.
 * &lt;div&gt;에도 width설정이 있고, &lt;table&gt;에도 width설정이 있다면, &lt;table&gt;은 &lt;table&gt;의 width 설정을 따른다.
 
+## API활용 - easyui-textbox에 Enter구현
+
+### API
+
+```javascript
+var t = $('#tt');
+t.textbox('textbox').bind('keydown', function(e){
+	if (e.keyCode == 13){	// when press ENTER key, accept the inputed value.
+		t.textbox('setValue', $(this).val());
+	}
+});
+```
+
