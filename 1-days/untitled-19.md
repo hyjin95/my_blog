@@ -17,17 +17,22 @@ description: 2020.11.05 - 57일차
 * &lt;body&gt; - $\(document\).ready\(function\( \) {       $\("\#id"\).datagrid\( { - } \); - dom구성이 완료된 후에 바로
 * &lt;head&gt; - &lt;script&gt;     function 함수이름\( \) { } - dom구성 완료 이후, 호출시
 
+### 객체 지향 언어
+
+* JAVA, C\#, php, C++등
+
 ### 문법에러와 논리에러
 
 * 문법에러 : 컴파일에러
 * 논리에러 : Exception\(java\)
 * 논리에러가 더 해결하기 어렵다.
 
-### &lt;form&gt; &lt;table&gt;
+### &lt;table&gt;과 &lt;form&gt;
 
 * &lt;from&gt;태그만으로는 정적인 양식이다.
 * DB에서 자료를 뽑아 정보를 담아야 동기화된 동적 정보가 되는 것
 * DataSet이 form태그와 동기화 되어야 한다.
+* form태그로 감싸면 &lt;table&gt;의 정보를 덩어리째 전송할 수 있다.
 
 ### DataSet
 
@@ -40,4 +45,14 @@ description: 2020.11.05 - 57일차
 * JSP와 Servlet은 HttpServlet객체를 받아 웹 통신 서비스를 지원한다.
 * JSP와 Servlet은 JAVA언어를 사용하고, JSP와 Servlet이 JAVA파일에 영향을 끼친다.
 * JSP, Servlet과 JAVA의 역할을 구분하고 클래스를 분리해 사용해야한다.
+
+### &lt;table&gt; 키워드
+
+* class : 해당 태그의 Object를 표시한다.  - ex\) easyui-datagrid
+* data-options : easyui가 제공하는 Object - JS가 class를 가진 태그에 접근할 때에는 Object를 명시해준다. - $\("\#태그id"\).태그의Object\( { 행위 } \);   $\("\#id"\).datagird\(function\( \){ 행위 } \); - 행위 : 함수\( \){ 속성들을 가질 수 있다. 속성: '값', 속성:'값' }
+
+### &lt;table&gt;과 &lt;div&gt;
+
+* &lt;table&gt;을 &lt;div&gt;로 감싸 div의 id로 &lt;table&gt;에 더 쉽게 접근할 수 도있고, Event를 한번에 적용할 수도 있다.
+* &lt;div&gt;에도 width설정이 있고, &lt;table&gt;에도 width설정이 있다면, &lt;table&gt;은 &lt;table&gt;의 width 설정을 따른다.
 
