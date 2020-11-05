@@ -157,5 +157,13 @@ t.textbox('textbox').bind('keydown', function(e){
 * \( { 속성 } \) : 속성만 올 수있다. JS를 이용한 함수호출이 불가능하다.
 * Success같은 속성안의 함수에서만 JS코드를 사용할 수 있다.
 
+## empManagetH - Ajax를 이용한 수정dialog채우기
+
+### 필요한 API선택 및 준비
+
+* 목록에서 수정할 row를 선택한다. : easyui - onDblClickRow\(index,row\)
+* 목록에서 바로 data를 가져와도되지만 ajax를 사용해 DB에서 정보를 끌어와보자 - PK값인 EMPNO를 활용한다.
+* Ajax의 API를 살펴본다. - [https://api.jquery.com/jquery.ajax/\#jQuery-ajax-url-settings](https://api.jquery.com/jquery.ajax/#jQuery-ajax-url-settings) - data의 type을 설정할 수 있으니 JSON을 사용해보자 - dialog의 여러 input창을 한번에 DB에 전송하기위해 POST방식을 사용해보자
+
 후기 : 
 
