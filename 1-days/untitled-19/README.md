@@ -101,5 +101,38 @@ t.textbox('textbox').bind('keydown', function(e){
 
 {% page-ref page="api-easyui-textbox-enter-event.md" %}
 
+## AJAX\( \)
+
+### ajax
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">ajax</th>
+      <th style="text-align:left">easyui-datagird</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p>$.ajax( {</p>
+        <p>url : xxx.jsp</p>
+        <p>,success:function(data){</p>
+        <p></p>
+        <p>}</p>
+        <p>});</p>
+      </td>
+      <td style="text-align:left">
+        <p>$(&quot;#dg&quot;).datagrid( {</p>
+        <p>url : xxx.jsp</p>
+        <p>,onloadSuccess:function(data){</p>
+        <p></p>
+        <p>}</p>
+        <p>});</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 후기 : 
 
