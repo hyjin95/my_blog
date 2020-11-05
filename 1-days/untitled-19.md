@@ -69,3 +69,5 @@ t.textbox('textbox').bind('keydown', function(e){
 });
 ```
 
+* 아스키 코드에서 13은 CR=Enter를 가르킨다.
+
