@@ -70,7 +70,11 @@ t.textbox('textbox').bind('keydown', function(e){
 ```
 
 * 아스키 코드에서 13은 CR : Enter를 가르킨다.
+
+### searchbox와  textbox
+
 * searchbox는 Enter Event를 기본적으로 지니고 있지만 textbox는 Enter Event를 포함하고 있지 않다. API를 활용해 구현해보자
+* searchbox는 event를 갖고있으므로 data-options에서 이벤트를 속성으로 지정해줄 수 있다. - data-options="searcher:empSearch3" - 함수이름만으로도 매칭이 가능 
 
 ### 과정
 
