@@ -67,18 +67,12 @@
 
 ## empManagerHtype - &lt;head&gt;
 
+### empSearch\( \) - searchbox
+
 ```markup
 <head>
 <meta charset="UTF-8">
 <title>사원관리(empManagerDType.html)</title>
-<!-- 공통코드 추가 시작 
-나중에는 이것들을 include를 사용해서 한 줄 추가로 하면 좋을거 같아요.-->
-    <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/color.css">
-    <link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/demo/demo.css">
-    <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
-    <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript">
 
      function empSearch(){        	 
@@ -95,7 +89,18 @@
    			 	}		
          });
      }
-         
+</script>
+</head>
+```
+
+### empSearch2\( \) - textbox
+
+```markup
+<head>
+<meta charset="UTF-8">
+<title>사원관리(empManagerDType.html)</title>
+<script type="text/javascript">
+   
      function empSearch2(){
          $("#dg_emp").datagrid({            	
         	url:'../../getEmpList2.jsp?cols='+$("#cb_search").val()+"&keyword="+$("#tb_keyword").val()//name을 쿼리스트링으로 넘긴다.
@@ -107,6 +112,17 @@
    			 	}		
          });
      }
+</script>
+</head>
+```
+
+### empSearch3\( \) - 합치기, if
+
+```markup
+<head>
+<meta charset="UTF-8">
+<title>사원관리(empManagerDType.html)</title>
+<script type="text/javascript">  
          
      function empSearch3(){
         	var keyword;//사용자가 입력한 값 담기
