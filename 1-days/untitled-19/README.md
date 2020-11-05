@@ -107,6 +107,7 @@ t.textbox('textbox').bind('keydown', function(e){
 
 * Axynchronous JavaScript And Xml 비동기 구현 방식
 * 웹 화면 갱신없이 필요한 데이터만 DB와 동기화하는 방식 - ex\) 네이버의 실시간 검색어 순위
+* 너무 남발하면 산만해질 수 있다.
 * 데이터 형식 : JSON, XML, CSV
 * 참고 : [http://www.nextree.co.kr/p9521/](http://www.nextree.co.kr/p9521/)
 
