@@ -74,10 +74,14 @@ t.textbox('textbox').bind('keydown', function(e){
 ### searchbox와  textbox
 
 * searchbox는 Enter Event를 기본적으로 지니고 있지만 textbox는 Enter Event를 포함하고 있지 않다. API를 활용해 구현해보자
-* searchbox는 event를 갖고있으므로 data-options에서 이벤트를 속성으로 지정해줄 수 있다. - data-options="searcher:empSearch3" - 함수이름만으로도 매칭이 가능 
+* searchbox는 event를 갖고있으므로 data-options에서 이벤트를 속성으로 지정해줄 수 있다. - data-options="searcher:empSearch3" - 함수이름만으로도 매칭이 가능
 
 ### 과정
 
 * 1단계 : 기존의 searchbox에 있는 함수를 복사해 연결한다.
 * 2단계 : if문을 사용해 searchbox와 같은 함수에서 사용한다. - 변수를 사용하고, if문을 사용해 합쳐야한다.
+
+{% page-ref page="api-easyui-textbox-enter-event.md" %}
+
+후기 : 
 
