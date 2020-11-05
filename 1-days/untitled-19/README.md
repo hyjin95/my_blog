@@ -165,6 +165,14 @@ t.textbox('textbox').bind('keydown', function(e){
 * 목록에서 바로 data를 가져와도되지만 ajax를 사용해 DB에서 정보를 끌어와보자 - PK값인 EMPNO를 활용한다.
 * Ajax의 API를 살펴본다. - [https://api.jquery.com/jquery.ajax/\#jQuery-ajax-url-settings](https://api.jquery.com/jquery.ajax/#jQuery-ajax-url-settings) - data의 type을 설정할 수 있으니 JSON을 사용해보자 - dialog의 여러 input창을 한번에 DB에 전송하기위해 POST방식을 사용해보자
 * JS에서 태그의 id에 접근해 data를 작성할 수 있는 함수를 제공한다. - setValue\( \), val\( \) - $\("\#id\).Object\(json\[index\], 컬럼명\) - $\("\#id\).val\(json\[0\], EMPNO\)
+* 공유되어야 하는 정보는 멤버변수로 담는다. - 변수는 JS에서 선언할 수 있다. - 선택된 empno값이 수정버튼 클릭시 유지-&gt;넘어가야 한다.
+
+### onDblClickRow\(index,row\)
+
+![](../../.gitbook/assets/1%20%2859%29.png)
+
+* onDblClickCell\(index,field,value\) - 하나의 cell만 클릭된다. - index : 몇번째row, field : 어느컬럼, value : cell 값
+* onDblClickRow\(index,row\) - 하나의 row가 클릭된다.\(해당 row의 n개 cell모두 클릭된다.\) - index : 몇번째row, row : 선택한 row - row.컬럼명 으로 cell값에 접근 할 수 있다.
 
 ### dialog와 popup의 차이
 
