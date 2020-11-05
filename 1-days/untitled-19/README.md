@@ -106,7 +106,7 @@ t.textbox('textbox').bind('keydown', function(e){
 ### Ajax
 
 * Axynchronous JavaScript And Xml 비동기 구현 방식
-* 웹 화면 갱신없이 필요한 데이터만 DB와 동기화하는 방식 - ex\) 네이버의 실시간 검색어 순위
+* 웹 화면 갱신없이 필요한 데이터만 DB와 동기화하는 방식, 부분처리 - ex\) 네이버의 실시간 검색어 순위
 * 너무 남발하면 산만해질 수 있다.
 * 데이터 형식 : JSON, XML, CSV
 * 참고 : [http://www.nextree.co.kr/p9521/](http://www.nextree.co.kr/p9521/)
@@ -137,6 +137,18 @@ t.textbox('textbox').bind('keydown', function(e){
         <p></p>
         <p>}</p>
         <p>});</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+        <p>&#xACB0;&#xACFC; data&#xAC00; &#xC9C0;&#xC815;&#xD55C; type&#xC73C;&#xB85C;
+          &#xCD9C;&#xB825;&#xB41C;&#xB2E4;.</p>
+        <p>JSON, XML, CSV</p>
+      </td>
+      <td style="text-align:left">
+        <p>&#xACB0;&#xACFC; data&#xC5D0; easyui&#xAC00; &#xAC1C;&#xC785;&#xD574;
+          &#xAC00;&#xACF5;&#xB41C;&#xB2E4;.</p>
+        <p>Stringify, split, substring, parse&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC57C;&#xD55C;&#xB2E4;.</p>
       </td>
     </tr>
   </tbody>
