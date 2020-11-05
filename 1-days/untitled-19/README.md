@@ -169,6 +169,7 @@ t.textbox('textbox').bind('keydown', function(e){
 
 * window와 popup은 다른 페이지이다.
 * window와 dialog는 같은 페이지이다. - dialog의 내부만 다른 것 - 그래서 hide\( \)해놓고 이벤트 발생시 show,open\( \)해주는 것 - window html에서 JS로 dialog내부 태그의 id에 접근 할 수 있다. 
+* JS에서 태그의 id에 접근해 data를 작성할 수 있는 함수를 제공한다. - setValue\( \), val\( \)
 
 후기 : 
 
