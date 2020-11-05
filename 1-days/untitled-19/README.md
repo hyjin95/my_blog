@@ -58,7 +58,7 @@ description: 2020.11.05 - 57일차
 
 ## 필기
 
-### JS 변수선언
+### JS 변수선언 위치
 
 ```javascript
 <script type="text/javascript">
