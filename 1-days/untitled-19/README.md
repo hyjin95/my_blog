@@ -126,7 +126,7 @@ t.textbox('textbox').bind('keydown', function(e){
         <p>$.ajax( {</p>
         <p>url : xxx.jsp</p>
         <p>,success:function(data){</p>
-        <p></p>
+        <p>JS&#xCF54;&#xB4DC;</p>
         <p>}</p>
         <p>});</p>
       </td>
@@ -134,7 +134,7 @@ t.textbox('textbox').bind('keydown', function(e){
         <p>$(&quot;#dg&quot;).datagrid( {</p>
         <p>url : xxx.jsp</p>
         <p>,onloadSuccess:function(data){</p>
-        <p></p>
+        <p>JS&#xCF54;&#xB4DC;</p>
         <p>}</p>
         <p>});</p>
       </td>
@@ -153,6 +153,9 @@ t.textbox('textbox').bind('keydown', function(e){
     </tr>
   </tbody>
 </table>
+
+* \( { 속성 } \) : 속성만 올 수있다. JS를 이용한 함수호출이 불가능하다.
+* Success같은 속성안의 함수에서만 JS코드를 사용할 수 있다.
 
 후기 : 
 
