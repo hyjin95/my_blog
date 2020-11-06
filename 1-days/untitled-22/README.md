@@ -109,5 +109,21 @@ description: 2020.11.06 - 58일차
 * 업무 복잡도가 높을 수록 사용 빈도가 많아진다.
 * ex\) - 테이블1 : 주문M : 누가, 언제, 주문번호\(pk\)    테이블2 : 주문상세내역서 : 상품, 가격, 주문코드+식별번호\(복합키\)    회원이 주문시 두 테이블 모두에게 정보가 들어가야한다.
 
+### JSP - 공백제거 &lt;trim&gt;
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<trim-directive-whitespaces>true</trim-directive-whitespaces>
+		</jsp-property-group>
+	</jsp-config>
+</web-app>
+```
+
+* JSP파일에서 JSON.parse\( data \); 로 parse를 요청하면 JSON내부의 parser가 문법검사를하는데,  이때 문서 형식 안에 공백\(whitespace\)가 존재하면 형식에 맞지 않다고 판단하고 진행되지 않는 경우가 발생 할 수 있다. Web.xml 배치 서술자에서 jsp형식의 모든 파일 그룹에 적용할 수 있다.
+
 
 
