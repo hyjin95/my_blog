@@ -20,3 +20,7 @@ description: 2020.11.06 - 58일차
 | 파일 | DBConnectionMgr.java | Configuration.XML |
 | 연결 | Connection\( I \) |  |
 
+{% page-ref page="java-mybatis-db.md" %}
+
+
+
