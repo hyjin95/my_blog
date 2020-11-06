@@ -208,6 +208,8 @@ description: 2020.11.06 - 58일차
     pageEncoding="UTF-8"%>
 <%
 	String mem_id="apple";
+	String mem_id2="carrot";
+	out.print("mem_id2 : "+mem_id2);
 %>
 <!DOCTYPE html>
 <html>
@@ -225,7 +227,7 @@ description: 2020.11.06 - 58일차
 ```
 
 * JS변수 mem\_id에 mem\_id 변수가 대입되었다.
-* 출력결과는 apple
+* 출력결과는 mem\_id : apple 팝업이 뜨고, 브라우저에 mem\_id2 : carrot 이 출력된다.
 
 후기 : 
 
