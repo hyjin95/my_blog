@@ -14,8 +14,9 @@ description: 2020.11.06 - 58일차
 
 ### Java와 MyBatis
 
-| JAVA | MyBatis |
-| :---: | :---: |
-| ip, port, 계정정보 | ip, port, 계정정보 |
-| DBConnectionMgr | XML |
+|  | JAVA | MyBatis |
+| :--- | :---: | :---: |
+| 연동정보 | ip, port, 계정정보 | ip, port, 계정정보 |
+| 파일 | DBConnectionMgr.java | Configuration.XML |
+| 연결 | Connection\( I \) |  |
 
