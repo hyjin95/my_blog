@@ -69,7 +69,7 @@ description: 2020.11.06 - 58일차
 * MyBatis를 사용하면 myBatis가 자신의 jar파일 내부 클래스를 사용해 해주는 것이 많다. - 코드가 줄어든다.
 * java는 연결통로와 Sql문 전송 객체를 외부에서 개발자가 직접 가져와 사용해줘야 하지만, MyBatis는 자기가 가진 jar파일 내부의 class들을 사용해 외부에서 끌어오지 않아도 된다.
 * java는 Query문을 String으로 관리하므로 sql문에 \( apppen, "  "\)를 사용하므로 번거롭다. - 또, java는 Query문을 메서드로 관리해 분산되어 있다.
-* myBatis는 xml파일하나에 모두 관리한다. 
+* myBatis는 xml파일하나에 모두 관리한다.  - 업무별로 관리해 A업무xml에는 A업무의 모든 sql문이 관리되어 편하다.
 
 {% page-ref page="java-mybatis-db.md" %}
 
@@ -79,6 +79,7 @@ description: 2020.11.06 - 58일차
 * 이 떄 Configuration.xml에는 사용될 sql문 모음 xml이 등록, 매핑되어 있어야한다. - xml 매핑시 xml문서의 이름은 업무 이름으로 하는것이 구분하기 좋을 것이다.
 *  sql문을 저장한 xml문서는 수정되어도 서버를 다시 시작하지 않아도 반영된다. - xml문서가 프로젝트 안에서 java -&gt; class로 컴파일 되어 저장되기 때문이다. - 프로젝트의 src파일 안에서 소스로 관리되기 때문 - 프로젝트 - src내부의 문서들은 새로 저장될때 모든 소스가 컴파일 된다.
 * 하지만 web.xml같은 배치서술자 파일은 src밖에서 관리 되므로 재시작해야한다. - 프로젝트 - WebContet 파일 안에서 관리 되므로 컴파일 되지 않는다.
+* MyBatis에서 연결통로를 생성할떄, XML문서로 따로 분리한 연결 담당 파일을 가져와 읽어야한다. - 연결을 담당하는 XML파일이 따로 존재하기 떄문에 해당 파일로 재사용이 가능하다.
 
 ### Query문
 
@@ -101,6 +102,13 @@ description: 2020.11.06 - 58일차
 
 * 배포하기 - 프로젝트 우클릭 - Export - War.file - Destination:배포서버지정 - 서버파일의 webapps폴더 안에 저장 - Finish
 * 배포한 서버의 Configure창에서 서버를 기동시키면 배포했던 War파일이 프로젝트명의 폴더로 생성되는 것을 볼 수 있다. - 기동한 서버는 Stop을 눌러 정지 시켜주자, Eclipse에서 사용할 수 있도록
+
+### commit, rollback
+
+* SqlSession으로 생성한 인스턴스 변수는 commit과 rollback의 대상이 된다. - SqlSession session = null; - 여기서 session은 서버 캐시메모리에 관리되는 API가 아닌 SqlSession의 인스턴스변수명일 뿐이다.
+* 해당 인스턴스 변수로  insert\("empInsert\), update\("empUpdate",pmap\),delete\("empDelete",pmap\), selectOne\("empDetail"\), selectList\("empList"\), selectMap\("empMap"\) 같은 메서드를 호출 할 수 있다.
+* 해당 인스턴스 변수로 자바단에 오라클 명령어 commit과 rollback을 호출할 수 있는데, - 자바 : con.setAutoCommite\(true\)을 사용해 자동커밋을 할 수 있다. - MyBatis : 별도로 commit, rollback을 인스턴스변수에 호출해주어야 한다.   con.commit\( \), con.rollback\( \), session.commit\( \), session.rollback\( \)
+* 위 자바의 오토커밋, myBatis의 commit, rollback명령어들은 트랜잭션처리의 대상이 될 수 있다.
 
 ### MyBatis - 트랜잭션\(transaction\)
 
