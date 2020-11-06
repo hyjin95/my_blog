@@ -77,7 +77,7 @@ description: 2020.11.06 - 58일차
 
 * SqlSessionFactory는 XML문서\(Configuration.xml\)의 연결정보를 수집해 연결통로를 생성한다.
 * 이 떄 Configuration.xml에는 사용될 sql문 모음 xml이 등록, 매핑되어 있어야한다. - xml 매핑시 xml문서의 이름은 업무 이름으로 하는것이 구분하기 좋을 것이다.
-*  sql문을 저장한 xml문서는 수정되어도 서버를 다시 시작하지 않아도 반영된다. - xml문서가 프로젝트 안에서 java -&gt; class로 컴파일 되어 저장되기 때문이다. - 프로젝트의 src파일 안에서 소스로 관리되기 때문 - 프로젝트 - src내부의 문서들은 새로 저장될때 컴파일 된다.
+*  sql문을 저장한 xml문서는 수정되어도 서버를 다시 시작하지 않아도 반영된다. - xml문서가 프로젝트 안에서 java -&gt; class로 컴파일 되어 저장되기 때문이다. - 프로젝트의 src파일 안에서 소스로 관리되기 때문 - 프로젝트 - src내부의 문서들은 새로 저장될때 모든 소스가 컴파일 된다.
 * 하지만 web.xml같은 배치서술자 파일은 src밖에서 관리 되므로 재시작해야한다. - 프로젝트 - WebContet 파일 안에서 관리 되므로 컴파일 되지 않는다.
 
 ### Query문
@@ -87,7 +87,7 @@ description: 2020.11.06 - 58일차
 
 ### Java 배포
 
-* WEB-INF - lib - classes
+* WEB-INF - lib : jar모음 - classes : class모음
 * 파일을 배포할 떄에는 war형식으로 묶에 배포한다. - WEB-INF폴더 안의 classes파일들을 war로 묶는다.
 * 배포되는 war파일안에는 class파일만 존재해야한다.
 * java파일안에는 주석들이 달려있어 java를 배포하는 경우에는 보안의 문제가 발생할 수 있다.
