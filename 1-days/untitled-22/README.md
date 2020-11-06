@@ -85,5 +85,11 @@ description: 2020.11.06 - 58일차
 * Java : "Select empno, ename, ... From emp Where empno = ? " - VO의 getter, setter를 사용한다. - 코드가 길어진다. - 메서드안에 분산되어 있어 업무를 전체적으로 파악하고 sql문을 찾기에 불편하다. - sql문을 Eclipse, java에서 관리하므로 orcle이 인식하도록 " "이 붙는 것인데, Toad에서 단위 테스트를 하기 위해서는 " ", append를 떼어내 가져가야하므로 번거롭다.
 * MyBatis - sql문에 " "를 사용하지 않아도 된다.  - toad에서 단위테스트시 그냥 복사해서 사용할 수 있다. - xml문서안에 해당 업무에 관련된 모든 sql문을 관리하므로 파악하고, 찾기에 유리하다.
 
+### Java 배포
 
+* WEB-INF - lib - classes
+* 파일을 배포할 떄에는 war형식으로 묶에 배포한다. - WEB-INF폴더 안의 classes파일들을 war로 묶는다.
+* 배포되는 war파일안에는 class파일만 존재해야한다.
+* java파일안에는 주석들이 달려있어 java를 배포하는 경우에는 보안의 문제가 발생할 수 있다.
+* war형식의 파일은 배포하기만 하면 압출풀기와 같은 과정 없이 사용할 수 있다.
 
