@@ -215,7 +215,8 @@
   * [57 Days - API:textbox-enter+if, &lt;table&gt;과 &lt;div&gt;, AJAX, empManagerHtype:onDblClickRow, dialog](1-days/untitled-19/README.md)
     * [API활용 - easyui-textbox : Enter Event, empSearch](1-days/untitled-19/api-easyui-textbox-enter-event.md)
     * [empManagerHtype - Ajax를 이용한 수정dialog](1-days/untitled-19/untitled.md)
-  * [58 Days -](1-days/untitled-22/README.md)
+  * [58 Days - 트랜잭션, Java-MyBatis:DB연동차이점, append, JSP&lt;trim&gt;, Java,JSP:브라우저에 작성, JS변수에 Java변수 담기, 선택해제](1-days/untitled-22/README.md)
     * [Java와 MyBatis - DB](1-days/untitled-22/java-mybatis-db.md)
+    * [empManagerHtype - VO+myBatis로 우편번호 불러오기 + row선택해제](1-days/untitled-22/empmanagerhtype-vo+mybatis-+-row.md)
   * [Untitled](1-days/untitled-1-1.md)
 

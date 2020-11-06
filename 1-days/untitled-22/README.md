@@ -2,7 +2,7 @@
 description: 2020.11.06 - 58일차
 ---
 
-# 58 Days -
+# 58 Days - 트랜잭션, Java-MyBatis:DB연동차이점, append, JSP&lt;trim&gt;, Java,JSP:브라우저에 작성, JS변수에 Java변수 담기, 선택해제
 
 ### 사용 프로그램
 
@@ -267,6 +267,11 @@ description: 2020.11.06 - 58일차
 * Dao의 메서드 이름과 zipCode.xml문서의 아이디를 일치시켜 보기 쉽게 한다.
 * 오라클 테이블 컬럼명 = VO변수명 = Map의 key를 통일해 보기 쉽게 한다.
 * 사용자가 입력해 파라미터로 넘기는 객체는 pmap과 pzVO를 사용하고, 응답으로 출력될 객체는 rmap, rzVO로 사용해 구분하도록 하자.
+
+### unselectRow\(index\)
+
+* 선택된 목록을 한번 더 선택하면 해제되도록 만들어 보자.
+* easyui-datagrid의 API에서 unselectRow메서드를 지원한다.
 
 후기 : 
 
