@@ -10,3 +10,12 @@ description: 2020.11.06 - 58일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 복습
+
+### Java와 MyBatis
+
+| JAVA | MyBatis |
+| :---: | :---: |
+| ip, port, 계정정보 | ip, port, 계정정보 |
+| DBConnectionMgr | XML |
+
