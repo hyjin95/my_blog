@@ -179,9 +179,24 @@ description: 2020.11.06 - 58일차
 ### JSP변수와 JS
 
 ```markup
-var mem_id = "<%="test"%>";
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a2.jsp</title>
+</head>
+<body>
+<script type="text/javascript">
+   var mem_id = "<%="test"%>";
+   alert("mem_id : "+mem_id);
+</script>
+</body>
+</html>
 ```
 
+* mimetype이 html인 jsp문서
 * JS변수 mem\_id에 값으로 test 라는 문자가 담겼다.
 
 후기 : 
