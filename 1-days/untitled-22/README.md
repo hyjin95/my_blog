@@ -37,7 +37,8 @@ description: 2020.11.06 - 58일차
       <td style="text-align:left">&#xC5F0;&#xACB0;&#xD1B5;&#xB85C;</td>
       <td style="text-align:center">
         <p>Connection( I )</p>
-        <p>&#xAC1C;&#xBC1C;&#xC790;&#xAC00; &#xC9C1;&#xC811; &#xC0AC;&#xC6A9; &#xD55C;&#xB2E4;.</p>
+        <p>&#xAC1C;&#xBC1C;&#xC790;&#xAC00; &#xC9C1;&#xC811; &#xAC00;&#xC838;&#xC640;
+          &#xC0AC;&#xC6A9;&#xD574;&#xC57C;&#xD55C;&#xB2E4;.</p>
       </td>
       <td style="text-align:center">
         <p>X</p>
@@ -45,7 +46,7 @@ description: 2020.11.06 - 58일차
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Query&#xC804;&#xC1A1;</td>
+      <td style="text-align:left">Query&#xC804;&#xC1A1;, &#xC694;&#xCCAD;</td>
       <td style="text-align:center">PrepareStatment, Statment</td>
       <td style="text-align:center">X</td>
     </tr>
