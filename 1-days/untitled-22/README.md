@@ -133,7 +133,7 @@ description: 2020.11.06 - 58일차
 
 * JSP파일에서 JSON.parse\( data \); 로 parse를 요청하면 JSON내부의 parser가 문법검사를하는데,  이때 문서 형식 안에 공백\(whitespace\)가 존재하면 형식에 맞지 않다고 판단하고 진행되지 않는 경우가 발생 할 수 있다. Web.xml 배치 서술자에서 jsp형식의 모든 파일 그룹에 적용할 수 있다.
 
-## HTML과 JSP
+## HTML, JAVA, JSP의 출력
 
 ### HTML
 
@@ -176,7 +176,7 @@ description: 2020.11.06 - 58일차
 * 처리주체 : 서버 - &gt; 브라우저
 * 서버쪽이 먼저 처리되므로 화면에는 안녕 이 먼저, 그 다음에 반가워요가 출력된다.
 
-### JSP변수와 JS
+### JS변수에 java값 담기
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -198,8 +198,34 @@ description: 2020.11.06 - 58일차
 
 * mimetype이 html인 jsp문서
 * JS변수 mem\_id에 값으로 test 라는 문자가 담겼다.
-* JS에서 문자에는 ' '이나 " "를 붙이지 않으면 변수 취급하므로 문자열이라면 반드시 붙이도록한다.
+* JS에서 문자에는 ' '이나 " "를 붙이지 않으면 변수, 함수 취급하므로 문자열이라면 반드시 붙이도록한다.
 * JS변수에 java변수를 담을 수 있다. 하지만 정적이다. 서버에서 이미 결정된 정보가 담기는 것이므로
+
+### JS변수에 Java 변수 담기
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	String mem_id="apple";
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a3.jsp</title>
+</head>
+<body>
+<script type="text/javascript">
+   var mem_id = "<%=mem_id%>";
+   alert("mem_id : "+mem_id);
+</script>
+</body>
+</html>
+```
+
+* JS변수 mem\_id에 mem\_id 변수가 대입되었다.
+* 출력결과는 apple
 
 후기 : 
 
