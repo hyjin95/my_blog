@@ -10,6 +10,19 @@ description: 2020.11.06 - 58일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 필기
+
+### setText\( \)와 append\( \)
+
+* setText는 소유주를 파라미터에 들어오는 값으로 refresh한다.  - 한 덩어리로 취급
+* append는 소유주에 파라미터에 들어오는 값을 더한다. - 문자열을 나눠서 취급하므로 끼어들기가 가능하다.
+* 동적처리는 append를 사용하자
+* JS의 document.write함수는 setText와 같은 성격을 가지므로 기존 데이터가 날아가 주의해야한다.
+
+### html과 브라우저
+
+* 브라우저는 확장자가 html인 문서와만 플러그인이 이루어진다.
+
 ## Java와 MyBatis, xml
 
 ### Java와 MyBatis
@@ -135,6 +148,24 @@ description: 2020.11.06 - 58일차
 
 ## HTML, JAVA, JSP의 출력
 
+### Java : system.out
+
+* 자바는 system.out을 사용해 화면에 출력할 수 있지만 작성 시스템에서만 볼 수 있다.
+* 물리적 거리를 극복해 외부에서도 볼 수 있으려면 통신을 해야한다.
+* 통신으로 요구사항을 전달하고, 듣고 처리하는 부분, 응답하는 부분이 필요하다. 여기서 JAVA는 처리하는 부분을 담당한다.
+* 출력은 system이 아닌 브라우저에게 내보내야 화면에 출력될 수 있다. 브라우저에는 JVM이 없으므로....
+* JSP, Servlet을 사용하자.
+
+### JSP, Servlet : out.print
+
+* 소유주가 system으로 지정된 객체가 아닌 Servlet의 내장 객체이므로 브라우저에게 출력이 가능하다.
+* 처리주체가 서버 이므로 서버가 제공하고, 클라이언트가 사용한다.
+* JSP와 Servlet은 브라우저에 쓸 수 있고, html과 공존까지도 가능하다.
+* 단, html의 처리주체는 브라우저, JSP와 Servlet의 쓰기 객체 처리 주체는 서버이므로 시점에 주의하자 - 서버가 처리한다는 것 : out.print 제거, " "제거, \( \)제거하여 내용만 알아서 출력해준다. - 시점 : 서버가 먼저 처리하고, 브라우저가 처리한다. - JSP, Servlet의 자료가 정해진 다음에 html이 처리되는 것이다.
+* html이 다운로드될때 다운로드되는 data는 이미 서버에서 처리가 끝난 정보이므로 정적이다.
+
+### JS : document.write\( \)
+
 ### HTML
 
 ```markup
@@ -228,6 +259,14 @@ description: 2020.11.06 - 58일차
 
 * JS변수 mem\_id에 mem\_id 변수가 대입되었다.
 * 출력결과는 mem\_id : apple 팝업이 뜨고, 브라우저에 mem\_id2 : carrot 이 출력된다.
+
+## empManagerHtype.jsp : 우편번호를 VO+MyBatis로 불러오자
+
+### 준비
+
+* Dao의 메서드 이름과 zipCode.xml문서의 아이디를 일치시켜 보기 쉽게 한다.
+* 오라클 테이블 컬럼명 = VO변수명 = Map의 key를 통일해 보기 쉽게 한다.
+* 사용자가 입력해 파라미터로 넘기는 객체는 pmap과 pzVO를 사용하고, 응답으로 출력될 객체는 rmap, rzVO로 사용해 구분하도록 하자.
 
 후기 : 
 

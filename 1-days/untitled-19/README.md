@@ -2,7 +2,7 @@
 description: 2020.11.05 - 57일차
 ---
 
-# 57 Days - API:textbox-enter+if
+# 57 Days - API:textbox-enter+if, &lt;table&gt;과 &lt;div&gt;, AJAX, empManagerHtype:onDblClickRow, dialog
 
 ### 사용 프로그램
 
@@ -179,7 +179,10 @@ t.textbox('textbox').bind('keydown', function(e){
 * window와 popup은 다른 페이지이다.
 * window와 dialog는 같은 페이지이다. - dialog의 내부만 다른 것 - 그래서 hide\( \)해놓고 이벤트 발생시 show,open\( \)해주는 것 - window html에서 JS로 dialog내부 태그의 id에 접근 할 수 있다. 
 
+### Java : 2차배열 - JS \(index,row\)
 
+* JAVA : int is\[0\]\[1\] = 2차배열
+* JS : Array, for\( \)\(is\[0\].EMPNO\)
 
-후기 : 
+후기 : 이번주는 평일내내 남아서 공부도 하고, 운동도 열심히 했다. 다음주도 이렇게만!
 

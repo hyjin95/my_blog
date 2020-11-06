@@ -1,4 +1,4 @@
-# API활용 - easyui-textbox : Enter Event구현
+# API활용 - easyui-textbox : Enter Event, empSearch
 
 ## empManagerHtype - &lt;body&gt;
 

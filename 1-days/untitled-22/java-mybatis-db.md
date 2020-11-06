@@ -92,3 +92,5 @@ public class DBConnectionMgr {
 </configuration>
 ```
 
+* xml파일에 sql문을 관리하고, 18번 라인처럼 매핑하면, id로 접근할 수 있다.
+
