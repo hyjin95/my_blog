@@ -133,5 +133,56 @@ description: 2020.11.06 - 58일차
 
 * JSP파일에서 JSON.parse\( data \); 로 parse를 요청하면 JSON내부의 parser가 문법검사를하는데,  이때 문서 형식 안에 공백\(whitespace\)가 존재하면 형식에 맞지 않다고 판단하고 진행되지 않는 경우가 발생 할 수 있다. Web.xml 배치 서술자에서 jsp형식의 모든 파일 그룹에 적용할 수 있다.
 
+## HTML과 JSP
 
+### HTML
+
+```markup
+<html>
+    <body>
+        안녕
+    </body>
+<html>
+```
+
+* 처리주체 : 브라우저
+
+### JSP
+
+```markup
+<%@page contentType"text/html" %>
+<html>
+    <body>
+        <% out.ptin("안녕"); %>
+    </body>
+<html>
+```
+
+* 처리주체 : 서버
+* mimetype html이기때문에 서버가 문서를 읽을때 4번을 알아서 읽어준다. 화면에 출력되는 것은 안녕 뿐
+
+### HTML과 JSP
+
+```markup
+<%@page contentType"text/html" %>
+<html>
+    <body>
+        반가워요
+        <% out.ptin("안녕"); %>
+    </body>
+<html>
+```
+
+* 처리주체 : 서버 - &gt; 브라우저
+* 서버쪽이 먼저 처리되므로 화면에는 안녕 이 먼저, 그 다음에 반가워요가 출력된다.
+
+### JSP변수와 JS
+
+```markup
+var mem_id = <%="test"%>
+```
+
+* JS변수 mem\_id에 값으로 test 라는 문자가 담겼다.
+
+후기 : 
 
