@@ -167,7 +167,7 @@ description: 2020.11.06 - 58일차
 <%@page contentType"text/html" %>
 <html>
     <body>
-        반가워요
+        반가워요<br>
         <% out.ptin("안녕"); %>
     </body>
 <html>
@@ -179,7 +179,7 @@ description: 2020.11.06 - 58일차
 ### JSP변수와 JS
 
 ```markup
-var mem_id = <%="test"%>
+var mem_id = "<%="test"%>";
 ```
 
 * JS변수 mem\_id에 값으로 test 라는 문자가 담겼다.
