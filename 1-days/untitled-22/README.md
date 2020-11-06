@@ -82,7 +82,7 @@ description: 2020.11.06 - 58일차
 
 ### Query문
 
-* Java : "Select empno, ename, ... From emp Where empno = ? " - VO의 getter, setter를 사용한다. - 코드가 길어진다. - 메서드안에 분산되어 있어 업무를 전체적으로 파악하고 sql문을 찾기에 불편하다. - sql문을 Eclipse, java에서 관리하므로 orcle이 인식하도록 " "이 붙는 것인데, Toad에서 단위 테스트를 하기 위해서는 " "를 떼어내 가져가야 단위테스트를 할 수 있으므로 번거롭다.
+* Java : "Select empno, ename, ... From emp Where empno = ? " - VO의 getter, setter를 사용한다. - 코드가 길어진다. - 메서드안에 분산되어 있어 업무를 전체적으로 파악하고 sql문을 찾기에 불편하다. - sql문을 Eclipse, java에서 관리하므로 orcle이 인식하도록 " "이 붙는 것인데, Toad에서 단위 테스트를 하기 위해서는 " ", append를 떼어내 가져가야하므로 번거롭다.
 * MyBatis - sql문에 " "를 사용하지 않아도 된다.  - toad에서 단위테스트시 그냥 복사해서 사용할 수 있다. - xml문서안에 해당 업무에 관련된 모든 sql문을 관리하므로 파악하고, 찾기에 유리하다.
 
 
