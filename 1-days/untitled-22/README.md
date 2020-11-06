@@ -47,7 +47,7 @@ description: 2020.11.06 - 58일차
     </tr>
     <tr>
       <td style="text-align:left">Query&#xC804;&#xC1A1;, &#xC694;&#xCCAD;</td>
-      <td style="text-align:center">PrepareStatment, Statment</td>
+      <td style="text-align:center">PreparedStatment, Statment</td>
       <td style="text-align:center">X</td>
     </tr>
     <tr>
@@ -66,8 +66,8 @@ description: 2020.11.06 - 58일차
   </tbody>
 </table>
 
-* MyBatis를 사용하면 myBatis가 자신의 jar파일 내부 클래스를 사용해 해주는 것이 많다.
-* 코드가 줄어든다.
+* MyBatis를 사용하면 myBatis가 자신의 jar파일 내부 클래스를 사용해 해주는 것이 많다. - 코드가 줄어든다.
+* java는 연결통로와 Sql문 전송 객체를 외부에서 개발자가 직접 가져와 사용해줘야 하지만, MyBatis는 자기가 가진 jar파일 내부의 class들을 사용해 외부에서 끌어오지 않아도 된다.
 * java는 Query문을 String으로 관리하므로 sql문에 \( apppen, "  "\)를 사용하므로 번거롭다. - 또, java는 Query문을 메서드로 관리해 분산되어 있다.
 * myBatis는 xml파일하나에 모두 관리한다. 
 
