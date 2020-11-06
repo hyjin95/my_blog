@@ -73,7 +73,7 @@ description: 2020.11.06 - 58일차
 
 {% page-ref page="java-mybatis-db.md" %}
 
-### SqlSessionFactory와 XML
+### MyBatis : SqlSessionFactory와 XML
 
 * SqlSessionFactory는 XML문서\(Configuration.xml\)의 연결정보를 수집해 연결통로를 생성한다.
 * 이 떄 Configuration.xml에는 사용될 sql문 모음 xml이 등록, 매핑되어 있어야한다. - xml 매핑시 xml문서의 이름은 업무 이름으로 하는것이 구분하기 좋을 것이다.
