@@ -88,7 +88,7 @@ description: 2020.11.06 - 58일차
 ### Java 배포
 
 * WEB-INF - lib : jar가 저장되는 곳 - classes : class가 저장되는 곳
-* 파일을 배포할 떄에는 war형식으로 묶에 배포한다. - WEB-INF폴더 안의 classes파일들을 war로 묶는다.
+* 파일을 배포할 떄에는 war형식으로 묶어 배포한다. - WEB-INF폴더 안의 classes파일들을 war로 묶는다.
 * 배포되는 war파일안에는 class파일만 존재해야한다.
 * java파일안에는 주석들이 달려있어 java를 배포하는 경우에는 보안의 문제가 발생할 수 있다.
 * war형식의 파일은 배포하기만 하면 압출풀기와 같은 과정 없이 사용할 수 있다.
