@@ -88,8 +88,19 @@ description: 2020.11.06 - 58일차
 ### Java 배포
 
 * WEB-INF - lib : jar가 저장되는 곳 - classes : class가 저장되는 곳
-* 파일을 배포할 떄에는 war형식으로 묶어 배포한다. - WEB-INF폴더 안의 classes파일들을 war로 묶는다.
+* 운영서버에 파일을 배포할 떄에는 war형식으로 묶어 배포한다. - WEB-INF폴더 안의 classes파일들을 war로 묶는다.
 * 배포되는 war파일안에는 class파일만 존재해야한다.
 * java파일안에는 주석들이 달려있어 java를 배포하는 경우에는 보안의 문제가 발생할 수 있다.
 * war형식의 파일은 배포하기만 하면 압출풀기와 같은 과정 없이 사용할 수 있다.
+
+### Eclipse War배포하기
+
+![&#xC2DC;&#xC791;&#xD45C;&#xC2DC;&#xC904;&#xC5D0;&#xC11C; Configure&#xC11C;&#xBC84; &#xC2E4;&#xD589;](../../.gitbook/assets/1%20%2860%29.png)
+
+![start&#xB97C; &#xB204;&#xB974;&#xBA74; &#xC11C;&#xBC84;&#xAE30;&#xB3D9;&#xC2DC; war&#xAC00; &#xC54C;&#xC544;&#xC11C; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xBA85; &#xD30C;&#xC77C;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.](../../.gitbook/assets/2%20%2847%29.png)
+
+* 배포하기 - 프로젝트 우클릭 - Export - War.file - Destination:배포서버지정 - 서버파일의 webapps폴더 안에 저장 - Finish
+* 배포한 서버의 Configure창에서 서버를 기동시키면 배포했던 War파일이 프로젝트명의 폴더로 생성되는 것을 볼 수 있다. - 기동한 서버는 Stop을 눌러 정지 시켜주자, Eclipse에서 사용할 수 있도록
+
+
 
