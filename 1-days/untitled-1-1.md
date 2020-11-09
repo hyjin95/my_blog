@@ -10,6 +10,8 @@ description: 2020.11.09 - 59일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 필기
+
 ### Local
 
 * Java\(화면, 통신, 스레드, 로직까지\)
@@ -25,4 +27,22 @@ description: 2020.11.09 - 59일차
 
 * Android\(google\), IOS\(apple\)
 * 모바일 서비스
+
+## JSP
+
+### JSP와 HTML
+
+| JSP | HTML |
+| :--- | :--- |
+| &lt;% - %&gt; | &lt;% - %&gt;사용 불가 |
+|  |  |
+
+### &lt;% - %&gt;
+
+* 스크립틀릿
+* 자바코드를 작성할 수 있다.
+* 변수를 선언할 수 있지만 지역변수만 가능하다.
+* 메서드 선언은 불가능
+* 제어문은 사용할 수 있다.
+* document.write와 같은 역할을 할 수 있다. - out.print\( \);
 
