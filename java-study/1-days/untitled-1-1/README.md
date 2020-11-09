@@ -2,7 +2,7 @@
 description: 2020.11.09 - 59일차
 ---
 
-# 59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동, Redirect, forward
+# 59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동, sendRedirect, forward
 
 ### 사용 프로그램
 
@@ -135,22 +135,18 @@ description: 2020.11.09 - 59일차
 
 {% page-ref page="jsp-java-scope.md" %}
 
-### sendRedirect
+### response.sendRedirect\( \)
 
-![](../../../.gitbook/assets/4%20%2833%29.png)
+* sendRedirect로 지정된 페이지로 이동한다.
+* URL이 변하는 페이지 이동 방식이다.
+* 새로운 요청이므로 새로운 req, res객체가 생성되므로 data가 유지되지 않는다.
+* 로그인완료나 결제완료시 홈페이지로 이동한다거나.
+* 단, 페이지가 이동되더라도 이후의 java 코드는 진행된다.
 
-* response.sendRedirect
-* 특정 처리나 특정 조건일때에 지정한 페이지로 이동한다.
-* web Container는 redirect명령이 돌아오면 웹 브라우저는 URL을 해당 페이지로 변경하고 이동한다.
-* 새로운 요청이므로 새로운 req, res객체개 생성되므로 data가 유지되지 않는다.
+### requestDispatcher.forward\( \)
 
-### Dispatcher.forward\( \)
-
-![](../../../.gitbook/assets/3%20%2839%29.png)
-
-* 웹 브라우저에서는 최초 호출된 URL만 표시되고 이동한 페이지의 URL은 볼 수 없다.
-* 동일한 Web Container내부의 페이지로만 이동할 수 있다.
-* 처음에 요청된 페이지와 forward에 의해 호출된 페이지는 req, res객체를 공유해 data가 유지된다.
+* URL이 변하지 않는 페이지 이동 방식 - 웹 브라우저에서는 최초 호출된 URL만 표시되고 이동한 페이지의 URL은 볼 수 없다.
+* data가 유지된다.
 
 ## 페이지이동 : JSP와 Servlet
 
