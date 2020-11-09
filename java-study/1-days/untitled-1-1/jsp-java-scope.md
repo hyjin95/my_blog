@@ -68,6 +68,7 @@ public class Sonata {
 	Sonata herCar = new Sonata();
 	herCar.speed = 100;
 
+	request.setAttribute("myCar",myCar);
 	response.sendRedirect("result.jsp");
 %>
 </body>
@@ -75,7 +76,7 @@ public class Sonata {
 <!-- 이렇게는 사용하지 않는다. Servlet을 사용할것이므로 -->
 ```
 
-* 세번째 - sendRedirect 메서드를 사용 : 22번 - null 출력
+* 세번째 - sendRedirect 메서드를 사용 : 22번 - null 출력 - URL 이 변경될때 값을 유지해주는 메서드가 존재하지 않는다.
 
 ### result.jsp
 
@@ -131,7 +132,7 @@ public class Sonata {
 <!-- 이렇게는 사용하지 않는다. Servlet을 사용할것이므로 -->
 ```
 
-* 네번째 - RequestDispatcher의 forward메서드를 사용 : 24-26번 - myCar 주소번지 출력
+* 네번째 - RequestDispatcher의 forward메서드를 사용 : 24-26번 - myCar 주소번지 출력 - RequestDispatcher의 forward메서드가 값을 유지시켜준다.
 
 ### result.jsp
 
