@@ -79,6 +79,9 @@ description: 2020.11.09 - 59일차
 ### 학습목표
 
 1. 페이지 이동방법에 대해서 말할 수 있다.
+   1. location.href='xxx.jsp'
+   2. url : 'xxx.do' - easyui-datagrid-이벤트발생시
+   3. ajax\( { url : 'xxx.jsp', dataType : 'json', success:function\(data\){ } } \)
 2. 페이지 이동 시 자료를  유지하는 방법에 대해 설명하고 활용할 수 있다.
 
 ### JSP
