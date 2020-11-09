@@ -176,12 +176,18 @@ $("#cb_search").combobox({
 1. Dispatcher와 forward메서드를 사용해 현재페이지에서 URL변화없이 결과를 출력해보자
 2. 함수안에서 datagrid를갱신 한다.
 
+{% page-ref page="4.md" %}
+
+참고
+
 {% page-ref page="../untitled-16/" %}
 
 ## MyBatis로 DB연동하기 - JSP, XML
 
 * where조건절에 필요한 정보 : cols, keyword
 * cols : empno, ename, sal  -  if문으로 경우의 수를 분리한다. - 화면에서 'cols'로 넘어오므로 getEmpList.jsp에서 map으로 갈무리해 넘겨야한다.   pmap.put\("uempno","empno"\)   key값은 u가 붙는다.
+
+{% page-ref page="mybatis-db-jsp-xml.md" %}
 
 후기 : 낼은 영하 1도 코트 꺼내야지!
 

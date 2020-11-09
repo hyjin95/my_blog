@@ -2,7 +2,7 @@
 description: 2020.11.09 - 59일차
 ---
 
-# 59 Days -
+# 59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동,
 
 ### 사용 프로그램
 
@@ -10,7 +10,7 @@ description: 2020.11.09 - 59일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
-## 복습
+## 필기
 
 ### 서버와 지역변수
 
@@ -135,6 +135,69 @@ description: 2020.11.09 - 59일차
 
 * Servlet\(java\)로 요청을 받는다. - java이지만 main메서드가 없다. 브라우저에서 실행되므로 필요없다. - 그래서 URL이 필요하다.
 * java에서 JSP를 부를수 있게, 이동할 수 있게 해주는 것 - sendRedirect\( \); - Servlet과 JSP, JSP와 JSP간에 이동할수  있다. - 하지만 scope를 사용할 수 없다.
+
+## 반응형 웹 - 뷰포트
+
+### 반응형 
+
+* 디바이스\(장치\)의 해상도에 따라 다르게 대응되는 웹을 반응형 웹이라 한다. - 컴퓨터, 태블릿, 노트북, 핸드폰 등 디바이스 마다 해상도가 다르다.
+* PC화면을 핸드폰에 최적화 하지않고 사용한다면 핸드폰으로 해당 사이트를 살펴보기에 힘들것이다.
+* PC와 모바일 페이지를 별도로 제작해 사용한다면, 관리자 입장에서는 새 페이지를 생성, 관리 하는 것이므로 비효율적이라 볼 수 있다.
+* 이러한 문제를 해결하기위한 반응형웹을 만들때  viewport가 사용된다.
+
+### viewport 지정
+
+* &lt;head&gt;영역에서 작성한다.
+* &lt;meta name="viewport" content="속성=값", .... /&gt;
+
+### viewport content 속성
+
+| 속성 | 설 |  |
+| :---: | :---: | :---: |
+| width | 뷰포트 너비 | device-width |
+| height | 뷰포트 높이 | device-height |
+| user-scalable | 확대/축소 가능 여부 | yes\(기본값\) or no |
+| initial-scale | 초기 확대/축소 값 | 1\(기본값\)~10 |
+| minimum-scale | 최소 확대/축소 값 | 0~10 \(기본값 0.25\) |
+| maximum-scale | 최대 확대/축소 값 | 0~10 \(기본값 1.6\) |
+
+### 화면 크기에 따라 색상 지정
+
+```markup
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 디바이스에 따라 화면출력이 다르게 이루어진다. -->
+<meta name="viewport" content="width=device-width, initial-scale=1. minumum-scale=1, maximum=1, user-scalable=no">
+<title>미디어 쿼리 사용하기</title>
+<style type="text/css">
+	@media all and (min-width:320px){/*브라우저 크기가 320이상이면 pink로 변경한다.*/
+		body{
+			background: pink;
+		}
+	}
+	@media all and (min-width:668px){/*브라우저 크기가 600이상이면 pink로 변경한다.*/
+		body{
+			background: gray;
+		}
+	}
+	@media all and (min-width:800px){
+		body{
+			background: #6fc0d1;
+		}
+	}
+</style>
+</head>
+<body>
+</body>
+</html>
+```
+
+* 디바이스 화면 너비가 320px 이하 : 흰색
+* 디바이스 화면 너비가 320px 초과 668px이하 : 분홍색
+* 디바이스 화면 너비가 668px 초과 800px이하 : 회색
+* 디바이스 화면 너비가 800px 초과 : \#6fc0d1 색상
 
 후기 : 
 

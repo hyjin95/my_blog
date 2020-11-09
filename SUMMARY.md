@@ -216,6 +216,6 @@
   * [58 Days - 트랜잭션, Java-MyBatis:DB연동차이점, append, JSP&lt;trim&gt;, Java,JSP:브라우저에 작성, JS변수에 Java변수 담기, 선택해제](java-study/1-days/untitled-22/README.md)
     * [Java와 MyBatis - DB](java-study/1-days/untitled-22/java-mybatis-db.md)
     * [empManagerHtype - VO+myBatis로 우편번호 불러오기 + row선택해제](java-study/1-days/untitled-22/empmanagerhtype-vo+mybatis-+-row.md)
-  * [59 Days -](java-study/1-days/untitled-1-1.md)
+  * [59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동,](java-study/1-days/untitled-1-1.md)
   * [Untitled](java-study/1-days/untitled-23.md)
 
