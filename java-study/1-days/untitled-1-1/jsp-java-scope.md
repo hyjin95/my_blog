@@ -1,4 +1,4 @@
-# JSP -Java간 인스턴스, scope
+# JSP -Java간 인스턴스, scope, url-data유지\(forward\)
 
 ## sonataSimulation.jsp : 1,2
 

@@ -2,7 +2,7 @@
 description: 2020.11.09 - 59일차
 ---
 
-# 59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동,
+# 59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동, Redirect, forward
 
 ### 사용 프로그램
 
@@ -126,7 +126,31 @@ description: 2020.11.09 - 59일차
 
 {% page-ref page="../untitled-1/" %}
 
-### JSP -Java간 인스턴스, scope
+### JSP와 JAVA, URL변동
+
+1. Java 클래스를 JSP에서 사용하는 법
+2. Java의 변수를 JSP에서 Java의 일반적인 방식으로 인스턴스화해 사용 할 수 있을까?
+3. URL이 변하면 data가 유지 되지 않을까?
+4. URL이 변하더라도 data를 유지하는 방법이 있을까?
+
+{% page-ref page="jsp-java-scope.md" %}
+
+### sendRedirect
+
+![](../../../.gitbook/assets/4%20%2833%29.png)
+
+* response.sendRedirect
+* 특정 처리나 특정 조건일때에 지정한 페이지로 이동한다.
+* web Container는 redirect명령이 돌아오면 웹 브라우저는 URL을 해당 페이지로 변경하고 이동한다.
+* 새로운 요청이므로 새로운 req, res객체개 생성되므로 data가 유지되지 않는다.
+
+### Dispatcher.forward\( \)
+
+![](../../../.gitbook/assets/3%20%2839%29.png)
+
+* 웹 브라우저에서는 최초 호출된 URL만 표시되고 이동한 페이지의 URL은 볼 수 없다.
+* 동일한 Web Container내부의 페이지로만 이동할 수 있다.
+* 처음에 요청된 페이지와 forward에 의해 호출된 페이지는 req, res객체를 공유해 data가 유지된다.
 
 ## 페이지이동 : JSP와 Servlet
 
@@ -150,7 +174,37 @@ description: 2020.11.09 - 59일차
 * Servlet\(java\)로 요청을 받는다. - java이지만 main메서드가 없다. 브라우저에서 실행되므로 필요없다. - 그래서 URL이 필요하다.
 * java에서 JSP를 부를수 있게, 이동할 수 있게 해주는 것 - sendRedirect\( \); - Servlet과 JSP, JSP와 JSP간에 이동할수  있다. - 하지만 scope를 사용할 수 없다.
 
-### 페이지 이동 메서드
+### JSP -&gt; JSP페이지 이동 : sendRedirect
+
+#### a.jsp
+
+```java
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	response.sendRedirect("b.jsp");
+%>
+```
+
+#### b.jsp
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	나는 귀여워
+</body>
+</html>
+```
+
+* a.jsp를 실행하면 화면에 '나는 귀여워'만이 출력된다.
+* sendRedirect를 만나는 순간 b.jsp로 넘어가 요청 처리후, a.jsp에서 출력한다.
 
 ## 반응형 웹 - 뷰포트
 
