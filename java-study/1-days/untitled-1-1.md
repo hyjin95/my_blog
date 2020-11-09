@@ -45,11 +45,6 @@ description: 2020.11.09 - 59일차
 * 자바 소스 파일들은 src폴더안에 저장되고 WEB-INF하위의 classes폴더 안에 class로 컴파일된다.
 * 하지만 JSP파일은 src폴더가 아닌 다른 폴더안에 저장되므로 위와 같은 경로에 class로 컴파일 되는 것이 아니라 WAS가 컴파일 해주는 것이다.
 
-### 페이지이동과 session id
-
-* 페이지 이동이 일어나면 sessiond id가 새로 만들어지고, 이 session id는 cookie에 저장된다.
-* session id는 해당 접속을 식별하는 값이다.
-
 ## local - Web - App
 
 ### Local
@@ -116,10 +111,19 @@ description: 2020.11.09 - 59일차
 
 ## 페이지이동 : JSP와 Servlet
 
-### 기본 : JSP - JSP
+### 페이지이동과 session id
 
+* 페이지 이동이 일어나면 sessiond id가 새로 만들어지고, 이 session id는 cookie에 저장된다.
+* session id는 해당 접속을 식별하는 값이다.
+
+### 기본 모델1 : JSP - JSP
+
+* 모델1 = JSP로 요청을 받았다.
 * 요청 -&gt; JSP\(로그인\)----- 이동 -----&gt; JSP\(처리\) -&gt; 응답
-* 이동 : request.sendRedirect\( \)
+* 요청 : URL로 요청한다. - Web서비스를 이용하는 브라우저가 처리주체이므로 url을 통한 요청을 한다.
+* JSP\(로그인\) : html역할로서의 JSP
+* 이동 : request.sendRedirect\( \)  - 이 메서드를 만나면 연결을 끊고 새 JSP페이지와 새 연결을 한다.
+* 클래스 이름을 알 수 없어 인스턴스화 할 수 없다.
 
 후기 : 
 
