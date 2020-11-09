@@ -2,7 +2,7 @@
 description: 2020.11.09 - 59일차
 ---
 
-# 59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동, sendRedirect, forward
+# 59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동, sendRedirect, forward, AJAX
 
 ### 사용 프로그램
 
@@ -37,12 +37,7 @@ description: 2020.11.09 - 59일차
 * Java만으로는 로컬 서버만 제공한다.
 * 외부에서도 접근할 수 있는 웹 서비스를 제공하려면 thread와 소켓을 직접 구현, 관리해야한다.
 * 이 thread를 직접 생성, 관리하지 않도록 도와주는 것이 WAS 서버이다.
-* WAS는 thread를 직접 생성, 관리해 통신을 브라우저에게 맡기고 자바는 로직, DB업무에 포커스한다.
-
-### ajax
-
-* 비동기통신
-* 정적 페이지의 일부를 동적처리하고 싶을 때 사용하면, 페이지이동, 페이지 새로고침 없이 서버에 경유할 수 있다.
+* WAS는 thread를 직접 생성, 관리해 통신을 브라우저에게 맡기고 자바는 로직, DB업무에 포커스한다
 
 ### war
 
@@ -53,6 +48,39 @@ description: 2020.11.09 - 59일차
 
 * 자바 소스 파일들은 src폴더안에 저장되고 WEB-INF하위의 classes폴더 안에 class로 컴파일된다.
 * 하지만 JSP파일은 src폴더가 아닌 다른 폴더안에 저장되므로 위와 같은 경로에 class로 컴파일 되는 것이 아니라 WAS가 컴파일 해주는 것이다.
+
+## 페이지 이동, 자료 요청
+
+### 1. location.href="xxx.jsp"
+
+* &lt;a&gt;태그 안에서 특정 조건시 이동한다.
+
+### 2. url : "xxx.do" - easyui
+
+* easyui에서만 사용가능한 방식
+* 비동기
+
+### 3.AJAX
+
+* JS의 비동기통신 라이브러리
+* 브라우저가 갖고 있는 XMLHttpRequest객체를 이용해 정적 페이지의 일부만을 위해 데이터 로드 - 페이지 일부를 동적처리하고 싶을 때 , 페이지이동, 페이지 새로고침 없이 서버에 경유할 수 있다. - 검색 조건 조회시 결과 값만 조회하는 것
+* 기본 ajax는 순수 JS라이브러리로, 이것보다는 Jquery의 정리된 ajax를 사용하는 것이 편리하다.
+
+### 4. response.sendRedirect\( "xxx.jsp" \)
+
+* 코드 진행중, 해당 코드가 나타나면 바로 페이지가 이동한다.
+* URL이 변한다. 요청이 끊겼다가 새로 요청되므로 자료가 유지 되지 않는다.
+* 페이지 이동이 일어나더라도 해당 코드 다음의 자바 코드들은 진행된다. - 예매완료, 로그인완료시 초기화면으로 돌아가는것
+
+### 5. requestDispatcher.forward\( "xxx.jsp" \)
+
+* request.setAttribute\(" ", 값\)
+* 코드 진행중에 해당 코드를 만나면 바로 페이지 이동이 일어난다.
+* URL은 변하지 않지만 페이지 전체가 xxx.jsp의 응답으로 갱신된다. 자료가 유지된다.
+
+### 6. requestDiapstcher.include\( "xxx.jsp" \)
+
+* request.setAttribute\(" ", 값\)
 
 ## local - Web - App
 
