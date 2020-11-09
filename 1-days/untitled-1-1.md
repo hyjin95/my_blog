@@ -18,7 +18,7 @@ description: 2020.11.09 - 59일차
 ### Web App
 
 * 정적 : html, JS, CSS - 처리주체인 브라우저에는 객체가 내장되어 있어 이벤트 처리가 가능하다. - 하지만 비동기
-* 동적 : JSP, Servlet, Java
+* 동적 : JSP, Servlet, Java - 비동기를 보완하기위한 언어 - 통신을 이용해 정보를 동기화한다. - JSP\(View\)
 
-### App
+### App\(Android\)
 
