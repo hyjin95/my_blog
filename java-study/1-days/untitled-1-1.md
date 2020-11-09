@@ -25,6 +25,11 @@ description: 2020.11.09 - 59일차
 * 사용 : service\( \) - doGet\( \), doPost\( \)오버라이드
 * 종료 : destroy\( \)
 
+### html과 css
+
+* css가 html안에 들어가게되면 정적이 되어버리므로 CSS는 항상 외부에서 따로 관리한다.
+* 분리하는것이 표준
+
 ## local - Web - App
 
 ### Local
@@ -65,4 +70,5 @@ description: 2020.11.09 - 59일차
 * 제어문은 사용할 수 있다.
 * document.write와 같은 역할을 할 수 있다. - out.print\( \); - String test;와 String test=null;은 다르다. 전자는 출력하면 500번이 뜨고, 후자는 null이 출력된다.
 * &lt;% out.pritn\( html코드 \); %&gt;
+* 하지만 JS변수에 대입할 경우에는 정적이 되어버린다. 처음에 결정된 값을 가지므로
 
