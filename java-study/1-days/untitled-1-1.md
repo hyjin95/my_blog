@@ -134,7 +134,7 @@ description: 2020.11.09 - 59일차
 ### 모델2 : Servlet - JSP
 
 * Servlet\(java\)로 요청을 받는다. - java이지만 main메서드가 없다. 브라우저에서 실행되므로 필요없다. - 그래서 URL이 필요하다.
-* java에서 JSP를 부를수 있게, 이동할 수 있게 해주는 것 - sendRedirect\( \); - 하지만 scope를 사용할 수 없다.
+* java에서 JSP를 부를수 있게, 이동할 수 있게 해주는 것 - sendRedirect\( \); - Servlet과 JSP, JSP와 JSP간에 이동할수  있다. - 하지만 scope를 사용할 수 없다.
 
 후기 : 
 
