@@ -58,5 +58,5 @@ description: 2020.11.09 - 59일차
 * 변수를 선언할 수 있지만 지역변수만 가능하다.
 * 메서드 선언은 불가능
 * 제어문은 사용할 수 있다.
-* document.write와 같은 역할을 할 수 있다. - out.print\( \);
+* document.write와 같은 역할을 할 수 있다. - out.print\( \); - String test;와 String test=null;은 다르다. 전자는 출력하면 500번이 뜨고, 후자는 null이 출력된다.
 
