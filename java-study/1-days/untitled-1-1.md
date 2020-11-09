@@ -87,7 +87,7 @@ description: 2020.11.09 - 59일차
 | :---: | :---: |
 | &lt;% 자바소스코드 %&gt; | 자바코드 사용 불가 |
 
-* JSP안에서는 자바코드를 최소화 해야한다. - 재사용성과 scope를 위해 - send.Redirect = page scope, foward = request scope
+* JSP안에서는 자바코드를 최소화 해야한다. - 재사용성과 scope를 위해 - request.sendRedirect = page scope, foward = request scope
 
 {% page-ref page="untitled-20/" %}
 
