@@ -222,7 +222,7 @@ description: 2020.11.09 - 59일차
 
 ### viewport content 속성
 
-| 속성 | 설 |  |
+| 속성 | 설명 | 값 |
 | :---: | :---: | :---: |
 | width | 뷰포트 너비 | device-width |
 | height | 뷰포트 높이 | device-height |
