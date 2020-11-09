@@ -76,6 +76,11 @@ description: 2020.11.09 - 59일차
 
 ## JSP
 
+### 학습목표
+
+1. 페이지 이동방법에 대해서 말할 수 있다.
+2. 페이지 이동 시 자료를  유지하는 방법에 대해 설명하고 활용할 수 있다.
+
 ### JSP
 
 * JSP &lt; Servlet &lt; Java - JSP는 확장자가 jsp, Servlet은 확장자가 java - Java의 부모는 Object로 req, res를 지원하지 않아 직접 스레드를 구현, 관리 해야한다. - Servlet은 서버에게서 req, res를 객체주입 받아 스레드는 WAS가 관리해준다.
