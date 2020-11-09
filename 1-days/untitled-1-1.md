@@ -33,7 +33,7 @@ description: 2020.11.09 - 59일차
 ### JSP
 
 * JSP &lt; Servlet &lt; Java - JSP는 확장자가 jsp, Servlet은 확장자가 java
-* mime타입에 따라 문서의 성격이 달라진다. - html, xml, json, ...등
+* mime타입에 따라 문서의 성격이 달라진다. - html, xml, json, ...등 - 서브타입이 html인 jsp문서라면 태그가 있더라도 html문서취급되어 내용만 보여진다.
 
 ### JSP와 HTML
 
