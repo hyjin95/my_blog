@@ -32,7 +32,7 @@ description: 2020.11.09 - 59일차
 
 ### JSP
 
-* JSP &lt; Servlet &lt; Java - JSP는 확장자가 jsp, Servlet은 확장자가 java - Java의 부모는 Object로 req, res를 지원하지 않는다. - Servlet은 서버에게서 req, res를 객체주입 받는다. 
+* JSP &lt; Servlet &lt; Java - JSP는 확장자가 jsp, Servlet은 확장자가 java - Java의 부모는 Object로 req, res를 지원하지 않아 직접 스레드를 구현, 관리 해야한다. - Servlet은 서버에게서 req, res를 객체주입 받아 스레드는 WAS가 관리해준다.
 * mime타입에 따라 문서의 성격이 달라진다. - html, xml, json, ...등 - 서브타입이 html인 jsp문서라면 태그가 있더라도 html문서취급되어 내용만 보여진다.
 
 ### JSP와 HTML
