@@ -30,6 +30,11 @@ description: 2020.11.09 - 59일차
 
 ## JSP
 
+### JSP
+
+* JSP &lt; Servlet &lt; Java - JSP는 확장자가 jsp, Servlet은 확장자가 java
+* mime타입에 따라 문서의 성격이 달라진다. - html, xml, json, ...등
+
 ### JSP와 HTML
 
 | JSP | HTML |
