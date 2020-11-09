@@ -74,7 +74,7 @@ public class Sonata {
 </html>
 ```
 
-* 세번째 - sendRedirect 메서드를 사용 : 22번 - null 출력 - URL 이 변경될때 값을 유지해주는 메서드가 존재하지 않는다.
+* 세번째 - sendRedirect 메서드를 사용 : 22번 - null 출력 - URL 이 변경되는 페이지 이동, data는 유지 되지 않는다. - 18번이후에 코드가 있다면 페이지 이동 후에 코드가 진행된다.
 
 ### result.jsp
 
