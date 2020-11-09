@@ -89,6 +89,8 @@ description: 2020.11.09 - 59일차
 
 * JSP안에서는 자바코드를 최소화 해야한다. - 재사용성과 scope를 위해 - send.Redirect = page scope, foward = request scope
 
+{% page-ref page="untitled-20/" %}
+
 ### &lt;% 자바소스코드 %&gt;
 
 * 스크립틀릿
