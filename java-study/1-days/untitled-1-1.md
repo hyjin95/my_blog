@@ -45,6 +45,11 @@ description: 2020.11.09 - 59일차
 * 자바 소스 파일들은 src폴더안에 저장되고 WEB-INF하위의 classes폴더 안에 class로 컴파일된다.
 * 하지만 JSP파일은 src폴더가 아닌 다른 폴더안에 저장되므로 위와 같은 경로에 class로 컴파일 되는 것이 아니라 WAS가 컴파일 해주는 것이다.
 
+### 페이지이동과 session id
+
+* 페이지 이동이 일어나면 sessiond id가 새로 만들어지고, 이 session id는 cookie에 저장된다.
+* session id는 해당 접속을 식별하는 값이다.
+
 ## local - Web - App
 
 ### Local
@@ -82,6 +87,8 @@ description: 2020.11.09 - 59일차
 | :---: | :---: |
 | &lt;% 자바소스코드 %&gt; | 자바코드 사용 불가 |
 
+* JSP안에서는 자바코드를 최소화 해야한다. - 재사용성과 scope를 위해
+
 ### &lt;% 자바소스코드 %&gt;
 
 * 스크립틀릿
@@ -92,4 +99,19 @@ description: 2020.11.09 - 59일차
 * document.write와 같은 역할을 할 수 있다. - out.print\( \); - String test;와 String test=null;은 다르다. 전자는 출력하면 500번이 뜨고, 후자는 null이 출력된다.
 * &lt;% out.pritn\( html코드 \); %&gt;
 * 하지만 JS변수에 대입할 경우에는 정적이 되어버린다. 처음에 결정된 값을 가지므로
+
+## Scope
+
+{% page-ref page="untitled-1/" %}
+
+### page
+
+* 해당 페이지 안에서만 유지되는 스코프
+* 현재에 와서는 페이지 이동이 많이 일어나는 동작이 대부분이므로 거의 쓸모가 없다.
+
+### request
+
+* 페이지가 이동하더라도 값이 유지되려면 요청이 유지되는 동안에는 값을 유지해야 한다.
+
+
 
