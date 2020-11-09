@@ -114,11 +114,12 @@ description: 2020.11.09 - 59일차
 
 {% page-ref page="untitled-1/" %}
 
+## 페이지이동 : JSP와 Servlet
+
+### 기본 : JSP - JSP
+
+* 요청 -&gt; JSP\(로그인\)----- 이동 -----&gt; JSP\(처리\) -&gt; 응답
+* 이동 : request.sendRedirect\( \)
+
 후기 : 
-
-
-
-### 
-
-
 
