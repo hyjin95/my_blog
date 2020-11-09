@@ -19,6 +19,12 @@ description: 2020.11.09 - 59일차
 * 서버마다 제공해주는 클래스가 달라 클래스 이름으로 해당 변수를 호출 할 수 없다.
 * 서버\(tomcat, jeus, ....\)마다 jar파일이 있으므로
 
+### Servlet 라이프사이클
+
+* 생성 : init\( \)
+* 사용 : service\( \) - doGet\( \), doPost\( \)오버라이드
+* 종료 : destroy\( \)
+
 ## local - Web - App
 
 ### Local
