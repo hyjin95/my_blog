@@ -32,7 +32,7 @@ description: 2020.11.10 - 60일차
 
 ## Servlet -&gt; Java -&gt; Jsp : 처리 -&gt; 응답
 
-* Serlvet이 Java를 호출하는 것은 처리에 해당하고, Java에서 JSP로는 응답을 전송하는 것
+* Serlvet이 Java를 호출하는 것은 처리에 해당하고, Java에서 처리된 내용을 Servlet에서 foward메서드를 통해 JSP로 응답을 전송, 화면에 출력하는 것
 
 ### Servlet 역할
 
