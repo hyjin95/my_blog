@@ -44,6 +44,29 @@ description: 2020.11.10 - 60일차
 * Servlet은 res객체를 갖고 있어 response.sendRedirect를 사용할 수 있다. - 서블릿 안에서 페이지 이동을 할 수 있다.
 * 왜 서블릿 안에서 페이지 이동을 해야 할까? - 서블릿으로는 화면을 구현하기 불리하므로 JSP로 화면을 구현하기위해 - 인스턴스화가 가능하므로 JAVA클래스의 메서드를 호출함으로서 재사용성 높은 코드를 작성한다.
 
+### Servlet으로 화면을 그리지 않는 이유
+
+```java
+public void doService(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException{
+		//테스트 해보기
+		logger.info("doService 호출성공");
+		//첫번쨰 조건, printWriter가 있어야 out을 사용할 수 있다.
+		//ObjectOutputStream oos = socket.getOutputStream();과 비슷, res객체로 적기 를 만든다
+		PrintWriter out = res.getWriter();
+		out.print("<html>");
+		out.print("<head><title>사원관리</title></head>");
+		out.print("<body>");
+		out.print("으악 이게모람");
+		out.print("<h2>내용이 오는 자리</h2>");
+		out.print("<div id='d_msg'>내용이 오는 자리<div>");
+		out.print("</body>");
+		out.print("</html>");
+	}
+```
+
+* html코드를 작성, 출력할 수는 있지만 아주 번거롭다.
+
 ## Java -&gt; Servlet
 
 ### Java의 doGet, doPost
