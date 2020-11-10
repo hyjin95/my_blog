@@ -74,5 +74,32 @@ description: 2020.11.10 - 60일차
 * Servlet.jar 를 포함하고 있어 HttpServlet을 지원한다.
 * req, res객체를 주입해준다.
 
+## Servlet\( I \), GenericServlet, HttpServlet
 
+### Servlet 구현 규칙
+
+1. main메서드를 구현하지 않는다. - JAVA의 JVM에 의해 수행되는 프로그램이 아니다.
+2. Servlet, GenericServlet, HttpServlet중 하나를 상속하여 구현한다. - web서버에서 수행되는 Servlet은 HttpServlet을 상속한다.  - HTTP서버인 web서버상에서 수행되는 프로그램들을 지원한다.
+3. init\( \), service\( \), destroy\( \)메서드가 정해진 순서대로 호출되기 때문에 호출 시점에 수행할 기능이 있으면 해당 메서드를 오버라이딩하여 구현한다.
+4. Java와는 달리 단독 수행이 불가능하다. 
+
+### Servlet인터페이스
+
+* Servlet 프로그램이 반드시 구현해야하는 메서드를 선언한 인터페이스
+* init\( \), Service\( \), destroy\( \), getServletinfo\( \), getServletConfig\( \)메서드를 선언한다.
+* 이 메서드들은 Servlet프로그램의 생명주기와 매핑된다.
+
+### GenericServlet클래
+
+* Servlet인터페이스를 상속해 client측에서 서버단의 Application으로서 필요 기능을 구현한 추상 클래스
+* Service\( \) 메서드를 제외한 다른 모든 메서드들은 기능적으로 구현되어 있다.
+* 어떤 프로토콜을 사용하는, 기반의 Application인지에 따라 Service메서드에 메서드 오버라이딩하여 구현한다.
+
+### HttpServlet클래스
+
+* GenericServlet을 상속해 service\( \)메서드에 HTTP프로토콜에 맞는 동작을 수행하도록 구현한 클래스
+* 브라우저에게서 HTTP기반의 요청을 받아 처리하는 클래스
+* service메서드에서는 요청방식 get, post에 따라 정해진 메서드를 호출하도록 구현한다. - doGet\( \), doPost\( \)
+* Web서버 기반의 servlet프로그램 개발을 이 클래스를 상속해 구현한다.
+* 반드시 오버라이딩해야하지는 않고, 요청 방식에 따라 필요한 메서드를 오버라이딩한다.
 
