@@ -118,6 +118,12 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 * req, res객체를 WAS로부터 주입받아 사용할 수 있다.
 * 부모 : HttpServlet - HttpServlet의 최상위객체 Servlet은 Http가 없어 doGet, doPost를 사용할 수 없고 서비스만 있다.
 
+### get, post의 단위테스트
+
+* get과 post방식으로 전송된 요청이 제대로 실행되는지 확인하려면 단위테스트를 하는 것이 안전하다.
+* get방식으로는 쿼리스트링\(인터셉트\)을 이용해 단위테스트 할 수 있다.
+* post방식으로는 단독으로 단위테스트가 불가능하다. 반드시 html이나 jsp 화면이 있어야만 확인할 수 있다. - &lt;form&gt;태그를 사용하거나 JS에서 post method로 지정해줘야 하기 때문이다.
+
 {% page-ref page="java-genericservlet-httpservlet.md" %}
 
 ### Servlet의 LifeCycle
@@ -132,6 +138,13 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 
 * Servlet.jar 를 포함하고 있어 HttpServlet을 지원한다.
 * req, res객체를 주입해준다.
+
+### servlet url과 web.xml
+
+* 자바 정보를 xml에 저장한다.
+* 직접 인스턴스화하지 않고 WAS가 지정된 url-pattern요청이 들어오면 인터셉트해서 해당 자바코드\(Servlet\)을 호출한다. = 콜백메서드화
+* WAS가 서블릿엔진, jsp엔진을 갖고있기 떄문에 가능하다.
+* 이렇게 서버가 읽어 로딩함으로서, 서버로부터 객체를 주입받고, 의존적이게 된다.
 
 ## Servlet\( I \), GenericServlet, HttpServlet
 
