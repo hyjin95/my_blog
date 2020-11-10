@@ -23,6 +23,7 @@ description: 2020.11.10 - 60일차
 * java가 아니므로 인스턴스화 할 수 없다.
 * url로 호출된다.
 * 모델1
+* response.sendRedirect\("xxx.jsp"\) : URL이 변하는 페이지 이동
 
 ### Servlet -&gt; JSP : 응답
 
