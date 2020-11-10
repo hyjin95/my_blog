@@ -32,7 +32,11 @@ description: 2020.11.10 - 60일차
 
 ## Servlet -&gt; Java -&gt; Jsp : 처리 -&gt; 응답
 
-* Serlvet이 Java를 호출하는 것은 처리에 해당하고, Java에서 처리된 내용을 Servlet에서 foward메서드를 통해 JSP로 응답을 전송, 화면에 출력하는 것
+### 처리 -&gt; 응답
+
+* Serlvet이 Java의 메서드를 호출하는 것은 처리에 해당하고, Java에서 처리된 내용을 Servlet에서 foward메서드를 통해 JSP로 응답을 전송, 화면에 출력하는 것
+* Servlet이 인스턴스화를 할 수 있다. Java클래스를 이용해 재사용성이 높아진다.
+* Select\(table, json, xml\) 요청일때 진행되는 경로
 
 ### Servlet 역할
 
