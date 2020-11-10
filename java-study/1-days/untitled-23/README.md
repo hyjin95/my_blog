@@ -12,6 +12,27 @@ description: 2020.11.10 - 60일차
 
 ## 복습
 
+### Redirect와 forward, include
+
+![include](../../../.gitbook/assets/1%20%2862%29.png)
+
+```java
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	//forward와 include살펴보기
+	out.print("<b>before</b>");
+	out.print("<hr>");
+
+	RequestDispatcher view = request.getRequestDispatcher("b.jsp");
+	view.include(request, response);
+	out.print("<b>after</b>");
+%>
+```
+
+* response.Redirect\("b.jsp"\); - 해당 URL로 바로 이동한다. - 제어권이 b.jsp로 넘어간다.
+* RequestDispatcher view = request.getRequestDispatcher\("b.jsp"\); - view.forward\(req, res\);   URL은 변하지 않지만 b.jsp페이지 내용을 출력한다.    b.jsp로 제어권이 넘어간다.  request에 정보를 담아 b.jsp에서도 유지시킬수 있지만 지정된 페이지에서만 유지된다. - view.include\(req,res\);   URL은 변하지 않고, b.jsp페이지 내용을 포함해서 a.jsp에서 출력한다.   제어권을 유지해 include다음 자바 코드를 진행한다.
+
 ### get, post방식
 
 * 쿼리스트링을 사용하는 것은 get방식이다.
@@ -145,6 +166,7 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 * 직접 인스턴스화하지 않고 WAS가 지정된 url-pattern요청이 들어오면 인터셉트해서 해당 자바코드\(Servlet\)을 호출한다. = 콜백메서드화
 * WAS가 서블릿엔진, jsp엔진을 갖고있기 떄문에 가능하다.
 * 이렇게 서버가 읽어 로딩함으로서, 서버로부터 객체를 주입받고, 의존적이게 된다.
+* web.xml에서는 서블릿을 싱글톤으로 하나만 갖고있을 수도, 여러개를 가질 수 도 있다. - 싱글톤 = 하나를 공유하는 것으로 thread가 필요한데 WAS가 이 관리를 대신 해준다.
 
 ## Servlet\( I \), GenericServlet, HttpServlet
 

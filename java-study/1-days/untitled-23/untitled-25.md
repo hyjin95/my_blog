@@ -2,7 +2,7 @@
 
 ## a3\_result.jsp : 직접호출
 
-![](../../../.gitbook/assets/1%20%2862%29.png)
+![](../../../.gitbook/assets/1%20%2863%29.png)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
