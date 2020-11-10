@@ -1,4 +1,4 @@
-# Java, GenericServlet, HttpServlet
+# Java, GenericServlet, HttpServlet - 쿼리스트링 테스트
 
 ### A.java : JAVA
 
@@ -115,5 +115,76 @@ public class A3 extends HttpServlet {
 * HttpServlet 클래스는 GenericServlet을 상속해 service\(\)메서드에 HTTP 프로토콜에 알맞는 동작을 수행하도록 구현한 클래스이다.
 * HttpServlet을 상속받는 A3클래스는 req, res객체를 주입받아 사용할 수 있고, doGet, doPost메서드를 오버라이드 하여 방식을 구분할 수 있다.
 * A3 클래스와 같이 Service메서드에 수행문을 구현해 처리부분을 정리 할 수 있다.
-* HttpServletRequest, Respones객체를 주입받아 사용할 떄에는 항상 throws예외처리로 예외처리를 호출하는 곳에서 처리하도록 한다.  
+* HttpServletRequest, Respones객체를 주입받아 사용할 떄에는 항상 throws예외처리로 예외처리를 호출하는 곳에서 처리하도록 한다. 
+
+### 쿼리스트링으로 servlet작동 테스트하기 : get방식
+
+![url &#xCFFC;&#xB9AC;&#xC2A4;&#xD2B8;&#xB9C1;&#xC73C;&#xB85C; &#xB2E8;&#xC704;&#xD14C;&#xC2A4;&#xD2B8;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.](../../../.gitbook/assets/2%20%2849%29.png)
+
+![&#xB85C;&#xADF8; &#xD655;&#xC778;](../../../.gitbook/assets/2-1%20%283%29.png)
+
+```java
+package com.basic;
+
+import java.io.IOException;
+import javax.servlet.GenericServlet;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
+
+public class A3 extends HttpServlet {	
+	Logger logger = Logger.getLogger(A3.class);
+	
+	public void init() { }
+	
+	public void doService(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException{
+		//테스트 해보기
+		logger.info("doService 호출성공");
+		
+		//xxx.do?command=empInsert|empUpdate|empDelete|empSelect 이 쿼리스트링으로 
+		String command = req.getParameter("command");//empInsert|empUpdate|empDelete|empSelect 이런걸 받아와 구분하자.
+		logger.info("command : "+command);
+		//사원등록할거니?
+		if("empInsert".equals(command)) {
+			
+		}		
+		//사원수정해야되는데..
+		else if("empUpdate".equals(command)) {
+			
+		}				
+		//퇴사한 사원이 있는데 어떻게 하죠?
+		else if("empDelete".equals(command)) {
+			
+		}				
+		//사원 목록을 보고 싶어 하세요.
+		else if("empSelect".equals(command)) {
+			
+		}		
+		
+		//위 목록을 if, else if문으로 처리하면 코드가 더러워진다. -> controller mapper를 사용하자
+		//목록이 많아질수록 if문이 엄청 길어질 수 도 있으므로
+	}
+	@Override
+	public void doGet(HttpServletRequest req, HttpServletResponse res) 
+		throws ServletException, IOException{
+			logger.info("doGet 호출성공");
+			doService(req, res);
+		}
+	
+	@Override
+	public void doPost(HttpServletRequest req, HttpServletResponse res) 
+		throws ServletException, IOException{
+			logger.info("doPost 호출성공");
+			doService(req, res);
+	}
+	
+	public void destroy() {	}	
+}
+```
 

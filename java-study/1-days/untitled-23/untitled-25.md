@@ -1,4 +1,80 @@
-# Untitled
+# a3\_result.jsp : 직접호출, servlet경유 호출
+
+## a3\_result.jsp : 직접호출
+
+![](../../../.gitbook/assets/1%20%2862%29.png)
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a3_result.jsp</title>
+</head>
+<body>
+서블릿을 경유해서 처리되었을까?
+<br>
+아니면 직접 호출했을까
+<br>
+저 둘의 차이점에 대해 생각해 보세요
+</body>
+</html>
+```
+
+## typeA.jsp : Servlet호출, &lt;form&gt;, post방식
+
+![](../../../.gitbook/assets/6%20%2818%29.png)
+
+![URL&#xBCC0;&#xACBD;](../../../.gitbook/assets/6-14.png)
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>typeA.jsp</title>
+</head>
+<body>
+<form name="f_test" action="./a3.do" method="post">
+<input type="submit">
+</form>
+</body>
+</html>
+```
+
+## typeB.jsp : Servlet호출, &lt;form&gt;, get방식
+
+![](../../../.gitbook/assets/7%20%2811%29.png)
+
+![&#xBC84;&#xD2BC; &#xD074;&#xB9AD;&#xC2DC; URL&#xBCC0;&#xACBD;](../../../.gitbook/assets/7-2.png)
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>typeB.jsp</title>
+<script type="text/javascript">
+	function send(){
+		document.f_test.method="get";
+		document.f_test.action="./a3.do";
+		document.f_test.submit();
+	}//get으로 보내질까 post로 보내질까?? get. 뒤에 정의된 방식을 따른다.
+</script>
+</head>
+<body>
+<form name="f_test" action="./a3.do" method="post">
+<input type="button" onclick="send()">
+</form>
+</body>
+</html>
+```
 
 ## web.xml
 
@@ -21,15 +97,7 @@
 
 * 11번 - 서블릿 : /EasyUI/a3.do - JSP : dev\_html - webcontent - EasyUI - ...
 
-### JSP 가설세워보기
-
-1. dev\_html - webcontent - EasyUI - xxx.jsp
-2. dev\_html - webcontent - EasyUI - datagrid - emp - xxx.jsp
-3. dev\_html - webcontent - EasyUI - index.jsp 
-
-위 세가지 가설을 모두 생각해보고 콘솔을 통해 확인해보자
-
-## A3.java
+## A3.java : Servlet
 
 ```java
 package com.basic;
@@ -54,10 +122,6 @@ public class A3 extends HttpServlet {
 			throws ServletException, IOException{
 		//테스트 해보기
 		logger.info("doService 호출성공");
-		//res.sendRedirect("a3_result.jsp");
-		RequestDispatcher view = req.getRequestDispatcher("a3_result.jsp");
-		view.forward(req,res);
-		//이 아래 코드는 진행이 될까?아니요 불가능 a3_result.jsp에서 응답을 하고 끝난다.
 		
 		//xxx.do?command=empInsert|empUpdate|empDelete|empSelect 이 쿼리스트링으로 
 		String command = req.getParameter("command");//empInsert|empUpdate|empDelete|empSelect 이런걸 받아와 구분하자.

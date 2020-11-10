@@ -12,6 +12,15 @@ description: 2020.11.10 - 60일차
 
 ## 복습
 
+### get, post방식
+
+* 쿼리스트링을 사용하는 것은 get방식이다.
+* JS\(location, ajax\), &lt;form&gt;을 사용하면 post방식을 사용할 수 있다.
+
+### log4j
+
+* log4j를 활용해 콘솔에 출력된 내용들은 서버를 관리하는 사람들에게 중요한 로그로, 시스템을 운영하고 서비스를 향상시키거나 문제를 해결하는데 중요한 자료가 된다.
+
 ### 스크립틀릿 : &lt;% 자바코드 %&gt;
 
 * Servlet의 서비스메서드안에 속해 사용된다.
@@ -35,7 +44,7 @@ description: 2020.11.10 - 60일차
 
 ### 처리 -&gt; 응답
 
-* Serlvet이 Java의 메서드를 호출하는 것은 처리에 해당하고, Java에서 처리된 내용을 Servlet에서 foward메서드를 통해 JSP로 응답을 전송, 화면에 출력하는 것 - forward는 URL은 변하지 않지만 JSP페이지를 출력한다.
+* Serlvet이 Java의 메서드를 호출하는 것은 처리에 해당하고, Java에서 처리된 내용을 Servlet에서 foward메서드를 통해 JSP로 응답을 전송, 화면에 출력하는 것 - forward는 URL은 변하지 않지만 지정된 url 페이지를 출력한다. - 요청 처리는 Java의 메서드에서 처리한다. Servlet에서 해당 메서드를 인스턴스화 해서 사용한다. - 자바에는 req, res가 없으므로
 * Select\(table, json, xml\) 요청일때 진행되는 경로
 
 ### Servlet 역할
@@ -66,6 +75,33 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 ```
 
 * html코드를 작성, 출력할 수는 있지만 아주 번거롭다.
+
+### JSP 직접호출, servlet경유 호출
+
+* Servlet을 경유했는지 어떻게 알 수 있을까? - 서블릿에 Logger를 찍어 서블릿을 경유햇다면 logger.info가 출력되도록 한다.
+
+{% page-ref page="untitled-25.md" %}
+
+### 개발자가 Post방식 전송하기
+
+```java
+#ajax({ 
+	 url:'xxx.do'
+	,success:function(data){
+		var result = JSON.stringify(data);
+		var doc = JSON.parse(result);
+		for(var i;i<doc.length;i++){
+			//row.DEPTNO
+			doc[i].DEPTNO
+		}
+	}
+});
+```
+
+1. JS : location.href="xxx.jap"
+2. JQuery : \#ajax
+3. easyui : &lt;table data-options="url:'xxx.do', method:'get' or 'post' "&gt;&lt;/table&gt;
+4. html : &lt;form id="f\_login" method="get" or "post" action="xxx.do"&gt;&lt;/form&gt; - action = 처리 목적지, data-options의 url과 같은 역할을 한다.
 
 ## Java -&gt; Servlet
 
@@ -112,7 +148,7 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 * init\( \), Service\( \), destroy\( \), getServletinfo\( \), getServletConfig\( \)메서드를 선언한다.
 * 이 메서드들은 Servlet프로그램의 생명주기와 매핑된다.
 
-### GenericServlet클래
+### GenericServlet클래스
 
 * Servlet인터페이스를 상속해 client측에서 서버단의 Application으로서 필요 기능을 구현한 추상 클래스
 * Service\( \) 메서드를 제외한 다른 모든 메서드들은 기능적으로 구현되어 있다.
