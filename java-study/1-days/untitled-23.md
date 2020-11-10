@@ -28,6 +28,12 @@ description: 2020.11.10 - 60일차
 
 ## Servlet -&gt; Java -&gt; Jsp
 
+### Servlet 역할
+
+* Servlet의 인스턴스화를 통해 재사용성을 높이기위해 JAVA를 경유한다.
+* Servlet은 res객체를 갖고 있어 response.sendRedirect를 사용할 수 있다. - 서블릿 안에서 페이지 이동을 할 수 있다.
+* 왜 서블릿 안에서 페이지 이동을 해야 할까? - 서블릿으로는 화면을 구현하기 불리하므로 JSP로 화면을 구현하기위해 - 
+
 ## Java -&gt; Servlet
 
 ### Java의 doGet, doPost
