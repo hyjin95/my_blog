@@ -30,7 +30,7 @@ description: 2020.11.10 - 60일차
 * url로 호출되지만 서블릿은 자체 url이 없어 web.xml에 등록해야한다.
 * Servlet에서 JSP로 페이지 이동하는 것은 Servlet이 응답을 전송해주는 것이다.
 
-## Servlet -&gt; Java -&gt; Jsp : 처리 -&gt; 응답
+## Servlet -&gt; Java -&gt; Jsp : 처리
 
 * Serlvet이 Java를 호출하는 것은 처리, Java에서 JSP로는 응답을 전송해주는 것
 
