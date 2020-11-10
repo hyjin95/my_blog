@@ -220,5 +220,6 @@
     * [JSP -Java간 인스턴스, scope, url-data유지\(forward\)](java-study/1-days/untitled-1-1/jsp-java-scope.md)
   * [60 Days -](java-study/1-days/untitled-23/README.md)
     * [Untitled](java-study/1-days/untitled-23/untitled-25.md)
+    * [Java, GenericServlet, HttpServlet](java-study/1-days/untitled-23/java-genericservlet-httpservlet.md)
   * [Untitled](java-study/1-days/untitled-24.md)
 

@@ -57,7 +57,7 @@ description: 2020.11.10 - 60일차
 * 브라우저가 URL을 통해 부른다. 단, URL을 갖고있지않아 web.xml배치서술자 파일에 url을 등록해야한다. 업무이름/xxx.do
 * 의미 없는 do를 붙이는 것은 do로 끝나는 모든 요청을 인터셉트하기 위함이다.
 * req, res객체를 WAS로부터 주입받아 사용할 수 있다.
-* 부모 : HttpServlet
+* 부모 : HttpServlet - HttpServlet의 최상위객체 Servlet은 Http가 없어 doGet, doPost를 사용할 수 없고 서비스만 있다.
 
 ### Servlet의 LifeCycle
 
@@ -67,7 +67,8 @@ description: 2020.11.10 - 60일차
 
 ### WAS서버\(Tomcat\)
 
-* req, res객체를 지원해준다.
 * Servlet.jar 를 포함하고 있어 HttpServlet을 지원한다.
 * req, res객체를 주입해준다.
+
+## Java, Servlet, GenericServlet, HttpServlet
 
