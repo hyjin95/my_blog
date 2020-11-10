@@ -59,16 +59,20 @@ description: 2020.11.10 - 60일차
 * req, res객체를 WAS로부터 주입받아 사용할 수 있다.
 * 부모 : HttpServlet - HttpServlet의 최상위객체 Servlet은 Http가 없어 doGet, doPost를 사용할 수 없고 서비스만 있다.
 
+{% page-ref page="java-genericservlet-httpservlet.md" %}
+
 ### Servlet의 LifeCycle
 
 * init\( \) -&gt; Service\( \) -&gt; destroy\( \)
 * init메서드에서 URL을 통한 끼어들기가 일어난다.
-* Service메서드에는 doGet과 doPost메서드가 포함된다.
+* Service메서드에는 doGet과 doPost메서드가 포함된다. - get을 호출하거나 post를 호출하거나 모두 service이다.
+*  init에서 태어나고 service에서 수행되고, destroy에서 가비지 컬렉터에 의해 candidata상태로 변하므로 메서드 호출이나 변수사용이 불가능해진다.
+* 이 라이프 사이클은 WAS서버가 관리한다. 객체주입도, 스레드에 대한 지원도 WAS가 해준다.
 
 ### WAS서버\(Tomcat\)
 
 * Servlet.jar 를 포함하고 있어 HttpServlet을 지원한다.
 * req, res객체를 주입해준다.
 
-## Java, Servlet, GenericServlet, HttpServlet
+
 

@@ -52,9 +52,6 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 public class A2 extends GenericServlet {
-	//get을 호출하거나 post를 호출하거나 모두 service이다.
-	//init에서 태어나고 service에서 수행되고, destroy에서 가비지 컬렉터에 의해 candidata상태로 변하므로 메서드 호출이나 변수사용이 불가능해진다.
-	//이 라이프 사이클은 톰캣이 해주고, 객체주입도 WAS가 해주고, 스레드에 대한 지원도 WAS가 해준다.
 	//이 클래스는 get방식, post방식을 구분할 수 없다.
 	public void init() {
 		
