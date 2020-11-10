@@ -35,15 +35,14 @@ description: 2020.11.10 - 60일차
 
 ### 처리 -&gt; 응답
 
-* Serlvet이 Java의 메서드를 호출하는 것은 처리에 해당하고, Java에서 처리된 내용을 Servlet에서 foward메서드를 통해 JSP로 응답을 전송, 화면에 출력하는 것
-* Servlet이 인스턴스화를 할 수 있다. Java클래스를 이용해 재사용성이 높아진다.
+* Serlvet이 Java의 메서드를 호출하는 것은 처리에 해당하고, Java에서 처리된 내용을 Servlet에서 foward메서드를 통해 JSP로 응답을 전송, 화면에 출력하는 것 - forward는 URL은 변하지 않지만 JSP페이지를 출력한다.
 * Select\(table, json, xml\) 요청일때 진행되는 경로
 
 ### Servlet 역할
 
 * Servlet의 인스턴스화를 통해 재사용성을 높이기위해 JAVA를 경유한다.
 * Servlet은 res객체를 갖고 있어 response.sendRedirect를 사용할 수 있다. - 서블릿 안에서 페이지 이동을 할 수 있다.
-* 왜 서블릿 안에서 페이지 이동을 해야 할까? - 서블릿으로는 화면을 구현하기 불리하므로 JSP로 화면을 구현하기위해 - 인스턴스화가 가능하므로
+* 왜 서블릿 안에서 페이지 이동을 해야 할까? - 서블릿으로는 화면을 구현하기 불리하므로 JSP로 화면을 구현하기위해 - 인스턴스화가 가능하므로 JAVA클래스의 메서드를 호출함으로서 재사용성 높은 코드를 작성한다.
 
 ## Java -&gt; Servlet
 
