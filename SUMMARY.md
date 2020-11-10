@@ -218,6 +218,7 @@
     * [empManagerHtype - VO+myBatis로 우편번호 불러오기 + row선택해제](java-study/1-days/untitled-22/empmanagerhtype-vo+mybatis-+-row.md)
   * [59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동, sendRedirect, forward, AJAX](java-study/1-days/untitled-1-1/README.md)
     * [JSP -Java간 인스턴스, scope, url-data유지\(forward\)](java-study/1-days/untitled-1-1/jsp-java-scope.md)
-  * [60 Days -](java-study/1-days/untitled-23.md)
+  * [60 Days -](java-study/1-days/untitled-23/README.md)
+    * [Untitled](java-study/1-days/untitled-23/untitled-25.md)
   * [Untitled](java-study/1-days/untitled-24.md)
 
