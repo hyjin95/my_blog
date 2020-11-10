@@ -10,3 +10,48 @@ description: 2020.11.10 - 60일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 복습
+
+### 스크립틀릿 : &lt;% 자바코드 %&gt;
+
+* Servlet의 서비스메서드안에 속해 사용된다.
+* 메서드 안에 메서드를 정의 할 수 없으므로 스크립틀릿안에서는 메서드를 선언할 수 없다.
+* 변수는 지역변수로만 선언, 사용할 수 있다.
+
+### JSP -&gt; JSP
+
+* java가 아니므로 인스턴스화 할 수 없다.
+
+### Servlet -&gt; JSP
+
+* Servlet은 Java이므로 인스턴스화가 가능하다.
+
+## Servlet -&gt; Java -&gt; Jsp
+
+## Java -&gt; Servlet
+
+### Java의 doGet, doPost
+
+* main메서드를 통해 부른다.
+* req, res객체를 지원하지 않는다. - locals system만을 제공해 서버가 없기 때문이다.
+* 부모 : Object
+
+### Servlet의 doGet, doPost
+
+* 브라우저가 URL을 통해 부른다. 단, URL을 갖고있지않아 web.xml배치서술자 파일에 url을 등록해야한다. 업무이름/xxx.do
+* 의미 없는 do를 붙이는 것은 do로 끝나는 모든 요청을 인터셉트하기 위함이다.
+* req, res객체를 WAS로부터 주입받아 사용할 수 있다.
+* 부모 : HttpServlet
+
+### Servlet의 LifeCycle
+
+* init\( \) -&gt; Service\( \) -&gt; destroy\( \)
+* init메서드에서 URL을 통한 끼어들기가 일어난다.
+* Service메서드에는 doGet과 doPost메서드가 포함된다.
+
+### WAS서버\(Tomcat\)
+
+* req, res객체를 지원해준다.
+* Servlet.jar 를 포함하고 있어 HttpServlet을 지원한다.
+* req, res객체를 주입해준다.
+
