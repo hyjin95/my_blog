@@ -6,8 +6,6 @@
 
 {% page-ref page="../21-days/undefined/" %}
 
-
-
 ## Login.java
 
 ### 선언부
