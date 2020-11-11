@@ -34,3 +34,49 @@ description: 2020.11.11 - 61일차
 13. 통계자료를 활용하여 각종 그래프로 출력해 본다.  수집된 자료는 JSON포맷을 활용하여 수집, 관리할 수 있도록 해 본다.
 14. 13번에서 수집된 정보는 안드로이드 앱으로도 작성해 볼 예정입니다.
 
+## SQL
+
+### 연별 최저, 최고 기온과 해당 일자 SQL
+
+![](../../.gitbook/assets/1%20%2864%29.png)
+
+```sql
+SELECT tt.DATE_TEM, l.LOW_TEM, rr.DATE_TEM, l.HIGH_TEM
+  FROM (SELECT MAX(HIGH_TEM) as HIGH_TEM, MIN(LOW_TEM) as LOW_TEM FROM ONDO WHERE DATE_TEM LIKE '%'||'2019'||'%') l
+      ,(SELECT t.DATE_TEM as DATE_TEM
+         FROM (SELECT DATE_TEM, LOW_TEM FROM ONDO WHERE DATE_TEM LIKE '%'||'2019'||'%') t
+        WHERE t.LOW_TEM LIKE (SELECT MIN(LOW_TEM) FROM ONDO WHERE DATE_TEM LIKE '%'||'2019'||'%')) tt
+      ,(SELECT r.DATE_TEM as DATE_TEM
+         FROM (SELECT DATE_TEM, HIGH_TEM FROM ONDO WHERE DATE_TEM LIKE '%'||'2019'||'%') r
+        WHERE r.HIGH_TEM LIKE (SELECT MAX(HIGH_TEM) FROM ONDO WHERE DATE_TEM LIKE '%'||'2019'||'%')) rr
+--연별 최저, 기온 조회 sql
+```
+
+* FROM절이 반복되는 구문이 많다. ONDO테이블에 5번이나 갔다오는 것을 따로 처리 할 수 없을까? - DECODE와 CASE를 사용해보자
+* 참고 : [http://www.gurubee.net/lecture/1028](http://www.gurubee.net/lecture/1028)
+
+## PROCEDURE
+
+```sql
+CREATE OR REPLACE PROCEDURE proc_ondo
+(u_start IN varchar2, u_end IN varchar2, p_rc OUT sys_refcursor)
+IS
+BEGIN 
+      OPEN p_rc FOR 
+      SELECT DATE_TEM, AVG_TEM, LOW_TEM, HIGH_TEM
+        FROM ONDO 
+       WHERE DATE_TEM BETWEEN TO_DATE(u_start)
+                 AND TO_DATE(u_end);
+END;
+
+commit;
+
+variable p_rc refcursor;
+exec proc_ondo('2010/01/01', '2011/12/31', :p_rc);
+print p_rc;
+```
+
+* 1-10번 : 프로시저 생성
+* 12번 : 적용
+* 14-16번 : 테스트
+
