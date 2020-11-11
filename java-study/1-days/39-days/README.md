@@ -121,9 +121,9 @@ SELECT deptno, sum(sal) FROM emp
 GROUP BY deptno
 ```
 
-* 물론 위와 같이 사용자가 원하는 정보를 얻는 경우도 존재하낟.
+* 물론 위와 같이 사용자가 원하는 정보를 얻는 경우도 존재한다.
 * 부서번호별 연봉합계
-* 
+
 ### HAVING
 
 ![HAVING](../../../.gitbook/assets/having%20%281%29.png)
