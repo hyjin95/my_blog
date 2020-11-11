@@ -197,3 +197,5 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 * Web서버 기반의 servlet프로그램 개발을 이 클래스를 상속해 구현한다.
 * 반드시 오버라이딩해야하지는 않고, 요청 방식에 따라 필요한 메서드를 오버라이딩한다.
 
+후기 : html처음 할때 빡세게 이론을 정리 했던게 요새 수업을 이해하는데 도움이 되는것 같다. 코드도 많이 만져보자 해봐야 늘지!!!
+
