@@ -2,7 +2,7 @@
 description: 2020.11.10 - 60일차
 ---
 
-# 60 Days - Servlet과 JSP, JAVA의 역할, dp-post방식, GenericServlet, HttpServlet
+# 60 Days - Servlet과 JSP, JAVA의 역할, do-post방식, GenericServlet, HttpServlet
 
 ### 사용 프로그램
 

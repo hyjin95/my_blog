@@ -218,7 +218,7 @@
     * [empManagerHtype - VO+myBatis로 우편번호 불러오기 + row선택해제](java-study/1-days/untitled-22/empmanagerhtype-vo+mybatis-+-row.md)
   * [59 Days - local-Web-App, viewport-반응형웹, 스크립틀릿, 페이지이동, sendRedirect, forward, AJAX](java-study/1-days/untitled-1-1/README.md)
     * [JSP -Java간 인스턴스, scope, url-data유지\(forward\)](java-study/1-days/untitled-1-1/jsp-java-scope.md)
-  * [60 Days - Servlet과 JSP, JAVA의 역할, dp-post방식, GenericServlet, HttpServlet](java-study/1-days/untitled-23/README.md)
+  * [60 Days - Servlet과 JSP, JAVA의 역할, do-post방식, GenericServlet, HttpServlet](java-study/1-days/untitled-23/README.md)
     * [a3\_result.jsp : 직접호출, servlet경유 호출](java-study/1-days/untitled-23/untitled-25.md)
     * [typeD.jsp : 비동기통신 ajax, servlet호출, text, html](java-study/1-days/untitled-23/typed.jsp-ajax-servlet-text-html.md)
     * [Java, GenericServlet, HttpServlet - 쿼리스트링 테스트](java-study/1-days/untitled-23/java-genericservlet-httpservlet.md)
