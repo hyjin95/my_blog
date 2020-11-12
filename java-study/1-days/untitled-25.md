@@ -10,6 +10,8 @@ description: 2020.11.12 - 62일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## Servlet, Jsp, 페이지이동
+
 ### 반복 getParameter : 공통코드 구현
 
 ```java
@@ -29,4 +31,6 @@ public void bind(Map< , > target){
 * name : &lt;input name=" "&gt;
 * 이렇게 담긴 name들을 파라미터인 target에 담아보자 - targer.clear\( \); : 초기화
 * request.getParameter\( \)의 리턴타입은 String이다.
+
+## getParameter 공통코드 구현
 
