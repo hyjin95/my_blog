@@ -23,6 +23,10 @@ description: 2020.11.12 - 62일차
 
 * 어노테이션
 
+### get, post방식 단위테스
+
+{% page-ref page="jsonservlet.java-post-get.md" %}
+
 ## Servlet, Jsp, 페이지이동
 
 ### Servlet 기원
