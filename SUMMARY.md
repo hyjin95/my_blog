@@ -223,6 +223,7 @@
     * [typeD.jsp : 비동기통신 ajax, servlet호출, text, html](java-study/1-days/untitled-23/typed.jsp-ajax-servlet-text-html.md)
     * [Java, GenericServlet, HttpServlet - 쿼리스트링 테스트](java-study/1-days/untitled-23/java-genericservlet-httpservlet.md)
   * [61 Days - 기상자료개방포털 : ME](java-study/1-days/untitled-24.md)
-  * [62 Days -](java-study/1-days/untitled-25.md)
+  * [62 Days -](java-study/1-days/untitled-25/README.md)
+    * [google.chart API - \[\[ \]\], JSON\[{ }\]](java-study/1-days/untitled-25/google.chart-api-json.md)
   * [Untitled](java-study/1-days/untitled-26.md)
 
