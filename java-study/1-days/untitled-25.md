@@ -37,7 +37,10 @@ description: 2020.11.12 - 62일차
 
 ### Servlet 매핑
 
-* 
+* Servlet인 자바 클래스의 이름을 web.xml 배치서술자 문서에 매핑해줌으로서 의존성 주입한다. - 배치서술자에 매핑할 수 있는 클래스는 java클래스 뿐이므로 jsp는 매핑할 수 없다.
+* 개발자가 직접 주입하는 것  - main메서드를 정의한다. - main메서드 자체의 라이프사이클을 갖는다. - 순수 JAVA 코드 POJO방식
+* 외부에서 주입받는것 - 외부 프레임워크가 라이프사이클을 관리해준다. - Spring, 전자정부 F/W - 오버라이드 해야하는 추상메서드가 있을 수 있다.
+
 ### 반복 getParameter : 공통코드 구현
 
 ```java
@@ -60,4 +63,31 @@ public void bind(Map< , > target){
 * 5번에서 사용되는 req는 Servlet에게서 받은 객체이다.  - 해당 Servlet안에 HashMapBinder를 인스턴스화 해서 req의 원본을 사용해야한다. - **생성자를 통해 받아와야한다.**
 
 ## getParameter 공통코드 구현
+
+## Servlet QnA
+
+### Q1. 책의 p500에 작성된 서블릿은 화면 페이지를 구성해주나요?
+
+* 네
+* out.print구문에 태그가 작성되어 있고 mime타입으로 html이라 선언되어 있다.
+
+### Q2. main메서드가 없는 서블릿을 어떻게 실행되나요?
+
+* 배치서술자 web.xml에 url-pattern이 매핑되어 있어서 해당 url요청이 브라우저로 들어오면 WAS가 인터셉트해 매칭되어있는 name의 java클래스 서블릿을 실행해준다.
+
+### Q3 . 서블릿 안에서 페이지 이동을 하는 방법은 무엇이 있나요?
+
+1. response.sendRedirect\( \) - URL이 지정된 문서로 바뀌고, 이후의 자바 코드는 실행된다.
+2. RequestDispatcher의 forward\( \) - 화면 URL은 서블릿을 가리키지만 출력되는 페이지 내용은 지정된 jsp에서 출력된다. - req.setAttribute\( \)메서드로 request에 data를 저장할 수 있다.   RequestDispatcher view = request.getReaquestDispatcher\("xxx.jap"\);   view.forward\(request, response\); - jsp에서 request.getAttribute\( \)메서드로 data를 Object타입으로 꺼낼 수 있다.
+3. RequestDispatcher의 include\( \) - xxx.jsp의 출력을 포함해서 기존 페이지가 출력한다. URL이 변하지 않고 다음 자바코드도 진행한다.
+
+### Q4. sendRedirect와 forward가 실행되면 servlet의 화면을 볼 수 있나요?
+
+* 아니요
+* 지정된 jsp의 화면을 출력한다.
+
+### Q5. req.forward와 res.sendRedirect을 언제 사용하나요?
+
+* select는 forward\( \) - 처리된 결과인 Object\(Map, VO, ...\)를 jsp에 보내서 출력해야 하니까. req에 담아야한다. - 데이터를 화면에 일부 갱신처리하는 경우에 사용한다.
+* U \| I \| D 는 sendRedirect\( \) - 데이터를 화면에 갱신처리하면 화면 전체가 갱신된다.
 
