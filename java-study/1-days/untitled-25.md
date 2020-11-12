@@ -35,6 +35,9 @@ description: 2020.11.12 - 62일차
 * 들어주는 역할 + 응답을 송출해주는 역할 = Server
 * req객체로는 PrintWrite를, req객체로는 Redirect를 구현해 사용한다.
 
+### Servlet 매핑
+
+* 
 ### 반복 getParameter : 공통코드 구현
 
 ```java
