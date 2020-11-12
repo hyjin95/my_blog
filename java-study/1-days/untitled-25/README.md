@@ -91,3 +91,100 @@ public void bind(Map< , > target){
 * select는 forward\( \) - 처리된 결과인 Object\(Map, VO, ...\)를 jsp에 보내서 출력해야 하니까. req에 담아야한다. - 데이터를 화면에 일부 갱신처리하는 경우에 사용한다.
 * U \| I \| D 는 sendRedirect\( \) - 데이터를 화면에 갱신처리하면 화면 전체가 갱신된다. - U \| I \| D 의 결과는 0아니면 1이므로 해당 결과값으로 서블릿안에서 1이라면 jsp를 호출하고, 0이면 호출하지 않는 방식으로, 예매완료나 로그인성공과 같은 때에 사용한다. - 정보를 보낼 필요 없을때
 
+## URL 자르기 : getRequestURI, getContextPath
+
+### 실행
+
+![logger](../../../.gitbook/assets/2%20%2850%29.png)
+
+```java
+public void doService(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException{
+		//테스트 해보기
+		logger.info("doService 호출성공");
+		
+		//xxx.do?command=empInsert|empUpdate|empDelete|empSelect 이 쿼리스트링으로 
+		
+		//getParameter외 다른방법
+		String uri = req.getRequestURI();//URL중 루트경로 다음 경로 - ?/command=empselect
+		logger.info(uri);
+		
+		String context = req.getContextPath();//URL중 루트 경로를 가져온다. web.xml에서
+		logger.info(context);
+
+		String command = uri.substring(context.length()+1);
+		logger.info(command);
+		
+		int end = command.lastIndexOf('.');
+		logger.info(end);
+		
+		command = command.substring(0, end);
+		logger.info(command);
+		
+		String works[] = null;
+		works = command.split("/");
+		for(String str:works) {
+			logger.info(str);
+		}
+```
+
+* URL : Localhost:9000/a/aAction.do?command=empSelect 
+* 위 url로 검색하여 web.xml에 매핑한 url-pattern을 분리, 구분할 수 있다.
+
+### 코드분석 - getRequestURI\( \)
+
+#### 주어진 URL에서 어느 url-pattern과의 매핑인지 구분하기 위해 URL을 분리하는 코드
+
+```java
+String uri = req.getRequestURI();//URL중 루트경로 다음 경로 - ?/command=empselect
+```
+
+* URI는 URL중에서 도메인 뒤 파일명 부분을 말한다. 
+* request.getRequestURI\( \)로 얻는 uri : /프로젝트명/지정한 서블릿 url.do - /dev\_html/a/aAction.do
+
+```java
+String context = req.getContextPath();//URL중 루트 경로를 가져온다. web.xml에서
+```
+
+* context는 프로젝트 명을 가리킨다.
+* request.getContextPath\( \)로 얻는 context : 프로젝트명 - dev\_html
+
+```java
+String command = uri.substring(context.length()+1);
+```
+
+* 가져온 URL에서 '프로젝트명 + / ' 를 제거하기 위한 substring -  uri : /dev\_html/a/aAction.do - context : dev\_html - context.length\( \)+1 : dev\_html/ - command : a/aAction.do
+
+```java
+int end = command.lastIndexOf('.');
+```
+
+* command에 담긴 String에서 마지막 ' . '의 index를 담는다.
+* lastIndexOf : 마지막 ' . '이 문자열의 몇번째에 위치하는지 - command : a/aAction.do - 9번째
+
+```java
+command = command.substring(0, end);
+```
+
+* command 문자열을 substring으로 자른다. 0번째 부터 위에서가져온 마지막 ' . ' 까지 - command : a/aAction.do - command.substring\(0, end\); - 문자열의 0번째부터 9번째 문자까지 자른다. - command : a/aAction
+
+```java
+String works[] = null;
+works = command.split("/");
+```
+
+* 잘라놓은 url을 / 로 구분하면 값이 여러개일테니 배열을 선언해 담는다.
+* command : a/aAction
+* command.split\("/"\) : command를 ' / '를 기준으로 나눈다.
+
+```java
+for(String str:works) {
+			logger.info(str);
+		}
+```
+
+* 배열 works를 출력해보면 a와 aAction이 담겨 있음을 알 수 있다.
+
+후기 : 저번주랑 이번주는 운동을 자주 못갔는데 가야하는데...가야하는데에에에.......  
+선생님이 공통되는 코드는 인터페이스로 만들어보라고 하셧는데 서블릿의 if문도 간소화 시킬 수 있을까??
+
