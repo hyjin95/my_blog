@@ -2,7 +2,7 @@
 description: 2020.11.12 - 62일차
 ---
 
-# 62 Days -
+# 62 Days - google.Chart, 반복코드 : enumeration, Servlet QnA : Redirect, forward, URL분리, ui-servlet-jsp
 
 ### 사용 프로그램
 
