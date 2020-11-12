@@ -10,7 +10,30 @@ description: 2020.11.12 - 62일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 필기
+
+### 개발방법론
+
+* 모델 1 : JSP가 요청처리
+* 모델 2 : Servlet이 요청처리
+* 모델 2에서 개선된 프레임워크 : Spring, 전자정부F/W, LG의 Daven 등
+* UI와 로직-DB는 분리한다.
+
+### @
+
+* 어노테이션
+
 ## Servlet, Jsp, 페이지이동
+
+### Servlet 기원
+
+* JFrame이전에 JApplet이 html태그안에서 사용할 수 있었다. 
+* Server + Applet -&gt; Serv + let = Servlet  - 서버에서 돌아가는 Applet 
+* 생명주기 : init - service - destory
+* httpServlet이나 GenericServlet 을 상속받아 사용한다. - GenericServlet은 service메서드만 오버라이드 해서 사용해야하므로 post, get을 구분할 수 없다. - 구분할 수 있는 클래스는 GenericServlet을 상속받는 HttpServlet이다.
+* service메서드와 post, get메서드에는 통신을 위한 req, res객체가 있어야한다.
+* 들어주는 역할 + 응답을 송출해주는 역할 = Server
+* req객체로는 PrintWrite를, req객체로는 Redirect를 구현해 사용한다.
 
 ### 반복 getParameter : 공통코드 구현
 
