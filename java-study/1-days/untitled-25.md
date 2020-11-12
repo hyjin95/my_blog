@@ -21,7 +21,7 @@ public void bind(Map< , > target){
     target.clear( );
     Enumeration en = req.getParameterNames( );
     while(en.hashMoreElement()){
-        request.getParameter(" ");
+        String str = request.getParameter(" ");
     }
 }
 ```
@@ -30,7 +30,7 @@ public void bind(Map< , > target){
 * map.put\( \), list.add\( \)를 사용해 n개의 name을 담는다. - n개의 name : while - for는 반복 size를 알아야 하므로 while을 사용한다.
 * name : &lt;input name=" "&gt;
 * 이렇게 담긴 name들을 파라미터인 target에 담아보자 - targer.clear\( \); : 초기화
-* request.getParameter\( \)의 리턴타입은 String이다.
+* request.getParameter\( \)의 리턴타입은 String이다. - getAttribute의 리턴타입은 Object이기에 헷갈릴 수 있다. CastingException주의하기
 
 ## getParameter 공통코드 구현
 
