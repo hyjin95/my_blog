@@ -225,5 +225,6 @@
   * [61 Days - 기상자료개방포털 : ME](java-study/1-days/untitled-24.md)
   * [62 Days -](java-study/1-days/untitled-25/README.md)
     * [google.chart API - \[\[ \]\], JSON\[{ }\]](java-study/1-days/untitled-25/google.chart-api-json.md)
+    * [JsonServlet.java : post, get단위테스트](java-study/1-days/untitled-25/jsonservlet.java-post-get.md)
   * [Untitled](java-study/1-days/untitled-26.md)
 
