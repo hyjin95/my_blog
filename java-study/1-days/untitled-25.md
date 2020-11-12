@@ -31,7 +31,7 @@ public void bind(Map< , > target){
 * name : &lt;input name=" "&gt;
 * 이렇게 담긴 name들을 파라미터인 target에 담아보자 - targer.clear\( \); : 초기화
 * request.getParameter\( \)의 리턴타입은 String이다. - getAttribute의 리턴타입은 Object이기에 헷갈릴 수 있다. CastingException주의하기
-* 5번에서 사용되는 req는 Servlet에게서 받은 객체이다.  - 해당 Servlet안에 HashMapBinder를 인스턴스화 해서 req의 원본을 사용해야한다.
+* 5번에서 사용되는 req는 Servlet에게서 받은 객체이다.  - 해당 Servlet안에 HashMapBinder를 인스턴스화 해서 req의 원본을 사용해야한다. - 생성자를 통해 받아와야한다.
 
 ## getParameter 공통코드 구현
 
