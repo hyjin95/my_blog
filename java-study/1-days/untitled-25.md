@@ -89,5 +89,5 @@ public void bind(Map< , > target){
 ### Q5. req.forward와 res.sendRedirect을 언제 사용하나요?
 
 * select는 forward\( \) - 처리된 결과인 Object\(Map, VO, ...\)를 jsp에 보내서 출력해야 하니까. req에 담아야한다. - 데이터를 화면에 일부 갱신처리하는 경우에 사용한다.
-* U \| I \| D 는 sendRedirect\( \) - 데이터를 화면에 갱신처리하면 화면 전체가 갱신된다.
+* U \| I \| D 는 sendRedirect\( \) - 데이터를 화면에 갱신처리하면 화면 전체가 갱신된다. - U \| I \| D 의 결과는 0아니면 1이므로 해당 결과값으로 서블릿안에서 1이라면 jsp를 호출하고, 0이면 호출하지 않는 방식으로, 예매완료나 로그인성공과 같은 때에 사용한다. - 정보를 보낼 필요 없을때
 
