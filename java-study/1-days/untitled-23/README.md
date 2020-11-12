@@ -30,7 +30,7 @@ description: 2020.11.10 - 60일차
 %>
 ```
 
-* response.Redirect\("b.jsp"\); - 해당 URL로 바로 이동한다. - 제어권이 b.jsp로 넘어간다.
+* response.Redirect\("b.jsp"\); - 해당 URL로 바로 이동한다. - 제어권이 b.jsp로 넘어간다. - 페이지 이동 후에도 다음 자바코드가 진행된다.
 * RequestDispatcher view = request.getRequestDispatcher\("b.jsp"\); - view.forward\(req, res\);   URL은 변하지 않지만 b.jsp페이지 내용을 출력한다.    b.jsp로 제어권이 넘어간다.  request에 정보를 담아 b.jsp에서도 유지시킬수 있지만 지정된 페이지에서만 유지된다. - view.include\(req,res\);   URL은 변하지 않고, b.jsp페이지 내용을 포함해서 a.jsp에서 출력한다.   제어권을 유지해 include다음 자바 코드를 진행한다.
 
 ### get, post방식
