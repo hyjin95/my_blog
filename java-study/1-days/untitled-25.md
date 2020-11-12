@@ -41,7 +41,9 @@ description: 2020.11.12 - 62일차
 * 개발자가 직접 주입하는 것  - main메서드를 정의한다. - main메서드 자체의 라이프사이클을 갖는다. - 순수 JAVA 코드 POJO방식
 * 외부에서 주입받는것 - 외부 프레임워크가 라이프사이클을 관리해준다. - Spring, 전자정부 F/W - 오버라이드 해야하는 추상메서드가 있을 수 있다.
 
-### 반복 getParameter : 공통코드 구현
+## getParameter 공통코드 구현
+
+### 반복되는 getParameter : 공통코드 구현
 
 ```java
 HashMapBinder class
@@ -59,10 +61,8 @@ public void bind(Map< , > target){
 * map.put\( \), list.add\( \)를 사용해 n개의 name을 담는다. - **n개의 name : while** - for는 반복 size를 알아야 하므로 while을 사용한다.
 * name : &lt;input name=" "&gt;
 * 이렇게 담긴 name들을 **파라미터인 target에 담아**보자 - targer.clear\( \); : 초기화
-* **request.getParameter\( \)의 리턴타입은 String**이다. - getAttribute의 리턴타입은 Object이기에 헷갈릴 수 있다. CastingException주의하기
+* **request.getParameter\( \)의 리턴타입은 String**이다. - **getAttribute의 리턴타입은 Object**이기에 헷갈릴 수 있다. CastingException주의하기
 * 5번에서 사용되는 req는 Servlet에게서 받은 객체이다.  - 해당 Servlet안에 HashMapBinder를 인스턴스화 해서 req의 원본을 사용해야한다. - **생성자를 통해 받아와야한다.**
-
-## getParameter 공통코드 구현
 
 ## Servlet QnA
 
