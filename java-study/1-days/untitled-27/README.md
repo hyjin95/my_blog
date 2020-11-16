@@ -44,6 +44,11 @@ description: 2020.11.16 - 64일차
 * DefaultTableModel\(JAVA\)의 DataSet\(XML\)으로 JSP\(application/json\)을 넣어\(JS\) 출력할 수 있다.
 * DTM은 header와 body로 이루어진다.
 
+### JQuery를 사용하는 이유
+
+* 크로스 브라우징 서비스를 제공하기 위함
+* 크로스 브라우징 : 여러 브라우저에서도 동일한 서비스를 제공할 수 있는 것
+
 ## JSP - Html 출력
 
 ### 출력
