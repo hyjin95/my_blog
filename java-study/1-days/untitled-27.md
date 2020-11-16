@@ -28,7 +28,7 @@ description: 2020.11.16 - 64일차
 
 ### 비동기
 
-* **ajax**, Easyui\(data-options\), Html\(Div\), JSP\(기존페이지 모르게\)
+* **ajax**, Easyui\(data-options\), Html\(Div\), JSP\(기존페이지 모르게\) - div는 자체 크기\(박스를\)갖고 내부에 수많은 node들을 가질 수 있다.
 * 부분처리
 * 결과가 나오는 동안 동시에 다른 요청을 처리 할 수 있다.
 * 자원을 효율적으로 활용하는 방식이지만 시간이 걸릴 수 있다.
