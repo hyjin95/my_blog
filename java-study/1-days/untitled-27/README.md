@@ -49,7 +49,24 @@ description: 2020.11.16 - 64일차
 * 크로스 브라우징 서비스를 제공하기 위함
 * 크로스 브라우징 : 여러 브라우저에서도 동일한 서비스를 제공할 수 있는 것
 
-## JSP - Html 출력과
+### String과 StringBuffer, StringBuilder
+
+* String은 setText와 비슷한 성격을 갖는다. - 문자를 덩어리로 취급해 끼어들기가 불가능하고, 기존데이터가 유지되지 않고 새로 덮여진다. - document.write도 이런 성격
+* StringBuffet와 StringBuilder는 append와 성격이 비슷하다. - 문자를 하나하나 인식하므로 메모리관리에 효율적이고, 끼어들기가 가능해 기존 데이터에 이어 작성 할 수 있다.
+
+### loC, OOP, AOP
+
+* loC : 역제어, 외부에서 제어해주는 것
+* OOP : 수직관계, 상속관계 - 객체지향
+* AOP : 수평관계 - 관점지향
+
+### 파일 저장의 안전성 : WEB-INF폴더
+
+* 프로젝트 하위의 자바 문서들은 WEB-INF하위의 classes폴더 안에 컴파일 된다. - eclipse의 경우에는 auto build API를 활용해 해당 작업을 자동으로 수행한다.
+* WEB\_INF폴더 하위의 lib폴더는 외부 library\(jar\)파일들을 담는 곳이다.
+* JSP파일도 WebContent폴더 밑에 두는 것보다 WEB-INF의 하위 폴더에 두는 것이 더 안전하다. - 단, WEB-INF폴더 안에 관리하게되면 url을 통한 호출을 할 수 없게된다.
+
+## JSP - Html 출력
 
 ### 출력
 
@@ -189,9 +206,64 @@ description: 2020.11.16 - 64일차
 * 변수의 값이 먼저 결정된다.
 * 브라우저가 로드할때 값과 태그를 같이 다운로드 한다.
 
-### JS변수
+### Java변수과 JS변수의 위치
+
+* JSP, Servlet에서 data가 먼저 결정되고, html 태그들이 결정된다.
+* Java변수와 JS변수는 &lt;head&gt;영역에도, &lt;body&gt;영역에서도 선언될 수 있다.
+* 단, &lt;body&gt;의 경우에는 반드시 변수의 선언위치가 해당 변수의 사용위치 보다 위에 작성되어야한다.
+* html은 절차지향적 언어이므로
 
 {% page-ref page="java-js.md" %}
+
+## Scope
+
+### DB 조회 값
+
+* DB에서 select한 data는 List&lt;Map&gt;이나 List&lt;VO&gt;로 나온다. - VO는 타입을 맞출 필요가 없어 계산이 많이 일어나는 상황에서 사용한다.
+
+### request
+
+* 요청이 일어나는 동안 data를 유지한다.
+* 대표적인 예시 : request.setAttirbute\("이름", 값\) - forward\(req, res\) - request.getAttribute\("이름"\) - RequsetDispatcher에서 제공하는 메서드로, JSP, Servlet에서 사용가능하다. - 서블릿에서 DB처리를하고, select된 data를 req에 담아 JSP에게 넘겨 출력할 때 사용한다.
+
+### session
+
+* session은 캐시메모리를 사용하므로 공간이 작아 List나 Map을 담기 어렵다.
+* 주로 사용자의 id, 이름, 로그인정보 와 같은 비교적 작은 정보만을 담는 용도로 사용한다.
+* 일정 시간동안 data를 유지한다.
+
+### page와 application
+
+* page scope는 기본이지만 WEB은 특성상 페이지 이동이 빈번하게 일어나기 때문에 사용의미가 없다.
+* application은 해당 애플리케이션의 실행시점부터 종료시점까지 유지되는데, 계속 쌓이면 서버가 다운 되는 등의 일이 발생할 수 있어 위험하다.
+
+### sendRedirect, forward와 session
+
+* sendRedirect로 일어난 페이지 이동은 url과 request가 변하는 페이지 이동이므로 data가 유지되지 않는데, data를 유지하는 scope를 사용하면 이를 극복할 수 있다.
+* session
+* 단, forward메서드와 함께 사용하는 serAttribute메서드에는 session을 사용하면 forward메서드의 파라미터와 맞지않아 사용할 수 없다.
+
+## QnA
+
+### Q1.서버에서 결정된 Java변수를 html에서 변경할 수 있나요?
+
+* 바꿀 수 있다.
+* ajax와 for문, if문을 사용한다면 가능하다.
+* JS를 활용한 비동기통신객체 API를 사용할 수 도 있는데, 이 경우에는 JQuery를 사용하는 것이 코드가 더 간결하다.
+
+### Q2. Select를 사용한 경우에는 Servlet과 JSP중에 어디를 경유해야 하나요?
+
+* Servlet
+* Servlet을 경유해 처리된 select data를 forward메서드를 사용해 JSP가 출력하게 한다. - Java가 Servlet에게 넘겨주는 값은 return값이다. - req.setAttribute, req.getAttribute - getAttribute의 리턴타입은 Object이므로 때에따라 캐스팅 연산자가 필요하다. - forward는 정보를 유지하기위해 사용되는 메서드이다. - req의 자리에 session이 올 수 있다.
+* Java에서 조회된 결과가 없어 서버가 읽어오지 못하면 NullPointerException, 500번이 발생한다.
+
+### Q3. req.setAttribute\( \), session.setAttribute\( \), application.setAttibute 세가지 중에서 forward와 sendRedirect의 구분없이 정보를 유지 할 수 있는 것은 어느것인가요?
+
+* scopet가 session과 application인 2, 3번
+
+### Q4. &lt;jsp:useBean id="myCar" scope={page \|\| request \|\| session \|\| application} /&gt;에서 시간을 조정할 수 있는 scope는 무엇인가요?
+
+* session 인 3번
 
 후기 : 
 
