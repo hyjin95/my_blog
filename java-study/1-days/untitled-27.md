@@ -10,24 +10,29 @@ description: 2020.11.16 - 64일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
-## 필기
+## 복습
 
 ### DOM
 
-* 실제, 가상 DOM
+* 실제 DOM, 가상 DOM
+* html안에는 &lt;head&gt; 와 &lt;body&gt;가, &lt;head&gt;안에는 JS, CSS, title &lt;body&gt;안에는 &lt;div&gt;, &lt;table&gt;, &lt;h2&gt;, ........ &lt;table&gt;안에는 &lt;tr&gt;, &lt;tr&gt;안에는 &lt;td&gt;,....
+* 이런식의 트리구조
 
 ### 동기
 
-* DB, ajax, JSP, Java
+* DB\(유지\), ajax, JSP\(DB와 연동\), Java\(DB와 연동\)
 * 서로 맞추는 것
 * 요청과 결과가 한 자리에서 이뤄져야한다. = 트랜잭션을 동시 처리
 * 결과가 나올 때 까지 동시에 다른 요청을 처리할 수 없다.
+* data와의 연결에는 대체적으로 동기를 사용한다. = Oracle을 사용하는 이유
 
 ### 비동기
 
-* ajax, Easyui\(data-options\), Html\(Div\)
+* **ajax**, Easyui\(data-options\), Html\(Div\), JSP\(기존페이지 모르게\)
+* 부분처리
 * 결과가 나오는 동안 동시에 다른 요청을 처리 할 수 있다.
 * 자원을 효율적으로 활용하는 방식이지만 시간이 걸릴 수 있다.
+* 과거의 정보를 보여줄 수 있다.
 
 ### JSP - Html 출력방법
 
