@@ -68,6 +68,10 @@ description: 2020.11.16 - 64일차
 * WEB\_INF폴더 하위의 lib폴더는 외부 library\(jar\)파일들을 담는 곳이다.
 * JSP파일도 WebContent폴더 밑에 두는 것보다 WEB-INF의 하위 폴더에 두는 것이 더 안전하다. - 단, WEB-INF폴더 안에 관리하게되면 url을 통한 호출을 할 수 없게된다.
 
+## JSP
+
+![](../../../.gitbook/assets/1%20%2867%29.png)
+
 ## JSP - Html 출력
 
 ### 출력
