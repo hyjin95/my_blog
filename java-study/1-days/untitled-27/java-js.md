@@ -98,6 +98,8 @@
 
 ## 응용
 
+### 코드 : 20201116Ver6
+
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -144,4 +146,5 @@
 
 * 4,5 번은 지역변수, 14번은 멤버변수, 27번은 지역변수의 성격을 갖는다.
 * 가장먼저 결정되는 변수 값은 몇번인가요? - 4,5번
+* 29-37번은 유지되지 않고 사라진다.
 
