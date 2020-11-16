@@ -98,6 +98,14 @@
 
 ## 응용
 
+### 화면 : 기본
+
+![document.write](../../../.gitbook/assets/document.write.png)
+
+### 화면 : onclick
+
+![document.write = &#xB36E;&#xC5B4;&#xC4F0;&#xAE30;](../../../.gitbook/assets/document.write2.png)
+
 ### 코드 : 20201116Ver6
 
 ```markup
