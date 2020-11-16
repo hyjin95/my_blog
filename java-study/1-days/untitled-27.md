@@ -62,8 +62,31 @@ description: 2020.11.16 - 64일차
 
 ### 익스프레션 : EL
 
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+	//스크립틀릿 : 지역변수, 제어문사용가능, 인스턴스화 가능,scope는 없음
+	//메서드 호출만 가능
+	out.print("비동기 출력");
+%>
+<br>
+  <!-- 익스프레션이라고 읽는다. 출력문, 스크립틀릿과 비교해보자 -->
+	<%="익스프레션 : 비동기 출력" %>
+</body>
+</html>
+```
+
 * Expression Language, 표현언어, 익스프레션 언어
 * JSP의 기본문법을 보완하는 JSP의 스크립트 언어, 값을 표현때 사용한다.
+* 출력결과  익스프레션 : 비동기 출력 비동기 출력
 
 ### 스크립틀릿
 
