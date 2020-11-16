@@ -54,6 +54,8 @@ description: 2020.11.13 - 63일차
 * request.getDispatcher\(" "\)와 forward\(request, reponse\)로 응답페이지에게 넘길 수 있다. - forward를 사용하면 url은 변하지 않지만 화면은 불러온 응답페이지의 페이지이다.
 * 보통 요청이 들어오면 해당 요청에 따라 java클래스를 호출해주는데, 따라서 if문이 필수적이고 업무가 다양할 수록 코드가 길어진다.
 
+{% page-ref page="servlet-me.md" %}
+
 ### JSP
 
 * xxx.jsp로 호출된다.
