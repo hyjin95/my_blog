@@ -1,4 +1,4 @@
-# JAVA변수와 JS변수 사용
+# JAVA변수와 JS변수 사용 : TimeLine
 
 ## JAVA변수를 사용하면
 
