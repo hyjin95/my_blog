@@ -162,6 +162,17 @@ description: 2020.11.16 - 64일차
 
 * 정보를 url을 통해 가져오는것, data가 직접적으로 보여지지 않는다.
 
+### 테스트 방식 : easyui, BootStrap
+
+* UI솔루션안에서는 data-grid의 안에서 data-options안에 url로 서블릿이 호출될 것이다.
+* easyui와 BootStrap은 DataSet으로 JSON형식을 사용하기 때문에 서블릿에서 요청이 처리 되더라도 최종 출력 형태는 mime타입이 JSON인 jsp문서로 조립 되어야만 한다.
+
+### 테스트 방식 : 직접출력\(getAttribute\)
+
+* xxx.do\(Servlet\)에서 forward메서드로 JSP로 넘어간다.
+* 서블릿에서 처리된 값이 JSP로 넘어가 JSP페이지에서 출력하는 것
+* mime타입이 html
+
 ## 가상DOM
 
 ### 가상 DOM 
