@@ -1,4 +1,4 @@
-# JAVA변수와 JS변수 사용 : TimeLine
+# JAVA변수와 JS변수 사용 : TimeLine + for, if문
 
 ## JAVA변수를 사용하면
 
@@ -108,7 +108,7 @@
 
 ### 화면 : onclick
 
-![document.write = &#xB36E;&#xC5B4;&#xC4F0;&#xAE30;](../../../.gitbook/assets/document.write2.png)
+![document.write = &#xB36E;&#xC5B4;&#xC4F0;&#xAE30;](../../../.gitbook/assets/document.write2%20%281%29.png)
 
 ### 코드 : 20201116Ver6
 

@@ -54,6 +54,8 @@ description: 2020.11.16 - 64일차
 * String은 setText와 비슷한 성격을 갖는다. - 문자를 덩어리로 취급해 끼어들기가 불가능하고, 기존데이터가 유지되지 않고 새로 덮여진다. - document.write도 이런 성격
 * StringBuffet와 StringBuilder는 append와 성격이 비슷하다. - 문자를 하나하나 인식하므로 메모리관리에 효율적이고, 끼어들기가 가능해 기존 데이터에 이어 작성 할 수 있다.
 
+{% page-ref page="document.wirte.md" %}
+
 ### loC, OOP, AOP
 
 * loC : 역제어, 외부에서 제어해주는 것
@@ -189,6 +191,12 @@ description: 2020.11.16 - 64일차
 * xxx.do\(Servlet\)에서 forward메서드로 JSP로 넘어간다.
 * 서블릿에서 처리된 값이 JSP로 넘어가 JSP페이지에서 출력하는 것
 * mime타입이 html
+
+### mime type에 따른 출력 변화
+
+* mime type에 따라 확장자가 같은 JSP이더라도 출력 결과가 완전히 달라진다.
+* mime type - json - UI솔루션의 dataSet에 사용되는 형식이다. \(easyui, BootStrap\)
+* mime type - html - 응답을 출력하는 화면의 역할을 하는 jsp이다.
 
 ## 가상DOM
 

@@ -229,6 +229,8 @@
     * [UI\(화면\) -&gt; Servlet\(처리\) -&gt; JSP\(출력\) 코드작성](java-study/1-days/untitled-25/ui-greater-than-servlet-greater-than-jsp.md)
   * [63 Days - 페이지이동의 종류, servlet과 Jsp의 역할, 한글처리, 설계, 동기-비동기](java-study/1-days/untitled-26.md)
   * [64 Days -](java-study/1-days/untitled-27/README.md)
-    * [JAVA변수와 JS변수 사용 : TimeLine](java-study/1-days/untitled-27/java-js.md)
+    * [JAVA변수와 JS변수 사용 : TimeLine + for, if문](java-study/1-days/untitled-27/java-js.md)
+    * [html에서 비동기처리로 Servlet - jsp\(JSON\) 경유하기](java-study/1-days/untitled-27/html-servlet-jsp-json.md)
+    * [document.wirte : 덮어쓰기](java-study/1-days/untitled-27/document.wirte.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 
