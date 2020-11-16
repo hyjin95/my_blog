@@ -64,7 +64,7 @@ description: 2020.11.13 - 63일차
 
 * Servlet과 JSP의 request는 원본\(static\)일까 복사본일까 다른 객체일까?
 * 다른 객체 - 각 servlet의 request, JSP의 request이다.
-* 용도 : 값을 요청할떄, forward할떄, 저장소
+* 용도 : 값을 요청할때, forward할때, 저장소
 
 ### Map과 JSON
 
