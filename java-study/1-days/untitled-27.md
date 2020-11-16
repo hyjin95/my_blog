@@ -23,7 +23,7 @@ description: 2020.11.16 - 64일차
 
 ### 비동기
 
-* ajax, forward, Easyui\(data-options\), Html\(Div\)
+* ajax, Easyui\(data-options\), Html\(Div\)
 
 ### 출력방법
 
