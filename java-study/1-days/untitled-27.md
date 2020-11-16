@@ -52,11 +52,11 @@ description: 2020.11.16 - 64일차
 * 어디에 : 브라우저에
 * 어떻게 : 스크립틀릿을 이용한다. - 스크립틀릿을 이용해 html의 &lt;td&gt;태그 안에 출력할 수 있다.
 
-### 1. &lt;td&gt;&lt;%out.print\( " " \);%&gt;&lt;/td&gt;
+### Basic : &lt;td&gt;&lt;%out.print\( " " \);%&gt;&lt;/td&gt;
 
 * 세미콜론이 필요
 
-### 2. &lt;td&gt;&lt;%= " " %&gt;&lt;/td&gt;
+### 익스프레션 : &lt;td&gt;&lt;%= " " %&gt;&lt;/td&gt;
 
 * 세미클로 불필요
 
