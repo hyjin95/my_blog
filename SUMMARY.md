@@ -228,6 +228,7 @@
     * [JsonServlet.java : post, get단위테스트](java-study/1-days/untitled-25/jsonservlet.java-post-get.md)
     * [UI\(화면\) -&gt; Servlet\(처리\) -&gt; JSP\(출력\) 코드작성](java-study/1-days/untitled-25/ui-greater-than-servlet-greater-than-jsp.md)
   * [63 Days - 페이지이동의 종류, servlet과 Jsp의 역할, 한글처리, 설계, 동기-비동기](java-study/1-days/untitled-26.md)
-  * [64 Days -](java-study/1-days/untitled-27.md)
+  * [64 Days -](java-study/1-days/untitled-27/README.md)
+    * [JAVA변수와 JS변수 사용](java-study/1-days/untitled-27/java-js.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 
