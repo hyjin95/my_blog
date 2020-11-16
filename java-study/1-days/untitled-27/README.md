@@ -108,10 +108,59 @@ description: 2020.11.16 - 64일차
 
 ## JSP출력과 URL
 
-| &lt;td&gt;&lt;%= " " %&gt;&lt;/td&gt; | &lt;table data-options="titile": ,url:"xxx.do", ....&gt; |
-| :--- | :--- |
-| 값을 직접 박는 것, 보인다. | url에서 값을 가져오는 것, 보이지 않는다. |
-| select |  |
+### &lt;td&gt;&lt;%=" "%&gt;&lt;/td&gt;
+
+```java
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Map, java.util.List, java.util.HashMap" %>
+<%
+	int size = 0;
+	List<Map<String,Object>> empList = null;
+	//서블릿에는 request.setAttribute("empList", 주소번지);
+	empList = (List<Map<String,Object>>)request.getAttribute("empList");
+	if(empList!=null){
+		size = empList.size();
+	}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+	<tr><th></th></tr>
+	<%
+	if(size>0){//데이터가 존재하면 진행
+	for(int i=0;i<size;i++){//여기서 nullPointerException이 발생. 조회결과가 없을시
+		if(size==1) break; //계속 돌면 안된다.
+		Map rmap = empList.get(i);
+	%>
+		<tr><th><%= rmap.get("EMPNO") %></th></tr>
+	<%
+	}//////////end of for
+	}else {//조회결과가 없음
+	%>
+		<tr><th>조회결과가 없습니다.</th></tr>
+	<%
+	}
+	%>
+</table>
+</body>
+</html>
+```
+
+* 28번 : 정보를 직접 박아 출력하는 것, data가 보여진다.
+* data가 List라면 for문을 사용해 값을 출력해야 하는데, 조회결과가 없는 경우\(해당 페이지의 최초실행의 경우\)에는 List의 size가 0이므로 실행하면 500번, NullPointerException이 발생한다.
+* 23번 : 이런 출력문을 사용할 때에는 반드시 if문으로 감싸 안전하게 코드를 작성한다. - if\(size&gt;0\){for문}
+* 9-11번 : size는 JSP의 상단부분에서 미리 결정한다.
+* 25번 : size가 1인 경우에는 for문을 타지 못하게,\(무한루프방지\) break를 사용해 빠져나간다. 
+
+### &lt;table data-options="title": ,url:"xxx.do", ....&gt;
+
+* 정보를 url을 통해 가져오는것, data가 직접적으로 보여지지 않는다.
 
 ## 가상DOM
 
