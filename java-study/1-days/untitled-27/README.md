@@ -49,7 +49,7 @@ description: 2020.11.16 - 64일차
 * 크로스 브라우징 서비스를 제공하기 위함
 * 크로스 브라우징 : 여러 브라우저에서도 동일한 서비스를 제공할 수 있는 것
 
-## JSP - Html 출력
+## JSP - Html 출력과
 
 ### 출력
 
@@ -105,6 +105,13 @@ description: 2020.11.16 - 64일차
 
 * Servlet, Jsp는 WAS가 있어야 java -&gt; class가 될 수 있다.
 * html, js는 컴파일이 필요없는 문서들이므로 서버 없이도 local로 실행 될 수 있다.
+
+## JSP출력과 URL
+
+| &lt;td&gt;&lt;%= " " %&gt;&lt;/td&gt; | &lt;table data-options="titile": ,url:"xxx.do", ....&gt; |
+| :--- | :--- |
+| 값을 직접 박는 것, 보인다. | url에서 값을 가져오는 것, 보이지 않는다. |
+| select |  |
 
 ## 가상DOM
 
