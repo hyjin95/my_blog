@@ -201,5 +201,7 @@ description: 2020.11.17 - 65일차
 * 3\(interactive\) : 데이터를 받는중, 하지만 완전히 받지는 못한 상태
 * 4\(complete\) : 데이터까지 완전히 받은 상태 - 비로소 responseText나 혹은 responseXML속성으로 데이터를 읽을 수 있는 상태
 
+{% page-ref page="boardsell.jsp-level2-servlet-js.md" %}
+
 ## boardSell.jsp : Level2\_2 - JQuery와 서블릿으로 구현하기
 
