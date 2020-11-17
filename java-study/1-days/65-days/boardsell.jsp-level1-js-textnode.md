@@ -8,7 +8,7 @@
 
 ### 화면2 : 버튼 클릭시
 
-![](../../../.gitbook/assets/level1-2.png)
+![\(120 - 100\)\*10 = 200](../../../.gitbook/assets/level1-2.png)
 
 ### 화면3 : F12 - console
 
@@ -24,7 +24,7 @@
 <head>
 <meta charset="UTF-8">
 <title>보드 판매량 - 마진금액 계산</title>
-    <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
+  <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="jsUtil.js"></script>
 <style type="text/css">
    body {
@@ -44,6 +44,12 @@
       background-color: #FFAAAA;
    }	
 </style>
+```
+
+* import와 CSS style 영역
+* JS공통부분을 따로 js파일로 관리하기위해 9번 코드를 작성한다.
+
+```javascript
 <script type="text/javascript">
 	function getBoardSold(){
 		//var cost = document.getElementById("price").textContent;
@@ -69,11 +75,16 @@
 	    console.log("총 판매 마진 : "+total_margin);
 	    
 		var cashEL = $("#cash");
-		replaceText(cashEL, total_margin);
+		replaceTextJQ(cashEL, total_margin);
 	}
-
 </script>
 </head>
+```
+
+* JS영역
+* 25번 라인만 JQuery를 사용했고, JS에서 JQuery문법에 맞는 출력문을 갖는 메서드를 하나 만들었다.
+
+```markup
 <body>
 <h2>보드 판매량</h2>
 <table width="300px" height="80px">
@@ -99,6 +110,9 @@
 </body>
 </html>
 ```
+
+* html &lt;body&gt;영역
+* textNode에 접근하기위해 &lt;span&gt;태그를 활용했다.
 
 ## jsUtil.js : 공통JS따로 관리하기
 
@@ -154,4 +168,6 @@
 	      }
 	   }
 ```
+
+* 제공된 메서드를 JQuery에서도 사용하기위해 31-39번 메서드를 따로 만들었다.
 
