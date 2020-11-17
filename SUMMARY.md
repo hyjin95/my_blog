@@ -234,7 +234,7 @@
     * [JAVA변수와 JS변수 사용 : TimeLine + for, if문](java-study/1-days/untitled-27/java-js.md)
     * [html에서 비동기처리로 Servlet - jsp\(JSON\) 경유하기](java-study/1-days/untitled-27/html-servlet-jsp-json.md)
     * [document.wirte : 덮어쓰기](java-study/1-days/untitled-27/document.wirte.md)
-  * [65 Days -](java-study/1-days/65-days/README.md)
+  * [65 Days - boardSell.jsp, coffeeMaker.jsp : textNode접근, 수동 비동기통신 구현\(XMLHttpRequest\), JS와 CSS 외부관리](java-study/1-days/65-days/README.md)
     * [boardSell.jsp : Level1 - JS로 textNode접근하기](java-study/1-days/65-days/boardsell.jsp-level1-js-textnode.md)
     * [boardSell.jsp : Level2 - JSP, JS로 비동기통신 구현하기](java-study/1-days/65-days/boardsell.jsp-level2-servlet-js.md)
     * [boardSell.jsp : Level2\_2 - 서블릿으로 구현하기](java-study/1-days/65-days/boardsell.jsp-level2_2.md)

@@ -2,7 +2,7 @@
 description: 2020.11.17 - 65일차
 ---
 
-# 65 Days -
+# 65 Days - boardSell.jsp, coffeeMaker.jsp : textNode접근, 수동 비동기통신 구현\(XMLHttpRequest\), JS와 CSS 외부관리
 
 ### 사용 프로그램
 
