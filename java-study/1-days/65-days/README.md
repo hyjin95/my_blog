@@ -174,7 +174,32 @@ description: 2020.11.17 - 65일차
 
 * JS는 표준이지만, JQuery는 표준이 아니기 때문에 JS에서 자유롭게 사용하던 표준 API들을 사용하지 못하는 경우도 있으니 주의하자.
 
-## boardSell.jsp : Level2 - JS로 비동기 통신 구현하기
+{% page-ref page="boardsell.jsp-level1-js-textnode.md" %}
+
+## boardSell.jsp : Level2 - Servlet, JS으로 비동기통신 구현
+
+* JQuery의 ajax를 이용한 비동기 통신이 아닌 JS만을 이용해 수동 비동기 통신을 구현해본다. = DOM부분처리
+
+### 작업지시서
+
+1. '마진은?' 버튼이 눌리면 서버에 접속해 집계한다. - 동기화를 위해 서버를 경유한다. - 동기화 하기 위해 request + url\(통신\) 이 필요하다.   url을 통해 요청을 하는데, 요청을 하려면 채널이 필요하다.
+2. 재사용성을 위해 JSP가 아닌 Servlet을 사용한다.
+3. 통신객체 XMLHttpRequest\( \)를 생성해 이 객체로 통신한다. - 이 작업을 ajax는 ajax가 해준다. - 객체이기때문에 함수, 속성을 사용할 수 있다.   xhrObject = new XMLHttpRequest\( \);   xhrObject.onreadystatechange=sold\_process; - 상태 체크 속성
+
+### 채널 사용하기
+
+* 배웠던 방법 : socket
+* 오늘 사용할 방법 : XMLHttpRequest\( \)
+* 아마존, 스프링클라우드 등 시스템, 디바이스 마다 채널을 제공하는 방법이 다르다. - 그 안에서 공통되는 부분을 활용해야한다.
+
+### 통신상태 : xhrObject.readyState
+
+* xhrObject = new XMLHttpRequest\( \);
+* 0\(uninitialized\) : open메서드가 호출되기 전
+* 1\(loading\) : HTTP요청 준비가 된 상태
+* 2\(loaded\) : HTTP요청을 보내 처리하는 중 - 헤더는 읽을 수 있는 상태   get방식인지 post방식인지, http프로토콜의 버전, 브라우저 타입을 확인할 수 있다.
+* 3\(interactive\) : 데이터를 받는중, 하지만 완전히 받지는 못한 상태
+* 4\(complete\) : 데이터까지 완전히 받은 상태 - 비로소 responseText나 혹은 responseXML속성으로 데이터를 읽을 수 있는 상태
 
 ## boardSell.jsp : Level2\_2 - JQuery와 서블릿으로 구현하기
 
