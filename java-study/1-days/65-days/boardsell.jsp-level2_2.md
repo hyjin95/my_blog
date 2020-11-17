@@ -74,6 +74,7 @@ function getBoardSold(){
 				//보이지 않는 곳에서 몰래 처리하기, 내부적으로 처리하기, url은 변하지 않는다.
 				var newTotal = xhrObject.responseText;//url요청해서 나온 값 가져오기, XML이라면 responseXML을 사용한다.
 				alert("새로 집계된 판매량 : "+ newTotal);
+				
 				var boardSoldEL = document.getElementById("boardSold");
 			    replaceText(boardSoldEL, newTotal);
 			    
