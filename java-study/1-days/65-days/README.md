@@ -10,7 +10,7 @@ description: 2020.11.17 - 65일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
-## 복습
+## 필기
 
 ### JSP의 mime type
 
@@ -32,6 +32,27 @@ description: 2020.11.17 - 65일차
 
 * Jsp문서가 a폴더 밑에 있다면, 서블릿도 src밑에 a패키지 밑에 만들고, 배치 서술자 파일의 url-pattern등록시에도 /a/test.do 이렇게 경로를 맞춘다.
 * \*를 사용해 모든 경로를 인터셉트 하는 경우에는 /가 없어도 된다. - \*.do
+
+### ajax의 의의
+
+* html은 정적이므로 부분을 변경하기위해서는 전체를 다시 읽어야하므로 비효율적이다.
+* 부분만을 동적처리\(변경\)하기 위해서 &lt;div&gt;나 &lt;span&gt;태그로 감싸 해당 &lt;div&gt;, &lt;span&gt;의 id에 접근해 부분처리하는 것이 ajax의 핵심 역할이다.
+
+### React.js
+
+* ajax보다 더 진화된 방법이라고 할 수 있다.
+* 리액트는 페이지 이동에 가상DOM을 이용한다.
+* 게임에서 많이 사용하는 방식으로 가상DOM을 만들어 미리 갱신될 부분을 띄워놓는 것이다.
+* 미리 렌더링된 파일을 출력하므로 속도가 빠르고 버퍼링같은 딜레이가 없다.
+* 가상DOM의 정보를 부분 렌더링 할 수 있다.
+* JS기반이지만 객체처럼 움직이고 사용된다. - 별도 API를 사용해 상속도 가능  
+
+### JS, CSS 외부에서 관리하기
+
+* JS와 CSS를 html\(jsp\)에서 분리해 외부에서 관리할 수 있다.
+* 해당 html\(jsp\)는 외부 JS와 CSS를 src를 이용해 import해서 사용한다. - JS : &lt;script type="text/javascript" src="coffee.js?12"&gt;&lt;/script&gt; - CSS : &lt;link rel="stylesheet" type="text/css" href="coffee.css?12"/&gt;
+* 이렇게 외부에서 불러와 사용할 때에는 외부파일이 수정되어도 적용되지 않는 경우가 발생한다.
+* src, href로 불러오는 url의 끝에 ?와 문자 한두개를 붙여 수정하더라도 적용되게 한다.
 
 ## boardSell.jsp : 제공
 
@@ -120,13 +141,19 @@ description: 2020.11.17 - 65일차
    function replaceText(el, value){
       if(el !=null){
          clearText(el);//기존에 있던 10을 지워주세요.
-         //새로운 텍스트 노드 15를 생성하기
-         var newNode = document.createTextNode(value);//15
+         //새로운 텍스트 노드 생성하기
+         var newNode = document.createTextNode(value);
          //위에서 생성한 텍스트 노드 값을 el에 붙이는 함수 호출하기
          el.appendChild(newNode);
       }
    }
 ```
+
+* 첫 번째 파라미터 : 메서드를 적용할 주소번지
+* 두 번째 파라미터 : 메서드로 적용할 값
+* 8번에서 파라미터로 받은 주소번지의 기존 text를 지운다.
+* 10번에서 파라미터로 받은 값을 새로운 textNode로 만든다.
+* 12번에서 새로 만들어진 textNode를 주소번지의 자식노드에 append한다.
 
 ### 주어진 코드 : API - clearText\( \)
 
