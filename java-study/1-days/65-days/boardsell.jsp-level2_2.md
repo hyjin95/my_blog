@@ -8,6 +8,14 @@
 
 ## boardSell.jsp : Level2\_2 - 서블릿으로 구현하기
 
+### 화면 : 결과
+
+![\(120 - 100\) \* 60 = 1200](../../../.gitbook/assets/level3%20%281%29.png)
+
+* 이전 과정 화면들을 boardSell\_2.jsp와 같다.
+
+### 코드 : boardSell\_3.jsp 2와 다른 부분
+
 ```javascript
 <script type="text/javascript">
 	//비동기 통신 객체 담을 변수 선언

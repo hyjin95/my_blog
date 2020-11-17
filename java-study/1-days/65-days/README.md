@@ -205,3 +205,7 @@ description: 2020.11.17 - 65일차
 
 ## boardSell.jsp : Level2\_2 - 서블릿으로 구현하기
 
+{% page-ref page="boardsell.jsp-level2\_2.md" %}
+
+
+
