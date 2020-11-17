@@ -36,7 +36,7 @@ description: 2020.11.17 - 65일차
 
 ### 주어진 코드 : View
 
-![](../../.gitbook/assets/boardsold-.png)
+![](../../../.gitbook/assets/boardsold-.png)
 
 ```markup
 <h2>보드 판매량</h2>
@@ -167,6 +167,12 @@ description: 2020.11.17 - 65일차
 * 꺼내온 값들을 사용해 필요한 데이터를 출력한다. 
 
 ### UI에 마진값 보여주기
+
+* 값을 성공적으로 꺼내왔다면, replaceText메서드를 활용해 값을 UI에 출력해준다.
+
+### JQuery로 바꿔보기
+
+* JS는 표준이지만, JQuery는 표준이 아니기 때문에 JS에서 자유롭게 사용하던 표준 API들을 사용하지 못하는 경우도 있으니 주의하자.
 
 ## boardSell.jsp : Level2 - JS로 비동기 통신 구현하기
 

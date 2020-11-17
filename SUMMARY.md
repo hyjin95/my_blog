@@ -234,6 +234,8 @@
     * [JAVA변수와 JS변수 사용 : TimeLine + for, if문](java-study/1-days/untitled-27/java-js.md)
     * [html에서 비동기처리로 Servlet - jsp\(JSON\) 경유하기](java-study/1-days/untitled-27/html-servlet-jsp-json.md)
     * [document.wirte : 덮어쓰기](java-study/1-days/untitled-27/document.wirte.md)
-  * [65 Days -](java-study/1-days/65-days.md)
+  * [65 Days -](java-study/1-days/65-days/README.md)
+    * [boardSell.jsp : Level1 - JS로 textNode접근하기](java-study/1-days/65-days/boardsell.jsp-level1-js-textnode.md)
+  * [Untitled](java-study/1-days/untitled-29.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 
