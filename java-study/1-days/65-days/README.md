@@ -30,7 +30,8 @@ description: 2020.11.17 - 65일차
 
 ### JSP, Servlet, Web.xml 경로 맞추기
 
-* Jsp문서가 a폴더 밑에 있다면, 서블릿도 src밑에 a패키지 밑에 만들고, 배치 서술자 파일의 url-pattern등록시에도 /a/\*.do 이렇게 경로를 맞춘다.
+* Jsp문서가 a폴더 밑에 있다면, 서블릿도 src밑에 a패키지 밑에 만들고, 배치 서술자 파일의 url-pattern등록시에도 /a/test.do 이렇게 경로를 맞춘다.
+* \*를 사용해 모든 경로를 인터셉트 하는 경우에는 /가 없어도 된다. - \*.do
 
 ## boardSell.jsp : 제공
 
