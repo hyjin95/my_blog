@@ -14,7 +14,7 @@
 
 * 이전 과정 화면들을 boardSell\_2.jsp와 같다.
 
-### 코드 : boardSell\_3.jsp 2와 다른 부분
+### 코드 :  통신 객체 생성, boardSell\_3.jsp
 
 ```javascript
 <script type="text/javascript">
@@ -36,7 +36,36 @@
 			alert("비동기 통신 객체 생성 에러");
 		}
 	}///////////////////통신 객체 생성 메서드
-	
+```
+
+* 3번에서 멤버변수로 비동기 통신객체를 담을 변수를 선언한다.
+* 여기서 만들어진 변수가 thread와 같은 역할을 한다. 요청을 안내한다.
+* JS에서 제공하는 XMLHttpRequest\( \)함수로 객체를 생성할 수 있는데 통신에 관련된 사항이므로 예외처리를 해준다.
+
+### 코드 :  통신객체로 요청 전송
+
+```javascript
+function getBoardSold(){
+		 //비동기 통신 객체 생성하기 - JQuery를 사용하는 경우엔 필요 없다.
+		 createRequest();
+		 //이 요청을 처리할 url정보
+		 var url = "/board/bsell.do"
+		 //통신 전에 필요한 상수값 지정
+		 xhrObject.open("Get", url, true)//true:비동기, false:동기
+		 //onreadystatechange속성은 http요청의 상태 변화에 따라 호출되는 이벤트 핸들러이다.
+		 xhrObject.onreadystatechange=sold_process;
+		 //이 때 서버로 전송이 일어난다. 목적지는 boardSellAction.jsp
+		 xhrObject.send(null);//전송처리
+	}	
+```
+
+* 3번에서 통신객체를 생성해주는 메서드를 호출한다.
+* 5번에서 서블릿 url을 지정해주고,
+* 7번 코드로 통신 방식, url, 비동기-동기 여부를 결정한다.
+* 10번에서 onreadystatechange속성을 사용해 통신 상태에 따라 함수를 호출 한다. - 대입연산자의 오른쪽에 오는 함수이름은 콜백메서드와 같이 상태변화에 따라 자동으로 호출된다. - onreadystatechange속성 : http요청의 상태변화에 따라 호출되는 이벤트 핸들러
+* 11번에서 생성된 통신객체에 send함수를 사용해 전송처리한다.
+
+```javascript
 	//콜백함수 선언
 	function sold_process(){
 		alert(xhrObject.readyState);
@@ -71,20 +100,6 @@
 			}
 		}
 	}////////////////////콜백함수 
-	
-	function getBoardSold(){
-		 //비동기 통신 객체 생성하기 - JQuery를 사용하는 경우엔 필요 없다.
-		 createRequest();
-		 //이 요청을 처리할 url정보
-		 var url = "/board/bsell.do"
-		 //통신 전에 필요한 상수값 지정
-		 xhrObject.open("Get", url, true)//true:비동기, false:동기
-		 //onreadystatechange속성은 http요청의 상태 변화에 따라 호출되는 이벤트 핸들러이다.
-		 //대입연산자의 오른쪽은 상태변화에 따라 호출될 함수 이름을 작성한다.
-		 xhrObject.onreadystatechange=sold_process;
-		 //이 때 서버로 전송이 일어난다. 목적지는 boardSellAction.jsp
-		 xhrObject.send(null);//전송처리
-	}	
 </script>
 ```
 
