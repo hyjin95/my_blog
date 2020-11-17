@@ -176,7 +176,7 @@ description: 2020.11.17 - 65일차
 
 {% page-ref page="boardsell.jsp-level1-js-textnode.md" %}
 
-## boardSell.jsp : Level2 - Servlet, JS으로 비동기통신 구현
+## boardSell.jsp : Level2 - JSP, JS로 비동기통신 구현하기
 
 * JQuery의 ajax를 이용한 비동기 통신이 아닌 JS만을 이용해 수동 비동기 통신을 구현해본다. = DOM부분처리
 

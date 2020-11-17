@@ -1,10 +1,10 @@
-# boardSell.jsp : Level2 - Servlet, JS으로 비동기통신 구현
+# boardSell.jsp : Level2 - JSP, JS로 비동기통신 구현하기
 
 ### 기본, 공통코드 
 
 {% page-ref page="boardsell.jsp-level1-js-textnode.md" %}
 
-## boardSell.jsp : Level2 - Servlet, JS으로 비동기통신 구현
+## boardSell.jsp : Level2 - JSP, JS으로 비동기통신 구현하기
 
 ### 화면1 : 기본화면
 
@@ -117,35 +117,7 @@
 
 * html &lt;body&gt;영역
 
-## boardServlet.java : 서블릿
-
-```java
-package com.ajax;
-
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import org.apache.log4j.Logger;
-
-public class BoardServlet extends HttpServlet {
-	Logger logger = Logger.getLogger(BoardServlet.class);
-
-	@Override
-	public void doGet(HttpServletRequest req, HttpServletResponse res) 
-		throws ServletException, IOException{
-			logger.info("doGet 호출성공");
-		    res.setContentType("text/html;charset=utf-8");
-		    PrintWriter out = res.getWriter();
-		    out.print(60);
-		}
-}
-```
-
-## boardAction.jsp : 결과 data
+## boardSellAction.jsp : data
 
 ```java
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -153,30 +125,5 @@ public class BoardServlet extends HttpServlet {
 <%
 	out.print(50);
 %>
-```
-
-## web.xml : 배치서술자
-
-```markup
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-
-<!-- log4j 환경파일 등록하기 서버가 기동된 동안에는 계속 유지된다. -->
-	<context-param>
-		<param-name>log4jConfigLocation</param-name><!-- 객체주입 -->
-		<param-value>/WEB-INF/classes/log4j.properties</param-value><!-- 톰캣서버가 읽을 수 있게 한다. -->
-	</context-param>
-	
-<!-- DD파일(Deployment Discriptor) = 배치서술자 -->
-<!-- AJAX 실습 -->
-	<servlet>
-		<servlet-name>BOARDServlet</servlet-name>
-		<servlet-class>com.ajax.BoardServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>BOARDServlet</servlet-name>
-		<url-pattern>/board/bsell.do</url-pattern><!-- 주소앞에는 업무명이온다. 업무마다 구분하기위해 -->
-	</servlet-mapping>
-</web-app>
 ```
 

@@ -236,7 +236,7 @@
     * [document.wirte : 덮어쓰기](java-study/1-days/untitled-27/document.wirte.md)
   * [65 Days -](java-study/1-days/65-days/README.md)
     * [boardSell.jsp : Level1 - JS로 textNode접근하기](java-study/1-days/65-days/boardsell.jsp-level1-js-textnode.md)
-    * [boardSell.jsp : Level2 - Servlet, JS으로 비동기통신 구현](java-study/1-days/65-days/boardsell.jsp-level2-servlet-js.md)
+    * [boardSell.jsp : Level2 - JSP, JS로 비동기통신 구현하기](java-study/1-days/65-days/boardsell.jsp-level2-servlet-js.md)
   * [Untitled](java-study/1-days/untitled-29.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 
