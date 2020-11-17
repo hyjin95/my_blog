@@ -237,6 +237,7 @@
   * [65 Days -](java-study/1-days/65-days/README.md)
     * [boardSell.jsp : Level1 - JS로 textNode접근하기](java-study/1-days/65-days/boardsell.jsp-level1-js-textnode.md)
     * [boardSell.jsp : Level2 - JSP, JS로 비동기통신 구현하기](java-study/1-days/65-days/boardsell.jsp-level2-servlet-js.md)
+    * [boardSell.jsp : Level2\_2 - 서블릿으로 구현하기](java-study/1-days/65-days/boardsell.jsp-level2_2.md)
   * [Untitled](java-study/1-days/untitled-29.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 

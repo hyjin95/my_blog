@@ -203,5 +203,5 @@ description: 2020.11.17 - 65일차
 
 {% page-ref page="boardsell.jsp-level2-servlet-js.md" %}
 
-## boardSell.jsp : Level2\_2 - JQuery와 서블릿으로 구현하기
+## boardSell.jsp : Level2\_2 - 서블릿으로 구현하기
 
