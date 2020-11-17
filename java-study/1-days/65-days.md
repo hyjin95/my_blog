@@ -92,6 +92,12 @@ description: 2020.11.17 - 65일차
    }
 ```
 
+* 2번 getText\(el\) : el=태그의 주소번지
+* 5번 if\(el.childNodes\) : 자식노드가 있으면 true, 없으면 false - el.childNodes = 태그의 자식노드 = text Node
+* 9번 if\(childeNode.nodeValue!=null\) : 자식노드가 null이 아니라면
+* 이런 data를 가져올때에는 항상 null인경우를 대비해야한다. if문을 사용하자.
+* 반복적으로 text노드에 접근해야하므로 재사용가능한 메서드로 만든다.
+
 ### 주어진 코드 : API - replaceText\( \)
 
 ```javascript
@@ -143,6 +149,9 @@ description: 2020.11.17 - 65일차
 * 외적 변화가 없는 태그&lt;span&gt;을 사용해 감싸 id를 부여해 접근한다. - div도 외적변화가 없지만 자체크기를 갖는 블록요소이기때문에 &lt;span&gt;을 사용한다.
 * Id에 접근해 해당 id를 가진 node의 주소번지 가져오기 - JS : document.getElement\("id"\) - JQuery : $\("\#id"\)
 
+### getBoardSold\( \)메서드 정의
+
+* 
 
 
 ## boardSell.jsp : Level2 - JS로 비동기 통신 구현하기
