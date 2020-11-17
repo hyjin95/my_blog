@@ -22,7 +22,7 @@ description: 2020.11.17 - 65일차
 
 * view와 logic을 구분해서 작업할 수 있는 개발방식
 
-## boardSell.jsp : textNode에 접근하기
+## boardSell.jsp : 제공
 
 ### 주어진 코드 : View
 
@@ -117,7 +117,13 @@ description: 2020.11.17 - 65일차
    }
 ```
 
+## boardSell.jsp : Level1 - JS로 textNode접근하기
+
 ### 작업지시서
 
-1. 마
+1. 마진금액 = \(소비자가 - 구매가\) \* 보드 판매량
+
+## boardSell.jsp : Level2 - JS로 비동기 통신 구현하기
+
+## boardSell.jsp : Level2\_2 - JQuery와 서블릿으로 구현하기
 
