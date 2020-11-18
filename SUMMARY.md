@@ -239,6 +239,6 @@
     * [boardSell.jsp : Level2 - JSP, JS로 비동기통신 구현하기](java-study/1-days/65-days/boardsell.jsp-level2-servlet-js.md)
     * [boardSell.jsp : Level2\_2 - 서블릿으로 구현하기](java-study/1-days/65-days/boardsell.jsp-level2_2.md)
     * [coffeeMaker.jsp : Level3 - 두 개의 요청객체](java-study/1-days/65-days/coffeemaker.jsp-level3.md)
-  * [Untitled](java-study/1-days/untitled-29.md)
+  * [66 Days -](java-study/1-days/untitled-29.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 
