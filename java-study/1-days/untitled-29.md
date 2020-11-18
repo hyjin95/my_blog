@@ -10,3 +10,7 @@ description: 2020.11.18 - 66일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 
+
+## 트랜잭션
+
