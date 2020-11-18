@@ -49,7 +49,7 @@ description: 2020.11.18 - 66일차
 ### List와 Map의 차이점
 
 * Map은 값마다 key를 갖기때문에 List보다 직관적이라 할 수 있다.
-* List는 들어오는 값을 정렬해서 갖지만 Map은 그냥 꽂기때문에 읽고 쓰는 속도가 Map이 빠르다.+++++
+* List는 들어오는 값을 정렬해서 갖지만 Map은 그냥 꽂기때문에 읽고 쓰는 속도가 Map이 빠르다.
 
 ## 필기
 
@@ -200,8 +200,31 @@ jdbcPoolTest.jsp
 		e.printStackTrace();
 	}
 %>
-
 ```
 
 ## include : 액션태그와 다이렉티브
+
+## ajax : 초성검색준비
+
+### ajax : 조건
+
+![&#xB124;&#xC774;&#xBC84; &#xC790;&#xC74C; &#xAC80;&#xC0C9; &#xAE30;&#xB2A5;](../../.gitbook/assets/3%20%2841%29.png)
+
+* 네이버의 검색창을 참고한다.
+* 자음에 해당하는 키보드를 눌렀다 떼면, 그때 조회 결과를 화면에 보여줘야한다.
+* 밑에 출력되는 목록이 각자의 공간을 갖고있는 것을 볼 수 있다. 그러므로 인라인요소인 &lt;span&gt;태그가 아닌 블럭요소인 &lt;div&gt;태그를 사용한다.
+
+### ajax : 코드
+
+```javascript
+$.ajax({ 
+	 //속성이 와야하는 자리이므로 함수 호출 불가 
+	 url : " "
+	,dataType:html(화면)|JSON|xml
+	,success:function(data){	}
+});
+```
+
+* dataType으로는 JSON으로 꺼내와 table로 화면에 출력한다.
+* success는 이벤트 핸들러이기때문에 함수를 사용할 수 있는데, 함수의 파라미터에는 url요청의 처리결과를 담을 수 있다.
 
