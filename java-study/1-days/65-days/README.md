@@ -553,5 +553,5 @@ div#coffeemaker2 {
 
 {% page-ref page="coffeemaker.jsp-level3.md" %}
 
-
+후기 : 모레부터 사회적 거리두기 1.5단계 시행으로 다시 열흘동안 비대면수업을 진행한다 
 
