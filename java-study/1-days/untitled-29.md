@@ -77,7 +77,131 @@ description: 2020.11.18 - 66일차
 
 ## 트랜잭션\(작업단위 묶음처리\)
 
-![](../../.gitbook/assets/1%20%2868%29.png)
+### 트랜잭션
 
-## 커넥션 풀
+* 테이블을 두개 이상 관리하는 경우에 많이 사용되는 처리 방식이다.
+* 한 작업단위를 묶어서 처리하는데, 모든 요청의 sql이 성공하면 commit, 한 요청이라도 실패하거나 에러가 발생하면 rollback되는 처리이다.
+* JDBC의 경우에는 기본적으로 자동 commit을 해주기 때문에 통신이 일어날때 자동커밋을 꺼야한다. - con.setAutoCommit\(false\); - 여기서부터 트랜잭션의 시작이라 할 수 있다.
+* 자동커밋 종료\(트랜잭션 시작\) - 쿼리문 진행 - con.commit\(트랜잭션 종료\)
+* 한 작업 단위마다 이 과정을 반복해야한다. - 한번에 처리해주는 프레임 워크 : Spring
+* 한번에 처리해주는 프레임워크를 작성해보자\(게임엔진을 만드는 것과 비슷하다.\)
+
+### 테이블 분리와 트랜잭션 사용 의의
+
+* 예시로, 게시글과 첨부파일을 DB에 관리할때
+* 테이블 하나에 관리하는 경우 - 첨부파일 컬럼갯수를 정해야 하므로 첨부파일 컬럼이 3개뿐이라면 사용자가 첨부파일을 4개 올리고 싶을때에는 게시글을 두개를 작성해야하는 일이 발생 할 수 있다. - 이런 일이 발생하면 안되기 때문에 게시글과 첨부파일의 테이블은 분리해 관리해야한다.
+* 테이블 두개로 관리하는 경우 - 사용자가 첨부파일 업로드 요청을 하면, 게시글 테이블에도, 첨부파일 테이블에도 insert되어야 한다.  - 한 요청에 대한 작업을 같이 처리해야하는 것인데, 이때 필요한 것이 트랜잭션이다.
+* 만일, 트랜잭션없이 하나 성공시 commit을 해버린다면 뒤의 작업이 실패해도 DB에 앞의 작업이 작성되기때문에 사용될수 없는 정보들이 DB에 쌓이게 될 수 있다. - 이를 방지해야한다.
+
+### 트랜잭션 적용 위치
+
+![&#xD2B8;&#xB79C;&#xC7AD;&#xC158;&#xCC98;&#xB9AC; &#xC608;&#xC2DC;](../../.gitbook/assets/1%20%2868%29.png)
+
+* Controoler와 Logic의 사이에서 시작되어야 할 것이다.
+* OrderController - OrderLogic - OrderDao : Order업무에 대한 수직관계 클래스
+* memberLogic, GoodsLogic, OrderLogic : 업무 처리중 같은 단계에 있는 수평관계 클래스
+* 예를들어, 회원이 상품을 주문하는 요청이 들어왔다면, 회원테이블에도, 상품테이블에도, 주문테이블에도 변화가 있어야 한다.  이렇게 한 요청에 대해 여러 업무의 Logic클래스들이 사용될때 트랜잭션처리를 한다.
+
+## 커넥션 풀\(connection pool\)
+
+### 커넥션 풀의 사용 의의
+
+* 요청이 들어오면 DB에 접근해서 data를 꺼내고, 다시 가져오는 이 과정은 시간이 걸린다. - 버퍼링이 발생하는 이유
+* DB connection Pool은 data를 미리 꺼내놓는 것 이다. - 가상 DOM과 비슷한 역할을 수행한다.
+* 아파치에서 제공하는 connection pool을 사용해보자
+
+### eclipse사용시 : 커넥션 풀 사용 준비
+
+![connection pool&#xAD00;&#xB828; jar&#xD30C;&#xC77C;](../../.gitbook/assets/2%20%2852%29.png)
+
+1. 필요한 jar파일을 프로젝트 WEB\_INF에 배포한다. - [http://commons.apache.org/proper/commons-dbcp/download\_dbcp.cgi](http://commons.apache.org/proper/commons-dbcp/download_dbcp.cgi)
+2. 프로젝트에 해당 jar파일을 build Path에 추가한다.
+3. 사용하는 서버.xml에 커넥션 풀에대한 코드를 작성해야한다. - &lt;Resource&gt;, &lt;ResourceLink&gt;
+4. 배치서술자 파일에 등록
+5. JSP로 테스트 구현 해보기
+
+### 3. server.xml 작성1 : &lt;Resource&gt;
+
+```markup
+<GlobalNamingResources>
+<Resource auth="Container" 
+          driverClassName="oracle.jdbc.driver.OracleDriver" 
+          maxActive="30" maxWait="1000" username="scott" password="tiger" 
+          name="jdbc/dbPool" type="javax.sql.DataSource" 
+          url="jdbc:oracle:thin:@192.168.0.187:1521:orcl11"/>
+</GlobalNamingResources>
+```
+
+1. 인증 : 톰캣제공 컨테이너 사용 - auth="Container"
+2. 드라이버 클래스 : 오라클제공 드라이버 사용 - driverClassName="oracle.jdbc.driver.OracleDriver"
+3. 최대 활동 인원 - maxActive="30"
+4. 최대 대기 시간 - maxWait="1000" : 1초
+5. 계정정보 - username=" " password=" "
+6. 원격 객체를 주입받을 수 있는 이름 - 톰캣 서버의 관리 감독을 받아 안전하다. - 자바의 인스턴스화는 자바에서만 사용가능하지만 이 이름은 어느 파일에서나 사용할 수 있다. - name="jdbc/dbPool"
+7. 타입 : 커넥션 연결할때 사용 \(drivergetConnection\) - 타입 : 인터페이스, 추상클래스 - 데이터 소스 타입이 클래스보다 범위가 크다 - type="javax.sql.DataSource"
+8. url : ip, port번호, ... - url="jdbc:oracle:thin:@ip:port번호:orcl11"
+
+### 3. server.xml 작성1 : &lt;ResourceLink&gt;
+
+```markup
+<Host>
+<Context docBase="dev_html" path="/" reloadable="true" source="org.eclipse.jst.jee.server:dev_html">
+<ResourceLink global="jdbc/dbPool" name="jdbc/dbPool" type="javax.sql.DataSource"/>
+</Context>
+</Host>
+```
+
+* 적용할 프로젝트의 Context태그에 작성해야한다.
+
+### 4. 배치서술자파일에 등록 : IoC
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<resource-ref>
+		<description>Connection</description>
+		<res-ref-name>jdbc/dbPool</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+</web-app>
+```
+
+* web.xml에 connection pool을 등록하는 것은 외부에서 관리받기 위함이다. - 역제어\(loC : Inversion of Controll\)
+* 서블릿을 배치서술자파일에 url을 등록함으로서 외부 WAS가 관리하게 하기 위한것과 같다.
+
+### 5. JSP으로 테스트 구현 : jdbcPoolTest.jsp
+
+![&#xCEE4;&#xB125;&#xC158; &#xD480; test](../../.gitbook/assets/4%20%2834%29.png)
+
+```java
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.Connection, java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet, javax.naming.*, javax.sql.*" %>
+
+jdbcPoolTest.jsp
+
+<%
+	Connection con = null;//물리적 거리가 잇는 오라클 서버 연결통로
+	PreparedStatement pstmt = null;//쿼리문 요청 인터페이스
+	ResultSet rs = null;//select시 커서 조작 인터페이스
+	try{
+		Context init = new InitialContext();
+		DataSource ds = (DataSource)init.lookup("java:comp/env/jdbc/dbPool");
+		String sql = "SELECT deptno, dname ,loc FROM dept";
+		con = ds.getConnection();
+		pstmt = con.prepareStatement(sql);
+		rs = pstmt.executeQuery();
+		while(rs.next()){
+			out.print(rs.getInt("deptno")+", "+rs.getString(2));//2는 dname이지만 직관적이지 않으므로 "dname"을 사용하자
+		}
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+%>
+
+```
+
+## include : 액션태그와 다이렉티브
 
