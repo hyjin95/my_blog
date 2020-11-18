@@ -14,5 +14,5 @@ description: 2020.11.18 - 66일차
 
 ## 트랜잭션
 
-![&#xD2B8;&#xB79C;&#xC7AD;&#xC158;](../../.gitbook/assets/1%20%2868%29.png)
+![](../../.gitbook/assets/1%20%2868%29.png)
 
