@@ -175,8 +175,6 @@ description: 2020.11.17 - 65일차
 
 * 주어진 메서드를 활용하자
 
-## boardSell.jsp : Level1 - JS, JQuery를 사용해 마진금액 구하기
-
 ## boardSell.jsp : Level1 - JS로 textNode접근하기
 
 ### 작업지시서
@@ -185,8 +183,6 @@ description: 2020.11.17 - 65일차
 2. 구매가를 가져오는 함수를 활용해 그 값을 변수에 담는다. 같은 방식으로 필요한 데이터를 가져온다.
 3. 2번에서 가져온 값으로 보드의 개당 마진금액을 계산해본다.
 4. 총 마진금액을 구해 화면에 출력한다.
-
-## boardSell.jsp : Level2 - ajax를 사용해 비동기통신 하기
 
 ### textNode에 접근하기
 
