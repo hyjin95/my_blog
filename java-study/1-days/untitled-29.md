@@ -2,7 +2,7 @@
 description: 2020.11.18 - 66일차
 ---
 
-# 66 Days -
+# 66 Days - DB:SQL-NoSQL, 스키마, 트랜잭션, connection pool, include:액션태그-다이렉티브, ajax:초성검색준비, 버퍼, flush
 
 ### 사용 프로그램
 
@@ -204,6 +204,51 @@ jdbcPoolTest.jsp
 
 ## include : 액션태그와 다이렉티브
 
+### include : 액션태그와 다이렉티브
+
+![](../../.gitbook/assets/5%20%2824%29.png)
+
+### 액션태그
+
+* 액션태그 : &lt;namespace : 태그이름&gt; - &lt;jsp : include&gt;, &lt;jsp : forward&gt; - namespace를 사용한다는 것 : xml기반이다.
+* 속성으로 page : url=" "와 flush : true \|\| false를 갖는다.
+* 두 페이지가 main\_jsp.class와 sub\_jsp.class로 나뉘어 저장된다. __- &lt;jsp:param&gt; 태그를 사용해 변수를 파라미터로 가질 수 있다. - sub.jsp : getParameter\(" "\);
+
+### 다이렉티브
+
+* 다이렉티브 : &lt;% 태그이름 %&gt; - &lt;% include %&gt;
+* 기존 페이지와 서브페이지의 결과로 만들어진 java문서가 하나의 class로 저장된다.
+
+### 버퍼
+
+* 클라이언트에게 화면을 내보내기 전 임시 저장소 개념
+* JSP에서는 버퍼의 사이즈를 정할 수 있다.
+* 지정 사이즈에 내용이 가득 차면 flush가 false이더라도 밀어낸다\(내보낸다\).
+
+### include : flush
+
+* include에서는 flush의 기본값은 false이다.
+* true라면 - include구문을 만났을 때, 여태까지 처리된 main.jsp의 내용을 버퍼에서 클라이언트에게 내보내기\(버퍼 비우기\)하고, 다시 include로 이동된 페이지 sub.jsp의 내용을 담는다.
+* false라면 - include구문을 만났을 때, 여태까지 처리된 main.jsp의 내용을 가지고 있다가 include로 이동된 페이지 sub.jsp의 내용의 결과까지 담기면 한번에 클라이언트에게 내보낸다.\(버퍼 비우기\)
+* include의 경우라면 false를 많이 사용할 것이다. - 어차피 main.jsp페이지 안에 sub.jsp의 내용을 포함해서 내보내는 것이 목적이므로
+
+### RequestDispatcher : include, forward
+
+* include, forward 함수는 RequestDispatcher클래스가 제공한다.
+* RequestDispatcher view = request.getRequestDispatcher\("View담당 html url"\); - getRequestDispatcher의 리턴값은 RequestDispatcher이다. - 그래서 싱글톤으로 관리되는 것이다.
+* include와 forward는 request객체와 함께 사용된다.
+* url이 변하지 않는다. - forward : 출력되는 화면은 기존페이지가 아닌 이동한 페이지가 담당한다.  - include : 이동한 페이지의 출력결과를 기존페이지가 포함해 보여준다.
+
+### 객체생성 방법 두가지 : new, getXXX
+
+* = new XXX : 객체 생성을 직접한다.
+* = getXXX\( \) : 객체 생성 단계에서 null을 점검할 수 있고, 싱글톤으로 관리하는 방법이다. - getInstance\( \); - 메서드를 호출한 것이지만, 첫번째 방법인 인스턴스화와 효과는 같다.
+
+### request, response의 역할
+
+* request : 요청시, 이동시, 저장소\(sope\) - request가 값을 담아 서블릿에서 이동할 페이지는 view를 담당하는 html문서의 url이여야 한다.
+* response : 응답시, 이동시\(response.sendRedirect\), mime type결정시, out객체 생성시 - response는 이동할 페이지가 서블릿이여도, jsp여도 된다. - 서블릿으로 이동하는 경우   JSP\(목록\) - Servlet\(요청1 : insert\) - Servlet\(요청2 : select\) - JSP\(응답출력\)
+
 ## ajax : 초성검색준비
 
 ### ajax : 조건
@@ -227,4 +272,6 @@ $.ajax({
 
 * dataType으로는 JSON으로 꺼내와 table로 화면에 출력한다.
 * success는 이벤트 핸들러이기때문에 함수를 사용할 수 있는데, 함수의 파라미터에는 url요청의 처리결과를 담을 수 있다.
+
+후기 : 비대면 수업이 내일부터 이루어진다. 마지막 팀프로젝트를 위한 상담도 내일 내 차례이다. 계속 열심히 해서 팀프로젝트때 조에게 도움이 되었으면 좋겠다.
 
