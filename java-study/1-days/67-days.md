@@ -110,7 +110,7 @@ description: 2020.11.19 - 67일차
 
 * jquery와 easyui에 대한 import페이지를 정상적으로 불러왔음을 확인 할 수 있다.
 
-### 문서 직접 확인하기
+### 문서 직접 확인하기 : 경로
 
 ![&#xACBD;&#xB85C;](../../.gitbook/assets/1%20%2869%29.png)
 
