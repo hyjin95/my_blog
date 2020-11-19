@@ -240,5 +240,6 @@
     * [boardSell.jsp : Level2\_2 - 서블릿으로 구현하기](java-study/1-days/65-days/boardsell.jsp-level2_2.md)
     * [coffeeMaker.jsp : Level3 - 두 개의 요청객체](java-study/1-days/65-days/coffeemaker.jsp-level3.md)
   * [66 Days - DB:SQL-NoSQL, 스키마, 트랜잭션, connection pool, include:액션태그-다이렉티브, ajax:초성검색준비, 버퍼, flush](java-study/1-days/untitled-29.md)
+  * [67 Days -](java-study/1-days/67-days.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 
