@@ -19,6 +19,15 @@ description: 2020.11.19 - 67일차
 
 ## 필기
 
+### JSP컴파일
+
+* jsp는 자바코드를 갖고있는데, 서버가 이것을 읽고 처리하려면 class파일로 컴파일되어야 한다.
+* 이때 필요한것이 jsp.jar와 Servelt.jar, 이 jar파일들로 컴파일을 한다.
+* jsp.jar가 jsp를 jsp.java\(Servlet\)으로 컴파일 해주고,
+* servlet.jsr가 jsp.java를 jsp.class로 컴파일 해준다.
+* 왜냐하면, 자바코드는 Servlet의 라이프사이클 중에서 service\( \)에서만 읽고, 처리가 가능하기 때문이다. 
+* jsp파일들의 경로를 찾아가 jsp.java의 메모장을 열어보면 모든 자바 코드들이 service\( \)안에 위치 한 것을 볼 수 있다.
+
 ### html, CSS, JS  : 정적
 
 * html, CSS, JS 이 세 언어는 정적이다.
