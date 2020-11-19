@@ -103,7 +103,7 @@ description: 2020.11.13 - 63일차
 * 서로 다른 페이지가 동기화 되느냐의 여부
 * url이 변하는 페이지 이동은 동기, 비동기의 대상이 될 수 없다.
 * forward, ajax, data-options는 동기, 비동기의 대상이 된다.
-* forwar와 data-options는 동기 통신\(부분처리\)이지만 실시간은 아니다.
+* forward와 data-options는 동기 통신\(부분처리\)이지만 실시간은 아니다.
 
 ### ajax의 동기, 비동기
 

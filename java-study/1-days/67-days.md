@@ -10,6 +10,13 @@ description: 2020.11.19 - 67일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
+## 복습
+
+### 동기, 비동기
+
+* 동기 : 요청과 결과가 동시에 처리된다. - 결과가 나올때까지 기다린다. - 단점 : 오래 걸려도 기다린다. - forward, data-options, ajax
+* 비동기 : 요청과 결과가 동시에 처리되지 않는다. - 결과를 기다리는 동안 다른 작업이 가능하다. - ajax
+
 ## 필기
 
 ### html, CSS, JS  : 정적
