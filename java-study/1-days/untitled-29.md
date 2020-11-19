@@ -206,7 +206,7 @@ jdbcPoolTest.jsp
 
 ### include : 액션태그와 다이렉티브
 
-![](../../.gitbook/assets/5%20%2824%29.png)
+![](../../.gitbook/assets/5%20%2825%29.png)
 
 ### 액션태그
 
