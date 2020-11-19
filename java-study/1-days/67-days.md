@@ -155,6 +155,8 @@ description: 2020.11.19 - 67일차
 ![](../../.gitbook/assets/5%20%2824%29.png)
 
 * 표준 - xhrObject = XMLHttpRequest로 생성한 통신 객체 - xhrObject.open\('Get', url, false \|\| true\)    방식, 요청할 페이지 주소, 비동기 처리 여부 - xhrObject.send\(null\);   전송시작   get방식이라면 null이여도 되지만, post방식일때에는 값이 들어있어야만 한다.    get방식으로는 url에 쿼리스트링으로 값을 넘길 수 있으므로
+* JQuery - JQuery의 ajax를 사용하면 생략되는 코드가 많다.
+* 표준에서의 var x는 ajax의 sucess속성의 함수 파라미터 data와 같다.
 
 ## WEB-INF하위 jsp파일 접근 : getServletContext\( \)
 
