@@ -138,7 +138,22 @@ description: 2020.11.19 - 67일차
 
 ## 처리주체와 시점문제
 
-### JSP에서의 JAVA코드 위치 : 스크립틀릿
+### JAVA코드와 html의 결정 시점
+
+![](../../../.gitbook/assets/9%20%282%29.png)
+
+* 서버가 자바코드를 처리한 결과는 text/html, text/json, text/xml으로 나온다.
+* mime타입의 main타입이 text이기때문에 html의 태그 사이에서 출력될 수 있는 것이다.
+* 처리 시점은 요청이 들어오면 server를 찾아 서버가 먼저 java코드를 처리한다.  그 결과가 결정되고 나면, 브라우저가 결과를 포함해서 화면에 처리하는 것이다.
+
+### JSP안에 JAVA코드를 작성하는 방법
+
+![](../../../.gitbook/assets/8%20%287%29.png)
+
+* 3번은 선언부로서 멤버변수와 함수를 선언할 수 있지만 사용하지 않는다.
+* 스크립틀릿과 익스프레션만 사용한다. - 스크립틀릿 : java코드 - 익스프레션 : 브라우저 화면에 작성할 java코드
+
+### JAVA코드 위치에따른 결과변화 : 스크립틀릿
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
