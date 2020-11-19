@@ -149,6 +149,7 @@ description: 2020.11.19 - 67일차
    html에서 JS가 가져온 JSON data는 Object이기때문에 Stringify로 String으로, JSON.parse로 다시 JSON형태로 바꿔 출력한다.
 
 * 결정된 text를 포함해 브라우저가 화면을 읽어 보여주는 것이다.
+* xml은 현대에는 잘 사용하지 않는 형태이다.
 
 ### 비동기 통신 코드 : 표준, JQuery
 
