@@ -12,6 +12,13 @@ description: 2020.11.19 - 67일차
 
 ## 필기
 
+### html, CSS, JS  : 정적
+
+* html, CSS, JS 이 세 언어는 정적이다.
+* 이 소스들은 프로젝트가 요청, 다운로드될때 plug-in이 html이라면 브라우저에게 연결하고, 브라우저가 해석해서 화면에 처리한다.
+* 다운로드될때 이미 결정된다.
+* 다운로드될때 변화를 줘야 할때 필요한 것이 ajax이다.
+
 ### &lt;열린태그&gt;, &lt;닫힌태그/&gt;
 
 * html은 닫힌태그를 작성하지 않아도 에러가 발생하지 않지만 xml에서는 허용되지 않는다.
@@ -144,4 +151,33 @@ description: 2020.11.19 - 67일차
 * 표준 - xhrObject = XMLHttpRequest로 생성한 통신 객체 - xhrObject.open\('Get', url, false \|\| true\)    방식, 요청할 페이지 주소, 비동기 처리 여부 - xhrObject.send\(null\);   전송시작   get방식이라면 null이여도 되지만, post방식일때에는 값이 들어있어야만 한다.    get방식으로는 url에 쿼리스트링으로 값을 넘길 수 있으므로
 
 ## WEB-INF하위 jsp파일 접근 : getServletContext\( \)
+
+
+
+## 처리주체와 시점문제
+
+### JSP에서의 JAVA코드 위치
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+//여기 : 1
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+</body>
+</html>
+<%
+//여기 : 2 차이가 있을까?
+%>
+```
+
+* 자바코드 작성 위치가 1번이냐, 2번이냐에 따라 다를까요?
+* 아니요
 
