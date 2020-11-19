@@ -134,6 +134,8 @@ description: 2020.11.19 - 67일차
 * 서블릿에서 특정 jsp를 바라보는 것은 if문으로 구분해서 url을 경로로 지정하는 것이다.
 * 페이지 이름은 변수로 두고, Get방식을 사용해 쿼리스트링으로 테스트해본다.
 
+{% page-ref page="web-inf-jsp-getservletcontext.md" %}
+
 ## 처리주체와 시점문제
 
 ### JSP에서의 JAVA코드 위치 : 스크립틀릿
