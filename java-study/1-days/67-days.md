@@ -131,3 +131,5 @@ description: 2020.11.19 - 67일차
 
 ![](../../.gitbook/assets/5%20%2824%29.png)
 
+## WEB-INF하위 jsp파일 접근 : getServletContext\( \)
+
