@@ -240,9 +240,10 @@
     * [boardSell.jsp : Level2\_2 - 서블릿으로 구현하기](java-study/1-days/65-days/boardsell.jsp-level2_2.md)
     * [coffeeMaker.jsp : Level3 - 두 개의 요청객체](java-study/1-days/65-days/coffeemaker.jsp-level3.md)
   * [66 Days - DB:SQL-NoSQL, 스키마, 트랜잭션, connection pool, include:액션태그-다이렉티브, ajax:초성검색준비, 버퍼, flush](java-study/1-days/untitled-29.md)
-  * [67 Days -](java-study/1-days/67-days/README.md)
+  * [67 Days - include-forward, include : directive, 비동기 통신 : 표준-JQuery, WEB-INF : jsp접근, java와 html결정시점](java-study/1-days/67-days/README.md)
     * [include : 디렉티브로 JS 가져오기 구현](java-study/1-days/67-days/include-js.md)
     * [WEB-INF하위 jsp파일 접근 : getServletContext\( \)](java-study/1-days/67-days/web-inf-jsp-getservletcontext.md)
+    * [비동기 통신 : test](java-study/1-days/67-days/test.md)
   * [Untitled](java-study/1-days/untitled-31.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 

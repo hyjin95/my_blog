@@ -172,7 +172,7 @@ description: 2020.11.18 - 66일차
 
 ### 5. JSP으로 테스트 구현 : jdbcPoolTest.jsp
 
-![&#xCEE4;&#xB125;&#xC158; &#xD480; test](../../.gitbook/assets/4%20%2834%29.png)
+![&#xCEE4;&#xB125;&#xC158; &#xD480; test](../../.gitbook/assets/4%20%2835%29.png)
 
 ```java
 <%@ page language="java" contentType="text/html; charset=UTF-8"

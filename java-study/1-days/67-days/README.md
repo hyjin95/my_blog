@@ -2,7 +2,7 @@
 description: 2020.11.19 - 67일차
 ---
 
-# 67 Days -
+# 67 Days - include-forward, include : directive, 비동기 통신 : 표준-JQuery, WEB-INF : jsp접근, java와 html결정시점
 
 ### 사용 프로그램
 
@@ -44,19 +44,10 @@ description: 2020.11.19 - 67일차
 
 ### 일관성
 
-```markup
-<script type="text/javascript">
-	$(document).ready(function(){
-		$.ajax({
-			 url:"innerStep1.jsp?mem_id=apple&mem_pw=123"//쿼리스트링에 띄어쓰기가들어가면 아스키코드로 잡히기때문에 주의한다.
-			,success:function(data){
-				//=document.getElementById("#d_result").innerText(data); --표준
-				//$("#d_result").text(data);//JQuery
-				$("#d_result").html(data);//JQuery
-			}
-		});
-	});
-</script>
+```javascript
+document.getElementById("#d_result").innerText(data); --표준
+$("#d_result").text(data);//JQuery
+$("#d_result").html(data);//JQuery
 ```
 
 * JS에서는 해당 태그가 먼저 선언되어야 접근 할 수 있지만, JQuery에서는 이 원칙을 무시하느 경우가 있다. 표준을 어기고 있는 것이다.
@@ -125,7 +116,7 @@ description: 2020.11.19 - 67일차
 
 ### 비동기 통신 : 표준
 
-![](../../../.gitbook/assets/4%20%2835%29.png)
+![](../../../.gitbook/assets/4%20%2836%29.png)
 
 * main.jsp에서 B.jsp로 가는 것은 페이지 이동이다.  - 화면 전체가 B.jsp로 reload된다.
 * 비동기 통신이라는 것은 url이 변하지 않으면서 보이지 않게 다녀와 화면 부분처리를 하는 것이다.
@@ -151,6 +142,8 @@ description: 2020.11.19 - 67일차
 * 표준 - xhrObject = XMLHttpRequest로 생성한 통신 객체 - xhrObject.open\('Get', url, false \|\| true\)    방식, 요청할 페이지 주소, 비동기 처리 여부 - xhrObject.send\(null\);   전송시작   get방식이라면 null이여도 되지만, post방식일때에는 값이 들어있어야만 한다.    get방식으로는 url에 쿼리스트링으로 값을 넘길 수 있으므로
 * JQuery - JQuery의 ajax를 사용하면 생략되는 코드가 많다.
 * 표준에서의 var x는 ajax의 sucess속성의 함수 파라미터 data와 같다.
+
+### 테스트
 
 ## WEB-INF하위 jsp파일 접근 : getServletContext\( \)
 
