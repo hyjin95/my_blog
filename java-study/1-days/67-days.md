@@ -112,3 +112,5 @@ description: 2020.11.19 - 67일차
 
 ![step1.jsp &#xBA54;&#xBAA8;&#xC7A5;](../../.gitbook/assets/2%20%2853%29.png)
 
+* 외부에 작성된 코드가 들어와있는 것을 확인할 수 있다.
+
