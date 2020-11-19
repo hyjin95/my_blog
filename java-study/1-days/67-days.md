@@ -169,7 +169,9 @@ description: 2020.11.19 - 67일차
 
 ## WEB-INF하위 jsp파일 접근 : getServletContext\( \)
 
+### QnA
 
+* WEB-INF 하위의 jsp파일은 url호출이 불가능하다. 하지만 보안문제로 jsp를 WEB-INF에 관리하는 경우가 있다. 이때 어떻게 접근해야 할까? - getServletContext\( \)를 사용하면 서블릿에서 접근할 수 있다. - 직접 문서를 타고 들어가 보면 있지만, url로 호출을 하려고하면 404번이 발생한다. - server.xml에서 &lt;context&gt;는 서버가 접근할 수 있는 경로를 가르킨다.    해당 프로젝트에게 접근할 수 있는 경로를 가르키는 것이다. - war파일을 서버에 배포하기 위해서도 이 context가 반드시 필요하다. - getServletContext\( \)는 여기에 접근하는 함수다.
 
 ## 처리주체와 시점문제
 
