@@ -57,7 +57,7 @@ description: 2020.11.19 - 67일차
 ### include : 디렉티브 \(정적\)
 
 * **&lt;%@ page include file="url" %&gt;**
-* url에는 jsp또는 Servlet이 올 수 있다. - 하지만 Servlet\(sendRedirect, forward\)는 사용하지 않는다. 문제가 발생 할 수 있다.
+* url에는 jsp또는 Servlet이 올 수 있다. - 하지만 Servlet는 사용하지 않는다.  - 서블릿안에서 sendRedirect, forward를 사용하면 문제가 발생 할 수 있다. - 화면으로서의 jsp만 url을 건다.
 * 소스가 하나로 관리된다. - JS와 CSS - 둘다 정적이므로 하나로 관리한다. 소스 두개로 나눠 관리할 필요가 없다.
 
 ### include : 액션태그 \(동적\)
