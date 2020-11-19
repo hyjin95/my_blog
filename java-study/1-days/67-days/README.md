@@ -2,7 +2,7 @@
 description: 2020.11.19 - 67일차
 ---
 
-# 67 Days - include-forward, include : directive, 비동기 통신 : 표준-JQuery, WEB-INF : jsp접근, java와 html결정시점
+# 67 Days - include-forward, include : directive, 비동기 통신 : 표준-JQuery, WEB-INF : jsp접근, jsp컴파일
 
 ### 사용 프로그램
 
