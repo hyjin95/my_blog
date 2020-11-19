@@ -84,63 +84,13 @@ description: 2020.11.19 - 67일차
 
 * JS와 CSS는 정적이므로, 이미 결정되어 있는 것이기 때문에 변화의 여지가 없으므로 소스를 분리해야할 필요가 없다. 소스를 하나로 관리해도 충분하기 때문에 액션태그가 아닌 디렉티브를 사용한다.
 
-### 코드 : step1.jsp
-
-```markup
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<!-- 공통코드 시작 -->
-<!-- 공통코드로 작성하는 이유
-	 같은 프로젝트, 같은 UI/UX를 사용한다면 중복되는 코드는 한번만 작성하는게 효율적이다. 
-	 jsp상에서 선언문<link>도 중복되므로 공통코드로 만들자. -->
-<%@ include file="/common/easyUI_common.jsp" %>
-<!-- 공통코드 종료 -->
-</head>
-<body>
-<div id="d_result">여기</div>
-<script type="text/javascript">
-</script>
-</body>
-</html>
-```
-
-### 코드 : easyUI\_common.jsp - JS&lt;Link&gt;
-
-```markup
-<!-- 소스가 하나로 합쳐지니까 선언문이 두 번 올 필요가 없다. -->
-<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/default/easyui.css">
-<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/icon.css">
-<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/color.css">
-<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/demo/demo.css">
-<script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
-<script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
-```
-
-### 화면 
-
-![](../../.gitbook/assets/3%20%2841%29.png)
-
-* jquery와 easyui에 대한 import페이지를 정상적으로 불러왔음을 확인 할 수 있다.
-* 화면 우클릭 - 페이지 소스보기를 하면 해당 코드들이 모두 들어와 있음을 확인 할 수 있다.
-
-### 문서 직접 확인하기 : 경로
-
-![&#xACBD;&#xB85C;](../../.gitbook/assets/1%20%2869%29.png)
-
-![step1.jsp &#xBA54;&#xBAA8;&#xC7A5;](../../.gitbook/assets/2%20%2853%29.png)
-
-* 외부에 작성된 코드가 들어와있는 것을 확인할 수 있다.
+{% page-ref page="include-js.md" %}
 
 ## 비동기 통신 : JS표준, JQuery의 ajax
 
 ### 비동기 통신 : 표준
 
-![](../../.gitbook/assets/4%20%2835%29.png)
+![](../../../.gitbook/assets/4%20%2835%29.png)
 
 * main.jsp에서 B.jsp로 가는 것은 페이지 이동이다.  - 화면 전체가 B.jsp로 reload된다.
 * 비동기 통신이라는 것은 url이 변하지 않으면서 보이지 않게 다녀와 화면 부분처리를 하는 것이다.
@@ -161,7 +111,7 @@ description: 2020.11.19 - 67일차
 
 ### 비동기 통신 코드 : 표준, JQuery
 
-![](../../.gitbook/assets/5%20%2824%29.png)
+![](../../../.gitbook/assets/5%20%2824%29.png)
 
 * 표준 - xhrObject = XMLHttpRequest로 생성한 통신 객체 - xhrObject.open\('Get', url, false \|\| true\)    방식, 요청할 페이지 주소, 비동기 처리 여부 - xhrObject.send\(null\);   전송시작   get방식이라면 null이여도 되지만, post방식일때에는 값이 들어있어야만 한다.    get방식으로는 url에 쿼리스트링으로 값을 넘길 수 있으므로
 * JQuery - JQuery의 ajax를 사용하면 생략되는 코드가 많다.
@@ -177,6 +127,12 @@ description: 2020.11.19 - 67일차
 * server.xml에서 &lt;context&gt;는 서버가 접근할 수 있는 경로를 가르킨다.  - 해당 프로젝트에게 접근할 수 있는 경로를 가르키는 것이다.
 * war파일을 서버에 배포하기 위해서도 이 context가 반드시 필요하다.
 * getServletContext\( \)는 여기에 접근하는 함수다.
+
+### 구현
+
+* jsp를 직접부르면 404가 발생한다. jsp나 servlet을 경유해서 불러야만 하는데, servlet을 사용해보자
+* 서블릿에서 특정 jsp를 바라보는 것은 if문으로 구분해서 url을 경로로 지정하는 것이다.
+* 페이지 이름은 변수로 두고, Get방식을 사용해 쿼리스트링으로 테스트해본다.
 
 ## 처리주체와 시점문제
 
