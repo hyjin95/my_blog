@@ -127,6 +127,9 @@ description: 2020.11.19 - 67일차
 
 ![](../../.gitbook/assets/4%20%2835%29.png)
 
+* main.jsp에서 B.jsp로 가는 것은 페이지 이동이다.  - 화면 전체가 B.jsp로 reload된다.
+* 비동기 통신이라는 것은 
+
 ### 비동기 통신 코드 : 표준, JQuery
 
 ![](../../.gitbook/assets/5%20%2824%29.png)
