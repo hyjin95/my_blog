@@ -128,11 +128,20 @@ description: 2020.11.19 - 67일차
 ![](../../.gitbook/assets/4%20%2835%29.png)
 
 * main.jsp에서 B.jsp로 가는 것은 페이지 이동이다.  - 화면 전체가 B.jsp로 reload된다.
-* 비동기 통신이라는 것은 
+* 비동기 통신이라는 것은 url이 변하지 않으면서 보이지 않게 다녀와 화면 부분처리를 하는 것이다.
+* 표준에서 비동기통신을 위한 객체를 생성해야한다. - JS표준에서는 브라우저가 제공해주는 XMLHttpRequest객체로 생성한다. - JQuery에서는 ajax를 사용하면 이 과정을 생햑한다.
+* 생성된 통신 객체는 통신 상태에 따라 콜백메서드를 호출한다. - 0,1,2,3,4\(완료\) 라는 상태를 서버측에서 브라우저를 통해 계속 체크한다.
+* 위의 경우는 서버에서 가져온 응답을 바로 화면에 출력해야 한다. - html에 접근해야한다. - 면적이 있어야 값을 담을 수 있으므로 &lt;div&gt;태그의 위치에 접근한다.
+
+### 표준 : 서버 응답 - List, Map, JSON, XML
+
+* 표준에서, 서버의 응답은 XMLHttpRequest객체의 responseText또는 responseXML속성을 사용한다.
 
 ### 비동기 통신 코드 : 표준, JQuery
 
 ![](../../.gitbook/assets/5%20%2824%29.png)
+
+* 표준 - xhrObject = XMLHttpRequest로 생성한 통신 객체 - xhrObject.open\('Get', url, false \|\| true\)    방식, 요청할 페이지 주소, 비동기 처리 여부 - xhrObject.send\(null\);   전송시작   get방식이라면 null이여도 되지만, post방식일때에는 값이 들어있어야만 한다.    get방식으로는 url에 쿼리스트링으로 값을 넘길 수 있으므로
 
 ## WEB-INF하위 jsp파일 접근 : getServletContext\( \)
 
