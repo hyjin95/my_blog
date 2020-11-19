@@ -38,19 +38,22 @@ description: 2020.11.19 - 67일차
 * 시점의 차이가 있다.
 * false는 모든 정보를 취합해서 한번에 완성된 페이지를 내보내는 것이고, ture일 때는 페이지를 내보내면 해당 부분은 결정된 것이므로 수정이 불가능하다.
 
-## 액션태그, 다이렉티브
+## include : 액션태그, 다이렉티브
 
-### 디렉티브방식
+### include : 디렉티브 \(정적\)
 
 * &lt;%@ page include file="url" %&gt;
 * url에는 jsp또는 Servlet이 올 수 있다. - 하지만 Servlet\(sendRedirect, forward\)는 사용하지 않는다. 문제가 발생 할 수 있다.
 * 소스가 하나로 관리된다. - JS와 CSS - 둘다 정적이므로 하나로 관리한다. 소스 두개로 나눠 관리할 필요가 없다.
 
-### 액션태그 방식
+### include : 액션태그 \(동적\)
 
 * &lt;namespace : Nodename 속성 = 값 /&gt;
 * &lt;jsp:include page="xxx.jsp" flush="false" /&gt; - page에 서블릿은 권장하지 않는다. - flush의 기본값은 false이다.
 * 소스가 두개로 관리되므로 변수의 공유가 불가능하다. - &lt;jsp : param&gt; 액션태그를 사용하면 sub.jsp에서 getParameter함수로 파라미터를 받아올 수 있다.
+* 동적처리가 가능하다. -  매번 메인 페이지가 호출 될때마다. 포함되는 내용을 컴파일 하므로 파라미터가 바뀌는 경우거나,     sub.jsp가 동적처리를 하는 페이지인 경우에 사용된다.
+* sub.jsp가 정적페이지라면 파일의 내용이 그대로 포함된다.
+* sub.jsp가 동적페이지라면 실행 결과를 포함한다.
 
 ### flush
 
