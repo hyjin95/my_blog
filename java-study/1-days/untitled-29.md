@@ -253,7 +253,7 @@ jdbcPoolTest.jsp
 
 ### ajax : 조건
 
-![&#xB124;&#xC774;&#xBC84; &#xC790;&#xC74C; &#xAC80;&#xC0C9; &#xAE30;&#xB2A5;](../../.gitbook/assets/3%20%2841%29.png)
+![&#xB124;&#xC774;&#xBC84; &#xC790;&#xC74C; &#xAC80;&#xC0C9; &#xAE30;&#xB2A5;](../../.gitbook/assets/3%20%2842%29.png)
 
 * 네이버의 검색창을 참고한다.
 * 자음에 해당하는 키보드를 눌렀다 떼면, 그때 조회 결과를 화면에 보여줘야한다.
