@@ -42,6 +42,16 @@ description: 2020.11.19 - 67일차
 * 디바이스가 달라진 자바코드는 기존에 우리가 사용하던 자바코드와는 다르다.
 * 톰캣 서버는 달빅이 아닌 외부 자바에 의해 작동한다.
 
+### 일관성
+
+* JS에서는 해당 태그가 먼저 선언되어야 접근 할 수 있지만, JQuery에서는 이 원칙을 무시하느 경우가 있다. 표준을 어기고 있는 것이다.
+* 일관성이 없는 언어는 안전하지 않기때문에 허용해주더라도 원칙을 지켜서 작성하도록 하자
+* 어느 UI솔루션과 연계하느냐에 따라서 상황이 다르게 적용할 수 있기 때문이다.
+
+### 화면 템플릿을 제공하는 API
+
+* Vue.js
+
 ## include, forward
 
 ### include와 forward의 차이점
@@ -129,7 +139,7 @@ description: 2020.11.19 - 67일차
 
 ## WEB-INF하위 jsp파일 접근 : getServletContext\( \)
 
-### 접근하는 방법
+### 접근법
 
 * WEB-INF 하위의 jsp파일은 url호출이 불가능하다. 하지만 보안문제로 jsp를 WEB-INF에 관리하는 경우가 있다. 이때 어떻게 접근해야 할까?
 * getServletContext\( \)를 사용하면 서블릿에서 접근할 수 있다.
@@ -148,13 +158,40 @@ description: 2020.11.19 - 67일차
 
 ## JSP : 언어별 처리주체와 시점문제
 
-### JAVA코드와 html의 결정 시점
+### JAVA코드와 html의 결정 시점-1
 
 ![](../../../.gitbook/assets/9%20%282%29.png)
 
 * 서버가 자바코드를 처리한 결과는 text/html, text/json, text/xml으로 나온다.
 * mime타입의 main타입이 text이기때문에 html의 태그 사이에서 출력될 수 있는 것이다.
 * 처리 시점은 요청이 들어오면 server를 찾아 서버가 먼저 java코드를 처리한다.  그 결과가 결정되고 나면, 브라우저가 결과를 포함해서 화면에 처리하는 것이다.
+
+### JAVA코드와 html의 결정 시점-2
+
+```markup
+<%@ page language="java" contentType="application/json; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- application/hwp, application/excel 웹에서 볼 수 있는 ppt, excel,...이런것들도 브라우저가 해석해 줄 수 있다. -->
+<%
+	//json포맷 생성하기
+	Gson g  = new Gson();
+	Stirng imsi = g.toJson(주소번지:List<map>, List<VO>);
+	out.print(imsi);
+%>
+<script>
+	var result = JSON.stringify(imsi);
+	var array = JSON.parse(result);
+	var temp = "";
+	for(var i=0;i<array.length;i++){//이렇게 태그안에 나타낼 수 있다.
+		temp = "<b>"+array[i].empno+"</b>";
+		temp = "<td>"+array[i].empno+"</td>";//테이블 영역이라면
+	}
+	$("#d_msg").html(temp);//웹 표현	
+</script>
+<div id="d_msg"></div>
+```
+
+* 이 코드에서 4-9번 라인은 어디에 위치하든, 10-20번 라인을 브라우저가 읽기 전에 서버가 처리해 결정된다.
 
 ### JSP안에 JAVA코드를 작성하는 방법
 
@@ -188,4 +225,30 @@ description: 2020.11.19 - 67일차
 * 자바코드 작성 위치가 1번이냐, 2번이냐에 따라 다를까요?
 * 아니요
 * 어차피 자바코드는 처리주체가 서버이기 때문에 html을 브라우저가 읽기 전에 결정이된다.  따라서 위치에 상관없이 같은 결과가 출력될 것이다.
+
+## ajax : 자동갱신 페이지 준비 - naver 뉴스
+
+### 키워드
+
+* &lt;div&gt;, JSON, JSP\(view\), JS, CSS
+
+### table
+
+* NEWS 테이블
+* 컬럼 : PK, 제목, 기사내용, 기자, 날짜
+
+### 화면 정의서
+
+![&#xD654;&#xBA74; &#xC815;&#xC758;&#xC11C;](../../../.gitbook/assets/.png%20%2822%29.png)
+
+1. top - include를 사용해 화면 템플릿으로 구성한다.
+2. main : body - 페이지
+3. main : menu - 메뉴 배치 - 메뉴 컨텐츠 표현
+4. bottom - include를 사용해 화면 템플릿으로 구성한다. - 회사정보
+
+### Q. include를 액션태그, 디렉티브 중 어느것으로 구현해야 할까?
+
+* 액션태그가 아닐까..?
+
+후기 : 비가온다 주룩주룩!! 오늘 상담을 했다. 그리고 내일은 비대면 수업인데.. 집에서 집중 잘 할 수 있길!
 

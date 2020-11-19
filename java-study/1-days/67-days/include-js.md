@@ -4,7 +4,7 @@
 
 ### 화면 
 
-![](../../../.gitbook/assets/3%20%2841%29.png)
+![](../../../.gitbook/assets/3%20%2842%29.png)
 
 * jquery와 easyui에 대한 import페이지를 정상적으로 불러왔음을 확인 할 수 있다.
 * 화면 우클릭 - 페이지 소스보기를 하면 해당 코드들이 모두 들어와 있음을 확인 할 수 있다.
@@ -13,7 +13,7 @@
 
 ![&#xACBD;&#xB85C;](../../../.gitbook/assets/1%20%2869%29.png)
 
-![step1.jsp &#xBA54;&#xBAA8;&#xC7A5;](../../../.gitbook/assets/2%20%2853%29.png)
+![step1.jsp &#xBA54;&#xBAA8;&#xC7A5;](../../../.gitbook/assets/2%20%2854%29.png)
 
 * 외부에 작성된 코드가 들어와있는 것을 확인할 수 있다.
 

@@ -112,7 +112,7 @@ description: 2020.11.18 - 66일차
 
 ### eclipse사용시 : 커넥션 풀 사용 준비
 
-![connection pool&#xAD00;&#xB828; jar&#xD30C;&#xC77C;](../../.gitbook/assets/2%20%2852%29.png)
+![connection pool&#xAD00;&#xB828; jar&#xD30C;&#xC77C;](../../.gitbook/assets/2%20%2853%29.png)
 
 1. 필요한 jar파일을 프로젝트 WEB\_INF에 배포한다. - [http://commons.apache.org/proper/commons-dbcp/download\_dbcp.cgi](http://commons.apache.org/proper/commons-dbcp/download_dbcp.cgi)
 2. 프로젝트에 해당 jar파일을 build Path에 추가한다.
@@ -253,7 +253,7 @@ jdbcPoolTest.jsp
 
 ### ajax : 조건
 
-![&#xB124;&#xC774;&#xBC84; &#xC790;&#xC74C; &#xAC80;&#xC0C9; &#xAE30;&#xB2A5;](../../.gitbook/assets/3%20%2842%29.png)
+![&#xB124;&#xC774;&#xBC84; &#xC790;&#xC74C; &#xAC80;&#xC0C9; &#xAE30;&#xB2A5;](../../.gitbook/assets/3%20%2843%29.png)
 
 * 네이버의 검색창을 참고한다.
 * 자음에 해당하는 키보드를 눌렀다 떼면, 그때 조회 결과를 화면에 보여줘야한다.
