@@ -44,6 +44,21 @@ description: 2020.11.19 - 67일차
 
 ### 일관성
 
+```markup
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+			 url:"innerStep1.jsp?mem_id=apple&mem_pw=123"//쿼리스트링에 띄어쓰기가들어가면 아스키코드로 잡히기때문에 주의한다.
+			,success:function(data){
+				//=document.getElementById("#d_result").innerText(data); --표준
+				//$("#d_result").text(data);//JQuery
+				$("#d_result").html(data);//JQuery
+			}
+		});
+	});
+</script>
+```
+
 * JS에서는 해당 태그가 먼저 선언되어야 접근 할 수 있지만, JQuery에서는 이 원칙을 무시하느 경우가 있다. 표준을 어기고 있는 것이다.
 * 일관성이 없는 언어는 안전하지 않기때문에 허용해주더라도 원칙을 지켜서 작성하도록 하자
 * 어느 UI솔루션과 연계하느냐에 따라서 상황이 다르게 적용할 수 있기 때문이다.
