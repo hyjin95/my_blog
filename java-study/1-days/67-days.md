@@ -143,8 +143,11 @@ description: 2020.11.19 - 67일차
 ### 표준 : 서버 응답 - List, Map, JSON, XML
 
 * 표준에서, 서버의 응답은 XMLHttpRequest객체의 responseText또는 responseXML속성을 사용한다.
-* 응답 data는 XML이거나 Text이다.
-* List나 Map은 html태그안에서 data로서의 역할을 수행할 수 없기때문에 JSON이라는 dataSet이 필요한 것인데, html에서 JS가 가져온 JSON data는 Object이기때문에 Stringify로 String으로, JSON.parse로 다시 JSON형태로 바꿔 출력하면, 서버가 이를 text형태로 결정한다.
+* 응답 data의 타입은 XML이거나 Text이다.
+* List나 Map은 html태그안에서 data로서의 역할을 수행할 수 없기때문에 JSON이라는 dataSet이 필요한 것인데, 서버가 이를 text형태로 결정하면, 브라우저가 html코드를 해석한다. 
+
+   html에서 JS가 가져온 JSON data는 Object이기때문에 Stringify로 String으로, JSON.parse로 다시 JSON형태로 바꿔 출력한다.
+
 * 결정된 text를 포함해 브라우저가 화면을 읽어 보여주는 것이다.
 
 ### 비동기 통신 코드 : 표준, JQuery
