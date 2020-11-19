@@ -228,8 +228,8 @@ jdbcPoolTest.jsp
 ### include : flush
 
 * include에서는 flush의 기본값은 false이다.
-* true라면 - include구문을 만났을 때, 여태까지 처리된 main.jsp의 내용을 버퍼에서 클라이언트에게 내보내기\(버퍼 비우기\)하고, 다시 include로 이동된 페이지 sub.jsp의 내용을 담는다.
-* false라면 - include구문을 만났을 때, 여태까지 처리된 main.jsp의 내용을 가지고 있다가 include로 이동된 페이지 sub.jsp의 내용의 결과까지 담기면 한번에 클라이언트에게 내보낸다.\(버퍼 비우기\)
+* **true**라면 - include구문을 만났을 때, 여태까지 처리된 main.jsp의 내용을 버퍼에서 클라이언트에게 내보내기\(버퍼 비우기\)하고, 다시 include로 이동된 페이지 sub.jsp의 내용을 담는다. - 일단 출력 버퍼의 내용을 웹 브라우저에 전송하게 되는데 이때 헤더 정보도 같이 전송된다.    일단 정보가 웹 브라우저에 전송이 되고 나면 해당부분에  정보를 추가해도 결과가 반영되지 않는다.
+* **false**라면 - include구문을 만났을 때, 여태까지 처리된 main.jsp의 내용을 가지고 있다가 include로 이동된 페이지 sub.jsp의 내용의 결과까지 담기면 한번에 클라이언트에게 내보낸다.\(버퍼 비우기\)
 * include의 경우라면 false를 많이 사용할 것이다. - 어차피 main.jsp페이지 안에 sub.jsp의 내용을 포함해서 내보내는 것이 목적이므로
 
 ### RequestDispatcher : include, forward
