@@ -2,7 +2,7 @@
 description: 2020.11.20 - 68일차
 ---
 
-# 68 Days -
+# 68 Days - News : 순서도, 화면정의서, 작업지시서, 테이블생성, 자동갱신-Interval\( \), postion속성, 로그인UI
 
 ### 사용 프로그램
 
@@ -121,7 +121,7 @@ CREATE UNIQUE INDEX SCOTT.NEWS_NO_PK ON SCOTT.NEWS
 
 ### 시퀀스 생성하기 : PK, 뉴스번호
 
-![](../../../.gitbook/assets/.png%20%2825%29.png)
+![](../../../.gitbook/assets/.png%20%2826%29.png)
 
 * 시퀀스는 메뉴 중에 스키마 브라우저 항목에서 생성할 수 있다.
 * Next Value : 몇개씩 숫자를 올릴 것인지
@@ -220,4 +220,57 @@ insert into news values(seq_news_no.nextval, '제목', '기사내용'
 * stop함수를 호출하면, 진행되던 watch가 10후에 중지된다,
 
 ### sample코드 : 뉴스 목록 자동갱신
+
+{% page-ref page="sample.md" %}
+
+## 코드 : UI 로그인구역
+
+### UI
+
+![](../../../.gitbook/assets/.png%20%2825%29.png)
+
+* 이렇게 UI를 구현해보자
+* index.jsp에 include되어 있는 menu.jsp에서 작성한다.
+
+### 코드
+
+```markup
+<!-- 로그인 화면 시작 -->      
+<tr>
+   <td width="190px" height="75px" align="left">
+      <div id="d_login">   
+         <table border="0">
+            <tr>
+               <td><input id="tb_id" class="easyui-textbox" 
+                          data-options="iconCls:'icon-man', prompt:'아이디'" 
+                          style="width:130px"></td>
+               <td rowspan="2"><input id="btn_login" type="button" value="로그인"></td>
+            </tr>
+            <tr>
+               <td><input id="tb_pw" class="easyui-textbox" 
+                          data-options="iconCls:'icon-lock', prompt:'비밀번호'" 
+                          style="width:130px"></td>
+            </tr>
+         </table>
+         <table border="0">
+            <tr>
+               <td><%="이순신"%>님 환영합니다.
+               <input id="btn_logout" type="button" value="로그아웃"></td>
+            </tr>
+            <tr>
+               <td align="center"><a href="#">회원정보 수정</a></td>
+            </tr>
+         </table>
+      </div>
+   </td>
+</tr>
+<!-- 로그인 화면 종료 -->   
+```
+
+* easyUI의 textbox API를 활용했다.
+* 로그인 버튼은 rowspan=2를 사용해 테이블 row를 병합한다.
+* 20번은 이름이 사용자에 따라 달라야하므로 자바 변수를 사용하기위해 익스프레션을 사용한다.
+* 회원정보 수정 은 클릭시 수정화면으로 이동해야한다.
+
+후기 : 집에서 수업을 들으니 편하기는 한데 긴장감이 부족해 집중력이 떨어지는 것 같다. 집에서도 집중할 수 있는 좋은 방법이 있을까?
 
