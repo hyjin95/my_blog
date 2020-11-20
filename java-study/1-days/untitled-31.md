@@ -46,7 +46,7 @@ description: 2020.11.20 - 68일차
 * 뉴스 정보 수정
 * 뉴스 삭제
 
-### 개발패턴, sql 작성 : 등록, 조
+### 개발패턴, sql 작성 : 등록, 조회
 
 ![](../../.gitbook/assets/sql.png)
 
@@ -85,6 +85,61 @@ description: 2020.11.20 - 68일차
 * 다시 Dao에서 myBatis를 사용해 select결과로 List를 반환해주면, 
 * Servlet은 forward함수를 사용해 요청 data를 유지하고, jsp는 그 값을 받아 응답화면을 출력한다.
 
+## 뉴스 : 테이블생성 - Toad
+
+### 테이블 생성 : Toad
+
+```sql
+create table news
+(
+n_no number(5) constraints news_no_pk primary key 
+,n_title varchar2(100) not null
+,n_content varchar2(4000)
+,n_date varchar2(30)
+,n_writer varchar2(30)
+)
+```
+
+* 어떤 항목들을 다룰 것인지, 컬럼명, 타입, 크기, PK등을 고려해 테이블을 생성한다.
+
+### 테이블 script확인
+
+```sql
+DROP TABLE SCOTT.NEWS CASCADE CONSTRAINTS;
+```
+
+* 생성된 테이블의 script에 들어가보면 이런 제약조건이 자동 생성되어 있음을 볼 수 있다.
+* 테이블 드랍\(삭제\)에 관한 제약 조건인데, CASCADE옵션은 테이블 삭제시 포링키로 물려 있는 다른 테이블까지도 삭제해버리는 옵션이므로 주의하자.
+
+```sql
+CREATE UNIQUE INDEX SCOTT.NEWS_NO_PK ON SCOTT.NEWS
+(N_NO)
+```
+
+* 또 밑에 보면 index도 자동 생성된 것을 볼 수 있다.
+* PK는 자동적으로 index를 갖게된다.
+
+### 시퀀스 생성하기 : PK, 뉴스번호
+
+![](../../.gitbook/assets/.png%20%2825%29.png)
+
+* 시퀀스는 메뉴 중에 스키마 브라우저 항목에서 생성할 수 있다.
+* Next Value : 몇개씩 숫자를 올릴 것인지
+* Min Value : 시작 값, 최소값
+* Max Value : 최대 값
+
+### row 추가하기
+
+```sql
+insert into news values(seq_news_no.nextval, '제목', '기사내용'
+                                ,to_char(sysdate,'YYYY-MM-DD'), '기자이름')
+```
+
+* 테이블에 data를 추가할때에는 관계형DB인 오라클의 경우에는 특히 스키마를 맞춰야한다.
+* not null인 컬럼data는 비어있으면 안되고, 컬럼의 타입과 data의 타입도 맞아야 한다.
+* 추가 SQL : INSERT INTO 테이블이름 VALUES\('값', '값', ...\)
+* 여기서 확인할 것은, 우리가 PK로 사용할 뉴스 번호는 시퀀스를 사용한다는 것이다. 생성한 시퀀스 이름.nextval 시퀀스 다음 번호를 data로 넣는다.
+
 ## 뉴스 : 코드
 
 ### 코드 작성시
@@ -100,6 +155,10 @@ description: 2020.11.20 - 68일차
 * 파라미터로 조건을 구분하면 된다. - 전체조회는 0과같은 의미없는 값을 파라미터로 넘겨 전체 select하게 하고, - 상세조회는 화면에서 사용자로부터 입력받은 조건값을 파라미터로 넘겨 조건 select하게 한다.
 * FrontController.java\(Servlet\) - getNewsList\( \), getNewsDetail\( \)
 * NewsLogic - geNewsList\( \)
+
+## 코드 : 자동갱신 - position속성, Interval함수
+
+### &lt;head&gt;
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -122,6 +181,14 @@ description: 2020.11.20 - 68일차
 	}
 </script>
 </head>
+```
+
+* 뉴스목록이 자동으로 갱신될때마다 자동으로 html의 지정된 &lt;div&gt;태그의 위치에 목록이 들어오려면 좌표가 필요하다.
+* CSS에서 좌표값으로 접근할 수 있게 해주는 속성을 지원한다. - position: absolute
+
+### &lt;body&gt;
+
+```markup
 <body>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -143,4 +210,9 @@ description: 2020.11.20 - 68일차
 </body>
 </html>
 ```
+
+* 목록을 지정시간마다 자동 갱신되도록 하는 함수와 타임라인이 필요하다.
+* setInterval\( , \)함수를 사용한다. - 첫번쨰 파라미터 : 시간정보가 될때마다 호출할 콜백메서드 이름 - 두번째 파라미터 : 메서드를 호출할 시간정보, 단위는 ms
+* 무한루프를 방지하기위해 start와 stop함수를 둘다 정의한다.
+* setTimeout\( \)함
 
