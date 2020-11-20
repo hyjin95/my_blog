@@ -51,6 +51,8 @@ description: 2020.11.20 - 68일차
 ![](../../.gitbook/assets/sql.png)
 
 * 코드를 작성하기 전에 내가 처리할 업무에대한 설계와 sql문을 미리 작성해본다.
+* 뉴스등록 업무의 개발패턴은 JSP - Action - Action - JSP로 이뤄진다. - jsp에서 url로 서블릿에게 요청하고,  서블릿에서 insert 결과가 1이 나오면 sendRedirect로 서블릿에게 조회를 요청하고,  서블릿에서 select 결과인 list를 req에 담아 forward로 응답 JSP가 응답화면을 그린다.
+* 뉴스 조회같은 sql문에는 where절에 조건으로 무엇을 사용할 것인지에 대해서도 생각해봐야한다.
 
 ### 전체 흐름 순서도
 
@@ -78,6 +80,10 @@ description: 2020.11.20 - 68일차
 
 * 사용자로부터 입력받은 값은 쿼리스트링으로 서블릿에 요청을 보낸다.
 * 서블릿에서 요청을 구분해 필요한 자바 Logic클래스를 호출한다.
+* Dao에서 myBatis를 사용해 sql문을 DB에 요청하고, DB에서 insert문 결과로 0, 1을 내보낸다.
+* 성공시 sendRedirect로 서블릿에게 조회를 요청한다.
+* 다시 Dao에서 myBatis를 사용해 select결과로 List를 반환해주면, 
+* Servlet은 forward함수를 사용해 요청 data를 유지하고, jsp는 그 값을 받아 응답화면을 출력한다.
 
 ## 뉴스 : 코드
 
