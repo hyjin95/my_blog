@@ -53,3 +53,5 @@ description: 2020.11.20 - 68일차
 * FrontController.java\(Servlet\) - getNewsList\( \), getNewsDetail\( \)
 * NewsLogic - geNewsList\( \)
 
+## 뉴스 : 흐름, 순서도, 메서드정의
+
