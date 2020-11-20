@@ -38,6 +38,7 @@ description: 2020.11.20 - 68일차
 * forward와 sendRedirect를 상황에 맞게 사용한다.
 * JDBC와 MyBatis를 활용해 DB연동을 구현해본다.
 * UI는 include를 활용해 모듈화한다.
+* UID는 트랜잭션 처리한다.
 
 ### 기능
 
