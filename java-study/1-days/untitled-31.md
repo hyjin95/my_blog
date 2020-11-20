@@ -158,35 +158,22 @@ insert into news values(seq_news_no.nextval, '제목', '기사내용'
 
 ## 코드 : 자동갱신 - position속성, Interval함수
 
-### &lt;head&gt;
+### CSS : position속성과 absolute
 
 ```markup
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
 <head>
-<meta charset="UTF-8">
-<title>자동 갱신 처리 - 샘플화면</title>
-<%@ include file="/common/easyUI_common.jsp" %>
-<!-- 좌표값으로 접근하기 위한 CSS 속성 position: absolute -->
 <style type="text/css">
 	div #d_news{
 		position: absolute;
 	}
 </style>
-<script type="text/javascript">
-	function autoReload(){
-		alert("autoReload 호출");
-	}
-</script>
 </head>
 ```
 
 * 뉴스목록이 자동으로 갱신될때마다 자동으로 html의 지정된 &lt;div&gt;태그의 위치에 목록이 들어오려면 좌표가 필요하다.
 * CSS에서 좌표값으로 접근할 수 있게 해주는 속성을 지원한다. - position: absolute
 
-### &lt;body&gt;
+### setInterval\( , \)
 
 ```markup
 <body>
@@ -195,6 +182,23 @@ insert into news values(seq_news_no.nextval, '제목', '기사내용'
 		function start(){
 			watch = setInterval(autoReload, 3000)//함수이름, 시간정보ms(3초)
 		}
+		start();
+	});
+</script>
+</body>
+```
+
+* **setInterval\(, \)** : 일정 시간 간격으로 함수를 실행하는 함수
+* 첫번쨰 파라미터 : 시간정보가 될때마다 호출할 콜백메서드 이름
+* 두번째 파라미터 : 메서드를 호출할 시간정보, 단위는 ms
+* 3초마다 autoReload라는 함수를 실행한다.
+
+### setTimeout\( , \), clearInterval
+
+```markup
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
 		function stop(){
 			setTimeout(function(){
 				clearInterval(watch);
@@ -204,15 +208,14 @@ insert into news values(seq_news_no.nextval, '제목', '기사내용'
 		stop();//stop을 호출하지않으면 무한루프
 	});
 </script>
-<h3>자동 갱신 페이지 구현</h3>
-<!-- 뉴스 목록이 출력될 위치 (좌표값을 이용해 원하는 위치에 작업한다.-CSS) -->
-<div id = "d_news" width="250px" height="50px"></div>
 </body>
-</html>
 ```
 
-* 목록을 지정시간마다 자동 갱신되도록 하는 함수와 타임라인이 필요하다.
-* setInterval\( , \)함수를 사용한다. - 첫번쨰 파라미터 : 시간정보가 될때마다 호출할 콜백메서드 이름 - 두번째 파라미터 : 메서드를 호출할 시간정보, 단위는 ms
-* 무한루프를 방지하기위해 start와 stop함수를 둘다 정의한다.
-* setTimeout\( \)함
+* 무한루프를 방지하기위해  stop함수도 있어야한다.
+* **setTimeout\( , \)** : 일정 시간이 지난 후에 함수를 한번만 실행하는 함수
+* 첫번쨰 파라미터 : 시간정보가 될때마다 호출할 콜백메서드 이름 - 여기서는 함수안에 함수를 정의했다. 함수이름을 넣거나, 함수를 구현하거나
+* 두번째 파라미터 : 함수를 실행할 시간정보, 단위는 ms
+* **clearInterval\( \)** : 진행중인 함수를 멈추는 함수
+* 파라미터 : 멈출 함수이름
+* stop함수를 호출하면, 진행되던 watch가 10후에 중지된다,
 
