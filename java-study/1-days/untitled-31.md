@@ -55,3 +55,46 @@ description: 2020.11.20 - 68일차
 * FrontController.java\(Servlet\) - getNewsList\( \), getNewsDetail\( \)
 * NewsLogic - geNewsList\( \)
 
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자동 갱신 처리 - 샘플화면</title>
+<%@ include file="/common/easyUI_common.jsp" %>
+<!-- 좌표값으로 접근하기 위한 CSS 속성 position: absolute -->
+<style type="text/css">
+	div #d_news{
+		position: absolute;
+	}
+</style>
+<script type="text/javascript">
+	function autoReload(){
+		alert("autoReload 호출");
+	}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		function start(){
+			watch = setInterval(autoReload, 3000)//함수이름, 시간정보ms(3초)
+		}
+		function stop(){
+			setTimeout(function(){
+				clearInterval(watch);
+			}, 10000);
+		}
+		start();
+		stop();//stop을 호출하지않으면 무한루프
+	});
+</script>
+<h3>자동 갱신 페이지 구현</h3>
+<!-- 뉴스 목록이 출력될 위치 (좌표값을 이용해 원하는 위치에 작업한다.-CSS) -->
+<div id = "d_news" width="250px" height="50px"></div>
+</body>
+</html>
+```
+
