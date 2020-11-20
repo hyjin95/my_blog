@@ -48,7 +48,7 @@ description: 2020.11.20 - 68일차
 
 ### 개발패턴, sql 작성 : 등록, 조회
 
-![](../../.gitbook/assets/sql.png)
+![](../../../.gitbook/assets/sql.png)
 
 * 코드를 작성하기 전에 내가 처리할 업무에대한 설계와 sql문을 미리 작성해본다.
 * 뉴스등록 업무의 개발패턴은 JSP - Action - Action - JSP로 이뤄진다. - jsp에서 url로 서블릿에게 요청하고,  서블릿에서 insert 결과가 1이 나오면 sendRedirect로 서블릿에게 조회를 요청하고,  서블릿에서 select 결과인 list를 req에 담아 forward로 응답 JSP가 응답화면을 그린다.
@@ -56,7 +56,7 @@ description: 2020.11.20 - 68일차
 
 ### 전체 흐름 순서도
 
-![](../../.gitbook/assets/1%20%2873%29.png)
+![](../../../.gitbook/assets/1%20%2873%29.png)
 
 * 수많은 요청중에서 .kos로 끝나는 모든 요청들은 서버가 인터셉트해 서블릿을 실행시킨다.
 * 이 여러 요청들을 서블릿에서 if문을 사용해 구분한다. 업무가 다양할수록 if문이 길어진다. 공통코드를 빼서 인터페이스로 구현할 수 없을까?
@@ -65,7 +65,7 @@ description: 2020.11.20 - 68일차
 
 ### 클래스, 메서드 정의서, 요청url
 
-![](../../.gitbook/assets/.png%20%2823%29.png)
+![](../../../.gitbook/assets/.png%20%2823%29.png)
 
 * Java에서 구현해야하는 클래스를 정의한다.
 * 여기서 봐야하는 것은 Logic에서 forward를 사용하는 메서드는 select를 하는 메서드들이고, sendRedirect를 사용하는 메서드들은 테이블에 변화를 일으키는 역할이라는 것이다.
@@ -76,7 +76,7 @@ description: 2020.11.20 - 68일차
 
 ### 상세 순서도 : 등록
 
-![](../../.gitbook/assets/2%20%2855%29.png)
+![](../../../.gitbook/assets/2%20%2856%29.png)
 
 * 사용자로부터 입력받은 값은 쿼리스트링으로 서블릿에 요청을 보낸다.
 * 서블릿에서 요청을 구분해 필요한 자바 Logic클래스를 호출한다.
@@ -121,7 +121,7 @@ CREATE UNIQUE INDEX SCOTT.NEWS_NO_PK ON SCOTT.NEWS
 
 ### 시퀀스 생성하기 : PK, 뉴스번호
 
-![](../../.gitbook/assets/.png%20%2825%29.png)
+![](../../../.gitbook/assets/.png%20%2825%29.png)
 
 * 시퀀스는 메뉴 중에 스키마 브라우저 항목에서 생성할 수 있다.
 * Next Value : 몇개씩 숫자를 올릴 것인지
@@ -218,4 +218,6 @@ insert into news values(seq_news_no.nextval, '제목', '기사내용'
 * **clearInterval\( \)** : 진행중인 함수를 멈추는 함수
 * 파라미터 : 멈출 함수이름
 * stop함수를 호출하면, 진행되던 watch가 10후에 중지된다,
+
+### sample코드 : 뉴스 목록 자동갱신
 
