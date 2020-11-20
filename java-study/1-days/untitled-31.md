@@ -41,4 +41,6 @@ description: 2020.11.20 - 68일차
 * A. 목적에 따라 다르다. - 관리 : 나눠야한다. - 코드 경량 : 합친다.
 * Servlet에서 받은 요청은 분리하고, Logic클래스에서는 동일한 메서드를 호출하자.
 * 파라미터로 조건을 구분하면 된다. - 전체조회는 0과같은 의미없는 값을 파라미터로 넘겨 전체 select하게 하고, - 상세조회는 화면에서 사용자로부터 입력받은 조건값을 파라미터로 넘겨 조건 select하게 한다.
+* FrontController.java\(Servlet\) - getNewsList\( \), getNewsDetail\( \)
+* NewsLogic - geNewsList\( \)
 
