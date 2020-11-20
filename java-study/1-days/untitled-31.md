@@ -26,7 +26,7 @@ description: 2020.11.20 - 68일차
 3. Action - JSP
 4. Action - JSP - Action - JSP
 
-## 
+## 뉴스
 
 ### 기능
 
