@@ -244,6 +244,6 @@
     * [include : 디렉티브로 JS 가져오기 구현](java-study/1-days/67-days/include-js.md)
     * [WEB-INF하위 jsp파일 접근 : getServletContext\( \)](java-study/1-days/67-days/web-inf-jsp-getservletcontext.md)
     * [비동기 통신 : test](java-study/1-days/67-days/test.md)
-  * [Untitled](java-study/1-days/untitled-31.md)
+  * [68 Days -](java-study/1-days/untitled-31.md)
   * [Untitled](java-study/1-days/untitled-28.md)
 
