@@ -248,6 +248,7 @@
     * [sample코드 : 뉴스 목록 자동갱신](java-study/1-days/untitled-31/sample.md)
   * [69 Days -](java-study/1-days/untitled-28/README.md)
     * [cookie Test](java-study/1-days/untitled-28/cookie-test.md)
+    * [로그인 프로시저 구현 : 비동기통신](java-study/1-days/untitled-28/undefined.md)
   * [Untitled](java-study/1-days/untitled-32.md)
   * [Untitled](java-study/1-days/untitled-30.md)
 
