@@ -180,7 +180,7 @@ $.cookie('c_id', 'test', {expires:1, path:' ', domain: ' ', secure: true|false})
 
 * 'c\_id'라는 이름으로 test를 cookie에 저장한다.
 * expires: 숫자 - 시간, 얼마동안 유지될 것인지
-* path: ' ' - 유지 경로, 해당 경로 내에서는 cookie가 유지된다.
+* path: ' ' - 유지 경로, 해당 경로 내에서는 cookie가 유지된다. - cookie삭제시에도 주의해야한다. 같은 루트의 cookie를 다 지울 수 도 있으므로
 * domain: ' ' - 어디서 생성된 쿠키인지 알려주는 주소
 * secure: true\|false - true라면 https에서만 사용가능한 쿠키 - 정부기관에 시고되어 정부가 인증서를 부여해준 자 만 이용 가능한 프로토콜
 
@@ -190,4 +190,8 @@ $.cookie('c_id', 'test', {expires:1, path:' ', domain: ' ', secure: true|false})
 * session - 서버의 cash메모리에 저장된다. - 한번에 하나만 담을 수 있다.  - FIFO
 
 ### cookie Test
+
+{% page-ref page="cookie-test.md" %}
+
+후기 : 으 영하2도 넘모 추워...내일부터는 지하철이 10시 이후로는 감축 운행한다. 집에 일찍가야지...그러려면 수업시간에 더 집중해서 정리를 해야한다 화이팅!!!
 
