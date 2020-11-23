@@ -246,5 +246,6 @@
     * [비동기 통신 : test](java-study/1-days/67-days/test.md)
   * [68 Days - News : 순서도, 화면정의서, 작업지시서, 테이블생성, 자동갱신-Interval\( \), postion속성, 로그인UI](java-study/1-days/untitled-31/README.md)
     * [sample코드 : 뉴스 목록 자동갱신](java-study/1-days/untitled-31/sample.md)
-  * [Untitled](java-study/1-days/untitled-28.md)
+  * [69 Days -](java-study/1-days/untitled-28.md)
+  * [Untitled](java-study/1-days/untitled-30.md)
 
