@@ -28,5 +28,10 @@ description: 2020.11.24 - 70일차
 
 ## 로그인 : session과 cookie
 
+### 서버의 사용자 식별
+
+* 서버가 사용자마다 session id를 부여해 식별한다.
+* 클라이언트는 cookie안에 session id를 내려받아 text로 갖는다.
+
 ## 로그아웃 구현
 
