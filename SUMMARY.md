@@ -246,7 +246,7 @@
     * [비동기 통신 : test](java-study/1-days/67-days/test.md)
   * [68 Days - News : 순서도, 화면정의서, 작업지시서, 테이블생성, 자동갱신-Interval\( \), postion속성, 로그인UI](java-study/1-days/untitled-31/README.md)
     * [sample코드 : 뉴스 목록 자동갱신](java-study/1-days/untitled-31/sample.md)
-  * [69 Days -](java-study/1-days/untitled-28/README.md)
+  * [69 Days - 로그인:설계,프로시저, 비동기통신, MyBatis, cookie](java-study/1-days/untitled-28/README.md)
     * [cookie Test](java-study/1-days/untitled-28/cookie-test.md)
     * [로그인 프로시저 구현 : 비동기통신](java-study/1-days/untitled-28/undefined.md)
   * [Untitled](java-study/1-days/untitled-32.md)

@@ -2,7 +2,7 @@
 description: 2020.11.23 - 69일차
 ---
 
-# 69 Days -
+# 69 Days - 로그인:설계,프로시저, 비동기통신, MyBatis, cookie
 
 ### 사용 프로그램
 
