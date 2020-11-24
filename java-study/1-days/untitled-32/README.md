@@ -88,5 +88,64 @@ description: 2020.11.24 - 70일차
 * cookie를 삭제한다.
 * show\( \), hide\( \)함수를 사용한다. - 로그인 화면, 로그인 성공 화면을 구현한다. - 로그인 시 성공하면 로그인 화면을 hide, 성공 화면을 show - 로그아웃 시 로그인 화면을 show, 성공 화면을 hide한다.
 
+## easyUI API
+
+### tree : 화면
+
+![easyui-tree](../../../.gitbook/assets/tree.png)
+
+### tree : 코드
+
+```markup
+<!---------------- [[ 메뉴트리 영역 ]] -------------------->
+			<ul id="tre_movie" class="easyui-tree">
+				 <li data-options="state:'closed'">
+                 	<span>회원관리</span>
+                 		<ul>
+                            <li>
+                                <span>회원가입</span>
+                            </li>
+                            <li>
+                                <span>회원목록</span>
+                            </li>
+                            <li>
+                                <span>회원탈퇴</span>
+                            </li>
+                        </ul>
+                 </li>
+				 <li data-options="state:'closed'">
+                 	<span>예매관리</span>
+                 </li>
+				 <li data-options="state:'closed'">
+                 	<span>영화관리</span>
+                 </li>
+			</ul>
+		<!---------------- [[ 메뉴트리 영역 ]] -------------------->
+```
+
+### maskedbox : 화면
+
+![easyui - maskedbox](../../../.gitbook/assets/maskbox.png)
+
+### maskedbox : 코드
+
+```markup
+    <div data-options="region:'center',title:'영화예매 시스템'" style="padding:5px;background:#eee;">
+    	<div style="margin:4px 0;"></div>
+    	<!-- 시스템 메뉴 단계 시작 -->
+		Home > 회원관리 > 회원목록
+		<hr>
+		<!------------------- [[ 콘텐츠 추가  ]] ------------------->
+		<!------------------- [[ 조건검색 추가  ]] ------------------->
+		<label>이름 : </label>
+		<input id="sb_name" class="easyui-searchbox"/>
+		<label>연락처 : </label>
+		<input class="easyui-maskedbox" mask="999 - 999 - 9999" style="width:140px"/>
+		<label>생년월일 : </label>
+		<input id="db_birth" class="easyui-datedbox" style="width:140px"/>	
+```
+
+### 
+
 ### 
 
