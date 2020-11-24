@@ -2,7 +2,7 @@
 description: 2020.11.24 - 70일차
 ---
 
-# 70 Days -
+# 70 Days - 로그인, 로그아웃 : cookie\(JS\), session, hode, show, easyUI : tree, maskedbox
 
 ### 사용 프로그램
 
