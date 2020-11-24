@@ -51,6 +51,11 @@ description: 2020.11.24 - 70일차
 * 캐시메모리는 공간이 작기때문에 저장할 수 있는 정보가 한정적이다. - FIFO, 휘발성 
 * 서버에서 관리해 보안이 엄격해 접근하기 어렵다.
 
+### Session 삭제 : 로그아웃
+
+* 전체 삭제 : session.invalidate\( \);
+* 부분 삭제 : session.removeAttribute\('이름'\)
+
 ### Cookie
 
 ![cookie : &#xAC1C;&#xBC1C;&#xC790; &#xB3C4;&#xAD6C;&#xC5D0;&#xC11C; &#xD655;&#xC778;](../../../.gitbook/assets/.png%20%2827%29.png)
@@ -78,10 +83,10 @@ description: 2020.11.24 - 70일차
 
 {% page-ref page="js-cookie.md" %}
 
-## 로그아웃 구현
+### 로그아웃 구현
 
-### Session 삭제
+* cookie를 삭제한다.
+* show\( \), hide\( \)함수를 사용한다. - 로그인 화면, 로그인 성공 화면을 구현한다. - 로그인 시 성공하면 로그인 화면을 hide, 성공 화면을 show - 로그아웃 시 로그인 화면을 show, 성공 화면을 hide한다.
 
-* 전체 삭제 : session.invalidate\( \);
-* 부분 삭제 : session.removeAttribute\('이름'\)
+### 
 
