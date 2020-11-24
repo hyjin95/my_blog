@@ -147,7 +147,7 @@ public class FrontController extends HttpServlet {
 
 ## 코드 : java
 
-### MemberLogic.java
+### MemberLogic : 트랜잭션
 
 ```java
 package com.ajax.member;
@@ -192,7 +192,7 @@ public class MemberLogic {
 }
 ```
 
-### SqlMemberDao.java
+### SqlMemberDao : 프로시저호출
 
 ```java
 package com.ajax.member;
