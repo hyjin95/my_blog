@@ -287,7 +287,9 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 
 * doService\( \)메서드는 표준 서블릿에서 제공되는 서블릿이 아니다.
 * @Override라는 어노테이션은 사용할 수 없다. - 어노테이션도 컴파일 대상이기때문에 문법오류가 발생한다.
-* 그렇다면 파라미터의 req, res는 어떻게 사용할 수 있는 것일까? - doGet, doPost로부터 받는다.
+* 그렇다면 파라미터의 req, res는 누구로부터 주입받아 사용할 수 있는 것일까? - doGet, doPost로부터 받는다.
+
+### 서블릿의 req,res - methodA\( \)
 
 ```java
 public class FrontMVC1 extends HttpServlet {
