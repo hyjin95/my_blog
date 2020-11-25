@@ -100,7 +100,31 @@ public interface Action {
 * web.xml - url : \*.test
 * 페이지 이동에 대한 코드를 작성한다.
 
-### FrontMVC1.java : 
+### doService\(HttpServlet req, HttpServlet res\)
+
+* doService\( \)메서드는 표준 서블릿에서 제공되는 서블릿이 아니다.
+* @Override라는 어노테이션은 사용할 수 없다. - 어노테이션도 컴파일 대상이기때문에 문법오류가 발생한다.
+* 그렇다면 파라미터의 req, res는 누구로부터 주입받아 사용할 수 있는 것일까? - doGet, doPost로부터 받는다.
+
+### 서블릿의 req,res - methodA\( \)
+
+```java
+public class FrontMVC1 extends HttpServlet {
+			public void methodA(HttpServletRequest req, HttpServletResponse res) 
+						throws ServletException, IOException{
+
+					res.sendRedirect("/index.jsp");//NullPointerException
+				}
+	}
+```
+
+* 메서드의 앞에는 소유주가 위치한다. - 소유주.메서드\( \);
+* 파라미터 안에 선언된 변수는 메서드 내부에서 초기화 하지않거나 외부에서 주입되지 않으면 null이다.
+* 위 메서드는 표준서블릿에서 Override하여 재정의한 메서드가 아니므로 서버에게서 객체를 주입받을 수 없다.
+* res객체를 주입받지 못하는 메서드이므로 문법오류는 발생하지 않지만 NullPointerExceoption이 발생한다.
+* 선언된 지역변수 req와 res가 null이므로
+
+### FrontMVC1.java : 서블릿
 
 ```java
 package mvc1.online;
@@ -142,8 +166,7 @@ public class FrontMVC1 extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) 
 		throws ServletException, IOException{
 			doService(req,res);
-		}
-	
+		}	
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse res) 
 		throws ServletException, IOException{
@@ -152,7 +175,7 @@ public class FrontMVC1 extends HttpServlet {
 }
 ```
 
-### 회원관리 Controller Servlet : MemberLogic.java
+### 회원관리 Controller : MemberController.java
 
 ```java
 package mvc1.online;
@@ -282,30 +305,6 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 * 가져온 url에서 업무이름 member에 해당하는 Controller를 호출한다.
 * 호출할때 request객체에 member업무의 memberList라는 업무 내용임을 담아 넘겨야한다.
 * Controller에서는 memberLogic클래스에서 memberList라는 업무 메서드를 호출할 것이다.
-
-### doService\(HttpServlet req, HttpServlet res\)
-
-* doService\( \)메서드는 표준 서블릿에서 제공되는 서블릿이 아니다.
-* @Override라는 어노테이션은 사용할 수 없다. - 어노테이션도 컴파일 대상이기때문에 문법오류가 발생한다.
-* 그렇다면 파라미터의 req, res는 누구로부터 주입받아 사용할 수 있는 것일까? - doGet, doPost로부터 받는다.
-
-### 서블릿의 req,res - methodA\( \)
-
-```java
-public class FrontMVC1 extends HttpServlet {
-			public void methodA(HttpServletRequest req, HttpServletResponse res) 
-						throws ServletException, IOException{
-
-					res.sendRedirect("/index.jsp");//NullPointerException
-				}
-	}
-```
-
-* 메서드의 앞에는 소유주가 위치한다. - 소유주.메서드\( \);
-* 파라미터 안에 선언된 변수는 메서드 내부에서 초기화 하지않거나 외부에서 주입되지 않으면 null이다.
-* 위 메서드는 표준서블릿에서 Override하여 재정의한 메서드가 아니므로 서버에게서 객체를 주입받을 수 없다.
-* res객체를 주입받지 못하는 메서드이므로 문법오류는 발생하지 않지만 NullPointerExceoption이 발생한다.
-* 선언된 지역변수 req와 res가 null이므로
 
 
 
