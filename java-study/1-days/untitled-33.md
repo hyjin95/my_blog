@@ -63,7 +63,7 @@ description: 2020.11.25 - 71일차
 * String command = uri.substring\(context.length\( \)+1\); - uri의 제일 앞에 붙는 '/'를 잘라내 나머지를 가져온다. - split에서 '/'를 기준으로 분리해야하는데 맨앞의 '/'를 없애야 두개로 분리되므로 - split에서 0부터 가져오면 된다.
 * int end = command.lastIndexof\('.'\); - split의 끝나는 자리를 찾아야한다. - uri의 업무내용명 뒤에 붙는 .test의 위치를 담는다. 정확히는 .의 위치
 * command = command.substring\(0,end\)
-* upmu\[ \] = command.split\("/"\); 
+* upmu\[ \] = command.split\("/"\);
 
 {% page-ref page="untitled-25/" %}
 
