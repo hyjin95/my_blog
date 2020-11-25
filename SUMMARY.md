@@ -252,6 +252,6 @@
   * [70 Days - 로그인, 로그아웃 : cookie\(JS\), session, hode, show, easyUI : tree, maskedbox](java-study/1-days/untitled-32/README.md)
     * [로그인 정보 : JS로 cookie에 저장하는 과정](java-study/1-days/untitled-32/js-cookie.md)
     * [로그아웃 : show, hide, cookie](java-study/1-days/untitled-32/show-hide-cookie.md)
-  * [Untitled](java-study/1-days/untitled-33.md)
+  * [71 Days -](java-study/1-days/untitled-33.md)
   * [Untitled](java-study/1-days/untitled-30.md)
 
