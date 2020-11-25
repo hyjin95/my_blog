@@ -195,5 +195,9 @@ public class ActionForward {
 
 {% page-ref page="untitled-25/" %}
 
+### DI
+
+* 의존성 주입\(Dependency Injection\)
+
 
 
