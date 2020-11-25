@@ -305,6 +305,7 @@ public class FrontMVC1 extends HttpServlet {
 * 파라미터 안에 선언된 변수는 메서드 내부에서 초기화 하지않거나 외부에서 주입되지 않으면 null이다.
 * 위 메서드는 표준서블릿에서 Override하여 재정의한 메서드가 아니므로 서버에게서 객체를 주입받을 수 없다.
 * res객체를 주입받지 못하는 메서드이므로 문법오류는 발생하지 않지만 NullPointerExceoption이 발생한다.
+* 선언된 지역변수 req와 res가 null이므로
 
 
 
