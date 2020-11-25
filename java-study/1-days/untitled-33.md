@@ -33,6 +33,24 @@ description: 2020.11.25 - 71일차
 * doGet메서드와 doPost메서드를 doService메서드안에서 한번에 처리한다. - Controller의 execute메서드를 정의해 구분한다.
 * 리턴타입을 void가 아닌 Object를 사용한다. - Controller의 execute메서드의 타입은 ActionForward클래스다. - 그러므로 execute의 리턴타입도 ActionForward클래스여야 한다. - ActionForward클래스는 getter, setter를 담당하는 클래스다.
 
+### Action.java : 코드
+
+```java
+package mvc1.online;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public interface Action {
+	
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException;
+	
+}
+```
+
 ## Part2 : 요청 접수 Servlet
 
 ### FrontMVC1.java
@@ -41,12 +59,117 @@ description: 2020.11.25 - 71일차
 * web.xml - url : \*.test
 * 페이지 이동에 대한 코드를 작성한다.
 
+### FrontMVC1.java : 
+
+```java
+package mvc1.online;
+
+import java.io.IOException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
+
+public class FrontMVC1 extends HttpServlet {
+	Logger logger = Logger.getLogger(FrontMVC1.class);
+	MemberController memCtrl = new MemberController();	
+
+	public void doService(HttpServletRequest req, HttpServletResponse res) 
+			throws ServletException, IOException{
+		logger.info("doService 호출성공");
+		ActionForward af = null;
+		
+		if("") {
+			af = memCtrl.execute(req, res);
+		}		
+		//MemberController에서 객체주입을 받아온다. 그래야  null이 아닐것이므로
+		//viewName은 누가 어디서 결정해야 할까? 
+		//어떻게 가져오지? ActionForward의 getter로
+		if(af!=null) {//af가 null이면 NullPointerException발생
+			if(af.isRedirect()) {
+				res.sendRedirect(af.getViewName());
+			}else {
+				RequestDispatcher view = req.getRequestDispatcher(af.getViewName());
+				view.forward(req, res);
+			}
+		}
+	}//////////////////////////end of doService
+	
+	@Override
+	public void doGet(HttpServletRequest req, HttpServletResponse res) 
+		throws ServletException, IOException{
+			doService(req,res);
+		}
+	
+	@Override
+	public void doPost(HttpServletRequest req, HttpServletResponse res) 
+		throws ServletException, IOException{
+			doService(req,res);
+	}
+}
+```
+
+### 회원관리 Controller Servlet : MemberLogic.java
+
+```java
+package mvc1.online;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.log4j.Logger;
+
+public class MemberController extends HttpServlet implements Action {
+	Logger logger = Logger.getLogger(MemberController.class);
+
+	@Override
+	public ActionForward execute(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException {		
+		//returntype이 ActionForward 이여야하는데 ActionForward는 서블릿이므로 싱글톤이다.
+		//인스턴스화는 null방지용
+		ActionForward af = new ActionForward();
+		return af;
+	}
+}
+```
+
 ## Part3 : getter, setter
 
 ### ActionForward.java
 
+![](../../.gitbook/assets/isredirect.png)
+
 * 페이지 이름을 받아와 forward할것인지, sendRedirect할 것인지 결정한다.
 * getter, settet - viewName :  페이지 이름   기본값은 null - isRedirect : 페이지 이동 방식   접두어 is는 return Type이 boolean이라는 것이다.   true면 sendRedirect, false면 forward를 사용한다.  기본값은 false
+
+### ActionForward.java : 코드
+
+```java
+package mvc1.online;
+
+public class ActionForward {
+	private String viewName = null;
+	private boolean isRedirect = false;
+	
+	public String getViewName() {
+		return viewName;
+	}
+	public void setViewName(String viewName) {
+		this.viewName = viewName;
+	}
+	
+	public boolean isRedirect() {
+		return isRedirect;
+	}
+	public void setRedirect(boolean isRedirect) {
+		this.isRedirect = isRedirect;
+	}
+}
+```
 
 ## Part4 : Servlet, Controller 조립
 
