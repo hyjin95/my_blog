@@ -127,7 +127,7 @@ public class FrontMVC1 extends HttpServlet {
 ### 서블릿 테스트 : try-catch
 
 * 서블릿은 throws를 사용해 예외처리를 모두 호출하는 곳으로 넘겨버리기때문에 테스트할때에 에러를 쉽게 확인할 수 없다.
-* 테스트할 서블릿 구문을 try-catch안에 넣어 e.stackTrace\( \);함수를 작성하면 에러코드를 볼 수 있다.
+* 테스트할 서블릿 구문을 try-catch안에 넣어 e.printStackTrace\( \);함수를 작성하면 에러코드를 볼 수 있다.
 
 ### FrontMVC1.java : 서블릿
 
