@@ -289,6 +289,8 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 		}
 ```
 
+* 테스트 url - local:9000/member/memberList.test
+
 ### 코드 : MemberController연결 - FrontMVC1.java
 
 ```java
