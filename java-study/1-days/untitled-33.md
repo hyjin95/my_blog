@@ -43,5 +43,5 @@ description: 2020.11.25 - 71일차
 
 * ActionForward.java
 * 페이지 이름을 받아와 forward할것인지, sendRedirect할 것인지 결정한다.
-* getter, settet - viewName :  페이지 이름   기본값 = null - isRedirect : 페이지 이동 방식
+* getter, settet - viewName :  페이지 이름   기본값은 null - isRedirect : 페이지 이동 방식   접두어 is는 return Type이 boolean이라는 것이다.   true면 sendRedirect, false면 forward를 사용한다.  기본값은 false
 
