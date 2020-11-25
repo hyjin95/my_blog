@@ -55,6 +55,11 @@ public interface Action {
 
 * doGet과 doPost는 메서드를 오버라이드 하는 것이므로 void를 사용할 수 밖에 없지만, 우리가 만든 Interface의 메서드 execute는 returnType이 ActionForward클래스\(object\)이다.
 
+### Interface를 직접 만드는 이유
+
+* 재사용성을 높이기 위함
+* returnType을 변경하기 위함
+
 ## Part2 : 요청 접수 Servlet
 
 ### FrontMVC1.java
