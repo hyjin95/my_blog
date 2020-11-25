@@ -217,6 +217,41 @@ public class ActionForward {
 
 {% page-ref page="untitled-25/" %}
 
+### 코드 : url분리 - FrontMVC1.java
+
+```java
+public void doService(HttpServletRequest req, HttpServletResponse res) 
+			throws ServletException, IOException{
+		ActionForward af = null;
+		
+		String uri = req.getRequestURI();//member/memberList.test
+		String context = req.getContextPath();//dev_html, /
+		String command = uri.substring(context.length()+1);
+		//logger.info(command);
+		int end = command.lastIndexOf(".");
+		//logger.info(end);
+		command = command.substring(0, end);
+		//logger.info(command);
+		String upmu[] = null;
+		upmu = command.split("/");
+		for(String str:upmu) {
+			logger.info(str);
+		}
+```
+
+### 코드 : MemberController연결 - FrontMVC1.java
+
+```java
+public void doService(HttpServletRequest req, HttpServletResponse res) 
+			throws ServletException, IOException{
+		ActionForward af = null;
+
+		if("member".equals(upmu[0].toString())) {
+			req.setAttribute("command", command);//값 유지
+			af = memCtrl.execute(req, res);
+		}/////////////////////////////end of 회원관리	
+```
+
 
 
 
