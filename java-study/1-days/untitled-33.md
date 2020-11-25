@@ -26,24 +26,46 @@ description: 2020.11.25 - 71일차
 3. 화면정의서
 4. 디자인\(bootstrap - 반응형\)
 
-### Part1 : Interface
+## Part1 : Interface
 
-* Action.java
+### Action.java
+
 * doGet메서드와 doPost메서드를 doService메서드안에서 한번에 처리한다. - Controller의 execute메서드를 정의해 구분한다.
 * 리턴타입을 void가 아닌 Object를 사용한다. - Controller의 execute메서드의 타입은 ActionForward클래스다. - 그러므로 execute의 리턴타입도 ActionForward클래스여야 한다. - ActionForward클래스는 getter, setter를 담당하는 클래스다.
 
-### Part2 : 요청 접수 Servlet
+## Part2 : 요청 접수 Servlet
 
-* FrontMVC1.java
+### FrontMVC1.java
+
 * 모든 요청을 받는 Servlet
 * web.xml - url : \*.test
 * 페이지 이동에 대한 코드를 작성한다.
 
-### Part3 : getter, setter
+## Part3 : getter, setter
 
-* ActionForward.java
+### ActionForward.java
+
 * 페이지 이름을 받아와 forward할것인지, sendRedirect할 것인지 결정한다.
 * getter, settet - viewName :  페이지 이름   기본값은 null - isRedirect : 페이지 이동 방식   접두어 is는 return Type이 boolean이라는 것이다.   true면 sendRedirect, false면 forward를 사용한다.  기본값은 false
 
-### Part4 : 
+## Part4 : Servlet, Controller 조립
+
+### URL
+
+* url : /업무명/업무내용명.test
+* ActionForward의 viewName을 url에서 가져와 결정한다.
+* url을 배열로 substring을 사용해 분리한다. - upmu\[0\]=업무명, upmu\[1\]=업무내용명
+
+### URL분리 하기
+
+* String uri = req.getRequestURI\( \):String - URL에서 URI만 가져온다. 도메인 다음 주소
+* String context = req.getContextPath\( \):String - server.xml에 등록된 Context의 path를 가져온다. - 루트경로 = 프로젝트이름, /
+* String command = uri.substring\(context.length\( \)+1\); - uri의 제일 앞에 붙는 '/'를 잘라내 나머지를 가져온다. - split에서 '/'를 기준으로 분리해야하는데 맨앞의 '/'를 없애야 두개로 분리되므로 - split에서 0부터 가져오면 된다.
+* int end = command.lastIndexof\('.'\); - split의 끝나는 자리를 찾아야한다. - uri의 업무내용명 뒤에 붙는 .test의 위치를 담는다. 정확히는 .의 위치
+* command = command.substring\(0,end\)
+* upmu\[ \] = command.split\("/"\); 
+
+{% page-ref page="untitled-25/" %}
+
+
 
