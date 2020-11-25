@@ -58,7 +58,8 @@ public interface Action {
 ### Interface를 직접 만드는 이유
 
 * 재사용성을 높이기 위함
-* returnType을 변경하기 위함
+* 파라미터나 returnType을 자유롭게 사용하기 위함
+* 프레임 워크의 원리를 알아보기 위함
 
 ## Part2 : 요청 접수 Servlet
 
