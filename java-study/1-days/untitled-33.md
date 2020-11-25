@@ -147,6 +147,9 @@ public class MemberController extends HttpServlet implements Action {
 }
 ```
 
+* FrontMVC1에서 Servlet을 주입받아 사용할 수 있으므로 굳이 HttpServlet을 상속받지 않아도된다.
+* Action인터페이스의 execute메서드를 오버라이드 \(재정의\)해서 사용한다.
+
 ## Part3 : getter, setter
 
 ### ActionForward.java
