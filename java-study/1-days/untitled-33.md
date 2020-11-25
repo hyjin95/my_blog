@@ -178,6 +178,11 @@ public class ActionForward {
 * Servlet : FrontMVC1.java
 * Controller : MemberController.java
 
+### 키워드
+
+* **DI** - 의존성 주입\(Dependency Injection\)
+* **Ioc** - 제어역전 - 외부\(Tomcat, JDK, Android\)에서 제어하는 것 - Spring F/W - Action.java\(Interface:execute\(req,res\)\)를 외부에서 주입받는 것이다.   returnType:ActionForward   이 반홥 값으로 redirect, forward한다.
+
 ### URL
 
 * url : /업무명/업무내용명.test
@@ -195,9 +200,7 @@ public class ActionForward {
 
 {% page-ref page="untitled-25/" %}
 
-### DI
 
-* 의존성 주입\(Dependency Injection\)
 
 
 
