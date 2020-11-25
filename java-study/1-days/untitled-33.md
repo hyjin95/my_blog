@@ -190,7 +190,7 @@ public class ActionForward {
 ### 키워드
 
 * **DI** - 의존성 주입\(Dependency Injection\)
-* **Ioc** - 제어역전 - 외부\(Tomcat, JDK, Android\)에서 제어하는 것 - Spring F/W - Action.java\(Interface:execute\(req,res\)\)를 외부에서 주입받는 것이다.   returnType:ActionForward   이 반환 값으로 redirect, forward한다.
+* **Ioc** - 제어역전 - 외부에서 제어하는 것 - Spring F/W, Tomcat, JDK, Android   제어역전을 할 수 있는 프로그램들 - Action.java\(Interface:execute\(req,res\)\)를 외부에서 주입받는 것이다.   returnType:ActionForward   이 반환 값으로 redirect, forward한다.
 
 ### URL
 
