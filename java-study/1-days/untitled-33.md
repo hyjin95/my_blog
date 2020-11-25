@@ -339,7 +339,5 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 * 호출할때 request객체에 member업무의 memberList라는 업무 내용임을 담아 넘겨야한다.
 * Controller에서는 memberLogic클래스에서 memberList라는 업무 메서드를 호출할 것이다.
 
-
-
-
+후기 :  날씨가 추웟다가 괜찮앗다가 추웠다가 나는 아침에 롱패딩을 들었다가 놧다가....음..
 
