@@ -147,7 +147,7 @@ String uri = req.getRequestURI();//URL중 루트경로 다음 경로 - ?/command
 * request.getRequestURI\( \)로 얻는 uri : /프로젝트명/지정한 서블릿 url.do - /dev\_html/a/aAction.do
 
 ```java
-String context = req.getContextPath();//URL중 루트 경로를 가져온다. web.xml에서
+String context = req.getContextPath();//URL중 루트 경로를 가져온다. server.xml에서
 ```
 
 * context는 프로젝트 명을 가리킨다.
