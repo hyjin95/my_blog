@@ -214,7 +214,7 @@ public class MemberController extends HttpServlet implements Action {
 ### ActionForward에 값 담기
 
 * 위 컨트롤러에서 25, 26번라인이 없다면 isRedirect의 기본값은 false이므로 서블릿에서 sendRedirect를 사용할 수없고, forward로 넘어간다.
-* forward를 사용하기위해 ActionForward에서 viewName을 가져와 페이지이름으로 사용하는데, viewNmae이 nulll이므로 nullPointerException이 발생하므로 주의하자
+* forward를 사용하기위해 ActionForward에서 viewName을 가져와 페이지이름으로 사용하는데, viewNmae이 nulll이므로 nullPointerException이 발생할 것이다.
 
 ### web.xml
 
