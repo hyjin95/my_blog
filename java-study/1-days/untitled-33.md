@@ -124,6 +124,11 @@ public class FrontMVC1 extends HttpServlet {
 * res객체를 주입받지 못하는 메서드이므로 문법오류는 발생하지 않지만 NullPointerExceoption이 발생한다.
 * 선언된 지역변수 req와 res가 null이므로
 
+### 서블릿 테스트 : try-catch
+
+* 서블릿은 throws를 사용해 예외처리를 모두 호출하는 곳으로 넘겨버리기때문에 테스트할때에 에러를 쉽게 확인할 수 없다.
+* 테스트할 서블릿 구문을 try-catch안에 넣어 e.stackTrace\( \);함수를 작성하면 에러코드를 볼 수 있다.
+
 ### FrontMVC1.java : 서블릿
 
 ```java
@@ -214,7 +219,7 @@ public class MemberController extends HttpServlet implements Action {
 ### ActionForward에 값 담기
 
 * 위 컨트롤러에서 25, 26번라인이 없다면 isRedirect의 기본값은 false이므로 서블릿에서 sendRedirect를 사용할 수없고, forward로 넘어간다.
-* forward를 사용하기위해 ActionForward에서 viewName을 가져와 페이지이름으로 사용하는데, viewNmae이 nulll이므로 nullPointerException이 발생할 것이다.
+* forward를 사용하기위해 ActionForward에서 viewName을 가져와 페이지이름으로 사용하는데, viewNmae이 nulll이므로 nullPointerException이 발생하므로 주의하자
 
 ### web.xml
 
