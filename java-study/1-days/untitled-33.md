@@ -106,7 +106,7 @@ public interface Action {
 * @Override라는 어노테이션은 사용할 수 없다. - 어노테이션도 컴파일 대상이기때문에 문법오류가 발생한다.
 * 그렇다면 파라미터의 req, res는 누구로부터 주입받아 사용할 수 있는 것일까? - doGet, doPost로부터 받는다.
 
-### 서블릿의 req,res - methodA\( \)
+### 서블릿의 req,res주입 - methodA\( \)
 
 ```java
 public class FrontMVC1 extends HttpServlet {
