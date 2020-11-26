@@ -38,19 +38,29 @@ description: 2020.11.26 - 72일차
 
 ### Q6. DI에 대해서 그림으로 설명할 수 있나요?
 
+![Dependency Injection](../../.gitbook/assets/1%20%2877%29.png)
+
+* 의존성 주입
+
 ### Q7. 우리가 배운것 중에서 DI에 해당하는 클래스명은 무엇인가요?
 
-* 
+* FrontMVC1 서블
+
 ### Q8. DI를 지원받기위해 개발자가 해야하는 일은 무엇인가요?
 
 * 배치서술자 web.xml파일에 url-pattern등록하기
 
 ### Q9. forward와 sendRedirect메서드는 어디에서 호출하는지 설명할수 있나요?
 
-* 
+* FrontMvc1 서블릿의 if문 안에서
+
 ### Q10. FrontMVC1클래스와 MemberController클래스는 어떻게 조립되었나요?
 
-* 
+* 인스턴스화를 통해 FrontMVC1의 req에 값을 담아 MemberController의 execute메서드를 호출한다.
+* Controller에서 처리된 ActionForward의 멤버변수를 활용해 다시 FrontMVC1에서 페이지이동한다.
+
 ### Q11. split메서드를 통해 알아낸 정보는 무엇인지, 어떻게 활용되었는지 기술하세요.
 
-* 
+* 서블릿이 처리할 요청 url을 가져와 업무이름과 업무내용을 분리해 배열로 저장한다.
+* 이 값들은 어떤 업무 Controller를 호출할 것인지, 어떤 Logic과 Dao를 호출하는지에 활용된다.
+
