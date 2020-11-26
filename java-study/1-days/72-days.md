@@ -97,6 +97,21 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 
 * ActionForward에서의 setter는 Controller에서, getter는 Servlet에서 사용한다.
 
+### Q3. 실제 페이지 이동이 일어나는 코드
+
+```java
+if(af!=null) {//af가 null이면 NullPointerException발생
+			if(af.isRedirect()) {
+				//sendRedirect의 경우에 파라미터에 null이 오더라도 문제가 발생하지 않는다.
+				//경로가 존재하지 않으면 브라우저는 404를띄우지만, 경로를 null로 하면 흰 화면만 보여준다.
+				res.sendRedirect(af.getViewName());
+			}else {
+				RequestDispatcher view = req.getRequestDispatcher(af.getViewName());
+				view.forward(req, res);
+			}
+		}
+```
+
 ## 서버 기동과 &lt;context&gt; : 복습
 
 ### WAS의 스캔 순서
