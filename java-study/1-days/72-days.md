@@ -59,12 +59,26 @@ description: 2020.11.26 - 72일차
 ### Q8. DI를 지원받기위해 개발자가 해야하는 일은 무엇인가요?
 
 * 배치서술자 web.xml파일에 url-pattern등록하기
+* 다른 서블릿과 구분할 수 있는 별도의 확장자를 붙여주면 해당 요청은 모두 해당 서블릿으로 인터셉트된다.
 
 ### Q9. forward와 sendRedirect메서드는 어디에서 호출하는지 설명할수 있나요?
 
-* FrontMvc1 서블릿의 if문 안에서
+* 페이지 이동방식의 결정은 MemberController에서 결정된다. - 업무를 담당하고 시작하는 지점이다.
+* ActionForward의 isRedirect멤버변수를 활용한다. 기본값은 falsle이다.
+* 사용자가 조회.버튼을 누르면, select가 진행되고 select는 forward로 처리한다. MemberController에서 af,sendRedirect\( \)메서드의 파라미터를 false로 결정지어줘야 한다. true를 주면 res.sendRedirect\( \)를 호출해 조회값 List를 xxx.jsp로 넘길 수 없게된다. 서블릿은 이 두가지를 고려해 doGet과 doPost의 메서드 리턴타입을 void로 했을 것이다.
+* req.setAttribute\("이름", 주소번지\)를 작성하고 페이지 흐름을 서블릿 쪽에서 JSP페이지로 제어권을 넘겨주는 방식으로 업무에 대한 처리를 하는 것이다.
 
 ### Q10. FrontMVC1클래스와 MemberController클래스는 어떻게 조립되었나요?
+
+```java
+public void doService(HttpServletRequest req, HttpServletResponse res) 
+			throws ServletException, IOException{
+			if("member".equals(upmu[0].toString())) {
+						req.setAttribute("command", upmu[1].toString());//값 유지
+						af = memCtrl.execute(req, res);
+					}/////////////////////////////end of 회원관리	
+}
+```
 
 * 인스턴스화를 통해 FrontMVC1의 req에 값을 담아 MemberController의 execute메서드를 호출한다.
 * Controller에서 처리된 ActionForward의 멤버변수를 활용해 다시 FrontMVC1에서 페이지이동한다.
