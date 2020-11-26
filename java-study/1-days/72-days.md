@@ -89,7 +89,13 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 * 서블릿이 처리할 요청 url을 가져와 업무이름과 업무내용을 분리해 배열로 저장한다.
 * 이 값들은 어떤 업무 Controller를 호출할 것인지, 어떤 Logic과 Dao를 호출하는지에 활용된다.
 
-## 필기
+## 서블릿, 인터페이스의 조립 : 복습
+
+### Servlet과 Interface, Controller의 역할
+
+![](../../.gitbook/assets/interface-.png)
+
+## 서버 기동과 &lt;context&gt; : 복습
 
 ### WAS의 스캔 순서
 
