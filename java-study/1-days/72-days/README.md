@@ -45,7 +45,7 @@ description: 2020.11.26 - 72일차
 
 ### Q6. DI에 대해서 그림으로 설명할 수 있나요?
 
-![Dependency Injection](../../.gitbook/assets/1%20%2877%29.png)
+![Dependency Injection](../../../.gitbook/assets/1%20%2877%29.png)
 
 * 의존성 주입
 
@@ -93,7 +93,7 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 
 ### Servlet과 Interface, Controller의 역할
 
-![](../../.gitbook/assets/interface-.png)
+![](../../../.gitbook/assets/interface-.png)
 
 * ActionForward에서의 setter는 Controller에서, getter는 Servlet에서 사용한다.
 
@@ -118,7 +118,7 @@ if(af!=null) {//af가 null이면 NullPointerException발생
 
 ### WAS의 스캔 순서
 
-![](../../.gitbook/assets/.png%20%2832%29.png)
+![](../../../.gitbook/assets/.png%20%2834%29.png)
 
 ### server.xml : &lt;context&gt;
 
