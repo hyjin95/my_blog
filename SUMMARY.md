@@ -254,7 +254,8 @@
     * [로그아웃 : show, hide, cookie](java-study/1-days/untitled-32/show-hide-cookie.md)
   * [71 Days - DI, Ioc, 온라인시험솔루션1, Interface, servlet:req,res주입,  url자르기, getter-setter, 클래스 조립](java-study/1-days/untitled-33.md)
   * [72 Days -](java-study/1-days/72-days/README.md)
+    * [Spring : 환경설정 및 프로젝트생성](java-study/1-days/72-days/spring.md)
     * [Untitled](java-study/1-days/72-days/untitled-34.md)
   * [Untitled](java-study/1-days/untitled-30.md)
-  * [Spring : 환경설정 및 프로젝트생성](java-study/1-days/spring.md)
+  * [Untitled](java-study/1-days/untitled-34.md)
 
