@@ -112,3 +112,7 @@ public class MemberController extends MultiActionController {
 
 * sendRedirect를 사용해 페이지 이동을 했기때문에 주소창은 서블릿 주소인 nhn이 아니라 jsp의 주소가 보여지는 것을 알 수 있다.
 
+### Console
+
+![](../../../.gitbook/assets/.png%20%2836%29.png)
+
