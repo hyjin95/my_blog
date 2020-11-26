@@ -255,7 +255,8 @@
   * [71 Days - DI, Ioc, 온라인시험솔루션1, Interface, servlet:req,res주입,  url자르기, getter-setter, 클래스 조립](java-study/1-days/untitled-33.md)
   * [72 Days -](java-study/1-days/72-days/README.md)
     * [Spring : 환경설정 및 프로젝트생성](java-study/1-days/72-days/spring.md)
-    * [Untitled](java-study/1-days/72-days/untitled-34.md)
+    * [Spring : member](java-study/1-days/72-days/untitled-34.md)
+    * [Spring : List](java-study/1-days/72-days/spring-list.md)
   * [Untitled](java-study/1-days/untitled-30.md)
   * [Untitled](java-study/1-days/untitled-34.md)
 
