@@ -95,6 +95,8 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 
 ![](../../.gitbook/assets/interface-.png)
 
+* ActionForward에서의 setter는 Controller에서, getter는 Servlet에서 사용한다.
+
 ## 서버 기동과 &lt;context&gt; : 복습
 
 ### WAS의 스캔 순서
