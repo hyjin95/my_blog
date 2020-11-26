@@ -111,7 +111,7 @@ public class ListController extends AbstractController {
     xmlns="http://www.springframework.org/schema/beans"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
-   <bean name="/insaList.nhn" class="com.mycompany.online.ListController">
+   <bean name="insaBean" class="com.mycompany.online.ListController">
    	<property name="listBean"><!-- setter메서드 역할 -->
    	<!-- List<String> listBean = new ArrayList<>(); listBean.add("Hi")
    	 스프링은 자바코드를 대신할 수 있는 태그를 제공하고 있다. -->
