@@ -1,4 +1,4 @@
-# Spring : 환경설정 및 프로젝트생성
+# Spring : 환경설정 및 프로젝트생성, 살펴보기
 
 ## Spring : UTF-8 설정
 
@@ -65,4 +65,16 @@
 ![&#xD328;&#xD0A4;&#xC9C0; &#xC774;&#xB984; &#xC9C0;&#xC815;](../../../.gitbook/assets/15-1.png)
 
 ![&#xD655;&#xC778;](../../../.gitbook/assets/16.png)
+
+## Spring : 살펴보기
+
+### Window &gt; Preferences 
+
+### Git연동
+
+![](../../../.gitbook/assets/git-.png)
+
+### JVM
+
+![](../../../.gitbook/assets/jvm-.png)
 

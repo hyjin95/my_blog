@@ -1,29 +1,5 @@
 # Spring : List
 
-### servlet-context.xml
-
-```markup
-<?xml version="1.0" encoding="UTF-8"?>
-<beans 
-    xmlns="http://www.springframework.org/schema/beans"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
-   <bean id="default-handler-mapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
-
-   <bean name="/insaList.nhn" class="com.mycompany.online.ListController">
-   	<property name="listBean"><!-- setter메서드 역할 -->
-   	<!-- List<String> listBean = new ArrayList<>(); listBean.add("Hi")
-   	 스프링은 자바코드를 대신할 수 있는 태그를 제공하고 있다. -->
-   		<list>
-   			<value>Hi</value>
-   			<value>Have a good time</value>
-   			<value>Have a nice day</value>
-   		</list>
-   	</property>
-   </bean>
-</beans>
-```
-
 ### ListMainApp.java
 
 ```java
@@ -62,6 +38,9 @@ public class ListMainApp {
 	   }
 }
 ```
+
+* 외부에서 객체를 주입하기 위해서는 반드시 xml에 bean이 등록되어 있어야하고, 등록한 뒤에 객체를 관리해주는, 주체가 되는 클래스가 있어야한다. - Bean을 관리해주는 별도의 클래스    ApplicationContext or BeanFactory = Bean공장장
+* 이 경우에는 insaBean이라는 xml에게서 값을 주입받으려고 한다.
 
 ### ListController.java
 
@@ -124,4 +103,8 @@ public class ListController extends AbstractController {
    </bean>
 </beans>
 ```
+
+### 결과 : Console
+
+![](../../../.gitbook/assets/list.png)
 

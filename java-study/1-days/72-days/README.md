@@ -2,7 +2,7 @@
 description: 2020.11.26 - 72일차
 ---
 
-# 72 Days -
+# 72 Days - 인터페이스와 서블릿, DI 복습 QnA, 서버기동과 &lt;context&gt;, Spring 환경설정 및 xml활용
 
 ### 사용 프로그램
 
@@ -45,7 +45,7 @@ description: 2020.11.26 - 72일차
 
 ### Q6. DI에 대해서 그림으로 설명할 수 있나요?
 
-![Dependency Injection](../../../.gitbook/assets/1%20%2877%29.png)
+![Dependency Injection](../../../.gitbook/assets/1%20%2878%29.png)
 
 * 의존성 주입
 
@@ -139,5 +139,90 @@ if(af!=null) {//af가 null이면 NullPointerException발생
 
 ## Spring
 
-### 
+### 환경설정 및 프로젝트 생성
+
+{% page-ref page="spring.md" %}
+
+### web.xml 경로
+
+![](../../../.gitbook/assets/web.xml-.png)
+
+### 서블릿 클래스 등록 xml 경로
+
+![](../../../.gitbook/assets/.png%20%2835%29.png)
+
+* POJO web.xml은 모든 url이 모여 있어 코드가 아주 길어진다는 단점이 있다.
+* Spring F/W에서는 xml을 쪼개서 사용한다는 장점이 있다. 
+* 그 중에 위 servlet-context.xml이 바로 서블릿 클래스를 등록하는 xml인 것이다.
+* DI를 활용하는 클래스의 경우, 반드시 xml에 path, url이 등록되어야 한다.
+
+### web.xml
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+
+<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/spring/root-context.xml</param-value>
+</context-param>
+
+<!-- Creates the Spring Container shared by all Servlets and Filters -->
+<listener>
+<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+<!-- Processes application requests -->
+<servlet>
+<servlet-name>appServlet</servlet-name>
+<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+<init-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>appServlet</servlet-name>
+<url-pattern>*.nhn</url-pattern>
+</servlet-mapping>
+</web-app>
+```
+
+* 우리가 사용하던 POJO web.xml과는 형태가 다르다. 
+* Beans는 namespace를 말하는 것이고, 자바로 따지면 class라고 할 수 있다. xmlns = xmlNameSpace이며 태그이름이다.
+* 20-29번에서 \*.nhn으로 들어오는 요청은 모두 appServlet으로 보낸다. -&gt; 17번
+* 16-24번 : .nhn 요청을 21번에 있는 서블릿 xml로 보낸다. 
+
+### Spring F/W제공 서블릿 : web.xml
+
+![](../../../.gitbook/assets/spring-fw-.png)
+
+* Eclipse에서 WAS가 사용하던 표준 컨테이너 jsp-api.jar, servlet-api.jar의 역할을 해주는 것이 Spring에도 존재한다.
+* DispatcherServlet : springframework제공
+
+### Spring 과 POJO Servlet 차이
+
+* Spring은 POJO의 서블릿과는 다르다.
+* 서블릿 등록을 web.xml이 아닌 별도의 servlet-context.xml에 관리하고, xml에 등록만 되어있다면 req, res객체를 어느 메서드에서든 주입받아 사용할 수 있다.
+
+### Spring : List
+
+* Spring은 xml에서도 자바코드를 작성할 수 있는 태그를 제공한다.
+* xml안에 List형태의 값을 넣어놓고, 외부에서 주입해주는 방식을 구현해보자.
+* 자바에서 getter, setter의 역할을 수행하는 메서드가 Spring에도 존재한다. 
+* java클래스의 main메서드에서 abstractController를 상속받는 Controller클래스를 호출하는데,  이때 getBean함수를 사용해 List가 담긴 xml을 주입한다. Controller클래스는 setBeanList메서드로 List를 담고, 처리된 값을 반환한다. main메서드를 가진 java클래스에서 system.out으로 확인해보자
+
+{% page-ref page="spring-list.md" %}
+
+### Spring : member
+
+* Spring에서도 sendRedirect를 사용 할 수 있고, forward와 비슷한 역할을 하는 ModelAndView라는 클래스도 제공하고 있다.
+* 직접 servelet-context.xml에 서블릿을 등록하고, java클래스의 메서드를 path로 호출해보자.
+
+{% page-ref page="untitled-34.md" %}
+
+후기 : 내일은 금요일~ 오늘은 스프링을 처음으로 진도를 나갔는데 살짝 느낌이 왔다. 내일은 학원에 나가서 대면 수업을 하는 날이니 오늘 이해하지 못한 부분들 까지도 확실히 이해하고 오자
 
