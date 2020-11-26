@@ -4,8 +4,6 @@ description: 2020.11.26 - 72일차
 
 # 72 Days -
 
-
-
 ### 사용 프로그램
 
 * 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
