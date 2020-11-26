@@ -252,6 +252,7 @@
   * [70 Days - 로그인, 로그아웃 : cookie\(JS\), session, hode, show, easyUI : tree, maskedbox](java-study/1-days/untitled-32/README.md)
     * [로그인 정보 : JS로 cookie에 저장하는 과정](java-study/1-days/untitled-32/js-cookie.md)
     * [로그아웃 : show, hide, cookie](java-study/1-days/untitled-32/show-hide-cookie.md)
-  * [71 Days -](java-study/1-days/untitled-33.md)
+  * [71 Days - DI, Ioc, 온라인시험솔루션1, Interface, servlet:req,res주입,  url자르기, getter-setter, 클래스 조립](java-study/1-days/untitled-33.md)
+  * [72 Days -](java-study/1-days/72-days.md)
   * [Untitled](java-study/1-days/untitled-30.md)
 

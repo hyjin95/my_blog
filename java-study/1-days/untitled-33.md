@@ -2,7 +2,7 @@
 description: 2020.11.25 - 71일차
 ---
 
-# 71 Days -
+# 71 Days - DI, Ioc, 온라인시험솔루션1, Interface, servlet:req,res주입,  url자르기, getter-setter, 클래스 조립
 
 ### 사용 프로그램
 
