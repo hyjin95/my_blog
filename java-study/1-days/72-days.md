@@ -89,7 +89,11 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 * 서블릿이 처리할 요청 url을 가져와 업무이름과 업무내용을 분리해 배열로 저장한다.
 * 이 값들은 어떤 업무 Controller를 호출할 것인지, 어떤 Logic과 Dao를 호출하는지에 활용된다.
 
-## 
+## 필기
+
+### WAS의 스캔 순서
+
+![](../../.gitbook/assets/.png%20%2832%29.png)
 
 ### server.xml : &lt;context&gt;
 
@@ -101,9 +105,10 @@ public void doService(HttpServletRequest req, HttpServletResponse res)
 
 * WAS가 가장 먼저 스캔하는 곳
 
-### WAS의 역할
+### reloadable 
 
 * JSP문서를 class로 변환시킨다.
 * a.jsp를 a\_jsp.java로 jsp-api.jar라는 컨테이너를 사용해 바꿔주고, __a\_jsp.java를 a\_jsp.class로 servlet-api.jar 컨테이너를 사용해 바꿔준다.
 * jsp문서를 수정하고 배포하면 즉시 반영해줄까 서버를 재기동 해야할까? - 재기동하는것이 안전하다.
+* reloadable = "true"면 자동으로 재기동해 반영해주는 것이다.
 
