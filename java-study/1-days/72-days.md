@@ -112,6 +112,8 @@ if(af!=null) {//af가 null이면 NullPointerException발생
 		}
 ```
 
+* FrontMVC1서블릿의 doService\( \)메서드 내부
+
 ## 서버 기동과 &lt;context&gt; : 복습
 
 ### WAS의 스캔 순서
