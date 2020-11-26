@@ -60,6 +60,7 @@ description: 2020.11.26 - 72일차
 
 * 배치서술자 web.xml파일에 url-pattern등록하기
 * 다른 서블릿과 구분할 수 있는 별도의 확장자를 붙여주면 해당 요청은 모두 해당 서블릿으로 인터셉트된다.
+* WAS는 server.xml의 &lt;context&gt;를 가장 먼저 스캔한다.
 
 ### Q9. forward와 sendRedirect메서드는 어디에서 호출하는지 설명할수 있나요?
 
