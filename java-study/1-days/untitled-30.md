@@ -4,7 +4,7 @@ description: 2020.11.27 73일차
 
 # 73 Days -
 
-### 사용 프로그램
+### ffffb사용 프로그램
 
 * 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
@@ -64,7 +64,9 @@ public class ListMainApp {
 }
 ```
 
-### Console 출
+### Console 출력
 
-![&#xC704; : ApplicationContext, &#xC544;&#xB798; : BeanFactory](../../.gitbook/assets/1%20%2879%29.png)
+![ApplicationContext](../../.gitbook/assets/1%20%2879%29.png)
+
+![BeanFactory](../../.gitbook/assets/2%20%2860%29.png)
 
