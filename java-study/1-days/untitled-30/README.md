@@ -37,6 +37,12 @@ description: 2020.11.27 73일차
 
 ![](../../../.gitbook/assets/spring.png)
 
+* 최근의 개발 트랜드는 개발자는 비즈니스 로직\(Model\)부분에만 관여하는 것이다. - Logic\(POJO\)에만 관여한다.
+* 나머지 Controller와 Dao, 조립의 영역은 F/W에게 담당하게 한다. - Spring framwork, 전자정부프레임워크, Dven, AnyFrame
+* 이런 F/W들은 DI, IoC를 위한 객체들을 지원한다. - 객체의 라이프사이클을 관리해주기 위함 - 객체=업무는 n개 일 것이다.    이를 관리하는 각각의 Controller가 있고, Controller는 xml에 등록되어야 한다.
+
+### Spring : Controller
+
 ## Spring Container\(=엔진, API\) 유형
 
 ### 객체를 주입받는 방법 두가지
