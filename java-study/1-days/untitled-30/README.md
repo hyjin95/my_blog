@@ -144,5 +144,21 @@ public class ListMainApp {
 
 ![BeanFactory](../../../.gitbook/assets/2%20%2860%29.png)
 
-### 
+## UI : BootStrap
+
+### 공통코드 : bootstrap\_commom.jsp
+
+```markup
+<!-- bootstrap 3.4.1 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	StringBuilder path = new StringBuilder(request.getContextPath());
+	path.append("/");
+%>
+<link rel="shortcut icon" href="image/favicon.ico">
+<link rel="stylesheet" type="text/css" href="<%=path.toString() %>css/bootstrap.min.css">
+<script type="text/javascript" src="<%=path.toString() %>js/jquery.min.js"></script>
+<script type="text/javascript" src="<%=path.toString() %>js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+```
 
