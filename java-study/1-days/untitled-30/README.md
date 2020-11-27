@@ -4,17 +4,38 @@ description: 2020.11.27 73일차
 
 # 73 Days -
 
-### ffffb사용 프로그램
+### 사용 프로그램
 
 * 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
 * 사용 서버 - WAS : Tomcat
 
+## 필기
+
+### 순제어
+
+```java
+ List<String> insaList = null; //선언
+ insaList = new ArrayList<>(); //생성, 활동
+ insaList.add("안녕");
+ insaList.add("안녕하세요");
+ insaList.add("기분좋은 하루 되세요");
+ for(String insa:insaList) {
+  System.out.println(insa);
+ }
+ insaList = null; 
+```
+
+* 순제어는 개발자가 객체의 생성부터 활동, 종료까지도 관리하는 것이다.
+* 2번 : 선언
+* 3번 : 생성, 활동
+* 10번 : Candidate상태, 종료 - 이때 호출되는 것이 destroy메서드이다. 사라지기 전에 호출된다.
+
 ## Spring
 
 ### Spring Frameworks Modules
 
-![](../../.gitbook/assets/spring.png)
+![](../../../.gitbook/assets/spring.png)
 
 ## Spring Container\(=엔진, API\) 유형
 
@@ -59,11 +80,17 @@ description: 2020.11.27 73일차
 
 ### 경로
 
-![ApplicationContext](../../.gitbook/assets/applicationcontext.png)
+![ApplicationContext](../../../.gitbook/assets/applicationcontext.png)
 
-![BeanFactory](../../.gitbook/assets/.png%20%2837%29.png)
+![BeanFactory](../../../.gitbook/assets/.png%20%2837%29.png)
 
 * Spring Maven안에 저장된다.
+
+### 의존성 주입이 일어나는 곳
+
+![](../../../.gitbook/assets/di.png)
+
+* ApplicationContext나 BeanFactory가 해준다.
 
 ### 코드 : ListMainApp.java
 
@@ -105,26 +132,9 @@ public class ListMainApp {
 
 ### Console 출력
 
-![ApplicationContext](../../.gitbook/assets/1%20%2879%29.png)
+![ApplicationContext](../../../.gitbook/assets/1%20%2879%29.png)
 
-![BeanFactory](../../.gitbook/assets/2%20%2860%29.png)
+![BeanFactory](../../../.gitbook/assets/2%20%2860%29.png)
 
-### 순제어
-
-```java
- List<String> insaList = null; //선언
- insaList = new ArrayList<>(); //생성, 활동
- insaList.add("안녕");
- insaList.add("안녕하세요");
- insaList.add("기분좋은 하루 되세요");
- for(String insa:insaList) {
-  System.out.println(insa);
- }
- insaList = null; 
-```
-
-* 순제어는 개발자가 객체의 생성부터 활동, 종료까지도 관리하는 것이다.
-* 2번 : 선언
-* 3번 : 생성, 활동
-* 10번 : Candidate상태, 종료 - 이때 호출되는 것이 destroy메서드이다. 사라지기 전에 호출된다.
+### 
 
