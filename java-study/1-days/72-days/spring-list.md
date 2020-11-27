@@ -78,7 +78,6 @@ public class ListController extends AbstractController {
 		}
 		return mav;
 	}
-
 }
 ```
 
