@@ -219,6 +219,8 @@ if(af!=null) {//af가 null이면 NullPointerException발생
 
 ### Spring : member
 
+![](../../../.gitbook/assets/q%20%282%29.png)
+
 * Spring에서도 sendRedirect를 사용 할 수 있고, forward와 비슷한 역할을 하는 ModelAndView라는 클래스도 제공하고 있다.
 * 직접 servelet-context.xml에 서블릿을 등록하고, java클래스의 메서드를 path로 호출해보자.
 
