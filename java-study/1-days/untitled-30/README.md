@@ -43,6 +43,8 @@ description: 2020.11.27 73일차
 
 ### Spring : Controller
 
+* 업무\(객체\)마다 Controller가 필요하다.
+
 ## Spring Container\(=엔진, API\) 유형
 
 ### 객체를 주입받는 방법 두가지
