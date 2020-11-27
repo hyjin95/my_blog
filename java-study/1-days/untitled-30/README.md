@@ -44,6 +44,14 @@ description: 2020.11.27 73일차
 ### Spring : Controller
 
 * 업무\(객체\)마다 Controller가 필요하다.
+* 속도 개선, 분업화\(효율성\)을 위해
+* spring-webmvc.jar에서 AbstracController, MultuActionController를 제공한다.
+
+### Spring : DI
+
+* 필요하지 않을때에는 비워두는 것이 공간의 효율성을 높인다.
+* 필요할때 외부에서 주입받기 위해서는 xml에 클래스가 등록되어 있어야한다.
+* Spring에서는 ApplicationContext, BeanFactory가 Bean을 관리한다. - spring-core.jar에 위치
 
 ## Spring Container\(=엔진, API\) 유형
 
