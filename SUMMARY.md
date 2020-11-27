@@ -257,6 +257,6 @@
     * [Spring : 환경설정 및 프로젝트생성, 살펴보기](java-study/1-days/72-days/spring.md)
     * [Spring : List](java-study/1-days/72-days/spring-list.md)
     * [Spring : member](java-study/1-days/72-days/untitled-34.md)
-  * [Untitled](java-study/1-days/untitled-30.md)
+  * [73 Days -](java-study/1-days/untitled-30.md)
   * [Untitled](java-study/1-days/untitled-34.md)
 
