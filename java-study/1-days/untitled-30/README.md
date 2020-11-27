@@ -152,6 +152,10 @@ public class ListMainApp {
 
 ![BeanFactory](../../../.gitbook/assets/2%20%2860%29.png)
 
+### Spring : 객체주입, 역제어 test
+
+{% page-ref page="spring-map.md" %}
+
 ## UI : BootStrap
 
 ### 공통코드 : bootstrap\_commom.jsp
