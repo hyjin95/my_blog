@@ -73,7 +73,7 @@ HttpSession session = request.getSession();
 	</session-config>
 ```
 
-## 오늘
+## 로그인 구현
 
 ### 작업지시서
 
@@ -88,4 +88,8 @@ HttpSession session = request.getSession();
 * 시험과목 - 시험응시 테이블 관계
 * 관계 형태  - 1:n, n:m, 1:1 - PK와 FK선택과 확인
 * 관계형태에 따라 조인 대상 테이블이 결정된다.
+
+### 순서도
+
+![](../../.gitbook/assets/mvc.png)
 
