@@ -259,7 +259,7 @@
     * [Spring : member](java-study/1-days/72-days/untitled-34.md)
   * [73 Days - Spring:DI, IoC, ApplicationContext, BeanFactory, Map](java-study/1-days/untitled-30/README.md)
     * [Spring : Map](java-study/1-days/untitled-30/spring-map.md)
-  * [74 Days -](java-study/1-days/untitled-36/README.md)
+  * [74 Days - MVC패턴, session과 cookie, Spring서버설정, Spring Controller, 객체주입법 : 생성자 객체주입법, Sonata](java-study/1-days/untitled-36/README.md)
     * [Sonata : 생성자 객체주입법](java-study/1-days/untitled-36/sonata-b.md)
   * [Untitled](java-study/1-days/untitled-34.md)
 

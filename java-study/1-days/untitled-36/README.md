@@ -2,7 +2,7 @@
 description: 2020.11.30 - 74일차
 ---
 
-# 74 Days -
+# 74 Days - MVC패턴, session과 cookie, Spring서버설정, Spring Controller, 객체주입법 : 생성자 객체주입법, Sonata
 
 ### 사용 프로그램
 
@@ -93,7 +93,46 @@ HttpSession session = request.getSession();
 
 ![](../../../.gitbook/assets/mvc.png)
 
-## Spring
+## Spring :  설정
+
+### 디펜던시 spring버전 변경
+
+![maven Spring](../../../.gitbook/assets/.png%20%2838%29.png)
+
+* 이전에는 jar파일을 항상 다운로드 받아 lib에 넣어주고 build path로 연결해주었지만, 디펜던시를 제공하기 때문에 간단히 xml에서 버전을 변경해주면 자동으로 버전이 변경된다.
+
+![&#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xBC84;&#xC804;&#xC5C5;&#xB41C; &#xAC83;&#xC744; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xB2E4;.](../../../.gitbook/assets/.png%20%2839%29.png)
+
+### Tomcat서버 사용하기
+
+![](../../../.gitbook/assets/01.png)
+
+* 기본 서버 우클릭 &gt; New &gt; Server
+
+![](../../../.gitbook/assets/1%20%2882%29.png)
+
+* 사용할 서버를 선택한다.
+
+![&#xC11C;&#xBC84; &#xC81C;&#xD488; &#xACBD;&#xB85C;](../../../.gitbook/assets/2%20%2861%29.png)
+
+* 서버 제품을 지정해준다.
+
+![](../../../.gitbook/assets/3%20%2847%29.png)
+
+* 해당 서버를 사용할 프로젝트를 지정한다.
+
+### Tomcat server설정
+
+![](../../../.gitbook/assets/xml-servers-..png)
+
+* 두번쨰 체크박스를 체크해야 xml문서를 따로 관리할 수 있다.
+* xml이 서버폴더의 하위에 생성된다.
+
+![](../../../.gitbook/assets/..png)
+
+* Tomcat admin port번호를 지정하지 않으면 서버가 기동되지 않으니 주의하자
+
+## Spring : Controller
 
 ### Spring MVC
 
@@ -110,8 +149,6 @@ HttpSession session = request.getSession();
 * web.xml에 등록된 url로 들어오는 모든 요청을 받아 알맞은 업무 Controller에게 전달하고, 결과를 받아 응답페이지를 호출하는 역할을 수행한다.
 * 모든 요청을 한 곳에서 받아 처리하고, 요청에 맞는 handler로 요청을 Dispatch하고, 해당 Handler의 실행결과를 HttpResponse의 형태로 만들어준다.
 * Controller에서 업무 처리내용과 이동할 페이지, 이동방식을 결정하고, FrontController에서 페이지를 호출한다.
-
-## Spring : Controller
 
 ### Controller
 
