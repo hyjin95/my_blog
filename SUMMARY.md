@@ -259,6 +259,7 @@
     * [Spring : member](java-study/1-days/72-days/untitled-34.md)
   * [73 Days - Spring:DI, IoC, ApplicationContext, BeanFactory, Map](java-study/1-days/untitled-30/README.md)
     * [Spring : Map](java-study/1-days/untitled-30/spring-map.md)
-  * [74 Days -](java-study/1-days/untitled-36.md)
+  * [74 Days -](java-study/1-days/untitled-36/README.md)
+    * [Sonata b](java-study/1-days/untitled-36/sonata-b.md)
   * [Untitled](java-study/1-days/untitled-34.md)
 
