@@ -17,6 +17,8 @@ description: 2020.11.30 - 74일차
 *  Controll계층 - 추상클래스나 인터페이스 혹은 구현체 클래스를 제공받아 처리한다. - AbstracController\(A\), MultiActionController\(구현체\), Controller\(I\)
 * Model 계층 - 개발자가 집중해야하는 부분
 * View 계층 - UI/UX솔루션 역할
+* 요청을 jsp가 받으면 모델1 : 태그와 공존해야 하므로 내장객체를 제공한다. 요청을 Servlet이 받으면 모델2 : 직접 선언해야한다.
+* 이 MVC패턴은 request와 response에 의존적이다. 재사용성, 이식성이 떨어져 단위테스트, 통합테스트에 어려움이 있다. 독립적이지 않기때문에 결합도를 낮추는 코드를 작성해야한다. - 상속이아닌, 인터페이스와 추상클래스를 활용한다.
 
 ### Model계층
 
@@ -46,6 +48,30 @@ description: 2020.11.30 - 74일차
 * ProjectManager : 사람관리
 * ProjectLeader : 설계, 조립, 테스트시나리오, 배포, 이행 - 기술지원, 표준제시, 가이드
 * Crew : 처리
+
+## Session
+
+### Session과 Cookie
+
+* session - 서버의 cash메모리에 클라이언트 상태를 저장한다.
+* cookie - 클라이언트 local에 text로 저장된다. - cookie에 가장 먼저 저장되는 정보 : Session ID
+
+### Session과 request
+
+```java
+HttpSession session = request.getSession();
+```
+
+* 내장객체 request로 session을 생성한다.
+
+### Session과 web.xml
+
+```markup
+	<!-- session에 값을 유지하는 방법, 30분동안 유지한다. -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+```
 
 ## 오늘
 
