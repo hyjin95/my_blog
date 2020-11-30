@@ -93,21 +93,51 @@ HttpSession session = request.getSession();
 
 ![](../../../.gitbook/assets/mvc.png)
 
+## Spring
+
+### Spring MVC
+
+* 다른 MVC기반의 F/W와 같이 Spring에서도 Controller를 사용해 클라이언트의 요청을 처리한다. 요청을 FrontController가 받아 업무에 맞는 Controller에게 전달한다. 이 FrontController가 기능하도록 Spring에서 제공하는것이 DispatcherServlet이다.
+* DispatcherServlet - 클라이언트의 요청을 받는다. Controller에게 요청을 전달하고 리턴된 값을 View에 전달한다.
+* HandlerMapping - 요청된 url을 어떤 Controller가 처리할지 Mapping한다.
+* Controller - 요청을 처리하고 결과를 DispatcherServlet에 반환한다.
+* ViewResolver - 처리 결과를 보여줄 View를 정한다. - property 두가지를 갖는다.   prefix\(Controller가 리턴한 뷰 이름 앞에 붙는 접두어\)   suffix\(Controller가 리턴한 뷰 이름 뒤에 붙는 접미어\)
+* View - 응답을 출력한다.
+
+### DispatcherServlet
+
+* 클라이언트의 요청을 받는 객체.
+* web.xml에 등록된 url로 들어오는 모든 요청을 받아 알맞은 업무 Controller에게 전달하고, 결과를 받아 응답페이지를 호출하는 역할을 수행한다.
+* 모든 요청을 한 곳에서 받아 처리하고, 요청에 맞는 handler로 요청을 Dispatch하고, 해당 Handler의 실행결과를 HttpResponse의 형태로 만들어준다.
+* Controller에서 업무 처리내용과 이동할 페이지, 이동방식을 결정하고, FrontController에서 페이지를 호출한다.
+
+## Spring : Controller
+
+### Controller
+
+* Spring에서 클라이언트의 요청을 처리하는 Controller를 구현하는 두가지 방법이 있다. - Controller 인터페이스를 implements한다. - AbstractController 추상클래스를 상속받는다.
+* FrontController를 web.xml에 url을 등록하고, 해당 요청을 업무 별로 Controller에 전달한다.
+* main메서드를 활용한 local서비스가 아닌 url을 이용하는 웹서비스를 제공한다.
+* request, response를 누릴 수 있다. - 파라미터로 전달받은 req, res객체를 사용한다. - 직접 HttpServlet을 상속받지 않아도 사용할 수 있다.
+* 외부 서버와 통신에 대해서나 처리결과에 대한 자원\(json, xml\)을 공유 할 수 있다.
+
+### Controller : Controller인터페이스
+
+* Controller 인터페이스를 implements하고 handleRequest추상메서드를 알맞게 구현한다.
+* 파라미터로 전달받은 req, res객체를 사용한다.
+* ModelAndView객체를 리턴한다. - 뷰 페이지 이름, data를 ModelAndView객체에 담을 수 있다. - setViewName\( \), addObject\( \), ...
+
+### 코드 : Controller
+
 ```java
 package com.di;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
 import org.springframework.web.servlet.mvc.Controller;
 
-//web용 시물레이션--main메서드 없이 url로 웹서비스를 제공한다.
-//request, response를 누릴 수 있다. doGet이 아니더라도
-//외부 서버와 통신 또는 처리 결과에 대한 자원(json, xml)을 공유할 수 있다.
 public class SonataController implements Controller {
-//public class SonataController extends AbstractController {
 
 	//Controller 인터페이스에서의 오버라이드 메서드
 	@Override
@@ -115,71 +145,66 @@ public class SonataController implements Controller {
 		// TODO Auto-generated method stub
 		return null;
 	}
+}
+```
 
-	/*//AbstractController 추상클래스에서의 오버라이드 메서드 
+### Controller : AbstractController
+
+* AbstractController클래스는 Controller인터페이스를 implements하고, 추가적인 기능을 제공한다.
+* 프로퍼티를 제공한다.
+* Controller와 달리 handlerRequestInternal\( \)메서드를 구현한다. - AbstractController클래스의 handleReqeust메서드는 내부적으로 필요한 작업을 수한한뒤에 handlerRequestInternal\( \)메서드를 호출한다.
+
+### AbstractController Property
+
+* supportedMethods - Controller가 처리할 수 있는 메서드 지정, 지원되지않는 메서드를 사용한 요청이 발생하면 ServletException을 발생시킨다.
+* requiresSession - Controller가 HttpSession을 필요로 하는지 여부를 결정한다.   true일때 클라이언트와 관련된 session이 존재하지 않을떄 ServletExceotion을 발생시킨다.
+* synchronizeSession - HttpSession을 사용해 Controller에 대한 처리를 동기화 할지 여부를 정한다.
+* cacheSecoends - Http응답에 캐시에 관련된 디렉티브를 생성할지 여부를 정한다. - 기본 값은 -1 : 캐시 디렉티브가 응답결과에 포함되지 않는다.
+* useExporesHeader - Expires 헤더의 사용여부를 정한다. - 기본값 true
+* useCacheHeader - Cache-Control 헤더의 사용여부를 정한다. - 기본값 true
+
+### 코드 : AbstractController
+
+```java
+package com.di;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
+
+public class SonataController extends AbstractController {
+
+	//AbstractController 추상클래스에서의 오버라이드 메서드 
 	@Override
 	protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		// TODO Auto-generated method stub
 		return null;
-	}*/
-
-}
-```
-
-```java
-package com.di;
-
-import org.springframework.beans.factory.BeanFactory;//spring-bean.jar
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.context.ApplicationContext;//spring-context.jar
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.core.io.Resource;
-
-//request, response를 사용할 수 없다.
-//서버와 통신하지 않는, local로 실행되므로
-//웹서비스를 제공할 수 없으므로 안드로이드와 연계가 불가능하다.
-//자바는 web.xml을 지원하지 않기 때문에 io로 읽고, 쓰기를 해야하는데 속도가 느리고, 서버에 부담을 준다.
-//그러므로 자바로 web서비스를 하지말자
-//spring-core.jar가 관리하는 ApplicationContext, BeanFactory가 bean을 관리한다.
-//<bean id="" class|type=""/>로 관리한다. --type인 경우에는 추상클래스, 인터페이스까지 올 수 있다.
-public class SonataSimulation {
-	
-	//자바 어플리케이션에서는 톰캣서버를 기동하지 않으므로 xml문서를 스캔하지 않기 때문에 직접 가져와야한다.
-	//직접 스캔하기때문에 setter메서드가 필요없이 id로 직접 접근한다.
-	//생성자 객체 주입법은 필요할까?
-	//setter객체 주입법 코드는 자바에서 처리하고, 생성자 객체 주입법 코드는 xml에서 처리한다.
-	//기존에는 VO class를 직접 만들어 사용했다. 기본적으로 멤버변수가 private이므로 접근하기 위해 setter, getter메서드로 활용했다.
-	//이 변수를 별도로 초기화 하기 위해 값을 결정하는 클래스에서 직접 인스턴스화해서 set메서드로 값을 초기화하거나 생성자 파라미터에 담아 초기화한다.
-	//dVO.setViewName("xxx.jsp") - new DeptVO("10", true, "xxx.jsp">
-	//setter객체 주입법은 동종간 처리시 사용되고 - 권장사항
-	//생성자 객체 주입버은 이종간 처리시 사용한다. - 자바와 myBatis, 자바와 Oracle이런 처리
-	//결론 : xml과 xml사이에서도 객체 주입을 처리할 수 있다. 지원한다.
-	/*
-	 * ArrayList al = new ArraList();
-	 * ArrayList al = null;
-	 * ArrayList al = 타입.methodA();
-	 * 나는 인스턴스화를 할 수 있다.
-	 */
-	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("com\\di\\sonataBean.xml");
-		Sonata myCar = (Sonata)context.getBean("myCar");
-		
-		Resource resource = new FileSystemResource("C:\\workspace_sts3\\spring3\\src\\main\\java\\com\\di\\sonataBean.xml");
-	    BeanFactory factory = new XmlBeanFactory(resource);//가운데 줄은 depricated대상이다.
-	    Sonata herCar = (Sonata)factory.getBean("herCar");
-	    Sonata himCar = (Sonata)factory.getBean("himCar");
-	    
-	    Sonata gnomCar = new Sonata();
-	    
-	    System.out.println("myCar : "+myCar);
-	    System.out.println("herCar : "+herCar);
-	    System.out.println("himCar : "+himCar);
-	    System.out.println("himCar : "+gnomCar);
-
 	}
-
 }
 ```
+
+## Spring : 생성자 객체 주입법
+
+### POJO
+
+* POJO로 구현하는 클래스는 local 서비스만을 제공한다.  - main메서드로 실행
+* 서버와 통신하는 web 서비스를 제공할 수 없기때문에 req, res객체도 사용할 수 없다. - 안드로이드와의 연계도 불가능하다.
+* 통신하기위해서 web.xml을 지원하지 않기때문에 io로 읽고, 쓰기를 하는데, 속도가 느리고 서버에 부담이 되는 방식이다.
+* 이렇게 구현한 클래스에서 xml에 접근하기 위해서는 해당 xml의 id에 직접 접근해야한다. - xml문서를 스캔하지 않으므로 bean을 관리하는 클래스를 활용한다.
+
+### 생성자 객체 주입법
+
+* spring-core.jar가 제공하는 ApplicationContext, BeanFactory가 bean을 관리한다. - &lt;bean id=" " class \| type=" "/&gt; - type인 경우 추상클래스, 인터페이스 모두 올 수 있다.
+* 기존 setter를 활용한 객체주입코드는 java에서 처리했지만 생성자 객체주입코드는 xml에서 처리한다.
+* 기존의 VO class private 접근제한자를 갖는 멤버변수를 작성하고, setter, getter메서드로만 변수에 접근하도록 한다.  변수를 별도로 초기화 하려면 값을 결정하는 클래스에서 직접 인스턴스화 하여 set메서드를 활용했다. - dVO.setViewName\("xxx.jsp"\) - setter객체주입법은 동종간 처리시 사용한다. \(권장사항\)
+* 생성자 객체 주입법 set메서드를 활용하는 것이 아닌 생성자의 파라미터에 값을 담아 초기화한다. - new DeptVO\("10", true, "xxx.jsp"\) - 이때 주의 할 것은 파라미터의 타입과 갯수가 일치하는 생성자가 있어야 한다는 것이다. - 생성자 객체주입법은 이종간 처리시 사용한다.   자바와 myBatis, 자바와 Oracle이런 경우
+* xml과 xml사이에서도 객체 주입을 처리할 수 있다.
+
+### 객체주입의 종류
+
+* ArrayList al = new ArrayList\( \); - 직접, 생성자 객체주입법
+* ArrayList al = null; - 외부에서 주입받는다.
+* ArrayList al = 타입.methoadA\( \); - set, get메서드를 활용한 객체 주입법
 

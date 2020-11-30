@@ -1,4 +1,4 @@
-# Sonata b
+# Sonata : 생성자 객체주입법
 
 ### 코드 : Sonata.java
 
@@ -34,8 +34,10 @@ public class Sonata {
 		return "그녀의 자동차는 "+this.carColor+" 이고, 현재속도는 "+this.speed+" 이고, 바퀴 수는 "+this.wheelNum;
 	}
 }
-
 ```
+
+* 파라미터가 서로다른 세 생성자를 갖고있다.
+* 부모 Object가 가진 toString메서드를 오버라이드 했다.
 
 ### 코드 : sonataBean.xml
 
@@ -60,6 +62,9 @@ public class Sonata {
 </beans>
 ```
 
+* 연결된 Sonata.java의 생성자와 파라미터가 같은 갯수, 타입을 갖는 bean들이 작성되어 있다.
+* 지정된 class로만 제공받을 수 있다..
+
 ### 코드 : SonataSimulation.java
 
 ```java
@@ -72,31 +77,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 
-//request, response를 사용할 수 없다.
-//서버와 통신하지 않는, local로 실행되므로
-//웹서비스를 제공할 수 없으므로 안드로이드와 연계가 불가능하다.
-//자바는 web.xml을 지원하지 않기 때문에 io로 읽고, 쓰기를 해야하는데 속도가 느리고, 서버에 부담을 준다.
-//그러므로 자바로 web서비스를 하지말자
-//spring-core.jar가 관리하는 ApplicationContext, BeanFactory가 bean을 관리한다.
-//<bean id="" class|type=""/>로 관리한다. --type인 경우에는 추상클래스, 인터페이스까지 올 수 있다.
 public class SonataSimulation {
 	
-	//자바 어플리케이션에서는 톰캣서버를 기동하지 않으므로 xml문서를 스캔하지 않기 때문에 직접 가져와야한다.
-	//직접 스캔하기때문에 setter메서드가 필요없이 id로 직접 접근한다.
-	//생성자 객체 주입법은 필요할까?
-	//setter객체 주입법 코드는 자바에서 처리하고, 생성자 객체 주입법 코드는 xml에서 처리한다.
-	//기존에는 VO class를 직접 만들어 사용했다. 기본적으로 멤버변수가 private이므로 접근하기 위해 setter, getter메서드로 활용했다.
-	//이 변수를 별도로 초기화 하기 위해 값을 결정하는 클래스에서 직접 인스턴스화해서 set메서드로 값을 초기화하거나 생성자 파라미터에 담아 초기화한다.
-	//dVO.setViewName("xxx.jsp") - new DeptVO("10", true, "xxx.jsp">
-	//setter객체 주입법은 동종간 처리시 사용되고 - 권장사항
-	//생성자 객체 주입버은 이종간 처리시 사용한다. - 자바와 myBatis, 자바와 Oracle이런 처리
-	//결론 : xml과 xml사이에서도 객체 주입을 처리할 수 있다. 지원한다.
-	/*
-	 * ArrayList al = new ArraList();
-	 * ArrayList al = null;
-	 * ArrayList al = 타입.methodA();
-	 * 나는 인스턴스화를 할 수 있다.
-	 */
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com\\di\\sonataBean.xml");
 		Sonata myCar = (Sonata)context.getBean("myCar");
@@ -112,11 +94,12 @@ public class SonataSimulation {
 	    System.out.println("herCar : "+herCar);
 	    System.out.println("himCar : "+himCar);
 	    System.out.println("himCar : "+gnomCar);
-
 	}
-
 }
 ```
 
+* xml을 주입받는 세가지 방법을 사용해 보았다. - ApplicationContext의 getBean \(\)메서드를 사용해 xml의 bean id에 접근하는 것 - BeanFactory의 getBean\( \)메서드를 사용해 xml의 bean id에 접근하는 것 - 직접 생성자를 호출하는 것
+* 가져온 값들의 반환값을 Sonata클래스로 캐스팅연산자를 사용해 맞춰준다.
 
+### 결과 : console
 

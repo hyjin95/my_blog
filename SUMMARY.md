@@ -260,6 +260,6 @@
   * [73 Days - Spring:DI, IoC, ApplicationContext, BeanFactory, Map](java-study/1-days/untitled-30/README.md)
     * [Spring : Map](java-study/1-days/untitled-30/spring-map.md)
   * [74 Days -](java-study/1-days/untitled-36/README.md)
-    * [Sonata b](java-study/1-days/untitled-36/sonata-b.md)
+    * [Sonata : 생성자 객체주입법](java-study/1-days/untitled-36/sonata-b.md)
   * [Untitled](java-study/1-days/untitled-34.md)
 
