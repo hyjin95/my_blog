@@ -228,7 +228,7 @@ public class MemberController extends MultiActionController {
 ```
 
 * Java 코드로 작성된 Controller클래스, Spring에서 제공하는 MultiActionController를 상속받는다. - MultiActionController를 상속받으면 여러 요청을 한 Controller에서 메서드를 구현해 처리할 수 있게된다. SimpleUrlController를 사용한다면 요청에 대해 각각의 업무 Controller를\(Controller인터페이스나 AbstractController추상클래스를 상속하는\) 구현해야한다.
-* MemberLogic의 인스턴스변수를 private로 선언해 놓고, setter메서드를 구현한다. - 필요한 순간에 객체를 주입받아 원본을 사용하기 위함
+* MemberLogic의 인스턴스변수를 private로 선언해 놓고, setter메서드를 구현한다. - 필요한 순간에 객체를 주입받아 원본을 사용하기 위함 -- spring-servlet.xml
 * login메서드 파라미터의  req, res는 DispatcherServlet이 주입해준다.
 
 ### 코드 : MemberLogic.java
@@ -261,4 +261,72 @@ public class MemberLogic {
 }
 ```
 
-* 
+* 11번에서 Dao의 인스턴스변수를 생성하고, setter메서드를 통해 필요할때 주입받는다. -- spring-service.xml
+
+### 코드 : SqlMemberDao.java
+
+```java
+package com.spring.mvc1;
+
+import java.util.Map;
+
+import org.apache.log4j.Logger;
+import org.mybatis.spring.SqlSessionTemplate;
+
+public class SqlMemberDao {
+	Logger logger = Logger.getLogger(SqlMemberDao.class);
+	
+	private SqlSessionTemplate sqlSessionTemplate = null;
+	
+	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
+		this.sqlSessionTemplate = sqlSessionTemplate;
+	}
+
+	//프로시저의 파라미터 map은 파라미터이면서 result임을 인식하자
+	public String login(Map<String,Object> pmap){
+		logger.info("Dao-login 호출성공");
+		String mem_name = null;
+		try {
+			sqlSessionTemplate.selectOne("proc_ajaxLogin",pmap);
+			mem_name = pmap.get("msg").toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return mem_name;
+	}
+}
+```
+
+* 11번에서 SqlSessionTemplate인스턴스변수를 생성해놓고, setter메서드를 통해 필요할때 주입받아 사용한다. --spring-data.xml
+* DB연결 Driver와 연결통로가 xml에 작성되어 있기때문에 sqlSessionTemplate만 주입받아 바로 sql문을 호출 하면된다. - MyBatis : selectOne, selectList, isert, update, delete, ....
+
+## Log4j
+
+### 코드 : log4j.properties
+
+```bash
+#log4j.properties
+log4j.rootCategory=info, stdout, file
+log4j.debug=false
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.ImmediateFlush=true
+log4j.appender.stdout.Target=System.err
+
+log4j.appender.stdout.layout.ConversionPattern=[%d] [%p] (%13F:%L) %3x - %m%n
+
+
+log4j.appender.file.DatePattern = '.'yyyy-MM-dd
+
+#emp.xml이나 dept.xml, zipcode.xml의 namespace이름을 등록한다.
+log4j.logger.oracle.mybatis.MemberMapper = TRACE
+
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.ConversionPattern=[%d] [%p] (%13F:%L) %3x - %m%n
+
+log4j.logger.java.sql.Connection=INFO
+log4j.logger.java.sql.Statement=INFO
+log4j.logger.java.sql.PreparedStatement=INFO
+log4j.logger.java.sql.ResultSet=INFO
+```
+
