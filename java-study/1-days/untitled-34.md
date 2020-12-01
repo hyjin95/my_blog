@@ -65,7 +65,7 @@ description: 2020.12.01 - 75일차
 
 * DispatcherServlet이 인터셉트 받게되는 url mapping
 
-### Spring : SimpleUrlHandlerMapping
+### SimpleUrlHandlerMapping
 
 * 기존의 자바에서는 web.xml안에 모든 서블릿 클래스를 매핑했었다. 코드가 길어지고 가독성이 떨어져 이를 보완하기 위해 spring framwork가 제공하는 코드이다.
 * 자바코드가 아닌 xml에 등록되어 존재한다.  - &lt;bean&gt;태그 안에 위치한다.
