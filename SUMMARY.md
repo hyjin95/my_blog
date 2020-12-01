@@ -263,6 +263,6 @@
     * [Sonata : 생성자 객체주입법](java-study/1-days/untitled-36/sonata-b.md)
   * [75 Days -](java-study/1-days/untitled-34/README.md)
     * [maven](java-study/1-days/untitled-34/maven.md)
-    * [Untitled](java-study/1-days/untitled-34/untitled.md)
+    * [Member/login.test : Spring, Java, MyBatis](java-study/1-days/untitled-34/untitled.md)
   * [Untitled](java-study/1-days/untitled-35.md)
 
