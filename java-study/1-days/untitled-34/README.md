@@ -2,7 +2,7 @@
 description: 2020.12.01 - 75일차
 ---
 
-# 75 Days -
+# 75 Days - Spring제공 골격, Spring+Eclipse\(Java+Mybatis\), 객체주입법, maven과 수동배포
 
 ### 사용 프로그램
 
@@ -164,4 +164,8 @@ description: 2020.12.01 - 75일차
 ### Spring을 활용한 로그인 구현하기
 
 * Eclipse에서 Spring과 myBatis를 활용해 로그인 로직을 구현해보자
+
+{% page-ref page="untitled.md" %}
+
+후기 : 모레는 수능날이다. 코로나 확진자가 500-400명대인데 더 조심해야지..
 
