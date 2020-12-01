@@ -125,3 +125,19 @@ description: 2020.12.01 - 75일차
 
 ## Eclipse에서 Spring사용하기
 
+### 새 자바 Project생성하기
+
+![](../../.gitbook/assets/1%20%2884%29.png)
+
+* File &gt; Dynamic Web Project
+
+![](../../.gitbook/assets/.png%20%2840%29.png)
+
+* 프로젝트 생성시 표준과 같은 파일들을 정의해준다.
+* 최대한 표준에 부합하는 형식으로 생성한다.
+
+![](../../.gitbook/assets/22%20%283%29.png)
+
+* Default output folder는 WEB-INF하위의 classes폴더로 지정한다.
+* 컴파일된 파일이 담기는 곳
+

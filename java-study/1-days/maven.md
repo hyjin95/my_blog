@@ -15,7 +15,7 @@
 
 * 이렇게 Spring에서 사용할 프로젝트의 pom.xml내부에 dependency를 작성하면
 
-![](../../.gitbook/assets/.png%20%2840%29.png)
+![](../../.gitbook/assets/.png%20%2841%29.png)
 
 * 파일의 직접 추가 없이도 알아서 업데이트 된다.
 
