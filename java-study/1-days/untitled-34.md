@@ -4,6 +4,16 @@ description: 2020.12.01 - 75일차
 
 # 75 Days -
 
+### 사용 프로그램
+
+* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
+* 사용 서버 - WAS : Tomcat
+
+## Spring
+
+### web.xml
+
 ```markup
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
@@ -27,6 +37,8 @@ description: 2020.12.01 - 75일차
 	</listener>
 ```
 
+* &lt;listener&gt;태그가 있어야 Context를 읽을 수 있다.
+
 ```markup
 	<!-- Processes application requests -->
 	<servlet>
@@ -38,7 +50,12 @@ description: 2020.12.01 - 75일차
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-		
+```
+
+* &lt;init-param&gt;
+* 서블릿의 요청이 있을 때마다 새로 읽는다.
+
+```markup
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>*.nhn</url-pattern>
@@ -46,8 +63,7 @@ description: 2020.12.01 - 75일차
 </web-app>
 ```
 
-* &lt;init-param&gt;
-* 서블릿의 요청이 있을 때마다 새로 읽는다.
+* DispatcherServlet이 인터셉트 받게되는 url mapping
 
 
 
