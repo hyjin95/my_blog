@@ -70,13 +70,28 @@ description: 2020.12.01 - 75일차
 * xxx.jsp가 아닌xxx.test로 요청이 들어오면, DispatcherServlet이 인터셉트한다. SimpleUrlHandlerMapping에서 DispacherServlet이 받은  url의 클래스를 찾는다. Controller를 연결해준다.
 * req, res를 제공해주는 클래스가 DispatcherServlet이다. - req, res를 제공받지 못하면 메서드를 찾을 수 없게된다. - 의존적이다. 결합도가 높다.
 * Spring에서는 결합도를 낮추기 위해 인터페이스와 추상클래스를 제공한다. - spring-core.jar라는 엔진이 제공해주는 Controller\( I \)와 AbstractController추상 클래스
+* 이때 객체를 주입받을 수 있게 해주는 것이 ApplicationContext와 BeanFactory이다.
 
 ### SimpleUrlHandlerMapping
 
 * 기존의 자바에서는 web.xml안에 모든 서블릿 클래스를 매핑했었다. 코드가 길어지고 가독성이 떨어져 이를 보완하기 위해 spring framwork가 제공하는 코드이다.
 * 자바코드가 아닌 xml에 등록되어 존재한다.  - &lt;bean&gt;태그 안에 위치한다.
 * SimpleUrlHandlerMapping은 web.xml 에 매번 클래스를 등록하는 과정을 줄여준다. - DispatcherServlet과 Controller사이에서 url에 맞는 Controller를 찾아주는 역할이다.
-* &lt;bean id="인스턴스 변수명" class="클래스 풀 네임" /&gt; 호출되는 클래스는 반드시  req, res를 제공받아야 하고, Servlet.xml에 등록되어 있어야한다. 이때 클래스를 등록할때 사용하는 것이 SimpleUrlHandlerMapping클래스이다.     
+* &lt;bean id="인스턴스 변수명" class="클래스 풀 네임" /&gt; 호출되는 클래스는 반드시  req, res를 제공받아야 하고, Servlet.xml에 등록되어 있어야한다. 이때 클래스를 등록할때 사용하는 것이 SimpleUrlHandlerMapping클래스이다. 
+
+### Spring을 사용한 Java+MyBatis
+
+![](../../.gitbook/assets/1%20%2883%29.png)
+
+### SqlSessionFactoryBean
+
+* Spring과  MyBatis사이에서 bean을 관리하면서 Connection을 맺는 역할을 한다.
+* 빈을 관리한다는 것은 java class라는 것이고, spring에서는 mybatis.jar안에서 제공한다.
+
+### 객체주입법
+
+* Setter객체 주입법 - Java코드에 작성된다. - 동종간 연결에서 사용한다. - Java + Java : Java + MyBatis
+* 생성자 객제 주입법 - xml코드에 작성된다. - Java + xml : Java + MyBatis, Dao + SqlSessionTemplate - xml + xml : Java + MyBatis  - 이종간 연결에서 사용한다.
 
 ## Eclipse에서 Spring사용하기
 

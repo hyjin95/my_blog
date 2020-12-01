@@ -234,9 +234,9 @@ public class SonataController extends AbstractController {
 ### 생성자 객체 주입법
 
 * spring-core.jar가 제공하는 ApplicationContext, BeanFactory가 bean을 관리한다. - &lt;bean id=" " class \| type=" "/&gt; - type인 경우 추상클래스, 인터페이스 모두 올 수 있다.
-* 기존 setter를 활용한 객체주입코드는 java에서 처리했지만 생성자 객체주입코드는 xml에서 처리한다.
+* 기존 **setter를 활용한 객체주입코드**는 java에서 처리했지만 생성자 객체주입코드는 xml에서 처리한다.
 * 기존의 VO class private 접근제한자를 갖는 멤버변수를 작성하고, setter, getter메서드로만 변수에 접근하도록 한다.  변수를 별도로 초기화 하려면 값을 결정하는 클래스에서 직접 인스턴스화 하여 set메서드를 활용했다. - dVO.setViewName\("xxx.jsp"\) - setter객체주입법은 동종간 처리시 사용한다. \(권장사항\)
-* 생성자 객체 주입법 set메서드를 활용하는 것이 아닌 생성자의 파라미터에 값을 담아 초기화한다. - new DeptVO\("10", true, "xxx.jsp"\) - 이때 주의 할 것은 파라미터의 타입과 갯수가 일치하는 생성자가 있어야 한다는 것이다. - 생성자 객체주입법은 이종간 처리시 사용한다.   자바와 myBatis, 자바와 Oracle이런 경우
+* **생성자 객체 주입법** set메서드를 활용하는 것이 아닌 생성자의 파라미터에 값을 담아 초기화한다. - new DeptVO\("10", true, "xxx.jsp"\) - 이때 주의 할 것은 파라미터의 타입과 갯수가 일치하는 생성자가 있어야 한다는 것이다. - 생성자 객체주입법은 이종간 처리시 사용한다.   자바와 myBatis, 자바와 Oracle이런 경우
 * xml과 xml사이에서도 객체 주입을 처리할 수 있다.
 
 ### 객체주입의 종류
