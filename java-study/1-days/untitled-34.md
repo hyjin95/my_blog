@@ -90,8 +90,8 @@ description: 2020.12.01 - 75일차
 
 ### 객체주입법
 
-* Setter객체 주입법 - Java코드에 작성된다. - 동종간 연결에서 사용한다. - Java + Java : Java + MyBatis
-* 생성자 객제 주입법 - xml코드에 작성된다. - Java + xml : Java + MyBatis, Dao + SqlSessionTemplate - xml + xml : Java + MyBatis  - 이종간 연결에서 사용한다.
+* Setter객체 주입법 - Java코드에 작성된다. - 동종간 연결에서 사용한다. - Java + Java
+* 생성자 객제 주입법 - xml코드에 작성된다. - Java + xml,  xml + xml - 이종간 연결에서 사용한다.
 
 ## Eclipse에서 Spring사용하기
 
