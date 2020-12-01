@@ -245,3 +245,5 @@ public class SonataController extends AbstractController {
 * ArrayList al = null; - 외부에서 주입받는다.
 * ArrayList al = 타입.methoadA\( \); - set, get메서드를 활용한 객체 주입법
 
+후기 : 추워....
+

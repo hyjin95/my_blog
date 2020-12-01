@@ -176,3 +176,5 @@ public class ListMainApp {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 ```
 
+후기 : 다음주 금요일에는 팀프로젝트의 팀이 정해진다!
+
