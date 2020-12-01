@@ -103,3 +103,5 @@ public class SonataSimulation {
 
 ### 결과 : console
 
+![](../../../.gitbook/assets/car.png)
+
