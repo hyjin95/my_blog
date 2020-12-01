@@ -69,8 +69,8 @@ description: 2020.12.01 - 75일차
 
 * 기존의 자바에서는 web.xml안에 모든 서블릿 클래스를 매핑했었다. 코드가 길어지고 가독성이 떨어져 이를 보완하기 위해 spring framwork가 제공하는 코드이다.
 * 자바코드가 아닌 xml에 등록되어 존재한다.  - &lt;bean&gt;태그 안에 위치한다.
-* xxx.jsp가 아닌xxx.test로 요청이 들어오면, DispatcherServlet이 인터셉트한다. SimpleUrlHandlerMapping에서 DispacherServlet이 받은  url의 클래스를 찾는다.
-* SimpleUrlHandlerMapping은 여기서 web.xml 에 매번 클래스를 등록하는 과정을 줄여준다.    
+* xxx.jsp가 아닌xxx.test로 요청이 들어오면, DispatcherServlet이 인터셉트한다. SimpleUrlHandlerMapping에서 DispacherServlet이 받은  url의 클래스를 찾는다. Controller를 연결해준다.
+* SimpleUrlHandlerMapping은 여기서 web.xml 에 매번 클래스를 등록하는 과정을 줄여준다. - DispatcherServlet과 Controller사이에서 url에 맞는 Controller를 찾아주는 역할이다.    
 
 ## Eclipse에서 Spring사용하기
 
