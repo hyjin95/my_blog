@@ -81,7 +81,7 @@ description: 2020.12.01 - 75일차
 
 ### Spring을 사용한 Java+MyBatis
 
-![](../../.gitbook/assets/1%20%2883%29.png)
+![](../../../.gitbook/assets/1%20%2883%29.png)
 
 ### SqlSessionFactoryBean
 
@@ -95,7 +95,7 @@ description: 2020.12.01 - 75일차
 
 ### Spring이 제공해주는 틀
 
-![](../../.gitbook/assets/2%20%2862%29.png)
+![](../../../.gitbook/assets/2%20%2862%29.png)
 
 ## maven방식과 수동 방식
 
@@ -125,19 +125,43 @@ description: 2020.12.01 - 75일차
 
 ## Eclipse에서 Spring사용하기
 
-### 새 자바 Project생성하기
+### 1. Spring tool install
 
-![](../../.gitbook/assets/1%20%2884%29.png)
+![](../../../.gitbook/assets/2%20%2863%29.png)
+
+* Help &gt; Eclipse Marketplace wizard
+
+![](../../../.gitbook/assets/3%20%2848%29.png)
+
+* Spring Tools Installed
+
+### 2. 새 자바 Project생성하기
+
+![](../../../.gitbook/assets/1%20%2884%29.png)
 
 * File &gt; Dynamic Web Project
 
-![](../../.gitbook/assets/.png%20%2840%29.png)
+![](../../../.gitbook/assets/.png%20%2840%29.png)
 
 * 프로젝트 생성시 표준과 같은 파일들을 정의해준다.
 * 최대한 표준에 부합하는 형식으로 생성한다.
 
-![](../../.gitbook/assets/22%20%283%29.png)
+![](../../../.gitbook/assets/22%20%283%29.png)
 
 * Default output folder는 WEB-INF하위의 classes폴더로 지정한다.
 * 컴파일된 파일이 담기는 곳
+
+### 3. xml, jar배포
+
+![](../../../.gitbook/assets/xml.png)
+
+* WEB-INF밑에 Spring에서 정의한 xml문서를 붙인다.
+
+![](../../../.gitbook/assets/jar.png)
+
+* WEB-INF폴더 하위 lib폴더에 Spring에서 사용한 jar파일을 모두 배포한다.
+
+### Spring을 활용한 로그인 구현하기
+
+* Eclipse에서 Spring과 myBatis를 활용해 로그인 로직을 구현해보자
 
