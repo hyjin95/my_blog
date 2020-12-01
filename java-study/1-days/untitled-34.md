@@ -68,7 +68,7 @@ description: 2020.12.01 - 75일차
 ### DispatcherServlet
 
 * xxx.jsp가 아닌xxx.test로 요청이 들어오면, DispatcherServlet이 인터셉트한다. SimpleUrlHandlerMapping에서 DispacherServlet이 받은  url의 클래스를 찾는다. Controller를 연결해준다.
-* req, res를 제공해주는 클래스가 DispatcherServlet이다. - req, res를 제공받지 못하면 메서드를 찾을 수 없게된다. - 의존적이다. 결합도가 높다.
+* req, res를 제공해주는 클래스가 DispatcherServlet이다. - HttpServlet을 상속받는다. - req, res를 제공받지 못하면 메서드를 찾을 수 없게된다. - 의존적이다. 결합도가 높다.
 * Spring에서는 결합도를 낮추기 위해 인터페이스와 추상클래스를 제공한다. - spring-core.jar라는 엔진이 제공해주는 Controller\( I \)와 AbstractController추상 클래스
 * 이때 객체를 주입받을 수 있게 해주는 것이 ApplicationContext와 BeanFactory이다.
 
@@ -92,6 +92,22 @@ description: 2020.12.01 - 75일차
 
 * Setter객체 주입법 - Java코드에 작성된다. - 동종간 연결에서 사용한다. - Java + Java
 * 생성자 객제 주입법 - xml코드에 작성된다. - Java + xml,  xml + xml - 이종간 연결에서 사용한다.
+
+### Spring이 제공해주는 틀
+
+![](../../.gitbook/assets/2%20%2862%29.png)
+
+## maven방식과 수동 방식
+
+### jar배포
+
+* 필요한 API를 활용하기 위해 jar파일을 프로젝트에 배포할때, maven을 활용하는 방식과 수동으로 파일을 등록하는 방법이 있다.
+
+### maven방식수동
+
+* 필요한 jar파일을 에디터의 프로젝트 내부 WEB-INF하위의 lib폴더에 배포한다.
+* 해당 프로젝트의 Build Path에서 Add Jar버튼을 통해 라이브러리에 추가한다.
+* Spring파일 이전시 한번에 추가할 수 없어 하나씩 추가 해야하는 경우가 발생할 수 있다.
 
 ## Eclipse에서 Spring사용하기
 
