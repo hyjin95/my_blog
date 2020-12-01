@@ -244,7 +244,7 @@ import org.apache.log4j.Logger;
 public class MemberLogic {
 	Logger logger = Logger.getLogger(MemberLogic.class);
 	
-	SqlMemberDao sqlMemberDao = null;
+	private SqlMemberDao sqlMemberDao = null;
 	
 	//원본 주입받아 사용하기
 	public void setSqlMemberDao(SqlMemberDao sqlMemberDao) {
