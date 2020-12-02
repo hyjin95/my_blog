@@ -94,3 +94,29 @@ description: 2020.12.02 - 76일차
 * xml에 클래스를 등록하고, 클래스를 작성한다.
 * WAS가 DispatcherServlet과 필요한 시점에 객체를 주입해 메서드를 호출한다.
 
+## Spring : 
+
+### xml
+
+![](../../.gitbook/assets/11-0.png)
+
+* 패키지 선택 &gt; New &gt; Spring Bean Configuration File
+
+![](../../.gitbook/assets/11%20%282%29.png)
+
+* 파일이름.xml &gt; Next
+
+![](../../.gitbook/assets/11-1.png)
+
+* beans 체크 &gt; 버전에 맞는 xsd체크 &gt; Next
+
+![](../../.gitbook/assets/11-2.png)
+
+* 체크하지 않고 Finish
+
+### 명세서 파일
+
+* xml문서에 대한 명세서 역할을 하는 파일은 xsd파일이다. - xml문법을 따른다. - 변수를 여러개 정의할 수 있다.
+* html문서에 대한 명세서 역할을 하는 파일은 dtd파일이다. - 변수는 하나만 선언할 수 있다.
+* MyBatis에 대한 명세서 역할을 하는 파일은 dtd파일이다. - 변수는 하나만 선언할 수 있다.
+
