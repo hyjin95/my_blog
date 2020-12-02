@@ -147,6 +147,85 @@ description: 2020.12.02 - 76일차
 
 ## Java : Java - @\(O\), xml\(X\)
 
+### web.xml에 어노테이션 추가하기
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/log4j.properties</param-value>
+	</context-param>
+	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring-service.xml
+		   ,/WEB-INF/spring-data.xml		
+		</param-value>
+	</context-param>
+	
+	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextClass</param-name>
+			<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+		</init-param>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>com.di.AppContext</param-value><!-- 29번의 xml이 아닌 자바 클래스를 사용한다. java:java -->
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>*.test</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+```
+
+```markup
+   <servlet>
+      <servlet-name>appServlet</servlet-name>
+      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+      <init-param>
+         <param-name>spring.profiles.active</param-name>
+         <param-value>dev</param-value>
+      </init-param>
+      <init-param>
+         <param-name>contextClass</param-name>
+         <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+      </init-param>
+      <init-param>
+         <param-name>contextConfigLocation</param-name>
+         <param-value>
+            config.MvcConfig
+            config.ControllerConfig
+            config.WebMvcConfig
+            config.HttpInterceptor
+            config.WebSocketConfig
+         </param-value>
+      </init-param>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+      
+   <servlet-mapping>
+      <servlet-name>appServlet</servlet-name>
+      <url-pattern>/</url-pattern>
+   </servlet-mapping>
+```
+
 ### 코드 : AppContext.java - Configuration
 
 ```java
