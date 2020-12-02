@@ -64,4 +64,6 @@ description: 2020.12.02 - 76일차
 
 * &lt;property&gt;태그의  - name = setter메서드 이름 - ref = 인스턴스 변
 * 스프링컨테이너가 Controller에게 Logic객체를 주입하는 xml이다. - spring-core.jar가 필요한 객체를 대신 주입해준다.
+* xml에 클래스를 등록하고, 클래스를 작성한다.
+* WAS가 DispatcherServlet과 필요한 시점에 객체를 주입해 메서드를 호출한다.
 
