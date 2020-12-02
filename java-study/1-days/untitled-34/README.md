@@ -29,6 +29,8 @@ description: 2020.12.01 - 75일차
 
 * &lt;context-param&gt;
 * 서버 기동시 한 번 읽고 유지한다.
+* 공통적으로 필요한 부분을 작성한다.
+* 서블릿 밖에 작성되어 있기때문에 url요청이 있을때 읽히는 것이 아니라 서버 기동시 읽혀진다.
 
 ```markup
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->

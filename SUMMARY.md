@@ -266,5 +266,6 @@
     * [Member/login.test : Spring, Java, MyBatis](java-study/1-days/untitled-34/untitled.md)
   * [76 Days -](java-study/1-days/untitled-37/README.md)
     * [HelloBean : 결합도를 낮추는 코드](java-study/1-days/untitled-37/hellobean.md)
+    * [Java : Java - @ \(O\), xml \(X\)](java-study/1-days/untitled-37/java-java-o-xml-x.md)
   * [Untitled](java-study/1-days/untitled-35.md)
 
