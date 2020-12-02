@@ -231,6 +231,10 @@ public class AppContext {
 * 주의할점은 메서드 이름이 호출시 불려지는 이름과 같아야 한다는 것이다. 메서드 이름이 다르면 ApplicationContext, BeanFactory가 메서드를 찾을 수 없다.
 * return에 **'new'**가 온다. 인스턴스화와 비슷한 역할을 수행하지만, 해당 객체는 개발자가 아닌 spring이 필요한때에 생성, 주입해주는 것이다. DeptController클래스의 생성자가 호출될때 클래스가 메모리에 로딩된다.
 
+### Java:Java로 web구현\(JVM\)
+
+{% page-ref page="java-java-o-xml-x.md" %}
+
 ## xml : xml
 
 ### 코드 : spring-data.xml
@@ -270,5 +274,5 @@ public class AppContext {
 
 * 이 코드가 바로 xml : xml 이다. spring과 MyBatis가 만나는 곳을 xml:xml로 처리했다.
 
-### 
+후기 : 점점 오류를 파악하고 코드를 수정하는 작업이 눈에 잘 들어오는것 같다. 약간 멘붕이 왔다가도 끝까지 코드를 노려보다보면 어느순간 딱 작동이 되는게 참 기분이 좋다.
 
