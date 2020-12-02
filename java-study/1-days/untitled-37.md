@@ -10,7 +10,7 @@ description: 2020.12.02 - 76일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
 * 사용 서버 - WAS : Tomcat
 
-## 필기
+## Spring
 
 ### Main메서드에서의 DI
 
@@ -36,4 +36,32 @@ description: 2020.12.02 - 76일차
 ### &lt;init-param&gt;
 
 * 해당 url요청이 들어올때마다 새로 읽혀야 하는 정보, 그래서 서블릿 태그 안에 작성된다.
+
+### 객체 조립 : &lt;bean&gt;, &lt;property&gt;
+
+```markup
+	<bean id="member-controller" class="com.spring.mvc1.MemberController">
+		<property name="methodNameResolver" ref="propertiesPathNameResolver"/>
+		<property name="memberLogic" ref="member-logic"/>
+	</bean>
+	
+	<bean id="simpleUrlHandlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/member/login.test">member-controller</prop>
+			</props>
+		</property>
+	</bean>  
+	    
+	<bean id="propertiesPathNameResolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/member/login.test">login</prop>
+			</props>
+		</property>
+	</bean> 
+```
+
+* &lt;property&gt;태그의  - name = setter메서드 이름 - ref = 인스턴스 변
+* 스프링컨테이너가 Controller에게 Logic객체를 주입하는 xml이다. - spring-core.jar가 필요한 객체를 대신 주입해준다.
 
