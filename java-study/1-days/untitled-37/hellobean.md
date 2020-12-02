@@ -28,7 +28,7 @@ public interface HelloBean {
 }
 ```
 
-### 코드 : HelloBeanImpl.java -구현체클래
+### 코드 : HelloBeanImpl.java -구현체클래스
 
 ```java
 package com.ch3;

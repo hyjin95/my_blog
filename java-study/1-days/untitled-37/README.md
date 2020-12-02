@@ -123,6 +123,12 @@ description: 2020.12.02 - 76일차
 
 ![](../../../.gitbook/assets/hellobean.png)
 
+* 인터페이스를 활용할때에는 구현체 클래스가 있어야한다.
+* 외부의 다른 클래스에서 인터페이스를 사용하려면 인스턴스화시 구현체클래스를 사용해야한다. 인터페이스클래스 인스턴스변수 = context.getBean\("메서드이름", 구현체클래스.class\); 반드시 구현체 클래스를 두번째 파라미터에 명시해 클래스를 구분하도록 한다.
+* 이렇게 인스턴스화를 하게되면 타입이 맞지않으므로 캐스팅 연산자가 필요하다.
+
+{% page-ref page="hellobean.md" %}
+
 ### xml 생성하기
 
 ![](../../../.gitbook/assets/11-0.png)
@@ -147,53 +153,15 @@ description: 2020.12.02 - 76일차
 
 ## Java : Java - @\(O\), xml\(X\)
 
-### web.xml에 어노테이션 추가하기
+### @어노테이션
 
-```markup
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-	<context-param>
-		<param-name>log4jConfigLocation</param-name>
-		<param-value>/WEB-INF/classes/log4j.properties</param-value>
-	</context-param>
-	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>
-			/WEB-INF/spring-service.xml
-		   ,/WEB-INF/spring-data.xml		
-		</param-value>
-	</context-param>
-	
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-	
-	<!-- Processes application requests -->
-	<servlet>
-		<servlet-name>appServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextClass</param-name>
-			<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
-		</init-param>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>com.di.AppContext</param-value><!-- 29번의 xml이 아닌 자바 클래스를 사용한다. java:java -->
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-		
-	<servlet-mapping>
-		<servlet-name>appServlet</servlet-name>
-		<url-pattern>*.test</url-pattern>
-	</servlet-mapping>
+![](../../../.gitbook/assets/.png%20%2842%29.png)
 
-</web-app>
-```
+* Spring에서는어노테이션을 활용하면 xml없이도 자바로만으로도 외부객체주입을 받을 수 있다.
+* 여태까지 Controller클래스가 MultiActionController클래스를 상속받았다면 이를 어노테이션으로 처리할 수 도 있다. - 상속을 받는 경우보다 제약이 없고 자유롭다.
+* 메서드나 클래스에 RequestMapping어노테이션을 사용해 url을 등록할 수 있다.
+
+### web.xml에 어노테이션 추가하기	
 
 ```markup
    <servlet>
@@ -226,6 +194,10 @@ description: 2020.12.02 - 76일차
    </servlet-mapping>
 ```
 
+* spring이 제공하는 AnnotationConfigWebApplicationContext 를 활용한다. - 서버가 어노테이션을 읽을 수 있도록 해준다.
+* Java에서 web.xml 하나에 모두 등록 하던 작업을 spring에서는 spring-servlet.xml과 spring-service.xml 그리고 spring-data.xml을 나누었듯이 AppContext도 여러개로 나누어서 처리할 수 있다.
+* 15-19번이 Configuration 어노테이션으로 등록된 클래스들 이다.
+
 ### 코드 : AppContext.java - Configuration
 
 ```java
@@ -238,18 +210,26 @@ import com.spring.mvc1.DeptController;
 import com.spring.mvc1.DeptDao;
 import com.spring.mvc1.DeptLogic;
 
-@Configuration//import할 수 있다. java:java에서만 사용할 수 있다.ㅅ 스프링에서 객체를 주입받을 수 있게 해준다.
+//import할 수 있다. java:java에서만 사용할 수 있다. 
+@Configuration
 public class AppContext {
 	
-	//<bean id="deptController" class="com.do.DeptController/>이 xml을 자바에서 어노테이션을 활용하면 할 수 있다.
-	@Bean//Spring이 관리할 수 있는 Bean으로 만들어준다.
-	public DeptController deptController() {//메서드 이름이 다르면 ApplicationContext, BeanFactory가 찾을 수 없다.
+	//<bean id="deptController" class="com.do.DeptController/> 
+	@Bean
+	public DeptController deptController() {
 		
-		//new를 spring이 해주므로 일반적으로 개발자가 직접하는 거랑은 차이가 있다. 생성자가 호출되면 deptController가 메모리에 로딩된다. 언제? 메서드가 호출될때네 spring이 주입해준다.=di
+		//new를 spring이 해주므로 일반적으로 개발자가 직접하는 것과는은 차이가 있다. 
+		//생성자가 호출되면 deptController가 메모리에 로딩된다. 
+		//언제? 메서드가 호출될때네 spring이 주입해준다.=di
 		return new DeptController();
 	}
 }
 ```
+
+* 이 클래스가 Bean을 관리하는 Cnfoguration역할을 하는 클래스이다. - spring에게서 객체를 주입받을 수 있도록 해준다.
+* 객체를 주입받을 메서드는 @Bean어노테이션을 붙인다. - xml에서 Bean태그를 활용해 클래스를 등록하는 것과 같다. - spring이 bean으로서 관리할 수 있게된다.
+* 주의할점은 메서드 이름이 호출시 불려지는 이름과 같아야 한다는 것이다. 메서드 이름이 다르면 ApplicationContext, BeanFactory가 메서드를 찾을 수 없다.
+* return에 **'new'**가 온다. 인스턴스화와 비슷한 역할을 수행하지만, 해당 객체는 개발자가 아닌 spring이 필요한때에 생성, 주입해주는 것이다. DeptController클래스의 생성자가 호출될때 클래스가 메모리에 로딩된다.
 
 ## xml : xml
 
@@ -287,6 +267,8 @@ public class AppContext {
 	</bean>			
 </beans>
 ```
+
+* 이 코드가 바로 xml : xml 이다. spring과 MyBatis가 만나는 곳을 xml:xml로 처리했다.
 
 ### 
 
