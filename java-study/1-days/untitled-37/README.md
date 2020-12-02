@@ -31,11 +31,17 @@ description: 2020.12.02 - 76일차
 1. 다형성 \(POJO\) - 선언부와 생성부가 다르다. - 개발자가 직접 작성한다.
 2. 디자인 패턴 \(Spring framwork\) - Spring 엔진이 도와준다.
 
+### 명세서 파일\(xsd, dtd\)
+
+* xml문서에 대한 명세서 역할을 하는 파일은 xsd파일이다. - xml문법을 따른다. - 변수를 여러개 정의할 수 있다.
+* html문서에 대한 명세서 역할을 하는 파일은 dtd파일이다. - 변수는 하나만 선언할 수 있다.
+* MyBatis에 대한 명세서 역할을 하는 파일은 dtd파일이다. - 변수는 하나만 선언할 수 있다.
+
 ## Spring
 
 ### Main메서드에서의 DI
 
-![](../../.gitbook/assets/2%20%2864%29.png)
+![](../../../.gitbook/assets/2%20%2864%29.png)
 
 * ApplicationContext - spring-context.jar
 * BeanFactory - spring-beans.jar
@@ -43,7 +49,7 @@ description: 2020.12.02 - 76일차
 
 ### HttpServelt과 DispatcherServelt
 
-![](../../.gitbook/assets/servlet.png)
+![](../../../.gitbook/assets/servlet.png)
 
 ### 연결
 
@@ -96,31 +102,29 @@ description: 2020.12.02 - 76일차
 
 ## Spring : HelloBean, 결합도를 낮추는 코드
 
+![](../../../.gitbook/assets/hellobean.png)
+
 ### xml 생성하기
 
-![](../../.gitbook/assets/11-0.png)
+![](../../../.gitbook/assets/11-0.png)
 
 * 패키지 선택 &gt; New &gt; Spring Bean Configuration File
 
-![](../../.gitbook/assets/11%20%282%29.png)
+![](../../../.gitbook/assets/11%20%282%29.png)
 
 * 파일이름.xml &gt; Next
 
-![](../../.gitbook/assets/11-1.png)
+![](../../../.gitbook/assets/11-1.png)
 
 * beans 체크 &gt; 버전에 맞는 xsd체크 &gt; Next
 
-![](../../.gitbook/assets/11-2.png)
+![](../../../.gitbook/assets/11-2.png)
 
 * 체크하지 않고 Finish
 
-![](../../.gitbook/assets/11-3.png)
+![](../../../.gitbook/assets/11-3.png)
 
 * 생성 확인
 
-### 명세서 파일
-
-* xml문서에 대한 명세서 역할을 하는 파일은 xsd파일이다. - xml문법을 따른다. - 변수를 여러개 정의할 수 있다.
-* html문서에 대한 명세서 역할을 하는 파일은 dtd파일이다. - 변수는 하나만 선언할 수 있다.
-* MyBatis에 대한 명세서 역할을 하는 파일은 dtd파일이다. - 변수는 하나만 선언할 수 있다.
+### 
 
