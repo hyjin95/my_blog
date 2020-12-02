@@ -54,7 +54,7 @@ description: 2020.12.02 - 76일차
 ### 연결
 
 * java : java - 동종간 연결 - Controller : Logic, Logic : Dao
-* java : xml\(web.xml\) - 이종간 연결 - Dao : MyBatis, Controller : Spring
+* java : xml - 이종간 연결 - xml = web.xml, spring-servlet,xml, spring-service.xml, spring-data.xml - Dao : MyBatis, Controller : Spring
 * xml : xml - 이종간 연결 - spring : MyBatis
 
 ### anntation
@@ -135,7 +135,7 @@ description: 2020.12.02 - 76일차
 
 * 생성 확인
 
-## xml없이 Spring에서 지원받
+## Java : Java - @\(O\), xml\(X\)
 
 ### 
 
