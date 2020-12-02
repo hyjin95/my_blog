@@ -35,6 +35,8 @@ description: 2020.12.02 - 76일차
 
 ### Main메서드에서의 DI
 
+![](../../.gitbook/assets/2%20%2864%29.png)
+
 * ApplicationContext - spring-context.jar
 * BeanFactory - spring-beans.jar
 * 공통점 - 객체\(Bean\) 생성을 관리해준다. \(A a = null;\)
