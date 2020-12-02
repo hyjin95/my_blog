@@ -21,7 +21,7 @@ description: 2020.12.02 - 76일차
 ### 연결
 
 * java : java - 동종간 연결 - Controller : Logic, Logic : Dao
-* java : xml - 이종간 연결 - Dao : MyBatis
+* java : xml - 이종간 연결 - Dao : MyBatis, Controller : Spring
 * xml : xml - 이종간 연결 - spring : MyBatis
 
 ### anntation
