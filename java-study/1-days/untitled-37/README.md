@@ -147,6 +147,31 @@ description: 2020.12.02 - 76일차
 
 ## Java : Java - @\(O\), xml\(X\)
 
+### 코드 : AppContext.java - Configuration
+
+```java
+package com.di;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.spring.mvc1.DeptController;
+import com.spring.mvc1.DeptDao;
+import com.spring.mvc1.DeptLogic;
+
+@Configuration//import할 수 있다. java:java에서만 사용할 수 있다.ㅅ 스프링에서 객체를 주입받을 수 있게 해준다.
+public class AppContext {
+	
+	//<bean id="deptController" class="com.do.DeptController/>이 xml을 자바에서 어노테이션을 활용하면 할 수 있다.
+	@Bean//Spring이 관리할 수 있는 Bean으로 만들어준다.
+	public DeptController deptController() {//메서드 이름이 다르면 ApplicationContext, BeanFactory가 찾을 수 없다.
+		
+		//new를 spring이 해주므로 일반적으로 개발자가 직접하는 거랑은 차이가 있다. 생성자가 호출되면 deptController가 메모리에 로딩된다. 언제? 메서드가 호출될때네 spring이 주입해준다.=di
+		return new DeptController();
+	}
+}
+```
+
 ## xml : xml
 
 ### 코드 : spring-data.xml
