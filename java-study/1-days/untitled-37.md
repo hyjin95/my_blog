@@ -18,6 +18,10 @@ description: 2020.12.02 - 76일차
 * BeanFactory - spring-beans.jar
 * 공통점 - 객체\(Bean\) 생성을 관리해준다. \(A a = null;\) - 결합도가 높아진다.
 
+### HttpServelt과 DispatcherServelt
+
+![](../../.gitbook/assets/servlet.png)
+
 ### 연결
 
 * java : java - 동종간 연결 - Controller : Logic, Logic : Dao
