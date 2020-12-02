@@ -94,9 +94,9 @@ description: 2020.12.02 - 76일차
 * xml에 클래스를 등록하고, 클래스를 작성한다.
 * WAS가 DispatcherServlet과 필요한 시점에 객체를 주입해 메서드를 호출한다.
 
-## Spring : 
+## Spring : HelloBean, 결합도를 낮추는 코드
 
-### xml
+### xml 생성하기
 
 ![](../../.gitbook/assets/11-0.png)
 
@@ -113,6 +113,10 @@ description: 2020.12.02 - 76일차
 ![](../../.gitbook/assets/11-2.png)
 
 * 체크하지 않고 Finish
+
+![](../../.gitbook/assets/11-3.png)
+
+* 생성 확인
 
 ### 명세서 파일
 
