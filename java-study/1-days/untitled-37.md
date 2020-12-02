@@ -18,13 +18,20 @@ description: 2020.12.02 - 76일차
 * @Override, 메서드를 재정의해서 사용할 수 있다.
 * 다형성 필요조건 - 선언부 변수이름 = 생성부 - 인터페이스 = 구현클래스 - List list = new ArrayList\( \); - Map map = new HashMap\( \);
 
+### 인터페이스와 추상클래스 사용 의의
+
+* 기능의 명세서와 같은 역할을 한다.
+* 인터페이스와 추상클래스 내부의 추상 메서드를 @Override해서 사용하므로 규칙을 지키기 쉬워진다.
+* 유지보수에도 유리하다.
+* 코드 작성이 쉬워진다.
+
 ## Spring
 
 ### Main메서드에서의 DI
 
 * ApplicationContext - spring-context.jar
 * BeanFactory - spring-beans.jar
-* 공통점 - 객체\(Bean\) 생성을 관리해준다. \(A a = null;\) - 결합도가 높아진다.
+* 공통점 - 객체\(Bean\) 생성을 관리해준다. \(A a = null;\) - 결합도를 높여준다.
 
 ### HttpServelt과 DispatcherServelt
 
