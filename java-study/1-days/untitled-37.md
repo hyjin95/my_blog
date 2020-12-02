@@ -31,7 +31,7 @@ description: 2020.12.02 - 76일차
 
 * ApplicationContext - spring-context.jar
 * BeanFactory - spring-beans.jar
-* 공통점 - 객체\(Bean\) 생성을 관리해준다. \(A a = null;\) - 결합도를 높여준다.
+* 공통점 - 객체\(Bean\) 생성을 관리해준다. \(A a = null;\)
 
 ### HttpServelt과 DispatcherServelt
 
