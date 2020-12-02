@@ -16,7 +16,8 @@ description: 2020.12.02 - 76일차
 
 * 객체지향 프로그램의 핵심으로 재사용성을 높여주고 유지보수에 유리하다.
 * @Override, 메서드를 재정의해서 사용할 수 있다.
-* 다형성 필요조건 - 선언부 변수이름 = 생성부 - 인터페이스 = 구현클래스 - List list = new ArrayList\( \); - Map map = new HashMap\( \);
+* 다형성 필요조건 - 선언부 변수이름 = 생성부 - 인터페이스 = 구현클래스
+* 예시 - List list = new ArrayList\( \); - Map map = new HashMap\( \);
 
 ### 인터페이스와 추상클래스 사용 의의
 
