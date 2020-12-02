@@ -1,4 +1,4 @@
-# Java : Java - @ \(O\), xml \(X\)
+# Dept - Java : Java, @ \(O\), xml \(X\)
 
 ## com.di
 
