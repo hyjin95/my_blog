@@ -54,7 +54,7 @@ description: 2020.12.02 - 76일차
 ### 연결
 
 * java : java - 동종간 연결 - Controller : Logic, Logic : Dao
-* java : xml - 이종간 연결 - Dao : MyBatis, Controller : Spring
+* java : xml\(web.xml\) - 이종간 연결 - Dao : MyBatis, Controller : Spring
 * xml : xml - 이종간 연결 - spring : MyBatis
 
 ### anntation
@@ -100,7 +100,16 @@ description: 2020.12.02 - 76일차
 * xml에 클래스를 등록하고, 클래스를 작성한다.
 * WAS가 DispatcherServlet과 필요한 시점에 객체를 주입해 메서드를 호출한다.
 
+### Spring제공 골격 받기
+
+* java를 통해 지원받기
+* xml을 통해 지원받기
+* properties파일을 통해 지원받기
+* 여러가지 상황이 연출 될 수 있다. - java&java, java&xml\(web.xml\), xml,xml, 안드로이드&java - 여러 장치에서 해당 서비스를 동일하게 제공받고 싶어 한다.
+
 ## Spring : HelloBean, 결합도를 낮추는 코드
+
+### 결합도를 낮추는 코드
 
 ![](../../../.gitbook/assets/hellobean.png)
 
@@ -125,6 +134,8 @@ description: 2020.12.02 - 76일차
 ![](../../../.gitbook/assets/11-3.png)
 
 * 생성 확인
+
+## xml없이 Spring에서 지원받
 
 ### 
 
