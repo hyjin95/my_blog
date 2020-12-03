@@ -1,4 +1,4 @@
-# HelloBean : 결합도를 낮추는 코드
+# HelloBean : 결합도를 낮추는 코드 - spring
 
 ### 코드 : applicationContext.xml
 
