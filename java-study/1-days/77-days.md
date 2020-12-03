@@ -37,7 +37,7 @@ description: 2020.12.03 - 77일차
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.net.URLEncoder" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,12 +48,16 @@ description: 2020.12.03 - 77일차
 <!-- 쿠키API를 제공한다. 클래스를 제공해주는 것 -->
 <%
 	Cookie c_dap1 = new Cookie("c_dap1", "2");//string, string만 가용
-	c_dap1.setMaxAge(60);//시험시간
+	c_dap1.setMaxAge(60);//시험시간, 
 	
-	Cookie c_name = new Cookie("c_name", URLEncoder.encode("김유신"));
+	Cookie c_dap2 = new Cookie("c_dap2", "5");
+	c_dap2.setMaxAge(60);
+	
+	Cookie c_name = new Cookie("c_name", URLEncoder.encode("김유신","utf-8"));
 	c_name.setMaxAge(60);
 	
 	response.addCookie(c_dap1);//클라이언트에게 응답으로 내보내기, 쿠키 생성완료
+	response.addCookie(c_dap2);
 	response.addCookie(c_name);
 %>
 </body>
@@ -62,6 +66,7 @@ description: 2020.12.03 - 77일차
 
 * 자바코드로 쿠키를 생성하기 위해 jsp 페이지를 활용했다.
 * cookie는 text로 저장되기 때문에 \(string, string\)만 가용한다.
+* 14번 코드로 인해  생성되고 60초가 지나면 cookie는 사라진다.
 * 브라우저가 화면을 다운로드 할때, cookie는 결정되어 있다. 서버에서  response로 쿠키값을 보내면, client의 local에 text로 저장된다.
 
 ### 조회코드 : cookieRead.jsp
@@ -82,12 +87,17 @@ description: 2020.12.03 - 77일차
 	jsp페이지마다 req, res객체가 서로 다르다.-->
 <%
 	Cookie c_daps[] = request.getCookies();
-	out.print(c_daps[0].getValue()+", "+c_daps[0].getName());
-	
 	for(int i=0;i<c_daps.length;i++){
+		if(c_daps[i].getName().equals("c_name")){
+		 out.print(URLDecoder.decode(c_daps[i].getValue(),"utf-8")+", "+c_daps[i].getName());
+		out.print("<br>");
+		}
+		else{
 		out.print(c_daps[i].getValue()+", "+c_daps[i].getName());		
 		out.print("<br>");
+		}
 	}
+		//out.print(c_daps[0].getValue()+", "+c_daps[0].getName());	
 %>
 </body>
 </html>
@@ -99,6 +109,8 @@ description: 2020.12.03 - 77일차
 * 브라우저가 화면에 값을 출력할때, 쿠키는 이미 결정된 정보이므로 화면에 출력후 클라이언트에서 쿠키 값이 변경되면 반영할 수 없다. 반드시 페이지 이동\(새로고침\)이 있어야 동기화된다.
 * for문으로 출력시 sessionID까지 출력되니 주의하자. 배열의 마지막에 출력된다.
 * 담긴 값이 하나일때\(c\_daps\[0\]만 존재할때\) c\_daps\[0\]을 cookieDelete.jsp 페이지로 삭제한 후에 cookieRead.jsp를 실행해보면 16번에서도 sessionID가 출력된다.
+
+### 확인하기
 
 ### 삭제코드 : cookieDelete.jsp
 
