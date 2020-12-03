@@ -268,7 +268,9 @@
     * [HelloBean : 결합도를 낮추는 코드 - spring](java-study/1-days/untitled-37/hellobean.md)
     * [Dept - Java : Java, @ \(O\), xml \(X\) - spring](java-study/1-days/untitled-37/java-java-o-xml-x.md)
   * [77 Days -](java-study/1-days/77-days/README.md)
-    * [onLineTest : cookie와 form페이지 이동](java-study/1-days/77-days/onlinetest-cookie-form.md)
+    * [onLineTest : cookie와 form페이지 이동](java-study/1-days/77-days/onlinetest-cookie-form/README.md)
+      * [코드](java-study/1-days/77-days/onlinetest-cookie-form/undefined.md)
+      * [실행](java-study/1-days/77-days/onlinetest-cookie-form/undefined-1.md)
     * [Eclipse - Tomcat : 도메인 설정하기](java-study/1-days/77-days/eclipse-tomcat.md)
   * [Untitled](java-study/1-days/untitled-35.md)
 
