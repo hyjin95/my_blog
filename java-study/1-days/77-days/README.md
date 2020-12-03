@@ -32,8 +32,8 @@ description: 2020.12.03 - 77일차
 
 ### 문제페이지의 선택값 유지
 
-* hidden  
-  - cookie가 없이 JAVA로만 할을때 사용하는 방법  
+* &lt;input type="hidden"&gt;  
+  - cookie가 없을때 사용하는 방법  
   - 문제페이지마다 hidden성격을 갖는 태그를 활용해 사용자가 선택한 답안을 저장한다.  
   - 1번문제에는 hidden태그가 하나, 2번문제에는 hidden태그가 두개 필요하다  
   - 단점 : 유지할 값이 많을 수록 hidden태그가 많아진다.
