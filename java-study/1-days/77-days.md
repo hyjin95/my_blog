@@ -30,7 +30,7 @@ description: 2020.12.03 - 77일차
 
 ![](../../.gitbook/assets/.png%20%2843%29.png)
 
-## 웹 페이지 쿠키 생성하기 : jsp
+## 웹 페이지에서 쿠키 생성하기 : jsp
 
 ### 생성코드 : cookieMake.jsp
 
