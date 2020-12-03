@@ -139,5 +139,7 @@ description: 2020.12.03 - 77일차
 
 ### setMaxAge\( \)
 
-* 괄호안에는 쿠키의 유효시간을 작성한다. --초단위 cookie1.setMaxAge\(60\); : cookie1이라는 cookie는 생성되고 60초후에 사라진다.
+* 괄호안에는 쿠키의 유효시간을 작성한다. --초단위
+* 양수 입력시 cookie1.setMaxAge\(60\); : cookie1이라는 cookie는 생성되고 60초후에 사라진다.
+* 음수 입력시에는 브라우저를 닫으면 cookie가 사라진다.
 
