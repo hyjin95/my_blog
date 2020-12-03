@@ -30,7 +30,7 @@ description: 2020.12.03 - 77일차
 
 ![](../../../.gitbook/assets/.png%20%2843%29.png)
 
-### 문제페이지의 선택값 유지
+### 문제페이지의 선택값 유지하기
 
 * &lt;input type="hidden"&gt;  
   - cookie가 없을때 사용하는 방법  
@@ -41,6 +41,8 @@ description: 2020.12.03 - 77일차
   -&gt; 쿠키의 생성배경, 쿠키에 담자
 
 * cookie - 모든페이지에 앞 페이지에 대한 태그를 작성할 필요없이 해당 페이지에서 선택한 값만 cookie를 생성하는 코드를 작성하면 끝이다.
+* testForm1.html의 답이 testForm2.jsp에서 cookie에 저장한다. 그러므로 문제는 testForm5.jsp에서 끝나지만 5번째 문제의 cookie를 생성해주는 testForm6.jsp가 필요하다. testForm6.jsp에는 쿠키 생성 코드만 있으면된다.
+* 여기서 문제는 testForm5.jsp에 있는 제출 버튼이다. testForm6.jsp에서 쿠키가 생성된 다음에 제출버튼을 누를 수 있게 되어야 할 것이다.
 
 ## 웹 페이지에서 쿠키 생성하기 : jsp
 
