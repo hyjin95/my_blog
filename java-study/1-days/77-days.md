@@ -112,6 +112,8 @@ description: 2020.12.03 - 77일차
 
 ### 확인하기
 
+![](../../.gitbook/assets/.png%20%2844%29.png)
+
 ### 삭제코드 : cookieDelete.jsp
 
 ```markup
@@ -134,4 +136,8 @@ description: 2020.12.03 - 77일차
 ```
 
 * 이 페이지를 실행한 후, 다시 cookieRead.jsp를 새로고침해보면 삭제된 것을 확인할 수 있다.
+
+### setMaxAge\( \)
+
+* 괄호안에는 쿠키의 유효시간을 작성한다. --초단위 cookie1.setMaxAge\(60\); : cookie1이라는 cookie는 생성되고 60초후에 사라진다.
 
