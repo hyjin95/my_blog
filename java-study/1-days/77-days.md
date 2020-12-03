@@ -30,3 +30,59 @@ description: 2020.12.03 - 77일차
 
 ![](../../.gitbook/assets/.png%20%2843%29.png)
 
+## 웹 페이지에서 쿠키 생성하기 : jsp
+
+### 생성코드 : cookieMake.jsp
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>웹 서버에서 쿠키 생성하기</title>
+</head>
+<body>
+<!-- 쿠키API를 제공한다. 클래스를 제공해주는 것 -->
+<%
+	Cookie c_dap1 = new Cookie("c_dap1", "2");//string, string만 가용
+	c_dap1.setMaxAge(60);//시험시간
+	response.addCookie(c_dap1);//클라이언트에게 응답으로 내보내기, 쿠키 생성완료
+%>
+</body>
+</html>
+```
+
+* 자바코드로 쿠키를 생성하기 위해 jsp 페이지를 활용했다.
+* cookie는 text로 저장되기 때문에 \(string, string\)만 가용한다.
+* 브라우저가 화면을 다운로드 할때, cookie는 결정되어 있다. 서버에서  response로 쿠키값을 보내면, client의 local에 text로 저장된다.
+
+### 확인코드 : cookieRead.jsp
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>쿠키에 담긴 정보 읽어오기</title>
+</head>
+<body>
+<!-- 생성한 쿠키 꺼내 확인해보기 -->
+<!-- 답이 여러개 일 것이니까 객체배열이 필요하다.
+	서버가 클라이언트에게 저장되어있는 문자열을 요청하는 것 : request
+	jsp페이지마다 req, res객체가 서로 다르다.-->
+<%
+	Cookie c_daps[] = request.getCookies();
+	out.print(c_daps[0].getValue()+", "+c_daps[0].getName());
+%>
+</body>
+</html>
+```
+
+* 쿠키를 화면에 찍어보는 페이지
+* 쿠키가 여러개라면 배열로 가져와야한다. 클라이언트 local에 저장되어 있는 쿠키를 가져오기 위해 서버는 request, 요청을 해야한다.
+* 쿠키 값 : c\_daps\[0\].getValue\( \); __쿠키 이름 : c\_daps\[0\].getName\( \);
+
