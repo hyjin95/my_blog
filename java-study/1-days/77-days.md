@@ -58,7 +58,7 @@ description: 2020.12.03 - 77일차
 * cookie는 text로 저장되기 때문에 \(string, string\)만 가용한다.
 * 브라우저가 화면을 다운로드 할때, cookie는 결정되어 있다. 서버에서  response로 쿠키값을 보내면, client의 local에 text로 저장된다.
 
-### 확인코드 : cookieRead.jsp
+### 조회코드 : cookieRead.jsp
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -77,6 +77,11 @@ description: 2020.12.03 - 77일차
 <%
 	Cookie c_daps[] = request.getCookies();
 	out.print(c_daps[0].getValue()+", "+c_daps[0].getName());
+	
+	for(int i=0;i<c_daps.length;i++){
+		out.print(c_daps[i].getValue()+", "+c_daps[i].getName());		
+		out.print("<br>");
+	}
 %>
 </body>
 </html>
@@ -86,4 +91,29 @@ description: 2020.12.03 - 77일차
 * 쿠키가 여러개라면 배열로 가져와야한다. 클라이언트 local에 저장되어 있는 쿠키를 가져오기 위해 서버는 request, 요청을 해야한다.
 * 쿠키 값 : c\_daps\[0\].getValue\( \); __쿠키 이름 : c\_daps\[0\].getName\( \);
 * 브라우저가 화면에 값을 출력할때, 쿠키는 이미 결정된 정보이므로 화면에 출력후 클라이언트에서 쿠키 값이 변경되면 반영할 수 없다. 반드시 페이지 이동\(새로고침\)이 있어야 동기화된다.
+* for문으로 출력시 sessionID까지 출력되니 주의하자. 배열의 마지막에 출력된다.
+* 담긴 값이 하나일때\(c\_daps\[0\]만 존재할때\) c\_daps\[0\]을 cookieDelete.jsp 페이지로 삭제한 후에 cookieRead.jsp를 실행해보면 16번에서도 sessionID가 출력된다.
+
+### 삭제코드 : cookieDelete.jsp
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>쿠키 삭제하기</title>
+</head>
+<body>
+<%
+	Cookie c_dap1 = new Cookie("c_dap1", "");
+	c_dap1.setMaxAge(0);
+	response.addCookie(c_dap1);
+%>
+</body>
+</html>
+```
+
+* 이 페이지를 실행한 후, 다시 cookieRead.jsp를 새로고침해보면 삭제된 것을 확인할 수 있다.
 
