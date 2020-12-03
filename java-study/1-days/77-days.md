@@ -68,6 +68,7 @@ description: 2020.12.03 - 77일차
 * cookie는 text로 저장되기 때문에 \(string, string\)만 가용한다.
 * 14번 코드로 인해  생성되고 60초가 지나면 cookie는 사라진다.
 * 브라우저가 화면을 다운로드 할때, cookie는 결정되어 있다. 서버에서  response로 쿠키값을 보내면, client의 local에 text로 저장된다.
+* 19번에서는 한글 정보를 담기위해  URLEncoder클래스를 사용했다.
 
 ### 조회코드 : cookieRead.jsp
 
@@ -109,6 +110,7 @@ description: 2020.12.03 - 77일차
 * 브라우저가 화면에 값을 출력할때, 쿠키는 이미 결정된 정보이므로 화면에 출력후 클라이언트에서 쿠키 값이 변경되면 반영할 수 없다. 반드시 페이지 이동\(새로고침\)이 있어야 동기화된다.
 * for문으로 출력시 sessionID까지 출력되니 주의하자. 배열의 마지막에 출력된다.
 * 담긴 값이 하나일때\(c\_daps\[0\]만 존재할때\) c\_daps\[0\]을 cookieDelete.jsp 페이지로 삭제한 후에 cookieRead.jsp를 실행해보면 16번에서도 sessionID가 출력된다.
+* 18번에서 한글정보를 꺼내기위해 URLDecoder클래스를 사용했다.
 
 ### 확인하기
 
