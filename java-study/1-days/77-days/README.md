@@ -171,5 +171,5 @@ description: 2020.12.03 - 77일차
 
 {% page-ref page="eclipse-tomcat.md" %}
 
-후기 : 오늘은 수능날..화이팅!
+후기 : 오늘은 수능날..화이팅! 김치전이 먹고싶은 날
 
