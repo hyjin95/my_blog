@@ -45,6 +45,10 @@ description: 2020.12.03 - 77일차
 * testForm1.html의 답이 hidden태그에 담겨 testForm2.jsp에서 cookie에 저장한다. 그러므로 문제는 testForm5.jsp에서 끝나지만 5번째 문제의 cookie를 생성해주는 testForm6.jsp가 필요하다.  testForm6.jsp에는 쿠키 생성 코드만 있으면된다.
 * 여기서 문제는 testForm5.jsp에 있는 제출 버튼이다. testForm6.jsp에서 쿠키가 생성된 다음에 제출버튼을 누를 수 있게 되어야 할 것이다.
 
+### onLineTest : cookie와 form페이지 이동
+
+{% page-ref page="onlinetest-cookie-form/" %}
+
 ## 웹 페이지에서 쿠키 생성하기 : jsp
 
 ### 생성코드 : cookieMake.jsp
