@@ -267,6 +267,7 @@
   * [76 Days - xml:xml, java:java, 다형성, 인터페이스, 어노테이션, 인스턴스화, 클래스와 xml, 결합도를 낮추는 코드 작성하기](java-study/1-days/untitled-37/README.md)
     * [HelloBean : 결합도를 낮추는 코드](java-study/1-days/untitled-37/hellobean.md)
     * [Dept - Java : Java, @ \(O\), xml \(X\)](java-study/1-days/untitled-37/java-java-o-xml-x.md)
-  * [77 Days -](java-study/1-days/77-days.md)
+  * [77 Days -](java-study/1-days/77-days/README.md)
+    * [Eclipse - Tomcat : 도메인 설정하기](java-study/1-days/77-days/eclipse-tomcat.md)
   * [Untitled](java-study/1-days/untitled-35.md)
 
