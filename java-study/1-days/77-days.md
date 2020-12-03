@@ -37,6 +37,7 @@ description: 2020.12.03 - 77일차
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ page import="java.net.URLEncoder" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +49,12 @@ description: 2020.12.03 - 77일차
 <%
 	Cookie c_dap1 = new Cookie("c_dap1", "2");//string, string만 가용
 	c_dap1.setMaxAge(60);//시험시간
+	
+	Cookie c_name = new Cookie("c_name", URLEncoder.encode("김유신"));
+	c_name.setMaxAge(60);
+	
 	response.addCookie(c_dap1);//클라이언트에게 응답으로 내보내기, 쿠키 생성완료
+	response.addCookie(c_name);
 %>
 </body>
 </html>
