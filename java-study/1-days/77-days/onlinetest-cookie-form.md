@@ -1,6 +1,6 @@
 # onLineTest : cookie와 form페이지 이동
 
-### 코드 : onLineTest.
+### 코드 : onLineTest.html
 
 ```markup
 <!DOCTYPE html>
