@@ -28,7 +28,7 @@ description: 2020.12.03 - 77일차
 
 ### Page Flow Chart
 
-![](../../../.gitbook/assets/.png%20%2843%29.png)
+![](../../../.gitbook/assets/dd.png)
 
 ### 문제페이지의 선택값 유지하기
 
