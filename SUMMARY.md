@@ -267,7 +267,7 @@
   * [76 Days - xml:xml, java:java, 다형성, 인터페이스, 어노테이션, 인스턴스화, 클래스와 xml, 결합도를 낮추는 코드 작성하기](java-study/1-days/untitled-37/README.md)
     * [HelloBean : 결합도를 낮추는 코드 - spring](java-study/1-days/untitled-37/hellobean.md)
     * [Dept - Java : Java, @ \(O\), xml \(X\) - spring](java-study/1-days/untitled-37/java-java-o-xml-x.md)
-  * [77 Days -](java-study/1-days/77-days/README.md)
+  * [77 Days - 온라인 시험사전 정의서, 구현, 쿠키와 도메인, form페이지 이동, cookie값 유지](java-study/1-days/77-days/README.md)
     * [onLineTest : cookie와 form페이지 이동](java-study/1-days/77-days/onlinetest-cookie-form/README.md)
       * [코드](java-study/1-days/77-days/onlinetest-cookie-form/undefined.md)
       * [실행](java-study/1-days/77-days/onlinetest-cookie-form/undefined-1.md)
