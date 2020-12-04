@@ -28,7 +28,7 @@ description: 2020.12.04 - 78일차
 
 1. web.xml 문서에 ActionServlet 등록
 2. mvc2.online.ActionServlet 추가
-3. ModelAndView 클래스 추 - addOnject메서드와 serViewName추가
+3. ModelAndView 클래스 추가\(모방해보기\) - addObject메서드와 setViewName추가
 4. MemberController와 TestController추가
 5. 업무 컨트롤러에는 응답페이지의 이름만 정하고 페이지 이동에 대한 지시는 ActionServlet에서 나간다.
 
