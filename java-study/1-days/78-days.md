@@ -12,13 +12,14 @@ description: 2020.12.04 - 78일차
 
 ## 클래스 조립
 
-### 클래스 조립의 3단
+### 클래스 조립의 3단계
 
 ![](../../.gitbook/assets/.png%20%2843%29.png)
 
 ### Step2 : 1-2
 
 1. ActionForward를 ModelAndView로 바꿔본다.
-2. Action인터페이스에서 새로운 인터페이스를 세운다. Controller.java
+2. Action인터페이스에서 새로운 인터페이스를 세운다. Controller.java --Interface
 3. SimpleUrlHandlerMapping대신 ControllerMapper 클래스를 설계해본다.
+4. url : \*.sp2 -&gt; ActionServlet.java가 인터셉트하게 한다.
 
