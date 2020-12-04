@@ -22,4 +22,5 @@ description: 2020.12.04 - 78일차
 2. Action인터페이스에서 새로운 인터페이스를 세운다. Controller.java --Interface
 3. SimpleUrlHandlerMapping대신 ControllerMapper 클래스를 설계해본다.
 4. url : \*.sp2 -&gt; ActionServlet.java가 인터셉트하게 한다. ActionServlet = FrontServlet HttpServlet을 상속받는다.
+5. Json형식을 출력하는 JsonController.java를 설계해본다.
 
