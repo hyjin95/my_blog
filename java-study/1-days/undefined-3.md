@@ -7,7 +7,7 @@ description: 2020.08.22 ~ 2020.09.16
 ## 영화예매프로그램 만들기
 
 * 조원 : 김호철, 이주성, 한영진
-* 분야 나누기 - UI : 김호철 - EVENT : 이주성 - LOGIC & DB : 한영진
+* 분야 나누기 - UI : 김호철 - EVENT & 조립 : 이주성 - LOGIC & DB : 한영진
 
 {% file src="../../.gitbook/assets/\_-.xlsx" caption="설계 EXCEL" %}
 
