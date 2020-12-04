@@ -32,3 +32,13 @@ description: 2020.12.04 - 78일차
 4. MemberController와 TestController추가 - 로그인 업무, 시험 업무
 5. 업무 컨트롤러에는 응답페이지의 이름만 정하고 페이지 이동에 대한 지시는 ActionServlet에서 나간다.
 
+## Spring
+
+### xml분
+
+```markup
+<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+```
+
