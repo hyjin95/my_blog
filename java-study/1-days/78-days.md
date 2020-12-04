@@ -12,6 +12,10 @@ description: 2020.12.04 - 78일차
 
 ## 클래스 조립
 
+### 클래스 조립의 3단계
+
+![](../../.gitbook/assets/.png%20%2843%29.png)
+
 ### Step2 : 1-2
 
 1. ActionForward를 ModelAndView로 바꿔본다.
