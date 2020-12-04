@@ -26,7 +26,8 @@ description: 2020.12.04 - 78일차
 
 ### 작업 지시서
 
-1. web.xml 문서에 ActionServlet을 등록한다.
+1. web.xml 문서에 ActionServlet 등록
 2. mvc2.online.ActionServlet 추가
-3. ModelAndView
+3. ModelAndView 클래스 추 - addOnject메서드와 serViewName추가
+4. MemberController와 TestController추가
 
