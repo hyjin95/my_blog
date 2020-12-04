@@ -24,3 +24,9 @@ description: 2020.12.04 - 78일차
 4. url : \*.sp2 -&gt; ActionServlet.java가 인터셉트하게 한다. ActionServlet = FrontServlet HttpServlet을 상속받는다.
 5. Json형식을 출력하는 JsonController.java를 설계해본다.
 
+### 작업 지시서
+
+1. web.xml 문서에 ActionServlet을 등록한다.
+2. mvc2.online.ActionServlet 추가
+3. ModelAndView
+
