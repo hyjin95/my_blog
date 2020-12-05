@@ -14,11 +14,11 @@ description: 2020.12.04 - 78일차
 
 ### 클래스 조립의 3단계
 
-![](../../.gitbook/assets/.png%20%2843%29.png)
+![](../../../.gitbook/assets/.png%20%2843%29.png)
 
 ### Controller\(I\)와 ControllerMapper클래스
 
-![](../../.gitbook/assets/2%20%2866%29.png)
+![](../../../.gitbook/assets/2%20%2866%29.png)
 
 ### Step2 : 1-2
 
@@ -40,7 +40,7 @@ description: 2020.12.04 - 78일차
 
 ### xml분리
 
-![](../../.gitbook/assets/3%20%2850%29.png)
+![](../../../.gitbook/assets/3%20%2850%29.png)
 
 ### AOP프레임워크
 
@@ -56,4 +56,10 @@ description: 2020.12.04 - 78일차
 ```
 
 * web.xml에 작성되는 클래스로, xml문서를 여러개 작성할 수 있게 해주는 클래스이다.
+
+## Final Project
+
+* 3조 : 김우중, 김호철, 김환이, 양혜린, 윤주연, 한영진
+
+후기 : 마지막 팀 프로젝트의 팀이 정해졌다. 각자 맡은 바를 열심히해서 많은 것을 얻어 갈 수 있는 경험이 되었으면 좋겠다.
 
