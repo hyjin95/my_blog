@@ -36,6 +36,8 @@ description: 2020.12.04 - 78일차
 4. MemberController와 TestController추가 - 로그인 업무, 시험 업무
 5. 업무 컨트롤러에는 응답페이지의 이름만 정하고 페이지 이동에 대한 지시는 ActionServlet에서 나간다.
 
+{% page-ref page="untitled-38.md" %}
+
 ## Spring
 
 ### xml분리
@@ -60,6 +62,8 @@ description: 2020.12.04 - 78일차
 ## Final Project
 
 * 3조 : 김우중, 김호철, 김환이, 양혜린, 윤주연, 한영진
+
+{% file src="../../../.gitbook/assets/final\_project.xlsx" %}
 
 후기 : 마지막 팀 프로젝트의 팀이 정해졌다. 각자 맡은 바를 열심히해서 많은 것을 얻어 갈 수 있는 경험이 되었으면 좋겠다.
 
