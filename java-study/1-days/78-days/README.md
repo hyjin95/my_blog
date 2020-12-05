@@ -2,7 +2,7 @@
 description: 2020.12.04 - 78일차
 ---
 
-# 78 Days -
+# 78 Days - onLineTest : 클래스조립, 인터페이스, xml분리, Final Project시작
 
 ### 사용 프로그램
 
