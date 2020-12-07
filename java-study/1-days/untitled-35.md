@@ -22,3 +22,9 @@ description: 2020.12.07 - 79일차
 * 공통점 - forward
 * 차이점 - JSON : 정보만\(dataSet\) - HTML : 문제지\(View\)
 
+## Final\_project
+
+### 공정표 및 주제선정, 업무분담
+
+{% file src="../../.gitbook/assets/bobeat\_project.xlsx" %}
+
