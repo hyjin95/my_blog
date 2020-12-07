@@ -274,6 +274,6 @@
     * [Eclipse - Tomcat : 도메인 설정하기](java-study/1-days/77-days/eclipse-tomcat.md)
   * [78 Days - onLineTest : 클래스조립, 인터페이스, xml분리, Final Project시작](java-study/1-days/78-days/README.md)
     * [onLineTest](java-study/1-days/78-days/untitled-38.md)
-  * [Untitled](java-study/1-days/untitled-35.md)
+  * [79Day -](java-study/1-days/untitled-35.md)
   * [Untitled](java-study/1-days/untitled-38.md)
 
