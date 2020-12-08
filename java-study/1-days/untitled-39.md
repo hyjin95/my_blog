@@ -67,6 +67,18 @@ description: 2020.12.08 - 80일차
 * 어느 Controller클래스와 매핑할지 xml또는 java에서 정해준다.
 * SimpleUrlHandlerMapping의 &lt;property&gt;태그속성의 이름은 set메서드 이름과 일치해야 한다.
 
+### java : java
+
+* Controller - Logic - Dao
+
+### java : xml
+
+* Dao - SqlSessionTemplate
+
+### xml : xml
+
+* sqlSessionFactoryBean - sqlSessionTemplate
+
 ## Final Project
 
 ### 개발
