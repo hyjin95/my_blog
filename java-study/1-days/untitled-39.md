@@ -79,7 +79,9 @@ description: 2020.12.08 - 80일차
 
 * sqlSessionFactoryBean - sqlSessionTemplate
 
-### Spring3 : pom.xml추가
+## HikariCP - DB, spring3
+
+### 1. pom.xml에 dependency추가
 
 ```markup
 		<!-- HikariCP 3.3.1 -->
@@ -115,10 +117,47 @@ description: 2020.12.08 - 80일차
 		</dependency>
 ```
 
-## HikariCP - DB
+### 2. root-context.xml위치 설정
 
 * root-context.xml에서 다른 의존성 주입도 받기위해 appServlet폴더로 이동한다. local에서 접근할 수 있도록 context.xml과 같은 경로상에 둔다.
+* xml : xml으로의 객체 주입이 일어나야 한다.
 
+### 코드 : root-context.xml
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@192.168.0.187:1521:orcl11"/>
+		<property name="username" value="scott"/>
+		<property name="password" value="tiger"/>
+	</bean>
+	
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig"/>	
+	</bean>
+	
+	<!-- myBatis를 사용할 수 있도록 spring에서 sqlSessionFactory를 제공한다. -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"><!-- driver class이름 -->
+		<property name="configLocation" value="WEB-INF/mybatis-config.xml"/>
+		<property name="dataSource" ref="data-source-target"/>
+	</bean>
+	
+	<!-- myBatis를 사용할 수 있도록 spring에서 sqlSessionTemplate=sqlSesion를 제공한다. 위 bean과 의존관계에 있다. -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"/>
+	</bean>
+		
+</beans>
+```
+
+* 
 ## Final Project
 
 ### 개발
