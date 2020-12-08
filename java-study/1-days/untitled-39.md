@@ -79,6 +79,42 @@ description: 2020.12.08 - 80일차
 
 * sqlSessionFactoryBean - sqlSessionTemplate
 
+### Spring3 : pom.xml추가
+
+```markup
+		<!-- HikariCP 3.3.1 -->
+		<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+		<dependency>
+		    <groupId>com.zaxxer</groupId>
+		    <artifactId>HikariCP</artifactId>
+		    <version>3.3.1</version>
+		</dependency>
+		
+		<!-- myBatis 3.4.6 -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.4.6</version>
+		</dependency>
+		
+		<!-- myBatis-spring 1.3.3 -->
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-spring</artifactId>
+		    <version>1.3.3</version>
+		</dependency>
+		
+		<!-- Gson 2.8.6 -->
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.6</version>
+		</dependency>
+```
+
 ## Final Project
 
 ### 개발
