@@ -84,6 +84,12 @@ description: 2020.12.08 - 80일차
 ### 1. pom.xml에 dependency추가
 
 ```markup
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		
 		<!-- HikariCP 3.3.1 -->
 		<!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
 		<dependency>
