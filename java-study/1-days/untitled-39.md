@@ -23,17 +23,17 @@ description: 2020.12.08 - 80일차
 ### POJO 1-1
 
 * url : \*.test
-* url인터셉트 : FrontMVC1.java
+* url인터셉트 : DispatcherServlet -&gt; FrontMVC1.java
 
 ### POJO 1-2
 
 * url : \*.sp2
-* url인터셉트 : ActionServlet.java
+* url인터셉트 : DispatcherServlet -&gt; ActionServlet.java
 
 ### POJO 1-3
 
 * url : \*.sp3
-* url인터셉트 : ActionSupport.java
+* url인터셉트 : DispatcherServlet -&gt; ActionSupport.java
 * ModelAndView3를 등록해 다중등록이 가능하도록 해보자.
 
 ### 공통점
