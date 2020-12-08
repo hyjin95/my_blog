@@ -2,7 +2,7 @@
 description: 2020.12.07 - 79일차
 ---
 
-# 79Day - TestController, FinalProject
+# 79 Day - TestController, FinalProject
 
 ### 사용 프로그램
 
