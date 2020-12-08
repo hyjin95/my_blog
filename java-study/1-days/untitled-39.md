@@ -10,7 +10,7 @@ description: 2020.12.08 - 80일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
 * 사용 서버 - WAS : Tomcat
 
-## 필기
+## POJO
 
 ### 웹 서비스 제공
 
@@ -18,22 +18,20 @@ description: 2020.12.08 - 80일차
 * url : /프로젝트명/work name/업무이름.url-pattern
 * java로 처리된다 = 안드로이드와의 연계가 가능하다.
 
-## POJO
-
 ### POJO 1-1
 
-* url : \*.test
-* url인터셉트 : DispatcherServlet -&gt; FrontMVC1.java
+* url-pattern : \*.test
+* url인터셉트 : FrontMVC1.java
 
 ### POJO 1-2
 
-* url : \*.sp2
-* url인터셉트 : DispatcherServlet -&gt; ActionServlet.java
+* url-pattern : \*.sp2
+* url인터셉트 :  ActionServlet.java
 
 ### POJO 1-3
 
-* url : \*.sp3
-* url인터셉트 : DispatcherServlet -&gt; ActionSupport.java
+* url-pattern : \*.sp3
+* url인터셉트 : ActionSupport.java
 * ModelAndView3를 등록해 다중등록이 가능하도록 해보자.
 
 ### 공통점
@@ -45,6 +43,29 @@ description: 2020.12.08 - 80일차
 
 * url패턴이 다르다.
 * return type 변경 - 표준 : void - settet, getter : ActionForward - ModelAndView\(1-2\)   jsp위치 주의 : webContent or WEB-INF - String\(1-3\)   redirect:xxx.jsp or forward:xxx.jsp   ' : '를 기준으로 문자열을 분리해 처리한다.   jsp위치 주의 : webContent or WEB-INF
+
+## Spring
+
+### 1-1
+
+* url-pattern : \*.test
+* url인터셉트 : DispatcherServlet -&gt; FrontMVC1.java
+
+### 1-2
+
+* url-pattern : \*.sp2
+* url인터셉트 : DispatcherServlet -&gt; ActionServlet.java
+
+### 1-3
+
+* url-pattern : \*.sp3
+* url인터셉트 : DispatcherServlet -&gt; ActionSupport.java
+* ModelAndView3를 등록해 다중등록이 가능하도록 해보자
+
+### SimpleUrlHandlerMapping
+
+* 어느 Controller클래스와 매핑할지 xml또는 java에서 정해준다.
+* SimpleUrlHandlerMapping의 &lt;property&gt;태그속성의 이름은 set메서드 이름과 일치해야 한다.
 
 ## Final Project
 
