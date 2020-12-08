@@ -10,6 +10,14 @@ description: 2020.12.08 - 80일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
 * 사용 서버 - WAS : Tomcat
 
+## 필기
+
+### 웹 서비스 제공
+
+* 주체 : 브라우저 - url주소 -&gt; http\(java처리\) -&gt; url로 업무분기\(if\)
+* url : /프로젝트명/work name/업무이름.url-pattern
+* java로 처리된다 = 안드로이드와의 연계가 가능하다.
+
 ## POJO
 
 ### POJO 1-1
