@@ -275,6 +275,6 @@
   * [78 Days - onLineTest : 클래스조립, 인터페이스, xml분리, Final Project시작](java-study/1-days/78-days/README.md)
     * [onLineTest](java-study/1-days/78-days/untitled-38.md)
   * [79 Day - TestController, FinalProject](java-study/1-days/untitled-35.md)
-  * [80 Days -](java-study/1-days/untitled-39.md)
+  * [80 Days - POJO와 Spring, 공통점, 차이점, HikariCP](java-study/1-days/untitled-39.md)
   * [Untitled](java-study/1-days/untitled-38.md)
 

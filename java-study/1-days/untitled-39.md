@@ -2,7 +2,7 @@
 description: 2020.12.08 - 80일차
 ---
 
-# 80 Days -
+# 80 Days - POJO와 Spring, 공통점, 차이점, HikariCP
 
 ### 사용 프로그램
 
@@ -125,7 +125,7 @@ description: 2020.12.08 - 80일차
 
 ### 2. root-context.xml위치 설정
 
-* root-context.xml에서 다른 의존성 주입도 받기위해 appServlet폴더로 이동한다. local에서 접근할 수 있도록 context.xml과 같은 경로상에 둔다.
+* root-context.xml에서 다른 의존성 주입도 받기위해 appServlet폴더로 이동한다. local에서 접근할 수 있도록 context.xml과 같은 경로상에 둔다. web.xml에서 경로설정도 수정해야한다.
 * xml : xml으로의 객체 주입이 일어나야 한다.
 
 ### 코드 : root-context.xml
@@ -152,18 +152,26 @@ description: 2020.12.08 - 80일차
 	<!-- myBatis를 사용할 수 있도록 spring에서 sqlSessionFactory를 제공한다. -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"><!-- driver class이름 -->
 		<property name="configLocation" value="WEB-INF/mybatis-config.xml"/>
-		<property name="dataSource" ref="data-source-target"/>
+		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	
 	<!-- myBatis를 사용할 수 있도록 spring에서 sqlSessionTemplate=sqlSesion를 제공한다. 위 bean과 의존관계에 있다. -->
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory"/>
 	</bean>
-		
+	
+	<bean id="member-logic" class="com.mycompany.online.MemberLogic">
+		<property name="memberDao" ref="member-dao"/>
+	</bean>
+	
+	<bean id="member-dao" class="com.mycompany.online.MemberDao">
+		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
+	</bean>	
 </beans>
 ```
 
-* 
+* Dao클래스에 sqlSessionTemplate를 받아주는 setSqlSessionTemplate메서드가 정의되어 있어야한다.
+
 ## Final Project
 
 ### 개발
