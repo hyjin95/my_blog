@@ -117,6 +117,8 @@ description: 2020.12.08 - 80일차
 
 ## HikariCP - DB
 
+* root-context.xml에서 다른 의존성 주입도 받기위해 appServlet폴더로 이동한다. local에서 접근할 수 있도록 context.xml과 같은 경로상에 둔다.
+
 ## Final Project
 
 ### 개발
