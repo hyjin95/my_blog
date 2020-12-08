@@ -26,6 +26,7 @@ description: 2020.12.08 - 80일차
 
 * url : \*.sp3
 * url인터셉트 : ActionSupport.java
+* ModelAndView3를 등록해 다중등록이 가능하도록 해보자.
 
 ### 공통점
 
