@@ -50,6 +50,27 @@ description: 2020.12.09 - 81일차
 
 {% page-ref page="spring4-1-2.md" %}
 
+### spring-servlet.xml
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+		
+		<context:component-scan base-package="com.mvc2"/>
+
+</beans>
+```
+
+* 새로 생성한 java arc 패키지 지정하기
+
+{% page-ref page="./" %}
+
 ### MavenRepository
 
 * 수동 :  jar다운로드 &gt; jar파일 lib폴더에 배포
