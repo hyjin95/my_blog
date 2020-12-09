@@ -41,5 +41,6 @@ description: 2020.12.09 - 81일차
 ### MavenRepository
 
 * 수동 :  jar다운로드 &gt; jar파일 lib폴더에 배포
-* spring core : 4.3.29
+* 핵심 엔진 : spring core 4.3.29
+* log : Apache Commons Logging 1.2
 
