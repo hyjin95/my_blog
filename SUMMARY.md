@@ -276,7 +276,7 @@
     * [onLineTest](java-study/1-days/78-days/untitled-38.md)
   * [79 Day - TestController, FinalProject](java-study/1-days/untitled-35.md)
   * [80 Days - POJO와 Spring, 공통점, 차이점, HikariCP](java-study/1-days/untitled-39.md)
-  * [81 Day - Spring : 특징, jar:jar, AndroidStudio : 새 프로젝트, mainfest](java-study/1-days/untitled-38/README.md)
+  * [81 Day - Spring : 특징, jar:jar, AndroidStudio : 새 프로젝트, mainfest, Spring4 환경설정](java-study/1-days/untitled-38/README.md)
     * [spring4 : 1-2 프로젝트 생성하기](java-study/1-days/untitled-38/spring4-1-2.md)
     * [Spring : spring-sevlet.xml 생성](java-study/1-days/untitled-38/spring-spring-sevlet.xml.md)
     * [Spring tool 4.1.1 환경설정](java-study/1-days/untitled-38/spring-tool-4.1.1.md)
