@@ -2,7 +2,7 @@
 description: 2020.12.09 - 81일차
 ---
 
-# 81 Day -
+# 81 Day - Spring : 특징, jar:jar, AndroidStudio : 새 프로젝트, mainfest
 
 ### 사용 프로그램
 
