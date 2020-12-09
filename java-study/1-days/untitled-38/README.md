@@ -59,5 +59,18 @@ description: 2020.12.09 - 81일차
 * Expression : spring-expression-language\(SpEL\) 4.3.29
 * MVC : spring-webmvc 4.3.29
 * driverClass : ojdbc6.jar
+* myBatis : mybatis 3.4.6 myBatis-spring : mybatis-spring 1.3.3
+* Gson : gson 2.8.6
 * 프로젝트 우클릭 &gt; Build Path &gt; Configure Build Parh &gt; Libraries 에서 lib폴더에 배포한 jar파일 add
+
+### Dependency - Maven
+
+![mybatis](../../../.gitbook/assets/mybatis.png)
+
+![mybatis-spring](../../../.gitbook/assets/mybatis_spring.png)
+
+![gson](../../../.gitbook/assets/gson.png)
+
+* 이전에 &lt;dependency&gt;태그로 maven저장소를 활용해 추가했던 mybatis, mybatis-spring, gson은 사용자 문서 안에 존재하므로 가져다 추가하자.
+* mybatis-spring.jar는 sqlSessionFactory, sqlSessionTemplate를 제공해준다.
 
