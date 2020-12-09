@@ -36,5 +36,5 @@ description: 2020.12.09 - 81일차
 * url을 통한 접근을 처리할 수 있다. 단, 보안에 취약해 jsp파일에 외부에서 접근할 수 있다.
 * getRequestContext : server.xml에 있는 context에 직접 접근할 수 있게 해준다. 서버가 내부 WEB-INF밑에 존재하는 jsp파일에 접근 할 수 있게 해준다.
 
-## Final Project
+## Spring 1-2
 
