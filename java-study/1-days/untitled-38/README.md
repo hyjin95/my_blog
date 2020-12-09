@@ -95,7 +95,17 @@ description: 2020.12.09 - 81일차
 * 이전에 &lt;dependency&gt;태그로 maven저장소를 활용해 추가했던 mybatis, mybatis-spring, gson은 사용자 문서 안에 존재하므로 가져다 추가하자.
 * mybatis-spring.jar는 sqlSessionFactory, sqlSessionTemplate를 제공해준다.
 
-## Android
+## Android Studio
+
+### Android Studio
+
+![](../../../.gitbook/assets/kakaotalk_20201209_144559165.jpg)
+
+* 디바이스가 앱을 실행하면 액티비티 객체가 만들어진다. 이때 이 액티비티는 화면을 지원받아야하므로 레이아웃을 지정한다.
+* 액티비티는 화면에 액티비티를 표시하라고 안드로이드에게 지시한다.
+* 사용자는 디바이스에 나타난 레이아웃과 상호작용 하게 된다. - Event, 소통
+* 액티비티는 어플리케이션 코드를 실행해서 사용자의 동작에 응답한다.
+* 사용자는 그 결과를 디바이스로 확인할 수 있게 된다.
 
 ### 프로젝트명 : Hello69Ver1.apk
 
