@@ -69,7 +69,7 @@ description: 2020.12.09 - 81일차
 
 * 새로 생성한 java arc 패키지 지정하기
 
-{% page-ref page="./" %}
+{% page-ref page="spring-spring-sevlet.xml.md" %}
 
 ### MavenRepository
 
