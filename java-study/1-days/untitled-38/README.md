@@ -10,7 +10,7 @@ description: 2020.12.09 - 81일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
 * 사용 서버 - WAS : Tomcat
 
-## 필기
+## 필기 : 기술면접
 
 ### Spring F/W 장점
 
@@ -35,6 +35,20 @@ description: 2020.12.09 - 81일차
 * HttpServlet을 상속받으면 doGet, doPost메서드 에서는 request, response를 사용할 수 있다.
 * url을 통한 접근을 처리할 수 있다. 단, 보안에 취약해 jsp파일에 외부에서 접근할 수 있다.
 * getRequestContext : server.xml에 있는 context에 직접 접근할 수 있게 해준다. 서버가 내부 WEB-INF밑에 존재하는 jsp파일에 접근 할 수 있게 해준다.
+
+## jar : jar
+
+### java : java
+
+### java : xml
+
+### xml : xml
+
+### jar : jar
+
+* jar의 안에는 클래스, 인터페이스, 추상클래스가 있다.
+* spring-beans.jar는 spring-core.jar가 반드시 존재해야 하는 등 jar안에서도 의존관계가 존재한다. 컴파일 문제를 피하기 위해서는 의존관계에 있는 jar파일이 배포되어 있어야 한다.
+* 컴파일 에러가 발생한다. -&gt; 의존관계가 존재한다. -&gt; jar파일로 해결한다.
 
 ## Spring 1-2
 
