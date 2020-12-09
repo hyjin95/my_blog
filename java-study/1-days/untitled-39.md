@@ -125,6 +125,8 @@ description: 2020.12.08 - 80일차
 
 ### 2. root-context.xml위치 설정
 
+![](../../.gitbook/assets/xml-.png)
+
 * root-context.xml에서 다른 의존성 주입도 받기위해 appServlet폴더로 이동한다. local에서 접근할 수 있도록 context.xml과 같은 경로상에 둔다. web.xml에서 경로설정도 수정해야한다.
 * xml : xml으로의 객체 주입이 일어나야 한다.
 
