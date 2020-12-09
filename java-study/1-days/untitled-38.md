@@ -27,6 +27,7 @@ description: 2020.12.09 - 81일차
 * Container - spring-core.jar : BeanFactory, ApplicationContext - BeanFactory와 ApplicationContext가 bean으로 등록된 클래스들을 관리한다.
 * DI - 의존성주입 - 대신 주입해준다.
 * 배치서술자 파일에 서블릿을 등록한다. - Java : HttpServlet상속-Servlet, Object상속-Java
+* xml 분할 - spring-servlet : 컨트롤러   spring-service : 로직   spring-data : xml-xml의 객체주입이 일어나는 곳, DB연결에 대한 정보
 
 ### Java Servlet
 
