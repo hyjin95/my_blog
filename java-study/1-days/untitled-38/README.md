@@ -57,5 +57,6 @@ description: 2020.12.09 - 81일차
 * web : spring-web 4.3.29 - aop : spring-aop 4.3.29 - beans : spring-beans 4.3.29 - context : spring-context 4.3.29
 * jdbc : spring-jdbc 4.3.29
 * Expression : spring-expression-language\(SpEL\) 4.3.29
+* MVC : spring-webmvc 4.3.29
 * 프로젝트 우클릭 &gt; Build Path &gt; Configure Build Parh &gt; Libraries 에서 lib폴더에 배포한 jar파일 add
 
