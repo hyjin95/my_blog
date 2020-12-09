@@ -38,6 +38,10 @@ description: 2020.12.09 - 81일차
 
 ## Spring 1-2
 
+### 새 프로젝트 생성
+
+{% page-ref page="spring4-1-2.md" %}
+
 ### MavenRepository
 
 * 수동 :  jar다운로드 &gt; jar파일 lib폴더에 배포
