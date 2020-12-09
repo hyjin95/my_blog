@@ -95,3 +95,5 @@ description: 2020.12.09 - 81일차
 * 이전에 &lt;dependency&gt;태그로 maven저장소를 활용해 추가했던 mybatis, mybatis-spring, gson은 사용자 문서 안에 존재하므로 가져다 추가하자.
 * mybatis-spring.jar는 sqlSessionFactory, sqlSessionTemplate를 제공해준다.
 
+## Android
+
