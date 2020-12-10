@@ -181,5 +181,5 @@ SQL> create table imsi(no number(5));
 ### Activity
 
 * Object를 상속받으면 자바, HttpServlet을 상속받으면 서블릿인 것처럼  AppCompatActivity상속받아야 Activity이다.
-* 라이프 사이클 : 임의로 수정할 수 없음 - onCreate\(Bundle savedInstanceState\){ }   entry point가 되는 메서드로, 자바의 main과 역할이 같다. - super.onCreate\(savedInstanceState\);   상위 클래스의 메서드를 호출해주는 코드, 안전성이 보장된다.
+* 라이프 사이클 : 임의로 수정할 수 없음 - onCreate\(Bundle savedInstanceState\){ }   entry point가 되는 메서드로, 자바의 main과 역할이 같다.   파라미터 번들 ; 이전 어플이 실행되었던 상태를 기억하는 저장소 클래스 - super.onCreate\(savedInstanceState\);   상위 클래스의 메서드를 호출해주는 코드, 안전성이 보장된다.
 
