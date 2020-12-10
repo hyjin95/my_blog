@@ -30,7 +30,17 @@ description: 2020.12.10 - 82일차
 * 권한 GRANT CREAT seqence to 계정이름  with admin option; \(시퀀스 생성권한\) GRANT CREAT trigger to 계정이름  with admin option;    \(트리거 생성권한\) GRANT CREAT view to 계정이름  with admin option;        \(뷰 생성권한\) GRANT CREAT table to 계정이름 with admin option;        \(테이블 생성권한\) GRANT CREAT session to 계정이름 with admin option;   \(DB 접속권한\) alter user 계정이름 quota unlimited on 테이블스페이스명;
 * Session &gt; New Connection에서 생성한 계정이름+비밀번호대로 계정 생성 - connect as : Nomal,  - SID : 는 오라클제품 설치시 지정한 초기 식별자 이므로 비워둬도 됨
 
-### 관리자 계정 찾기 : CMD
+### Oracle : 저장경로, SID
+
+![SID : orcl11](../../.gitbook/assets/sid.png)
+
+### Oracle 서버 : 종료, 재시작
+
+![](../../.gitbook/assets/.png%20%2845%29.png)
+
+## CMD
+
+### 관리자 계정 찾기
 
 ```text
 명령 프롬프트(즉, DOS 창)에서 다음을 실행합니다. 
@@ -48,11 +58,24 @@ SQL> alter user system identified by 암호;
 * sys계정 비밀번호를 잃어버렸거나 연속으로 3번 입력을 잘못하면 자동 종료가 되어 버린다.
 * 이때 sys계정을 찾을 수 있는 방법
 
-### Oracle : 저장경로, SID
+### sqlplus : 테이블생성
 
-![SID : orcl11](../../.gitbook/assets/sid.png)
+```text
+C:\Users\kosmo_12>sqlplus
 
-### Oracle 서버 : 종료, 재시작
+SQL*Plus: Release 11.1.0.7.0 - Production on 목 12월 10 11:18:30 2020
 
-![](../../.gitbook/assets/.png%20%2845%29.png)
+Copyright (c) 1982, 2008, Oracle.  All rights reserved.
+
+사용자명 입력: scott
+암호 입력:
+
+다음에 접속됨:
+Oracle Database 11g Enterprise Edition Release 11.1.0.7.0 - Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> create table imsi(no number(5));
+
+테이블이 생성되었습니다.
+```
 
