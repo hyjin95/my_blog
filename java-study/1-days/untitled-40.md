@@ -27,7 +27,7 @@ description: 2020.12.10 - 82일차
 ### 계정 생성
 
 * 계정 생성 및 테이블스페이스 할당 CREAT USER 계정이름 IDENTIFIED BY 비밀번호 dafault tablelspace 테이블스페이스 이름;
-* 권한 GRANT CREAT seqence to 계정이름\(시퀀스 생성권한\) GRANT CREAT trigger to 계정이름\(트리거 생성권한\) GRANT CREAT view to 계정이름\(뷰 생성권한\) GRANT CREAT table to 계정이름 whid addmin option;\(테이블 생성권한\) GRANT CREAT session to 계정이름 with admin option\(DB 접속권한\) alter user 계정이름 quota unlimited on 테이블스페이스명;
+* 권한 GRANT CREAT seqence to 계정이름  with admin option; \(시퀀스 생성권한\) GRANT CREAT trigger to 계정이름  with admin option;    \(트리거 생성권한\) GRANT CREAT view to 계정이름  with admin option;        \(뷰 생성권한\) GRANT CREAT table to 계정이름 with admin option;        \(테이블 생성권한\) GRANT CREAT session to 계정이름 with admin option;   \(DB 접속권한\) alter user 계정이름 quota unlimited on 테이블스페이스명;
 * Session &gt; New Connection에서 생성한 계정이름+비밀번호대로 계정 생성 - connect as : Nomal,  - SID : 는 오라클제품 설치시 지정한 초기 식별자 이므로 비워둬도 됨
 
 ### 관리자 계정 찾기 : CMD
