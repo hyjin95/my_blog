@@ -22,7 +22,7 @@ description: 2020.12.10 - 82일차
 ### Tablespace
 
 * sys 관리자 계정에서 진행
-* 테이블 스페이스 추가 CREAT TABLESPACE 이름결정 detafile '경로' SIZE 100M;
+* 테이블 스페이스 추가 CREATE TABLESPACE 이름결정 detafile '경로' SIZE 100M;
 * 테이블 스페이스 수정 ALTER database detafile '경로' RESIZE 150M;
 * 테이블 스페이스 확인하기 SELECT tablespace\_name, file\_name, maxbytes FROM dba\_data\_files WHERE tablespace\_name = '테이블스페이스 이름_'_
 * 테이블 스페이스 삭제 DROP tablespace 테이블스페이스명
@@ -30,7 +30,7 @@ description: 2020.12.10 - 82일차
 ### 계정 생성
 
 * sys 관리자 계정에서 진행
-* 계정 생성 및 테이블스페이스 할당 CREATE USER 계정이름 IDENTIFIED BY 비밀번호 dafault tablelspace 테이블스페이스 이름;
+* 계정 생성 및 테이블스페이스 할당 CREATE USER 계정이름 IDENTIFIED BY 비밀번호 default tablelspace 테이블스페이스 이름;
 * 권한 GRANT CREATE seqence to 계정이름  with admin option; \(시퀀스 생성권한\) GRANT CREATE trigger to 계정이름  with admin option;    \(트리거 생성권한\) GRANT CREATE view to 계정이름  with admin option;        \(뷰 생성권한\) GRANT CREATE table to 계정이름 with admin option;        \(테이블 생성권한\) GRANT CREATE session to 계정이름 with admin option;   \(DB 접속권한\) alter user 계정이름 quota unlimited on 테이블스페이스명;
 * Session &gt; New Connection에서 생성한 계정이름+비밀번호대로 계정 생성 - connect as : Nomal,  - SID : 는 오라클제품 설치시 지정한 초기 식별자 이므로 비워둬도 됨
 
