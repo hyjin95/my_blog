@@ -48,3 +48,7 @@ SQL> alter user system identified by 암호;
 * sys계정 비밀번호를 잃어버렸거나 연속으로 3번 입력을 잘못하면 자동 종료가 되어 버린다.
 * 이때 sys계정을 찾을 수 있는 방법
 
+### Oracle 서버 : 종료, 재시작
+
+![](../../.gitbook/assets/.png%20%2845%29.png)
+
