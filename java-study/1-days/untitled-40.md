@@ -28,4 +28,23 @@ description: 2020.12.10 - 82일차
 
 * 계정 생성 및 테이블스페이스 할당 CREAT USER 계정이름 IDENTIFIED BY 비밀번호 dafault tablelspace 테이블스페이스 이름;
 * 권한 GRANT CREAT seqence to 계정이름\(시퀀스 생성권한\) GRANT CREAT trigger to 계정이름\(트리거 생성권한\) GRANT CREAT view to 계정이름\(뷰 생성권한\) GRANT CREAT table to 계정이름 whid addmin option;\(테이블 생성권한\) GRANT CREAT session to 계정이름 with admin option\(DB 접속권한\) alter user 계정이름 quota unlimited on 테이블스페이스명;
+* Session &gt; New Connection에서 생성한 계정이름+비밀번호대로 계정 생성 - connect as : Nomal,  - SID : 는 오라클제품 설치시 지정한 초기 식별자 이므로 비워둬도 됨
+
+### 관리자 계정 찾기 : CMD
+
+```text
+명령 프롬프트(즉, DOS 창)에서 다음을 실행합니다. 
+
+C:\>sqlplus "/as sysdba"
+SQL> show user
+USER is "SYS" 
+
+이제 암호를 원하는 대로 설정합니다. 
+
+SQL> alter user sys identified by 암호;
+SQL> alter user system identified by 암호;
+```
+
+* sys계정 비밀번호를 잃어버렸거나 연속으로 3번 입력을 잘못하면 자동 종료가 되어 버린다.
+* 이때 sys계정을 찾을 수 있는 방법
 
