@@ -26,3 +26,5 @@ description: 2020.12.10 - 82일차
 
 ### 계정 생성
 
+* 계정 생성 CREAT USER 계정이름 IDENTIFIED BY 비밀번호 dafault tablelspace 테이블스페이스 이름 temporary tablespace temp;
+
