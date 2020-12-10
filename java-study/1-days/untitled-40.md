@@ -38,11 +38,41 @@ description: 2020.12.10 - 82일차
 
 ![](../../.gitbook/assets/.png%20%2845%29.png)
 
+### Trigger
+
+```sql
+grant create trigger to scott;
+```
+
+* 트리거 생성
+
+```sql
+create or replace trigger tri_test
+    before update or delete or insert on imsi
+begin 
+    if(to_char(sysdate,'DY') in ('목'))
+    then
+        raise_application_error(-20500,'목요일에는 입력|수정|삭제 가 불가능합니다.');
+    end if;
+end;
+```
+
+* 트리거 구현
+
+![](../../.gitbook/assets/trigger-error.png)
+
+```sql
+insert into imsi values(1);
+```
+
+* 트리거 테스트
+* 목요일에 해당 SQL을 입력하면 에러창이 발생한다.
+
 ## CMD
 
 ### 관리자 계정 찾기
 
-```text
+```sql
 명령 프롬프트(즉, DOS 창)에서 다음을 실행합니다. 
 
 C:\>sqlplus "/as sysdba"
@@ -60,7 +90,7 @@ SQL> alter user system identified by 암호;
 
 ### sqlplus : 테이블생성
 
-```text
+```sql
 C:\Users\kosmo_12>sqlplus
 
 SQL*Plus: Release 11.1.0.7.0 - Production on 목 12월 10 11:18:30 2020
