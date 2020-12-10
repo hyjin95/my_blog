@@ -183,3 +183,18 @@ SQL> create table imsi(no number(5));
 * Object를 상속받으면 자바, HttpServlet을 상속받으면 서블릿인 것처럼  AppCompatActivity상속받아야 Activity이다.
 * 라이프 사이클 : 임의로 수정할 수 없음 - onCreate\(Bundle savedInstanceState\){ }   entry point가 되는 메서드로, 자바의 main과 역할이 같다.   파라미터 번들 ; 이전 어플이 실행되었던 상태를 기억하는 저장소 클래스 - super.onCreate\(savedInstanceState\);   상위 클래스의 메서드를 호출해주는 코드, 안전성이 보장된다.
 
+### Apply code Changes
+
+* 두번째 실행부터는 즉시실행 버튼으로 실행한다.
+* 한번 실행 이후 부터는 Run으로 실행하면 매번 빌드와 앱 설치를 다시 진행하므로 테스트 속도가 느려진다.
+* 이 경우 수정 내용이 반영된 앱을 실제 기기에 설치하여 실행하는 것이 아니니 주의 하자.
+* Ctrl + Alt + F10
+
+## Android Studio 설정
+
+### Java코드 자동 import
+
+![](../../.gitbook/assets/android.png)
+
+* File &gt; Settings &gt; Editor &gt; General &gt; Auto import
+
