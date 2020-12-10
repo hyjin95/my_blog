@@ -155,7 +155,7 @@ SQL> create table imsi(no number(5));
 
 * 1 : 1
 * 1 : n 이력관리 시스템에서는 반드시 필요한 관계
-* n : m 카타시안의 곱 조인하면 필요하지 않은 데이터까지 모두 보여주므로 최대한 1:n으로 구현해야한다. n : m가운데에 행위 엔티티를 추가한다. 
+* n : m 카타시안의 곱 조인하면 필요하지 않은 데이터까지 모두 보여주므로 최대한 1:n으로 구현해야한다. n : m가운데에 행위 엔티티를 추가한다.
 
 ## Android Studio
 
@@ -177,4 +177,9 @@ SQL> create table imsi(no number(5));
 ### res
 
 * 각종 리소스들이 저장되는 폴더 문자열 리소스, 이미지 리소스, ....
+
+### Activity
+
+* Object를 상속받으면 자바, HttpServlet을 상속받으면 서블릿인 것처럼  AppCompatActivity상속받아야 Activity이다.
+* 라이프 사이클 : 임의로 수정할 수 없음 - onCreate\(Bundle savedInstanceState\){ }   entry point가 되는 메서드로, 자바의 main과 역할이 같다.
 
