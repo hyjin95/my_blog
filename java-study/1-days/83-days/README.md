@@ -47,7 +47,7 @@ description: 2020.12.14 - 83일차
 
 ```markup
 	<dependencies>
-	<!--=========================== spring-boot 시 ================================-->
+	<!--=========================== spring-boot 시작 ================================-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -81,6 +81,8 @@ description: 2020.12.14 - 83일차
 	<!--=========================== 톰캣 의존성주입 끝  ================================-->
 	</dependencies>
 ```
+
+* 하단의 톰캣의 의존성 주입 디펜던시가 작성되어 있어야만 jsp문서를 인식할 수 있다.
 
 ## Android
 
