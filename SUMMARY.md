@@ -283,6 +283,6 @@
     * [Android studio 새 프로젝트 생성](java-study/1-days/untitled-38/android-studio.md)
   * [82 Days - Oracle, Toad, CMD, Trigger, View, AndroidStudio](java-study/1-days/untitled-40.md)
   * [83 Days -](java-study/1-days/83-days/README.md)
-    * [Spring : New Project](java-study/1-days/83-days/spring-new-project.md)
+    * [Spring : New Project - spring boot](java-study/1-days/83-days/spring-new-project.md)
   * [Untitled](java-study/1-days/untitled-41.md)
 
