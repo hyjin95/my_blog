@@ -285,5 +285,6 @@
   * [83 Days -](java-study/1-days/83-days/README.md)
     * [Spring : New Project - spring boot](java-study/1-days/83-days/spring-new-project.md)
     * [AndroidX Migrate하기 : Intent69](java-study/1-days/83-days/androidx.md)
+    * [Android 화면 : xml or java?](java-study/1-days/83-days/android-xml-or-java.md)
   * [Untitled](java-study/1-days/untitled-41.md)
 

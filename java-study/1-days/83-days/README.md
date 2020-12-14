@@ -122,6 +122,11 @@ description: 2020.12.14 - 83일차
 * Activity + Service + Activity
 * Activity + Activity + Service + ContentProvider
 
+### Android 의 화면
+
+* 보통은 xml으로 화면을 그리는 것을 권장하고, java에서는 setContentView\( \)메서드로 view xml을 지정한다.
+* java로는 할 수 없을까? 할 수는 있다. 하지만 권장하지는 않는다. 
+
 ### Standard Developer Kit 경로
 
 ![](../../../.gitbook/assets/developer-kit.png)
