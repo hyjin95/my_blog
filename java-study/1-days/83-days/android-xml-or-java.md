@@ -141,3 +141,5 @@ public class MainActivity2 extends AppCompatActivity {
 </manifest>
 ```
 
+* 기존 activity로 잡혀있던 파일을 새로 만들어진 xml을 갖는 java문서로 변경해야한다.
+

@@ -2,7 +2,7 @@
 description: 2020.12.09 - 81일차
 ---
 
-# 81 Day - Spring : 특징, jar:jar, AndroidStudio : 새 프로젝트, mainfest, Spring4 환경설정
+# 81 Day - Spring : 특징, jar:jar, AndroidStudio : 새 프로젝트, 이클립스 단축키 설정, mainfest, Spring4 환경설정
 
 ### 사용 프로그램
 
@@ -118,4 +118,14 @@ description: 2020.12.09 - 81일차
 
 * 앱에 대한 벙보를 적재하는 곳
 * AndroidMainfest.xml - 앱에 대한 이름 - 앱에 대한 이미지 정보 - 앱에 대한 메인 액티비티 이름 등록
+
+### 이클립스 단축키 사용하기
+
+![](../../../.gitbook/assets/.png%20%2846%29.png)
+
+### 새 프로젝트 생성
+
+{% page-ref page="android-studio.md" %}
+
+후기 : 프로젝트에도 앱을 구현해야하기 때문에 AndroidStudio를 열심히 해야한다!
 

@@ -198,3 +198,5 @@ SQL> create table imsi(no number(5));
 
 * File &gt; Settings &gt; Editor &gt; General &gt; Auto import
 
+후기 : 다음주에는 눈도 오고 엄청 춥다던데..
+

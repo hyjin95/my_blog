@@ -28,3 +28,5 @@ description: 2020.12.07 - 79일차
 
 {% file src="../../.gitbook/assets/bobeat\_project.xlsx" %}
 
+후기 : 프로젝트가 잘 마무리 되길...
+

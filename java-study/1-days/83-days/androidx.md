@@ -2,7 +2,7 @@
 
 ### File &gt; Setting 
 
-![](../../../.gitbook/assets/.png%20%2847%29.png)
+![](../../../.gitbook/assets/.png%20%2848%29.png)
 
 * Editor &gt; General &gt; Auto Import &gt; Auto import in compietion 체크 해제 &gt; Apply
 
