@@ -37,7 +37,7 @@ description: 2020.12.14 - 83일차
 
 ### New Project
 
-### Maven 방식
+{% page-ref page="spring-new-project.md" %}
 
 ### boot 방식
 
