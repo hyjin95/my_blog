@@ -122,3 +122,5 @@ description: 2020.12.14 - 83일차
 * Activity + Service + Activity
 * Activity + Activity + Service + ContentProvider
 
+### Standard Developer Kit 경로
+
