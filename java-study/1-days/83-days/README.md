@@ -116,3 +116,9 @@ description: 2020.12.14 - 83일차
 * A클래스에서 B클래스를 인텐트하면\(의뢰\) 시스템이 B를 실행한다.
 * 일반클래스와 컴포넌트 간과 같이 서로 다른 클래스에서 소통을 해야할 때 사용한다.
 
+### 컴포넌트의 결합
+
+* Activity + Activity
+* Activity + Service + Activity
+* Activity + Activity + Service + ContentProvider
+
