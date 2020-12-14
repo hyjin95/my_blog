@@ -82,3 +82,11 @@ description: 2020.12.14 - 83일차
 	</dependencies>
 ```
 
+## Android
+
+### 컴포넌트 기반 개발
+
+![](../../../.gitbook/assets/kakaotalk_20201214_153835936.jpg)
+
+* 컴포넌트는 생명주기를 안드로이드에서 관리해준다.
+
