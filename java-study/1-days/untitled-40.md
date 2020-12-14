@@ -2,7 +2,7 @@
 description: 2020.12.10 - 82일차
 ---
 
-# 82 Days -
+# 82 Days - Oracle, Toad, CMD, Trigger, View, AndroidStudio
 
 ### 사용 프로그램
 
