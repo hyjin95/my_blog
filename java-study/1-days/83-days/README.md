@@ -122,6 +122,10 @@ description: 2020.12.14 - 83일차
 * Activity + Service + Activity
 * Activity + Activity + Service + ContentProvider
 
+### AndroidX
+
+* 최신 하이브리드 앱을 구현하기위해 AndroidX 사용하기
+
 ### Standard Developer Kit 경로
 
 ![](../../../.gitbook/assets/developer-kit.png)
