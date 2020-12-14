@@ -43,3 +43,42 @@ description: 2020.12.14 - 83일차
 
 * xml이 아닌 properties에서 작성한다.
 
+### pom.xml
+
+```markup
+	<dependencies>
+	<!--=========================== spring-boot 시 ================================-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	<!--=========================== spring-boot 끝 ================================-->
+	
+	<!--=========================== 톰캣 의존성주입 시작[jsp문서 인식하게하기] ================================-->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+	<!--=========================== 톰캣 의존성주입 끝  ================================-->
+	</dependencies>
+```
+
