@@ -33,11 +33,13 @@ description: 2020.12.14 - 83일차
 * 응답 페이지에 대한 url을 추가하는 클래스
 * xml에 작성한다.
 
-## Spring4
+## Spring4\(Spring boot\)
 
 ### New Project
 
 ### Maven 방식
 
 ### boot 방식
+
+* xml이 아닌 properties에서 작성한다.
 
