@@ -1,6 +1,8 @@
 # Android 화면 : xml or java?
 
-### XML
+## XML
+
+### 코드 : MainActivity2.java
 
 ```java
 package com.example.intent69;
@@ -8,7 +10,7 @@ package com.example.intent69;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,32 @@ public class MainActivity extends AppCompatActivity {
 
 * setContentView\( \)메서드로 xml문서를 그린다.
 * 위 경우는 activity\_main.xml에 화면이 구현되어 있다.
+
+### 코드 : Activity\_Main2.xml
+
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout"
+    tools:context=".MainActivity2">
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="입력" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="수정" />
+</LinearLayout>
+```
 
 ### JAVA
 
@@ -73,5 +101,5 @@ public class MainActivity2 extends AppCompatActivity {
 }
 ```
 
-* 위와 같이 xml의 id값으로 화면에 접근 할 수 도 있다.
+* 위와 같이 xml의 id값으로 xml 객체에 접근 할 수 도 있다.
 
