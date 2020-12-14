@@ -50,7 +50,9 @@ public class MainActivity2 extends AppCompatActivity {
 </LinearLayout>
 ```
 
-### JAVA
+## JAVA
+
+### 코드 : MainActivity.java
 
 ```java
 package com.example.intent69;
@@ -81,7 +83,9 @@ public class MainActivity extends AppCompatActivity {
 
 * JAVA에 직접 구현
 
-### JAVA + XML
+## JAVA + XML
+
+### 코드 : MainActivity2/java
 
 ```java
 package com.example.intent69;
@@ -102,4 +106,38 @@ public class MainActivity2 extends AppCompatActivity {
 ```
 
 * 위와 같이 xml의 id값으로 xml 객체에 접근 할 수 도 있다.
+
+## Java로 작성한 View -&gt; xml변환
+
+### Java로 작성한 View를 xml로 변환하기
+
+![](../../../.gitbook/assets/ddd.png)
+
+* view가 작성된 자바파일 우클릭 &gt; New &gt; Activity &gt; Activity선택 &gt; 이름지정 &gt; Finish
+
+### mainfest 설정
+
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.intent69">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Intent69">
+       <!-- <activity android:name=".MainActivity2"></activity> -->
+        <activity android:name=".MainActivity2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+```
 
