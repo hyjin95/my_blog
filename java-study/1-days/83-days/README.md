@@ -124,3 +124,9 @@ description: 2020.12.14 - 83일차
 
 ### Standard Developer Kit 경로
 
+![](../../../.gitbook/assets/developer-kit.png)
+
+### 프로젝트 저장 경로
+
+![](../../../.gitbook/assets/.png%20%2846%29.png)
+
