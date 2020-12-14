@@ -1,4 +1,4 @@
-# AndroidX : Intent69
+# AndroidX Migrate하기 : Intent69
 
 ### File &gt; Setting 
 
