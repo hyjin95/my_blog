@@ -1,6 +1,6 @@
 # Android 화면 : xml or java?
 
-### JAVA + XML
+### XML
 
 ```java
 package com.example.intent69;
@@ -52,4 +52,26 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 * JAVA에 직접 구현
+
+### JAVA + XML
+
+```java
+package com.example.intent69;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.LinearLayout;
+
+public class MainActivity2 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LinearLayout linearLayout = findViewById(R.id.layout);
+    }
+}
+```
+
+* 위와 같이 xml의 id값으로 화면에 접근 할 수 도 있다.
 
