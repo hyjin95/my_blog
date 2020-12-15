@@ -36,7 +36,7 @@ public class BoardController {
 * @RequestMapping\( \) 이 어노테이션이 url-pattern과 매핑해주는 역할을 한다. /board/가 들어가는 모든 .sp3 url요청은 이 BoardController클래스가 인터셉트한다.
 * @Autowired 기존방식의 setter메서드를 사용하지 않고도 객체를 주입받을 수 있게 해주는 어노테이션이다.
 * @RequestParam 기존에 req.getParameter로 받아오던 값을 파라미터로 받아올 수 있게 해주는 어노테이션이다. url과 같이 전송되는 data는 boardList의 파라미터인 pMap에 모두 담긴다.
-* String 타입 메서드 기존의 void, ModelAndView가 아닌 String타입의 메서드를 활용한다. 
+* String 타입 메서드 기존의 void, ModelAndView가 아닌 String타입의 메서드를 활용한다. 페이지 이동 방식과 뷰 이름은 리턴값으로 내보낸다.
 
 ### 코드 : BoardLogic.java
 
@@ -64,6 +64,8 @@ public class BoardLogic {
 }
 ```
 
+* Model 계층은 @Service어노테이션을 사용한다.
+
 ### 코드 : BoardDao.java
 
 ```java
@@ -83,6 +85,8 @@ public class BoardDao {
 	}
 }
 ```
+
+* Model 계층은 @Service어노테이션을 사용한다.
 
 ## XML
 
