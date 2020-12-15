@@ -36,13 +36,20 @@ description: 2020.12.15 - 84일차
 ### 어노테이션을 사용하지 않는 경우
 
 * spring-servlet.xml : 컨트롤계층 + ViewResolver + Resource\(상수 : 이미지, 애니메이션, 색상, ....\) spring-service.xml spring-data.xml mybatis-config.xml
-* xml문서에 매번 등록해야 하고, java와 여러 xml문서를을 동기화해야하므로 복잡하다.
+* xml문서에 매번 빈을 등록해야 하고, java와 여러 xml문서를을 동기화해야하므로 복잡하다.
 * 동기화 - DispatcherServlet과 업무별 Controller - XXXController와 XXXLogic : java와 java - XXXLogic과 SqlXXXDao : java와 java - java와 java이지만 일반 인스턴스화가 아닌 xml을 통한 외부 주입을 받기 위한 코드가 필요하다.
 
-### 어노테이션을 사용하지 않는 경우 -2
+### 응답페이지 : ViewResolver + ModelAndView
 
 * ViewResolver - 응답할 view 페이지에 대한 url정의 - 접두어 : "WEB-INF/views/"   접미어 : ".jsp" - 작성시 "/"와 응답페이지를 호출하는 클래스에서의 페이지 이름에 ".jsp"가 붙는지 주의 한다.
-* ViewName - Lv2   ModelAndView mav = new ModelAndView\( \);    mav.setViewName\("xxxList"\) 
+* ViewName - Lv2   ModelAndView mav = new ModelAndView\( \);    mav.setViewName\("/XXX/xxxList"\)
+* 응답페이지 : WEB-INF/views/XXX/xxxList.jsp
+* 컨트롤계층 안에서 모두 정해진다.
+
+### &lt;bean&gt;
+
+* &lt;bean id=" " class=" "&gt; : setter메서드를 호출하는 곳      &lt;property name=" "/&gt; : setter메서드 이름 &lt;bean&gt;
+* 이렇게 등록해야 필요한때, bean에 등록된 클래스가 setter메서드를 호출할때 외부에서 객체를 생성해서 주입 해준다.
 
 ### 어노테이션을 사용하는 경우
 
