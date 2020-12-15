@@ -31,7 +31,7 @@ description: 2020.12.15 - 84일차
 * 하지만 추상클래스를 활용하는 것보다는 재사용성이 높다.
 * 인터페이스는 자체적으로 인스턴스화 될 수 없기때문에 구현체 클래스를 활용하고, 이 다형성으로 인해 같은 인터페이스 이더라도 다른 결과를 출력할 수 있기 때문이다.
 
-## Spring : Annotation
+## Spring : Annotation X, XML O
 
 ### 어노테이션을 사용하지 않는 경우
 
@@ -46,14 +46,23 @@ description: 2020.12.15 - 84일차
 * 응답페이지 : WEB-INF/views/XXX/xxxList.jsp
 * 컨트롤계층 안에서 모두 정해진다.
 
-### spring-servlet.xml
+### spring-servlet.xml : Controller
 
 * &lt;bean id=" " class=" "&gt; : setter메서드를 호출하는 곳, class=실제 위치\(패키지 + 파일이름\)      &lt;property name=" " ref=" "/&gt; : setter메서드 이름 &lt;bean&gt;
 * 이렇게 등록해야 필요한때, bean에 등록된 클래스의 id가 호출되면 작성된 setter메서드에 외부에서 객체를 생성해서 주입 해준다.
 
-### spring-service.xml 
+### spring-service.xml : Logic
 
 * &lt;bean id=" " class=" "&gt; : spring-servlet.xml의 proterty ref에 작성된 이름과 일치하는 id      &lt;property name=" " ref=" "/&gt; : 이 bean의 class가 주입받아야하는 객체의 setter메서드와 객체이름 &lt;bean&gt;
+
+### spring-data.xml : Dao, 연동자원
+
+* service.xml에서 Dao를 호출해서 data.xml로 오는 것 까지는 java : xml이지만, mybatis와 연동되는 부분은 xml : xml이다.
+* 자바가 아니기 때문에 setter메서드가 아닌 생성자로 객체 주입을 해야한다.
+* SqlSessionTemplate : selectOne\( \), selectList\( \), insert\( \), update\( \), delete\( \) SqlSessionFactoryBean : DB와의 Connection 연결통로
+* 순서상으로 FactoryBean이 먼저 생성되어야 Template를 사용 할 수 있다. Template가 FactoryBean에게 의존해 있다. 
+
+## Spring : Annotation O, XML X
 
 ### 어노테이션을 사용하는 경우
 
