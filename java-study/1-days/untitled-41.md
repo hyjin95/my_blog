@@ -34,7 +34,7 @@ description: 2020.12.15 - 84일차
 ### 어노테이션을 사용하지 않는 경우
 
 * spring-servlet.xml spring-service.xml spring-data.xml mybatis-config.xml
-* xml문서에 매번 등록해야 한다.
+* xml문서에 매번 등록해야 하고, java와 xml을 동기화해야하므로 복잡하다.
 
 ### 어노테이션을 사용하는 경우
 
