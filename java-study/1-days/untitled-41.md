@@ -23,10 +23,9 @@ description: 2020.12.15 - 84일차
 
 * string 타입의 메서드를 활용하면서 req와 res를 주입받지 않아도 되게 되면서 페이지간의 관계가 더 자유로워 지게 되었다.
 * req, res를 받지 않으므로 forward와 sendRedirect, getAttirbute, getParamter, setAttribute를 사용할 수 없게 되는 대신, 어노테이션을 활용해 이와 같은 역할을 똑같이 수행할 수 있다.
+* 기존의 ModelAndView에 담던 페이지 이동은 리턴값을 이용한다. - return "redirect:xxx.jsp";
 
-### 추상클래스
-
-### 인터페이스
+### 추상클래스와 인터페이스
 
 * 인터페이스를 활용하는 경우, 타입과 파라미터가 고정된 메서드를 오버라이드 해야만한다.
 * 하지만 추상클래스를 활용하는 것보다는 재사용성이 높다.
