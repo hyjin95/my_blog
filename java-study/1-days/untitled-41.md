@@ -36,7 +36,7 @@ description: 2020.12.15 - 84일차
 * spring-servlet.xml spring-service.xml spring-data.xml mybatis-config.xml
 * xml문서에 매번 등록해야 한다.
 
-### 어노테이션을 사용하는 경
+### 어노테이션을 사용하는 경우
 
 * 컨트롤 계층 : @Controller 모델     계층 : @Service
 * @Autowired 어노테이션을 인스턴스 변수에 붙이기만 하면 된다.
