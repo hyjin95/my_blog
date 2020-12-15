@@ -31,3 +31,10 @@ description: 2020.12.15 - 84일차
 * 하지만 추상클래스를 활용하는 것보다는 재사용성이 높다.
 * 인터페이스는 자체적으로 인스턴스화 될 수 없기때문에 구현체 클래스를 활용하고, 이 다형성으로 인해 같은 인터페이스 이더라도 다른 결과를 출력할 수 있기 때문이다.
 
+### url-pattern : @RequestMapping
+
+* 어노테이션과 String을 활용한다면 기존의 url-pattern은 어떻게 작성 할까?
+* 역시 어노테이션을 활용한다. : @RequestMapping
+* Controller클래스는 @Controller 어노테이션을 작성하고, 그 밑에 url을 작성한다. @RequestMapping\(/member/\*\) or \(/order/\*\)
+* 그리고 Controller안에서 구현하는 메서드에 업무내용 url을 작성해 분류한다. @RequestMapping\(/member/memberList\) or \(/member/memberInsert\)
+
