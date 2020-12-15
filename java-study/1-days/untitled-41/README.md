@@ -138,6 +138,54 @@ public class BoardController {
 
 {% page-ref page="board-annotation.md" %}
 
+## Spring : 생성자 객체 주입
+
+### spring의 IoC
+
+* 어노테이션을 작성하지 않는 경우에 외부에서 객체를 주입받는 방법은 두가지가 있다.
+* java에서 setter메서드를 활용하거나, \(java : xml\) xml을 통한 생성자 객체 주입법을 활용하거나 \(xml : xml\)
+
+### 생성자 객체 주입법
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="data-source-target" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+         <value>oracle.jdbc.driver.OracleDriver</value>
+        </property>
+		<property name="url">
+			<value>jdbc:oracle:thin:@192.168.0.187:1521:orcl11</value>
+		</property>
+		<property name="username">
+			<value>scott</value>
+		</property>
+		<property name="password">
+			<value>tiger</value>
+		</property>
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="WEB-INF/mybatis-config.xml"/>
+		<property name="dataSource" ref="data-source-target"/>
+	</bean>
+	
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"/>
+	</bean>
+	
+	<bean id="sql-member-dao" class="com.spring.mvc1.SqlMemberDao">
+		<property name="sqlSessionTemplate" ref="sqlSessionTemplate"/>
+	</bean>	
+</beans>
+```
+
+* 27번이 생성자 객체 주입법에 해당한다. 
+* spring 과 mybatis가 만나는 부분을 xml에서 처리하는 방식이다.
+
 ## AndroidStudio
 
 ### activity : intent
