@@ -94,6 +94,8 @@ description: 2020.12.15 - 84일차
 
 ### Book : xml
 
+{% page-ref page="book-xml.md" %}
+
 ## Spring : Annotation O, XML X
 
 ### 어노테이션을 사용하는 경우
