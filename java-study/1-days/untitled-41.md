@@ -53,7 +53,7 @@ description: 2020.12.15 - 84일차
 
 ### spring-service.xml 
 
-* &lt;bean id=" " class=" "&gt; : spring-servlet.xml의 proterty ref에 작성된 이름과 일치하는 id      &lt;property name=" " ref=" "/&gt;  &lt;bean&gt;
+* &lt;bean id=" " class=" "&gt; : spring-servlet.xml의 proterty ref에 작성된 이름과 일치하는 id      &lt;property name=" " ref=" "/&gt; : 이 bean의 class가 주입받아야하는 객체의 setter메서드와 객체이름 &lt;bean&gt;
 
 ### 어노테이션을 사용하는 경우
 
