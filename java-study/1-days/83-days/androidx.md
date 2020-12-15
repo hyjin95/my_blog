@@ -10,7 +10,7 @@
 
 ```markup
 android.useAndroidX=true
-android.enableJetifier=ture
+android.enableJetifier=true
 ```
 
 ### build.gradle
