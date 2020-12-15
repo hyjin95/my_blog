@@ -10,7 +10,7 @@ description: 2020.12.15 - 84일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring - Android Studio
 * 사용 서버 - WAS : Tomcat
 
-## MVC
+## Spring : MVC
 
 ### request, response
 
