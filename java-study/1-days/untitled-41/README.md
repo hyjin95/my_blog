@@ -186,7 +186,7 @@ public class BoardController {
 * 27번이 생성자 객체 주입법에 해당한다. 
 * spring 과 mybatis가 만나는 부분을 xml에서 처리하는 방식이다.
 
-## AndroidStudio
+## AndroidStudio : Event
 
 ### activity : intent
 
@@ -198,4 +198,121 @@ public class BoardController {
 
 * 델리게이션 이벤트 모델 : 기존방식
 * 하이어라키 이벤트 모델 : 단말기로 확인 가능한 모델
+
+### Event처리 - 1 : 인터페이스 Override
+
+```java
+package com.example.delegationevent69;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LinearLayout linearLayout = new LinearLayout(this);
+        Button btn = new Button(this);
+        btn.setText("전송");
+        btn.setOnClickListener(onClick(v:this));
+        linearLayout.addView(btn);
+        setContentView(linearLayout);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(getApplicationContext(), "버튼누름",Toast.LENGTH_LONG).show();
+    }
+}
+```
+
+* 기존에 java에서 Event를 처리하는것과 비슷한 형태
+* View.OnClickListerner 인터페이스를 implements하고 onClick메서드를 오버라이드 한다.
+
+### Event처리 - 2 : 익명클래스
+
+```java
+package com.example.delegationevent69;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LinearLayout linearLayout = new LinearLayout(this);
+        Button btn = new Button(this);
+        btn.setText("전송");
+        
+        btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "버튼 누름",Toast.LENGTH_LONG).show();
+            }
+        });
+        linearLayout.addView(btn);
+        setContentView(linearLayout);
+    }
+}
+```
+
+* 인터페이스를 implements하지 않고 익명클래스로 필요한때에 작성한다.
+* 20-25번
+
+### Event처리 - 3 : 내부클래스
+
+```java
+package com.example.delegationevent69;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    class MyEventHandler implements View.OnClickListener{
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "버튼누름",Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        LinearLayout linearLayout = new LinearLayout(this);
+        Button btn = new Button(this);
+        btn.setText("전송");
+        
+        MyEventHandler myEvent = new MyEventHandler();
+        btn.setOnClickListener(myEvent);
+        
+        linearLayout.addView(btn);
+        setContentView(linearLayout);
+    }
+}
+```
+
+* 클래스 내부에 View.OnClickListener를 implements하는 이벤트핸들러 구현체 클래스를 정의한다.
+* 이벤트를 적용할 객체에는 인스턴스화를 통해 이벤트를 처리한다.
+* 27-28번
+
+후기 : 매일 최선을 다하자 프로젝트에도 수업에도! 
 
