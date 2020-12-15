@@ -14,7 +14,7 @@ description: 2020.12.15 - 84일차
 
 ### request, response
 
-* void -&gt; ModelAndView -&gt; String
+* void\(Lv1\) -&gt; ModelAndView\(Lv2\) -&gt; String\(Lv3\)
 * req, res를 사용해야한다는 것은 상속을 받아야 하므로 의존적인 구성이 된다는 것이다.
 * void타입과 ModelAndView타입을 활용하는 메서드를 갖는 클래스는 req, res를 상속받아야 한다.
 * 이를 벗어나기 위해 String타입을 사용하게 된다.
@@ -38,6 +38,11 @@ description: 2020.12.15 - 84일차
 * spring-servlet.xml : 컨트롤계층 + ViewResolver + Resource\(상수 : 이미지, 애니메이션, 색상, ....\) spring-service.xml spring-data.xml mybatis-config.xml
 * xml문서에 매번 등록해야 하고, java와 여러 xml문서를을 동기화해야하므로 복잡하다.
 * 동기화 - DispatcherServlet과 업무별 Controller - XXXController와 XXXLogic : java와 java - XXXLogic과 SqlXXXDao : java와 java - java와 java이지만 일반 인스턴스화가 아닌 xml을 통한 외부 주입을 받기 위한 코드가 필요하다.
+
+### 어노테이션을 사용하지 않는 경우 -2
+
+* ViewResolver - 응답할 view 페이지에 대한 url정의 - 접두어 : "WEB-INF/views/"   접미어 : ".jsp" - 작성시 "/"와 응답페이지를 호출하는 클래스에서의 페이지 이름에 ".jsp"가 붙는지 주의 한다.
+* ViewName - Lv2   ModelAndView mav = new ModelAndView\( \);    mav.setViewName\("xxxList"\) 
 
 ### 어노테이션을 사용하는 경우
 
