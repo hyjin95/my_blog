@@ -35,7 +35,7 @@ description: 2020.12.15 - 84일차
 
 ### 어노테이션을 사용하지 않는 경우
 
-* spring-servlet.xml : 컨트롤계층 + ViewResolver + Resource\(상수 : 이미지, 애니메이션, 색상, ....\) spring-service.xml spring-data.xml mybatis-config.xml
+* spring-servlet.xml : Controll 계층 + ViewResolver + Resource\(상수 : 이미지, 애니메이션, 색상, ....\) spring-service.xml : Model 계층 spring-data.xml : Model 계층\(DB에 자원관리\) mybatis-config.xml
 * xml문서에 매번 빈을 등록해야 하고, java와 여러 xml문서를을 동기화해야하므로 복잡하다.
 * 동기화 - DispatcherServlet과 업무별 Controller - XXXController와 XXXLogic : java와 java - XXXLogic과 SqlXXXDao : java와 java - java와 java이지만 일반 인스턴스화가 아닌 xml을 통한 외부 주입을 받기 위한 코드가 필요하다.
 
@@ -46,10 +46,14 @@ description: 2020.12.15 - 84일차
 * 응답페이지 : WEB-INF/views/XXX/xxxList.jsp
 * 컨트롤계층 안에서 모두 정해진다.
 
-### &lt;bean&gt;
+### spring-servlet.xml
 
-* &lt;bean id=" " class=" "&gt; : setter메서드를 호출하는 곳      &lt;property name=" "/&gt; : setter메서드 이름 &lt;bean&gt;
+* &lt;bean id=" " class=" "&gt; : setter메서드를 호출하는 곳, class=실제 위치\(패키지 + 파일이름\)      &lt;property name=" " ref=" "/&gt; : setter메서드 이름 &lt;bean&gt;
 * 이렇게 등록해야 필요한때, bean에 등록된 클래스의 id가 호출되면 작성된 setter메서드에 외부에서 객체를 생성해서 주입 해준다.
+
+### spring-service.xml 
+
+* &lt;bean id=" " class=" "&gt; : spring-servlet.xml의 proterty ref에 작성된 이름과 일치하는 id      &lt;property name=" " ref=" "/&gt;  &lt;bean&gt;
 
 ### 어노테이션을 사용하는 경우
 
