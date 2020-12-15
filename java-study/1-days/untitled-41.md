@@ -34,7 +34,7 @@ description: 2020.12.15 - 84일차
 ### 어노테이션을 사용하지 않는 경우
 
 * spring-servlet.xml spring-service.xml spring-data.xml mybatis-config.xml
-* xml문서에 매번 등록해야 하고, java와 xml을 동기화해야하므로 복잡하다.
+* xml문서에 매번 등록해야 하고, java와 여러 xml문서를을 동기화해야하므로 복잡하다.
 * 동기화 - DispatcherServlet과 업무별 Controller - XXXController와 XXXLogic : java와 java - XXXLogic과 SqlXXXDao : java와 java - java와 java이지만 일반 인스턴스화가 아닌 xml을 통한 외부 주입을 받기 위한 코드가 필요하다.
 
 ### 어노테이션을 사용하는 경우
