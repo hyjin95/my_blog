@@ -49,7 +49,7 @@ description: 2020.12.15 - 84일차
 ### &lt;bean&gt;
 
 * &lt;bean id=" " class=" "&gt; : setter메서드를 호출하는 곳      &lt;property name=" "/&gt; : setter메서드 이름 &lt;bean&gt;
-* 이렇게 등록해야 필요한때, bean에 등록된 클래스가 setter메서드를 호출할때 외부에서 객체를 생성해서 주입 해준다.
+* 이렇게 등록해야 필요한때, bean에 등록된 클래스의 id가 호출되면 작성된 setter메서드에 외부에서 객체를 생성해서 주입 해준다.
 
 ### 어노테이션을 사용하는 경우
 
