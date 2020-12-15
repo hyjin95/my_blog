@@ -60,4 +60,5 @@ public class BoardController {
 * 역시 어노테이션을 활용한다. : @RequestMapping
 * Controller클래스는 @Controller 어노테이션을 작성하고, 그 밑에 url을 작성한다. @RequestMapping\(/member/\*\) or \(/order/\*\)
 * 그리고 Controller안에서 구현하는 메서드에 업무내용 url을 작성해 분류한다. @RequestMapping\(/memberList.do\) or \(/memberInsert.do\)
+* 의존성 주입은 xml작성 대신에 멤버변수에 어노테이션 @Autowired를 붙인다.
 
