@@ -10,7 +10,7 @@ description: 2020.12.15 - 84일차
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring - Android Studio
 * 사용 서버 - WAS : Tomcat
 
-## Spring : MVC
+## Spring : MVC 
 
 ### request, response
 
@@ -30,6 +30,16 @@ description: 2020.12.15 - 84일차
 * 인터페이스를 활용하는 경우, 타입과 파라미터가 고정된 메서드를 오버라이드 해야만한다.
 * 하지만 추상클래스를 활용하는 것보다는 재사용성이 높다.
 * 인터페이스는 자체적으로 인스턴스화 될 수 없기때문에 구현체 클래스를 활용하고, 이 다형성으로 인해 같은 인터페이스 이더라도 다른 결과를 출력할 수 있기 때문이다.
+
+### 어노테이션을 사용하지 않는 경우
+
+* spring-servlet.xml spring-service.xml spring-data.xml mybatis-config.xml
+* xml문서에 매번 등록해야 한다.
+
+### 어노테이션을 사용하는 경
+
+* 컨트롤 계층 : @Controller 모델     계층 : @Service
+* @Autowired 어노테이션을 인스턴스 변수에 붙이기만 하면 된다.
 
 ### url-pattern : @RequestMapping , DI : @Autowired
 
