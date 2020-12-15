@@ -134,6 +134,8 @@ public class BoardController {
 
 ### Board : Annotation
 
+{% page-ref page="board-annotation.md" %}
+
 ## AndroidStudio
 
 ### activity : intent
