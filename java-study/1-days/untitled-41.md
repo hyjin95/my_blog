@@ -31,9 +31,11 @@ description: 2020.12.15 - 84일차
 * 하지만 추상클래스를 활용하는 것보다는 재사용성이 높다.
 * 인터페이스는 자체적으로 인스턴스화 될 수 없기때문에 구현체 클래스를 활용하고, 이 다형성으로 인해 같은 인터페이스 이더라도 다른 결과를 출력할 수 있기 때문이다.
 
+## Spring : Annotation
+
 ### 어노테이션을 사용하지 않는 경우
 
-* spring-servlet.xml spring-service.xml spring-data.xml mybatis-config.xml
+* spring-servlet.xml : 컨트롤계층 + ViewResolver + Resource\(상수 : 이미지, 애니메이션, 색상, ....\) spring-service.xml spring-data.xml mybatis-config.xml
 * xml문서에 매번 등록해야 하고, java와 여러 xml문서를을 동기화해야하므로 복잡하다.
 * 동기화 - DispatcherServlet과 업무별 Controller - XXXController와 XXXLogic : java와 java - XXXLogic과 SqlXXXDao : java와 java - java와 java이지만 일반 인스턴스화가 아닌 xml을 통한 외부 주입을 받기 위한 코드가 필요하다.
 
