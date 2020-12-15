@@ -22,6 +22,7 @@ android.enableJetifier=true
 ![](../../../.gitbook/assets/search0-1.png)
 
 * 붉은 표시 된 implementation 전구 &gt; Open
+* 또는 ctrl + alt + shift + s
 
 ![](../../../.gitbook/assets/search3.png)
 
