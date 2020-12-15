@@ -286,7 +286,7 @@
     * [Spring : New Project - spring boot](java-study/1-days/83-days/spring-new-project.md)
     * [AndroidX Migrate하기 : Intent69](java-study/1-days/83-days/androidx.md)
     * [Android 화면 : xml or java?](java-study/1-days/83-days/android-xml-or-java.md)
-  * [84 Days -](java-study/1-days/untitled-41/README.md)
+  * [84 Days - Spring : String, Annotation\(Board\), xml\(Book\), 생성자객체주입, Android : Event](java-study/1-days/untitled-41/README.md)
     * [Book : xml](java-study/1-days/untitled-41/book-xml.md)
     * [Board : Annotation](java-study/1-days/untitled-41/board-annotation.md)
   * [Untitled](java-study/1-days/untitled-43.md)
