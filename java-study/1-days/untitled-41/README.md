@@ -103,7 +103,7 @@ description: 2020.12.15 - 84일차
 * 컨트롤 계층 : @Controller 모델     계층 : @Service
 * @Autowired 어노테이션을 인스턴스 변수에 붙이기만 하면 된다.
 
-### url-pattern : @RequestMapping , DI : @Autowired
+### url-pattern : @RequestMapping , DI : @Autowired\(required=" "\)
 
 ```java
 package com.mvc3.board;
@@ -115,8 +115,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/board/*")
 public class BoardController {	
-	
-	@Autowired
+ 
+	@Autowired(required=false)	
 	public BoardLogic boardLogic = null;
 	
 	@RequestMapping("/boardList.sp3")
@@ -132,7 +132,7 @@ public class BoardController {
 * 역시 어노테이션을 활용한다. : @RequestMapping
 * Controller클래스는 @Controller 어노테이션을 작성하고, 그 밑에 url을 작성한다. @RequestMapping\(/member/\*\) or \(/order/\*\)
 * 그리고 Controller안에서 구현하는 메서드에 업무내용 url을 작성해 분류한다. @RequestMapping\(/memberList.do\) or \(/memberInsert.do\)
-* 의존성 주입은 xml작성 대신에 멤버변수에 어노테이션 @Autowired를 붙인다.
+* 의존성 주입은 xml작성 대신에 멤버변수에 어노테이션 @Autowired를 붙인다. required속성은 있어도 없어도 되는데 falsle라면 해당 클래스가 없더라도 에러를 발생시키지 않고, 기본값인 true는 클래스 존재가 필수 조건이므로 에러가 발생한다.
 
 ### 파라미터 : @RequestParam
 
