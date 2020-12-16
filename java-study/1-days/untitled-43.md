@@ -32,3 +32,9 @@ description: 2020.12.16 - 85일차
 * 페이지이름 : Properties에서 지정된 메서드 결정\(Spring\)
 * Spring에서 클래스등록은 spring-servlet.xml에 작성된다.
 
+### Controller설계
+
+* 하나의 클래스 안에는 n개의 업무가 존재한다.
+* 이때 bookInsert업무는 BookInsertController, bookUpdate업무는 BookUpdateController이런식으로 설계를 하면 비효율적인 코드가 탄생할 것이다. 같은 Controller안에서 충분히 나눌 수 있는 업무에 대해 doGet과 같은 메서드 코드가 반복되어야 하는 상황이 발생한다.
+* 위와 같은 업무는 BookController안에서 같이 처리하도록 해야 반복 코드를 줄일 수 있다.
+
