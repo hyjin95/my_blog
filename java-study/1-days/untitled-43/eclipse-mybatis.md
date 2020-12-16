@@ -122,7 +122,7 @@ spring.datasource.hikari.auto-commit=true
 
 ### http://localHost:8080/board/boardInsert.sp3
 
-![](../../../.gitbook/assets/1%20%2888%29.png)
+![alert](../../../.gitbook/assets/1%20%2888%29.png)
 
-![](../../../.gitbook/assets/2%20%2867%29.png)
+![console.log](../../../.gitbook/assets/2%20%2867%29.png)
 
