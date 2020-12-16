@@ -21,6 +21,7 @@ description: 2020.12.16 - 85일차
 
 * 지정된 url-pattern에 따라 DispatcherServlet이 SimpleUrlHandlerMapping에 등록된 url에 맞는 클래스를 찾아낸다.
 * SimpleUrlHandlerMapping클래스가 DispatcherServlet과 각 업무 Controller를 연결하는 역할을 한다.
+* 업무 클래스에 대한 구분은 요청된 url-pattern으로 한다.
 
 ### url-pattern
 
