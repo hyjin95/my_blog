@@ -2,7 +2,7 @@
 description: 2020.12.16 - 85일차
 ---
 
-# 85 Days -
+# 85 Days - spring-boot : mybatis조립, spring차이, xml, annotation, 트랜잭션, AndroidStudio : Activity, layout
 
 ### 사용 프로그램
 
@@ -177,9 +177,5 @@ while(rs.next()){
 * 생성 후 해당 activity xml을 화면으로 하고싶다면 manifest의 MainActivity클래스의 setContentView를 이 xml문서로 지정한다.
 * 보통은 Activity java문서를 생성하면 자동으로 xml이 생성된다.
 
-
-
-
-
-
+후기 : 저번에 세미프로젝트를 열심히 했던것이 파이널 프로젝트에서도 도움이 되는 것 같다. DB를 해보길 잘했다!
 
