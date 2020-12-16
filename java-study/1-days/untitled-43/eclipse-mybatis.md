@@ -93,3 +93,5 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </mapper>
 ```
 
+### 결과 : http://localHost:8080/board/boardInsert.sp3
+
