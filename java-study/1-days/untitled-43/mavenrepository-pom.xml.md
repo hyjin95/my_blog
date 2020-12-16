@@ -1,4 +1,4 @@
-# MavenRepository : pom.xml
+# MavenRepository : pom.xml + application.properties
 
 ### demo/pom.xml
 

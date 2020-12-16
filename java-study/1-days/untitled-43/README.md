@@ -126,6 +126,10 @@ server.tomcat.uri-encoding=UTF-8
 * MyBatis &gt;&gt; 3.5.6
 * MyBatis Spring &gt;&gt; 2.0.6
 * Gson &gt;&gt; 2.8.6
-* HikariCP &gt;&gt; 3.4.5
+* HikariCP &gt;&gt; 3.4.5 + application.properties
 * Spring Boot Starter JDBC &gt;&gt; 2.3.7 RELEASE
+
+{% page-ref page="mavenrepository-pom.xml.md" %}
+
+
 
