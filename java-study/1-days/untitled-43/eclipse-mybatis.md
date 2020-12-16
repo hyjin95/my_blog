@@ -95,3 +95,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 ### 결과 : http://localHost:8080/board/boardInsert.sp3
 
+![](../../../.gitbook/assets/1%20%2888%29.png)
+
+![](../../../.gitbook/assets/2%20%2867%29.png)
+
