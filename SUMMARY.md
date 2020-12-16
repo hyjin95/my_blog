@@ -289,6 +289,6 @@
   * [84 Days - Spring : String, Annotation\(Board\), xml\(Book\), 생성자객체주입, Android : Event](java-study/1-days/untitled-41/README.md)
     * [Book : xml](java-study/1-days/untitled-41/book-xml.md)
     * [Board : Annotation](java-study/1-days/untitled-41/board-annotation.md)
-  * [Untitled](java-study/1-days/untitled-43.md)
+  * [85 Days -](java-study/1-days/untitled-43.md)
   * [Untitled](java-study/1-days/untitled-42.md)
 
