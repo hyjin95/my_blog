@@ -69,5 +69,5 @@ description: 2020.12.16 - 85일차
 	</bean>
 ```
 
-* 13번에서 Controller클래스가 ref속성의 board-resolver를 참조하게 한다.
+* 13번에서 Controller클래스가 ref속성의 board-resolver이름을 가진 &lt;bean&gt;을를 참조하게 한다.
 
