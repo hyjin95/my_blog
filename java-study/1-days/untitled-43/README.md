@@ -103,3 +103,5 @@ description: 2020.12.16 - 85일차
 
 ### 트랜잭션 처리 및 클래스 조립하기
 
+{% page-ref page="eclipse-board-transaction.md" %}
+
