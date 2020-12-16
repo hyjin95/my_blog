@@ -30,7 +30,7 @@ public class BoardController {
 		logger.info("boardInsert 호출 성공 : "+pMap);
 		int result = 0;
 		result = boardLogic.boardInsert(pMap);
-		return "foward:list.jsp";
+		return "redirect.boardInsertOk.jsp";
 	}
 }
 ```

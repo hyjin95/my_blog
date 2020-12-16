@@ -132,9 +132,9 @@ server.tomcat.uri-encoding=UTF-8
 
 {% page-ref page="mavenrepository-pom.xml.md" %}
 
-### POJO
+### POJO와 Mybatis
 
-```markup
+```java
 Class.forName("오라클 드라이버 클래스 로딩");
 
 Connection con = DriverManager.getConnection(url, scott, tiger);
@@ -149,13 +149,27 @@ while(rs.next()){
 }
 ```
 
-### MyBatis연결, 클래스 조립하기
+### Spring-boot와 Mybatis
 
 ```markup
 Class.forName("오라클 드라이버 클래스 로딩");
 
 Connection con = DriverManager.getConnection(url, scott, tiger);
 ```
+
+{% page-ref page="eclipse-mybatis.md" %}
+
+## Android Studio
+
+### Activity : Layout xml생성
+
+![](../../../.gitbook/assets/view1.png)
+
+* res &gt; layout우클릭 &gt; New &gt; Layout Resource File
+
+![](../../../.gitbook/assets/view2.png)
+
+* 생성 후 해당 activity xml을 화면으로 하고싶다면 manifest의 MainActivity클래스의 setContentView를 이 xml문서로 지정한다.
 
 
 
