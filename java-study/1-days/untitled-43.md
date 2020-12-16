@@ -35,6 +35,22 @@ description: 2020.12.16 - 85일차
 ### Controller설계 : PropertiesMethodNameResolver
 
 ```markup
+<bean id="simpleUrlHandlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/board/boardList.sp3">board-controller</prop>
+				<prop key="/board/boardInsert.sp3">board-controller</prop>
+				<prop key="/board/boardUpdate.sp3">board-controller</prop>
+				<prop key="/board/boardDelete.sp3">board-controller</prop>
+			</props>
+		</property>
+	</bean>   
+	
+	<bean id="boardController" class="com.mvc3.board.BoardController">
+		<property name="methodNameResolver" ref="board-resolver"/>
+		<property name="boardLogic" ref="board-logic"/>
+	</bean>
+	
 <bean id="board-resolver" class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
 		<property name="mappings">
 			<props>
