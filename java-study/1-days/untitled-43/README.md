@@ -121,7 +121,7 @@ server.tomcat.uri-encoding=UTF-8
 
 ## Eclipse : Spring-boot + MyBatis
 
-### MavenRepository
+### MavenRepository : pom.xml
 
 * MyBatis &gt;&gt; 3.5.6
 * MyBatis Spring &gt;&gt; 2.0.6
