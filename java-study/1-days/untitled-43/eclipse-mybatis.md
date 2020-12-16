@@ -191,5 +191,5 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 ![alert](../../../.gitbook/assets/1%20%2888%29.png)
 
-![console.log](../../../.gitbook/assets/2%20%2867%29.png)
+![console.log](../../../.gitbook/assets/2%20%2868%29.png)
 

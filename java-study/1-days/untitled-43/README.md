@@ -155,6 +155,17 @@ while(rs.next()){
 
 ## Android Studio
 
+### Activity.java 생성
+
+![](../../../.gitbook/assets/2%20%2867%29.png)
+
+* 패키지 우클릭 &gt; New &gt; Activity &gt; Empty Activity
+
+![](../../../.gitbook/assets/22%20%285%29.png)
+
+* Generate a Layout File : xml문서를 같이 생성할 것인지 여부
+* Lancher Activity : manifest에서 메인 화면으로 지정할 것인지
+
 ### Activity : Layout xml생성
 
 ![](../../../.gitbook/assets/view1.png)
@@ -164,6 +175,7 @@ while(rs.next()){
 ![](../../../.gitbook/assets/view2.png)
 
 * 생성 후 해당 activity xml을 화면으로 하고싶다면 manifest의 MainActivity클래스의 setContentView를 이 xml문서로 지정한다.
+* 보통은 Activity java문서를 생성하면 자동으로 xml이 생성된다.
 
 
 
