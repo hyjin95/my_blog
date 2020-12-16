@@ -151,12 +151,6 @@ while(rs.next()){
 
 ### Spring-boot와 Mybatis
 
-```markup
-Class.forName("오라클 드라이버 클래스 로딩");
-
-Connection con = DriverManager.getConnection(url, scott, tiger);
-```
-
 {% page-ref page="eclipse-mybatis.md" %}
 
 ## Android Studio
