@@ -1,4 +1,4 @@
-# Eclipse : board - transaction, 클래스 조립
+# Eclipse : board - transaction
 
 ### 코드 : BoardController.java
 

@@ -115,7 +115,7 @@ server.tomcat.uri-encoding=UTF-8
 
 * resources : log4j2.xml + log4jdbc.log4j2.properties + logback.xml
 
-### 트랜잭션 처리 및 클래스 조립하기
+### 트랜잭션 처리
 
 {% page-ref page="eclipse-board-transaction.md" %}
 
