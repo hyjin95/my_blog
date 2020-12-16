@@ -65,3 +65,31 @@ public class SqlBoardDDao {
 }
 ```
 
+### 코드 : boardInsert.jsp
+
+```markup
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<script>
+	alert("정상처리 완료");
+	console.log("등록완료");
+</script>
+```
+
+### 코드 : board.xml
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo"><!-- 패키지 맞추기 -->
+
+ <select id="cday" parameterType="int" resultType="string">
+	SELECT TO_CHAR(sysdate,'YYYY-MM-DD') cday
+	  FROM dual
+ </select>
+ 
+</mapper>
+```
+
