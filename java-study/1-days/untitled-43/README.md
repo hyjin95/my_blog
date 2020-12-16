@@ -78,12 +78,14 @@ description: 2020.12.16 - 85일차
 * Help &gt; Eclipse-Marketplace에서 spring sts를 다운로드 하면 spring-boot프로젝트를 생성할 수 있다.
 * File &gt; New &gt; Spring Boot &gt; Spring Starter Project 자바버전을 맞추고 제공 서비스는 Web &gt; Web Service만 체크하고 생성한다.
 
-```markup
+```elixir
 server.port=8080
+#request에 대한 응답페이지 설정 추가
 spring.mvc.view.prefix=/WEB-INF/views/
 spring.mvc.view.suffix=.jsp
+#톰캣서버와 스프링 프로토콜 요청시 한글 설정 추가
 server.tomcat.uri-encoding=UTF-8
-spring.http.encoding.charset=UTF-8
+#spring.http.encoding.charset=UTF-8 내장되어있나?
 ```
 
 * spring-boot에서는 xml이 아닌 application.properties에 작성한다. 
