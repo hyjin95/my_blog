@@ -134,6 +134,31 @@ public class BoardController {
 * 그리고 Controller안에서 구현하는 메서드에 업무내용 url을 작성해 분류한다. @RequestMapping\(/memberList.do\) or \(/memberInsert.do\)
 * 의존성 주입은 xml작성 대신에 멤버변수에 어노테이션 @Autowired를 붙인다.
 
+```java
+
+	
+	@RequestMapping("/boardList.sp3")
+	public String boardList(HttpServletRequest req) {
+		logger.info("boardList 호출 성공 : 기존방식");
+		String pmem_id = req.getParameter("mme_id");
+		String pmem_pw = req.getParameter("mme_pw");
+		String pmem_name = req.getParameter("mme_name");
+		logger.info("mem_id : "+pmem_id+", mem_pw : "+pmem_pw+", mem_name : "+pmem_name);
+		List<Map<String,Object>> bList = null;
+		bList = boardLogic.boardList(null);
+		return "foward:list.jsp";
+	}
+	
+	@RequestMapping("/boardList.sp3")
+	public String boardList(@RequestParam Map<String,Object> pMap) {
+		logger.info("boardList 호출 성공 : "+pMap);
+		List<Map<String,Object>> bList = null;
+		//bList = bLogic.boardList(pMap);
+		bList = boardLogic.boardList(pMap);
+		return "foward:list.jsp";
+	}
+```
+
 ### Board : Annotation
 
 {% page-ref page="board-annotation.md" %}
