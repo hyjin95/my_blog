@@ -132,5 +132,7 @@ server.tomcat.uri-encoding=UTF-8
 
 {% page-ref page="mavenrepository-pom.xml.md" %}
 
+### MyBatis연결, 클래스 조립하기
+
 
 

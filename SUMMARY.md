@@ -291,6 +291,7 @@
     * [Board : Annotation](java-study/1-days/untitled-41/board-annotation.md)
   * [85 Days -](java-study/1-days/untitled-43/README.md)
     * [Eclipse : board - transaction, 클래스 조립](java-study/1-days/untitled-43/eclipse-board-transaction.md)
+    * [Eclipse : MyBatis, 클래스 조립](java-study/1-days/untitled-43/eclipse-mybatis.md)
     * [MavenRepository : pom.xml + application.properties](java-study/1-days/untitled-43/mavenrepository-pom.xml.md)
   * [Untitled](java-study/1-days/untitled-44.md)
   * [Untitled](java-study/1-days/untitled-42.md)
