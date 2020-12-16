@@ -78,3 +78,26 @@ description: 2020.12.16 - 85일차
 * Help &gt; Eclipse-Marketplace에서 spring sts를 다운로드 하면 spring-boot프로젝트를 생성할 수 있다.
 * File &gt; New &gt; Spring Boot &gt; Spring Starter Project 자바버전을 맞추고 제공 서비스는 Web &gt; Web Service만 체크하고 생성한다.
 
+### Eclipse : Spring-boot-log
+
+```markup
+		<!--=========================== log4jdbc로그 추가 ================================-->
+		<!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4 -->
+		<dependency>
+		    <groupId>org.bgee.log4jdbc-log4j2</groupId>
+		    <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+		    <version>1.16</version>
+		</dependency>			
+		<!--=========================== log4j-web로그 추가 ================================-->
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-web -->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-web</artifactId>
+		    <version>2.13.3</version>
+		</dependency>
+```
+
+* MavenRepository : Log4JDBC Log4j2 JDBC4 &gt;&gt; 1.16
+
+  MavenRepository : Apache Log4 Web &gt;&gt; 2.13.3
+
