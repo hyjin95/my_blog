@@ -71,3 +71,10 @@ description: 2020.12.16 - 85일차
 
 * 13번에서 Controller클래스가 ref속성의 board-resolver이름을 가진 &lt;bean&gt;을를 참조하게 한다.
 
+## Eclipse : Spring-boot
+
+### Eclipse : Spring-boot
+
+* Help &gt; Eclipse-Marketplace에서 spring sts를 다운로드 하면 spring-boot프로젝트를 생성할 수 있다.
+* File &gt; New &gt; Spring Boot &gt; Spring Starter Project 자바버전을 맞추고 제공 서비스는 Web &gt; Web Service만 체크하고 생성한다.
+
