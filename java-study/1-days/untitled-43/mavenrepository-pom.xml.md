@@ -1,4 +1,4 @@
-# MavenRepository : pom.xml + application.properties
+# MavenRepository : pom.xml
 
 ### demo/pom.xml
 
@@ -70,28 +70,5 @@
 		</dependency>
 		
 	</dependencies>
-```
-
-### application.properties
-
-```elixir
-server.port=8080
-#request에 대한 응답페이지 설정 추가
-spring.mvc.view.prefix=/WEB-INF/views/
-spring.mvc.view.suffix=.jsp
-#톰캣서버와 스프링 프로토콜 요청시 한글 설정 추가
-server.tomcat.uri-encoding=UTF-8
-#spring.http.encoding.charset=UTF-8 내장되어있나?
-#HikariCP 커넥션 풀 설정 추가
-spring.datasource.hikari.driver-class-name=oracle.jdbc.driver.OracleDriver
-spring.datasource.hikari.jdbcUrl=jdbc:oracle:thin:@127.0.0.1:1521:orcl11
-spring.datasource.hikari.username=scott
-spring.datasource.hikari.password=tiger
-spring.datasource.hikari.connection-timeout=20000
-spring.datasource.hikari.minimum-Idle=5
-spring.datasource.hikari.maximum-pool-size=12
-spring.datasource.hikari.ldle-timeout=300000
-spring.datasource.hikari.max-lifetime=1200000
-spring.datasource.hikari.auto-commit=true
 ```
 

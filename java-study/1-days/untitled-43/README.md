@@ -132,7 +132,34 @@ server.tomcat.uri-encoding=UTF-8
 
 {% page-ref page="mavenrepository-pom.xml.md" %}
 
+### POJO
+
+```markup
+Class.forName("오라클 드라이버 클래스 로딩");
+
+Connection con = DriverManager.getConnection(url, scott, tiger);
+
+PreparedStatement pstmt = con.preparedStatement("SELECT 1 FROM dual WHERE id=?);
+pstmt.setString(1."test");
+
+ResultSet rs = pstmt.executeQuery();
+
+while(rs.next()){
+    String id = rs.getString("id")
+}
+```
+
 ### MyBatis연결, 클래스 조립하기
+
+```markup
+Class.forName("오라클 드라이버 클래스 로딩");
+
+Connection con = DriverManager.getConnection(url, scott, tiger);
+```
+
+
+
+
 
 
 
