@@ -93,9 +93,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </mapper>
 ```
 
-## 
+## 연결
 
-### application.properties
+### 코드 : application.properties
 
 ```elixir
 server.port=8080
@@ -116,6 +116,72 @@ spring.datasource.hikari.maximum-pool-size=12
 spring.datasource.hikari.ldle-timeout=300000
 spring.datasource.hikari.max-lifetime=1200000
 spring.datasource.hikari.auto-commit=true
+```
+
+### 코드 : DatabaseConfiguration.java
+
+```java
+package com.example.demo;
+
+import javax.sql.DataSource;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+
+//spring-data.xml을 java로 구현했다.
+//spring-context.jar가 있기에 가능하다. -> ApplicationContext로 빈관리를 받아 소멸과 생성을 담당해준다.
+
+@Configuration//환경설정 xml : <context-param><param-name>contextConfigLocation<param-value>/WEB-INF/spring-data.xml
+//MapperScan(basePackages = {"com.example.demo"})
+@PropertySource("classpath:/application.properties")// 3 : 여기에 정보있다. 29번은 여기에 접근하기 위한 prefix이다.
+public class DatabaseConfiguration {//hikariCP라는 오브젝트를 사용하기
+   private static final Logger logger = LogManager.getLogger(DatabaseConfiguration.class);
+   @Bean//다 bean으로 묶어놧기때문에 spring-context의 클래스가 bean으로 관리를 해줄 수 있는 것이다.
+   @ConfigurationProperties(prefix = "spring.datasource.hikari")// 2 : 히카리컨피그 객체 생성, 오라클 서버에 대한 정보를 갖고있음, 어디에잇다> spring.datasource,hikari에있다.
+   public HikariConfig hikariConfig() {
+      return new HikariConfig();//오라클에대한 서버 정보
+   }
+
+   @Bean
+   public DataSource dataSource() {// 1 : Connection con = DriverManager.getConnection(url, scott, tiger,...);
+      DataSource dataSource = new HikariDataSource(hikariConfig());//생성자에 함수 호출 
+      logger.info("datasource : {}", dataSource);
+      return dataSource;//연결통로에 대한 정보를 갖게됨, 주소번지 -> 이걸로 sqlSessionFactory Bean을 만들어야함
+   }
+   @Autowired
+   private ApplicationContext applicationContext;
+
+   @Bean
+   public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {//datasource로 연결통로 생성 = connection
+      SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+      sqlSessionFactoryBean.setDataSource(dataSource);
+      //classpath는 src/main/resourcs이고 해당 쿼리가 있는 xml 위치는 본인의 취향대로 위치키시고 그에 맞도록 설정해주면 된다.
+      sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:/mapper/**/*.xml"));//쿼리문(mybatis문서)에대한 물리적 위치
+      return sqlSessionFactoryBean.getObject();
+   }
+   
+   /* <bean id="sqlSessionTemplate" class="xxx.xxx.sqlSessionTemplate>
+    * 	<contsructor-arg index=0 ref="sqlSqssionFactory"/>
+    * </bean>
+    */
+
+   @Bean
+   public SqlSessionTemplate sqlSessionTemplate(SqlSessionFactory sqlSessionFactory) {
+      return new SqlSessionTemplate(sqlSessionFactory);
+   }   
+}
 ```
 
 ## 결과 : url
