@@ -134,9 +134,9 @@ public class BoardController {
 * 그리고 Controller안에서 구현하는 메서드에 업무내용 url을 작성해 분류한다. @RequestMapping\(/memberList.do\) or \(/memberInsert.do\)
 * 의존성 주입은 xml작성 대신에 멤버변수에 어노테이션 @Autowired를 붙인다.
 
-```java
+### 파라미터 : @RequestParam
 
-	
+```java
 	@RequestMapping("/boardList.sp3")
 	public String boardList(HttpServletRequest req) {
 		logger.info("boardList 호출 성공 : 기존방식");
@@ -148,16 +148,21 @@ public class BoardController {
 		bList = boardLogic.boardList(null);
 		return "foward:list.jsp";
 	}
-	
+```
+
+* @RequestParam 어노테이션을 사용하지 않는 경우에는 req가 필요한 기존 방식으로 처리해야만 한다.
+
+```java
 	@RequestMapping("/boardList.sp3")
 	public String boardList(@RequestParam Map<String,Object> pMap) {
 		logger.info("boardList 호출 성공 : "+pMap);
 		List<Map<String,Object>> bList = null;
-		//bList = bLogic.boardList(pMap);
 		bList = boardLogic.boardList(pMap);
 		return "foward:list.jsp";
 	}
 ```
+
+* 메서드의 파라미터로 @RequestParam어노테이션이 붙은 변수를 넣어주면 해당 변수에 파라미터가 담긴다.
 
 ### Board : Annotation
 
