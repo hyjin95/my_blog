@@ -214,12 +214,47 @@ public class BoardController {
 }
 ```
 
-## Android Studio : data처리
+## Android Studio
+
+### manifests
+
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.coffee69">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Coffee69">
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".TopActivity"> <!-- 런처마다 어플이 생성된다. 런처 = 메인 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+```
+
+* 적재소 파일이 위치한다.
+* 역할 - 권한등록\(인터넷-네트워크 사용, 구글맵 키 값,  앱 바 설정\(10\), 아이콘\(7\), 액티비티 선언\(12-18\)\)
+* @ : res, 리소스에 있는 자원을 가리킨다.
+* 8번 label은 앱 이름을 지정한다.
+* 13-18번처럼 런처로 등록된 액티비티가 런처 실행시의 메인이 된다. 여러개를 지정하면 런처마다 앱이 실행되는 것을 볼 수 있다.
+
+## Android Studio : string.xml data 꺼내기
 
 ### data 처리
 
 1. JSON : 웹이나 자바 코드안에서만 자유롭게 사용할 수 있다.
-2. DB-SQLite
+2. DB-SQLite : DB연동이므로 시간이 걸린다.
+3. 자바 자료구조, 배열 : 빠르고 쉽다.
 
 ### TopActivity : view
 
@@ -260,7 +295,7 @@ public class BoardController {
 </LinearLayout>
 ```
 
-## Android Studio : Listener, Event, Adapter
+## AndroidStudio Event : Listener, Adapter
 
 ### 리스너로 ListView 클릭 이벤트 처리
 
