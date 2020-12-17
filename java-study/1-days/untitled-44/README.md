@@ -79,11 +79,31 @@ enable validate);
 * boot에서는 ModelAndView대신 String을 사용한다. - "redirect:xxx.jsp" -&gt; webapp/board를 바라본다. - "foward:xxx.jsp"  -&gt; webapp/board - "board/xxx."         -&gt; ViewResolver가 관여, WEB-INF를 바라본다.
 * boot에서 "redirect / forward"로 리턴을 작성할때에는 반드시 .jsp가 작성되어야한다.  ViewResolver를 사용하지 않으므로
 
+### log4j : log4j.xml
+
+```markup
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	
+	<!-- Application Loggers -->
+	<logger name="com.spring.mvc1">
+		<level value="info" />
+	</logger>
+	<logger name="com.board">
+		<level value="info" />
+	</logger>
+
+</log4j:configuration>
+```
+
+* 자바 패키지 추가시 위 처럼 logger name을 등록해야한다.
+
 ## Spring 실습 : boot이전
 
 ### boot 이전
 
-* xml기반 설정
+* 키워드 : DispatcherServlet,  xml문서, req, res객체, &lt;bean&gt;
 * 단점 : xml에 오류 발생시 서버가 터져 다른 개발자들도 테스트가 불가능해지는 일이 발생한다.
 * 장점 : boot보다 유지보수에 유리한 점이 있다.
 
@@ -100,6 +120,54 @@ enable validate);
 * 스프링 메뉴에서 제공한 프로젝트 이지만 이클립스가 제공하는 xml문서가 아닌 개발자가 직접 xml문서를 정의한 프로젝트 실습
 * &lt;init-param&gt;spring servlet.xml&lt;init-param/&gt; 서블릿의 요청 발생시 마다 새로 읽어 처리한다.
 * &lt;context\_param&gt;spring-service.xml, spring-data,xml&lt;context-param/&gt; 단독 선언되어 서버가 처음 기동될때 읽은 내용을 유지한다. 
+
+### 1. Void
+
+```java
+package com.board;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+public class BoardController extends MultiActionController {//spring제공 클래스
+	Logger logger = Logger.getLogger(BoardController.class);
+	
+	public void writeForm(HttpServletRequest req, HttpServletResponse res)
+		throws Exception{
+		logger.info("controller - writeFrom호출성공");
+		res.sendRedirect("writeForm.jsp");
+	}
+}
+```
+
+### 2. ModelAndView
+
+```java
+package com.board;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.multiaction.MultiActionController;
+
+public class BoardController extends MultiActionController {//spring제공 클래스
+	Logger logger = Logger.getLogger(BoardController.class);
+	
+	public ModelAndView writeForm2(HttpServletRequest req, HttpServletResponse res)//viewResolver를 사용한다.
+			throws Exception{
+		logger.info("controller - writeFrom호출성공");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/board/writeForm");
+		return mav;
+	}
+}
+```
 
 ## Spring 실습 : boot이후
 
