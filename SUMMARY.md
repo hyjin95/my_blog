@@ -293,6 +293,6 @@
     * [Eclipse : board - transaction](java-study/1-days/untitled-43/eclipse-board-transaction.md)
     * [Eclipse : MyBatis, 클래스 조립, application.properties](java-study/1-days/untitled-43/eclipse-mybatis.md)
     * [MavenRepository : pom.xml](java-study/1-days/untitled-43/mavenrepository-pom.xml.md)
-  * [Untitled](java-study/1-days/untitled-44.md)
+  * [86 Days -](java-study/1-days/untitled-44.md)
   * [Untitled](java-study/1-days/untitled-42.md)
 
