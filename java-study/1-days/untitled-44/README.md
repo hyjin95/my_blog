@@ -43,6 +43,35 @@ enable validate);
 
 {% page-ref page="untitled-45.md" %}
 
+## Spring
+
+### webapp&gt;board, WER-INF&gt;board
+
+* sendRedirect, forward는 webapp, ModelAndView는 후
+
+### web.xml
+
+```markup
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>spring31</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>spring31</servlet-name>
+		<url-pattern>*.sp</url-pattern>
+	</servlet-mapping>
+```
+
+* xxx.sp가 아닌 요청들은 표준 서블릿으로 처리되어 스프링을 경우하지 않는다.  DispatcherServlet을 활용하지 않는다.
+* xxx.sp로 들어오는 요청들은 스프링이 관여하고 DispatcherServlet이 활용된다.
+
 ## Spring 실습 : boot이전
 
 ### boot 이전
@@ -50,10 +79,6 @@ enable validate);
 * xml기반 설정
 * 단점 : xml에 오류 발생시 서버가 터져 다른 개발자들도 테스트가 불가능해지는 일이 발생한다.
 * 장점 : boot보다 유지보수에 유리한 점이 있다.
-
-### webapp&gt;board, WER-INF&gt;board
-
-* sendRedirect, forward는 webapp, ModelAndView는 후
 
 ### spring3 프로젝트
 
@@ -82,6 +107,6 @@ enable validate);
 * return "redirect : xxx.jsp"
 * return "redirect : "xxx.sp3"
 * return "forward : "xxx.jsp"
-* return "board/boardList" - ViewResolver를 사용하는 방법
+* return "board/boardList" - ViewResolver를 사용하는 방법   /WEB-INF/views/+여기에페이지이름+.jsp
 * return "foward : "xxx.sp3" X - forward로 새 요청을 하는 것은 허용하지 않는다.
 
