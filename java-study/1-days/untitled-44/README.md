@@ -72,7 +72,7 @@ enable validate);
 * xxx.sp가 아닌 요청들은 표준 서블릿으로 처리되어 스프링을 경우하지 않는다.  DispatcherServlet을 활용하지 않는다.
 * xxx.sp로 들어오는 요청들은 스프링이 관여하고 DispatcherServlet이 활용된다.
 
-### ViewResolver의 관여
+### jsp배포위치 : ViewResolver
 
 * ViewResolver가 관여한다는것은 접두어와 접미어를 제공한다는 것이다. 배포위치는 ViewResolver에 지정된 경로가 된다. WEB-INF/views/ + 페이지이름 + .jsp
 * ModelAndView를 사용할 때 -&gt; WEB-INF를 바라본다.
