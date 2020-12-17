@@ -16,17 +16,32 @@ description: 2020.12.17 - 86일차
 
 ```sql
 create table board_master_t
-(bm_no number(5) constraints bm_no_pk primary key
-,bm_writer varchar2(30) not null
-,bm_title varchar2(100) not null
-,bm_content varchar2(4000)
-,bm_email varchar2(50)
-,bm_hit number(5) default 0
-,bm_date varchar2(30)
-,bm_group number(5) default 0
-,bm_pos number(5) default 0
-,bm_step number(5) default 0
-,bm_pw varchar2(10)
-);
+(bm_no number(5) constraints bm_no_pk primary key);
 ```
+
+* pk를 설정하면 index는 자동으로 생성된다.
+
+### index 생성
+
+```sql
+create unique index scott.bmno_pk on scott.board_sub_t(bm_no, bs_seq);
+```
+
+* pk가 없다면 index를 따로 생성한다.
+
+### FK 제약조건 생성
+
+```sql
+--제약조건 안전장치 설정, 제약조건 넣기
+alter table scott.board_sub_t add(constraint fk_bmno
+foreign key(bm_no)
+references scott.board_master_t(bm_no)
+enable validate);
+```
+
+* FK 제약조건 설정하기
+
+{% page-ref page="untitled-45.md" %}
+
+
 

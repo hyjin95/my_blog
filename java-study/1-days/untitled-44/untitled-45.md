@@ -1,4 +1,4 @@
-# Untitled
+# Toad : board\_master/sub 테이블
 
 ## board\_master\_t
 
@@ -41,7 +41,7 @@ create table board_sub_t
 );
 ```
 
-### index 생
+### index 생성
 
 ![](../../../.gitbook/assets/23%20%281%29.png)
 

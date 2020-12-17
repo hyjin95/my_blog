@@ -294,6 +294,6 @@
     * [Eclipse : MyBatis, 클래스 조립, application.properties](java-study/1-days/untitled-43/eclipse-mybatis.md)
     * [MavenRepository : pom.xml](java-study/1-days/untitled-43/mavenrepository-pom.xml.md)
   * [86 Days -](java-study/1-days/untitled-44/README.md)
-    * [Untitled](java-study/1-days/untitled-44/untitled-45.md)
+    * [Toad : board\_master/sub 테이블](java-study/1-days/untitled-44/untitled-45.md)
   * [Untitled](java-study/1-days/untitled-42.md)
 
