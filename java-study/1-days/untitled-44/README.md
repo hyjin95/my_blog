@@ -72,6 +72,12 @@ enable validate);
 * xxx.sp가 아닌 요청들은 표준 서블릿으로 처리되어 스프링을 경우하지 않는다.  DispatcherServlet을 활용하지 않는다.
 * xxx.sp로 들어오는 요청들은 스프링이 관여하고 DispatcherServlet이 활용된다.
 
+### ViewResolver의 관여
+
+* ViewResolver가 관여한다는것은 접두어와 접미어를 제공한다는 것이다.
+* ModelAndView를 사용할 때
+* boot에서는 ModelAndView대신 String을 사용한다. - "redirect:xxx.jsp" -&gt; webapp/board를 바라본다. - "foward:xxx.jsp"  -&gt; webapp/board - "board/xxx."         -&gt; ViewResolver가 관여한다.
+
 ## Spring 실습 : boot이전
 
 ### boot 이전
