@@ -257,3 +257,7 @@ public class BoardController {
 </LinearLayout>
 ```
 
+## Android Studio : Listener, Event
+
+### 리스너로 ListView 클릭 이벤트 처리
+
