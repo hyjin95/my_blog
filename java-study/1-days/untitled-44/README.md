@@ -51,6 +51,20 @@ enable validate);
 * 단점 : xml에 오류 발생시 서버가 터져 다른 개발자들도 테스트가 불가능해지는 일이 발생한다.
 * 장점 : boot보다 유지보수에 유리한 점이 있다.
 
+### spring3 프로젝
+
+![](../../../.gitbook/assets/spring3.png)
+
+* 스프링 메뉴에서 제공한 프로젝트로 xml기반으로 설정했지만 이클립스가 제공하는 프로젝트 트리구조를 준수하는 프로젝트 실습
+
+### spring3-1 프로젝트
+
+![](../../../.gitbook/assets/spring3-1.png)
+
+* 스프링 메뉴에서 제공한 프로젝트 이지만 이클립스가 제공하는 xml문서가 아닌 개발자가 직접 xml문서를 정의한 프로젝트 실습
+* &lt;init-param&gt;spring servlet.xml&lt;init-param/&gt; 서블릿의 요청 발생시 마다 새로 읽어 처리한다.
+* &lt;context\_param&gt;spring-service.xml, spring-data,xml&lt;context-param/&gt; 단독 선언되어 서버가 처음 기동될때 읽은 내용을 유지한다. 
+
 ## Spring 실습 : boot이후
 
 ### boot 이후
