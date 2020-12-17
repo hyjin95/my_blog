@@ -43,5 +43,15 @@ enable validate);
 
 {% page-ref page="untitled-45.md" %}
 
+## Spring 실습 : boot이전
 
+### boot 이전
+
+* xml기반 설정
+
+## Spring 실습 : boot이후
+
+### boot 이후
+
+* application.properties기반 설정
 
