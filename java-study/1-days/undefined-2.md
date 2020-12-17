@@ -47,6 +47,10 @@ maven mybatis페이지 : [https://mvnrepository.com/artifact/org.mybatis/mybatis
 
 [https://wikidocs.net/12454](https://wikidocs.net/12454)
 
+### Android
+
+[https://developer.android.com/training/basics/firstapp/starting-activity?hl=ko](https://developer.android.com/training/basics/firstapp/starting-activity?hl=ko)
+
 ## UI
 
 ### 오픈 소스
