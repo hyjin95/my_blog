@@ -2,7 +2,7 @@
 description: 2020.12.17 - 86일차
 ---
 
-# 86 Days -
+# 86 Days - spring:void,ModelAndView,String\(boot\), Android:Event\(intent,adapter\),strings.xml, data꺼내기
 
 ### 사용 프로그램
 
