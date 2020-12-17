@@ -218,6 +218,9 @@ public class BoardController {
 
 ### data 처리
 
+1. JSON : 웹이나 자바 코드안에서만 자유롭게 사용할 수 있다.
+2. DB-SQLite
+
 ### TopActivity : view
 
 * TopActivity\(View\) - View를 상속받는 클래스들 : TextView, Button, ....
@@ -257,7 +260,7 @@ public class BoardController {
 </LinearLayout>
 ```
 
-## Android Studio : Listener, Event
+## Android Studio : Listener, Event, Adapter
 
 ### 리스너로 ListView 클릭 이벤트 처리
 
