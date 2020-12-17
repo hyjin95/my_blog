@@ -293,3 +293,20 @@ public class EditActivity extends AppCompatActivity {
 </LinearLayout>
 ```
 
+## 결과 에뮬레이터
+
+![](../../../.gitbook/assets/1%20%2889%29.png)
+
+* TopActivity가 그리는 화면 - activity\_top.xml
+* ListView의 Drink 항목 클릭
+
+![](../../../.gitbook/assets/2%20%2870%29.png)
+
+* CategoryActivity가 그리는 화면 - activity-category.xml
+* ListView의 Latte항목 클릭
+
+![](../../../.gitbook/assets/3%20%2852%29.png)
+
+* EditActivity가 그리는 화면 - activity\_edit.xml
+* Drink 클래스에서 가져온 정보를 보여준다.
+

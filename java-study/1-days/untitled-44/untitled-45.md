@@ -24,7 +24,7 @@ create table board_master_t
 
 ### 제약조건 확인하기
 
-![](../../../.gitbook/assets/3%20%2852%29.png)
+![](../../../.gitbook/assets/3%20%2853%29.png)
 
 ## board\_sub\_t
 
