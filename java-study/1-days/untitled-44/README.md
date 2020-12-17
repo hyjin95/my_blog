@@ -185,3 +185,32 @@ public class BoardController extends MultiActionController {//spring제공 클�
 * return "board/boardList" - ViewResolver를 사용하는 방법   /WEB-INF/views/+여기에페이지이름+.jsp
 * return "foward : "xxx.sp3" X - forward로 새 요청을 하는 것은 허용하지 않는다.
 
+### 3. String
+
+```java
+package com.example.demo;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller/
+@RequestMapping("/board/*")
+public class BoardController {
+	Logger logger = LogManager.getLogger(BoardController.class);		
+	
+	//Autowired는 setter메서드를 사용하지 않더라도 객체주입을 받을 수 있게 해준다.
+	@Autowired
+	public BoardLogic boardLogic = null;
+	
+	@RequestMapping("/writeForm.sp3")
+	public String writeForm2() {
+		logger.info("controller - writeFrom호출성공");
+		return "board/writeForm";
+	}
+}
+```
+
