@@ -77,3 +77,11 @@ enable validate);
 * 어노테이션 사용
 * 장점 : 개발자로서의 편리함을 제공해준다.
 
+### return Type : String
+
+* return "redirect : xxx.jsp"
+* return "redirect : "xxx.sp3"
+* return "forward : "xxx.jsp"
+* return "board/boardList" - ViewResolver를 사용하는 방법
+* return "foward : "xxx.sp3" X - forward로 새 요청을 하는 것은 허용하지 않는다.
+
