@@ -225,3 +225,16 @@ public class BoardController {
 * &lt;ListView&gt;의 안에 string.xml에 있는 data를 작성해야한다. &lt;ListView id="list\_options"&gt; list : 문자열 배열, 이 id값으로 string.xml내부의 값에 접근한다.
 * data : res &gt; string.xml &lt;string-array name="options"&gt; 이 안에 위치한 문자열 데이터를 &lt;ListView&gt;라는 뷰 계층에 내보내야한다.
 
+### res &gt; values &gt; strings.xml
+
+```markup
+<resources>
+    <string name="app_name">Coffee69</string>
+    <string-array name="options">
+        <item>Drinks</item>
+        <item>Food</item>
+        <item>Stores</item>
+    </string-array>
+</resources>
+```
+
