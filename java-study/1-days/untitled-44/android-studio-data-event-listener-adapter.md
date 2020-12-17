@@ -103,8 +103,11 @@ public class CategoryActivity extends AppCompatActivity {
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {//어댑터 코드
             @Override
             public void onItemClick(AdapterView<?> listView, View itemView, int position, long id) {
+                //사용자가 클릭한 음료를 EditActivity로 전
                 Intent intent = new Intent(CategoryActivity.this,EditActivity.class);//다른 액티비티와 연계
                 //intent.putExtra(name:"",id);
+                //CategoryActivity에서도, EditActivity에서도 같은 이름을 사용 하게 함
+                //사용자가 선택한 항목의 id를 인탠트에 추, Drinks배열의 인덱스가 id
                 intent.putExtra(EditActivity.EXTRA_DRINKID,(int)id);//변수 넣기
                 startActivity(intent);
             }

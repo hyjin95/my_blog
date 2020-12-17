@@ -297,5 +297,22 @@ public class BoardController {
 
 ## AndroidStudio Event : Listener, Adapter
 
+### 설계
+
+* TopActivity에서 목록\(ListView\)클릭 -&gt;  CategoryActivity에서 목록\(ListView\)클릭 -&gt; EditActivity
+* 이벤트시 Drink클래스에서 data를 받아오도록 한다. CategoryActicity -&gt; ListView -&gt; setAdapter -&gt; ArrayAdapter&lt;Dring&gt; -&gt; Drink.toString\( \) -&gt; Drink.drinks
+* Drink 클래스는 setter, getter메서드를 관리한다.
+
+### Adapter 클래스
+
+* 동적인 list에 대한 처리에 필요한 클래스
+* 자바 배열이나 DB처럼 Strings.xml에 정의되어있지 않은 데이터를 ListView로 표시하기위해 필요하다.
+* DataSource와 ListView사이의 중간 다리의 역할을 한다.
+* 배열 어댑터 : listAdapter
+
+### Event와 Intent, Listener
+
+* TopActivity에 ListView\(목록\)이 보이고, 해당 목록을 사용자가 클릭하면 onItemClickListener가 반응해 인텐트되어있는 Activity를 실행한다.
+
 ### 리스너로 ListView 클릭 이벤트 처리
 
