@@ -57,4 +57,5 @@ enable validate);
 
 * application.properties기반 설정
 * 어노테이션 사용
+* 장점 : 개발자로서의 편리함을 제공해준다.
 
