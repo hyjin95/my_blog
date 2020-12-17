@@ -51,6 +51,10 @@ enable validate);
 * 단점 : xml에 오류 발생시 서버가 터져 다른 개발자들도 테스트가 불가능해지는 일이 발생한다.
 * 장점 : boot보다 유지보수에 유리한 점이 있다.
 
+### webapp&gt;board, WER-INF&gt;board
+
+* sendRedirect, forward는 webapp, ModelAndView는 후
+
 ### spring3 프로젝트
 
 ![](../../../.gitbook/assets/spring3.png)
