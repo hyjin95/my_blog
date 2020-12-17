@@ -74,9 +74,9 @@ enable validate);
 
 ### ViewResolver의 관여
 
-* ViewResolver가 관여한다는것은 접두어와 접미어를 제공한다는 것이다.
-* ModelAndView를 사용할 때
-* boot에서는 ModelAndView대신 String을 사용한다. - "redirect:xxx.jsp" -&gt; webapp/board를 바라본다. - "foward:xxx.jsp"  -&gt; webapp/board - "board/xxx."         -&gt; ViewResolver가 관여한다.
+* ViewResolver가 관여한다는것은 접두어와 접미어를 제공한다는 것이다. 배포위치는 ViewResolver에 지정된 경로가 된다. WEB-INF/views/ + 페이지이름 + .jsp
+* ModelAndView를 사용할 때 -&gt; WEB-INF를 바라본다.
+* boot에서는 ModelAndView대신 String을 사용한다. - "redirect:xxx.jsp" -&gt; webapp/board를 바라본다. - "foward:xxx.jsp"  -&gt; webapp/board - "board/xxx."         -&gt; ViewResolver가 관여, WEB-INF를 바라본다.
 
 ## Spring 실습 : boot이전
 
