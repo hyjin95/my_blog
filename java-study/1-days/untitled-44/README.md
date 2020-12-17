@@ -255,6 +255,7 @@ public class BoardController {
 1. JSON : 웹이나 자바 코드안에서만 자유롭게 사용할 수 있다.
 2. DB-SQLite : DB연동이므로 시간이 걸린다.
 3. 자바 자료구조, 배열 : 빠르고 쉽다.
+4. Strings.xml : name속성 값으로 접근한다.
 
 ### TopActivity : view
 
@@ -302,6 +303,7 @@ public class BoardController {
 * TopActivity에서 목록\(ListView\)클릭 -&gt;  CategoryActivity에서 목록\(ListView\)클릭 -&gt; EditActivity
 * 이벤트시 Drink클래스에서 data를 받아오도록 한다. CategoryActicity -&gt; ListView -&gt; setAdapter -&gt; ArrayAdapter&lt;Dring&gt; -&gt; Drink.toString\( \) -&gt; Drink.drinks
 * Drink 클래스는 setter, getter메서드를 관리한다.
+* ListView에 대한 data는 Strings.xml이 아닌 자바로 해본다. -getter, setter
 
 ### Adapter 클래스
 
