@@ -312,7 +312,14 @@ public class BoardController {
 
 ### Event와 Intent, Listener
 
+![](../../../.gitbook/assets/d.png)
+
 * TopActivity에 ListView\(목록\)이 보이고, 해당 목록을 사용자가 클릭하면 onItemClickListener가 반응해 인텐트되어있는 Activity를 실행한다.
+* intent로 지정된 Activity로 startActivity\( \)함수를 사용하면 소환된다.
 
 ### 리스너로 ListView 클릭 이벤트 처리
+
+{% page-ref page="android-studio-data-event-listener-adapter.md" %}
+
+후기 : 내일을 파이널프로젝트의 DB를 컨펌받는 날이다. 혼날 각오하고...ㅎ....화이팅!!
 
