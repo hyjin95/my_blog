@@ -51,7 +51,7 @@ SELECT *
 * OR이나 IN의 경우에는 \(+\)를 허용하지 않아 위의 문법을 사용해야 한다.
 * AND를 사용할 수록 조건이 많아져 SELECT결과물은 줄어들고, OR는 사용할 수록 조건이 광범위해져 SELECT결과물이 늘어난다.
 
-### UPDATE
+### UPDATE : transaction, 변수
 
 ```sql
 UPDATE board_master_t -- 글 삽입에 대한 없데이트, 트랜잭션처리가 필요
