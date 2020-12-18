@@ -248,14 +248,14 @@ public class BoardController {
 * 8번 label은 앱 이름을 지정한다.
 * 13-18번처럼 런처로 등록된 액티비티가 런처 실행시의 메인이 된다. 여러개를 지정하면 런처마다 앱이 실행되는 것을 볼 수 있다.
 
-## Android Studio : string.xml data 꺼내기
+## Android : string.xml data 꺼내기
 
 ### data 처리
 
 1. JSON : 웹이나 자바 코드안에서만 자유롭게 사용할 수 있다.
 2. DB-SQLite : DB연동이므로 시간이 걸린다.
 3. 자바 자료구조, 배열 : 빠르고 쉽다.
-4. Strings.xml : name속성 값으로 접근한다.
+4. Strings.xml : name속성 값으로 접근해 activity.xml에서 ListView태그 안에 담는다. - android:entries="@array/options"
 
 ### TopActivity : view
 
@@ -296,13 +296,13 @@ public class BoardController {
 </LinearLayout>
 ```
 
-## AndroidStudio Event : Listener, Adapter
+## Android Event : Listener, Adapter
 
 ### 설계
 
 * TopActivity에서 목록\(ListView\)클릭 -&gt;  CategoryActivity에서 목록\(ListView\)클릭 -&gt; EditActivity
 * 이벤트시 Drink클래스에서 data를 받아오도록 한다. CategoryActicity -&gt; ListView -&gt; setAdapter -&gt; ArrayAdapter&lt;Dring&gt; -&gt; Drink.toString\( \) -&gt; Drink.drinks
-* Drink 클래스는 setter, getter메서드를 관리한다.
+* Drink 클래스는 setter, getter메서드를 관리한다. - 음료의 name, description\(설명\), imageResourceId\(이미지이름\) 
 * ListView에 대한 data는 Strings.xml이 아닌 자바로 해본다. -getter, setter
 
 ### Adapter 클래스
@@ -319,7 +319,16 @@ public class BoardController {
 * TopActivity에 ListView\(목록\)이 보이고, 해당 목록을 사용자가 클릭하면 onItemClickListener가 반응해 인텐트되어있는 Activity를 실행한다.
 * intent로 지정된 Activity로 startActivity\( \)함수를 사용하면 소환된다.
 
+### TopActivity의 역할
+
+![](../../../.gitbook/assets/kakaotalk_20201218_093021053.jpg)
+
+* onCreate\( \)메서드안에서 onItenListener를 생성해 activity\_top.xml에 작성된 &lt;ListView&gt;와 연결한다.
+* ListView에서 이벤트를 감지하면 onItemClickListener의 onItemClick\( \)메서드가 호출되고 인텐트 클래스를 통해 다른 Activity를 소환하게 된다.
+
 ### 리스너로 ListView 클릭 이벤트 처리
+
+* ListView는 이벤트 감지시 액티비티가 대응 할 수 있도록 액티비티에 이를 알려야한다.
 
 {% page-ref page="android-studio-data-event-listener-adapter.md" %}
 
