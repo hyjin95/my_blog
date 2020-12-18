@@ -36,7 +36,18 @@ SELECT *
 
 * 하지만 실제로 게시판에서 update된 것은 두 건이므로 sub테이블의 첨부파일이 존재하지 않더라도 master테이블에는 게시글이 있기때문에 이를 보여주기 위해서는 null이 있는 테이블에 \(+\)를 추가한다.
 
-### WHERE : LIKE, AND, OR
+### WHERE : LIKE, AND, OR, NULL
 
+![](../../.gitbook/assets/1%20%2891%29.png)
+
+```sql
+SELECT *
+  FROM board_master_t bm right outer join board_sub_t bs
+    ON bm.bm_no = bs.bm_no
+ WHERE bm_title LIKE '%'||'목'||'%'
+    OR bm.bm_content IS NULL;
+```
+
+* OR이나 IN의 경우에는 \(+\)를 허용하지 않아 위의 문법을 사용해야 한다.
 * AND를 사용할 수록 조건이 많아져 SELECT결과물은 줄어들고, OR는 사용할 수록 조건이 광범위해져 SELECT결과물이 늘어난다.
 
