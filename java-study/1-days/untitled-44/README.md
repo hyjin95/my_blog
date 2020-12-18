@@ -307,6 +307,8 @@ public class BoardController {
 
 ### Adapter 클래스
 
+![](../../../.gitbook/assets/33.jpg)
+
 * 동적인 list에 대한 처리에 필요한 클래스
 * 자바 배열이나 DB처럼 Strings.xml에 정의되어있지 않은 데이터를 ListView로 표시하기위해 필요하다.
 * DataSource와 ListView사이의 중간 다리의 역할을 한다.
@@ -321,7 +323,7 @@ public class BoardController {
 
 ### TopActivity의 역할
 
-![](../../../.gitbook/assets/kakaotalk_20201218_093021053.jpg)
+![](../../../.gitbook/assets/22.jpg)
 
 * onCreate\( \)메서드안에서 onItenListener를 생성해 activity\_top.xml에 작성된 &lt;ListView&gt;와 연결한다.
 * ListView에서 이벤트를 감지하면 onItemClickListener의 onItemClick\( \)메서드가 호출되고 인텐트 클래스를 통해 다른 Activity를 소환하게 된다.
