@@ -296,7 +296,8 @@
   * [86 Days - spring:void,ModelAndView,String\(boot\), Android:Event\(intent,adapter\),strings.xml, data꺼내기](java-study/1-days/untitled-44/README.md)
     * [Toad : board\_master/sub 테이블](java-study/1-days/untitled-44/untitled-45.md)
     * [Android Studio : data, Event, Listener, Adapter](java-study/1-days/untitled-44/android-studio-data-event-listener-adapter.md)
-  * [87 Days - Toad:게시판, 첨부파일테이블, SQL, AndroidStudio:Fragment](java-study/1-days/untitled-42.md)
+  * [87 Days - Toad:게시판, 첨부파일테이블, SQL, AndroidStudio:Fragment](java-study/1-days/untitled-42/README.md)
+    * [Android Studio : Fragment](java-study/1-days/untitled-42/android-studio-fragment.md)
   * [Untitled](java-study/1-days/untitled-46.md)
   * [Untitled](java-study/1-days/untitled-45.md)
 
