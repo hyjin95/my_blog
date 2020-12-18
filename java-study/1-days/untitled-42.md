@@ -51,3 +51,17 @@ SELECT *
 * OR이나 IN의 경우에는 \(+\)를 허용하지 않아 위의 문법을 사용해야 한다.
 * AND를 사용할 수록 조건이 많아져 SELECT결과물은 줄어들고, OR는 사용할 수록 조건이 광범위해져 SELECT결과물이 늘어난다.
 
+### UPDATE
+
+```sql
+UPDATE board_master_t -- 글 삽입에 대한 없데이트, 트랜잭션처리가 필요
+   SET bm_step = bm_step + 1
+ WHERE bm_group = 35
+   AND bm_step > 1;
+   
+UPDATE board_master_t -- 목록화면인지 상세보기 화면인지, 목록 아닐까
+   SET bm_step = bm_step + 1
+ WHERE bm_group =:x
+   AND bm_step >:Y
+```
+
