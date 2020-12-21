@@ -59,6 +59,7 @@
 
 ![](../../../.gitbook/assets/firebase-.png)
 
+* 의존성 주입
 * File &gt; Project Structure Alt + Ctrl + Shift + s
 
 ![](../../../.gitbook/assets/firebase-2.png)
