@@ -74,7 +74,15 @@
 
 ### 1. Android Studio
 
-1. 프로젝트 생성
+* 프로젝트 생성
+
+![](../../.gitbook/assets/1-project-id.png)
+
+* build.gradle\(Module\)에서 project ID 확인하기
+
+![](../../.gitbook/assets/2-sha1.png)
+
+* 오른쪽 Execute Gradle Task &gt; Tasks &gt; android &gt; signingReport 클릭 &gt; Run 로그에서 SHA1 확인
 
 ### 2. Firebase
 
