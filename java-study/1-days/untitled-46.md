@@ -23,6 +23,11 @@
 
 * http프로토콜 - 비상태 프로토콜 : stateless - 어떻게 유지할 것인가 : Oracle\(비싸다\)아닌 경량 DB\(NoSQL\)를 사용한다.   NoSQL제품 중의 하나가 파이어베이스\(클라우드\)이다.
 
+### 웹과 앱
+
+* 웹 - html\(DOM\) \_ 웹 크롤링, 웹 스크래핑
+* 앱 - 하이브리드 앱\(웹앱 + 네이티브앱\) - Activity + Fragment\(include, JPanel, Div\)
+
 ## 계층형 게시판
 
 ### 학습목표
