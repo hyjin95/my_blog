@@ -1,4 +1,4 @@
-# Untitled
+# Android : ActionBar비활성화, Toolbar 재사용
 
 ### Manifests
 

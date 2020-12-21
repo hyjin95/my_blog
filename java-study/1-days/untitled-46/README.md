@@ -116,6 +116,24 @@
 * Activity안에서 반복되는 페이지를 부분처리할 때 사용하는 API
 * &lt;LinearLayout&gt;     &lt;fragment&gt; 속지 느낌으로 재사용성을 누린다. &lt;/LinearLayout&gt;
 
+### toolBar xml 생성
+
+![](../../../.gitbook/assets/res.png)
+
+* 프로젝트의 res폴더 우클릭 &gt; New &gt; Android Resource File 
+
+![](../../../.gitbook/assets/res2.png)
+
+* OK
+
+### ActionBar비활성화, ToolBar재사용
+
+* ActionBar는 비활성화하고 toolbar를 정의해 사용하는 방법 두가지를 구현해보자.
+
+{% page-ref page="untitled.md" %}
+
+후기 : 수도권 23일부터 5인이상 집합 금지....
+
 ### 
 
 ### 
