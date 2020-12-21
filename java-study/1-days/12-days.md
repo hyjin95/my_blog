@@ -180,7 +180,7 @@ public class JButtonArray extends JFrame{
 
 ### GitHub Repositories 만들기
 
-1. git hub 가
+1. git hub 가입
 2. 로컬 PC에 공유할 폴더 생성
 3. Git 다운로드 - 도스 : git --version
 4. 공유 폴더안에 숨겨진 git파일 만들기 - 공유 폴더 우클릭 -&gt; git bash -&gt; git init
