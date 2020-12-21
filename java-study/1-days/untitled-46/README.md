@@ -82,7 +82,33 @@
 
 {% page-ref page="firebase-android.md" %}
 
+## Android Studio : ActionBar
 
+### Action Bar
+
+![](../../../.gitbook/assets/actionbar.png)
+
+* appBar == ActionBar
+* 프로젝트의 res &gt; values &gt; themes.xml에 작성된다. xml문서이므로 화면으로만 그려진다.
+* 아이콘을 바에 넣거나 하려면 xml이 아닌 java에서 해야한다.
+
+### ActionBar : themes.xml
+
+```markup
+<style name="Theme.ActionBar69" parent="Theme.AppCompat.Light.DarkActionBar">
+```
+
+* Action Bar보이기
+
+```markup
+<style name="Theme.ActionBar69" parent="Theme.AppCompat.Light.NoActionBar">
+```
+
+* 
+### Fragment
+
+* Activity안에서 반복되는 페이지를 부분처리할 때 사용하는 API
+* &lt;LinearLayout&gt;     &lt;fragment&gt; 속지 느낌으로 재사용성을 누린다. &lt;/LinearLayout&gt;
 
 ### 
 

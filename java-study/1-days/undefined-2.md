@@ -51,6 +51,10 @@ maven mybatis페이지 : [https://mvnrepository.com/artifact/org.mybatis/mybatis
 
 [https://developer.android.com/training/basics/firstapp/starting-activity?hl=ko](https://developer.android.com/training/basics/firstapp/starting-activity?hl=ko)
 
+### Firebase API
+
+[https://firebase.google.com/docs/database/android/read-and-write?hl=ko ](https://firebase.google.com/docs/database/android/read-and-write?hl=ko%20)
+
 ## UI
 
 ### 오픈 소스
