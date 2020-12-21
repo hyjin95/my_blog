@@ -48,15 +48,17 @@
 ### QnA
 
 1. 페이지를 요청할 떄 Spring을 경유할 것인가요? - 등록화면과 같이 Controller에서 바로 응답페이지를 출력하는 경우에는 오라클을 경유하지 않는다.
-2. 경유할 때와 경유하지 않는 때의 차이는 무엇인가요? - ModelAndView의 사용유무 - 사용하지 않는다면 jsp의 배포위치는 반드시 webapp아래일 것이고   사용한다면 jsp의 배포위치는 반드시 WEB-INF/views/ 아래일 것이다.
-3. void일때, ModelAndView일때, String일 때 각각의 배포위치는 어떻게 되나요? - webapp아래 배포 : void, String - WEB-INF아래 배포 : ModelAndView
+2. 경유할 때와 경유하지 않는 때의 차이는 무엇인가요? - ModelAndView의 사용유무 - 사용하지 않는다면 jsp의 배포위치는 반드시 webapp아래일 것이고   사용한다면 jsp의 배포위치는 반드시 WEB-INF/views/ 아래일 것이다. - String의 경우는 예외
+3. void일때, ModelAndView일때, String일 때 각각의 배포위치는 어떻게 되나요? - webapp아래 배포 : void - WEB-INF아래 배포 : ModelAndView, String
 
 ### 배포 위치
 
 * 어디에 배포할 것인지 
 * redirect와 forward의 경우로 나눈다.
-* 페이지 출력 전에 오라클을 경유하는 경우\(특수한경우:화면에 목록이 이미 출력되는 설계\) &lt;select
-* 조회 버튼을 클릭시 오라클을 경유하는 경우 \(일반적\) xxx.jsp
+* 페이지 출력 전에 오라클을 경유하는 경우\(특수한경우:화면에 목록이 이미 출력되는 설계\)
+* 조회 버튼을 클릭시 오라클을 경유하는 경우 \(일반적\)
+* webapp아래 배포하는 경우\(sendRedirect\) - 등록한 후에 결과 처리 메세지를 출력하는 페이지 와 같은 경우 - 유지하지 않아도되는 경우
+* WEB-INF아래 배포하는 경우\(forward\)의 리턴타입 - return "board/boardList" - ModelAndView mav = new ModelAndVies\( \);   mav.setViewName\("board/boardLsit"\); 
 
 
 
