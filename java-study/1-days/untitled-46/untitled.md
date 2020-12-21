@@ -164,3 +164,19 @@ public class OrderActivity extends AppCompatActivity {
     />
 ```
 
+## res &gt; values &gt; themes.xml
+
+```markup
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ActionBar69" parent="Theme.AppCompat.Light.NoActionBar">
+    <!--<style name="Theme.ActionBar69" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
+```
+

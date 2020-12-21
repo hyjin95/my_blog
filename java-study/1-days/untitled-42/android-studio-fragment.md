@@ -171,3 +171,14 @@ public class SubActivity extends AppCompatActivity {
 </FrameLayout>
 ```
 
+## 결과 : 애뮬레이터
+
+![](../../../.gitbook/assets/fragment1%20%282%29.png)
+
+* MainActivity 화면
+* 이동 클릭시
+
+![](../../../.gitbook/assets/fregment2.png)
+
+* SubActivity로 이동
+
