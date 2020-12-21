@@ -89,10 +89,8 @@
 ![](../../../.gitbook/assets/actionbar.png)
 
 * appBar == ActionBar
-* 프로젝트의 res &gt; values &gt; themes.xml에 작성된다. xml문서이므로 화면으로만 그려진다.
-* 아이콘을 바에 넣거나 하려면 xml이 아닌 java에서 해야한다.
-* 직접 toolbar를 만들어 사용할 수 있다.
-* activity.xml에 직접 추가해도되고 따로 toolbar.xml로 외부에서 생성해 재사용할 수 도 있다.
+* 프로젝트의 res &gt; values &gt; themes.xml에 작성된다. - xml문서이므로 화면으로만 그려진다. - 아이콘을 바에 넣거나 하려면 xml이 아닌 java에서 해야한다.
+* 기본적으로는 res &gt; themes.xml에 작성되어있는 ActionBar를 갖는다. - 직접 toolbar를 만들어 사용할 수 있다. - activity.xml에 직접 추가해도되고 따로 toolbar.xml로 외부에서 생성해 재사용할 수 도 있다.
 
 ### ActionBar : themes.xml
 
@@ -108,15 +106,17 @@
 
 * Action Bar 안보이기
 
+### toolBar
+
+* JAVA JTextField jtf\_msg = new JTextField\("디폴트 값"\); jp\_center.add\("South", jtf\_msg\);
+* activity\_main.xml  ToolBar tb = findViewById\(R.id.toolbar\); - 태그안에 작성되고 id가 주소번지이다.
+
 ### Fragment
 
 * Activity안에서 반복되는 페이지를 부분처리할 때 사용하는 API
 * &lt;LinearLayout&gt;     &lt;fragment&gt; 속지 느낌으로 재사용성을 누린다. &lt;/LinearLayout&gt;
 
-### toolBar
-
-* JAVA JTextField jtf\_msg = new JTextField\("디폴트 값"\); jp\_center.add\("South", jtf\_msg\);
-* activity\_main.xml  ToolBar tb = findViewById\(R.id.toolbar\); - 태그안에 작성되고 id가 주소번지이다.
+### 
 
 ### 
 
