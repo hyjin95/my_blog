@@ -70,6 +70,19 @@
 * Spring을 사용할 것이므로 WEB-INF아래 배포한다. boardList.jsp
 * boardList.sp요청으로 boardList.jsp페이지를 호출한다.
 
+## Firebase와 Android 프로젝트 연동하기
+
+### 1. Android Studio
+
+1. 프로젝트 생성
+
+### 2. Firebase
+
+1. 로그인
+2. 메인 화면 안드로이드 선택
+3. 
+### 
+
 ### 
 
 
