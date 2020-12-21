@@ -32,3 +32,10 @@
 3. MVC패턴을 이해하고 활용할 수 있다.
 4. 오라클 조인에 대한 이해화 활용을 할 수 있다.
 
+### data꺼내기 : View계층 + Model계층
+
+* 데이터 베이스, JDBC API -&gt; MyBatis -&gt; MyBatis + Spring
+* JDBC Class.forName\(오라클회사정보수집\), Connection, PreparedStatement, ResultSet
+* MyBatis SqlSessionFactory : Class.forName + Connection SqlSession : PreparedStatement, commit, rollback ResultSet은 자동으로 해줌으로서 필요 없어졌다.
+* MyBatis + Spring SqlSessionFactoryBean SqlSessionTemplate
+
