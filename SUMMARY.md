@@ -298,6 +298,7 @@
     * [Android Studio : data, Event, Listener, Adapter](java-study/1-days/untitled-44/android-studio-data-event-listener-adapter.md)
   * [87 Days - Toad:게시판, 첨부파일테이블, SQL, AndroidStudio:Fragment](java-study/1-days/untitled-42/README.md)
     * [Android Studio : Fragment](java-study/1-days/untitled-42/android-studio-fragment.md)
-  * [88 Days -](java-study/1-days/untitled-46.md)
+  * [88 Days -](java-study/1-days/untitled-46/README.md)
+    * [Firebase와 Android 프로젝트 연동하기](java-study/1-days/untitled-46/firebase-android.md)
   * [Untitled](java-study/1-days/untitled-45.md)
 
