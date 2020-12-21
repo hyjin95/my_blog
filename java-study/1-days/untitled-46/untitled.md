@@ -67,7 +67,11 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-* 
+* 15번에서 화면으로 그릴 xml을 지정하는데, 이 코드 이후에 해당 xml에 작성된 id에 접근할 수 있다.
+* 17번에서 Toolbar를 xml에서 만든 toolbar를 사용한다.
+* 18번 코드로 ActionBar를 toolbar로 set한다.
+* 21-25번은 버튼 onClick이벤트 발생시 intent를 활용해 다른 Activity를 불러오는 코드이다.
+
 ### 코드 : OrderActivity.java
 
 ```java
@@ -109,7 +113,7 @@ public class OrderActivity extends AppCompatActivity {
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/teal_200"
-        /><!-- attr/actionBarSize - appbar크기만큼, 리소스(기본제공색상)는 앞에 @를 붙여 접근 가능하다. -->
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -125,6 +129,9 @@ public class OrderActivity extends AppCompatActivity {
 
 </LinearLayout>
 ```
+
+* 12번의 ?attr/actionBarSize는 appbar의 크기만큼으로 사이즈를 지정해주는 코드이다.
+* 13번처럼 resource를 사용하는 경우에는 앞에 @를 붙여 리소스에 접근해 값을 가져오도록 한다.
 
 ### 코드 : activity\_order.xml
 
