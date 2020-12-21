@@ -180,3 +180,16 @@ public class OrderActivity extends AppCompatActivity {
 </resources>
 ```
 
+* 기존에 작성된 기본 ActionBar를 비활성화해 보이지 않게 한다.
+
+## 결과
+
+![](../../../.gitbook/assets/actionbar%20%281%29.png)
+
+* MainActivity 화면
+* 주문하기 클릭 시
+
+![](../../../.gitbook/assets/actionbar2.png)
+
+* OrderActivity 화면
+
