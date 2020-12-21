@@ -91,6 +91,8 @@
 * appBar == ActionBar
 * 프로젝트의 res &gt; values &gt; themes.xml에 작성된다. xml문서이므로 화면으로만 그려진다.
 * 아이콘을 바에 넣거나 하려면 xml이 아닌 java에서 해야한다.
+* 직접 toolbar를 만들어 사용할 수 있다.
+* activity.xml에 직접 추가해도되고 따로 toolbar.xml로 외부에서 생성해 재사용할 수 도 있다.
 
 ### ActionBar : themes.xml
 
@@ -98,13 +100,14 @@
 <style name="Theme.ActionBar69" parent="Theme.AppCompat.Light.DarkActionBar">
 ```
 
-* Action Bar보이기
+* Action Bar 보이기
 
 ```markup
 <style name="Theme.ActionBar69" parent="Theme.AppCompat.Light.NoActionBar">
 ```
 
-* 
+* Action Bar 안보이기
+
 ### Fragment
 
 * Activity안에서 반복되는 페이지를 부분처리할 때 사용하는 API
