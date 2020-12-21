@@ -6,6 +6,14 @@
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
+## 필기
+
+### 크롤링 & 스크래핑
+
+* 크롤링 : 웹에 있는 모든 정보를 끌어오는 것
+* 스크래핑 : 웹에 있는 정보들 중 필요한 것만 가져오는 것
+* 이 작업에는 파이썬 같이 비교적 가볍고 짧은 언어가 적절하다.
+
 ## 계층형 게시판
 
 ### 학습목표
