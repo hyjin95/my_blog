@@ -5,6 +5,7 @@
 ### 1. Android Studio : 프로젝트 생성
 
 * 프로젝트 생성
+* 애뮬레이터는 종료된 상태로 진행한다.
 
 ![](../../../.gitbook/assets/1-project-id.png)
 
