@@ -21,7 +21,7 @@
 * 프로젝트 생성
 * 메인 화면 안드로이드 선택
 
-![](../../../.gitbook/assets/1%20%2892%29.png)
+![](../../../.gitbook/assets/1%20%2893%29.png)
 
 * Android 패키이 이름 = Android Project ID
 * 디버그 서명 인증서 = SHA1
