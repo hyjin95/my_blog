@@ -58,7 +58,12 @@
 * 페이지 출력 전에 오라클을 경유하는 경우\(특수한경우:화면에 목록이 이미 출력되는 설계\)
 * 조회 버튼을 클릭시 오라클을 경유하는 경우 \(일반적\)
 * webapp아래 배포하는 경우\(sendRedirect\) - 등록한 후에 결과 처리 메세지를 출력하는 페이지 와 같은 경우 - 유지하지 않아도되는 경우
-* WEB-INF아래 배포하는 경우\(forward\)의 리턴타입 - return "board/boardList" - ModelAndView mav = new ModelAndVies\( \);   mav.setViewName\("board/boardLsit"\); 
+* WEB-INF아래 배포하는 경우\(forward\)의 리턴타입 - return "board/boardList" - ModelAndView mav = new ModelAndVies\( \);   mav.setViewName\("board/boardLsit"\);
+
+### easyUI : View 처리 방법 
+
+* JSON으로 처리한다 : data-options HTML코드로 처리한다 : 익스프레션 : &lt;%= %&gt;
+* JS에서 처리한다. 태그안에서 처리한다. 직접 출력한다.
 
 
 
