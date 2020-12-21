@@ -1,4 +1,4 @@
-# 88 Days -
+# 88 Days - 크롤링, 스크래핑, spring:계층형게시판, FireBase:설정, Android연동, ActionBar, ToolBar
 
 ### 사용 프로그램
 
@@ -133,10 +133,4 @@
 {% page-ref page="untitled.md" %}
 
 후기 : 수도권 23일부터 5인이상 집합 금지....
-
-### 
-
-### 
-
-
 
