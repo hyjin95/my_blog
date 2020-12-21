@@ -38,4 +38,5 @@
 * JDBC Class.forName\(오라클회사정보수집\), Connection, PreparedStatement, ResultSet
 * MyBatis SqlSessionFactory : Class.forName + Connection SqlSession : PreparedStatement, commit, rollback ResultSet은 자동으로 해줌으로서 필요 없어졌다.
 * MyBatis + Spring SqlSessionFactoryBean SqlSessionTemplate
+* HikariCP : 커넥션 풀 기법을 활용해 멀티 티어 환경에 적합한 웹 개발 환경을 구축한다.
 
