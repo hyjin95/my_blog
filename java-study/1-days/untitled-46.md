@@ -93,6 +93,7 @@
 
 * Android 패키이 이름 = Android Project ID
 * 디버그 서명 인증서 = SHA1
+* 앱 등록 클릭
 
 
 
