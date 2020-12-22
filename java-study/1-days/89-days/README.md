@@ -108,3 +108,14 @@ description: 2020.12.22 - 89일차
 
 ## Android Studio
 
+### menu resource생성
+
+![](../../../.gitbook/assets/2%20%2874%29.png)
+
+* res 우클릭 &gt; New &gt; Android Resource File
+
+![](../../../.gitbook/assets/1%20%2896%29.png)
+
+* Resource type : Menu
+* 해당 type으로 리소스 파일을 생성하면 res에 자동으로 menu폴더가 생성된다.
+

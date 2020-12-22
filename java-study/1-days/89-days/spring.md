@@ -139,5 +139,5 @@ public class HangulConversion {
 
 ### /board/boardDetail.sp?bm\_no=2
 
-![](../../../.gitbook/assets/1%20%2896%29.png)
+![](../../../.gitbook/assets/1%20%2897%29.png)
 
