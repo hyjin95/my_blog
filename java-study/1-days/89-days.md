@@ -41,7 +41,18 @@ description: 2020.12.22 - 89일차
 * 
 ### 댓글 쓰기
 
-* 
+```markup
+	<update id="updateStep" parameterType="map">
+		UPDATE board_master_t
+		   SET bm_step = bm_step + 1
+		 WHERE bm_group = 35
+		   AND bm_step > 1;
+	</update>
+```
+
+* 끼어드는 글이 존재하므로 위와 같은 update구문이 필요하다.
+* 배달사고가 잘 발생할 수 있으므로 파라미터가 잘 넘어오는지 확인해야한다.
+
 ### 공통부분 : 쿼리
 
 ```markup
