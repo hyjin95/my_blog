@@ -77,7 +77,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);//앱바를 툴바를 재사용해 생성한다.
     }
+```
 
+```java
     public boolean onCreateOptionsMenu(Menu menu) {
         //메인 인플레이트 아이템을 앱바에 추가한다.
         getMenuInflater().inflate(R.menu.menu_main,menu);
@@ -86,14 +88,18 @@ public class MainActivity extends AppCompatActivity {
         setShareActionIntent("저녁에 피자 주문할까?");
         return super.onCreateOptionsMenu(menu);
     }
+```
 
+```java
     private void setShareActionIntent(String s) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT,s);
         shareActionProvider.setShareIntent(intent);
     }
+```
 
+```java
     //액션 아이템 클릭 처리
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){//선택된 아이템에 대한 정보
@@ -105,7 +111,9 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+```
 
+```java
     public void order(View view) {
         if(R.id.btn_order==view.getId()){//view.getID - 주소번지값
             Intent intent = new Intent(this,OrderActivity.class);
