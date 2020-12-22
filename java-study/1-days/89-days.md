@@ -38,7 +38,16 @@ description: 2020.12.22 - 89일차
 
 ### 새글 쓰기
 
-* 
+```javascript
+<form>
+    <input type="hidden" name="bm_no" id="" value="0"/>
+    <input type="hidden" name="bm_gorup" id="" value="0"/>
+    <input type="hidden" name="bm_step" id="" value="0"/>
+</form>
+```
+
+* value가 0 이라면 새글 작성하기 업무이다.
+
 ### 댓글 쓰기
 
 * 그룹번호는 채번하지 않는다. 
@@ -46,13 +55,16 @@ description: 2020.12.22 - 89일차
 
 ```javascript
 <form>
-    <input type="hidden" name="bm_gorup" id="" value="<%= %>"/>
+    <input type="hidden" name="bm_no" id="" value="<%=rMap.get("BM_NO") %>"/>
+    <input type="hidden" name="bm_gorup" id="" value="<%=rMap.get("BM_GROUP") %>"/>
+    <input type="hidden" name="bm_step" id="" value="<%=rMap.get("BM_STEP") %>"/>
 </form>
 ```
 
 * JS
 * &lt;form&gt;전송을 사용한다.
-* hidden속성을 활용해 선택한 게시물의 그룹번호를 담아 전송해야한다. value속성으로 값을 가져온다.
+* hidden속성을 활용해 선택한 게시물의 PK,그룹번호, 글 번호를 담아 전송해야한다. value속성으로 값을 가져온다.
+* value가 &gt; 0 이라면 댓글 작성하기 업무이다.
 
 ```markup
 	<update id="updateStep" parameterType="map">
