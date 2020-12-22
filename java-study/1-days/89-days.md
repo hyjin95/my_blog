@@ -41,6 +41,19 @@ description: 2020.12.22 - 89일차
 * 
 ### 댓글 쓰기
 
+* 그룹번호는 채번하지 않는다. 
+* 선택된 댓글을 작성할 게시물에 대한 그룹번호를 가져야 하기 때문이다.
+
+```javascript
+<form>
+    <input type="hidden" name="bm_gorup" id="" value="<%= %>"/>
+</form>
+```
+
+* JS
+* &lt;form&gt;전송을 사용한다.
+* hidden속성을 활용해 선택한 게시물의 그룹번호를 담아 전송해야한다. value속성으로 값을 가져온다.
+
 ```markup
 	<update id="updateStep" parameterType="map">
 		UPDATE board_master_t
@@ -50,6 +63,7 @@ description: 2020.12.22 - 89일차
 	</update>
 ```
 
+* SQL
 * 끼어드는 글이 존재하므로 위와 같은 update구문이 필요하다.
 * 배달사고가 잘 발생할 수 있으므로 파라미터가 잘 넘어오는지 확인해야한다.
 
@@ -72,5 +86,9 @@ description: 2020.12.22 - 89일차
 ```
 
 * "seqBoardNo"와 "boardMInsert"는 MDao.java에서, "boardSInsert"는 SDao.java에서 호출된다.
-* Logic에서는 MInsert와 SInsert의 결과값\(int\)를 가지고 둘다 insert가 성공\(1\)하면 커밋, 응답제출 해야한다. = 트랜잭션 
+* Logic에서는 MInsert와 SInsert의 결과값\(int\)를 가지고 둘다 insert가 성공\(1\)하면 커밋, 응답제출 해야한다. = 트랜잭션
+
+### 새글과 댓글 구분
+
+* 컬럼  - bm\_no : 둘 다 채번해야 한다. - bm\_group :  새글이라면 둘다 채번하지만 댓글이라면 이미 갖고 있을테니까 필요가없다.
 
