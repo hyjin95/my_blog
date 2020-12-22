@@ -90,6 +90,11 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
+* 3번 코드에서 앱바에 메뉴를 추가한다.
+* 4번이 메뉴의 첫번째 아이템이다.  공유 아이템
+* 5번에서 ShareActionProvider를 가져온다.
+* 6번에서 인텐트를 지정한다.
+
 ```java
     private void setShareActionIntent(String s) {
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -98,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         shareActionProvider.setShareIntent(intent);
     }
 ```
+
+* 공유할 인탠트를 생성해서 메서드를 구현한다.
 
 ```java
     //액션 아이템 클릭 처리
