@@ -32,3 +32,34 @@ description: 2020.12.22 - 89일차
 * ModelAndView, String : WEB-INF하위의 jsp에 접근한다.
 * WEB-INF의 jsp에 접근하려면 반드시 Contorller를 거쳐야 하는 것이다. webapp에 있는 jsp는 url에서 해당 경로로 바로 접근할 수 있다.
 
+## 게시판 : 상세보기
+
+## 게시판 : 새글 & 덧글 작성하기
+
+### 새글 쓰기
+
+* 
+### 댓글 쓰기
+
+* 
+### 공통부분 : 쿼리
+
+```markup
+  <select id="seqBoardNo" parameterType="map" resultType="map">
+		SELECT SEQ_BOARD_NO.nextval FROM dual
+	</select>
+	
+	<insert id="boardMInsert" parameterType="map"><!-- 끝에 세미콜론 들어가면 안됨!!! -->
+		INSERT INTO board_master_t(bm_no,bm_writer,bm_title,bm_content,bm_email,bm_date,bm_group,bm_pos,bm_step,bm_pw)
+       	 VALUES(1,'작성자1','제목1','내용1','test1@hot.com','2020-12-08',0,0,0,'123')
+	</insert>	  
+	
+	<insert id="boardSInsert" parameterType="map"><!-- 끝에 세미콜론 들어가면 안됨!!! -->	   
+		INSERT INTO board_sub_t(bm_no, bs_seq, bs_file, bs_size)
+		   VALUES(2,2,'test2.txt',10)
+	</insert>	  
+```
+
+* "seqBoardNo"와 "boardMInsert"는 MDao.java에서, "boardSInsert"는 SDao.java에서 호출된다.
+* Logic에서는 MInsert와 SInsert의 결과값\(int\)를 가지고 둘다 insert가 성공\(1\)하면 커밋, 응답제출 해야한다. = 트랜잭션 
+
