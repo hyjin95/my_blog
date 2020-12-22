@@ -10,7 +10,7 @@ description: 2020.12.22 - 89일차
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
-## 게시판
+## Spring : 게시판
 
 ### 오라클을 경유하는 경우
 
@@ -32,9 +32,9 @@ description: 2020.12.22 - 89일차
 * ModelAndView, String : WEB-INF하위의 jsp에 접근한다.
 * WEB-INF의 jsp에 접근하려면 반드시 Contorller를 거쳐야 하는 것이다. webapp에 있는 jsp는 url에서 해당 경로로 바로 접근할 수 있다.
 
-## 게시판 : 상세보기
+## Spring 게시판 : 상세보기
 
-## 게시판 : 새글 & 덧글 작성하기
+## Spring 게시판 : 새글 & 덧글 작성하기
 
 ### 새글 쓰기
 
@@ -103,4 +103,6 @@ description: 2020.12.22 - 89일차
 ### 새글과 댓글 구분
 
 * 컬럼  - bm\_no : 둘 다 채번해야 한다. - bm\_group :  새글이라면 둘다 채번하지만 댓글이라면 이미 갖고 있을테니까 필요가없다.
+
+## Android Studio
 
