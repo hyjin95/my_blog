@@ -26,7 +26,7 @@ description: 2020.12.22 - 89일차
 * SELECT,  조건 검색 - 페이지가 처음 열릴 때 DB를 경유하지 않는다.
 * INSERT \| UPDATE \| DELETE - 트랜잭션의 처리 대상 - 결과 페이지가 boardList.jsp로 향하게 된다. : board/boardList.jsp - 커밋과 롤백의 대상
 
-### return Type
+### return Type과 url
 
 * void : webapp하위의 jsp에 접근한다.
 * ModelAndView, String : WEB-INF하위의 jsp에 접근한다.
