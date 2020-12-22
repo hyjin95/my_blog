@@ -30,4 +30,5 @@ description: 2020.12.22 - 89일차
 
 * void : webapp하위의 jsp에 접근한다.
 * ModelAndView, String : WEB-INF하위의 jsp에 접근한다.
+* WEB-INF의 jsp에 접근하려면 반드시 Contorller를 거쳐야 하는 것이다.
 
