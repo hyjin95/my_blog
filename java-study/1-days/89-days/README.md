@@ -34,6 +34,8 @@ description: 2020.12.22 - 89일차
 
 ## Spring 게시판 : 상세보기
 
+{% page-ref page="spring.md" %}
+
 ## Spring 게시판 : 새글 & 덧글 작성하기
 
 ### 새글 쓰기
