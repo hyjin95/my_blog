@@ -110,7 +110,7 @@ description: 2020.12.22 - 89일차
 
 ### menu resource생성
 
-![](../../../.gitbook/assets/2%20%2874%29.png)
+![](../../../.gitbook/assets/2%20%2875%29.png)
 
 * res 우클릭 &gt; New &gt; Android Resource File
 
