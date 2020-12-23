@@ -24,64 +24,73 @@ description: 2020.12.23- 90일차
 
 ## Spring : 새글-댓글 작성 
 
-### 쿼리문
+### Sequence.nextval
 
 ```sql
 SELECT seq_board_no.nextval bm_no FROM dual;
 ```
 
-* 
-### 쿼리문
+* 시퀀스가 마지막으로 생성한 번호의 다음 번호를 조회한다.
+
+### Index 생성
 
 ```sql
 --그룹번호 채번하는 쿼리문짜기
---아무 것이나 index를 생성할 수 있다. 하지만 유니크하지는 않다.
 CREATE INDEX iboard_group ON board_master_t(bm_group);
 ```
 
-* 
-### 쿼리문
+* 테이블의 아무 컬럼에도 index를 생성할 수 있지만, PK가 아니라면 유니크한 값이 아닐 것이다.
+
+### index 검색
 
 ```sql
---부분처리(index=색인)하는 힌트문을 부여해 검색 속도의 향상을 기대한다.
-SELECT empno FROM emp; --empno는 pk이므로 index를 읽어 처리한다.
+SELECT empno FROM emp; 
 ```
 
-* 
-### 쿼리문
+* emp테이블의 empno는 PK이고, PK는 index를 갖고 있다.
+* index를 부여해 index를 활용한 검색을 하는 것은 검색시 색인을 이용해 빠른 검색이 가능하게 하는 것과 같다.
+
+### index+일반컬럼 검색
 
 ```sql
-SELECT empno, ename FROM emp; --ename은 index가 없어 index를 읽어 실행 할 수 없다. table을 전체 스캔한다. 데이터가 많을수록 오래걸린다.
-
---그래서 nosql같은 경우는 대용량 데이터 처리에는 적합하지 않다. index를 제공하지 않기 때문에. local data를 기록하는데 적합하다.
+SELECT empno, ename FROM emp; 
 ```
 
-* 
-### 쿼리문
+* empno는 PK이지만 ename은 일반 컬럼으로 index를 갖고 있지 않다.
+* 이렇게 index를 갖지 않는 컬럼을 조회할때에는 옵티마이저가 테이블을 전체 스캔하는 과정을 거치기 때문에 데이터량이 많을 수록 속도가 느려질 수 밖에 없다.
+* 그러므로 nosql은 index를 제공하지 않아 대용량 데이터 처리에는 적합하지 않은 것이다. local data를 처리, 기록하는데 적합하다.
+
+### Where 색인 조건
 
 ```sql
 SELECT empno, ename FROM emp
- WHERE empno>10; --조건이 있으면 또 다르다. 색인 조건
+ WHERE empno>10;
 ```
 
-* 
-### 쿼리문
+* index를 조건으로 하는 쿼리문은 index를 활용한 검색을 한다.
+
+### index와 힌트문
 
 ```sql
 SELECT /*+index_desc(board_master_t iboard_group)*/ bm_group
   FROM board_master_t
- WHERE bm_group > 0; --멍청한 조건이 있어야만 index를 활용할 수 있다.
+ WHERE bm_group > 0;
 ```
 
-* 
-### 쿼리문
+* 위에서 생성한 index인 iboard\_group를 힌트문에 넣어 색인 검색을 할 수 도 있다.
+* 하지만 이경우에는 만드시 where문에 항상 일치하는 조건이라도 index를 갖는 컬럼에 부여해야한다.
+
+### null과 NVL
 
 ```sql
 -- data가 한건도 없다면 위 쿼리문은 null이 출력된다. 그래서 사용하는 것이 NVL
 SELECT NVL(comm,0) FROM emp;
 ```
 
-* 
+* 조회 결과가 null이라면 해당 결과를 활용하는 부분에서 에러가 발생할 수 있다.
+* 이럴때 사용하는 것이 NVL\( \)중복검사 구문이다.
+* comm
+
 ### 쿼리문
 
 ```sql
