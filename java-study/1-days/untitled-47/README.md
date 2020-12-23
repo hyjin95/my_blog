@@ -126,5 +126,20 @@ SELECT
 
 {% page-ref page="spring.md" %}
 
-## Android Studio
+## Android Studio : pizza
+
+### MainActivity
+
+* activity\_main.xml
+
+### OrderActivity
+
+* activity\_order.xml
+* 구성 - 주문서 작성 - 플로팅 버튼 - UpButton
+
+### parent 구조
+
+* Main과 Order페이지를 부모와 자식 페이지로 구성해본다.
+* AndroidManifest.xml &lt; activity android:name=".OrderActivity                  android:parentActivityName=".MainActivity"&gt;
+* 장점 여러개의 복잡한 액티비티 사이에서  UPButton을 사용해 한번에 부모페이지로 이동 할 수 있다.
 
