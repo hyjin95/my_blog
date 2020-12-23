@@ -10,6 +10,18 @@ description: 2020.12.23- 90일차
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
+## Spring : 게시
+
+### return type String
+
+1. "redirect : xxx.jsp" - 배포위치 webapp에 접근한다.
+2. "forward : xxx.jsp" - 배포위치 webapp에 접근한다.
+3. "xxx" - ViewResolver를 사용해 WEB-INF에 접근한다.
+
+### @RequestParam
+
+* @RequestParam 어노테이션을 활용하면 get, post방식 전송시 파라미터에 값이 자동으로 담겨 이전에 어노테이션을 사용하지 않고 request.getParameter\( \);로 받아와 pMap.put\(" ",값\)으로 일일히 담았던 반복되는 구문이 감소한다.
+
 ## Spring : 새글-댓글 작성 SQL
 
 ### 쿼리문
