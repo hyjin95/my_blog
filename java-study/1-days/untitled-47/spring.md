@@ -176,9 +176,16 @@ public class BoardLogic {
 * 댓글이 아닌 새 게시글 작성의 경우
 * 새 게시글이므로 글 차수\(pos\)와 글 순선\(step\)는 0이여야 한다.
 * 3번에서 MDao의 메서드를 호출해 새 게시글에게 부여할 게시글 번호를 채번해온다.
+* 이렇게 새 게시글인 경우의 pMap구성이 끝났다.
 
 ```java
 		int mresult = sqlBoardMDao.boardMInsert(pMap);
+```
+
+* 이제 새 게시물 작성이든 댓글 작성이든 Insert를 해야한다. 
+* 만들어진 pMap을 파라미터로 보내 MDao의 Insert메서드를 호출한다.
+
+```java
 		//첨부파일이 있니?
 		if(pMap.get("bs_file") != null && pMap.get("bs_file").toString().length() > 1) {
 			pMap.put("bm_no", bm_no);
@@ -188,6 +195,10 @@ public class BoardLogic {
 	}
 }
 ```
+
+* 첨부파일이 존재하는 경우는 따로 분류해 DDao에서 insert를 처리한다.
+* 파라미터로 받아온 첨부파일 bm\_file은 문자열일 것이기때문에 null체크와 같이 문자열 길이 체크도 해야한다.
+* 4번에서 첨부파일 파라미터가 존재한다면 DDao의 insert메서드를 호출한다.
 
 ### 코드 : BoardMDao.java
 
@@ -207,17 +218,6 @@ public class SqlBoardMDao {
 
 	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
 		this.sqlSessionTemplate = sqlSessionTemplate;
-	}
-```
-
-```java
-	public int boardMInsert(Map<String, Object> pMap) {//여기는 java : xml
-		//insert into board_master_t(b_no, b_title, .....) values(seq_board_no.nextval, "안녕하세요", .....)
-		logger.info("boardM - boardInsert 호출 성공 : "+pMap);
-		int result = 0;
-		result = sqlSessionTemplate.insert("boardMInsert",pMap);
-		logger.info(result);
-		return result;
 	}
 ```
 
@@ -257,7 +257,7 @@ public class SqlBoardMDao {
 	public int getBmGroup() {
 		logger.info("boardM -getBmGroup");
 		int result = 0;
-		result = sqlSessionTemplate.update("getBmGroup");
+		result = sqlSessionTemplate.selectOne("getBmGroup");
 		logger.info(result);
 		return result;
 	}
@@ -265,7 +265,21 @@ public class SqlBoardMDao {
 ```
 
 * 새 게시글 작성의 경우 Logic에서 호출되는 메서드이다.
-* 새 게시글에세
+* 새 게시글에게 부여할 그룹번호를 채번한다.
+
+```java
+	public int boardMInsert(Map<String, Object> pMap) {//여기는 java : xml
+		//insert into board_master_t(b_no, b_title, .....) values(seq_board_no.nextval, "안녕하세요", .....)
+		logger.info("boardM - boardInsert 호출 성공 : "+pMap);
+		int result = 0;
+		result = sqlSessionTemplate.insert("boardMInsert",pMap);
+		logger.info(result);
+		return result;
+	}
+```
+
+* 새 게시글 작성 또는 댓글 작성에 대한 정보가 담긴 pMap을 받아 insert 쿼리문을 호출한다.
+* insert이기 때문에 결과 값은 0또는 1이 나온다.
 
 ### 코드 : BoardDDao.java
 
@@ -295,8 +309,9 @@ public class SqlBoardDDao {
 		return result;
 	}
 }
-
 ```
+
+* 첨부파일을 담당하는 Dao로서 첨부파일이 존재할때에만 불려지는 메서드들을 갖는다.
 
 ## myBatis.xml
 
@@ -335,6 +350,11 @@ public class SqlBoardDDao {
 	</select>
 ```
 
+* 새 게시글 작성의 경우 새로운 그룹번호를 가져야한다. 
+* 미리 index를 부여해놓은 그룹번호 컬럼을 통해 빠른 검색을 한다.
+* 가장 마지막에 부여된 그룹번호에 +1을 해서 채번한다.
+* 작성된 새 게시글이 첫 게시글이라면 해당 테이블 조회 값이 null이 나오고, 에러가 발생할 것이기 때문에 NVL구문을 작성해 이를 방지하고, null이라면 1을 가질수 있도록 했다.
+
 ```markup
 	<select id="boardList" parameterType="map" resultType="map"><!-- bs테이블은 null일 수 있으므로 nullpointer방지로 NVL구문 사용 -->		   
 		SELECT 
@@ -369,4 +389,8 @@ public class SqlBoardDDao {
 		   VALUES(5,1,'test5.txt',10)
 	</insert>	  
 ```
+
+* Insert 쿼리문
+* 현재는 상수로 박아 놨지만 추후에 파라미터로 받은 pMap으로 대체 해야한다.
+* \#{값} 값 = 파라미터로 받아온 map의 키 이름이 들어간다.
 
