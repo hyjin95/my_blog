@@ -152,14 +152,18 @@ public class BoardLogic {
 			}
 			pMap.put("bm_pos", pos+1);
 			
-			if(pMap.get("bm_step") != null) {//null체크 코드가 없을때 null이 발생하면 Exception이 발생할 수 있다.
+			if(pMap.get("bm_step") != null) {
 				step = Integer.parseInt(pMap.get("bm_step").toString());
 			}
 			pMap.put("bm_step", step+1);
 		}
 ```
 
-* 
+* 파라미터에게서 null이 나오는 배달사고를 방지하기위해 null을 체크하는 if문을 작성한다.
+* 변수 pos에 선택된 댓글을 달 게시글의 글 차수를 담는다. Dao에게 파라미터로 넘길 map에 게시글 글 차수+1을 댓글의 글 차수로 담는다. 게시글보다 글 차수가 하나 높아야 하므로
+* 변수 step에 선택된 댓글을 달 게시글의 글 순서를 담는다. 마찬가지로 해당 게시글보다 순서가 하나 높아야 하므로 +1해 map에 담는다.
+* 이렇게 댓글인 경우의 pMap구성이 끝났다.
+
 ```java
 		//새글이니?
 		else {//pos, step이 0이다.
@@ -167,6 +171,13 @@ public class BoardLogic {
 			pMap.put("bm_pos", 0);
 			pMap.put("bm_step", 0);
 		}
+```
+
+* 댓글이 아닌 새 게시글 작성의 경우
+* 새 게시글이므로 글 차수\(pos\)와 글 순선\(step\)는 0이여야 한다.
+* 3번에서 MDao의 메서드를 호출해 새 게시글에게 부여할 게시글 번호를 채번해온다.
+
+```java
 		int mresult = sqlBoardMDao.boardMInsert(pMap);
 		//첨부파일이 있니?
 		if(pMap.get("bs_file") != null && pMap.get("bs_file").toString().length() > 1) {
@@ -252,6 +263,9 @@ public class SqlBoardMDao {
 	}
 }
 ```
+
+* 새 게시글 작성의 경우 Logic에서 호출되는 메서드이다.
+* 새 게시글에세
 
 ### 코드 : BoardDDao.java
 
