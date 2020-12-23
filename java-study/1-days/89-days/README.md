@@ -2,7 +2,7 @@
 description: 2020.12.22 - 89일차
 ---
 
-# 89 Days - Spring:게시판, 새글, 덧글, 상세보기, AndroidStudio:menu, ActionBar69, ShareActionProvider
+# 89 Days - Spring:게시판, 새글, 덧글, 상세보기, AndroidStudio:menu, ActionBar, ShareActionProvider, 채팅\(Firebase\)
 
 ## 사용 프로그램
 
@@ -122,6 +122,10 @@ description: 2020.12.22 - 89일차
 ### ShareActionProvider를 이용한 앱바 메뉴 구현
 
 {% page-ref page="untitled.md" %}
+
+### FiresBase를 활용한 실시간 채팅 구현
+
+{% page-ref page="android-firebase-chatting.md" %}
 
 후기 : 시간은 훨훨 지나가고 코로나 확진자도 훨훨 늘어나고.....으악
 
