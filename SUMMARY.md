@@ -305,6 +305,7 @@
   * [89 Days - Spring:게시판, 새글, 덧글, 상세보기, AndroidStudio:menu, ActionBar69, ShareActionProvider](java-study/1-days/89-days/README.md)
     * [Spring : 게시판 - 상세보기](java-study/1-days/89-days/spring.md)
     * [Spring : ShareActionProvider, appBar에 Menu구현](java-study/1-days/89-days/untitled.md)
-  * [90 Days -](java-study/1-days/untitled-47.md)
+  * [90 Days -](java-study/1-days/untitled-47/README.md)
+    * [Spring : 게시판 - 새글, 댓글 작성](java-study/1-days/untitled-47/spring.md)
   * [Untitled](java-study/1-days/untitled-45.md)
 
