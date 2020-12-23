@@ -306,7 +306,7 @@
     * [Spring : 게시판 - 상세보기](java-study/1-days/89-days/spring.md)
     * [Spring : ShareActionProvider, appBar에 Menu구현](java-study/1-days/89-days/untitled.md)
     * [Android : Firebase Chatting](java-study/1-days/89-days/android-firebase-chatting.md)
-  * [90 Days -](java-study/1-days/untitled-47/README.md)
+  * [90 Days - Spring:annotation정리, 새게시글, 댓글 SQL, index, null, NVL, rownum, 시퀀스번호 조회하기, Android:pizza, 부모](java-study/1-days/untitled-47/README.md)
     * [Spring : 게시판 - 새글, 댓글 작성](java-study/1-days/untitled-47/spring.md)
     * [HashMapBinder, HangulConversion](java-study/1-days/untitled-47/hashmapbinder.md)
   * [Untitled](java-study/1-days/untitled-45.md)

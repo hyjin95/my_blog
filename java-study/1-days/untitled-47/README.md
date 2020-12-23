@@ -2,7 +2,7 @@
 description: 2020.12.23- 90일차
 ---
 
-# 90 Days -
+# 90 Days - Spring:annotation정리, 새게시글, 댓글 SQL, index, null, NVL, rownum, 시퀀스번호 조회하기, Android:pizza, 부모
 
 ## 사용 프로그램
 
@@ -203,7 +203,5 @@ setSupportActionBar(toolbar);
 * Maven레파지토리는 xml에 선언해두면 의존성주입에 따라 jar파일이 자동으로 다운로드되는 Build방법
 * gradle은 url-pattern처럼 관리하는것
 
-## Android Studio : PizzaApp Ver1
-
-## Android Studio : PizzaApp Ver2
+후기 : 안드로이드 수업을 따라가느라 한동안 또 허덕이고 있다. 모르는 클래스들 천지..
 
