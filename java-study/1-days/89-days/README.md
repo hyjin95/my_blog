@@ -2,7 +2,7 @@
 description: 2020.12.22 - 89일차
 ---
 
-# 89 Days -
+# 89 Days - Spring:게시판, 새글, 덧글, 상세보기, AndroidStudio:menu, ActionBar69, ShareActionProvider
 
 ## 사용 프로그램
 
@@ -118,4 +118,10 @@ description: 2020.12.22 - 89일차
 
 * Resource type : Menu
 * 해당 type으로 리소스 파일을 생성하면 res에 자동으로 menu폴더가 생성된다.
+
+### ShareActionProvider를 이용한 앱바 메뉴 구현
+
+{% page-ref page="untitled.md" %}
+
+후기 : 시간은 훨훨 지나가고 코로나 확진자도 훨훨 늘어나고.....으악
 
