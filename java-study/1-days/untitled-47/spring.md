@@ -1,5 +1,7 @@
 # Spring : 게시판 - 새글, 댓글 작성
 
+## JAVA
+
 ### 코드 : BoardController.java
 
 ```java
@@ -222,5 +224,59 @@ public class SqlBoardDDao {
 	}
 }
 
+```
+
+## myBatis.xml
+
+### 쿼리문 : board.xml
+
+```markup
+<select id="getBmno" parameterType="int" resultType="int">
+		SELECT seq_board_no.nextval bm_no FROM dual
+	</select>
+
+	<select id="getBmGroup" parameterType="map" resultType="map">
+		SELECT
+   			  NVL((SELECT /*+index_desc(board_master_t iboard_group)*/ bm_group
+         			 FROM board_master_t
+        			WHERE bm_group > 0
+         			  AND rownum = 1),0) +1 
+ 		 FROM dual;
+	</select>
+	
+	<select id="boardList" parameterType="map" resultType="map"><!-- bs테이블은 null일 수 있으므로 nullpointer방지로 NVL구문 사용 -->		   
+		SELECT 
+			   bm.bm_no, bm.bm_title, bm.bm_writer, bm.bm_content, bm.bm_email
+			   ,bm.bm_pw, bm.bm_group, bm.bm_pos, bm.bm_step, bm.bm_hit, bm.bm_date
+			   ,NVL(bs.bs_file,'') bs_file, NVL(bs.bs_size,0) bs_size
+		  FROM board_master_t bm right outer join board_sub_t bs
+		    ON bm.bm_no = bs.bm_no
+		 <where>
+		 	<if test="bm_no > 0">
+		 		AND bm.bm_no=#{bm_no}
+		 	</if>
+		 </where>
+		 ORDER BY bm_no desc
+	</select>
+	
+	<select id="seqBoardNo" parameterType="map" resultType="map">
+		SELECT SEQ_BOARD_NO.nextval FROM dual
+	</select>
+	<insert id="boardMInsert" parameterType="map"><!-- 끝에 세미콜론 들어가면 안됨!!! -->
+		INSERT INTO board_master_t(bm_no,bm_writer,bm_title,bm_content,bm_email,bm_date,bm_group,bm_pos,bm_step,bm_pw)
+       	 VALUES(5,'작성자5','제목5','내용5','test5@hot.com','2020-12-22',0,0,0,'123')
+	</insert>	  
+	
+	<insert id="boardDInsert" parameterType="map"><!-- 끝에 세미콜론 들어가면 안됨!!! -->	   
+		INSERT INTO board_sub_t(bm_no, bs_seq, bs_file, bs_size)
+		   VALUES(5,1,'test5.txt',10)
+	</insert>	  
+	
+	<update id="bmStepUpdate" parameterType="map">
+		UPDATE board_master_t
+		   SET bm_step = bm_step + 1
+		 WHERE bm_group = #{bm_group} <!-- read.jsp에서 온다 -> select된 한개 row를 갖고 있다. 해당 row의 bm_group을 가져온다. -->
+		   AND bm_step > #{bm_step};
+	</update>
 ```
 
