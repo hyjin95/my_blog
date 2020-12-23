@@ -137,7 +137,12 @@ SELECT
 * activity\_order.xml
 * 구성 - 주문서 작성 - 플로팅 버튼 - UpButton 
 
-### appBar
+### appBar -&gt; toolBar
+
+```java
+ActionBar toolbar = findViewById(R.id.아이디값);
+setSupportActionBar(toolbar);
+```
 
 * toolbar\_main.xml과 menu\_main.xml을 활용해 앱바를 꾸며본다.
 
@@ -153,6 +158,9 @@ SELECT
  ActionBar actionBar = getSuppoertActionBar( );
  actionBar.setDisplayShowHomeEnabled(true);
 ```
+
+* Maven레파지토리는 xml에 선언해두면 의존성주입에 따라 jar파일이 자동으로 다운로드되는 Build방법
+* gradle은 url-pattern처럼 관리하는것
 
 ## Android Studio : PizzaApp Ver1
 
