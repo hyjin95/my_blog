@@ -146,7 +146,7 @@ public class BoardLogic {
 * 이번에 작성된 댓글의 처리를 위해 글 차수와 순서를 담을 변수 두개를 선언한다.
 
 ```java
-		//너 댓글이니?	
+		//너 댓글이니??	
 			if(pMap.get("bm_pos") != null) {//null체크 코드가 없을때 null이 발생하면 Exception이 발생할 수 있다.
 				pos = Integer.parseInt(pMap.get("bm_pos").toString());
 			}
