@@ -154,5 +154,7 @@ SELECT
  actionBar.setDisplayShowHomeEnabled(true);
 ```
 
-## Android Studio : pizza Ver1
+## Android Studio : PizzaApp Ver1
+
+## Android Studio : PizzaApp Ver2
 
