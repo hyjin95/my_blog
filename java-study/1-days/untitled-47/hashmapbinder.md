@@ -1,4 +1,6 @@
-# HashMapBinder
+# HashMapBinder, HangulConversion
+
+### HashMapBinder.java
 
 ```java
 package com.util;
@@ -35,4 +37,32 @@ public class HashMapBinder {
 * 23번 : 파라미터로 받은 map에 key와 해당 key를 이름으로하는 파라미터 값을 넣어준다.
 * 반복
 * 한글 data인 경우, 한글깨짐을 방지하기위해 23번에 인코딩 클래스를 활용했다.
+
+### HangulConversion.java
+
+```java
+package com.util;
+//한글 처리
+public class HangulConversion {
+		
+	public static String toKor(String en) {
+		if(en == null) return null;
+		try {
+			return new String(en.getBytes("8859_1"),"euc-kr");
+		} catch (Exception e) {
+			return en;
+		}
+	}////end of toKor
+	
+	public static String toUTF(String en) {
+		if(en == null) return null;
+		try {
+			return new String(en.getBytes("8859_1"),"utf-8");
+		} catch (Exception e) {
+			return en;
+		}
+	}////end of toKor
+
+}
+```
 

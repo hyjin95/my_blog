@@ -21,6 +21,8 @@ description: 2020.12.23- 90일차
 ### @RequestParam
 
 * @RequestParam 어노테이션을 활용하면 get, post방식 전송시 파라미터에 값이 자동으로 담겨 이전에 어노테이션을 사용하지 않고 request.getParameter\( \);로 받아와 pMap.put\(" ",값\)으로 일일히 담았던 반복되는 구문이 감소한다.
+* 파라미터 안에 작성되므로 해당 변수는 지역변수이고 NullPointerException이 발생 할 수 있다.
+* spring-core.jar엔진에서 ApplicationContext와 BeanFactory클래스들이 관리, 객체를 주입해준다.
 
 ### XML설정 : annotation X
 
@@ -28,6 +30,16 @@ description: 2020.12.23- 90일차
 * 단점 - 업무에 새로 투입된 개발자들이 바로 파악하기에 어렵다. - xml문서를 파악할 줄 알아야한다. - 자바와 다른 언어이다. - 진입장벽이 높아 코딩의 시작까지 시간이 늦어진다. - 개발자가 직접 구현하지 않은 클래스들이 많다. - 상속을 받아 처리하므로 의존적이다.
 *  표준서블릿 HttpServlet - 메서드 오버라이딩을 준수해 두개의 메서드만이 req, res객체를 주입받아 사용할 수 있다. - 요청, 응답객체에 의존적이다.
 * 사용자 입력 값 - Map을 선언하고 request.getParameter\("이름"\); 으로 가져와 map에 put해야한다. - 파라미터로 받아올 값의 갯수만큼 코드가 늘어나고 반복된다. - 이를 돕고자 만들어진것이 HashMapBinder 클래스이다.
+
+{% page-ref page="hashmapbinder.md" %}
+
+### Properties설정 : annotation O
+
+* 장점 - annotation을 활용해 완벽한 독립을 이뤘다. - HttpServlet을 상속받지 않는다.   HttpServletResponse객체 없이 sendRedirect를 사용할 수 있고 HttpServletRequest를 요청할 수 있다. - DispatcherServlet이 web.xml에 작성되지 않아도 된다.
+* @Controller - 컨트롤 계층 클래스를 선언할 때 작성한다.
+* @Service - 모델 계층 클래스를 선언할 때 작성한다. - 수업에서는 xxxLogic클래스와 xxxDao클래스에서 사용한다.
+* @RequestParam - 파라미터로 받아와야하는 사용자 입력값이 있을때 파라미터에 작성한다.
+* ModelMap - 메서드의 파라미터로 작성된다. - forward scope를 사용할 수 있게 해준다. - UI지원을 위한 별도 클래스가 제공된다.
 
 ## Spring : 새글 작성 - 그룹번호 채번
 
