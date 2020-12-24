@@ -53,3 +53,10 @@ description: 2020.12.24
 
 * read.jsp에서 시작한다. - 오라클을 경유해 기본정보를 갖고있는 화면
 
+## Android Studio
+
+### 작업지시서
+
+* MainActivity.java\(모델계층\) - activity\_main.xml\(뷰 계층 : Vue.js, React 등\) - Activity.class에서 activity.xml에 작성된 id에 접근하기   TextView tvid = findViewById\(R.id.아이디\);
+* ActionBar\(AppBar\) - 공통코드를 만들어 재사용성을 높여보자 - res &gt; layout &gt; toolbar_main.xml -_ res하위의 정보들은 대부분 @으로 접근할 수 있다. - xml에서 xml에 접근하기   &lt;Button android:text="@strings/이름"/&gt;
+
