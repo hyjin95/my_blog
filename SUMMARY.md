@@ -310,7 +310,7 @@
   * [90 Days - Spring:annotation정리, 새게시글, 댓글 SQL, index, null, NVL, rownum, 시퀀스번호 조회하기, Android:pizza, 부모](java-study/1-days/untitled-47/README.md)
     * [Spring : 게시판 - 새글, 댓글 작성](java-study/1-days/untitled-47/spring.md)
     * [HashMapBinder, HangulConversion](java-study/1-days/untitled-47/hashmapbinder.md)
-  * [91 Days -](java-study/1-days/untitled-45.md)
-  * [Spring : 새 게시글 등록](java-study/1-days/untitled-50.md)
+  * [91 Days -](java-study/1-days/untitled-45/README.md)
+    * [Spring : 새 게시글 등록](java-study/1-days/untitled-45/untitled-50.md)
   * [Untitled](java-study/1-days/untitled-48.md)
 

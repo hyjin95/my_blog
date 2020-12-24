@@ -2,7 +2,7 @@
 
 ## JAVA코드
 
-{% page-ref page="untitled-47/spring.md" %}
+{% page-ref page="../untitled-47/spring.md" %}
 
 ## JSP : WEB-INF/views/board
 
