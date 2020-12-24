@@ -87,11 +87,26 @@ description: 2020.12.24
 ### MainActivity.java : 모델계층
 
 * activity\_main.xml\(뷰 계층 : Vue.js, React 등\)
-* Activity.class에서 activity.xml에 작성된 id에 접근하기 TextView tvid = findViewById\(R.id.아이디\);
+* Activity.class에서 activity.xml에 작성된 id에 접근하기 TextView tv\_id = findViewById\(R.id.아이디\); Toolbar toobar = findViewById\(R.id.아이디\);
+* 메인액티비티 R.java : 주소번지가 int로 저장된다.
+* new Toolbar\( \):하지 않는다. xml에 생성되어 있으므로
+* 선언한 toolbar를 actionBar에 장착하기 setSupportActionBar\(toolbar\);
+* 메뉴에 대한 리로스 파일 항목 앱바에 추가하기 @Override public boolean onCreateOptionsMenu\(Menu menu\){ } - @param1 : 메뉴에 대한 리소스파일 - @param2 : 메뉴 리소스 파일을 자바로 표현한 menu객체
+* 위 menu\_main.xml문서에서 등록한 아이디르 활용해 이벤트 처리하기 PUBLIC BOOLEAN onOptionsItemSelected\(MenuItem item\) 부모액티비티에 대한 선언은 적제소에서 parentActivityName으로 설정
 
 ### ActionBar\(AppBar\)
 
 * 공통코드를 만들어 재사용성을 높여보자
 * res &gt; layout &gt; toolbar_main.xml -_ res하위의 정보들은 대부분 @으로 접근할 수 있다.
 * xml에서 xml에 접근하기  &lt;Button android:text="@strings/이름"/&gt;
+* android:title="@string/order" - strings.xml에 등록된 자원
+* android:id="@+id/action\__create\__order" - 자바코드에서 사용할 아이디값 선언
+* android:icon="@drawable/ic_add_white\_24dp" - 액션 아이콘 이미지 값
+* app:showAsAction="ifRoom\|withText\|never\|always" - ifRoom : 공간이 있으면 앱바에 추가하고 없으면 오버 플로우에 추가한다.
+
+### MainActivity에 액션바에 툴바 장착하기
+
+### 메뉴에 대한 리소스 파일 항목 앱바에 추가하기
+
+### toolbar\_main.xml 살펴보
 
