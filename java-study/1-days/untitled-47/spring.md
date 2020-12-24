@@ -127,21 +127,24 @@ public class BoardLogic {
 			bm_group = Integer.parseInt(pMap.get("bm_group").toString());
 		}
 		bm_no = sqlBoardMDao.getBmno();//pk이므로 마스터에서 가져온다.
+		pMap.put("bm_no",bm_no);
 ```
 
 * 게시글이라면 그룹번호를 갖고있지 않을 것이고, 댓글이라면 그룹번호를 갖고있게 된다.
 * 파라미터에 그룹번호가 null이아니라면 댓글일 것이다. 파라미터에서 bm\_group를 꺼내 담는다.  혹시모를 배달사고를 방지하기위해 toString으로 꺼내 형변환 한다.
-* 이제 그룹번호가 null인것은 새 글 작성 일 것이다. 글번호가 필요하므로 MDao를 통해 새로운 글번호를 가져온다.
+* 글번호는 새 게시글 작성이던, 댓글작성이던 PK로서 SEQ를 순서대로 부여해야한다. MDao의 메서드를 통해 다음에 부여될 글 번호를 가져와 pMap에 담는다.
 
 ```java
 		//너 댓글이니?
 		if(bm_group > 0) {
+			pMap.put("bm_group",bm_group);
 			sqlBoardMDao.bmStepUpdate(pMap);
 			int pos = 0;
 			int step = 0;
 ```
 
 * bm\_group변수가 &gt;0 인 값을 담고 있다면 댓글업무이다.
+* if문의 bm\_group는 화면에서 가져온 것이므로 새 게시글이라면 0이겠지만 댓글의 경우는 read.jsp에서 __가져온 bmgroup이 담겨있다. 해당 bm\_group을 pMap에 담는다.
 * 댓글은 끼워넣기를 해야하기때문에 같은 게시글에 대한 댓글이 여러개 존재한다면 작성된 댓글을 끼워넣기 위해 기존 댓글들의 순서에 +1을 해야한다. 3번코드에서 MDao의 메서드를 호출해 update한다.
 * 이번에 작성된 댓글의 처리를 위해 글 차수와 순서를 담을 변수 두개를 선언한다.
 
@@ -191,7 +194,7 @@ public class BoardLogic {
 			pMap.put("bm_no", bm_no);
 			int dresult = sqlBoardDDao.boardDInsert(pMap);
 		}
-		return result;
+		return mresult;
 	}
 }
 ```
