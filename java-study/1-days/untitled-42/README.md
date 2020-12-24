@@ -68,6 +68,23 @@ UPDATE board_master_t -- 목록화면인지 상세보기 화면인지, 목록 �
 * 게시글 삽입에 대한 Update 트랜잭션 처리가 필요하다.
 * 게시글이 추가되고, 기존 게시글의 순서가 내려가고, 첨부파일이있으면 올려야 한다.
 
+### 전체 조회 SQL
+
+```sql
+<select id="boardList" parameterType="map" resultType="map"><!-- bs테이블은 null일 수 있으므로 nullpointer방지로 NVL구문 사용 -->		   
+		SELECT bm.bm_no, bm.bm_title, bm.bm_writer, bm.bm_content, bm.bm_email,bm.bm_pw, bm.bm_group, bm.bm_pos, bm.bm_step, bm.bm_hit, bm.bm_date
+			   ,NVL(bs.bs_file,'') bs_file, NVL(bs.bs_size,0) bs_size 
+		 FROM board_master_t bm left outer join board_sub_t bs
+		   ON bm.bm_no = bs.bm_no
+		 <where>
+		 	<if test="bm_no > 0">
+		 		AND bm.bm_no=#{bm_no}
+		 	</if>
+		 </where>
+		 ORDER BY bm_no desc
+	</select>
+```
+
 ## Spring : 계층형 게시판 설계
 
 ### 계층형 게시판
