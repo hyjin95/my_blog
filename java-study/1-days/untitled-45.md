@@ -21,6 +21,6 @@ description: 2020.12.24
 
 ### 화면처리
 
-1. writeForm.jsp를 만들어 사용한다.
+1. writeForm.jsp를 만들어 사용한다. -요청처리
 2. easyUI - Dialog를 사용한다.
 
