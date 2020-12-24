@@ -70,6 +70,7 @@ description: 2020.12.24
 ### JAVA
 
 * com.example.프로젝트 이름.MainActivity.java - 런쳐 클래스\(시작클래스\)
+* com.example.프로젝트 이름.OrderActivity.java - 서브 클래스 - 주문서 용도의 클래스
 
 ### res
 
