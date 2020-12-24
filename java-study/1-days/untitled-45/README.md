@@ -161,12 +161,12 @@ public boolean onCreateOptionsMenu(Menu menu) {
         android:id="@+id/action_create_order"
         android:icon="@drawable/icaddwhite_24dp"
         android:orderInCategory="1"
-        app:showAsAction="ifRoom|withText|never|always"/>
+        app:showAsAction="ifRoom"/>
 </menu>
 ```
 
-* android:title="@string/order" - strings.xml에 등록된 자원
-* android:id="@+id/action\__create\__order" - 자바코드에서 사용할 아이디값 선언
-* android:icon="@drawable/ic_add_white\_24dp" - 액션 아이콘 이미지 값
+* 5번 : strings.xml에 등록된 자원
+* 6번 : 자바코드에서 사용할 아이디값 선언
+* 7번 : 액션 아이콘 이미지 값
 * app:showAsAction="ifRoom\|withText\|never\|always" - ifRoom : 공간이 있으면 앱바에 추가하고 없으면 오버 플로우에 추가한다
 
