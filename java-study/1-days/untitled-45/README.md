@@ -53,10 +53,44 @@ description: 2020.12.24
 
 * read.jsp에서 시작한다. - 오라클을 경유해 기본정보를 갖고있는 화면
 
-## Android Studio
+## Android Studio : 작업지시서
 
-### 작업지시서
+### APK명
 
-* MainActivity.java\(모델계층\) - activity\_main.xml\(뷰 계층 : Vue.js, React 등\) - Activity.class에서 activity.xml에 작성된 id에 접근하기   TextView tvid = findViewById\(R.id.아이디\);
-* ActionBar\(AppBar\) - 공통코드를 만들어 재사용성을 높여보자 - res &gt; layout &gt; toolbar_main.xml -_ res하위의 정보들은 대부분 @으로 접근할 수 있다. - xml에서 xml에 접근하기   &lt;Button android:text="@strings/이름"/&gt;
+* Pizza201224.apk
+
+### AndroidManifest.xml : 앱 적재소
+
+* 인터넷 사용권한 추가
+* 액티비티 등록
+* 앱 아이콘 등록
+* 앱 테마 결정\(NoActionBar\)
+* 액티비티 간의 관계 결정
+
+### JAVA
+
+* com.example.프로젝트 이름.MainActivity.java - 런쳐 클래스\(시작클래스\)
+
+### res
+
+* res &gt; drawable : 이미지, 아이콘 추가
+* res &gt; layout : activity\_main.xml, toolbar\_main.xml\(include\)
+* res &gt; menu : menu\_main.xml추가
+* res &gt; value  - strings.xml, styles.xml\(이전버전, 사용자 정의 스타일\), color.xml\(주요색상정보등록\), theme.xml
+
+### gradle, maven방식
+
+* maven 방식 - spring에서 권장하는 방식 - maven repository빌드로 진행한다. - pom.xml에 repository정보를 xml에 dependency로 등록해서 원격 자동 동기화 처리
+* gradle 방식 - 안드로이드에서 권장하는 방식 - java -&gt; class -&gt; xxx.dex - build.gradle\(프로젝트 수준\)   프로젝트 전반에 대한 빌드정보 추가\(구글서비스 이용 유무 등\) - build.gradle\(앱 수준\)   패키지 정보, 가상머신 정보, 의존성 주입\(관계\), jar등록 등 - gradle.properties   메모리 지정, 메모리 설정, apk에 대한 효율성 체크, androidX패키지 사용 유무 등
+
+### MainActivity.java : 모델계층
+
+* activity\_main.xml\(뷰 계층 : Vue.js, React 등\)
+* Activity.class에서 activity.xml에 작성된 id에 접근하기 TextView tvid = findViewById\(R.id.아이디\);
+
+### ActionBar\(AppBar\)
+
+* 공통코드를 만들어 재사용성을 높여보자
+* res &gt; layout &gt; toolbar_main.xml -_ res하위의 정보들은 대부분 @으로 접근할 수 있다.
+* xml에서 xml에 접근하기  &lt;Button android:text="@strings/이름"/&gt;
 
