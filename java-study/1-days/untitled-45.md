@@ -22,5 +22,5 @@ description: 2020.12.24
 ### 화면처리
 
 1. writeForm.jsp를 만들어 사용한다. -요청처리
-2. easyUI - Dialog를 사용한다.
+2. easyUI - Dialog를 사용한다. - 목록페이지가 열려있는 상태에서 새 글을 작성하는 Dialog를 띄우는 것이기때문에 목록을 새로고침하는데에 어려움이 있다.
 
