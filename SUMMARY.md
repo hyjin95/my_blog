@@ -5,6 +5,7 @@
 ## 국비 교육 <a id="java-study"></a>
 
 * [KOSMO](java-study/1-days/README.md)
+  * [Untitled](java-study/1-days/untitled-49.md)
   * [Git](java-study/1-days/untitled-11.md)
   * [Debug note](java-study/1-days/debug-note.md)
   * [참고](java-study/1-days/undefined-2.md)
@@ -309,6 +310,6 @@
   * [90 Days - Spring:annotation정리, 새게시글, 댓글 SQL, index, null, NVL, rownum, 시퀀스번호 조회하기, Android:pizza, 부모](java-study/1-days/untitled-47/README.md)
     * [Spring : 게시판 - 새글, 댓글 작성](java-study/1-days/untitled-47/spring.md)
     * [HashMapBinder, HangulConversion](java-study/1-days/untitled-47/hashmapbinder.md)
-  * [Untitled](java-study/1-days/untitled-45.md)
+  * [91 Days -](java-study/1-days/untitled-45.md)
   * [Untitled](java-study/1-days/untitled-48.md)
 
