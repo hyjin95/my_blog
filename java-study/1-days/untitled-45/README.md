@@ -150,17 +150,19 @@ public boolean onCreateOptionsMenu(Menu menu) {
 
 * 부모액티비티에 대한 선언은 적제소에서 parentActivityName으로 설정한다.
 
-### toolbar\_main.xml 살펴보기
+### menu\_main.xml 살펴보기
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    android:background="?attr/colorPrimary"
-    android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"><!-- toolbar에 대한 root-->
-</androidx.appcompat.widget.Toolbar>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/order"
+        android:id="@+id/action_create_order"
+        android:icon="@drawable/icaddwhite_24dp"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom|withText|never|always"/>
+</menu>
 ```
 
 * android:title="@string/order" - strings.xml에 등록된 자원
