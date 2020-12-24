@@ -99,7 +99,7 @@ description: 2020.12.24
 ### 액션바에 툴바 장착하기 : Activity
 
 ```java
-@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -114,7 +114,8 @@ description: 2020.12.24
 ### 메뉴에 대한 리소스 파일 항목 앱바에 추가하기 : Activity
 
 ```java
-public boolean onCreateOptionsMenu(Menu menu) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main,menu);
         return super.onCreateOptionsMenu(menu);
     }
@@ -149,6 +150,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
 ```
 
 * 부모액티비티에 대한 선언은 적제소에서 parentActivityName으로 설정한다.
+* 이렇게 부모액티비티를 선언해 놓으면 수많은 페이지 중에서도 부모페이지로 바로 이동하게 할 수 있다.
 
 ### menu\_main.xml 살펴보기
 
@@ -159,7 +161,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
     <item
         android:title="@string/order"
         android:id="@+id/action_create_order"
-        android:icon="@drawable/icaddwhite_24dp"
+        android:icon="@drawable/iic_add_white_24dp"
         android:orderInCategory="1"
         app:showAsAction="ifRoom"/>
 </menu>
@@ -169,4 +171,8 @@ public boolean onCreateOptionsMenu(Menu menu) {
 * 6번 : 자바코드에서 사용할 아이디값 선언
 * 7번 : 액션 아이콘 이미지 값
 * app:showAsAction="ifRoom\|withText\|never\|always" - ifRoom : 공간이 있으면 앱바에 추가하고 없으면 오버 플로우에 추가한다
+
+### PizzaVer1
+
+### PizzaVer2
 
