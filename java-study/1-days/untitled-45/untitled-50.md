@@ -35,7 +35,8 @@
 		location.href="/board/boardDetail.sp?bm_no="+p_bmno
 	}
 	function refresh() {
-		location.herf="board/boardList.sp";
+		//alert("refresh호출");
+		location.href="/board/boardList.sp";
 	}
 </script>
 </head>
