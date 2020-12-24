@@ -311,6 +311,6 @@
     * [Spring : 게시판 - 새글, 댓글 작성](java-study/1-days/untitled-47/spring.md)
     * [HashMapBinder, HangulConversion](java-study/1-days/untitled-47/hashmapbinder.md)
   * [91 Days -](java-study/1-days/untitled-45.md)
-  * [Untitled](java-study/1-days/untitled-50.md)
+  * [Spring : 새 게시글 등록](java-study/1-days/untitled-50.md)
   * [Untitled](java-study/1-days/untitled-48.md)
 

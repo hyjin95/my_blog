@@ -357,12 +357,10 @@ public class SqlBoardDDao {
 
 ```markup
 	<select id="boardList" parameterType="map" resultType="map"><!-- bs테이블은 null일 수 있으므로 nullpointer방지로 NVL구문 사용 -->		   
-		SELECT 
-			   bm.bm_no, bm.bm_title, bm.bm_writer, bm.bm_content, bm.bm_email
-			   ,bm.bm_pw, bm.bm_group, bm.bm_pos, bm.bm_step, bm.bm_hit, bm.bm_date
-			   ,NVL(bs.bs_file,'') bs_file, NVL(bs.bs_size,0) bs_size
-		  FROM board_master_t bm right outer join board_sub_t bs
-		    ON bm.bm_no = bs.bm_no
+		SELECT bm.bm_no, bm.bm_title, bm.bm_writer, bm.bm_content, bm.bm_email,bm.bm_pw, bm.bm_group, bm.bm_pos, bm.bm_step, bm.bm_hit, bm.bm_date
+			   ,NVL(bs.bs_file,'') bs_file, NVL(bs.bs_size,0) bs_size 
+		 FROM board_master_t bm left outer join board_sub_t bs
+		   ON bm.bm_no = bs.bm_no
 		 <where>
 		 	<if test="bm_no > 0">
 		 		AND bm.bm_no=#{bm_no}
