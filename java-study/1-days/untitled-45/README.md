@@ -26,7 +26,7 @@ description: 2020.12.24
 
 ### 새 게시글 작성하기 구현 
 
-![](../../../.gitbook/assets/1%20%28100%29.png)
+![](../../../.gitbook/assets/1%20%28101%29.png)
 
 * url : /board/boardList.sp
 * 첫 화면, 이미 DB를 경유해 데이터를 갖고 목록을 보여주고있다.
@@ -172,7 +172,9 @@ description: 2020.12.24
 * 7번 : 액션 아이콘 이미지 값
 * app:showAsAction="ifRoom\|withText\|never\|always" - ifRoom : 공간이 있으면 앱바에 추가하고 없으면 오버 플로우에 추가한다
 
-### PizzaVer1
+### PizzaVer1 : 뒤로가기, 부모액티비티
+
+{% page-ref page="android-studio-pizzaver1.md" %}
 
 ### PizzaVer2
 
