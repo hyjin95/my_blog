@@ -220,9 +220,9 @@ JEasyUI의 DataGrid API를 활용하여 작성
     pageEncoding="UTF-8"%>
 <script>
    alert("등록되었습니다.")
-   self.close();
-   location.href="/board/boardList.sp";
    opener.location.href="javascript:refresh()";
+   self.close();
+   //location.href="/board/boardList.sp";
 </script>
 ```
 
