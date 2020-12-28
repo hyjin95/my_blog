@@ -70,5 +70,5 @@ ORDER BY bm.bm_group desc, bm.bm_step asc;
 
   - opener.location.href="xxx.jsp \| xxx.sp \| xxx.html" --2번방법, html은 잘 사용하지 않는다.
 
-* C타입 - Modal창 A, B와의 차이점 : 소스가 하나다.
+* C타입 - Modal창 A, B와 달리 소스가 하나다.
 
