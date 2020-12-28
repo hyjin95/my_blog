@@ -95,7 +95,7 @@ var a = "";
 
 ### Activity와 Fragment, Intent
 
-![](../../.gitbook/assets/1%20%28102%29.png)
+![](../../.gitbook/assets/1%20%28103%29.png)
 
 * Activity간의 이동에서 값을 유지시키는 방법은 putExtra로 인텐트에 담고 이동한 페이지 Activity에서 getIntent를 통해 꺼낼 수 있다.
 * Fragment는 두 종류로 분류할 수 있다. - xml을 갖고 일반 xml처럼 layout을 제공하는 Fragment - Data만을 가지고 DataSet의 역할을 제공하는 List Fragment
