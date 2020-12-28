@@ -128,3 +128,8 @@ var a = "";
 * 안드로이드에서 제공하는 화면\(XML\)에서 사용자가  id와 pw를 입력하면 Http프로토콜을 활용해 POST방식\(get방식은 보안상의 문제가 발생 할 수 있다.\)으로 Tomcat이 Oracle을 통해 로그인 결과를 다시 안드로이드에 가져와 화면에 표시해주는 작업이 필요하다.
 * 이때 xml 화면에 접근해 동기작업을 하는데에 필요한것이 UI스레드이다. 
 
+### Fragment의 종류
+
+* xml을 갖고 화면으로서의 성격을 갖는 Fragment 사용될 Activity에서 Frame을 만들어두고 해당 Frame의 안에 위치시킬 수 있다.
+* Dataset으로서의 Fragment xml을 갖지 않는다.
+
