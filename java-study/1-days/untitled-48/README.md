@@ -50,6 +50,8 @@ SELECT *
 * 첨부파일의 유무는 사용자의 선택사항이기 때문에 전체 조회시에는 첨부파일이 없는 게시글 까지도 보여줘야 한다.
 * outter join을 사용한다.
 
+![](../../../.gitbook/assets/table.png)
+
 ```sql
 --그룹번호 내림차순, 글차수는 오름차순, 순서에 맞게 뽑는다.
 -- bm_no 글번호와 bm_group 글 그룹번호는 일치하지 않을 수 있기때문에 따로 채번해야한다.
@@ -132,4 +134,8 @@ var a = "";
 
 * xml을 갖고 화면으로서의 성격을 갖는 Fragment 사용될 Activity에서 Frame을 만들어두고 해당 Frame의 안에 위치시킬 수 있다.
 * Dataset으로서의 Fragment xml을 갖지 않는다.
+
+{% page-ref page="fragment-dataset.md" %}
+
+
 
