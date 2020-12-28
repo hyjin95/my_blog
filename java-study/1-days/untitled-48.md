@@ -28,12 +28,17 @@ DELETE FROM board_master_t
 commit;
 ```
 
+* 게시글마다 고유의 그룹번호를 가져야 하므로 bm\_group이 0인 게시글 데이터는 삭제한다.
+
 ```sql
 --양 쪽 테이블 모두에 존재하는 게시글
 SELECT * 
   FROM board_master_t bm, board_sub_t bs
  WHERE bm.bm_no = bs.bm_no;
 ```
+
+* 이 sql문은 양쪽테이블 모두에 존재하는 게시글 데이터만을 조회한다.
+* 첨부파일이 없어 board\_sub\_t테이블에 올라가지 않은 게시글 데이터는 조회되지 않는다.
 
 ```sql
 --첨부파일이 없더라도 게시글을 보여줘야 한다. 아우터조인
