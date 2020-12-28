@@ -47,6 +47,9 @@ SELECT *
  WHERE bm.bm_no = bs.bm_no(+);
 ```
 
+* 첨부파일의 유무는 사용자의 선택사항이기 때문에 전체 조회시에는 첨부파일이 없는 게시글 까지도 보여줘야 한다.
+* outter join을 사용한다.
+
 ```sql
 --그룹번호 내림차순, 글차수는 오름차순, 순서에 맞게 뽑는다.
 -- bm_no 글번호와 bm_group 글 그룹번호는 일치하지 않을 수 있기때문에 따로 채번해야한다.
@@ -55,4 +58,17 @@ SELECT *
  WHERE bm.bm_no = bs.bm_no(+)
 ORDER BY bm.bm_group desc, bm.bm_step asc;
 ```
+
+* 게시글마다 그룹번호를 갖고, 해당 그룹번호안에 여러 댓글을 위한 글 차수가 존재하기 때문에 위와 같이 ORDER BY를 사용해 정렬한다.
+
+### 화면 호출 타입 3가지
+
+* A타입 - 부모창 자식창과 자바스크립트 변수, 함수를 공유해 호출할 수 있다. - &lt;script&gt; function method\( \){ } &lt;/script&gt;
+* B타입 - 팝업창, A타입의 자식창
+
+  - opener.location.href="javascript:method\( \)" --1번방
+
+  - opener.location.href="xxx.jsp \| xxx.sp \| xxx.html" --2번방법, html은 잘 사용하지 않는다.
+
+* C타입 - Modal창 A, B와의 차이점 : 소스가 하나다.
 
