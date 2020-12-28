@@ -72,3 +72,13 @@ ORDER BY bm.bm_group desc, bm.bm_step asc;
 
 * C타입 - Modal창 A, B와 달리 소스가 하나다.
 
+### var와 let 예약어
+
+```sql
+let url="writeForm.sp";
+var a = "";
+```
+
+* ECMAScript에서 제안하는 let 예약어
+* React.js, Vue.js, TypeScript.js를 활용하기 위해서는 let예약어를 사용하는것이 더 안전하다.
+
