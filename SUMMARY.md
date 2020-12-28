@@ -313,5 +313,6 @@
   * [91 Days - Spring:새 게시글 화면이동, Android:부모-자식액티비티, appber-toolbar, menu](java-study/1-days/untitled-45/README.md)
     * [Spring : 새 게시글 등록](java-study/1-days/untitled-45/untitled-50.md)
     * [Android Studio : PizzaVer1](java-study/1-days/untitled-45/android-studio-pizzaver1.md)
-  * [Untitled](java-study/1-days/untitled-48.md)
+  * [92 Days -](java-study/1-days/untitled-48.md)
+  * [Untitled](java-study/1-days/untitled-50.md)
 
