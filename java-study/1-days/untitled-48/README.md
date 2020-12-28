@@ -2,7 +2,7 @@
 description: 2020.12.28 - 92일차
 ---
 
-# 92 Days -
+# 92 Days - Spring:댓글처리, let예약어, boardList SQL, 페이지 호출방식, Android:Fragment, Thread, AsyncTask, 로그인처리
 
 ## 사용 프로그램
 
@@ -93,6 +93,8 @@ var a = "";
 * 댓글 작성시 작성되는 댓글 뒤에 댓글이 존재한다면 그 댓글들의 step은 +1되어 끼어들기가 이뤄져야 한다.
 * 작성되는 댓글과 그룹번호가 같고, read.jsp에서 이미 결정된 step보다 큰 댓글들의 step은 +1로 set, update되어야 하는 것이다. 
 
+{% page-ref page="spring.md" %}
+
 ## Android Studio : 로그인
 
 ### Activity와 Fragment, Intent
@@ -137,5 +139,5 @@ var a = "";
 
 {% page-ref page="fragment-dataset.md" %}
 
-
+후기 : Final Project의 화면정의서도 DB도 완료!
 

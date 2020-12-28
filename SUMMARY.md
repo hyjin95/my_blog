@@ -313,7 +313,7 @@
   * [91 Days - Spring:새 게시글 화면이동, Android:부모-자식액티비티, appber-toolbar, menu](java-study/1-days/untitled-45/README.md)
     * [Spring : 새 게시글 등록](java-study/1-days/untitled-45/untitled-50.md)
     * [Android Studio : PizzaVer1](java-study/1-days/untitled-45/android-studio-pizzaver1.md)
-  * [92 Days -](java-study/1-days/untitled-48/README.md)
+  * [92 Days - Spring:댓글처리, let예약어, boardList SQL, 페이지 호출방식, Android:Fragment, Thread, AsyncTask, 로그인처리](java-study/1-days/untitled-48/README.md)
     * [Fragment : 일반, DataSet](java-study/1-days/untitled-48/fragment-dataset.md)
     * [Spring : 댓글 처리](java-study/1-days/untitled-48/spring.md)
   * [Untitled](java-study/1-days/untitled-51.md)
