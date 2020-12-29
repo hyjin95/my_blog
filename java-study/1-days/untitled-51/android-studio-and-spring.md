@@ -85,7 +85,8 @@
 </manifest>
 ```
 
-* 인터넷 권한 허용, Http url접근 허용
+* 6번 : 인터넷 권한 허용,
+* 14번 : Http url접근 허용
 
 ## Android Studio : JAVA
 
@@ -110,16 +111,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         tv_result = findViewById(R.id.tv_result);
     }
 
     public void loginAction(View view) {
-
         //사용자의 입력값 청취
-        EditText et_id = findViewById(R.id.user_id);
-        //loginlogic클래스에 넘기기위한 변수 선언
-        String id = et_id.getText().toString();
+        EditText et_id = findViewById(R.id.user_id);        
+        String id = et_id.getText().toString();//loginlogic클래스에 넘기기위한 변수 선언
         EditText et_pw = findViewById(R.id.user_pw);
         String pw = et_pw.getText().toString();
 
@@ -136,6 +134,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 }
 ```
+
+* 13번 : 결과를 출력할 공간, activity\_login.xml에 작성된 TextView태그의 id값을 담을 변수 선언 18번에서 해당 id를 가진 xml이 매칭된 후에 19번에서 id에 접근한다.
+* 24,26번에서 xml에서 사용자가 입력하는 EditText 태그의 id에 접근한다. 25, 27번에서 getText\( \).toString\( \) 함수를 사용해 입력 값을 String으로 꺼내 담는다. LoginLogic클래스에서 사용하기 위해 String으로 변환한다.
 
 ### 코드 : LoginLogic.java
 
