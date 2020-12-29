@@ -289,3 +289,25 @@ public class LoginLogic extends AsyncTask<String,Void,String> {
 </LinearLayout>
 ```
 
+## Spring : DB연동 TEST화면
+
+### spring : /android/androidOracleConnection.jsp
+
+![](../../../.gitbook/assets/oracle-%20%281%29.png)
+
+* 파라미터로 조건이 들어오지 않으면 나타나는 화면
+
+![](../../../.gitbook/assets/oracle-2.png)
+
+* 조건을 넘기면 제대로된 값이 출력되는 것을 확인할 수 있다.
+
+## 결과 : 에뮬레이터
+
+![](../../../.gitbook/assets/oracle-.png)
+
+* DB에 존재하는 id과 pw를 입력하면 하단에 DB결과값이 출력되는 것을 확인할 수 있다.
+
+![](../../../.gitbook/assets/oracle-3.png)
+
+* Android Studio의 logout
+
