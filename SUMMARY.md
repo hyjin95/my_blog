@@ -316,7 +316,7 @@
   * [92 Days - Spring:댓글처리, let예약어, boardList SQL, 페이지 호출방식, Android:Fragment, Thread, AsyncTask, 로그인처리](java-study/1-days/untitled-48/README.md)
     * [Fragment : 일반, DataSet](java-study/1-days/untitled-48/fragment-dataset.md)
     * [Spring : 댓글 처리](java-study/1-days/untitled-48/spring.md)
-  * [93 Days -](java-study/1-days/untitled-51/README.md)
+  * [93 Days - Spring:첨부파일 업로드, 다운로드, MultipartRequest, Android Studio:로그인처리, DB연동하기](java-study/1-days/untitled-51/README.md)
     * [Spring : 첨부파일 업로드](java-study/1-days/untitled-51/spring.md)
     * [Spring : 첨부파일 다운로드](java-study/1-days/untitled-51/spring-1.md)
     * [Android Studio & Spring : 로그인 처리](java-study/1-days/untitled-51/android-studio-and-spring.md)

@@ -2,7 +2,7 @@
 description: 2020.12.29 - 93일차
 ---
 
-# 93 Days -
+# 93 Days - Spring:첨부파일 업로드, 다운로드, MultipartRequest, Android Studio:로그인처리, DB연동하기
 
 ## 사용 프로그램
 
@@ -59,4 +59,10 @@ description: 2020.12.29 - 93일차
 
 * jsp를 불러오기위한 Http프로토콜 사용을 허용한다.
 * Https url로의 접근은 항상 허용하지만 인증되지 않은 주소인 Http url은 위 코드를 작성해야만 접근할 수 있게 된다.
+
+### Android + Spring 로그인처리\(DB\) 구현
+
+{% page-ref page="android-studio-and-spring.md" %}
+
+후기 : 복습에 프로젝트에..정신없다 정신없어!!!!
 
