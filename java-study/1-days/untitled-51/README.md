@@ -12,9 +12,8 @@ description: 2020.12.29 - 93일차
 
 ## Spring : 첨부파일
 
-### 추가 jar
+### 파일 업로드 준비사항
 
-* spring-boot : apache.org - commons-fileupload-1.4.jar - commons-io-2.8.0. jar
 * spring : maven repository - cos.jar
 
 ### 첨부파일 전송 주의사항
@@ -24,7 +23,16 @@ description: 2020.12.29 - 93일차
 ```
 
 * 반드시 'Form'전송으로 처리해야한다. - &lt;form&gt;태그로 내용을 감싸 enctype을 정의해준다.
-* 일반 request를 사용해서는 입력 값을 받아올 수 없다. - cos.jar에서 제공하는  
+* 일반 request를 사용해서는 입력 값을 받아올 수 없다. - cos.jar에서 제공하는 MultipartRequest객체를 사용해야한다.
+* 게시글이 insert될때 같이 트랜잭션처리로 묶여서 처리되어야 한다.
+
+### 첨부파일 업로드 구현
+
+{% page-ref page="spring.md" %}
+
+### 첨부파일 다운로드 구현
+
+{% page-ref page="spring-1.md" %}
 
 ## Android Studio : 로그인처리
 

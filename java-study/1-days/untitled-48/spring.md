@@ -319,7 +319,73 @@ ORDER BY bm.bm_group desc, bm.bm_step asc;
 	</insert>
 ```
 
+### 7.boardList.jsp
+
+```markup
+<body>
+게시판 목록
+<!-- ======================== [[글목록 화면 시작]] =========================
+JEasyUI의 DataGrid API를 활용하여 작성
+1)익스프레션을 이용해서 화면 처리
+  :tr, td태그를 직접 작성해서 처리하는 방식
+2)json포맷으로 처리해서 매핑
+  :field명만 맞춰주면 자동으로 매핑
+ -->
+ <table id="dg_board" title="글목록" style="width:950px;height:500px" class="easyui-datagrid" data-options="singleSelect:'true',toolbar:'#tb_search,#tb_board',footer:'#pn_board'">
+    <!--헤더부분 추가 -->
+    <thead>
+       <tr>
+          <th data-options="field:'BM_TITLE',width:'350px'">제목</th>
+            <th data-options="field:'BM_WRITER',width:'100px'">작성자</th>
+            <th data-options="field:'BM_DATE',width:'110px'">작성일</th>
+            <th data-options="field:'BS_FILE',width:'280px'">첨부파일</th>
+            <th data-options="field:'BM_HIT',width:'100px'">조회수</th>
+       </tr>
+    </thead>
+    <!--데이터 출력 영역  -->
+    <tbody>    	
+    <!---================== 조회결과가 있는 경우 ======================= -->    	
+    <%
+    	if(tot > 0){
+    		for(int i=0;i<tot;i++){
+    			Map<String,Object> rmap = boardList.get(i);    		   	
+    %>
+    	<tr>
+    		<td>
+    		<!-- 너 댓글이니? 댓글이라면 이미지를 붙여줄거야. -->
+    		<%
+    			String imgPath = "\\images\\";
+    			if(Integer.parseInt(rmap.get("BM_POS").toString())>0){
+    				for(int j=0;j<Integer.parseInt(rmap.get("BM_POS").toString());j++){
+    					//차수에 따라 들여쓰기 깊이를 다르게 한다.
+    					out.print("&nbsp;&nbsp;");
+    				}
+    		%>
+    		<img src ="<%=imgPath %>rply.gif" border="0"/>
+    		<%
+    			}
+    		%>
+	    		<a href="javascript:boardDetail('<%=rmap.get("BM_NO")%>')">
+            	<%=rmap.get("BM_TITLE") %>
+            	</a>
+            </td>
+            <td><%=rmap.get("BM_WRITER") %></td>
+            <td><%=rmap.get("BM_DATE") %></td>
+            <td><%=rmap.get("BS_FILE") %></td>
+            <td><%=rmap.get("BM_HIT") %></td>
+       </tr>
+     <%
+    		}
+    	}
+    		
+     %>
+    </tbody>
+ </table>  
+</body>
+</html>
+```
+
 ## 결과
 
-![](../../../.gitbook/assets/1%20%28104%29.png)
+![](../../../.gitbook/assets/1%20%28105%29.png)
 
