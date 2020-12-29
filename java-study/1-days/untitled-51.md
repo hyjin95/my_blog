@@ -14,7 +14,7 @@ description: 2020.12.29 - 93일차
 
 ### 추가 jar
 
-* apache.org - commons-fileupload-1.4.jar - apache commons IO 2.8.0-bin.zip &gt; jar
+* apache.org - commons-fileupload-1.4.jar - commons-io-2.8.0. jar
 * maven repository - cos.jar
 
 ### 첨부파일 전송
