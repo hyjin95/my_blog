@@ -319,3 +319,7 @@ ORDER BY bm.bm_group desc, bm.bm_step asc;
 	</insert>
 ```
 
+## 결과
+
+![](../../../.gitbook/assets/1%20%28104%29.png)
+

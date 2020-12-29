@@ -17,3 +17,12 @@ description: 2020.12.29 - 93일차
 * commons-fileupload-1.4.jar
 * cos &gt; 05Nov2002 .jar
 
+### 첨부파일 전송
+
+```markup
+<form id="f_write" enctype="multipart/form-data">
+```
+
+* 반드시 'Form'전송으로 처리해야한다.
+* &lt;form&gt;태그로 내용을 감싸 enctype을 정의해준다. 
+
