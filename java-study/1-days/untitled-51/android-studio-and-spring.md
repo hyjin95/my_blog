@@ -159,7 +159,11 @@ public class LoginLogic extends AsyncTask<String,Void,String> {
     //멤버변수 선언
     String sendMsg = null;//안드로이드 앱에서 입력받은 아이디와 비번을 담아 톰캣에 전달한다.
     String receiveMsg = null;//tomcat 서버를 통해 처리된 결과를 받아 담을 변수 선언.
+```
 
+* 멤버변수로 파라미터를 받을 Strng, 응답 메세지를 담을 String을 선언한다.
+
+```java
     //doInBackground에서 작업을 제외하고는 전부 메인 스레드의 작업이다.
     //이 메서드에서는 ui접근이 가능한 ui스레드를 사용한 작업이 이뤄진다.
     //개선 코드 : 리턴타입을 json포맷으로 받아오는 API가 있으면 좋겠다.
@@ -183,7 +187,20 @@ public class LoginLogic extends AsyncTask<String,Void,String> {
             osw.write(sendMsg);
             osw.flush();//작성한 내용 서버로 전송후에 메모리를 비우는 메서드
             //여기까지가 요청에 대한 처리
+```
 
+* doInBackground메서드에서는 IU스레드를 활용한 작업이 이뤄진다.
+* 5번에서 파라미터로 String배열로 string을 담을 수 있다.
+* 7번 : spring에서 작성한 jsp로 DB연동을 하기위한 url이다. localHost로는 접근이 불가능하고 테스트시에 spring의 tomcat서버가 반드시 켜져 있어야 한다.
+* 10번에서 String주소를 URL클래스로 변환한다.
+* 13번에서 통신 채널 오픈
+* 14번 : 개인 id, pw를 처리하는 것이므로 get방식이 아닌 post방식을 선택했다.
+* 19번에서 post방식으로 넘겨야하는 파라미터 값을 담는다.
+* 21번 : 만들어둔 쓰기객체를 활용해 말하기\(url 말하기\)한다.
+* 22번의 flush\( \)함수는 서버 전송이 이뤄진 뒤에 메모리를 비워주는 메서드이다.
+* 16번에서 쓰기\(말하기\)를 담당하는 OutputStreamWriter객체를 생성한다.
+
+```java
             //응답을 받아올 준비--성공시 200번
             int responseCode = con.getResponseCode();//200,404,500, ...
             BufferedReader br = null;
@@ -208,6 +225,17 @@ public class LoginLogic extends AsyncTask<String,Void,String> {
     }
 }
 ```
+
+* 2번의 getResponseCode\( \)메서드를 활용하면 해당 연결의 통신상태를 가져올 수 있다. - 성공이면 200, 찾을 수 없으면 404 등 ...
+* 3번 : BufferReader클래스를 활용해 문자열 응답을 받아오면 메모리 처리 효율이 높아진다. 한글자씩 인지하므로
+* 4번 : 연결이 성공했다면, 200번이라면
+* 5번에서 InputStreamReader\( \)클래스로 읽기\(듣기\)객체를 BufferdReader객체로 생성한다.
+* 6번에서 응답값을 받을 String변수를 선언한다.
+* 7번에서는 응답값을 append\(붙이기\)하기 위해 StringBuffer객체를 생성한다.
+* 8번 : 응답으로 받아온 메세지가 존재하는 동안에는
+* 9번 : sb\_res에 메세지를 추가한다.
+* 12번 : 멤버변수에 선언해둔 최종 응답 변수에 받아온 메세지를 toString\( \)으로 담는다.
+* 21번 : return 멤버변수
 
 ## Android Studio : XML
 
