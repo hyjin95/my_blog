@@ -316,6 +316,6 @@
   * [92 Days - Spring:댓글처리, let예약어, boardList SQL, 페이지 호출방식, Android:Fragment, Thread, AsyncTask, 로그인처리](java-study/1-days/untitled-48/README.md)
     * [Fragment : 일반, DataSet](java-study/1-days/untitled-48/fragment-dataset.md)
     * [Spring : 댓글 처리](java-study/1-days/untitled-48/spring.md)
-  * [Untitled](java-study/1-days/untitled-51.md)
+  * [93 Days -](java-study/1-days/untitled-51.md)
   * [Untitled](java-study/1-days/untitled-50.md)
 
