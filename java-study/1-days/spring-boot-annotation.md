@@ -37,7 +37,7 @@
 
 ### @RequestMapping
 
-* spring의 SimpleUrlHandlerMapping역할 수행
+* spring의 SimpleUrlHandlerMapping역할 수행 Http, Https요청에 대한 어노테이션
 * @GetMapping : get방식 전송
 * @PostMapping : post방식 전송
 * 어노테이션뒤에 \( \)안에 url을 지정할 수 있다. - @RequestMapping\("/board/\*"\) - @PostMapping\("/boardInsert.sp"\)
