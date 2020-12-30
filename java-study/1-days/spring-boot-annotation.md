@@ -13,7 +13,7 @@
 
 * 의존성 주입시 작성
 * setter메서드의 역할을 수행
-* required 속성 - true : default, 주입 객체가 없는 경우 예외가 발생한다. - false : 주입 객체가 없어도 예외가 발생하지 않는다.
+* required 속성 - true : default, 주입 객체가 없는 경우 예외가 발생한다. - false : 주입 객체가 없어도 예외가 발생하지 않는다. - 스프링 컨테이너에서 체크한다.
 * 개발 초기 단계에서는 false로 두고 마무리단계에 true로 두어 테스트한다.
 
 ### @RequestParam
@@ -26,6 +26,13 @@
 * MultipartFile 
 * MultipartFile\[ \]
 * 파일을 받을 수 있는 클래스
+
+### @RequestMapping
+
+* spring의 SimpleUrlHandlerMapping역할 수행
+* @GetMapping : get방식 전송
+* @PostMapping : post방식 전송
+* 어노테이션뒤에 \( \)안에 url을 지정할 수 있다. - @RequestMapping\("/board/\*"\) - @PostMapping\("/board/boardInsert.sp"\)
 
 ### ModelMap
 
