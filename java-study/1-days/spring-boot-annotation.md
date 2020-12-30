@@ -1,5 +1,11 @@
 # Spring-boot : annotation
 
+### 성
+
+* 장점 - 개발자의 입장에서 편리하다. - HttpServlet을 상속받지 않지만 요청이 가능하고 전송도 가능하다.
+* 단점 - 유지보수, 관리자의 입장에서는 xml에 작성된 설정이 관리하기 쉬울 수 있다.
+* 어노테이션의 뒤에 \( \)괄호 안에 속성을 설정할 수 있다. - url, method, value, required, ....
+
 ### @Controller
 
 * 컨트롤 계층 클래스를 선언시 사용
@@ -32,7 +38,7 @@
 * spring의 SimpleUrlHandlerMapping역할 수행
 * @GetMapping : get방식 전송
 * @PostMapping : post방식 전송
-* 어노테이션뒤에 \( \)안에 url을 지정할 수 있다. - @RequestMapping\("/board/\*"\) - @PostMapping\("/board/boardInsert.sp"\)
+* 어노테이션뒤에 \( \)안에 url을 지정할 수 있다. - @RequestMapping\("/board/\*"\) - @PostMapping\("/boardInsert.sp"\)
 
 ### ModelMap
 
@@ -43,4 +49,4 @@
 ### Model
 
 * ModelMap과같이 UI지원을 위한 클래스이다.
-* 
+
