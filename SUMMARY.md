@@ -12,6 +12,7 @@
   * [단축키](java-study/1-days/undefined.md)
   * [오류](java-study/1-days/undefined-1.md)
   * [세미 프로젝트 - 영화예매](java-study/1-days/undefined-3.md)
+  * [Spring-boot : annotation](java-study/1-days/spring-boot-annotation.md)
   * [1 Days - 설치 및 Java 자료형](java-study/1-days/1-days-java.md)
   * [2 Days - 인스턴스화, 변수, 초기화](java-study/1-days/2-days.md)
   * [3 Days - 변수, 연산자와 리턴값](java-study/1-days/3-days.md)
