@@ -75,11 +75,11 @@ description: 2020.12.30 - 94일차
 		String path = null;
 		result = boardLogic.boardInsert(pMap);
 		if(result==1) {
-			path = "redirect:boardInsertOk.jsp";
+			path = "/board/boardInsertOk.jsp";
 		}else {
-			path = "redirect:boardInsertFail.sp";/
+			path = "/board/boardInsertFail.sp";
 		}
-		return path
+		return path;
 	}
 ```
 
