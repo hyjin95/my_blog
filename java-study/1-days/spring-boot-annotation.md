@@ -33,6 +33,7 @@
 * MultipartFile 
 * MultipartFile\[ \]
 * 파일을 받을 수 있는 클래스
+* POJO에서 작성했던 MultipartFile클래스의 역할을 수행
 
 ### @RequestMapping
 
