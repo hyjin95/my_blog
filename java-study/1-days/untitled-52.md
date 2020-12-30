@@ -72,13 +72,14 @@ description: 2020.12.30 - 94일차
 							, @RequestParam(value="bs_file", required=false) MultipartFile bs_file) {//required=false, 첨부파일은 없을 수 있다.
 		
 		logger.info("controller - boardInsert호출성공");
-		int result = 0;
-		result = boardLogic.boardInsert(pmap);//첨부파일 여부는 logic에서 처리한다.
+		String path = null;
+		result = boardLogic.boardInsert(pMap);
 		if(result==1) {
-			return "redirect:boardInsertOk.jsp";
+			path = "redirect:boardInsertOk.jsp";
 		}else {
-			return "redirect:boardInsertFail.sp";//Insert이기때문에 forward일 필요 없다.
+			path = "redirect:boardInsertFail.sp";/
 		}
+		return path
 	}
 ```
 
