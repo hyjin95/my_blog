@@ -9,15 +9,17 @@
 ### @Controller
 
 * 컨트롤 계층 클래스를 선언시 사용
+* 클래스 이름 앞에 작성한다.
 
 ### @Service
 
 * 모델 계층 클래스를 선언시 사용
+* 클래스 이름 앞에 작성한다.
 * 자바에서 xxxLogic과 xxxDao클래스에 해당
 
 ### @Autowired
 
-* 의존성 주입시 작성
+* 의존성 주입시 메서드 이름 앞에 작성
 * setter메서드의 역할을 수행
 * required 속성 - true : default, 주입 객체가 없는 경우 예외가 발생한다. - false : 주입 객체가 없어도 예외가 발생하지 않는다. - 스프링 컨테이너에서 체크한다.
 * 개발 초기 단계에서는 false로 두고 마무리단계에 true로 두어 테스트한다.
@@ -37,9 +39,10 @@
 
 ### @RequestMapping
 
-* spring의 SimpleUrlHandlerMapping역할 수행 Http, Https요청에 대한 어노테이션
 * @GetMapping : get방식 전송
 * @PostMapping : post방식 전송
+* spring의 SimpleUrlHandlerMapping역할 수행 Http, Https요청에 대한 어노테이션
+* @RequestMapping은 클래스 앞에도 작성할 수 있다. @Get, PostMapping은 메서드 앞에만 작성가능하다.
 * 어노테이션뒤에 \( \)안에 url을 지정할 수 있다. - @RequestMapping\("/board/\*"\) - @PostMapping\("/boardInsert.sp"\)
 
 ### ModelMap
