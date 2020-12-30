@@ -2,7 +2,7 @@
 description: 2020.12.30 - 94일차
 ---
 
-# 94 Days -
+# 94 Days - Spring:환경설정\(xml,propertiex,java\), JAVA로 환경설정하기
 
 ### 사용 프로그램
 
@@ -263,4 +263,6 @@ public class TestController {
 ![](../../.gitbook/assets/2%20%2880%29.png)
 
 * url : /step3/test.jo로 요청하면 test.jsp가 보여지는것을 확인할 수 있다.
+
+ 후기 :  부트스트랩 너무 어려워.....
 
