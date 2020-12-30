@@ -1,6 +1,6 @@
 # Spring-boot : annotation
 
-### 성
+### 성격
 
 * 장점 - 개발자의 입장에서 편리하다. - HttpServlet을 상속받지 않지만 요청이 가능하고 전송도 가능하다.
 * 단점 - 유지보수, 관리자의 입장에서는 xml에 작성된 설정이 관리하기 쉬울 수 있다.
@@ -26,6 +26,7 @@
 
 * 메서드의 파라미터에 작성된다.
 * 사용자가 화면에 입력한 값, ajax에서 넘어오는 값을 자동으로 받아준다. 파라미터는 지역변수이므로 NullPointerException이 발생해야하지만 ApplicationContextm BeanFactory 클래스들이 객체를 주입해준다. spring-core.jar
+* POJO에서 작성했던 HashMapBinder클래스의 역할을 수행
 
 ### @RequestParam : 첨부파일처리용
 
