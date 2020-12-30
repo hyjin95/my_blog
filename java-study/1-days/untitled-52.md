@@ -34,8 +34,6 @@ description: 2020.12.30 - 94일차
 * 클라이언트의 직접 접근을 차단해 보안성을 높이는 코드로 jsp사용시 항상 필요하다.
 * ViewResolver로 연결되는 페이지들은 WEB-INF 하위에 위치한 페이지에 연결된다.
 
-
-
 ## Spring : 첨부파일
 
 ### Spring : Controller
@@ -158,6 +156,9 @@ public class MvcConfig implements WebMvcConfigurer {
 	<context:component-scan base-package="com.board"/>
 ```
 
+* 기존에 spring-servlet.xml에서 작성했던 component-scan 설정 속성
+* 여러 패키지를 베이스 패키지로 스캔하도록 지정할 수 있다.
+
 ### Package\(component\) Scan : JAVA
 
 ```java
@@ -173,6 +174,9 @@ public class RootConfig {
 
 }
 ```
+
+* @Configuration 어노테이션으로 작성한 자바 환경설정파일 클래스
+* @ComponentScan 어노테이션으로 component-scan설정을 할 수 있다. xml문서와 똑같이 여러 패키지를 베이스 패키지로 스캔하도록 지정할 수 있다.
 
 ### web.xml 수정
 
