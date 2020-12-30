@@ -249,6 +249,8 @@ public class TestController {
 	public String test() {
 		logger.info("test 메서드 호출 성공");
 		return "test";
+		//return "redirect:test";//404,ViewResolver를 사용하지 않는 응답이다. .jsp를 붙여야 됨
+		//return "forward:test";//404,.jsp를 붙여도 404가 발생한다. 이거는 webapp에 접근하니까 webapp에 jsp가 존재해야한다.
 	}
 }
 ```
