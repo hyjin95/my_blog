@@ -245,7 +245,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TestController {
 	Logger logger = LoggerFactory.getLogger(TestController.class);
 	
-	@RequestMapping(value="/test.ko", method=RequestMethod.GET)
+	@RequestMapping(value="test.ko", method=RequestMethod.GET)
 	public String test() {
 		logger.info("test 메서드 호출 성공");
 		return "test";
