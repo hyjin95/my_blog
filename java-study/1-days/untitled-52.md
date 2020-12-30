@@ -10,13 +10,33 @@ description: 2020.12.30 - 94일차
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
-## Spring : 첨부파일
+## Spring
 
 ### Spring 환경설정 방법
 
 1. xml기반 환경설정
 2. xml대신 application.properties 설정
 3. java로 환경 설정
+
+### ViewResolver 
+
+```markup
+	<!-- viewResolver추가 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+```
+
+* 응답페이지의 url-pattern을 정의한다.
+* xml 설정파일 spring-servlet.xml에 작성된다. ViewResolver중에서 jsp를 View로 사용할 때에는 InternalResourceViewResolver클래스를 사용한다. spring에서 제공하는 클래스를 xml에 작성해 사용하는 것이지만 JAVA에서도 import를 통해 구현가능
+* Controller계층에서 응답시 사용하게된다.
+* 클라이언트의 직접 접근을 차단해 보안성을 높이는 코드로 jsp사용시 항상 필요하다.
+* ViewResolver로 연결되는 페이지들은 WEB-INF 하위에 위치한 페이지에 연결된다.
+
+
+
+## Spring : 첨부파일
 
 ### Spring : Controller
 
@@ -68,4 +88,135 @@ description: 2020.12.30 - 94일차
 * RequestParam 1 : 사용자 입력값을 받아올 파라미터 Map, HashMapBinder클래스 역할을 수행한다.
 * RequestParam 2 : 첨부파일을 받아올 파라미터 MultipartFile - 첨부파일은 필수조건이 아니기 떄문에 required=falsle속성을 추가해 없더라도 지나가게 처리한다.
 * 타입이 String이므로 return이 필요하고 응답처리는 response객체를 주입받아 사용하지 않는다.
+
+## Spring : JAVA 환경설정
+
+### ViewResolver : xml 
+
+```markup
+<!-- viewResolver추가 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+```
+
+* 기존의 spring-servlet.xml에서 작성한 viewResolver 환경설정
+
+### ViewResolver : JAVA
+
+```java
+package config;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+@EnableWebMvc
+public class MvcConfig implements WebMvcConfigurer {
+	Logger logger = LoggerFactory.getLogger(MvcConfig.class);
+	
+	public void configureViewResolvers(ViewResolverRegistry registry) {//ViewResolverRegistry는 spring-web에서 제공한다. 디펜던시작성하기
+		logger.info("configureViewResolvers 메서드 호출 성공");
+		
+		registry.jsp("/WEB-INF/views/", ".jsp");
+	}
+}
+```
+
+* 자바에서 어노테이션을 활용해 작성한 환결설정 클래스
+* 20번 registry.jsp\( \) - 첫번째 파라미터 : "perfix"\(접두어\) - 두번째 파라미터 : "suffix"\(접미어\)
+
+```markup
+    <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+```
+
+* pom.xml에 spring-web dependency추가
+* 자바버전 1.6 -&gt; 1.8
+* org.springframework-version 3.1.1 -&gt; 5.1.16
+
+![](../../.gitbook/assets/1%20%28106%29.png)
+
+* 위 pom.xml의 수정을 마쳐야 spring-web에서 제공하는 ViewResolverResgistry을 사용할 수 있게된다.
+* registry.jsp를 지원하는 것을 볼 수 있다.
+
+### Package\(component\) Scan : xml
+
+```markup
+<!-- spring_context.jar에서 제공하는 속성, 스캔할 베이스 패키지를 지정한다. -->
+	<context:component-scan base-package="com.di"/>
+	<context:component-scan base-package="com.board"/>
+```
+
+### Package\(component\) Scan : JAVA
+
+```java
+package config;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration //환경설정 클래스 선언
+@ComponentScan(basePackages= {"config"})//자바로 사용할 패키지 컴포넌트 스캔 지정하기.
+@ComponentScan(basePackages= {"web.android"})//스캔할 베이스 패키지 추가
+public class RootConfig {
+
+}
+```
+
+### web.xml 수정
+
+```markup
+<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextClass</param-name>
+			<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+		</init-param> 
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				config.RootConfig
+				config.MvcConfig
+			</param-value>
+		</init-param> 
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+```
+
+* 환경설정 어노테이션을 읽을 수 있도록 5-8번에서 클래스를 읽게한다.
+* 9-15번에서 @Configuration 어노테이션으로 작성한 환경설정 자바 파일을 등록해 읽게 한다.
+
+```markup
+<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+```
+
+* 위는 자동으로 생성되었던 기존코드
+* 자동생성된 servlet-context.xml을 환경설정파일로 읽고 있다.
+
+![](../../.gitbook/assets/.png%20%2851%29.png)
+
+* servlet-context.xml
+* 기존에 자동으로 생성되는 ViewResolver를 정의한 xml문서를 web.xml에서 지정 해제 하고 작성한 java문서를 매칭시켜야 한다.
 
