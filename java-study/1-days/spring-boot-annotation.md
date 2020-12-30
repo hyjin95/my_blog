@@ -13,14 +13,18 @@
 
 * 의존성 주입시 작성
 * setter메서드의 역할을 수행
+* required 속성 - true : default, 주입 객체가 없는 경우 예외가 발생한다. - false : 주입 객체가 없어도 예외가 발생하지 않는다.
 
 ### @RequestParam
 
-* 
+* 메서드의 파라미터에 작성된다.
+* 사용자가 화면에 입력한 값, ajax에서 넘어오는 값을 자동으로 받아준다.
+
 ### @RequestParam : 첨부파일처리용
 
-* MultipartFile
+* MultipartFile 
 * MultipartFile\[ \]
+* 파일을 받을 수 있는 클래스
 
 ### ModelMap
 
