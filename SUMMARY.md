@@ -320,6 +320,6 @@
     * [Spring : 첨부파일 업로드](java-study/1-days/untitled-51/spring.md)
     * [Spring : 첨부파일 다운로드](java-study/1-days/untitled-51/spring-1.md)
     * [Android Studio & Spring : 로그인 처리](java-study/1-days/untitled-51/android-studio-and-spring.md)
-  * [Untitled](java-study/1-days/untitled-52.md)
+  * [94 Days -](java-study/1-days/untitled-52.md)
   * [Untitled](java-study/1-days/untitled-50.md)
 
