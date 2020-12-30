@@ -18,7 +18,7 @@
 ### @RequestParam
 
 * 메서드의 파라미터에 작성된다.
-* 사용자가 화면에 입력한 값, ajax에서 넘어오는 값을 자동으로 받아준다.
+* 사용자가 화면에 입력한 값, ajax에서 넘어오는 값을 자동으로 받아준다. 파라미터는 지역변수이므로 NullPointerException이 발생해야하지만 ApplicationContextm BeanFactory 클래스들이 객체를 주입해준다. spring-core.jar
 
 ### @RequestParam : 첨부파일처리용
 
