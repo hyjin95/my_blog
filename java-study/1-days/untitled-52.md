@@ -143,7 +143,7 @@ public class MvcConfig implements WebMvcConfigurer {
 * 자바버전 1.6 -&gt; 1.8
 * org.springframework-version 3.1.1 -&gt; 5.1.16
 
-![](../../.gitbook/assets/1%20%28106%29.png)
+![](../../.gitbook/assets/1%20%28107%29.png)
 
 * 위 pom.xml의 수정을 마쳐야 spring-web에서 제공하는 ViewResolverResgistry을 사용할 수 있게된다.
 * registry.jsp를 지원하는 것을 볼 수 있다.
@@ -223,4 +223,41 @@ public class RootConfig {
 
 * servlet-context.xml
 * 기존에 자동으로 생성되는 ViewResolver를 정의한 xml문서를 web.xml에서 지정 해제 하고 작성한 java문서를 매칭시켜야 한다.
+
+### 환경설정 Test 
+
+* Java파일이 제대로 설정, 등록이 완료되었는지 확인해보자
+
+![](../../.gitbook/assets/1%20%28106%29.png)
+
+* TestController를 생성하고 WEB-INF &gt; views에 test.jsp를 만들었다.
+
+```java
+package web.android;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class TestController {
+	Logger logger = LoggerFactory.getLogger(TestController.class);
+	
+	@RequestMapping(value="/test.ko", method=RequestMethod.GET)
+	public String test() {
+		logger.info("test 메서드 호출 성공");
+		return "test";
+	}
+}
+```
+
+* TestController 코드
+* 어노테이션 @Controller를 작성해 컨트롤러로 등록한다.
+* @RequestMapping 어노테이션을 메서드에 작성해 url-pattern을 등록한다. - value속성으로 인터셉트할 url-pattern지정 - method속성으로 GET방식을 받아오게 지정
+
+![](../../.gitbook/assets/2%20%2880%29.png)
+
+* url : /step3/test.jo로 요청하면 test.jsp가 보여지는것을 확인할 수 있다.
 
