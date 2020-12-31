@@ -89,16 +89,24 @@ spring.mvc.view.suffix=.jsp
 
 ### Activity Life Cycle
 
+![](../../../.gitbook/assets/2%20%2882%29.png)
+
 * onCreate\( \) -&gt; onStart\( \) -&gt; onResume\( \) -&gt; onPause\( \) -&gt; onStop\( \) -&gt; onDestory\( \)
 * 안드로이드가 새로운 Activity를 생성했다.
 
   onCreate\( \) -&gt; onStart\( \) -&gt; onResume\( \)
 
 * 사용자가 뒤로가기를 눌러 해당 Activity를 종료했다. -&gt; onPause\( \) -&gt; onStop\( \) -&gt; onDestory\( \)
+* 모든 함수는 콜백 메서드로서 시스템레벨에서 알아서 호출한다.
+* 일시 멈춤 상태 - 전화가 왔거나 동영상 재생을 중지하거나 한 상태
+
+### Activity Life Cycle Method
+
+* onCreate\( \) - Activity의 설정작업이 실행된다.
+* onStart\( \), onResume\( \) - onCreate\( \)의 실행이 완료되면 바로 같이 호출된다. - onResume\( \)메서드가 호출된 이후 부터 실행상태이며 일시정지, 정지이전까지는 상태를 유지한다.
 * onResume\( \) - 이 단계에서 해당 Activity는 화면에 보이면서 동작하고 있다.
 * onPause\( \) - 이 함수를 만나 일시정지 상태가 되면 Activity는 화면에 일부가 보이면서 다른 Activity가 Focus된다. - 해당 Activity는 모든 상태를 유지하지만 시스템의 메모리가 낮은 상태가 되면 제거될 수 있다.
 * onStop\( \) - 이 함수를 만나면 Activity는 정지 상태로 화면에 전혀 보이지 않는다. - 하지만 상태와 정보를 유지하는데 시스템이 메모리가 부족해지만 바로 제거된다.
-* 모든 함수는 콜백 메서드로서 시스템레벨에서 알아서 호출한다.
 
 ### onCreate\( \)
 
