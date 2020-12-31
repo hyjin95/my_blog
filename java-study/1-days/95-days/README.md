@@ -87,6 +87,48 @@ spring.mvc.view.suffix=.jsp
 * 파라미터로 부모클래스의 상태정보를 받아온다.
 * 4번에서 부모의 라이프 사이클 메서드를 호출한다. 메서드 오버라이딩을 사용하고, 부모의 생성자를 호출하거나 멤버변수를 초기화할때 반드시 필요하다.
 
+### Activity Life Cycle
+
+* onCreate\( \) -&gt; onStart\( \) -&gt; onResume\( \) -&gt; onPause\( \) -&gt; onStop\( \) -&gt; onDestory\( \)
+* 안드로이드가 새로운 Activity를 생성했다.
+
+  onCreate\( \) -&gt; onStart\( \) -&gt; onResume\( \)
+
+* 사용자가 뒤로가기를 눌러 해당 Activity를 종료했다. -&gt; onPause\( \) -&gt; onStop\( \) -&gt; onDestory\( \)
+* onResume\( \) - 이 단계에서 해당 Activity는 화면에 보이면서 동작하고 있다.
+* onPause\( \) - 이 함수를 만나 일시정지 상태가 되면 Activity는 화면에 일부가 보이면서 다른 Activity가 Focus된다. - 해당 Activity는 모든 상태를 유지하지만 시스템의 메모리가 낮은 상태가 되면 제거될 수 있다.
+* onStop\( \) - 이 함수를 만나면 Activity는 정지 상태로 화면에 전혀 보이지 않는다. - 하지만 상태와 정보를 유지하는데 시스템이 메모리가 부족해지만 바로 제거된다.
+* 모든 함수는 콜백 메서드로서 시스템레벨에서 알아서 호출한다.
+
+### onCreate\( \)
+
+```java
+ @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        //부모클래스 메서드 호출, 메서드 오버라이딩, 부모 생성자 호출, 멤버변수 초기화 등을 하기 위함
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //설정 작업 = layout안에 있는 화면 컴포넌트에 대한 리소스 정보를 담는다.
+        //해당 액티비티의 설정작업을 하는 영역
+        btn_search = findViewById(R.id.btn_search);
+        tv_json    = findViewById(R.id.tv_json);
+        tv_movie   = findViewById(R.id.tv_movie);
+        tv_data    = findViewById(R.id.tv_data);
+        btn_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendRequest();
+            }
+        });
+        //getApplicationContext함수는 Activity안의 Fragment인클루드에서 사용할 때
+        //부모액티비티를 접근하는 경우 반드시 필요한 메서드이다.
+        if(AppHelper.requestQueue != null) {
+            AppHelper.requestQueue = Volley.newRequestQueue(getApplicationContext());
+        }
+    }//////////////////////////end of oncreate
+
+```
+
 ## Android Atudio: JSON
 
 ### 학습목표
