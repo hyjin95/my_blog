@@ -19,7 +19,7 @@ description: 2020.12.31 - 95일차
 
 ### jar객체 주입
 
-* Maven - dependency
+* Maven - dependency - pom.xml 파일로 관리한다.   JVM 자바 가상머신, Maven-version 등을 관리한다. - Maven Repositoty를 사용한다.
 * gradle - dependency
 * WEB-INF &gt; lib 에 직접 배포, Build Path에서 라이브러리 등록
 
