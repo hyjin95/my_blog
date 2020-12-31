@@ -2,7 +2,7 @@
 description: 2020.12.31 - 95일차
 ---
 
-# 95 Days -
+# 95 Days - Spring환경설정, jar-jar, AndroidStudio:Activity생애주기, 메서드정리, Volley, super.onCreate, JSON
 
 ### 사용 프로그램
 
@@ -177,7 +177,5 @@ spring.mvc.view.suffix=.jsp
 
 * GSON 라이브러리를 추가해 JSON형태의 데이터를 처리할 수 있도록 한다.
 
-### 
-
-
+후기 : 영하 14도 실환가요...하지만 나는 별관에 나와서 공부를 했다!
 

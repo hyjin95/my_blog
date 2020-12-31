@@ -323,7 +323,7 @@
     * [Spring : 첨부파일 다운로드](java-study/1-days/untitled-51/spring-1.md)
     * [Android Studio & Spring : 로그인 처리](java-study/1-days/untitled-51/android-studio-and-spring.md)
   * [94 Days - Spring:환경설정\(xml,propertiex,java\), JAVA로 환경설정하기, Test하기](java-study/1-days/untitled-52.md)
-  * [95 Days -](java-study/1-days/95-days/README.md)
+  * [95 Days - Spring환경설정, jar-jar, AndroidStudio:Activity생애주기, 메서드정리, Volley, super.onCreate, JSON](java-study/1-days/95-days/README.md)
     * [Android Studio : JSON 가져오기](java-study/1-days/95-days/android-studio-json.md)
     * [Android Studio : Volley](java-study/1-days/95-days/android-studio-volley.md)
   * [Untitled](java-study/1-days/untitled-50.md)
