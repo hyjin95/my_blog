@@ -17,6 +17,12 @@ description: 2020.12.31 - 95일차
 * spring-context.jar를 프로젝트에 배포해 ApplicationContext.java 객체주입을 받는다.
 * ApplicationContext가 동작하려면 스프링 엔진 spring-core.jar가 있어야만 한다. 서로 의존관계에 있는 jar파일이다.
 
+### jar객체 주입
+
+* Maven - dependency
+* gradle - dependency
+* WEB-INF &gt; lib 에 직접 배포, Build Path에서 라이브러리 등록
+
 ### 1. xml
 
 ```markup

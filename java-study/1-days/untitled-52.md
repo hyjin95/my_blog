@@ -2,7 +2,7 @@
 description: 2020.12.30 - 94일차
 ---
 
-# 94 Days - Spring:환경설정\(xml,propertiex,java\), JAVA로 환경설정하기
+# 94 Days - Spring:환경설정\(xml,propertiex,java\), JAVA로 환경설정하기, Test하기
 
 ### 사용 프로그램
 
