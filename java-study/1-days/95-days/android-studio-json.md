@@ -149,3 +149,136 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
+### AppHelper
+
+```java
+package com.example.volleyjson69;
+
+import com.android.volley.RequestQueue;
+
+public class AppHelper {
+    public static RequestQueue requestQueue = null;
+}
+```
+
+### MovieList
+
+```java
+package com.example.volleyjson69;
+
+public class MovieList {
+    MovieListResult boxOfficeResult = null;
+}
+```
+
+### MovieListResult
+
+```java
+package com.example.volleyjson69;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MovieListResult {
+    //android에서 가져다 사용해야하므로 private를 사용하지 않는다.
+    String boxofficeType = null;
+    String showRange     = null;
+    String yearWeekTime  = null;
+    List<MovieVO> dailyBoxOfficeList = new ArrayList<>();
+    List<MovieVO> weeklyBoxOfficeList = new ArrayList<>();
+}
+```
+
+### MovieVO
+
+```java
+package com.example.volleyjson69;
+
+public class MovieVO {
+    private String rnum          ="";
+    private String rank          ="";
+    private String rankInten     ="";
+    private String rankOldAndNew ="";
+    private String movieCd       ="";
+    private String movieNm       ="";
+    private String openDt        ="";
+    private String salesAmt      ="";
+    private String salesShare    ="";
+    private String salesInten    ="";
+    private String salesChange   ="";
+    private String salesAcc      ="";
+    private String audiCnt       ="";
+    private String audiInten     ="";
+    private String audiChange    ="";
+    private String audiAcc       ="";
+    private String scrnCnt       ="";
+    private String showCnt       ="";
+
+    public String getRnum() {
+        return rnum;
+    }
+
+    public void setRnum(String rnum) {
+        this.rnum = rnum;
+    }
+}
+```
+
+* Getter Setter코드는 길어서 생략
+
+## XML
+
+### activity\_main.xml
+
+```markup
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="조회"/>
+
+        <TextView
+            android:id="@+id/tv_json"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="json포맷"/>
+        <TextView
+            android:id="@+id/tv_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="movie정보"/>
+
+    <ScrollView
+        android:background="@color/purple_200"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="요청 결과 출력"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+```
+
+## 결과 : 애뮬레이터
+
+![](../../../.gitbook/assets/3%20%2858%29.png)
+
+![](../../../.gitbook/assets/4%20%2841%29.png)
+

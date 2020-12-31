@@ -151,6 +151,8 @@ spring.mvc.view.suffix=.jsp
 * 이벤트 등의 요청이 발생했을때  Request객체가 RequestQueue에 추가되고 RequestQueue가 알아서 Thread생성 - 서버에 요청 - 응답 까지 전달해준다.
 * 받아온 응답은 RequestQueue에서 Request에 등록된 ResponseListener로 응답을 전달해준다. Thread는 물론 Handler로 필요가 없는것이다.
 
+{% page-ref page="android-studio-volley.md" %}
+
 ## Android Atudio: JSON
 
 ### 학습목표
