@@ -98,17 +98,26 @@ spring.mvc.view.suffix=.jsp
 
 * 사용자가 뒤로가기를 눌러 해당 Activity를 종료했다. -&gt; onPause\( \) -&gt; onStop\( \) -&gt; onDestory\( \)
 * 모든 함수는 콜백 메서드로서 시스템레벨에서 알아서 호출한다.
-* 일시 멈춤 상태 - 전화가 왔거나 동영상 재생을 중지하거나 한 상태
+* 일시 멈춤 상태 - 전화가 왔거나 동영상 재생을 중지하거나 한 상태 - 일시정지 상태에서 실행상태로 돌아오게되면 onResume\( \) 메서드가 호출되고 Resumed 상태가 된다.
+* 정지 상태 - 다른 Activity를 실행한 상태. onStop\( \)메서드가 호출된다. - 다시 실행되면 onRestrat\( \)메서드가 호출되고 Create가 아닌 Started상태로 돌아간다.
+* 자원\(리소스\) 관리. - onStop상태에서는 사용중인 리소스를 반납하는 것이 일반적이다.   반납이 이루어지지 않은 상태에서 메모리 소모가 계속 발생한다면 예고없이 Activity를 제거한다. - onStop에서 onRestart\( \)메서드가 호출될 때에는 반납했던 리소스들을 다시 생성한다. 
 
 ### Activity Life Cycle Method
 
-* onCreate\( \) - Activity의 설정작업이 실행된다.
+* onCreate\( \) - Activity의 설정작업이 실행된다. - Activity가 생성되면서 호출되어 이 메서드 안에서 멤버변수의 초기화가 이뤄져야 한다. - 멤버변수에 대한 접근은 setContentView\( \)메서드로 xml지정이 된  이후에 가능하다.
 * onStart\( \), onResume\( \) - onCreate\( \)의 실행이 완료되면 바로 같이 호출된다. - onResume\( \)메서드가 호출된 이후 부터 실행상태이며 일시정지, 정지이전까지는 상태를 유지한다.
 * onResume\( \) - 이 단계에서 해당 Activity는 화면에 보이면서 동작하고 있다.
-* onPause\( \) - 이 함수를 만나 일시정지 상태가 되면 Activity는 화면에 일부가 보이면서 다른 Activity가 Focus된다. - 해당 Activity는 모든 상태를 유지하지만 시스템의 메모리가 낮은 상태가 되면 제거될 수 있다.
+* onPause\( \) - 이 함수를 만나 일시정지 상태가 되면 Activity는 화면에 일부가 보이면서 다른 Activity가 Focus된다. - 해당 Activity는 모든 상태를 유지하지만 시스템의 메모리가 낮은 상태가 되면 제거될 수 있다. - 따라서 onPause\( \)메서드에서는 상태를 저장한다.
 * onStop\( \) - 이 함수를 만나면 Activity는 정지 상태로 화면에 전혀 보이지 않는다. - 하지만 상태와 정보를 유지하는데 시스템이 메모리가 부족해지만 바로 제거된다.
 
-### onCreate\( \)
+### onSaveInstanceState
+
+* Activity의 생성시에 파라미터로 상태값을 받는다.
+* 화면을 돌리는 등 디바이스의 설정값이 바뀌어 화면을 다시 그려줘야 하는 상황이 오면 onPause\( \) -&gt; onDestroy\( \) -&gt; onCreate\( \) -&gt; onStart\( \) -&gt; onResume\( \) 순서대로 메서드가 호출되어 모든 변수들이 초기화된다.
+* 변수를 수정한 상태로 초기화가 되어버리면 작업이 날아가버리게된다. 그래서 존재하는것이 onSavaInstanceState 콜백 메서드이다.
+* onDestroy\( \)메서드의 호출 전에 실행되며 함수의 인자에 key-value로 데이터를 담을 수 있다. 이 데이터들이 Activity생성시에 호출되는 onCreate\( \)메서드의 파라미터로 들어가는 것이다.
+
+### onCreate\( \) : super
 
 ```java
  @Override
@@ -120,22 +129,27 @@ spring.mvc.view.suffix=.jsp
         //해당 액티비티의 설정작업을 하는 영역
         btn_search = findViewById(R.id.btn_search);
         tv_json    = findViewById(R.id.tv_json);
-        tv_movie   = findViewById(R.id.tv_movie);
-        tv_data    = findViewById(R.id.tv_data);
         btn_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sendRequest();
             }
         });
-        //getApplicationContext함수는 Activity안의 Fragment인클루드에서 사용할 때
-        //부모액티비티를 접근하는 경우 반드시 필요한 메서드이다.
-        if(AppHelper.requestQueue != null) {
-            AppHelper.requestQueue = Volley.newRequestQueue(getApplicationContext());
-        }
     }//////////////////////////end of oncreate
 
 ```
+
+* 2번 : 메서드의 파라미터로 상태값을 받아온다.
+* 4번의 super는 상위\(부모\)클래스를 의미한다. 상위클래스의 onCreate\( \)메서드를 오버라이드 한다는 의미의 코드로 onCreate\( \)를 작성하면 빈 Activity를 생성하고, super.onCreate\( \)로 작성하면 액티비티를 만드는 기본적인 코드를 실행한다.
+* 그 이후에 5번 setcontentView메서드로 화면으로 그릴 xml을 지정한다.
+* xml이 지정된 후에 값들을 초기화한다. layout에 존재하는 컴포넌트들을 리소스로 초기화하고 Activity의 설정작업이 이루어진다.
+
+### Volley
+
+* 앱에서 서버와 Http통신을 할때 HttpURLConnection을 사용하면 요청과 응답이 가능하지만 직접 Thread를 구현해야한다는 단점이 존재한다.
+* 이를 보완하기위해 안드로이드에서 제공하는 라이브러리가 Volley이다.
+* 이벤트 등의 요청이 발생했을때  Request객체가 RequestQueue에 추가되고 RequestQueue가 알아서 Thread생성 - 서버에 요청 - 응답 까지 전달해준다.
+* 받아온 응답은 RequestQueue에서 Request에 등록된 ResponseListener로 응답을 전달해준다. Thread는 물론 Handler로 필요가 없는것이다.
 
 ## Android Atudio: JSON
 
