@@ -94,6 +94,13 @@ spring.mvc.view.suffix=.jsp
 * Volley API를 활용해 Thread를 사용하지 않고 JSON형식의 데이터를 처리한다.
 * 현대에 공공정보를 JSON의 형태로 제공하는 곳이 많으므로 JSON 데이터의 가공, 처리 능력을 키운다.
 
+### JSON
+
+![](../../.gitbook/assets/2%20%2881%29.png)
+
+* JSON의 형태가 단일 배열의 형태로 있는 경우도 있지만 위와 같이 배열안에 배열이 또 존재하는 경우도 많이 존재한다.
+* 위와 같은 List안에 List가 존재하는 JSON을 출력해보자.
+
 ### JSON : dependency
 
 ![](../../.gitbook/assets/1%20%28108%29.png)
@@ -103,13 +110,6 @@ spring.mvc.view.suffix=.jsp
 ![](../../.gitbook/assets/gson%20%282%29.png)
 
 * GSON 라이브러리를 추가해 JSON형태의 데이터를 처리할 수 있도록 한다.
-
-### JSON
-
-![](../../.gitbook/assets/2%20%2881%29.png)
-
-* JSON의 형태가 단일 배열의 형태로 있는 경우도 있지만 위와 같이 배열안에 배열이 또 존재하는 경우도 많이 존재한다.
-* 위와 같은 
 
 ### 
 
