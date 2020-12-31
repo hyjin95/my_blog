@@ -96,18 +96,18 @@ spring.mvc.view.suffix=.jsp
 
 ### JSON
 
-![](../../.gitbook/assets/2%20%2881%29.png)
+![](../../../.gitbook/assets/2%20%2881%29.png)
 
 * JSON의 형태가 단일 배열의 형태로 있는 경우도 있지만 위와 같이 배열안에 배열이 또 존재하는 경우도 많이 존재한다.
 * 위와 같은 List안에 List가 존재하는 JSON을 출력해보자.
 
 ### JSON : dependency
 
-![](../../.gitbook/assets/1%20%28108%29.png)
+![](../../../.gitbook/assets/1%20%28108%29.png)
 
 * Volley API를 라이브러리에 추가해 Thread없이 통신처리를 허용한다.
 
-![](../../.gitbook/assets/gson%20%282%29.png)
+![](../../../.gitbook/assets/gson%20%282%29.png)
 
 * GSON 라이브러리를 추가해 JSON형태의 데이터를 처리할 수 있도록 한다.
 
