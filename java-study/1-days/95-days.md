@@ -10,7 +10,7 @@ description: 2020.12.31 - 95일차
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
-## Spring  : context 환경설정
+## Spring  : 환경설정
 
 ### jar-jar의 의존관계
 
