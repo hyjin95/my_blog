@@ -138,12 +138,17 @@ description: 2020.01.04 - 96일차
 ### Handler
 
 * post\( \) : 즉시실행
-* postDelay\(스레드, long\) : 미래시점에서 실행
+* postDelay\(스레드, long\) : 지연, 미래시점에서 실행
 * 작업스레드에서 사용자 인터페이스에 접근, 갱신할때 사용된다.
+* handler.postDelayed\(Runnable, long\);
 
 ### Thread
 
 * 메인 액티비티가 메인 스레드이므로 이 내부에서는 UI를 조작할 수 있다. 작동 시간의 지연, 중지, 와 같은 시간 제어의 작업도 스레드 개념안에서 이루어진다.
+* 동시 접속자가 있어 경합이 발생할 때 필요하다. 대기실에서 부터 순서를 정해준다.
+* 자바에서는 - extends Thread - implemnets Runnable - thread를 생성해 thread.start\( \)하면 run\( \)메서드가 호출된다.   start를 호출하더라도 순서에 따라 진행된다.
+
+{% page-ref page="30-days/" %}
 
 ### StopWatchBefore.apk
 
