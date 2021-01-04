@@ -55,14 +55,10 @@ description: 2020.01.04 - 96일차
 		String pathSave= "C:\\workspace_java\\demo\\src\\main\\webapp\\pds";
 		String filename = null;
 		String fullPath= null;
-		//프레임워크가 반복되는 코드를 줄여 줄 수 있다.
-		//예) 사용자가 입력한 값 전달하기(req.getParameter(여기만 다름),반복되는 코드 -> @RequestParam)
-		//예) select의 경우 유지처리하기(jsp와  java사이의 forward(페이지이동)
-		//	 Spring 제공클래스 Model, ModelMap지원 : ui를 지원하기위한 api
-		//	 POJO : req.setAttribute("이름",값);
-		//	 자료구조 = 컬렉션프레임워크 = 파이썬(리스트(자바 list), 튜플(상수 리스트:순서는 있지만 변경불가), 딕셔너리(자바 map), 집합{자바 set) : 자료의 도식화
-		//	 json(web,안드로이드0, 넥사크로(xml그리고 js변환해줌) - DataSet지원, Post방식이 기본
-		//파라미터의 값이 null일경우를 고려하면 required옵션을 false로 두어야 한다. not null이 아닌 값인 경우
+```
+
+* 
+```java
 		if(bs_file != null) {//첨부파일이 있다면
 			filename = bs_file.getOriginalFilename();//본래의 파일 명을 가져온다.
 			fullPath = pathSave+"\\"+filename;//물리적 경로와 파일 명을 연결해 위치정보를 다시 저장한다.
