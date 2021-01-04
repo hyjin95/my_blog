@@ -25,7 +25,7 @@ description: 2020.01.04 - 96일차
 * 메서드의 파라미터 타입의 리턴 값에 따라 달라진다.
 * void - req, res에 의존적 - webapp &gt; board
 * ModelAndView - req, res에 의존적 - WEB-INF &gt; views &gt; board
-* String  - req, res가 없어도 된다. - return "redirect:xxx.jsp \| xxx.do"   return "forward:xxx.jsp" - forward는 서블릿 요청이 불가
+* String  - req, res가 없어도 된다. - webapp &gt; board  **** return "redirect:xxx.jsp \| xxx.do"   return "forward:xxx.jsp" - forward는 서블릿 요청이 불가 - WEB-INF &gt; views &gt; board   return "board/boardList"와 같이 하면 ModelAndView와 동일한 위치
 
 ### 
 
