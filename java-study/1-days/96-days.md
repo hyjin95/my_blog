@@ -10,6 +10,15 @@ description: 2020.01.04 - 96일차
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
+## 필기
+
+### UI
+
+* ECMAScript - ES5, ES6
+* React.js
+* Vue.js - JS기반, 뷰에 대한 템플릿을 지원한다. - 네이버 카페처럼 2단, 3단 구성의 템플릿으로 빠르고 쉽게 그릴 수 있도록한다.
+* TypeScript  - JS를 포함하는 스크립트 - JS코드를 지원하면서 JS에서는 제공하지 않던 타입 체크라던지 객체 지원이 다양하다.
+
 ## Spring
 
 ### 웹과 앱
