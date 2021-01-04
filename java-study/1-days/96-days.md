@@ -128,6 +128,20 @@ description: 2020.01.04 - 96일차
 
 {% page-ref page="95-days/" %}
 
+### 작업일지
+
+1. 프로젝트 등록
+2. AndroidX버전으로 conversion
+3. 화면정의 - 시간정보 출력 : TextView - 시작, 정지, 리셋 : Button
+
+### StopWatchBefore.apk
+
+* Life Cycle 반영 이전
+
+### StopWatchBefore.apk
+
+* Life Cycle을 고려한 APK
+
 ### 
 
 ### 
