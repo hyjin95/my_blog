@@ -138,7 +138,7 @@ description: 2020.01.04 - 96일차
 
 * Life Cycle 반영 이전
 
-### StopWatchBefore.apk
+### StopWatchAfter.apk
 
 * Life Cycle을 고려한 APK
 
