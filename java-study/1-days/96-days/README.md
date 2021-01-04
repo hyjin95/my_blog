@@ -126,7 +126,7 @@ description: 2020.01.04 - 96일차
 * 액티비티 시작 - 액티비티 실행 - 액티비티 종료
 * onCreate\( \) - onStart\( \) - onResume\( \) - onPause\( \) - onStop\( \) - onDestroy\( \)
 
-{% page-ref page="95-days/" %}
+{% page-ref page="../95-days/" %}
 
 ### 작업일지
 
@@ -137,10 +137,14 @@ description: 2020.01.04 - 96일차
 
 ### Handler
 
+```java
+final Handler handler = new Handler();
+handler.postDelayed(Runnable, long);
+```
+
 * post\( \) : 즉시실행
 * postDelay\(스레드, long\) : 지연, 미래시점에서 실행
 * 작업스레드에서 사용자 인터페이스에 접근, 갱신할때 사용된다.
-* handler.postDelayed\(Runnable, long\);
 
 ### Thread
 
@@ -148,7 +152,7 @@ description: 2020.01.04 - 96일차
 * 동시 접속자가 있어 경합이 발생할 때 필요하다. 대기실에서 부터 순서를 정해준다.
 * 자바에서는 - extends Thread - implemnets Runnable - thread를 생성해 thread.start\( \)하면 run\( \)메서드가 호출된다.   start를 호출하더라도 순서에 따라 진행된다.
 
-{% page-ref page="30-days/" %}
+{% page-ref page="../30-days/" %}
 
 ### StopWatchBefore.apk
 
@@ -157,8 +161,4 @@ description: 2020.01.04 - 96일차
 ### StopWatchAfter.apk
 
 * Life Cycle을 고려한 APK
-
-### 
-
-### 
 
