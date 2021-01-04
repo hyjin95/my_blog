@@ -326,8 +326,8 @@
   * [95 Days - Spring환경설정, jar-jar, AndroidStudio:Activity생애주기, 메서드정리, Volley, super.onCreate, JSON](java-study/1-days/95-days/README.md)
     * [Android Studio : JSON 가져오기](java-study/1-days/95-days/android-studio-json.md)
     * [Android Studio : Volley](java-study/1-days/95-days/android-studio-volley.md)
-  * [96 Days -](java-study/1-days/96-days/README.md)
-    * [Android Studio](java-study/1-days/96-days/android-studio.md)
+  * [96 Days - spring-boot:dataSet, 첨부파일코드, required, Android:Activity 라이프사이클, Handler, Thread, StopWatch](java-study/1-days/96-days/README.md)
+    * [Android Studio : StopWatchBefore](java-study/1-days/96-days/android-studio.md)
   * [Untitled](java-study/1-days/untitled-50/README.md)
     * [Untitled](java-study/1-days/untitled-50/untitled.md)
 

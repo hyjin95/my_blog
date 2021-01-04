@@ -2,7 +2,7 @@
 description: 2020.01.04 - 96일차
 ---
 
-# 96 Days -
+# 96 Days - spring-boot:dataSet, 첨부파일코드, required, Android:Activity 라이프사이클, Handler, Thread, StopWatch
 
 ### 사용 프로그램
 
@@ -19,7 +19,12 @@ description: 2020.01.04 - 96일차
 * Vue.js - JS기반, 뷰에 대한 템플릿을 지원한다. - 네이버 카페처럼 2단, 3단 구성의 템플릿으로 빠르고 쉽게 그릴 수 있도록한다.
 * TypeScript  - JS를 포함하는 스크립트 - JS코드를 지원하면서 JS에서는 제공하지 않던 타입 체크라던지 객체 지원이 다양하다.
 
-## Spring
+### 자료구조
+
+* 자료구조 = 컬렉션프레임워크 = 파이썬\(리스트\(자바 list\), 튜플\(상수 리스트:순서는 있지만 변경불가\), 딕셔너리\(자바 map\), 집합{자바 set\) : 자료의 도식화
+* json\(web,안드로이드0, 넥사크로\(xml그리고 js변환해줌\) - DataSet지원, Post방식이 기본 
+
+## Spring-boot
 
 ### 웹과 앱
 
@@ -41,6 +46,12 @@ description: 2020.01.04 - 96일차
 * JS기반  - JSON으로 처리한다.    json으로 만들어진 jsonBoardList.jsp페이지가 필요하지만,    UI에서 직접 값을 꺼내 담는 자바 코드는 필요없다. - 부트스트랩, 시멘틱UI, easyUI, 안드로이드 - 특별한 경우를 제외하면 오라클과 연동하지 않으므로 noSQL제품과 연동하는 경우가 많다.
 * XMl기반 - 조회결과가 xml문서\(text/xml\)로 내보내져 xmlBoardList.jsp페이지가 필요하다. - 넥사크로, 플렉스, 트러스트폼, .... - 넥사크로에서 조회된 결과는 넥사크로에서 제공하는 DataSet객체에 담아야 한다.   화면을 지원하는 Grid와 DataSet을 매핑해 UI에 출력, 완성한다. - 넥사크로에서는 xmlBoardList.jsp를 만드는 대신 직접 자바단에서 xml포맷을 생성해주는 API를 지원한다.
 
+### FrameWork의 사용 의의
+
+* 반복되는 코드를 줄일 수 있다.
+* 예시1 \) 사용자 입력값 받아오기 - spring-boot 프레임워크의 @RequestParam 어노테이션을 사용한다. - 기존 반복 코드\(POJO\) : request.getParameter\(여기만 다르다\)
+* 예시2\) select -&gt; forward로 데이터 유지 - Spring 제공클래스 Model, ModelMap지원 : ui를 지원하기위한 api - POJO : request.setAttribute\("이름",값\); 
+
 ### Spring-boot 첨부파일 코드분석 : Controller
 
 ```java
@@ -57,13 +68,19 @@ description: 2020.01.04 - 96일차
 		String fullPath= null;
 ```
 
-* 
+* 파라미터의 값이 null일경우를 고려하면 required옵션을 false로 두어야 한다. not null이 아닌 값인 경우
+
 ```java
 		if(bs_file != null) {//첨부파일이 있다면
 			filename = bs_file.getOriginalFilename();//본래의 파일 명을 가져온다.
 			fullPath = pathSave+"\\"+filename;//물리적 경로와 파일 명을 연결해 위치정보를 다시 저장한다.
 		}
-		
+```
+
+* 첨부 파일이 존재한다면 본래 파일명을 가져와 물리적 경로와 합쳐 위치정보를 작성한다.
+* 파일 이름을 담는다.
+
+```java
 		//첨부파일 이름은?
 		if(bs_file != null && bs_file.isEmpty()) {
 			try {
@@ -92,6 +109,11 @@ description: 2020.01.04 - 96일차
 				e.printStackTrace();
 			}
 		}
+```
+
+* 첨부파일의 이름을 통해 파일 객체화 한다. 객체화 한 물리적 위치에 저장된 파일을 읽어옴으로서 크기를 읽을 수 있다.
+
+```java
 		logger.info("bs_file : "+bs_file+", pMap"+pMap.get("bs_file"));
 		result = boardLogic.boardInsert(pMap);//첨부파일 여부는 logic에서 처리한다.
 		if(result==1) {
@@ -110,6 +132,11 @@ description: 2020.01.04 - 96일차
 * 액티비티가 생성되고 파괴될 때 어떤 일이 발생하는가
 * 액티비티의 상태를 저장하고 복원하는 방법
 * 라이프사이클을 이해하면 인터셉트\(끼어들기\)하는 부분을 포착해 작업을 할 수 있다. 관여할 수 있게 된다.
+* 단말기를 회전시키는 순간 Activity설정이 초기화되어 버린다.
+
+  진행중이던 저장되지 않은 정보들이 사라져 버리고 다시 초기값을 불러오게 된다.
+
+  진행중이던 정보를 유지하려면 lifeCycle을 활용해야한다. onStop\( \)메서드가 호출되어 정지되었을때 어떻게 정보를 유지할 것인가
 
 ### 하이브리드 앱
 
@@ -145,6 +172,10 @@ handler.postDelayed(Runnable, long);
 ### Thread
 
 * 메인 액티비티가 메인 스레드이므로 이 내부에서는 UI를 조작할 수 있다. 작동 시간의 지연, 중지, 와 같은 시간 제어의 작업도 스레드 개념안에서 이루어진다.
+* Activity에 연결되어 있는 xml에 접근하는데는 내부적으로 별도의 스레드 없이도 접근이 가능하지만
+
+  다른 Activity에서 다른 Activity의 xml에 접근할때에는 스레드를 구현해야한다.
+
 * 동시 접속자가 있어 경합이 발생할 때 필요하다. 대기실에서 부터 순서를 정해준다.
 * 자바에서는 - extends Thread - implemnets Runnable - thread를 생성해 thread.start\( \)하면 run\( \)메서드가 호출된다.   start를 호출하더라도 순서에 따라 진행된다.
 
@@ -154,7 +185,11 @@ handler.postDelayed(Runnable, long);
 
 * Life Cycle 반영 이전
 
+{% page-ref page="android-studio.md" %}
+
 ### StopWatchAfter.apk
 
 * Life Cycle을 고려한 APK
+
+후기 : 으으ㅡ으으 추워ㅓ
 
