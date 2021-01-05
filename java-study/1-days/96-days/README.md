@@ -2,7 +2,7 @@
 description: 2021.01.04 - 96일차
 ---
 
-# 96 Days - spring-boot:dataSet, 첨부파일코드, required, Android:Activity 라이프사이클, Handler, Thread, StopWatch
+# 96 Days - spring:삭제, dataSet, 첨부파일코드, required, Android:Activity생명주기, Handler, Thread, StopWatch
 
 ### 사용 프로그램
 
