@@ -80,13 +80,20 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 
 ## Android Studio 
 
+### 필기
+
+* xxx.APK로 묶인 것을 네이티브 앱이라하고 네이티브 앱은 스토어에 올릴 수 있으며 디바이스에서 사용할 수 있다.
+* 시작Activity는 MainActivity로서 Activity클래스가 아닌 하위 클래스인 AppCompatActivity를 상속받아 사용해야 더 많은 기능을 활용 할 수 있다.
+
 ### StopWatchAfter.apk
 
 * 현재상태를 저장하기 위해 메서드를 오버라이드 한다. - onSaveInstanceState\(Bundle savedInstanceState\) - 메서드 안에서 반드시 부모\(상위\)메서드를 불러와야 한다.
 * Bundle, 번들에는 여러 종류의 데이터를 한 객체로 저장가능하다.
-* 저장해야 되는 정보 - 시간
-* Life Cycle을 고려한 APK
+* 저장해야 되는 정보 - 시간\(int\) - 실행 상태\(boolean\) - 이전 실행 상태\(boolean\)
+* Life Cycle을 고려한 APK onStop함수가 호출되기 직전에 onSaveInstanceState\( \)메서드를 호출한다.
 * 화면이 회전되더라도 \(액티비티가 새로 시작되더라도\) 상태가 유지된다.
+
+### 1. 상태값을 저장하는 메서드
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -106,6 +113,52 @@ public class MainActivity extends AppCompatActivity {
         savedIntanceState.putBoolean("running", running);//두번째 저장값
         savedIntanceState.putBoolean("wasRunning", wasRunning);//세번째 저장값
         //여기까지 이전상태를 저장하는 코드 추가 
+    }
+```
+
+* Bundle객체에는 여러 타입의 데이터를 담을 수 있다.
+* 13번에서 상위메서드롤 불러온다.
+* 14-16번에서 번들에 데이터를 저장한다.
+
+### 2. 상태값을 변경하는 메서드
+
+```java
+    //상태값을 변경할 수 있는 함수 --2
+    public void onStop() {//액티비티가 멈췄을때
+        super.onStop();
+        //현재 상태를 저장
+        wasRunning = running;
+        //현재 상태는 초기화
+        running = false;
+    }
+
+    //디바이스가 누웠을때 새로 액티비티가 생성되는데 화면에 출력되기전에 이전 상태 정보를 가져와 계속 1씩 증가하여 출력을 내보내야 한다.
+    //이때 0에 1을 더하는 것이 아닌 이전 상태를 저장해둔 값에 +1 해야 할 것이다.
+    //running상태는 최초에 false이므로 초기화를 해주게되면 처음상태로 상태정보를 바꿀 수 있다. -라이프사이클 컨트롤하기
+
+    public void onStart() {//액티비티가 시작될때--2
+        super.onStart();
+        if(wasRunning) {//과거 상태정보가 true였다면
+            running = true;//상태정보 변환
+        }
+    }
+```
+
+### 3. 상태값 불러오기
+
+```java
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //시간정보를 출력하기 전에 Bundle에서 값을 얻어와 액티비티 상태값을 복원해야한다.--3
+        if(savedInstanceState != null) {//null일때만 초기화해주면 됨
+            seconds = savedInstanceState.getInt("seconds");
+            running = savedInstanceState.getBoolean("running");
+            wasRunning = savedInstanceState.getBoolean("wasRunning");
+        }
+        //새로운 액티비티가 생성되었으므로 다시 호출된다.
+        runTimer();
     }
 ```
 
