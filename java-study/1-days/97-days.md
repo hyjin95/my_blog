@@ -12,9 +12,57 @@ description: 2021.01.05 - 97일차
 
 ## Spring-boot  : 조회수
 
-### Model
+### 게시판 : boardList.jsp
+
+```javascript
+<a href="javascript:boardDetail('<%=rmap.get("BM_NO")%>')">
+    <%=rmap.get("BM_TITLE") %>
+</a>
+```
+
+* 제목을 클릭하면 상세보기페이지로 이동하고, 이때 조회수가 카운트 되어야 한다.
+
+### Controller
+
+```java
+@RequestMapping("/boardDetail.sp3")
+	public String boardDetail(Model mod, @RequestParam Map<String,Object> pMap) {
+		logger.info("controller - boardDetail호출성공 : "+ pMap.get("gubun"));
+		List<Map<String,Object>> boardList = null;
+		pMap.put("gubun","detail");
+		boardList = boardLogic.boardList(pMap);
+		mod.addAttribute("boardDetail", boardList);
+		return "board/read";
+	}
+```
 
 * Controller에서 메서드를 추가할 필요없이 상세보기 페이지로 넘어갈때 조회수가 올라가기만 하면된다.
+
+### Logic
+
+```java
+public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
+		logger.info("Logic - boardList 호출 성공 : "+pMap);
+		List<Map<String,Object>> bList = null;
+		bList = sqlBoardMDao.boardMList(pMap);
+		String gubun ="";
+		if(pMap.get("gubun")!=null) {
+			gubun = pMap.get("gubun").toString();
+		}
+		//조건을 두가지로 한다. : 조건검색의 결과가 하나의 로우인 경우도 포함되므로 gubun키값을 추가했따.
+		if(bList.size()==1 && "detail".equals(gubun)) {
+			int bm_no = 0;
+			//null체크
+			if(pMap.get("bm_no")!=null) {
+				bm_no = Integer.parseInt(pMap.get("bm_no").toString());
+			}
+			sqlBoardMDao.hitCount(bm_no);
+		}
+		return bList;
+	}
+```
+
+* Controller에서 boardList\(전체조회\)업무도, boardDetail\(상세보기\)업무도 Logic의 같은 boardList를 활용하고 있기 때문에 두 업무를 
 
 ### SQL
 
@@ -30,5 +78,9 @@ description: 2021.01.05 - 97일차
 
 ## Spring-boot : 삭제
 
-## Spring-boot : 수정
+## Android Studio 
+
+### StopWatchAfter.apk
+
+* Life Cycle을 고려한 APK
 
