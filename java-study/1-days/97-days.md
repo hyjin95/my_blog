@@ -103,23 +103,9 @@ public class MainActivity extends AppCompatActivity {
     
     //과거의 정보를 담을 변수
     private boolean wasRunning = false;
-
-    //세로에서 가로로 화면 전환시 현재 상태를 저장 -> 재사용
-    //번들에는 여러 종류의 데이터를 한 객체로 저장이 가능하다.
-    @Override
-    public void onSaveInstanceState(Bundle savedIntanceState) {
-        super.onSaveInstanceState(savedIntanceState);
-        savedIntanceState.putInt("seconds", seconds);//첫번째 저장값
-        savedIntanceState.putBoolean("running", running);//두번째 저장값
-        savedIntanceState.putBoolean("wasRunning", wasRunning);//세번째 저장값
-        //여기까지 이전상태를 저장하는 코드 추가 
-    }
 ```
 
-* Bundle객체에는 여러 타입의 데이터를 담을 수 있다.
-* 13번에서 상위메서드롤 불러온다.
-* 14-16번에서 번들에 데이터를 저장한다.
-* 이 메서드는 onStop메서드 이전에 호출된다.
+* 변수 선언
 
 ### 2. 상태값 변경 onStop\( \)
 
@@ -135,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 * 정지 메서드가 호출되었을때 실행상태정보가 사라지기 전에  현재 상태정보를 저장하고 현재 상태를 초기화 한다.
-* 액티비티가 시작되어 onStrat메서드가 호출될때 저장되어있던 정보를 반영한다. 처음 시작하는 경우에는 필요없는 동작이므로 if문을 활용한다.
 
 ### 3. 상태값 저장하기
 
@@ -151,6 +136,11 @@ public class MainActivity extends AppCompatActivity {
         //여기까지 이전상태를 저장하는 코드 추가 
     }
 ```
+
+* Bundle객체에는 여러 타입의 데이터를 담을 수 있다.
+* 5번에서 상위메서드롤 불러온다.
+* 6-8번에서 번들에 데이터를 저장한다.
+* 이 메서드는 onDestroy\( \)가 호출되기 이전에 호출된다.
 
 ### 4. 상태값 불러오기
 
@@ -170,6 +160,8 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
+* 번들이 not null이라면 이전 정보가 저장되어있다는 뜻이므로 not null인 경우에만 변수들을 번들에서 가져와 초기화 시켜준다.
+
 ### 5. 상태값 변경 on Start\( \)
 
 ```java
@@ -180,4 +172,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 ```
+
+* 액티비티가 시작되어 onStrat메서드가 호출될때 저장되어있던 정보를 반영한다. 처음 시작하는 경우에는 필요없는 동작이므로 if문을 활용한다.
+* onStart\( \)메서드는 onCreate\( \)가 호출된 뒤에 호출된다.
+* 번들에서 가져온 wasRunning이 실행중 상태였다면 현재 상태를 실행중으로 변경한다.
 
