@@ -91,7 +91,7 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 * Bundle, 번들에는 여러 종류의 데이터를 한 객체로 저장가능하다.
 * 저장해야 되는 정보 - 시간\(int\) - 실행 상태\(boolean\) - 이전 실행 상태\(boolean\)
 * Life Cycle을 고려한 APK onStop함수가 호출되기 직전에 onSaveInstanceState\( \)메서드를 호출한다.
-* 화면이 회전되더라도 \(액티비티가 새로 시작되더라도\) 상태가 유지된다.
+* 화면이 회전되더라도 \(액티비티가 새로 시작되더라도\) 상태가 유지된다. 디바이스가 누웠을 때 액티비티가 새로 생성되는데 화면에 출력되기 전에 이전 상태 정보를 가져와 +1된 정보를 내보내야 한다. 0이 아닌 이전 상태에 +1하는 것
 
 ### 1. 상태값을 저장하는 메서드
 
@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
 * Bundle객체에는 여러 타입의 데이터를 담을 수 있다.
 * 13번에서 상위메서드롤 불러온다.
 * 14-16번에서 번들에 데이터를 저장한다.
+* 이 메서드는 onStop메서드 이전에 호출된다.
 
 ### 2. 상태값을 변경하는 메서드
 
@@ -132,10 +133,6 @@ public class MainActivity extends AppCompatActivity {
         running = false;
     }
 
-    //디바이스가 누웠을때 새로 액티비티가 생성되는데 화면에 출력되기전에 이전 상태 정보를 가져와 계속 1씩 증가하여 출력을 내보내야 한다.
-    //이때 0에 1을 더하는 것이 아닌 이전 상태를 저장해둔 값에 +1 해야 할 것이다.
-    //running상태는 최초에 false이므로 초기화를 해주게되면 처음상태로 상태정보를 바꿀 수 있다. -라이프사이클 컨트롤하기
-
     public void onStart() {//액티비티가 시작될때--2
         super.onStart();
         if(wasRunning) {//과거 상태정보가 true였다면
@@ -143,6 +140,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 ```
+
+* 정지 메서드가 호출되었을때 실행상태정보가 사라지기 전에  현재 상태정보를 저장하고 현재 상태를 초기화 한다.
+* 액티비티가 시작되어 onStrat메서드가 호출될때 저장되어있던 정보를 반영한다. 처음 시작하는 경우에는 필요없는 동작이므로 if문을 활용한다.
 
 ### 3. 상태값 불러오기
 
