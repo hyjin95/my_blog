@@ -83,6 +83,29 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 ### StopWatchAfter.apk
 
 * 현재상태를 저장하기 위해 메서드를 오버라이드 한다. - onSaveInstanceState\(Bundle savedInstanceState\) - 메서드 안에서 반드시 부모\(상위\)메서드를 불러와야 한다.
+* Bundle, 번들에는 여러 종류의 데이터를 한 객체로 저장가능하다.
 * 저장해야 되는 정보 - 시간
 * Life Cycle을 고려한 APK
+* 화면이 회전되더라도 \(액티비티가 새로 시작되더라도\) 상태가 유지된다.
+
+```java
+public class MainActivity extends AppCompatActivity {
+
+    private int seconds = 0;
+    private boolean running = false;//실행상태
+    
+    //과거의 정보를 담을 변수
+    private boolean wasRunning = false;
+
+    //세로에서 가로로 화면 전환시 현재 상태를 저장 -> 재사용
+    //번들에는 여러 종류의 데이터를 한 객체로 저장이 가능하다.
+    @Override
+    public void onSaveInstanceState(Bundle savedIntanceState) {
+        super.onSaveInstanceState(savedIntanceState);
+        savedIntanceState.putInt("seconds", seconds);//첫번째 저장값
+        savedIntanceState.putBoolean("running", running);//두번째 저장값
+        savedIntanceState.putBoolean("wasRunning", wasRunning);//세번째 저장값
+        //여기까지 이전상태를 저장하는 코드 추가 
+    }
+```
 
