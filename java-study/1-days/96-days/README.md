@@ -1,5 +1,5 @@
 ---
-description: 2020.01.04 - 96일차
+description: 2021.01.04 - 96일차
 ---
 
 # 96 Days - spring-boot:dataSet, 첨부파일코드, required, Android:Activity 라이프사이클, Handler, Thread, StopWatch
