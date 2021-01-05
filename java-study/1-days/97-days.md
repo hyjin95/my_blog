@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
 * 14-16번에서 번들에 데이터를 저장한다.
 * 이 메서드는 onStop메서드 이전에 호출된다.
 
-### 2. 상태값을 변경하는 메서드
+### 2. 상태값 변경 onStop\( \)
 
 ```java
     //상태값을 변경할 수 있는 함수 --2
@@ -131,13 +131,6 @@ public class MainActivity extends AppCompatActivity {
         wasRunning = running;
         //현재 상태는 초기화
         running = false;
-    }
-
-    public void onStart() {//액티비티가 시작될때--2
-        super.onStart();
-        if(wasRunning) {//과거 상태정보가 true였다면
-            running = true;//상태정보 변환
-        }
     }
 ```
 
@@ -159,6 +152,17 @@ public class MainActivity extends AppCompatActivity {
         }
         //새로운 액티비티가 생성되었으므로 다시 호출된다.
         runTimer();
+    }
+```
+
+### 4. 상태값 변경 on Start\( \)
+
+```java
+    public void onStart() {//액티비티가 시작될때--2
+        super.onStart();
+        if(wasRunning) {//과거 상태정보가 true였다면
+            running = true;//상태정보 변환
+        }
     }
 ```
 
