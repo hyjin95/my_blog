@@ -177,6 +177,19 @@ public class MainActivity extends AppCompatActivity {
 * onStart\( \)메서드는 onCreate\( \)가 호출된 뒤에 호출된다.
 * 번들에서 가져온 wasRunning이 실행중 상태였다면 현재 상태를 실행중으로 변경한다.
 
+## Android Studio : v7 네비게이션 드로워
+
+### Fragment와 Activity의 차이
+
+| Activity | Fragment |
+| :---: | :---: |
+| activity\_main.xml | fragment\_inbox.xml |
+| onCreate\(Bundle\) | onCreateView\(레이아웃, 뷰그룹, Bundle\) |
+| setcontextView\(activity\_main.xml\) | inflater.inflate\(레이아웃, 뷰그룹, Bundle\) |
+
+* Activity는 activity\_main.xml을 onCreate\(Bundle\)메서드 안에서 그린다.
+* Fragment는 fragment\_inbox.xml을 onCreateView\(레이아웃, 뷰그룹, Bundle\)메서드 안에서 그린다.
+
 ### Android 네비게이션 드로워
 
 * androidX가 아닌 기존의 android v7버전에서 제공하는 네비게이션 드로워 기능 구현하기
