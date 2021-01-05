@@ -76,8 +76,6 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 
 * board.xml에 쿼리문 작성
 
-## Spring-boot : 삭제
-
 ## Android Studio : 상태유지
 
 ### 필기
@@ -193,4 +191,6 @@ public class MainActivity extends AppCompatActivity {
 ### Android 네비게이션 드로워
 
 * androidX가 아닌 기존의 android v7버전에서 제공하는 네비게이션 드로워 기능 구현하기
+
+후기 : 
 
