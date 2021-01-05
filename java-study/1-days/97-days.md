@@ -177,3 +177,7 @@ public class MainActivity extends AppCompatActivity {
 * onStart\( \)메서드는 onCreate\( \)가 호출된 뒤에 호출된다.
 * 번들에서 가져온 wasRunning이 실행중 상태였다면 현재 상태를 실행중으로 변경한다.
 
+### Android 네비게이션 드로워
+
+* androidX가 아닌 기존의 android v7버전에서 제공하는 네비게이션 드로워 기능 구현하기
+
