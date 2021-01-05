@@ -82,5 +82,7 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 
 ### StopWatchAfter.apk
 
+* 현재상태를 저장하기 위해 메서드를 오버라이드 한다. - onSaveInstanceState\(Bundle savedInstanceState\) - 메서드 안에서 반드시 부모\(상위\)메서드를 불러와야 한다.
+* 저장해야 되는 정보 - 시간
 * Life Cycle을 고려한 APK
 

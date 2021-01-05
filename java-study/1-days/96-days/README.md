@@ -184,6 +184,7 @@ handler.postDelayed(Runnable, long);
 ### StopWatchBefore.apk
 
 * Life Cycle 반영 이전
+* 화면을 회전시키면 모두 초기화 되어버린다.
 
 {% page-ref page="android-studio.md" %}
 
