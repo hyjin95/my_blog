@@ -78,7 +78,7 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 
 ## Spring-boot : 삭제
 
-## Android Studio 
+## Android Studio : 상태유지
 
 ### 필기
 
