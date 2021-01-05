@@ -93,7 +93,7 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 * Life Cycle을 고려한 APK onStop함수가 호출되기 직전에 onSaveInstanceState\( \)메서드를 호출한다.
 * 화면이 회전되더라도 \(액티비티가 새로 시작되더라도\) 상태가 유지된다. 디바이스가 누웠을 때 액티비티가 새로 생성되는데 화면에 출력되기 전에 이전 상태 정보를 가져와 +1된 정보를 내보내야 한다. 0이 아닌 이전 상태에 +1하는 것
 
-### 1. 상태값을 저장하는 메서드
+### 1. 멤버변수 선언
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -137,7 +137,22 @@ public class MainActivity extends AppCompatActivity {
 * 정지 메서드가 호출되었을때 실행상태정보가 사라지기 전에  현재 상태정보를 저장하고 현재 상태를 초기화 한다.
 * 액티비티가 시작되어 onStrat메서드가 호출될때 저장되어있던 정보를 반영한다. 처음 시작하는 경우에는 필요없는 동작이므로 if문을 활용한다.
 
-### 3. 상태값 불러오기
+### 3. 상태값 저장하기
+
+```java
+    //세로에서 가로로 화면 전환시 현재 상태를 저장 -> 재사용
+    //번들에는 여러 종류의 데이터를 한 객체로 저장이 가능하다.
+    @Override
+    public void onSaveInstanceState(Bundle savedIntanceState) {
+        super.onSaveInstanceState(savedIntanceState);
+        savedIntanceState.putInt("seconds", seconds);//첫번째 저장값
+        savedIntanceState.putBoolean("running", running);//두번째 저장값
+        savedIntanceState.putBoolean("wasRunning", wasRunning);//세번째 저장값
+        //여기까지 이전상태를 저장하는 코드 추가 
+    }
+```
+
+### 4. 상태값 불러오기
 
 ```java
 @Override
@@ -155,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
-### 4. 상태값 변경 on Start\( \)
+### 5. 상태값 변경 on Start\( \)
 
 ```java
     public void onStart() {//액티비티가 시작될때--2
