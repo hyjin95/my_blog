@@ -329,8 +329,8 @@
   * [96 Days - spring:삭제, dataSet, 첨부파일코드, required, Android:Activity생명주기, Handler, Thread, StopWatch](java-study/1-days/96-days/README.md)
     * [Spring : 게시글 삭제](java-study/1-days/96-days/spring.md)
     * [Android Studio : StopWatchBefore](java-study/1-days/96-days/android-studio.md)
-  * [97 Days -](java-study/1-days/97-days.md)
-  * [98Days -](java-study/1-days/untitled-54.md)
+  * [97 Days - Spring-boot:조회수, AndroidStudio : saveInstaceState, Bundle, 상태 유지, 화면 회전](java-study/1-days/97-days.md)
+  * [98Days - Spring:PageNavigation, PageBar, 총 게시글 SQL, 페이지 당 게시글 제한](java-study/1-days/untitled-54.md)
   * [Untitled](java-study/1-days/untitled-50/README.md)
     * [Untitled](java-study/1-days/untitled-50/untitled.md)
 

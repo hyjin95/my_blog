@@ -2,7 +2,7 @@
 description: 2021.01.05 - 97일차
 ---
 
-# 97 Days -
+# 97 Days - Spring-boot:조회수, AndroidStudio : saveInstaceState, Bundle, 상태 유지, 화면 회전
 
 ### 사용 프로그램
 

@@ -2,7 +2,7 @@
 description: 2021.01.06 - 98일차
 ---
 
-# 98Days -
+# 98Days - Spring:PageNavigation, PageBar, 총 게시글 SQL, 페이지 당 게시글 제한
 
 ### 사용 프로그램
 
@@ -240,4 +240,6 @@ public class PageBar {
 ```
 
 * 전체 data row수를 구하는 쿼리문
+
+후기 : 머리아프다 이제 3주밖에 남지않은 시간 ㅠㅠㅠㅠ
 
