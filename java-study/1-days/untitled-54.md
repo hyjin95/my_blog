@@ -30,11 +30,45 @@ description: 2021.01.06 - 98일차
 
 ## Spring : pageNavigation
 
+### PageBar
+
+![](../../.gitbook/assets/page.png)
+
 ### boardList.jsp
 
+```markup
+ <table id="dg_board" title="글목록" style="width:950px;height:20px">
+    <tr>
+    <td align="center" >
+       <font size="5">1 2 3 4 5 6 7 8 9 10</font>
+	</td>
+	</tr>
+</table>
+```
+
+* 기존의 상수값을 활용한 페이지 네이션 형태
+
+```java
+ <table id="dg_board" title="글목록" style="width:950px;height:20px">
+    <tr>
+    <td align="center" >
+    <font size="5">
+	 <%
+	 	String pagePath = "boardList.sp3";
+	 	//생성자 파라미터 int numPerPage(한 페이지의 data수), int totalRecord(전체 로우 수), int nowPage(바라보고있는 현재 페이지), String pagePath(어떤 페이지에 적용할건지의 경로)
+	 	PageBar pb = new PageBar(numPerPage, totalRecord, nowPage, pagePath);
+	 	out.print(pb.getPageBar());
+	 %>
+	</font>
+	</td>
+	</tr>
+</table>
+```
+
+* PageBar 클래스를 활용한 페이지네이션
 * JAVA코드이므로 jsp화면에서는 스크립 틀릿을 활용한다.
 
-### pagebar 코드분
+### pagebar 코드분석
 
 ```java
 package com.util;
@@ -97,6 +131,7 @@ public class PageBar {
 	}
 ```
 
+* PageBar클래스의 생성자로서 PageBar생성에 필요한 값을들 초기화한다.
 * 17 / 2 = 8.5 data가 17건 일때 한페이지에 표시 데이터가이 2개라면 17 / 2는 8.5이므로 페이지는 9페이지가 필요하다.
 * 17 /3 = 5.xxx 페이지의 데이터 건을 3개로 한다면 페이지는 6페이지가 필요하다.
 
@@ -111,7 +146,7 @@ public class PageBar {
 			//pagePath뒤에 이동할 페이지 번호를 붙여서 호출 해야함.
 			if(nowBlock > 0 ) {                                    //(1-1)*2+(2-1)=1
 				pageLink.append("<a href='"+pagePath+"?nowPage="+((nowBlock-1)*pagePerBlock+(pagePerBlock-1))+"'>");
-				pageLink.append("<img border=0 src='/mvc/images/bu_a.gif'>");
+				pageLink.append("<img border=0 src='/images/left.gif'>");
 				pageLink.append("</a>&nbsp;&nbsp;");
 			}
 			for(int i=0;i<pagePerBlock;i++) {
@@ -132,13 +167,15 @@ public class PageBar {
 			//a태그 활용하여 링크 처리하기
 			if(totalBlock > nowBlock+1) {
 				pageLink.append("&nbsp;&nbsp;<a href='"+pagePath+"?nowPage="+((nowBlock+1)*pagePerBlock)+"'>");
-				pageLink.append("<img border=0 src='/mvc/images/bu_b.gif'>");
+				pageLink.append("<img border=0 src='/images/right.gif'>");
 				pageLink.append("</a>");	
 			}
 		}
 		pagination = pageLink.toString();
 	}
 ```
+
+* PageBar를 만드는 setter 메서드
 
 ```java
 	//getter메소드 선언
@@ -148,6 +185,9 @@ public class PageBar {
 	}
 }
 ```
+
+* 화면에서 사용될때 호출되는 getter 메서드
+* 3번에서 PageBar초기화
 
 ### totalRecord SQL
 
