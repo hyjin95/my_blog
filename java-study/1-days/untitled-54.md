@@ -36,6 +36,46 @@ description: 2021.01.06 - 98일차
 
 ### boardList.jsp
 
+```java
+<%@ page import ="com.util.PageBar" %>
+<%
+	//pagebar 변수
+	int numPerPage = 3;//한 페이지에는 5개의 데이터를 보여줄 것이다.
+	//int totalRecord = 0;//orcle에서 계산 하는 쿼리문을 작성한다.
+	int nowPage = 0;
+	if(request.getParameter("nowPage") != null) {
+		nowPage = Integer.parseInt(request.getParameter("nowPage"));
+	}
+	
+	int tot = 0;//=totalRecord
+	List<Map<String,Object>> boardList = null;
+	boardList = (List<Map<String,Object>>)request.getAttribute("boardList");
+	if(boardList != null){
+		tot = boardList.size();
+	}
+%>
+```
+
+* 상단에 PageBar페이지 import와 페이지네이션 구성에 필요한 변수들을 선언한다.
+
+```java
+<!---================== 조회결과가 있는 경우 ======================= -->    	
+    <%
+    	}else if(tot > 0){
+    		int num = tot-(numPerPage*nowPage);
+    		//for(int i=0;i<tot;i++){
+    		for(int i=nowPage*numPerPage;i<(nowPage*numPerPage)+numPerPage;i++){
+    			Map<String,Object> rmap = boardList.get(i);    		
+    			if(i==tot-1) {//0부터이므로 -1
+    				//마지막 페이지에서는 더이상 진행되면 안되므로 break문을 사용해야한다.
+    				break;
+    			}
+    %>
+```
+
+* 게시글을 뽑아 출력하기 전에 지정한 PagePerBlock 만큼만 한페이지에 보이도록 for문을 구성한다.
+* 게시글 번호는 1부터이지만 i의 초기값이 0이므로 마지막 페이지는 i -1을 작성해야한다. 마지막페이지에서 break를 작성하지 않으면 500번 에러가 발생한다.
+
 ```markup
  <table id="dg_board" title="글목록" style="width:950px;height:20px">
     <tr>
