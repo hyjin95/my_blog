@@ -2,7 +2,7 @@
 description: 2020.01.07 - 99일차
 ---
 
-# 99 Days -
+# 99 Days - VSCode 환경설정, Node.js, React
 
 ### 사용 프로그램
 
@@ -89,11 +89,13 @@ description: 2020.01.07 - 99일차
 ![](../../.gitbook/assets/spring-in-9.png)
 
 * pom.xml에 tomcat dependency 추가
-* src &gt; main &gt; webapp 폴더 추가 &gt; WEB-INF 폴더 추
+* src &gt; main &gt; webapp 폴더 추가 &gt; WEB-INF 폴더 추가
 
-### React
+### React 설
 
-## Nexacro : 환경설정, spring-boot설정
+### React 코
 
-## Python
+* xxx.jtx
+
+후기 : 환경설정 어려운 것...
 
