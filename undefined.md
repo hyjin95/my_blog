@@ -62,6 +62,7 @@ description: 'Update : 2021.01.09'
 
 * 담당 : PM, UI-Logic-DB-Server 지원, 발표 및 계획표, 정의서 작성
 * 기능\(진행도\) DB 설계 및 test서버 구현\(완료\) POJO : 게시판 솔루션 구현\(90%\) POJO : 사이트 이벤트 및 기능 구현\(70%\) web ui \(90%\) android ui \(10%\) spring-boot이관 \(0%\)
+* 설계 화면은 JSP로 구현합니다. 게시판 화면이 많아 게시판 솔루션을 제작합니다. 솔루션에서 결과값을 boolean으로 받아와야하고 변수활용을 위해 부분적으로 JDBC를 활용합니다. DB는 기본적으로는 Oracle을 실시간 채팅 서비스는 Firebase를 활용해봅니다. UI는 bootStrap과 Html, JS, CSS를 활용합니다. POJO로 먼저 진행한뒤 spring-boot로 이관작업을 진행합니다. POJO에서는 xml을 mybatis sql 문서에만 사용합니다. spring-boot에서는 xml에서 설정, DI, Ioc를 관리하고 어노테이션을 활용합니다.
 
 {% page-ref page="java-study/1-days/bobeat.md" %}
 
