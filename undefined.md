@@ -55,7 +55,7 @@ description: 'Update : 2021.01.09'
 | tool | Eclipse, Android Studio, ER-win, Toad |
 | Server | Tomcat |
 | DB | Oracle, Firebase |
-| Language | Java, Html, Css, Javascript, SQL |
+| Language | Java, Html, Css, Javascript, SQL, JSP |
 | UI솔루션 | bootStrap |
 | Framework | Spring, MyBaits |
 | Library | ajax, jquery, JDBC |
