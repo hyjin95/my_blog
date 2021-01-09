@@ -2,6 +2,7 @@
 
 * [Initial page](README.md)
 * [기술소개서](undefined.md)
+* [자기소개서](undefined-1.md)
 
 ## 국비 교육 <a id="java-study"></a>
 

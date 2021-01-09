@@ -446,6 +446,7 @@ public class SqlSolutionDao {
 ```
 
 * 상황에 따라 Mybatis를 활용하기도, 기존의 JDBC를 사용하기도 합니다. 컬럼명에 변수가 들어가야할때 JDBC를 활용합니다. Create Table의 결과값을 boolean으로 받기위해 JDBC를 활용합니다.
+* 솔루션에서 게시판 만들기 클릭시 - 해당 게시판 Table생성 - 해당 게시판 Table에 사용된 Sequence생성 - 게시판 정보\(사용자 입력 값\) 솔루션 테이블에 Insert 을 처리 합니다.
 
 ### DBConnectionMgr
 
