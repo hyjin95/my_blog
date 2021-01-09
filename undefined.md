@@ -10,13 +10,13 @@ description: 'Update : 2021.01.09'
 * 010-8163-7777
 * devyoungj@naver.com
 
-## Intro
+## 소개
 
 * 신입 개발자를 목표로 공부하고 있습니다.
 * 항상 배우고자 하는 위치에서 최선을 다하려 하고 있습니다.
 * 새로운 기술을 배우는데에 있어 적극적으로 공부하기위해 노력하고 있습니다.
 
-### Basic info
+### Git
 
 * Git-hub : [https://github.com/hyjin95](https://github.com/hyjin95)
 * Git-blog : [https://hyjin95.gitbook.io/my-blog/](https://hyjin95.gitbook.io/my-blog/)
