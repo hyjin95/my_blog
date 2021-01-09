@@ -118,7 +118,7 @@ public class CategoryActivity extends AppCompatActivity {
 }
 ```
 
-### c코드 : Drink.java -getter, setter
+### 코드 : Drink.java -getter, setter
 
 ```java
 package com.example.coffee69;

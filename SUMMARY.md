@@ -13,6 +13,7 @@
   * [단축키](java-study/1-days/undefined.md)
   * [오류](java-study/1-days/undefined-1.md)
   * [세미 프로젝트 - 영화예매](java-study/1-days/undefined-3.md)
+  * [파이널 프로젝트 - BoBeat](java-study/1-days/bobeat.md)
   * [Spring-boot : annotation](java-study/1-days/spring-boot-annotation/README.md)
     * [환경설정 annotation](java-study/1-days/spring-boot-annotation/annotation.md)
   * [1 Days - 설치 및 Java 자료형](java-study/1-days/1-days-java.md)
