@@ -29,9 +29,12 @@ description: 'Update : 2021.01.09'
 
 ### Semi Project
 
-* **Project 1** 세미프로젝트로 영화 예매 프로그램 만들기를 진행했습니다.
+* **Project 1**  
+  세미프로젝트로 영화 예매 프로그램 만들기를 진행했습니다.
 
-| 분 | 사용 |
+  학원 수업 18일차에 3주 진행한 영화예매 프로그램 구현입니다.
+
+| 분류 | 사용 |
 | :---: | :---: |
 | Language | JAVA |
 | DB | Oracle |
@@ -57,7 +60,7 @@ description: 'Update : 2021.01.09'
 | Framework | Spring, MyBaits |
 | Library | ajax, jquery, JDBC |
 
-* 담당 : PM, UI, Logic, DB, Server 지원, 발표 및 계획표, 정의서 작성
+* 담당 : PM, UI-Logic-DB-Server 지원, 발표 및 계획표, 정의서 작성
 * 기능\(진행도\) DB 설계 및 test서버 구현\(완료\) POJO : 게시판 솔루션 구현\(90%\) POJO : 사이트 이벤트 및 기능 구현\(70%\) web ui \(90%\) android ui \(10%\) spring-boot이관 \(0%\)
 
 {% page-ref page="java-study/1-days/bobeat.md" %}
