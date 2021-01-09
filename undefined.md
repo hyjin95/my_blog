@@ -16,6 +16,7 @@ description: 'Update : 2021.01.09'
 * 신입 개발자를 목표로 공부하고 있습니다.
 * 항상 배우고자 하는 위치에서 최선을 다하려 하고 있습니다.
 * 새로운 기술을 배우는데에 있어 적극적으로 공부하기위해 노력하고 있습니다.
+* 사회성과 프로젝트 추진력이 좋습니다.
 
 ### Git
 
@@ -57,6 +58,7 @@ description: 'Update : 2021.01.09'
 | Library | ajax, jquery, JDBC |
 
 * 담당 : PM, UI, Logic, DB, Server 지원, 발표 및 계획표, 정의서 작성
+* 기능\(진행도\) DB 설계 및 test서버 구현\(완료\) POJO : 게시판 솔루션 구현\(90%\) POJO : 사이트 이벤트 및 기능 구현\(70%\) web ui \(90%\) android ui \(10%\) spring-boot이관 \(0%\)
 
 {% page-ref page="java-study/1-days/bobeat.md" %}
 
