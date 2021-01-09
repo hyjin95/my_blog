@@ -4,8 +4,6 @@ description: 'Update : 2021.01.09'
 
 # 기술소개서
 
-## Infof
-
 ## Info
 
 * 한영진
@@ -61,28 +59,4 @@ description: 'Update : 2021.01.09'
 * 담당 : PM, UI, Logic, DB, Server 지원, 발표 및 계획표, 정의서 작성
 
 {% page-ref page="java-study/1-days/bobeat.md" %}
-
-## 기술지원
-
-### 언어
-
-* JAVA
-* HTML
-* CSS
-* JavaScript JQuery
-
-### Framework
-
-* Spring, Spring-boot 자바기반의 스프링 프레임워크를 활용했습니다. 기존 POJO방식과 annotation을 활용한 xml관리 방식 까지 학습하고 있습니다. 현재 진행중인 학원의 파이널 프로젝트도 스프링 프레임워크를 기반 웹&앱으로 진행하고 있습니다.
-
-### DB
-
-* Oracle  학원 수업에서 집중적으로 배운 DB로 MySQL을 주로 사용하였습니다.  기본적인 CRUD구문과 프로시저, 시퀀스, 스키마, 트리거, DML, DDL구문, 조인을 활용합니다.
-
-### IDE
-
-* Eclipse
-* Toad
-* Spring
-* Android Studio
 
