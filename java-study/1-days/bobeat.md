@@ -646,6 +646,18 @@ public class DBConnectionMgr {
 		INSERT INTO board_master(BOARD_NUM, BOARD_TYPE, BOARD_TITLE, BOARD_URL, BOARD_COLOR) 
     	    VALUES(#{seq_name},#{board_type},#{board_title},#{board_url},#{board_color})
 	</insert>
+	
+	<select id="totalRecord" resultType="int" parameterType="int" >
+		SELECT count(board_title) as totalRecord FROM BOARD_TITLE_CATEGORY WHERE board_title 
+	</select>
+	
+	<select id="commList" resultType="map" parameterType="String" >	
+		SELECT board_type FROM ${value} 
+	</select>
+	
+	<select id="categoryList" resultType="map" parameterType="int">
+		SELECT bm.board_title,bm.board_url FROM BOARD_MASTER bm , BOARD_TITLE_CATEGORY btc WHERE btc.board_title = bm.board_title GROUP BY bm.board_title,bm.board_url 
+	</select>
 
 </mapper>
 ```
