@@ -146,8 +146,11 @@ module.exports = {
 ![](../../.gitbook/assets/python.png)
 
 * Python 3.9 를 실행하면 위와 같은 CMD비슷한 화면에서 코드를 작성할 수 있다.
-* 
+* 코드를 작성 &gt; 실행시 컴파일 과정 없이 바로 실행되어 보여지는 것을 볼 수 있다.
+
 ### Anaconda3 다운로드
+
+![](../../.gitbook/assets/jupyter.png)
 
 * Jupyter NoteBook을 제공해 파이썬을 좀더 사용하기 쉽게 해준다.
 
