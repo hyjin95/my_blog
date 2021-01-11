@@ -42,9 +42,7 @@ description: 2021.01.11
 * File &gt; New &gt; Other... 
 * Spring Starter Project &gt; 이름지정, 배포 확장자 War &gt; Next
 * Spring Web, Spring Boot DevTools 체크 &gt; Finish
-* 프로젝트 파일에  node\_modules.zip package.json package-lock.json webpack.config.js 추
-
-#### 스프링 부트 추
+* 프로젝트 파일에  node\_modules.zip package.json package-lock.json webpack.config.js 추가
 
 ### 2. Visual Studio Code : MainPage.jsx
 
@@ -118,5 +116,13 @@ module.exports = {
 * 5-8번에서 jsx문서를 등록한다.
 * 11번에서 output\(변환되는\) path가 지정된다.
 * 13번에서 접두어 + 파일이름 + 접미어를 붙여 파일 경로를 완성한다.
-* 20-25번은 jsx를 만들 때 바벨라이브러리를 참조하는 구문이다. 
+* 20-25번은 jsx를 만들 때 바벨라이브러리를 참조하는 구문이다.
+
+### 3. 이클립스 : termenal 가동, 웹팩 실행
+
+![](../../.gitbook/assets/d%20%281%29.png)
+
+* 프로젝트 우클릭 &gt; Show in &gt; terminal
+* 입력 : node\_modules\.bin\webpack --watch -d
+* 위 이미지로 js문서로 변환된 것을 알 수 있다.
 
