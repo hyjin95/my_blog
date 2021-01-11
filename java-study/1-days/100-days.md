@@ -35,7 +35,7 @@ description: 2021.01.11
 * 리액트의 경우 xxx.jsx 문서를 xxx.js로 변환하는데 사용된다. js로 변환이 되어야 브라우저가 실행할 수 있다.
 * js는 표준 JS + TypeScript가 추가될 수 있다.
 
-## React.js + spring-boot 설정
+## React.js + spring-boot 환경설정
 
 ### 1. 이클립스 : React.js + spring-boot 설정
 
@@ -125,4 +125,13 @@ module.exports = {
 * 프로젝트 우클릭 &gt; Show in &gt; terminal
 * 입력 : node\_modules\.bin\webpack --watch -d
 * 위 이미지로 js문서로 변환된 것을 알 수 있다.
+
+## Python
+
+### 파이썬
+
+* main함수가 없다.
+* 컴파일 과정이 없다.
+* 코딩 후 바로 실행된다.
+* 파이썬을 설치하면 인터프리터도 함께 설치되어 브라우저가 역할을 함께 수행한다. 인터프리터는 파이썬을 실행하는 기술
 
