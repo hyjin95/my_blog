@@ -16,6 +16,10 @@ description: 2020.12.04 ~ 진행중
 
 {% file src="../../.gitbook/assets/.xlsx \(2\).xlsx" caption="화면정의서" %}
 
+### 2021.01.11 1차 중간발표
+
+{% file src="../../.gitbook/assets/1-.pptx" caption="1차 발표 PPT" %}
+
 ## Solution
 
 ### Servlet
