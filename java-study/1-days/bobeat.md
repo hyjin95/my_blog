@@ -6,7 +6,10 @@ description: 2020.12.04 ~ 진행중
 
 ## 설계
 
-### 의의
+### 담당
+
+* 게시판 솔루션 UI
+* 게시판 솔루션 Controller + Logic + Dao + MyBatis + JDBC + SQL 처리
 
 ### 공정표 및 업무 분담
 
@@ -276,15 +279,28 @@ public class SolutionLogic {
 		ssDao = new SqlSolutionDao();
 		int result = 0;//insert 결과
 		boolean result_b = true;//테이블 생성 결과
+		boolean result_f = true;//첨부파일테이블 생성 결과
 		boolean result_s = true;//시퀀스 생성 결과
-		
-		result_b = ssDao.createBoard(pMap);
-		if(false == result_b) {//테이블 생성 성공시			
-			result_s = ssDao.createSequence(pMap);
-			if(false == result_s) {//시퀀스 생성 성공시
-				result = ssDao.insertBoard(pMap);
+		boolean result_fs = true;//첨부파일 시퀀스 생성 결과
+		if("앨범형".equals(pMap.get("board_type").toString())) {//앨범형 게시판인 
+			result_b = ssDao.createBoard(pMap);
+			if(false == result_b) {//테이블 생성 성공시
+				result_f = ssDao.createFile(pMap);
+				result_fs = ssDao.createFileSequence(pMap);
+				result_s = ssDao.createSequence(pMap);
+				if(false == result_s&&false == result_f&&false == result_fs) {//시퀀스 생성 성공시
+					result = ssDao.insertBoard(pMap);
+				}
 			}
-		}		
+		}else {//게시글형 게시판인 
+			result_b = ssDao.createBoard(pMap);
+			if(false == result_b) {//테이블 생성 성공시			
+				result_s = ssDao.createSequence(pMap);
+				if(false == result_s) {//시퀀스 생성 성공시
+					result = ssDao.insertBoard(pMap);
+				}
+			}
+		}
 		return result;
 	}
 }
@@ -297,6 +313,20 @@ public class SolutionLogic {
 
 ```java
 package com.solution;
+
+import java.io.Reader;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.log4j.Logger;
+
+import com.util.DBConnectionMgr;
 
 public class SqlSolutionDao {
 	Logger logger = Logger.getLogger(SqlSolutionDao.class);
@@ -351,7 +381,7 @@ public class SqlSolutionDao {
 	
 	//JDBC 시퀀스 생성
 	public boolean createSequence(Map<String,Object> pMap) {
-		logger.info("createBoard 호출 성공");
+		logger.info("createSequence 호출 성공");
 		boolean result = true;
 				
 		dbMgr = DBConnectionMgr.getInstance();
@@ -374,18 +404,41 @@ public class SqlSolutionDao {
 		} 
 		return result;
 	}
+	
+	//JDBC 첨부파일 시퀀스 생성
+	public boolean createFileSequence(Map<String,Object> pMap) {
+		logger.info("createFileSequence 호출 성공");
+		boolean result = true;
+			
+		dbMgr = DBConnectionMgr.getInstance();
+		con = dbMgr.getConnection();
+		StringBuilder sql = new StringBuilder();
+			
+		String name = pMap.get("board_url").toString()+"_file";
+			
+		sql.append("CREATE SEQUENCE ");
+		sql.append(name);
+		sql.append("_seq");
+			
+		logger.info(sql.toString());
+		try {
+			pstmt = con.prepareStatement(sql.toString());
+			result = pstmt.execute();
+			logger.info(result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return result;
+	}
 
 	//JDBC 테이블 생성
 	public boolean createBoard(Map<String, Object> pMap) {
 		logger.info("createBoard 호출 성공");
 		boolean result = true;
-				
 		dbMgr = DBConnectionMgr.getInstance();
 		con = dbMgr.getConnection();
 		StringBuilder sql = new StringBuilder();
-		
 		String name = pMap.get("board_url").toString();
-		
 		sql.append("CREATE TABLE ");
 		sql.append(name);
 		sql.append(" (");
@@ -401,7 +454,39 @@ public class SqlSolutionDao {
 		sql.append(" ,post_hit number(35) default 0");
 		sql.append(" ,post_file_name varchar2(30)");
 		sql.append(" ,post_file_size number(37) default 0");
-		sql.append(" ,FOREIGN KEY (mem_id) REFERENCES bob_test.member_bob(mem_id))");
+		sql.append(" ,FOREIGN KEY (mem_id) REFERENCES bob.member_bob(mem_id))");
+		logger.info(sql.toString());
+		try {
+			pstmt = con.prepareStatement(sql.toString());
+			result = pstmt.execute();
+			logger.info(result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return result;
+	}
+	//JDBC 첨부파일테이블 생성
+	public boolean createFile(Map<String, Object> pMap) {
+		logger.info("createFile 호출 성공");
+		boolean result = true;
+		
+		dbMgr = DBConnectionMgr.getInstance();
+		con = dbMgr.getConnection();
+		StringBuilder sql = new StringBuilder();
+		
+		String name = pMap.get("board_url").toString();
+		
+		sql.append("CREATE TABLE ");
+		sql.append(name+"_file");
+		sql.append(" (");
+		sql.append("file_num number(37) constraints ");
+		sql.append(name);
+		sql.append("_filenum_pk primary key");
+		sql.append(" ,board_post_num number(37) not null");
+		sql.append(" ,mem_id varchar2(20)");
+		sql.append(" ,post_time varchar2(20)");
+		sql.append(" ,FOREIGN KEY (board_post_num)"
+				+ " REFERENCES bob."+name+"(board_post_num))");
 		logger.info(sql.toString());
 		try {
 			pstmt = con.prepareStatement(sql.toString());
@@ -446,11 +531,33 @@ public class SqlSolutionDao {
 		} 
 		return result;
 	}
+	
+	//Mabatis 카테고리 리스트 뽑아오기
+	public List<Map<String, Object>> categoryList() {
+		logger.info("categoryList 호출 성공");
+		List<Map<String,Object>> categoryList = null;
+		SqlSession session = null;		
+		try {
+			Reader reader = Resources.getResourceAsReader(resource);
+			sqlMapper = new SqlSessionFactoryBuilder().build(reader,"development");
+			//logger.info("sqlMapper"+sqlMapper);
+			session = sqlMapper.openSession();
+			categoryList = session.selectList("categoryList");
+			//logger.info(typeList.size());
+			session.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return categoryList;
+	}
 }
 ```
 
 * 상황에 따라 Mybatis를 활용하기도, 기존의 JDBC를 사용하기도 합니다. 컬럼명에 변수가 들어가야할때 JDBC를 활용합니다. Create Table의 결과값을 boolean으로 받기위해 JDBC를 활용합니다.
-* 솔루션에서 게시판 만들기 클릭시 - 해당 게시판 Table생성 - 해당 게시판 Table에 사용된 Sequence생성 - 게시판 정보\(사용자 입력 값\) 솔루션 테이블에 Insert 을 처리 합니다.
+* 솔루션에서 앨범형 게시판 만들기 선택시 - 해당 게시판 Table생성 - 해당 게시판 Table의 PK를 FK로하는 첨부파일 테이블 생성 - 첨부파일 테이블 Sequence생성 - 해당 게시판 Table에 사용된 Sequence생성 - 게시판 정보\(사용자 입력 값\) 솔루션 테이블에 Insert 을 처리 합니다.
+* 게시글 타입인 경우 첨부파일에 관한 부분이 필요없습니다.
 
 ### DBConnectionMgr
 
