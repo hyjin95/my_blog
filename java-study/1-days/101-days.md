@@ -61,5 +61,5 @@ description: 2021.01.12 - 101일차
 
 ![](../../.gitbook/assets/3-2.png)
 
-* 생성된 공통코드 폴더는 servlet-context.xml에 등록해야 한다.
+* 생성된 공통코드 폴더는 servlet-context.xml에 등록해야 한다. 여기에 등록해야 폴더를 읽을 수 있게된다.
 
