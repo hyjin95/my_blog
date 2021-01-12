@@ -42,3 +42,24 @@ description: 2021.01.12 - 101일차
 
 * 전자정부 Eclipse의 프로젝트 생성 목록을 보면, Spring Legacy와 Boot모두 지원하는 것을 볼 수 있다.
 
+### 2. eGovFrame Eclipse 프로젝트 생성하기
+
+* File &gt; New &gt; Other
+
+![](../../.gitbook/assets/1%20%28109%29.png)
+
+* Spring Legacy Project 선택 &gt; Next
+
+![](../../.gitbook/assets/2%20%2884%29.png)
+
+* 프로젝트 이름지정 &gt; Templates에 Spring MVC Project 선택
+* Next &gt; yes &gt; 패키지이름 지정\(세 자리\) &gt; Finish
+
+![](../../.gitbook/assets/3%20%2859%29.png)
+
+* 사용할 공통코드 폴더는 webapp 하위에 생성한다. - js, css, images 등.... - nexa와 연계할 것이므로 nexa 폴더도 생성한다.
+
+![](../../.gitbook/assets/3-2.png)
+
+* 생성된 공통코드 폴더는 servlet-context.xml에 등록해야 한다.
+
