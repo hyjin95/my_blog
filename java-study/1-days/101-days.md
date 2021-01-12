@@ -105,6 +105,8 @@ description: 2021.01.12 - 101일차
 * 프로젝트 이름 지정 &gt; Next &gt; 제공할 screen선택 &gt; frame 선택
 * 화면 그리기 Form 생성 Basic 폴더 선택 후 File &gt; New &gt; Form
 
+![](../../.gitbook/assets/4%20%2843%29.png)
+
 ![](../../.gitbook/assets/2%20%2885%29.png)
 
 * Tools &gt; Options &gt; Generate &gt; Path 우측 버튼 클릭
@@ -114,4 +116,10 @@ description: 2021.01.12 - 101일차
 ![](../../.gitbook/assets/3%20%2859%29.png)
 
 * Eclipse에서 해당 폴더를 확인해보면 문서들이 들어와있는 것을 확인할 수 있다.
+
+```javascript
+location.href="http://localhost:8000/nexa/quickview.html?screenid=Desktop_screen&formname=Base::DeptManager.xfdl";
+```
+
+* jsp에서 JS로 위 경로를 작성하면 nexacro에서 작성한 페이지를 확인할 수 있다.
 
