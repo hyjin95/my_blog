@@ -63,7 +63,7 @@ description: 2021.01.12 - 101일차
 
 * 생성된 공통코드 폴더는 servlet-context.xml에 등록해야 한다. 여기에 등록해야 폴더를 읽을 수 있게된다.
 
-### 3. 환경설정
+### 3. 프로젝트 Srping 환경설정
 
 ```markup
 <java-version>1.8</java-version>
@@ -74,11 +74,17 @@ description: 2021.01.12 - 101일차
 
 ![](../../.gitbook/assets/4%20%2842%29.png)
 
-* 
+* Maven에서 제공하지 않는 jar파일 두가지를 WEB-INF하위의 lib폴더를 생성해 넣어준다.
+* 프로젝트의 Build Path의 Library에 추가해준다.
+
 ![](../../.gitbook/assets/3%20%2860%29.png)
 
-* * 
+* Library에서 자바가상머신의 버전도 맞춰준다.
+
 ![](../../.gitbook/assets/5%20%2830%29.png)
 
-* * 테스트로는 webapp하위에 jsp파일을 만들어 실행시켜본다. 
+* 서버탭에 Tomcat을 추가한다. 포트번호를 확인하고 admin port가 있어야 하므로 설정해준다. 왼쪽 하단의 publish module contents ....를 체크하고 저장한다.
+* 테스트로 webapp하위에 jsp파일을 만들어 실행시켜본다. 
+
+### 4. 프로젝트 Nexacro
 
