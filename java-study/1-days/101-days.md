@@ -107,6 +107,8 @@ description: 2021.01.12 - 101일차
 
 ![](../../.gitbook/assets/4%20%2843%29.png)
 
+* Generate &gt; Application 을 클릭해 파일을 말아주는 과정을 거친다.
+
 ![](../../.gitbook/assets/2%20%2885%29.png)
 
 * Tools &gt; Options &gt; Generate &gt; Path 우측 버튼 클릭
