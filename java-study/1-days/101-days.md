@@ -46,7 +46,7 @@ description: 2021.01.12 - 101일차
 
 * File &gt; New &gt; Other
 
-![](../../.gitbook/assets/1%20%28109%29.png)
+![](../../.gitbook/assets/1%20%28110%29.png)
 
 * Spring Legacy Project 선택 &gt; Next
 
@@ -86,5 +86,9 @@ description: 2021.01.12 - 101일차
 * 서버탭에 Tomcat을 추가한다. 포트번호를 확인하고 admin port가 있어야 하므로 설정해준다. 왼쪽 하단의 publish module contents ....를 체크하고 저장한다.
 * 테스트로 webapp하위에 jsp파일을 만들어 실행시켜본다. 
 
-### 4. 프로젝트 Nexacro
+### 4. Nexacro
+
+![](../../.gitbook/assets/1%20%28109%29.png)
+
+* Nexacro에서 사용할 폴더 내부의 projects 안에 파일을 배포한다. nexacro17\_Education\_Materials
 
