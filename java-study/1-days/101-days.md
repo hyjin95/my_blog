@@ -109,4 +109,5 @@ description: 2021.01.12 - 101일차
 
 * Tools &gt; Options &gt; Generate &gt; Path 우측 버튼 클릭
 * eGovFrame Eclipse에서 생성한 workspace폴더에 들어가 생성해둔 nexa폴더로 경로를 변경한다.
+* 확인 &gt; Ok &gt; yes
 
