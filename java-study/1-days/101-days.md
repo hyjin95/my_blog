@@ -56,7 +56,7 @@ description: 2021.01.12 - 101일차
 * 프로젝트 이름지정 &gt; Templates에 Spring MVC Project 선택
 * Next &gt; yes &gt; 패키지이름 지정\(세 자리\) &gt; Finish
 
-![](../../.gitbook/assets/3%20%2859%29.png)
+![](../../.gitbook/assets/3%20%2860%29.png)
 
 * 사용할 공통코드 폴더는 webapp 하위에 생성한다. - js, css, images 등.... - nexa와 연계할 것이므로 nexa 폴더도 생성한다.
 
@@ -78,7 +78,7 @@ description: 2021.01.12 - 101일차
 * Maven에서 제공하지 않는 jar파일 두가지를 WEB-INF하위의 lib폴더를 생성해 넣어준다.
 * 프로젝트의 Build Path의 Library에 추가해준다.
 
-![](../../.gitbook/assets/3%20%2860%29.png)
+![](../../.gitbook/assets/3%20%2861%29.png)
 
 * Library에서 자바가상머신의 버전도 맞춰준다.
 
@@ -110,4 +110,8 @@ description: 2021.01.12 - 101일차
 * Tools &gt; Options &gt; Generate &gt; Path 우측 버튼 클릭
 * eGovFrame Eclipse에서 생성한 workspace폴더에 들어가 생성해둔 nexa폴더로 경로를 변경한다.
 * 확인 &gt; Ok &gt; yes
+
+![](../../.gitbook/assets/3%20%2859%29.png)
+
+* Eclipse에서 해당 폴더를 확인해보면 문서들이 들어와있는 것을 확인할 수 있다.
 
