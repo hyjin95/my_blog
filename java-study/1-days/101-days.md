@@ -84,7 +84,7 @@ description: 2021.01.12 - 101일차
 
 ![](../../.gitbook/assets/5%20%2830%29.png)
 
-* 서버탭에 Tomcat을 추가한다. 포트번호를 확인하고 admin port가 있어야 하므로 설정해준다. 왼쪽 하단의 publish module contents ....를 체크하고 저장한다.
+* 서버탭에 Tomcat을 추가한다. 포트번호를 확인하고 admin port가 있어야 하므로 설정해준다. 왼쪽 하단의 publish module contents ....를 체크하고 저장한다. 외부에 있는 서버 파일과 내부에 생성된 서버 파일 사이에서 발생하는 문제 예방
 * 테스트로 webapp하위에 jsp파일을 만들어 실행시켜본다.
 
 ### 4. Eclipse 외부 API추가 : MavenRepository
