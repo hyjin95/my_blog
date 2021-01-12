@@ -41,6 +41,7 @@ description: 2021.01.12 - 101일차
 ![](../../.gitbook/assets/.png%20%2852%29.png)
 
 * 전자정부 Eclipse의 프로젝트 생성 목록을 보면, Spring Legacy와 Boot모두 지원하는 것을 볼 수 있다.
+* Window &gt; Preference 에서 UTF-8설정과  Workspace : Refresh using natice hooks or polling 체크와 Workspace &gt; Build &gt; Save automatically before manual build 체크를 확인한다.
 
 ### 2. eGovFrame Eclipse 프로젝트 생성하기
 
@@ -63,7 +64,7 @@ description: 2021.01.12 - 101일차
 
 * 생성된 공통코드 폴더는 servlet-context.xml에 등록해야 한다. 여기에 등록해야 폴더를 읽을 수 있게된다.
 
-### 3. 프로젝트 Srping 환경설정
+### 3. Spring 프로젝트 환경설정
 
 ```markup
 <java-version>1.8</java-version>
@@ -84,11 +85,16 @@ description: 2021.01.12 - 101일차
 ![](../../.gitbook/assets/5%20%2830%29.png)
 
 * 서버탭에 Tomcat을 추가한다. 포트번호를 확인하고 admin port가 있어야 하므로 설정해준다. 왼쪽 하단의 publish module contents ....를 체크하고 저장한다.
-* 테스트로 webapp하위에 jsp파일을 만들어 실행시켜본다. 
+* 테스트로 webapp하위에 jsp파일을 만들어 실행시켜본다.
 
-### 4. Nexacro
+### 4. Eclipse 외부 API추가 : MavenRepository
+
+* Firebase Admin 6.16.0
+* Gson 2.8.6
+
+### 5. Nexacro
 
 ![](../../.gitbook/assets/1%20%28109%29.png)
 
-* Nexacro에서 사용할 폴더 내부의 projects 안에 파일을 배포한다. nexacro17\_Education\_Materials
+* Nexacro에서 사용하는 폴더 내부의 projects 안에 프로젝트 파일을 배포한다. nexacro17\_Education\_Materials
 
