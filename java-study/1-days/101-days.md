@@ -125,3 +125,5 @@ location.href="http://localhost:8000/nexa/quickview.html?screenid=Desktop_screen
 
 * jsp에서 JS로 위 경로를 작성하면 nexacro에서 작성한 페이지를 확인할 수 있다.
 
+### 7. Eclipse에서 Nexa로 그린 xml에 데이터 얹기
+
