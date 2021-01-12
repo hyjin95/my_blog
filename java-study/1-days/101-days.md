@@ -63,12 +63,22 @@ description: 2021.01.12 - 101일차
 
 * 생성된 공통코드 폴더는 servlet-context.xml에 등록해야 한다. 여기에 등록해야 폴더를 읽을 수 있게된다.
 
-### 3. 환경설
+### 3. 환경설정
 
 ```markup
 <java-version>1.8</java-version>
 <org.springframework-version>5.2.12.RELEASE</org.springframework-version>
 ```
 
-1. pom.xml의 자바가상머신의 version을 맞춘다.  spring version을 사용할 버전으로 맞춘다. 
+* pom.xml의 자바가상머신의 version을 맞춘다.  spring version을 사용할 버전으로 맞춘다.
+
+![](../../.gitbook/assets/4%20%2842%29.png)
+
+* 
+![](../../.gitbook/assets/3%20%2860%29.png)
+
+* * 
+![](../../.gitbook/assets/5%20%2830%29.png)
+
+* * 테스트로는 webapp하위에 jsp파일을 만들어 실행시켜본다. 
 
