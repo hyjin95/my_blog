@@ -92,9 +92,16 @@ description: 2021.01.12 - 101일차
 * Firebase Admin 6.16.0
 * Gson 2.8.6
 
-### 5. Nexacro
+### 5. Nexacro : 프로젝트 파일 추가
 
 ![](../../.gitbook/assets/1%20%28109%29.png)
 
 * Nexacro에서 사용하는 폴더 내부의 projects 안에 프로젝트 파일을 배포한다. nexacro17\_Education\_Materials
+* Nexacro를 실행해 파일 내부의 Sample &gt; EduProject &gt; EduProject 프로젝트를 Open한다.
+
+### 6. Nexacro : 새 프로젝트 생성
+
+* File &gt; New &gt; Project
+* 프로젝트 이름 지정 &gt; Next &gt; 제공할 screen선택 &gt; frame 선택
+* 화면 그리기 Form 생성 Basic 폴더 선택 후 File &gt; New &gt; Form
 
