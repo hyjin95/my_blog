@@ -32,5 +32,10 @@ description: 2021.01.13 - 102일차
 * 빈 공장 운영 BeanFactory : spring-beans.jar ApplicationContext : spring-context.jar
 * @Bean 어노테이션을 사용하거나 xml에 &lt;bean&gt;태그를 사용해 등록한다.
 
+### DB연동, JDBC
+
+* spring-jdbc.jar mybatis.jar mybatis-spring.jar
+* mybaits-spring.jar에서 제공해주는 SqlSessionFactoryBean.java로 커넥션을 맺는다. SqlSessionTemplate.java에서는 selectOne, insert, delete, update, selectList 등을 지원한다.
+
 ## Nexacro
 
