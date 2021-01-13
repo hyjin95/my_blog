@@ -37,5 +37,10 @@ description: 2021.01.13 - 102일차
 * spring-jdbc.jar mybatis.jar mybatis-spring.jar
 * mybaits-spring.jar에서 제공해주는 SqlSessionFactoryBean.java로 커넥션을 맺는다. SqlSessionTemplate.java에서는 selectOne, insert, delete, update, selectList 등을 지원한다.
 
+### trigger
+
+* 활성화 시키거나 비활성화 시키는 작업이지 호출해서 실행시키는 것이 아니다.
+* rollback의 대상이 될 수 없다.
+
 ## Nexacro
 
