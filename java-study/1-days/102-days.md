@@ -26,5 +26,11 @@ description: 2021.01.13 - 102일차
 
 * html내에서 form전송이 일어나면 요청의 변화로 기존의 은 리셋되고 새로운 돔구성이 발생한다.
 
+### Bean
+
+* spring-core.jst 스프링 기반의 프레임워크\(전자정부프레임워크, AnyFrameWork 등\)
+* 빈 공장 운영 BeanFactory : spring-beans.jar ApplicationContext : spring-context.jar
+* @Bean 어노테이션을 사용하거나 xml에 &lt;bean&gt;태그를 사용해 등록한다.
+
 ## Nexacro
 
