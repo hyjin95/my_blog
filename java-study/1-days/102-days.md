@@ -51,5 +51,11 @@ description: 2021.01.13 - 102일차
 
 * spring-webmvc.jar spring-mvc.jar
 
-## Nexacro
+### Spring 설정 방법
+
+1. 자바 : 어노테이션 @Configuration 수동
+2. XML으로 설정\(전자정부, 넥사크로\)
+3. Boot로 설정 자동 이종간의 의존성주입에서 트러블이 발생할 가능성이 높다.
+
+## Spring : HikariCP
 
