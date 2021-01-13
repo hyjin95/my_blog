@@ -42,5 +42,10 @@ description: 2021.01.13 - 102일차
 * 활성화 시키거나 비활성화 시키는 작업이지 호출해서 실행시키는 것이 아니다.
 * rollback의 대상이 될 수 없다.
 
+### Transaction
+
+* spring-tx.jar spring-aop.jar
+* 묶음배송
+
 ## Nexacro
 
