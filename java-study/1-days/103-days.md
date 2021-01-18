@@ -12,7 +12,7 @@ description: 2021.01.14 - 103일차
 
 ## Nexacro
 
-### 이벤트 처
+### 이벤트 처리
 
 ```javascript
 this.divCommand_btnSearch_onclick = function(obj:nexacro.Button,  e:nexacro.ClickEventInfo)
