@@ -339,7 +339,7 @@
   * [101 Days - Nexacro + eGovFrame\(전자정부\) : 환경설정, 연동, 프로젝트 생성](java-study/1-days/101-days.md)
   * [102 Days - 복습, Spring:HikariCP설정, Nexacro 연동한 전자정부 F/W Controller](java-study/1-days/102-days.md)
   * [103 Days - Nexacro:이벤트처리](java-study/1-days/103-days.md)
-  * [104 Days -](java-study/1-days/104-days.md)
+  * [104 Days - Android QR](java-study/1-days/104-days.md)
   * [Untitled](java-study/1-days/untitled-50/README.md)
     * [Untitled](java-study/1-days/untitled-50/untitled.md)
 
