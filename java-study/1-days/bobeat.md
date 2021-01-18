@@ -8,8 +8,17 @@ description: 2020.12.04 ~ 진행중
 
 ### 담당
 
-* 게시판 솔루션 UI
-* 게시판 솔루션 Controller + Logic + Dao + MyBatis + JDBC + SQL 처리
+* PM - 전반적 설계 - ppt제작 및 발
+* 웹  
+  - 게시판 솔루션   
+     UI + Controller + Logic + Dao + MyBatis + JDBC + SQL 처리  
+  - 조건검색  
+
+    Controller + Logic + Dao + MyBatis + JDBC + SQL 처리
+
+* 안드로이드 - UI - 디바이스 Gps 가져오기   Geocoder를 이용해 디바이스의 위도, 경도를 주소로 불러온다. - 로그인, 회원가입     Activity + Fragment + Volley + Spring\(Controller\) 처리
+
+
 
 ### 공정표 및 업무 분담
 
@@ -22,6 +31,10 @@ description: 2020.12.04 ~ 진행중
 ### 2021.01.11 1차 중간발표
 
 {% file src="../../.gitbook/assets/1-.pptx" caption="1차 발표 PPT" %}
+
+### 2021.01.19 2차 중간발
+
+{% file src="../../.gitbook/assets/2-.pptx" caption="2차 발표 PPT" %}
 
 ## Solution
 
