@@ -2,7 +2,7 @@
 description: 2021.01.14 - 103일차
 ---
 
-# 103 Days -
+# 103 Days - Nexacro:이벤트처리
 
 ### 사용 프로그램
 
@@ -11,6 +11,8 @@ description: 2021.01.14 - 103일차
 * 사용 서버 - WAS : Tomcat
 
 ## Nexacro
+
+### 이벤트 처
 
 ```javascript
 this.divCommand_btnSearch_onclick = function(obj:nexacro.Button,  e:nexacro.ClickEventInfo)
