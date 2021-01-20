@@ -24,7 +24,7 @@ description: 2021.01.20 - 106일차
 
 
 
-* [https://www.oracle.com/database/technologies/instant-client/downloads.html](https://www.oracle.com/database/technologies/instant-client/downloads.html) - 다운로드 받은 cx\_oracle을 사용하기위해 운영체제에 맞  ****stant Client for Microsoft Windowss 다
+* [https://www.oracle.com/database/technologies/instant-client/downloads.html](https://www.oracle.com/database/technologies/instant-client/downloads.html) - 다운로드 받은 cx\_oracle을 사용하기위해 운영체제에 맞는 Instant Client for Microsoft Windows 다운
 
 
 
