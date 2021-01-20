@@ -91,11 +91,5 @@ description: 2020.01.07 - 99일차
 * pom.xml에 tomcat dependency 추가
 * src &gt; main &gt; webapp 폴더 추가 &gt; WEB-INF 폴더 추가
 
-### React 설
-
-### React 코
-
-* xxx.jtx
-
 후기 : 환경설정 어려운 것...
 
