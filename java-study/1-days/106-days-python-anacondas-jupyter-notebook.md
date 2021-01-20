@@ -16,13 +16,13 @@ description: 2021.01.20 - 106일차
 
 * window &gt; Anaconda Prompt\(anaconda3\) 우클릭 &gt; 관리자 권한으로 실행
 
-
+![](../../.gitbook/assets/2%20%2886%29.png)
 
 * pip install cx\_oracle  _-_ cx\_oracle 패키지 다운로드
 * python - python확인 - quit \|\| ctrl+z : 나가기
 * python -m pip install cx\_Oracle  --upgrade - 업데이트있을시 업그레이드 하기
 
-
+![](../../.gitbook/assets/3%20%2862%29.png)
 
 * [https://www.oracle.com/database/technologies/instant-client/downloads.html](https://www.oracle.com/database/technologies/instant-client/downloads.html) - 다운로드 받은 cx\_oracle을 사용하기위해 운영체제에 맞는 Instant Client for Microsoft Windows 다운
 
