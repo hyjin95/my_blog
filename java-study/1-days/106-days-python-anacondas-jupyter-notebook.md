@@ -2,13 +2,13 @@
 description: 2021.01.20 - 106일차
 ---
 
-# 106 Days - Python, Anacondas\(Jupyter Notebook\) 환경설정
+# 106 Days - Python, Anacondas\(Jupyter Notebook\) : Oracle 환경설정
 
 ### 설치
 
 {% page-ref page="100-days.md" %}
 
-### 1
+### Anaconda에 Oracle등록하기
 
 ![](../../.gitbook/assets/1%20%28111%29.png)
 
@@ -22,7 +22,7 @@ description: 2021.01.20 - 106일차
 * python - python확인 - quit \|\| ctrl+z : 나가기
 * python -m pip install cx\_Oracle  --upgrade - 업데이트있을시 업그레이드 하기
 
-![](../../.gitbook/assets/3%20%2862%29.png)
+![](../../.gitbook/assets/3%20%2863%29.png)
 
 * [https://www.oracle.com/database/technologies/instant-client/downloads.html](https://www.oracle.com/database/technologies/instant-client/downloads.html) - 다운로드 받은 cx\_oracle을 사용하기위해 운영체제에 맞는 Instant Client for Microsoft Windows 다운
 * zip파일의 압축을 풀고 내부의 instantclient\_19\_9폴더를 사용할 드라이브에 배포한다.
@@ -35,4 +35,14 @@ description: 2021.01.20 - 106일차
 
 * python에서 접근하기위한 환경변수 설정 -기존에 설치 되어있던 오라클 서버의 물리적인 경로 등록
 * 시스템 환경변수는 운영체제가 인식하는 것이기때문에 등록 후에 인식을 위해서는 재부팅 해야한다.
+
+![](../../.gitbook/assets/1%20%28112%29.png)
+
+![](../../.gitbook/assets/2%20%2887%29.png)
+
+* 재부팅 후 다시 anaconda prompt에서 pip list명령어를 입력하면 cs\_Oracle이 성공적으로 등록된 것을 확인 할 수 있다.
+
+![](../../.gitbook/assets/3%20%2862%29.png)
+
+* 파이썬 언어를 지정해 cx\_oracle을 import하고 연결을 실행해 SQL문을 실행해보면 정상적으로 DB에 접근해 값을 가져오는 것을 확인할 수 있다.
 
