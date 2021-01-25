@@ -92,5 +92,10 @@ if max_temp < row[4]:
 
 * if문을 사용해 null값은 -999로 치환해 출력한다.
 
+![](../../.gitbook/assets/1%20%28114%29.png)
 
+* if 문을 사용해 row를 읽으면서 최고 기온 data로 변수를 업데이트한다.
+* 출력문은 변수를 출력한다.
+
+## Python : Matplotlib을 사용한 Chart
 
