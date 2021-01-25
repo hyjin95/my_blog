@@ -83,12 +83,12 @@ if max_temp < row[4]:
 
 * header를 출력해보면 제일 마지막 data가 최고기온임을 알 수 있다.
 
-![](../../.gitbook/assets/3%20%2865%29.png)
+![](../../.gitbook/assets/3%20%2866%29.png)
 
 * float을 사용해 네번째 row값을 문자가 아닌 숫자형태로 변환된 것을 확인할 수 있다. 문자열을 실수형으로 형전환 처리했다.
 * 하단을 확인하면 data가 없는 부분에서 값이 없기때문에 오류가 발생하는 것을 볼 수 있다.
 
-![](../../.gitbook/assets/4%20%2845%29.png)
+![](../../.gitbook/assets/4%20%2846%29.png)
 
 * if문을 사용해 null값은 -999로 치환해 출력한다.
 
@@ -98,4 +98,30 @@ if max_temp < row[4]:
 * 출력문은 변수를 출력한다.
 
 ## Python : Matplotlib을 사용한 Chart
+
+### Chart그리
+
+![](../../.gitbook/assets/2%20%2889%29.png)
+
+* matplotlib를 import한다.
+* plt.plot에 배열 하나만 작성하면 y축을 지정한다.
+* plt.show\( \)로 차트를 그린다.
+
+![](../../.gitbook/assets/3%20%2864%29.png)
+
+* plt.plot에 배열을 두개 작성하면 각각 x, y축을 지정한다.
+
+![](../../.gitbook/assets/4%20%2845%29.png)
+
+* title함수를 사용해 차트에 제목을 지정할 수 있다.
+
+![](../../.gitbook/assets/5%20%2832%29.png)
+
+* color속성을 사용해 그래프에 색상을 추가할 수 있다.
+* label속성을 사용해 그래프 자료에 이름을 지정할 수 있다.
+* legend\( \)함수를 사용해 범례를 표시할 수 있다.
+
+![](../../.gitbook/assets/6%20%2822%29.png)
+
+* linestyle속성을 사용해 그래프 선의 스타일을 정할 수 있다.
 
