@@ -99,7 +99,7 @@ if max_temp < row[4]:
 
 ## Python : Matplotlib을 사용한 Chart
 
-### Chart그리
+### Chart그리기
 
 ![](../../.gitbook/assets/2%20%2889%29.png)
 
