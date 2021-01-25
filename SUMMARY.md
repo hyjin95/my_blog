@@ -342,7 +342,7 @@
   * [104 Days - Android QR](java-study/1-days/104-days.md)
   * [105 Days -  프로젝트 2차 발표 및 프로젝트 준비](java-study/1-days/105-days.md)
   * [106 Days - Python, Anacondas\(Jupyter Notebook\) : Oracle 환경설정](java-study/1-days/106-days-python-anacondas-jupyter-notebook.md)
-  * [Untitled](java-study/1-days/untitled-53.md)
+  * [109 Days -](java-study/1-days/untitled-53.md)
   * [Untitled](java-study/1-days/untitled-50/README.md)
     * [Untitled](java-study/1-days/untitled-50/untitled.md)
 
