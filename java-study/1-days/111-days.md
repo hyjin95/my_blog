@@ -61,19 +61,19 @@ description: 2021.01.27 - 111일차
 
 * Toolbox &gt; PyCharm Community 실행
 
-![](../../.gitbook/assets/2%20%2890%29.png)
+![](../../.gitbook/assets/2%20%2892%29.png)
 
 * File &gt; Open &gt; 로컬 깃 폴더 안에 클론되어 생성된 폴더 선택
 
-![](../../.gitbook/assets/3%20%2867%29.png)
+![](../../.gitbook/assets/3%20%2869%29.png)
 
 * File &gt; Settings &gt; Project : 프로젝트명 &gt; Python Interpreter &gt; 상단의 설정 버튼 &gt; show all
 
-![](../../.gitbook/assets/4%20%2847%29.png)
+![](../../.gitbook/assets/4%20%2848%29.png)
 
 * git에서 클론된 폴더 지정
 
-![](../../.gitbook/assets/5%20%2833%29.png)
+![](../../.gitbook/assets/5%20%2834%29.png)
 
 * Python Interpreter &gt; +\(add\) 클릭 &gt; 패키지 pip, setuptools - install Pakage
 
@@ -117,4 +117,50 @@ description: 2021.01.27 - 111일차
 
 * Pycharm에서 추가되는 idea폴더는 프로젝트 설정에 대한 내용을 담고 있으므로 배제한다.
 * gitignore문서의 하단에 \#Pycharm .idea/ 작성
+
+### 7. django 프로젝트 생성해서 웹 실행하기
+
+![](../../.gitbook/assets/2%20%2891%29.png)
+
+* venv상태에서 django-admin프로젝트를 생성한다.
+
+![](../../.gitbook/assets/3%20%2868%29.png)
+
+* 생성된 프로젝트로 이동
+
+![](../../.gitbook/assets/4%20%2847%29.png)
+
+* python manage.py runserver
+
+![](../../.gitbook/assets/5%20%2833%29.png)
+
+### 8. DB생성하기
+
+![](../../.gitbook/assets/1%20%28116%29.png)
+
+* DB 오브젝트 자동생성하기
+* 장고 migration : 데이터베이스에 적용시켜야하는 변화에 대한 기록
+
+### 9. 관리자계정 생성하기
+
+![](../../.gitbook/assets/1%20%28115%29.png)
+
+* python manage.py createsuperuser
+* 사용할 id입력, email, pw입력 &gt; 계정생성
+
+![](../../.gitbook/assets/2%20%2890%29.png)
+
+* 실행하기위해 서버 on
+
+![](../../.gitbook/assets/.png%20%2854%29.png)
+
+![](../../.gitbook/assets/3%20%2867%29.png)
+
+* 서버 주소에 + /admin 으로 실행하면 위와 같은 화면이 보여진다.
+
+![](../../.gitbook/assets/4%20%2849%29.png)
+
+![](../../.gitbook/assets/5%20%2835%29.png)
+
+* id와 pw를 입력하면 위와같은 관리자 화면으로 이동된다.
 
