@@ -94,7 +94,23 @@ description: 2021.01.27 - 111일차
 
 * venv library root폴더가 흐리게 보인다. git으로 버전관리 할 수 없다.
 
+![](../../.gitbook/assets/15%20%281%29.png)
+
+* cmder 터미널에서 프로젝트 폴더 경로로 들어간다. venv\scripts\activate.bat
+* 프롬프트 앞에 \(venv\)라는 텍스트가 생성된다. 가상환경을 의미한다.
+* 다른 프로젝트에서 환경설정한 파이썬 설정이 간섭되지 않도록 하기 위함
+
+![](../../.gitbook/assets/14%20%281%29.png)
+
+![](../../.gitbook/assets/13%20%281%29.png)
+
+* \(venv\)가 보이는 상태에서  pip install django 입력
+* 아래 사진처럼 다운로드 된후
+* 위 사진 처럼 deactivate 명령어로 빠져나온다.
+
 ### 6. pycharm의 idea폴더 배제
+
+![](../../.gitbook/assets/12%20%282%29.png)
 
 * Pycharm에서 추가되는 idea폴더는 프로젝트 설정에 대한 내용을 담고 있으므로 배제한다.
 
