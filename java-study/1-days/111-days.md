@@ -88,5 +88,13 @@ description: 2021.01.27 - 111일차
 
 * Star up &gt; Environment set LANG=ko\_KR.UTF-8 입력 &gt; Save settings
 
-### 5. gitignore에 가상환경 폴더\(venv\)추가하
+### 5. gitignore에 가상환경 폴더\(venv\)추가하기
+
+![](../../.gitbook/assets/11%20%284%29.png)
+
+* venv library root폴더가 흐리게 보인다. git으로 버전관리 할 수 없다.
+
+### 6. pycharm의 idea폴더 배제
+
+* Pycharm에서 추가되는 idea폴더는 프로젝트 설정에 대한 내용을 담고 있으므로 배제한다.
 
