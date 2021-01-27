@@ -55,9 +55,11 @@ description: 2021.01.27 - 111일차
 
 ### 3. PyCharm Community 설정
 
+* 파이참으로 실습 환경 설정하기
+
 ![](../../.gitbook/assets/9%20%284%29.png)
 
-* Toolbox &gt; PyCharm Community 실
+* Toolbox &gt; PyCharm Community 실행
 
 ![](../../.gitbook/assets/2%20%2890%29.png)
 
@@ -65,7 +67,7 @@ description: 2021.01.27 - 111일차
 
 ![](../../.gitbook/assets/3%20%2867%29.png)
 
-* File &gt; Settings &gt; Project &gt; Python Interpreter &gt; 상단의 설정 버튼 &gt; show all
+* File &gt; Settings &gt; Project : 프로젝트명 &gt; Python Interpreter &gt; 상단의 설정 버튼 &gt; show all
 
 ![](../../.gitbook/assets/4%20%2847%29.png)
 
@@ -73,13 +75,14 @@ description: 2021.01.27 - 111일차
 
 ![](../../.gitbook/assets/5%20%2833%29.png)
 
-* Python Interpreter &gt; + 클릭 &gt; pip, setuptolls - install
+* Python Interpreter &gt; +\(add\) 클릭 &gt; 패키지 pip, setuptools - install
 
 ### 4. cmder 환경설정
 
 ![](../../.gitbook/assets/8%20%2810%29.png)
 
 * cmder 상단바 우클릭 &gt; Settings
+* General &gt; Fonts &gt; Main console font : 굴림체, Font Charset : Hangul
 
 ![](../../.gitbook/assets/10%20%281%29.png)
 
