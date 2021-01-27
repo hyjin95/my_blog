@@ -75,7 +75,7 @@ description: 2021.01.27 - 111일차
 
 ![](../../.gitbook/assets/5%20%2833%29.png)
 
-* Python Interpreter &gt; +\(add\) 클릭 &gt; 패키지 pip, setuptools - install
+* Python Interpreter &gt; +\(add\) 클릭 &gt; 패키지 pip, setuptools - install Pakage
 
 ### 4. cmder 환경설정
 
