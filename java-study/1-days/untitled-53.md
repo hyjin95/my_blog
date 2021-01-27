@@ -2,7 +2,7 @@
 description: 2021.01.25 -109일차
 ---
 
-# 109 Days -
+# 109 Days - Python과 Jupyter : CSV파일 읽어오기, 원하는 데이터 출력하기, Maplotlib로 chart그리기
 
 ### 사용 프로그램
 
