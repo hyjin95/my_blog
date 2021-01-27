@@ -133,6 +133,7 @@ description: 2021.01.27 - 111일차
 
 * python manage.py runserver
 * 서버 켜기
+* 서버를 끄고 나가려면  ctrl + c
 
 ![](../../.gitbook/assets/5%20%2833%29.png)
 
