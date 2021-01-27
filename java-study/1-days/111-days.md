@@ -122,17 +122,21 @@ description: 2021.01.27 - 111일차
 
 ![](../../.gitbook/assets/2%20%2891%29.png)
 
+* django-admin startproject proj\_69
 * venv상태에서 django-admin프로젝트를 생성한다.
 
 ![](../../.gitbook/assets/3%20%2868%29.png)
 
-* 생성된 프로젝트로 이동
+* 생성된 프로젝트로 이동 cd proj\_69
 
 ![](../../.gitbook/assets/4%20%2847%29.png)
 
 * python manage.py runserver
+* 서버 켜기
 
 ![](../../.gitbook/assets/5%20%2833%29.png)
+
+* 생성된 서버 주소로 이동하면 위와같이 성공적으로 실행되는 것을 볼 수 있다.
 
 ### 8. DB생성하기
 
