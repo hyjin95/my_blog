@@ -178,7 +178,7 @@ description: 2021.01.27 - 111일차
 
 ![](../../.gitbook/assets/2%20%2892%29.png)
 
-* git add .
+* git add . 폴더의 전체 변경사항 지정
 * git commit -m "Django 프로젝트 생성"
 
 ![](../../.gitbook/assets/3%20%2867%29.png)
