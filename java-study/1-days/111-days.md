@@ -61,15 +61,15 @@ description: 2021.01.27 - 111일차
 
 * Toolbox &gt; PyCharm Community 실행
 
-![](../../.gitbook/assets/2%20%2892%29.png)
+![](../../.gitbook/assets/2%20%2893%29.png)
 
 * File &gt; Open &gt; 로컬 깃 폴더 안에 클론되어 생성된 폴더 선택
 
-![](../../.gitbook/assets/3%20%2869%29.png)
+![](../../.gitbook/assets/3%20%2870%29.png)
 
 * File &gt; Settings &gt; Project : 프로젝트명 &gt; Python Interpreter &gt; 상단의 설정 버튼 &gt; show all
 
-![](../../.gitbook/assets/4%20%2848%29.png)
+![](../../.gitbook/assets/4%20%2849%29.png)
 
 * git에서 클론된 폴더 지정
 
@@ -125,11 +125,11 @@ description: 2021.01.27 - 111일차
 * django-admin startproject proj\_69
 * venv상태에서 django-admin프로젝트를 생성한다.
 
-![](../../.gitbook/assets/3%20%2868%29.png)
+![](../../.gitbook/assets/3%20%2869%29.png)
 
 * 생성된 프로젝트로 이동 cd proj\_69
 
-![](../../.gitbook/assets/4%20%2847%29.png)
+![](../../.gitbook/assets/4%20%2848%29.png)
 
 * python manage.py runserver
 * 서버 켜기
@@ -141,7 +141,7 @@ description: 2021.01.27 - 111일차
 
 ### 8. DB생성하기
 
-![](../../.gitbook/assets/1%20%28116%29.png)
+![](../../.gitbook/assets/1%20%28117%29.png)
 
 * DB 오브젝트 자동생성하기
 * 장고 migration : 데이터베이스에 적용시켜야하는 변화에 대한 기록
@@ -159,13 +159,33 @@ description: 2021.01.27 - 111일차
 
 ![](../../.gitbook/assets/.png%20%2854%29.png)
 
-![](../../.gitbook/assets/3%20%2867%29.png)
+![](../../.gitbook/assets/3%20%2868%29.png)
 
 * 서버 주소에 + /admin 으로 실행하면 위와 같은 화면이 보여진다.
 
-![](../../.gitbook/assets/4%20%2849%29.png)
+![](../../.gitbook/assets/4%20%2850%29.png)
 
 ![](../../.gitbook/assets/5%20%2835%29.png)
 
 * id와 pw를 입력하면 위와같은 관리자 화면으로 이동된다.
+
+### 10. git push해보기
+
+![](../../.gitbook/assets/1%20%28116%29.png)
+
+* 프로젝트 경로로 간다
+* dir/w
+
+![](../../.gitbook/assets/2%20%2892%29.png)
+
+* git add .
+* git commit -m "Django 프로젝트 생성"
+
+![](../../.gitbook/assets/3%20%2867%29.png)
+
+* git push
+
+![](../../.gitbook/assets/4%20%2847%29.png)
+
+* 깃 프로젝트에 생성한 proj\_69가 생성된 것을 확인할 수 있다.
 
