@@ -88,3 +88,5 @@ description: 2021.01.27 - 111일차
 
 * Star up &gt; Environment set LANG=ko\_KR.UTF-8 입력 &gt; Save settings
 
+### 5. gitignore에 가상환경 폴더\(venv\)추가하
+
