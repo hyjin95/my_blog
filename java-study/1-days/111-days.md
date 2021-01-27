@@ -56,6 +56,7 @@ description: 2021.01.27 - 111일차
 ### 3. PyCharm Community 설정
 
 * 파이참으로 실습 환경 설정하기
+* pycharm : python IDE
 
 ![](../../.gitbook/assets/9%20%284%29.png)
 
