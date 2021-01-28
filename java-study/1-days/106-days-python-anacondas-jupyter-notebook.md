@@ -1,8 +1,8 @@
 ---
-description: 2021.01.20 - 106일차
+description: 2021.01.20 - 107일차
 ---
 
-# 106 Days - Python, Anacondas\(Jupyter Notebook\) : Oracle 환경설정
+# 107 Days - Python, Anacondas\(Jupyter Notebook\) : Oracle 환경설정
 
 ### 설치
 

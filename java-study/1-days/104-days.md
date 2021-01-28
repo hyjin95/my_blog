@@ -1,8 +1,8 @@
 ---
-description: 2021.01.18 - 104일차
+description: 2021.01.18 - 105일차
 ---
 
-# 104 Days - Android QR
+# 105 Days - Android QR
 
 ### 사용 프로그램
 

@@ -1,5 +1,5 @@
 ---
-description: 2021.01.11
+description: 2021.01.11 - 100일차
 ---
 
 # 100 Days - Eclipse : React.js, VSCode 환경설정, Python
