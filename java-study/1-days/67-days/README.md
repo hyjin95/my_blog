@@ -154,6 +154,8 @@ $("#d_result").html(data);//JQuery
 
 ### 테스트
 
+{% page-ref page="test.md" %}
+
 ## WEB-INF하위 jsp파일 접근 : getServletContext\( \)
 
 ### 접근법

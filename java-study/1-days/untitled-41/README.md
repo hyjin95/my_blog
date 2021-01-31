@@ -160,8 +160,6 @@ public class BoardController {
 
 * required속성은 있어도 없어도 되는데 falsle라면 해당 클래스가 없더라도 에러를 발생시키지 않고, 기본값인 true는 클래스 존재가 필수 조건이므로 에러가 발생한다.
 
-
-
 ### 파라미터 : @RequestParam
 
 ```java
