@@ -35,6 +35,8 @@ description: 'Update : 2021.01.09'
 
 {% file src=".gitbook/assets/.pdf.pdf" caption="이력서" %}
 
+파이널프로젝트 발표 : [https://youtu.be/I7NA\_pazVcQ](https://youtu.be/I7NA_pazVcQ)
+
 ## 한국 소프트웨어 인재개발원
 
 * 국비 : 한국소프트웨어인재개발원, 김승수 선생님 자바기반 디지털건버전스 응용 SW개발자 양성 6개월과정 수료중 1월 말 수료 예정
