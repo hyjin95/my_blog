@@ -2,7 +2,7 @@
 description: 2021.01.27 - 112일차
 ---
 
-# 112 Days -
+# 112 Days - rinux, cmder, ubuntu, Pycharm, git
 
 ### 사용 프로그램
 
