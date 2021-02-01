@@ -7,7 +7,6 @@
 ## 국비 교육 <a id="java-study"></a>
 
 * [KOSMO](java-study/1-days/README.md)
-  * [Untitled](java-study/1-days/untitled-49.md)
   * [Git](java-study/1-days/untitled-11.md)
   * [Debug note](java-study/1-days/debug-note.md)
   * [참고](java-study/1-days/undefined-2.md)
