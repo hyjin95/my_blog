@@ -345,5 +345,6 @@
   * [112 Days - rinux, cmder, ubuntu, Pycharm, git](java-study/1-days/111-days.md)
   * [Untitled](java-study/1-days/untitled-50/README.md)
     * [Untitled](java-study/1-days/untitled-50/untitled.md)
-* [Next](java-study/next.md)
+* [Next](java-study/next/README.md)
+  * [교육 1일차 -](java-study/next/1.md)
 
