@@ -30,6 +30,8 @@ description: 2021.01.04 - 96일차
 
 * 상세보기 페이지에서 삭제버튼을 누르면 비밀번호 확인후에 일치시에 삭제처리를 진행한다.
 
+{% page-ref page="spring.md" %}
+
 ## Spring-boot
 
 ### 웹과 앱
