@@ -1,2 +1,12 @@
 # Next
 
+### 경로 \*패턴
+
+* **\*\* : 모든경로**
+* sql/\*\*/\*.xml - sql 하위 모든 경로에서 모든 xml문서
+
+### tiles
+
+* xml문서에 definition을 등록해 include같이 사용할 수 있다.
+* &lt;definition name="\*/\*/" extends=".root"&gt;     &lt;put-addtibute name="body" vlaue ="/WEB-INF/jsp/{1}/{2}.jsp - {1}은 첫번째 \*경로, {2}는 두번쩨 \*경로 
+
