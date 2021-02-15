@@ -28,6 +28,7 @@ description: 국비 과정에서 배운 단축키 정리 페이지입니다.
 * project전체 검색 : ctrl + h
 * 현재페이지 검색 : ctrl + f
 * 지정 코드라인 이동 : ctrl+L
+* 문서 전체 검색 : ctrl + shift + r
 
 ### xml
 
