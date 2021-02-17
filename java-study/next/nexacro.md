@@ -43,5 +43,17 @@
 * project Explorer에서 Application Information의 Application Variables의 Datasets을 클릭하면 멤버\(Global\) dataset을 생성할 수 있다.
 * 수업 자료중에는 com\_code테이블을 이렇게 사용하는 경우에 해당한다. 굳이 DB를 통할 필요없이 UI에서 dataset을 처리한다.
 
+### Component
+
+* Edit = input
+* MaskEdit
+* 위 두 edit는 생김새가 같다. 구분하려면 Static을 사용한다.
+* Static = label - value를 설정할 수 없다. text속성만 갖는다.
+
+### 정렬
+
+* View &gt; Toolbar &gt; align 메뉴바가 추가된다. 정렬을 적용할 컴포넌트들을 드래그하면 활성화 된다.
+* n개를 선택하고 Height를 적용하면 모두 크기가 같아진다. shift를 누르고 1개 컴포넌트를 선택하면 기준이 되어 해당 컴포넌트 크기에 맞춰진다.
+
 
 
