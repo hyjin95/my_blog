@@ -50,7 +50,27 @@
 * 위 두 edit는 생김새가 같다. 구분하려면 Static을 사용한다.
 * Static = label - value를 설정할 수 없다. text속성만 갖는다.
 * Radio - select처럼 하나만 선택가능한 컴포넌트 - Binding 속성에서 dataset을 지정할 수 있다. - Appearance 속성에서 정렬을 지정할 수 있다.
-* checkBox - html에서는 name을 같게해 배열로 넘길 수 있지만 넥사크로에서는 id로 이름을 주기때문에 해당 기능은 사용할 수없고 각각의 선택 여부만 체크할 수 있다.
+* checkBox - html에서는 name을 같게해 배열로 넘길 수 있지만 넥사크로에서는 id로 이름을 주기때문에 해당 기능은 사용할 수없고 각각의 선택 여부만 체크할 수 있다. - Appearance 속성에서 true일때 값과 false일때 값을 지정할 수 있다.   지정하지않으면 true, false가 value가 된다.
+
+### checkBox 이벤트 함수
+
+```javascript
+this.CheckBox01_onclick = function(obj:nexacro.CheckBox,e:nexacro.ClickEventInfo)
+{
+	this.alert(this.CheckBox01.value)
+};
+```
+
+* 체크박스에는 보통 value를 뽑아오는 이벤트를 활용하는데 체크박스마다 이벤트를 작성해야 하는 문제점이 발생한다. 넥사크로에서는 name을 줄 수 없으므로
+
+```javascript
+this.CheckBox00_onclick = function(obj:nexacro.CheckBox,e:nexacro.ClickEventInfo)
+{
+	this.alert(obj.value)
+};
+```
+
+* function의 첫번째 인자 obj를 사용하면 클릭한 컴포넌트를 읽어온다.
 
 ### 정렬
 
