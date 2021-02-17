@@ -29,3 +29,9 @@
 * innerdata를 넣고 해당 combobox를 복사하면 해당 데이터도 똑같이 가져온다. 복사한 이후의 데이터값의 변경은 적용되지 않는다.
 * 데이터값의 변경도 같이 적용하려면? - component의 dataset을 활용한다.
 
+### dataset
+
+* 컴포넌트 선택후 화면을 클릭하면 invisible Object에 추가된 것을 확인할 수 있다.
+* 만들어진 dataset을 더블클릭하면 데이터를 편집할 수 있다. 상단 창은 컬럼, 하단 창은 row
+* invisible Object의 dataset을 드래그해 combobox로 가져가면 innerdata에서 만든 dataset을 선택할 수 있다.
+
