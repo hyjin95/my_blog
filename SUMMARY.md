@@ -343,8 +343,6 @@
   * [107 Days - Python, Anacondas\(Jupyter Notebook\) : Oracle 환경설정](java-study/1-days/106-days-python-anacondas-jupyter-notebook.md)
   * [110 Days - Python과 Jupyter : CSV파일 읽어오기, 원하는 데이터 출력하기, Maplotlib로 chart그리기](java-study/1-days/untitled-53.md)
   * [112 Days - rinux, cmder, ubuntu, Pycharm, git](java-study/1-days/111-days.md)
-  * [Untitled](java-study/1-days/untitled-50/README.md)
-    * [Untitled](java-study/1-days/untitled-50/untitled.md)
 * [NextSystem](java-study/next/README.md)
   * [교육 - 소스설명](java-study/next/1.md)
 
