@@ -40,7 +40,7 @@
 
 ### Application
 
-* project Explorer에서 Application Information의 Application Variables의 Datasets을 클릭하면 Global dataset을 생성할 수 있다.
+* project Explorer에서 Application Information의 Application Variables의 Datasets을 클릭하면 멤버\(Global\) dataset을 생성할 수 있다.
 * 수업 자료중에는 com\_code테이블을 이렇게 사용하는 경우에 해당한다. 굳이 DB를 통할 필요없이 UI에서 dataset을 처리한다.
 
 
