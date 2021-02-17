@@ -46,7 +46,7 @@
 ### Component
 
 * Edit = input
-* MaskEdit = 정해진 규격값만 입력되는 input - number형과 Strng형으로 구분된다.
+* MaskEdit = 정해진 규격값만 입력되는 input - number형과 Strng형으로 구분된다. - F1에서 MaskEdit &gt; Property &gt; format 을 살펴본다.
 * 위 두 edit는 생김새가 같다. 구분하려면 Static을 사용한다.
 * Static = label - value를 설정할 수 없다. text속성만 갖는다.
 
