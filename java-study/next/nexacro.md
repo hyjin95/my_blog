@@ -23,3 +23,9 @@
 
 * this : 현재 Form 주소 - this.Button\_onClick : 이 form에 있는 함수
 
+### combobox
+
+* html : select 
+* innerdata를 넣고 해당 combobox를 복사하면 해당 데이터도 똑같이 가져온다. 복사한 이후의 데이터값의 변경은 적용되지 않는다.
+* 데이터값의 변경도 같이 적용하려면? - component의 dataset을 활용한다.
+
