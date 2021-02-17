@@ -36,4 +36,12 @@
 * invisible Object의 dataset을 드래그해 combobox로 가져가면 innerdata에서 만든 dataset을 선택할 수 있다.
 * dataset을 갖는 객체를 복사하고 dataset을 편집하면 같이 변경 적용된다.
 * 다른 From으로 combobox를 복사하려면 dataset도 같이 복사해 form에 옮겨야한다. dataset이 분리되었으므로 앞의 dataset의 변경은 적용되지 않는다.
+* dataset을 공유하려면 Application을 활용한다.
+
+### Application
+
+* project Explorer에서 Application Information의 Application Variables의 Datasets을 클릭하면 Global dataset을 생성할 수 있다.
+* 수업 자료중에는 com\_code테이블을 이렇게 사용하는 경우에 해당한다.
+
+
 
