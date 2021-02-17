@@ -49,6 +49,7 @@
 * MaskEdit = 정해진 규격값만 입력되는 input - number형과 Strng형으로 구분된다. - F1에서 MaskEdit &gt; Property &gt; format 을 살펴본다.
 * 위 두 edit는 생김새가 같다. 구분하려면 Static을 사용한다.
 * Static = label - value를 설정할 수 없다. text속성만 갖는다.
+* Radio - select처럼 하나만 선택가능한 컴포넌트 - Binding 속성에서 dataset을 지정할 수 있다. - Appearance 속성에서 정렬을 지정할 수 있다.
 
 ### 정렬
 
