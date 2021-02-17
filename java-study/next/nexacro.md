@@ -13,6 +13,7 @@
 ### API : F1, Help&gt;Help
 
 * 메뉴 중 화면을 그리는 도구들 : Components
+* 속성 = property
 
 ### 화면테스트
 
