@@ -50,6 +50,7 @@
 * 위 두 edit는 생김새가 같다. 구분하려면 Static을 사용한다.
 * Static = label - value를 설정할 수 없다. text속성만 갖는다.
 * Radio - select처럼 하나만 선택가능한 컴포넌트 - Binding 속성에서 dataset을 지정할 수 있다. - Appearance 속성에서 정렬을 지정할 수 있다.
+* checkBox - html에서는 name을 같게해 배열로 넘길 수 있지만 넥사크로에서는 id로 이름을 주기때문에 해당 기능은 사용할 수없고 각각의 선택 여부만 체크할 수 있다.
 
 ### 정렬
 
