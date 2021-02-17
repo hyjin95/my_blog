@@ -16,5 +16,9 @@
 
 ### 화면테스트
 
-* 메뉴 가장 오른쪽의 QickView
+* 메뉴 가장 오른쪽의 QuickView
+
+### Script : this
+
+* this : 현재 Form 주소 - this.Button\_onClick : 이 form에 있는 함수
 
