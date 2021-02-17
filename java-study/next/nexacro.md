@@ -34,4 +34,5 @@
 * 컴포넌트 선택후 화면을 클릭하면 invisible Object에 추가된 것을 확인할 수 있다.
 * 만들어진 dataset을 더블클릭하면 데이터를 편집할 수 있다. 상단 창은 컬럼, 하단 창은 row
 * invisible Object의 dataset을 드래그해 combobox로 가져가면 innerdata에서 만든 dataset을 선택할 수 있다.
+* dataset을 갖는 객체를 복사하고 dataset을 편집하면 같이 변경 적용된다.
 
