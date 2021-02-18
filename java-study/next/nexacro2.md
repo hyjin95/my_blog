@@ -177,5 +177,10 @@ this.gender = function(obj) {//obj="M"or"W"
 * text &gt; expr에서 함수를 지정할 수 있다.
 * comp : 지금 바라보고 있는 Grid parent : Grid의 부모 = Form\(this를 사용할 수 없으므로\) gender : 함수이름 \(GENDER\) : 적용할 컬럼명
 
+### Nexacro : Base
+
+* spring에서의 패키지와 같은 역할로 보통 form을 업무에 따라 분리한다.
+* 패키지 추가하기 - TypeDefinition &gt; Services 더블클릭
+
 
 
