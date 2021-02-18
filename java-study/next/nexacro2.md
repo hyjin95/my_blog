@@ -154,7 +154,7 @@ this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 
 * 컬럼로우\(헤더\)를 여러줄로 만들 수 있다. - 왼쪽 head의 row0 우클릭 : add, insert
 * 셀 병합 - shift + 셀 선택 : merge
-* 동적 row 적용 - expr = expression - 순번 컬럼의 text에 currow+1하면 자동으로 1부터 작성된다. - expr에서는 this가 Form이 아닌 선택된 셀을 가리킨킨.dataset.getSum\("SALARY"\)
+* 동적 row 적용 - expr = expression - 순번 컬럼의 text에 currow+1하면 자동으로 1부터 작성된다. - expr에서는 this가 Form이 아닌 선택된 셀을 가리킨다.      dataset.getSum\("SALARY"\)
 * 해당 컬럼 위치 고정 - 컬럼 우클릭 &gt; add column &gt; left - 화면의 왼쪽에 고정된다.
 * 
 
