@@ -113,3 +113,40 @@ this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 * strInDatasets에 서버에 보낼 Id뒤에 :A를 작성하면 모든 data를 전송한다.
 * 위처럼 코드를 작성하면 data변경 후 &gt; 저장 &gt; 조회 시 변경된 데이터가 들어있음을 볼 수 있다.
 
+### data 삭제
+
+```javascript
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_employee.rowposition
+	
+	this.ds_employee.deleteRow(nRow)
+};//화면에서만 삭제된 것이지 트랜잭션되어 서버에 반영된 것은 아니다.
+  //바로 처리시 조회하면 안보이고 저장하고 처리하면 복구가 가능하다. 기능의 차이
+```
+
+* 삭제 후 저장버튼으로 data를 서버에 전송해야 서버에 반영된다.
+
+### data 추가
+
+```javascript
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_employee.addRow()
+};
+```
+
+* 추가 후 저장버튼으로 data를 서버에 전송해야 서버에 반영된다.
+
+### 추가시 기본값 넣기
+
+```javascript
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_employee.addRow()
+	this.ds_employee.setColumn(nRow, "GENDER","M")
+	this.ds_employee.setColumn(nRow, "FULL_NAME","이름입력")
+	this.ds_employee.setColumn(nRow, "DEPT_ID","01")
+};
+```
+
