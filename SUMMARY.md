@@ -3,13 +3,13 @@
 * [Initial page](README.md)
 * [기술소개서](undefined.md)
 * [자기소개서](undefined-1.md)
+* [참고](undefined-2.md)
 
 ## 국비 교육 <a id="java-study"></a>
 
 * [KOSMO](java-study/1-days/README.md)
   * [Git](java-study/1-days/untitled-11.md)
   * [Debug note](java-study/1-days/debug-note.md)
-  * [참고](java-study/1-days/undefined-2.md)
   * [단축키](java-study/1-days/undefined.md)
   * [오류](java-study/1-days/undefined-1.md)
   * [세미 프로젝트 - 영화예매](java-study/1-days/undefined-3.md)
