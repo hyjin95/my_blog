@@ -41,6 +41,7 @@ description: 2021.02.17
 * dataset을 갖는 객체를 복사하고 dataset을 편집하면 같이 변경 적용된다.
 * 다른 From으로 combobox를 복사하려면 dataset도 같이 복사해 form에 옮겨야한다. dataset이 분리되었으므로 앞의 dataset의 변경은 적용되지 않는다.
 * dataset을 공유하려면 Application을 활용한다.
+* 외부 data넣기 - dataset더블 클릭 열린 화면에서 왼쪽 하단에 source탭에 붙여넣기 할 수 있다.
 
 ### Application
 

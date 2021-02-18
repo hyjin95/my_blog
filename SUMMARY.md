@@ -346,4 +346,5 @@
 * [NextSystem](java-study/next/README.md)
   * [교육 - 소스설명](java-study/next/1.md)
   * [교육 - Nexacro](java-study/next/nexacro.md)
+  * [교육 - Nexacro2](java-study/next/nexacro2.md)
 
