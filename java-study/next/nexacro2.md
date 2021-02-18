@@ -7,7 +7,7 @@
 
 ### component와 dataset연동
 
-![1](../../.gitbook/assets/1%20%28119%29.png)
+![1](../../.gitbook/assets/1%20%28120%29.png)
 
 * component 의 property의 Binable의 Value속성에서 dataset의 컬럼과 연동 할 수 있다.
 * 이렇게 지정한 값이 compnent에 보이게 되고 component에서 수정한 값은 바로 Gird에서 바뀌는 것을 확인할 수 있다.
@@ -156,6 +156,26 @@ this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 * 셀 병합 - shift + 셀 선택 : merge
 * 동적 row 적용 - expr = expression - 순번 컬럼의 text에 currow+1하면 자동으로 1부터 작성된다. - expr에서는 this가 Form이 아닌 선택된 셀을 가리킨다.      dataset.getSum\("SALARY"\)
 * 해당 컬럼 위치 고정 - 컬럼 우클릭 &gt; add column &gt; left - 화면의 왼쪽에 고정된다.
-* 
+* editType : 입력방식
+
+### row에 삼항연산자가 아닌 함수 지정하기
+
+```javascript
+this.gender = function(obj) {//obj="M"or"W"
+	if(obj == "M"){
+		return "남자"
+	}else{
+		return "여자"
+	}
+};
+```
+
+* 함수를 만들고 Grid Content Editor에서 
+
+![](../../.gitbook/assets/1%20%28119%29.png)
+
+* text &gt; expr에서 함수를 지정할 수 있다.
+* comp : 지금 바라보고 있는 Grid parent : Grid의 부모 = Form\(this를 사용할 수 없으므로\) gender : 함수이름 \(GENDER\) : 적용할 컬럼명
+
 
 
