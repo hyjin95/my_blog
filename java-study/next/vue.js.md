@@ -32,7 +32,7 @@ description: 2021.02.19
 
 * vue.js install 및 설치 확인 - npm install -g vue-cli - vue --version
 
-![](../../.gitbook/assets/3%20%2872%29.png)
+![](../../.gitbook/assets/3%20%2873%29.png)
 
 * c 드라이브에 사용할 폴더 생성 및 폴더 접근
 
@@ -41,7 +41,7 @@ description: 2021.02.19
 * vue init webpack my-project 입력 - vue 프로젝트 생성 설정
 * install이 끝나면 서버가 열리고 localhost를 보여준다. CMD에서 서버를 연 것이므로 CMD를 닫으면 서버도 닫혀버리니 주의
 
-![](../../.gitbook/assets/5%20%2836%29.png)
+![](../../.gitbook/assets/5%20%2837%29.png)
 
 * 확인
 
@@ -165,6 +165,7 @@ export default {
 ```
 
 * componets &gt; vue파일 생성 - Template에 있는 것들만 화면에 출력된다.
+* 3번과 12번 은 n 개 작성 할 수 있다.
 
 ```javascript
 import Vue from 'vue'
@@ -196,8 +197,6 @@ export default new Router({//url과 파일 지정.
 
 ### router-link : 링크 만들기
 
-![&#xD655;&#xC778;](../../.gitbook/assets/6%20%2825%29.png)
-
 ```markup
 <template>
   <div id="app">
@@ -214,5 +213,142 @@ export default new Router({//url과 파일 지정.
 * App.vue
 * &lt;router-link&gt;는 html의 &lt;a&gt;태그와 같다.
 
+![](../../.gitbook/assets/6%20%2825%29.png)
 
+* 확인
+
+### 등록과 출력 : v-bind
+
+```markup
+<template>
+  <div>
+    {{ msg }}
+    {{ test }}
+    <span v-bind:title="msg">
+      타이틀이 보입니다.
+    </span>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'vueHello',
+  data () {
+    return {
+      msg: 'vueHello'
+      ,test: 'test123'
+    }
+  }
+}
+</script>
+```
+
+* v-bind: 로 속성을 작성하면 등록한 data를 bind해 가져와 사용할 수 있다.
+
+![](../../.gitbook/assets/5%20%2836%29.png)
+
+* 출력
+
+### if, 제어문 : v-if, v-if-else, v-else
+
+```markup
+<template>
+  <div>
+    {{ msg }}
+    {{ test }}
+    <span v-if="seen" v-bind:title="msg">
+      타이틀이 보입니다.
+    </span>
+    <span v-else v-bind:title="msg">
+      else가 보입니다.
+    </span>
+  </div>
+</template>
+```
+
+* v-if
+* seen이라는 data가 정의되어있지 않기때문에 if문의 결과는 false이다.
+* 해당 &lt;span&gt;태그는 보이지 않게된다.
+
+![](../../.gitbook/assets/2%20%2897%29.png)
+
+* 확인
+
+```markup
+<template>
+  <div>
+    {{ msg }}
+    {{ test }}
+    <span v-if="seen == 0" v-bind:title="msg">
+      타이틀이 보입니다.
+    </span>
+    <span v-else-if="seen == 2" v-bind:title="msg">
+      else if 가 보입니다.
+    </span>
+    <span v-else v-bind:title="msg">
+      else 가 보입니다.
+    </span>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'vueHello',
+  data () {
+    return {
+      msg: 'vueHello'
+      ,test: 'test123'
+      ,seen: 2
+    }
+  }
+}
+</script>
+```
+
+* v-else
+* v-else-if
+
+![](../../.gitbook/assets/3%20%2872%29.png)
+
+*  확인
+
+### 반복문 v-for
+
+```markup
+<script>
+export default {
+  name: 'vueHello',
+  data () {
+    return {
+      msg: 'vueHello'
+      ,test: 'test123'
+      ,seen: 2
+      ,todos : [
+        {text:"testText1"}
+        ,{text:"testText2"}
+        ,{text:"testText3"}
+      ]
+    }
+  }
+}
+</script>
+```
+
+* 배열 data가 필요하다.
+
+```markup
+<template>
+  <div>
+    <ol>
+      <li v-for="todo in todos"> {{ todo.text}} </li>
+    </ol>
+  </div>
+</template>
+```
+
+* template에 추가
+
+![](../../.gitbook/assets/4%20%2852%29.png)
+
+* 출력
 
