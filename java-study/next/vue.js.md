@@ -248,6 +248,7 @@ export default {
 ![](../../.gitbook/assets/5%20%2836%29.png)
 
 * 출력
+* 마우스를 올려 title값 확인
 
 ### if, 제어문 : v-if, v-if-else, v-else
 
