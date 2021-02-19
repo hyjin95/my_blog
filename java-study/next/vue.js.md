@@ -20,3 +20,11 @@ description: 2021.02.19
 * JS에서 선언한 vue.js를 보면 JSON형식인 것을 확인할 수 있다.
 * el = element
 
+### Vue.js : 프로젝트 생성
+
+![](../../.gitbook/assets/2%20%2895%29.png)
+
+1. node.js LTS파일 다운로드 - CMD에서 'npm -version'으로 설치 확인
+
+### Node.jsn
+
