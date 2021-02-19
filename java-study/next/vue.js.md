@@ -9,6 +9,7 @@ description: 2021.02.19
 * 화면에  data를 배치해 놓고 가져오는 data에 따라 html화면이 자동으로 재구성된다.
 * UIFramework : vue.js - 따로 프로젝트를 생성 - 또는 스크립트 선언을 통해 사용
 * 새로고침없이 data에 따라 화면이 변한다.
+* 스크립트에 html코드를 최소화 하기 위함
 
 ### jsp와의 차이점
 
@@ -25,7 +26,7 @@ description: 2021.02.19
 
 ![node.js](../../.gitbook/assets/2%20%2896%29.png)
 
-![CMD](../../.gitbook/assets/1%20%28122%29.png)
+![CMD](../../.gitbook/assets/1%20%28123%29.png)
 
 * node.js LTS파일 다운로드 - CMD에서 'npm -version'으로 설치 확인
 
@@ -368,4 +369,44 @@ export default {
 
 * template에 &lt;button&gt;선언
 * v-on으로 클릭에 대한 메서드 지정
+* 괄호가 없지만 파라미터로 값을 넘겨야 하는 함수라면 괄호를 작성한다.
+
+```markup
+<script>
+export default {
+  name: 'vueHello',
+  data () {
+    return {
+      msg: 'vueHello'
+      ,test: 'test123'
+      ,seen: 2
+      ,todos : [
+        {text:"testText1"}
+        ,{text:"testText2"}
+        ,{text:"testText3"}
+      ]
+    }
+  }
+  ,methods:{
+    dataChange : function(){
+      this.todos = [
+        {text:"testText11"}
+        ,{text:"testText22"}
+        ,{text:"testText33"}
+        ,{text:"testText44"}
+        ,{text:"testText55"} 
+      ]
+    }
+  }
+}
+</script>
+```
+
+* methods 속성에서 함수 선언이 가능하다.
+* data에 접근할 수 있다.
+
+![](../../.gitbook/assets/1%20%28122%29.png)
+
+* 버튼을 누른 화면
+* 확인
 
