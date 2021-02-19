@@ -8,7 +8,7 @@ description: 2021.02.19
 
 * 화면에  data를 배치해 놓고 가져오는 data에 따라 html화면이 자동으로 재구성된다.
 * UIFramework : vue.js - 따로 프로젝트를 생성 - 또는 스크립트 선언을 통해 사용
-* 새로고침없이 data에 따라 화면이 변한다.
+* 새로고침없이 data에 따라 화면이 변한다. - &lt;style scope&gt;태그로 css를 컴포넌트마다 적용해 테마를 만들 수 있다.
 * 스크립트에 html코드를 최소화 하기 위함
 
 ### jsp와의 차이점
@@ -411,7 +411,7 @@ export default {
 * 버튼을 누른 화면
 * 확인
 
-### 컴포넌트
+### 컴포넌트 등록과 태그 사용
 
 * vue에서는 컴포넌트를 직접 정의해 사용한다.
 * script에서 컴포넌트를 정의하면 Template\(html\)에서 태그 형식으로 호출해 사용할 수 있다. - 화면단과 기능단의 적극적인 분리가 가능하다. - html코드의 재사용성이 높아진다.
@@ -492,4 +492,115 @@ export default {
 * 데이터 변경 버튼을 누르면 데이터 두군데 모두 이벤트가 적용된다.
 
 ### Grid와 dataSet
+
+```markup
+<template>
+  <div>
+
+    <table border=1 align="center">
+      <tr>
+        <th v-for="col in dataset.column">
+          {{ col }}
+        </th>
+      </tr>
+      <tr v-for="row in dataset.rows">
+        <td v-for="data in row">{{ data }}</td>
+      </tr>
+    </table>
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'grid'
+  ,props:['dataset']
+
+}
+</script>
+```
+
+* grid.vue 생성
+
+```markup
+<template>
+  <div>
+
+    <grid v-bind:dataset="dataset"></grid>
+
+  </div>
+</template>
+
+<script>
+
+import testComp from '@/components/testComp'
+import grid from '@/components/grid'
+
+export default {
+  name: 'vueHello',
+  data () {
+    return {
+      msg: 'vueHello'
+      ,test: 'test123'
+      ,seen: 2
+      ,todos : [
+        {text:"testText1"}
+        ,{text:"testText2"}
+        ,{text:"testText3"}
+      ]
+      ,dataset:{
+        column : ['type','no','title']
+        ,rows:[
+           {type : '111', no : '1', title : 'textTitle111'}
+          ,{type : '222', no : '2', title : 'textTitle222'}
+          ,{type : '333', no : '3', title : 'textTitle333'}
+        ]
+      }
+    }
+  }
+  ,components:{testComp, grid}
+}
+</script>
+```
+
+* vueHello.vue
+
+![](../../.gitbook/assets/3%20%2874%29.png)
+
+* 확인
+
+```markup
+<template>
+  <div>
+
+    <table border=1 align="center">
+      <tr>
+        <th v-for="col in dataset.column">
+          {{ col }}
+        </th>
+      </tr>
+      <tr v-for="row in dataset.rows">
+        <template v-for="col in dataset.column">
+          <template v-for="(value, key) in row"">
+            <td v-if="col == key">
+              {{value}}
+            </td>
+          </template>
+        </template>
+      </tr>
+    </table>
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'grid'
+  ,props:['dataset']
+}
+</script>
+```
+
+* 컬럼명 수정이 가능하게 끔 컬럼명과 row를 매칭시킨다.
+* &lt;template&gt;태그를 사용해 화면에는 출력되지 않지만 적용되도록 할 수 있다.
 
