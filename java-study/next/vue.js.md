@@ -30,7 +30,7 @@ description: 2021.02.19
 
 * node.js LTS파일 다운로드 - CMD에서 'npm -version'으로 설치 확인
 
-![](../../.gitbook/assets/2%20%2895%29.png)
+![](../../.gitbook/assets/2%20%2898%29.png)
 
 * vue.js install 및 설치 확인 - npm install -g vue-cli - vue --version
 
@@ -343,13 +343,14 @@ export default {
 <template>
   <div>
     <ol>
-      <li v-for="todo in todos"> {{ todo.text}} </li>
+      <li v-for="todo in todos"> {{ todo.text }} </li>
     </ol>
   </div>
 </template>
 ```
 
 * template에 추가
+* todo는 todos의 알리아스명
 
 ![](../../.gitbook/assets/4%20%2852%29.png)
 
@@ -409,4 +410,86 @@ export default {
 
 * 버튼을 누른 화면
 * 확인
+
+### 컴포넌트
+
+* vue에서는 컴포넌트를 직접 정의해 사용한다.
+* script에서 컴포넌트를 정의하면 Template\(html\)에서 태그 형식으로 호출해 사용할 수 있다. - 화면단과 기능단의 적극적인 분리가 가능하다. - html코드의 재사용성이 높아진다.
+
+```markup
+<template>
+  <div>
+
+    <li v-for="todo in todos"> {{ todo.text }} </li>
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'testComp'
+  ,props:['todos']
+
+}
+</script>
+
+```
+
+* testComp.vue 문서 생성
+* v-bind가 없으면 item문자열이 전달되고 있으면 data가 전달된다.
+
+```markup
+<template>
+  <div>
+
+    <testComp v-bind:todos="todos"></testComp>
+
+  </div>
+</template>
+
+<script>
+
+import testComp from '@/components/testComp'
+
+export default {
+  name: 'vueHello',
+  data () {
+    return {
+      msg: 'vueHello'
+      ,test: 'test123'
+      ,seen: 2
+      ,todos : [
+        {text:"testText1"}
+        ,{text:"testText2"}
+        ,{text:"testText3"}
+      ]
+    }
+  }
+  ,methods:{
+    dataChange : function(){
+      this.todos = [
+        {text:"testText11"}
+        ,{text:"testText22"}
+        ,{text:"testText33"}
+        ,{text:"testText44"}
+        ,{text:"testText55"}
+      ]
+    }
+  }
+  ,components:{testComp}
+}
+</script>
+```
+
+* vueHello.vue 
+* script에 testComp.vue를 import한다.
+* export default에 components속성을 작성하고 testComp를 등록한다.
+* 4번 : 화면에서 태그로 호출해 출력한다.
+
+![](../../.gitbook/assets/2%20%2895%29.png)
+
+* 확인
+* 데이터 변경 버튼을 누르면 데이터 두군데 모두 이벤트가 적용된다.
+
+### Grid와 dataSet
 
