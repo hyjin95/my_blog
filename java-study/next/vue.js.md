@@ -25,6 +25,7 @@ description: 2021.02.19
 
 * JS에서 선언한 vue.js를 보면 JSON형식인 것을 확인할 수 있다.
 * el = element
+* 화면용 vue와 컴포넌트로만 사용하는 vue로 구분할 수 있다.
 
 ### Vue.js : 프로젝트 생성
 
