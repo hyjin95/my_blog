@@ -4,6 +4,10 @@ description: 2021.02.19
 
 # 교육 - vue.js
 
+### 참고
+
+{% file src="../../.gitbook/assets/js.pptx" caption="vue.js 교육용 ppt" %}
+
 ### single page application
 
 * 화면에  data를 배치해 놓고 가져오는 data에 따라 html화면이 자동으로 재구성된다.
