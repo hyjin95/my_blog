@@ -482,7 +482,7 @@ export default {
 ```
 
 * vueHello.vue 
-* script에 testComp.vue를 import한다.
+* script에 testComp.vue를 import한다. export default와 붙어있으면 import가 정상적으로 되지 않는다. 한 줄 띄우기
 * export default에 components속성을 작성하고 testComp를 등록한다.
 * 4번 : 화면에서 태그로 호출해 출력한다.
 
