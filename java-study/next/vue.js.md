@@ -7,6 +7,7 @@ description: 2021.02.19
 ### single page application
 
 * 화면에  data를 배치해 놓고 가져오는 data에 따라 html화면이 자동으로 재구성된다.
+* UIFramework : vue.js - 따로 프로젝트를 생성 - 또는 스크립트 선언을 통해 사용
 
 ### jsp와의 차이점
 
