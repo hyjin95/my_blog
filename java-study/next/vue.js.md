@@ -8,6 +8,7 @@ description: 2021.02.19
 
 * 화면에  data를 배치해 놓고 가져오는 data에 따라 html화면이 자동으로 재구성된다.
 * UIFramework : vue.js - 따로 프로젝트를 생성 - 또는 스크립트 선언을 통해 사용
+* 새로고침없이 data에 따라 화면이 변한다.
 
 ### jsp와의 차이점
 
@@ -352,4 +353,19 @@ export default {
 ![](../../.gitbook/assets/4%20%2852%29.png)
 
 * 출력
+
+### Button과 함수\(method\) 선언
+
+```markup
+<template>
+  <div>
+
+    <button v-on:click="dataChange"> 데이터 변경</button>
+
+  </div>
+</template>
+```
+
+* template에 &lt;button&gt;선언
+* v-on으로 클릭에 대한 메서드 지정
 
