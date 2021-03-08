@@ -1,9 +1,11 @@
 # Table of contents
 
 * [Initial page](README.md)
-* [기술소개서](undefined.md)
-* [자기소개서](undefined-1.md)
-* [참고](undefined-2.md)
+
+## Introduce <a id="undefined-4"></a>
+
+* [기술소개서](undefined-4/undefined.md)
+* [자기소개서](undefined-4/undefined-1.md)
 
 ## 국비 교육 <a id="java-study"></a>
 
@@ -352,8 +354,9 @@
   * [Nexacro2](nextsystem/next/nexacro2.md)
   * [vue.js](nextsystem/next/vue.js.md)
 
-## 자기계발 <a id="undefined-3"></a>
+## Study <a id="undefined-3"></a>
 
+* [참고](undefined-3/undefined-2.md)
 * [Git](undefined-3/git/README.md)
-  * [Untitled](undefined-3/git/untitled.md)
+  * [용어](undefined-3/git/untitled.md)
 
