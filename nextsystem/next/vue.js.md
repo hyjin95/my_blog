@@ -2,7 +2,7 @@
 description: 2021.02.19
 ---
 
-# 교육 - vue.js
+# vue.js
 
 ### 참고
 

@@ -2,7 +2,7 @@
 description: 2021.02.17
 ---
 
-# 교육 - Nexacro
+# Nexacro
 
 ### Button : Properties
 

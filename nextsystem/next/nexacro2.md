@@ -1,4 +1,4 @@
-# 교육 - Nexacro2
+# Nexacro2
 
 ### Grid
 
