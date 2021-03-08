@@ -5,6 +5,10 @@
 * 형상관리 시스템 Version Control System
 * 프로그램 관련 파일 저장소
 
+### git-bash
+
+* window에서 유닉스/리눅스같은 명령어를 사용할 수 있도록 해주는 프로그램 유닉스/리눅스 명령어로 window를 제어할 수 있다.
+
 ### commit
 
 * save
