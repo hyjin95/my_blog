@@ -360,5 +360,5 @@
 * [Git](undefined-3/git/README.md)
   * [설치 및 실행](undefined-3/git/undefined.md)
   * [용어](undefined-3/git/untitled.md)
-  * [명령어](undefined-3/git/undefined-1.md)
+  * [git, vim 명령어](undefined-3/git/undefined-1.md)
 

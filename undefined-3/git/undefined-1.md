@@ -1,4 +1,6 @@
-# 명령어
+# git, vim 명령어
+
+## git
 
 ### pwd
 
@@ -28,4 +30,26 @@
 ### git init
 
 * 버전 관리\(형상 관리\)할 폴더 지정
+
+## vim
+
+### vim
+
+* vim 에디터 사용 시작
+
+### i
+
+* insert\(입력\) 모드 전환
+
+### esc
+
+* vim 에디터 나가기, 명령어 입력 가능
+
+### esc &gt; :q! &gt; return
+
+* 변경사항 없이 vim 에디터 종료
+
+### esc &gt; :wq &gt; return
+
+* 변경사항 저장 후 vim 에디터 종료
 
