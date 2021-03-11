@@ -41,19 +41,59 @@
 
 ### 4.버전관리하기 - 이름, 이메일 등록하기
 
-![](../../.gitbook/assets/1%20%28125%29.png)
+![](../../.gitbook/assets/1%20%28126%29.png)
 
 * 디렉토리 최초 설정시 한번만 등록하면된다.
 * git에게 버전관리하는 파일에 대한 내 이름과 이메일을 등록한다. 외부에서 어떤사람이 작업했는지 알 수 있다. 
 
-### 5. 버전관리하기 - git commit
+### 5. 버전관리하기 - 최초의 버전관리 git commit
 
-![](../../.gitbook/assets/2%20%28100%29.png)
+![](../../.gitbook/assets/2%20%28102%29.png)
 
 * git commit 명령어를 입력하게되면 vim이 실행된다. - 커밋 정보를 알려준다. - i를 눌러 입력모드로 전환한다.
 * 현재 버전의 정보를 직접 작성한다.  - version\(commit\) message
 
-![](../../.gitbook/assets/3%20%2876%29.png)
+![](../../.gitbook/assets/3%20%2878%29.png)
 
 * 상단에 버전정보를 입력하고 esc &gt; :wq 로 저장하고 vim을 종료한다.
+
+![](../../.gitbook/assets/4%20%2855%29.png)
+
+* f1.txt 라는 파일이 새로운 버전이 되었다.
+
+### 6. 버전 확인하기
+
+![](../../.gitbook/assets/1%20%28127%29.png)
+
+* git log 명령어를 통해 확인해보면  1 이라는 버전 메세지가 들어있는 버전이 생성되어있으며 버전 작성자의 이름과 이메일, 생성날짜를 확인할 수 있다.
+
+### 7. 같은 파일 버전관리 반복해보기
+
+![](../../.gitbook/assets/2%20%28101%29.png)
+
+* ls -al 명령어로 파일을 확인하고 f1.txt파일을 vim으로 다시 연다.
+* i &gt; 내용수정 &gt; esc &gt; :wq &gt; enter
+
+![](../../.gitbook/assets/3%20%2876%29.png)
+
+* git status 명령어로 확인해보면 f1.txt 파일이 붉은글씨로 수정된 상태임을 볼 수 있다.
+
+![](../../.gitbook/assets/4%20%2854%29.png)
+
+* 바로 git commit을 하지않고 다시 버전관리 시스템에게 add해야 한다.
+
+![](../../.gitbook/assets/1%20%28125%29.png)
+
+* git add 파일명
+* git status 명령어로 정상적으로 add된 것을 볼 수 있다.
+* git commit을 진행한다.
+
+![](../../.gitbook/assets/2%20%28100%29.png)
+
+* i &gt; 버전 정보 작성 &gt; esc &gt; :wq &gt; enter
+* git log 명령어로 확인한다.
+
+![](../../.gitbook/assets/3%20%2877%29.png)
+
+* log에서 버전2가 커밋된 것을 확인할 수 있다.
 
