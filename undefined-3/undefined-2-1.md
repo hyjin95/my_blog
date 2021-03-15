@@ -139,7 +139,7 @@ String str = "Hello";
 ### 상수
 
 * 변경할 수 없는 변수
-* JAVA : final을 붙여 정의하며 최초즤 초기화 후 변경될 수 없다. - final String name = "ㅇㅇㅇ";
+* JAVA : final을 붙여 정의하며 최초의 초기화 후 변경될 수 없다. - final String name = "ㅇㅇㅇ";
 * 여기서 name 변수가 상수, "ㅇㅇㅇ"은 문자열 리터럴인 것이다.
 
 ### Immutable
