@@ -109,3 +109,27 @@ List<Integer> integer //가능
 
 ## 더보기
 
+### 참조형 : String의 불변 
+
+```java
+String str = new String("Hello"); //new 객체 생성
+String str2 = "Hello"; //리터럴 할당
+```
+
+* 불변성 - 자바에서 String은 불변성\(immutable\)을 갖는다. - 참조형 이지만 new 연산자를 사용한 객체생성도 문자열 리터럴 형태로 사용하는것도 허용된다. 
+
+## 용어
+
+### literal 리터럴
+
+* 변하지 않는 값 자체 - 객체 리터럴, 정수 리터럴 .....
+
+### 상수
+
+* 변경할 수 없는 변수
+* JAVA : final을 붙여 정의하며 최초즤 초기화 후 변경될 수 없다. - final String name = "ㅇㅇㅇ";
+* 여기서 name 변수가 상수, "ㅇㅇㅇ"은 문자열 리터럴인 것이다.
+
+### Immutable
+
+* 
