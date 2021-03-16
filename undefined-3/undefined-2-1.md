@@ -130,7 +130,7 @@ String str = "Hello";
 * str변수의 문자열을 변경하더라도 내부적로는 heap에 최초의 str 값이 변경된 것이 아니라 heap내부에 새로운 String 객체가 생성되고 그 참조가 str변수에 할당된다. str은 최초에 "Hello"문자열의 참조를 할당받고 2번에서 "Bye"문자열의 참조를 할당받는다.
 * 최초에 생성된 문자열"Hello"와 두번째 생성된 문자열 "Bye" 두 객체 모두 heap에 생성되어있다.
 
-### 원시형 : boolean
+### 원시형 : boolean 
 
 * 저장 가능한 범위 true / false
 * JAVA가 데이터를 다루는 최소 범위가 1Byte이므로 비효율적이지만 1Byte를 사용한다.
@@ -138,8 +138,8 @@ String str = "Hello";
 ### 원시형 : char
 
 * Java에서는 Unicode를 사용한다.
+* Java에서는 유일하게 제공되는 unsigned형태 이다. \(양수값만 존재한다.\)
 * 한글 같은 동양의 글자는 2Byte를 차지하므로 char는 2Byte를 사용한다.
-* 0
 
 ## 용어
 
