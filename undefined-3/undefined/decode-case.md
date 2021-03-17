@@ -1,4 +1,4 @@
-# DECODE 와 CASE
+# 조건문 : DECODE 와 CASE
 
 ### DECODE
 
@@ -51,6 +51,7 @@ END
 
 * 조건에서의 비교연산자 사용 여부 - DECODE함수는 &lt;, &gt;, = 와같은 비교연산자를 작성할 수 없다. - CASE 함수는 &lt;, &gt;, = 와같은 비교연산자를 작성할 수 있다. - 단, CASE 값에 컬럼이 위치하는 경우에는 비교연산자를 사용할 수 없다.
 * PL/SQL지원 여부 - DECODE함수는 SQL에서만 작동된다. - CASE함수는 SQL과 PL/SQL모두 작동된다.
+* null = null 비교시 응답의 차이 - DECODE 함수는 null과 null 비교시 true를 반환한다. - CASE 함수는 null과 null 비교시 false를 반환한다.
 
 ## 참고
 
