@@ -364,5 +364,5 @@
 * [DB](undefined-3/db-1/README.md)
   * [DB 릴레이션 용어](undefined-3/db-1/db.md)
   * [DECODE 와 CASE](undefined-3/db-1/decode-case.md)
-* [데이터 형태 : 참조형, 원시형](undefined-3/undefined-2-1.md)
+* [데이터 타입 : 참조형, 원시형](undefined-3/undefined-2-1.md)
 
