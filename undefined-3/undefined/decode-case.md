@@ -23,11 +23,11 @@ DECODE(값, 조건, DECODE(값2, 조건2, true값))
 ### CASE
 
 ```sql
-CASE 값
-    WHEN IF조건1 THEN1
-    WHEN IF조건2 THEN2
+CASE 값(컬럼)
+    WHEN IF조건1 true값1
+    WHEN IF조건2 true값2
     ...
-ELSE
+ELSE false
 END
 ```
 
