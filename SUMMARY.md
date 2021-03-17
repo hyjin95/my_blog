@@ -365,7 +365,7 @@
   * [DB 릴레이션 용어](undefined-3/db-1/db.md)
 * [SQL](undefined-3/undefined/README.md)
   * [DECODE 와 CASE](undefined-3/undefined/decode-case.md)
-* [Data Type](undefined-3/data-type/README.md)
+* [Data Type \(자료형\)](undefined-3/data-type/README.md)
   * [참조형, 원시형](undefined-3/data-type/undefined-2-1.md)
 * [Java](undefined-3/java.md)
 * [JavaScript](undefined-3/javascript/README.md)
