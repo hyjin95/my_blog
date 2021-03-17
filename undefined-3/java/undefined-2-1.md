@@ -98,7 +98,7 @@ List<Integer> integer //가능
 
 ### 원시형의 장점
 
-![&#xD0C0;&#xC785;&#xBCC4; &#xD3C9;&#xADE0; &#xC751;&#xB2F5;&#xC2DC;&#xAC04;](../.gitbook/assets/1.gif)
+![&#xD0C0;&#xC785;&#xBCC4; &#xD3C9;&#xADE0; &#xC751;&#xB2F5;&#xC2DC;&#xAC04;](../../.gitbook/assets/1.gif)
 
 1. 제네릭 타입으로도, null값을 가질 수 도 없는 원시형의 장점은 '성능\(접근속도\)'에 있다. - 참조형은 값을 불러올때마다 언박싱 과정을 거쳐 원시형에 비해 접근 속도가 느리다. - 단, 매우 큰 값을 복사하는 등 의 경우에는 참조값만 넘길 수 있는 참조형이 나을때가 있다.
 2. 차지하는 메모리 양 - 참조형이 차이하는 메모리 크기가 더 크다. - boolean 1bit &lt; Boolean 128 bits
