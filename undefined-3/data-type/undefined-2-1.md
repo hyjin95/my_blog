@@ -1,4 +1,4 @@
-# 데이터 타입 : 참조형, 원시형
+# 참조형, 원시형
 
 ## 정리
 
@@ -140,6 +140,55 @@ String str = "Hello";
 * Java에서는 Unicode를 사용한다.
 * Java에서는 유일하게 제공되는 unsigned형태 이다. \(양수값만 존재한다.\)
 * 한글 같은 동양의 글자는 2Byte를 차지하므로 char는 2Byte를 사용한다.
+
+### 원시형 : int
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#xC885;&#xB958;</th>
+      <th style="text-align:left">&#xD06C;&#xAE30;(byte / bit)</th>
+      <th style="text-align:left">&#xD45C;&#xD604;&#xBC94;&#xC704;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">tinyint</td>
+      <td style="text-align:left">1 / 8</td>
+      <td style="text-align:left">
+        <p>0 ~ 2^8</p>
+        <p>(0 ~ 255)</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">smallint</td>
+      <td style="text-align:left">2 / 16</td>
+      <td style="text-align:left">
+        <p>-2^15 32,768) to 2^15-1</p>
+        <p>(-32,768 ~ 32,767)</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">int</td>
+      <td style="text-align:left">4 / 32</td>
+      <td style="text-align:left">
+        <p>-2^31 ~ 2^31-1</p>
+        <p>(-2,147,483,648 ~ 2,147,483,647) &#xC57D;21&#xC5B5;</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">bigint</td>
+      <td style="text-align:left">8 / 64</td>
+      <td style="text-align:left">
+        <p>-2^63 ~ 2^63-1</p>
+        <p>(-9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807) &#xC57D;10&#xACBD;</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+* 표현범위에서 최댓값-1을 하는 이유는 0이 포함되기 때문이다.
+* DB\(database\)의 공간을 절약하기위해 타입을 구분한다. 예를 들어 255세 이상 사는 사람은 없기때문에 사람 수명에 대한 데이터라면 tinyint를 사용하는 것이 DB관리에 효율적이다. 하지만 건물 수명과같은 개념이면 tinyint는 적합하지 않을 것이다.
 
 ## 용어
 

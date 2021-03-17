@@ -55,5 +55,3 @@ END
 
 {% page-ref page="../../java-study/1-days/25-days/" %}
 
-
-

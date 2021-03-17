@@ -363,8 +363,9 @@
   * [설치 및 실행](undefined-3/git/undefined.md)
 * [DB](undefined-3/db-1/README.md)
   * [DB 릴레이션 용어](undefined-3/db-1/db.md)
-* [쿼리](undefined-3/undefined/README.md)
+* [SQL](undefined-3/undefined/README.md)
   * [DECODE 와 CASE](undefined-3/undefined/decode-case.md)
-* [Java](undefined-3/java/README.md)
-  * [데이터 타입 : 참조형, 원시형](undefined-3/java/undefined-2-1.md)
+* [Data Type](undefined-3/data-type/README.md)
+  * [참조형, 원시형](undefined-3/data-type/undefined-2-1.md)
+* [Java](undefined-3/java.md)
 
