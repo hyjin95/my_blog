@@ -30,7 +30,7 @@ DECODE(값, 조건, DECODE(값2, 조건2, true값))
 * FROM 절을 제외한 어디든 사용될 수 있다. - SELECT문, WHERE절
 * false값을 명시 하지 않으면 null을 출력한다.
 
-### CASE0
+### CASE
 
 ```sql
 CASE 값(컬럼)
@@ -51,7 +51,9 @@ END
 * 조건에서의 비교연산자 사용 여부 - DECODE함수는 &lt;, &gt;, = 와같은 비교연산자를 작성할 수 없다. - CASE 함수는 &lt;, &gt;, = 와같은 비교연산자를 작성할 수 있다.
 * 단, CASE 값에 컬럼이 위치하는 경우에는 비교연산자를 사용할 수 없다.
 
-## 용어
+## 참고
 
-### DML
+{% page-ref page="../../java-study/1-days/25-days/" %}
+
+
 
