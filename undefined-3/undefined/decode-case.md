@@ -3,7 +3,7 @@
 ### DECODE
 
 ```sql
-DECODE(비교값, 조건, true값, false값)
+DECODE(값비교값, 조건, true값, false값)
 DECODE(값, IF1, THEN1, IF2, THEN2, ...)
 ```
 
