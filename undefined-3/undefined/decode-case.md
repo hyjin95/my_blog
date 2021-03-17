@@ -11,7 +11,7 @@ DECODE(값, 조건, true값, false값)
 
 //값이 1번조건을 만족하면 then1, 2번 조건을 만족하면 then2 ...
 //모든 조건에 만족하지 않으면 false값
-DECODE(값, IF1, THEN1, IF2, THEN2, ..., false값)
+DECODE(값, 조건1, true값, I조건32Ttrue ..., false값)
 
 //값이 조건을 만족하고 값2가 조건2를 만족하면 true값 아니면 null
 DECODE(값, 조건, DECODE(값2, 조건2, true값))
