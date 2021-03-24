@@ -129,19 +129,45 @@ String str = "Hello";
 ```
 
 * str변수의 문자열을 변경하더라도 내부적로는 heap에 최초의 str 값이 변경된 것이 아니라 heap내부에 새로운 String 객체가 생성되고 그 참조가 str변수에 할당된다. str은 최초에 "Hello"문자열의 참조를 할당받고 2번에서 "Bye"문자열의 참조를 할당받는다.
-* 최초에 생성된 문자열"Hello"와 두번째 생성된 문자열 "Bye" 두 객체 모두 heap에 생성되어있다.
+* 최초에 생성된 문자열"Hello"와 두번째 생성된 문자열 "Bye" 두 객체 모두 heap에 생성되어있다. "Hello" 메모리 영역은 임시 garbage상태가 되어 가비지 컬렉션의 제거 대상이된다.
 
 ### String의 불변성\(Immutable\)
 
 * 자바에서 String은 불변성\(immutable\)을 갖는다. 한번 객체\(값\)이 생성되면 그 값은 변하지 않는다.
 * 자바에서 String타입 객체는 같은 값의 문자열에 대해 단 하나의 객체만을 생성한다.
-* **캐싱** 어떤 문자열 반복 요청에 따라 문자열을 반복 생성하는 것이 아니라 문자열 객체는 단 하나만 생성되고 참조값을 갖는 참조변수만 반복 생성되었다가 사라지게 된다. Java에서 String객체는 Heap의 String Pool에 저장되고 참조하려는 문자열이 있으면 Pool에 있는 객체를 사용하므로 특정 문자열의 재사용 빈도가 높을수록 성능이 향상된다. JVM객체가 생성되는 heap에 문자열이 매번 생성되는 것이 아니므로 메모리 사용 효율이 높다. 문자열 객체를 캐싱\(Caching\)한다.
-* **보안** String의 불변성으로 인해 중요한 데이터를 문자열로 다루는 경우 강제로 해당 참조에 대한 문자열 값을 바꾸는 것이 불가능하므로 보안에 유리하다.
-* **스레드 안전성** String객체가 변경될 수 없다는 것은 여러 스레드에서 동시에 접근\(참조\)해도 안전하다는 것이다. 여러곳에서 특정 문자열값을 참조하고 있을때 값이 절대 변하지 않으므로 안전하다. str = 'hello" 처럼 새 리터럴을 할당하더라도 기존값이 heap에 남아있다. 
+* String이 불변성을 가져야 하는 이유 세가지 **캐싱** 어떤 문자열 반복 요청에 따라 문자열을 반복 생성하는 것이 아니라 문자열 객체는 단 하나만 생성되고 참조값을 갖는 참조변수만 반복 생성되었다가 사라지게 된다. Java에서 String객체는 Heap의 String Pool에 저장되고 참조하려는 문자열이 있으면 Pool에 있는 객체를 사용하므로 특정 문자열의 재사용 빈도가 높을수록 성능이 향상된다. JVM객체가 생성되는 heap에 문자열이 매번 생성되는 것이 아니므로 메모리 사용 효율이 높다. 문자열 객체를 캐싱\(Caching\)한다. **보안** String의 불변성으로 인해 중요한 데이터를 문자열로 다루는 경우 강제로 해당 참조에 대한 문자열 값을 바꾸는 것이 불가능하므로 보안에 유리하다. **스레드 안전성** String객체가 변경될 수 없다는 것은 여러 스레드에서 동시에 접근\(참조\)해도 안전하다는 것이다. 여러곳에서 특정 문자열값을 참조하고 있을때 값이 절대 변하지 않으므로 안전하다. str = 'hello" 처럼 새 리터럴을 할당하더라도 기존값이 heap에 남아있다. 
 
-### String 문자열 더하기
+### String 문자열 연산\(수정,삭제\)
 
-* 
+|  | String | StringBuffer | StringBuilder |
+| :--- | :--- | :--- | :--- |
+| Storage | String Pool | Heap | Heap |
+| Modifiable | No\(immutable\) | Yes\(mutable\) | Yes\(mutable\) |
+| MultiThread Safe | Yes | Yes | No |
+| Synchronized | Yes | Yes | No |
+| Performance | Fast | Slow | Fast |
+
+* String의 경우 불변성을 갖기 때문에 문자열 연산에 불리한 부분이 있다.  문자열에 대해 잦은 추가, 수정, 삭제 등의 연산이 발생하면 Heap메모리에 임시 가비지가 계속 생성되고 이는 Heap메모리 부족으로 어플리케이션 성능에 영향을 끼치게 된다.
+* StringBuffer와 StringBuilder는 이를 보완하기 위한 클래스로 가변성을 갖는다. .append\( \), .delete\( \) 등의 API를 제공해 동일 객체에서의 문자열을 변경할 수 있다.
+* StringBuffer와 StringBuilder의 차이 동일한 API를 제공하지만 StringBuffer는 동기화를 지원해 멀티스레드의 환경에서 안전하지만 StringBuilder는 동기화를 지원하지 않아 성능은 보다 빠르지만 멀티스레드의 환경에는 적합하지 않다. String은 불변성을 띄므로 멀티스레드에 안전하다.
+
+```java
+public void someMethod(){
+    StringBuilder sb = new StringBuilder(); //스레드간에 공유될 일이 없으므로 이경우 사용 가능
+    sb.append("a");
+}
+
+public class UserService {
+    StringBuffer sb = new StringBuffer(); 
+ 
+    public void someMethod(String value){
+        sb.append(value);
+    }
+}
+```
+
+* 사용시기 String  - 문자열 연산이 적고 멀티스레드 환경일 때 StringBuffer  - 문자열 연산이 많고 멀티스레드 환경일 때 StringBuilder - 문자열 연산이 많고 단일스레드 환경이거나 동기화를 고려하지 않아도 될 때 - 특정 메서드 내부에서 생성, 연산하는 경우    해당 변수는 stack에 생성되므로 스레드 사이에 공유 될 수 없다.
+
 ### 참조형 : Scanner
 
 * 사용자의 입력을 받을때 사용하는 참조형 변수
