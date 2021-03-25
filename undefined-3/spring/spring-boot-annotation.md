@@ -63,6 +63,12 @@
 * 요청받은 데이터를 바인딩할때 데이터 유효성 검증하는 역할
 * pom.xml에 api라이브러리 추가
 
+## annotation : 환경설정
+
+### @Configuration
+
+* 환경설정 클래스\(JAVA\) 등록시 클래스 앞에 작성
+
 ## class
 
 ### ModelMap
