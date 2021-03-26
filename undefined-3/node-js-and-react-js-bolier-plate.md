@@ -14,3 +14,28 @@
 
 * 로그인 같은 기능들은 자주 사용되는 기능 중 하나이다. 어떤 프로젝트에서든 공통으로 재사용할 수 있게 만들어 두는 것
 
+### Node JS
+
+* node가 나오기전에는 JS는 클라이언트 사이드\(브라우저\)에서만 사용할 수 있는 언어였고 node가 나옴으로서 서버사이드에서 JS를 사용할 수 있게 되었다.
+* JS 서버사이드 엔진
+* Vue.js의 경우 node를 설치한 후 패키지 관리자\(npm\)의 Vue CLI를 사용하면 Vue의 기본적인 개발 환경을 빠르게 구성하고 테스트하기 용이해 실제 node와 Vue를 통합해 사용하는 경우가 많다.
+
+### Express JS
+
+* node JS라는 언어를 좀 더 쉽게 사용할 수 있게 해주는 프레임워크 node JS로 프로그램을 만들수 있게 해준다.
+
+### npm
+
+* node package manager Node.js설치시 자동 설치되는 Node.js의 기본 패키지 관리자
+* JS코드를 구성하고 공유하는 도구 JS로 된 모든 것을 패키지로 관리한다. JS F/W를 사용하는 프로젝트에서 필수 도구
+* Vue의 경우 npm을 통해 기본 프로젝트를 구성해주는 Vue CLI패키지를 배포하고있다.
+
+## 설치 및 세팅
+
+### Node JS & Express JS 
+
+![](../.gitbook/assets/1%20%28128%29.png)
+
+* Node JS [https://nodejs.org/ko/](https://nodejs.org/ko/) 최신버전이 아닌 검증된 LTS버전을 다운받는다.
+* CMD에서 'node -v' 명령어로 설치, 버전을 확인한다.
+
