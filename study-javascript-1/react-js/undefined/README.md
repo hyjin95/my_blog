@@ -59,7 +59,7 @@ description: 2021.03.29 - 월요일
 
 ![chrome + &#xAC1C;&#xBC1C;&#xC790;&#xB3C4;&#xAD6C; + vscode](../../../.gitbook/assets/1%20%28132%29.png)
 
-* 이렇게 App.js의 return 태그를 수정하면 create-react-app에 의해 설정된 파일이 수정 &gt; save 할 때마다 화면을 자동으로 reload해준다.
+* 이렇게 App.js의 return 태그를 수정하면 create-react-app에 의해 설정된 파일이 수정 &gt; save 할 때마다 브라우저를을 자동으로 reload해준다.
 
 ## 더보기
 
