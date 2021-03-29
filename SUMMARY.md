@@ -377,6 +377,6 @@
   * [화살표 함수](study-javascript-1/javascript/undefined.md)
   * [JSON과 JavaScript Object 차이](study-javascript-1/javascript/json-javascript-object.md)
 * [React JS](study-javascript-1/react-js/README.md)
-  * [리액트 개발환경 설정](study-javascript-1/react-js/undefined.md)
+  * [리액트 개발환경](study-javascript-1/react-js/undefined.md)
 * [Node JS & React JS : Bolier-Plate](study-javascript-1/node-js-and-react-js-bolier-plate.md)
 
