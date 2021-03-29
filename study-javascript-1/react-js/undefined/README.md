@@ -37,7 +37,7 @@ description: 2021.03.29 - 월요일
 * Local : 로컬 주소 Your Network : 공유 네트워크 주소
 * 더보기 - VSCode : terminal
 
-### 4. 
+### 4. dir 살펴보기 : JS, 컴포넌트
 
 ![](../../../.gitbook/assets/1%20%28133%29.png)
 
@@ -54,7 +54,8 @@ description: 2021.03.29 - 월요일
 
 ![App.js](../../../.gitbook/assets/2%20%28106%29.png)
 
-* 리액트 돔을 구성\(렌더\)하는 &lt;App&gt; 사용자 정의 태그는 App.js를 가르키고, App.js에 작성된 render함수의 return값을 가져와 돔을 구성한다.  
+* 리액트 돔을 구성\(렌더\)하는 &lt;App&gt; 사용자 정의 태그는 App.js를 가르키고, App.js에 작성된 render함수의 return값을 가져와 돔을 구성한다.
+* 브라우저 화면을 그릴때에는  App.js에 작성해야함을 알 수 있다.  
 
 ## 더보기
 
