@@ -39,7 +39,7 @@ description: 2021.03.29 - 월요일
 
 ### 4. dir 살펴보기 : JS, CSS, 컴포넌트
 
-![](../../../.gitbook/assets/1%20%28135%29.png)
+![](../../../.gitbook/assets/1%20%28136%29.png)
 
 * create-react-app이 제공하는 기본 샘플 어플리케이션을 살펴보자 어떤 디렉토리 구조이며 어떤 파일을 수정해야하는지 알 수 있다.
 * public은 서버가 실행하는 index.html이 위치한다. index.html 의 &lt;body&gt;태그에 &lt;div&gt;태그가 작성되어있는데 화면에 표시되는 모든 컴포넌트들은 저 &lt;div&gt;태그 안에 존재해야 한다.
@@ -61,7 +61,7 @@ description: 2021.03.29 - 월요일
 
 * 이렇게 App.js의 return 태그를 수정하면 create-react-app에 의해 설정된 파일이 수정 &gt; save 할 때마다 브라우저를을 자동으로 reload해준다.
 
-![](../../../.gitbook/assets/1%20%28134%29.png)
+![](../../../.gitbook/assets/1%20%28135%29.png)
 
 * js 컴포넌트에 css파일을 import해 지정한다. 서버가 화면을 읽어 브라우저를 구성할때 js컴포넌트를 로드하면서 css파일도 로드해 디자인 하게된다.
 * index.css는 index.js 시작문서의 css이고 App.css는 index.js가 돔 구성할때 가져오는 App.js 컴포넌트에 대한 css이다.
@@ -75,9 +75,19 @@ description: 2021.03.29 - 월요일
 * 개발자 혼자 local환경에서 사용하는 것은 괜찮지만 모든 클라이언트들에게 저 1.7MB를 받게 하는것은 보안상문제를 일으킬 수 있고 문제가 될 수 있다.
 * 위 문제를 피하기 위해 실행이 아닌 배포를 해야한다. 'npm run start' X 'npm run build' production mode의 어플리케이션을 만들\(빌드 할\)때에는 위 명령어를 사용한다.
 
-![build](../../../.gitbook/assets/1%20%28136%29.png)
+![build](../../../.gitbook/assets/1%20%28137%29.png)
 
-* 'npm run build'명령어를 통해 생성된 build 파일
+* 'npm run build' 명령어를 통해 생성된 build는 클라이언트에게 실제로 서비스하게되는 파일이다.
+* build &gt; index.html을 보면 공백이 전혀 없는 것을 볼 수 있는데 이는 create-react-app이 실제 프로덕션 환경에서 실행하기위해 불필요하게 용량을 차지하는 부분을 처리했기 때문이다. 
+* src에 작업되었던 파일들도 보안작업과 에러메세지 같은 볼 필요없는 부분을 제거하고 index.html이 파일을 로드할 수 있도록 알아서 처리된다.
+
+![terminal](../../../.gitbook/assets/1%20%28134%29.png)
+
+* 'npx serve -s build' 명령어로 build파일을 서비스한다.
+
+![&#xAC1C;&#xBC1C;&#xC790;&#xB3C4;&#xAD6C; &amp;gt; Network](../../../.gitbook/assets/2%20%28110%29.png)
+
+* 위 주소로 들어가 강력 새로고침을 하면 1.7MB가 아닌 147KB로 용량이 줄어든 것을 확인할 수 있다.
 
 ## 더보기
 
@@ -107,5 +117,12 @@ description: 2021.03.29 - 월요일
 ### 새로고침
 
 * 일반 새로고침 - F5
-* 강력한 새로고침 - shift + F5 - 브라우저 상단의 리로드 우클릭 &gt; 캐시 비우기 및 강력 새로고침
+* 강력한 새로고침 - ctrl + F5 - 브라우저 상단의 리로드 우클릭 &gt; 캐시 비우기 및 강력 새로고침
+
+### serve
+
+* npm을 통해 설치할 수 있는 간단한 웹서버
+* 'npm install -g serve' 컴퓨터 어디에서나 serve명령어를 통해 웹서버를 설치할 수 있다.
+* 'npx serve' 한번만 서버를 설치해 실행한다.
+* 'npx serve -s build' serve웹서버를 다운받아 실행할 때 build 디렉토리를 root로 사용한다. 
 
