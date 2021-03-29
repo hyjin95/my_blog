@@ -75,7 +75,7 @@ description: 2021.03.29 - 월요일
 * 개발자 혼자 local환경에서 사용하는 것은 괜찮지만 모든 클라이언트들에게 저 1.7MB를 받게 하는것은 보안상문제를 일으킬 수 있고 문제가 될 수 있다.
 * 위 문제를 피하기 위해 실행이 아닌 배포를 해야한다. 'npm run start' X 'npm run build' production mode의 어플리케이션을 만들\(빌드 할\)때에는 위 명령어를 사용한다.
 
-![build](../../.gitbook/assets/1%20%28137%29.png)
+![build](../../.gitbook/assets/1%20%28138%29.png)
 
 * 'npm run build' 명령어를 통해 생성된 build는 클라이언트에게 실제로 서비스하게되는 파일이다.
 * build &gt; index.html을 보면 공백이 전혀 없는 것을 볼 수 있는데 이는 create-react-app이 실제 프로덕션 환경에서 실행하기위해 불필요하게 용량을 차지하는 부분을 처리했기 때문이다. 
