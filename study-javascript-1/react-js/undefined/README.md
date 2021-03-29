@@ -66,6 +66,8 @@ description: 2021.03.29 - 월요일
 * js 컴포넌트에 css파일을 import해 지정한다. 서버가 화면을 읽어 브라우저를 구성할때 js컴포넌트를 로드하면서 css파일도 로드해 디자인 하게된다.
 * index.css는 index.js 시작문서의 css이고 App.css는 index.js가 돔 구성할때 가져오는 App.js 컴포넌트에 대한 css이다.
 
+### 5. 배포하기
+
 ## 더보기
 
 ### 앱 설치 1 : npm
