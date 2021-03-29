@@ -8,7 +8,7 @@ description: 2021.03.29 - 월요일
 
 ### 1. npm 설치 및 확인
 
-![](../../../.gitbook/assets/1%20%28132%29.png)
+![](../../../.gitbook/assets/1%20%28133%29.png)
 
 * Node js에서 LTS 안정화된 버전을 설치한다.
 * CMD / 터미널에서 'node -v' 명령어로 버전을 확인해 설치여부를 알 수 있다. 마찬가지로 'npm -v'명령어로 npm 설치여부를 확인한다.
@@ -39,7 +39,7 @@ description: 2021.03.29 - 월요일
 
 ### 4. dir 살펴보기 : JS, 컴포넌트
 
-![](../../../.gitbook/assets/1%20%28133%29.png)
+![](../../../.gitbook/assets/1%20%28134%29.png)
 
 * create-react-app이 제공하는 기본 샘플 어플리케이션을 살펴보자 어떤 디렉토리 구조이며 어떤 파일을 수정해야하는지 알 수 있다.
 * public은 서버가 실행하는 index.html이 위치한다. index.html 의 &lt;body&gt;태그에 &lt;div&gt;태그가 작성되어있는데 화면에 표시되는 모든 컴포넌트들은 저 &lt;div&gt;태그 안에 존재해야 한다.
@@ -55,7 +55,11 @@ description: 2021.03.29 - 월요일
 ![App.js](../../../.gitbook/assets/2%20%28106%29.png)
 
 * 리액트 돔을 구성\(렌더\)하는 &lt;App&gt; 사용자 정의 태그는 App.js를 가르키고, App.js에 작성된 render함수의 return값을 가져와 돔을 구성한다.
-* 브라우저 화면을 그릴때에는  App.js에 작성해야함을 알 수 있다.  
+* 브라우저 화면을 그릴때에는  App.js에 작성해야함을 알 수 있다.
+
+![chrome + &#xAC1C;&#xBC1C;&#xC790;&#xB3C4;&#xAD6C; + vscode](../../../.gitbook/assets/1%20%28132%29.png)
+
+* 이렇게 App.js의 return 태그를 수정하면 create-react-app에 의해 설정된 파일이 수정 &gt; save 할 때마다 화면을 자동으로 reload해준다.
 
 ## 더보기
 
