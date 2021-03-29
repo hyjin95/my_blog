@@ -1,4 +1,4 @@
-# git, vim 명령어
+# cmd, git, terminal 명령어
 
 ## git
 

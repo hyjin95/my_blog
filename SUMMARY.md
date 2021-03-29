@@ -357,9 +357,9 @@
 ## Study <a id="undefined-3"></a>
 
 * [참고](undefined-3/undefined-2.md)
+* [cmd, git, terminal 명령어](undefined-3/undefined-1.md)
 * [Git](undefined-3/git/README.md)
   * [용어](undefined-3/git/untitled.md)
-  * [git, vim 명령어](undefined-3/git/undefined-1.md)
   * [설치 및 실행](undefined-3/git/undefined.md)
 * [DB](undefined-3/db-1/README.md)
   * [DB 릴레이션 용어](undefined-3/db-1/db.md)
