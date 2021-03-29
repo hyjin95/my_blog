@@ -28,7 +28,7 @@ description: 2021.03.29 - 월요일
 ### 3. VSCode로 실행 해보기
 
 * 해당 디렉토리가 react로 설정이 되어 폴더를 터미널에서 실행시켜보면  rect기본 앱을 확인할 수 있다.
-* 'npm run start' npm으로 서버를 시작한다.
+* 'npm run start' terminal에 입력해 npm으로 서버를 시작한다.
 * ctrl + c &gt; 'y' 서버를 종료한다. &gt; 확인
 
 ![](../../.gitbook/assets/2%20%28107%29.png)
