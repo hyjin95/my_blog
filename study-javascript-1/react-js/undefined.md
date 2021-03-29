@@ -12,7 +12,8 @@ description: 2021.03.29 - 월요일
 
 * Node js에서 LTS 안정화된 버전을 설치한다.
 * CMD / 터미널에서 'node -v' 명령어로 버전을 확인해 설치여부를 알 수 있다. 마찬가지로 'npm -v'명령어로 npm 설치여부를 확인한다.
-* 더보기란 확인 : 앱설치 1, 2 'create-react-app -V' 명령어로 설치확인 \(V는 대문자\)
+* 'create-react-app -V' 명령어로 설치확인 \(V는 대문자\)
+* 더보기 - 앱설치 1, 2 - error : EACCES
 
 ### 2. 디렉토리 rect개발환경 설정
 
@@ -23,6 +24,17 @@ description: 2021.03.29 - 월요일
 * 'create-react-app .' 해당 디렉토리가 create-react-app에 의해 react 환경으로 세팅된다.
 
 ![](../../.gitbook/assets/3%20%2882%29.png)
+
+### 3. VSCode로 실행 해보기
+
+* 해당 디렉토리가 react로 설정이 되어 폴더를 터미널에서 실행시켜보면  rect기본 앱을 확인할 수 있다.
+* 'npm run start' npm으로 서버를 시작한다.
+* ctrl + c &gt; 'y' 서버를 종료한다. &gt; 확인
+
+![](../../.gitbook/assets/2%20%28107%29.png)
+
+* ip, port번호로 작성된 주소를 터미널에 보여준다. 해당 주소 중 하나로 브라우저에서 확인할 수 있다.
+* Local : 로컬 주소 Your Network : 공유 네트워크 주소
 
 ## 더보기
 
@@ -42,5 +54,10 @@ description: 2021.03.29 - 월요일
 
 * 권한 없음
 * 'sudo cnpm install create-react-app'
-* sudo명령어로 관리자권한으로 실행하도록 한다. 관리자 계정의 암호를 물어본다. 
+* sudo명령어로 관리자권한으로 실행하도록 한다. 관리자 계정의 암호를 물어본다.
+
+### VSCode : terminal
+
+* terminal 커멘드 라인\(명령어\)로 컴퓨터를 제어할 수 있는 프로그램을 내부적으로 제공한다.
+* View &gt; Appearance &gt; Show Paner
 
