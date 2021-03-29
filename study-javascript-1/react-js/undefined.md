@@ -16,7 +16,13 @@ description: 2021.03.29 - 월요일
 
 ### 2. 디렉토리 rect개발환경 설정
 
+![](../../.gitbook/assets/2%20%28106%29.png)
+
 * 사용할 디렉토리\(폴더\)생성 &gt; react 개발환경 세팅하기 디렉토리에는 환경설정이 저장된다. create-react-app을 사용해 디렉토리를  react 환경으로 설정 한다.
+* 'cd 디렉토리' 만들어둔 디렉토리 경로로 이동한다.
+* 'create-react-app .' 해당 디렉토리가 create-react-app에 의해 react 환경으로 세팅된다.
+
+![](../../.gitbook/assets/3%20%2882%29.png)
 
 ## 더보기
 
