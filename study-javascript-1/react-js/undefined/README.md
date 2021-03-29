@@ -17,7 +17,7 @@ description: 2021.03.29 - 월요일
 
 ### 2. 디렉토리 rect개발환경 설정
 
-![](../../../.gitbook/assets/2%20%28107%29.png)
+![](../../../.gitbook/assets/2%20%28108%29.png)
 
 * 사용할 디렉토리\(폴더\)생성 &gt; react 개발환경 세팅하기 디렉토리에는 환경설정이 저장된다. create-react-app을 사용해 디렉토리를  react 환경으로 설정 한다.
 * 'cd 디렉토리' 만들어둔 디렉토리 경로로 이동한다.
@@ -31,7 +31,7 @@ description: 2021.03.29 - 월요일
 * 'npm run start' terminal에 입력해 npm으로 서버를 시작한다.
 * ctrl + c &gt; 'y' 서버를 종료한다. &gt; 확인
 
-![](../../../.gitbook/assets/2%20%28108%29.png)
+![](../../../.gitbook/assets/2%20%28109%29.png)
 
 * ip, port번호로 작성된 주소를 터미널에 보여준다. 해당 주소 중 하나로 브라우저에서 확인할 수 있다.
 * Local : 로컬 주소 Your Network : 공유 네트워크 주소
@@ -66,11 +66,19 @@ description: 2021.03.29 - 월요일
 * js 컴포넌트에 css파일을 import해 지정한다. 서버가 화면을 읽어 브라우저를 구성할때 js컴포넌트를 로드하면서 css파일도 로드해 디자인 하게된다.
 * index.css는 index.js 시작문서의 css이고 App.css는 index.js가 돔 구성할때 가져오는 App.js 컴포넌트에 대한 css이다.
 
-### 5. 배포하기
+### 5. DEPLOY \(배포\)하기
+
+![&#xAC1C;&#xBC1C;&#xC790;&#xB3C4;&#xAD6C; &amp;gt; Network](../../../.gitbook/assets/2%20%28107%29.png)
+
+* 브라우저에서 강력새로고침을 하면 캐시가 모두 제거되‌고 개발자도구의 Network에서보면 1.7MB의 리소스가 다운되는 것을 확인할 수 있다.
+* 리액트가 개발의 편의성을 위해 추가한 기능들에 대한 리소스로 create-react-app 개발환경은 무거운 환경임을 알 수 있다.
+* 개발자 혼자 local환경에서 사용하는 것은 괜찮지만 모든 클라이언트들에게 저 1.7MB를 받게 하는것은 보안상문제를 일으킬 수 있고 문제가 될 수 있다.
+* 위 문제를 피하기 위해 실행이 아닌 배포를 해야한다. 'npm run start' X 'npm run build' production mode의 어플리케이션을 만들\(빌드 할\)때에는 위 명령어를 사용한다.
 
 ![build](../../../.gitbook/assets/1%20%28136%29.png)
 
-* 
+* 'npm run build'명령어를 통해 생성된 build 파일
+
 ## 더보기
 
 ### 앱 설치 1 : npm
