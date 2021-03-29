@@ -37,9 +37,9 @@ description: 2021.03.29 - 월요일
 * Local : 로컬 주소 Your Network : 공유 네트워크 주소
 * 더보기 - VSCode : terminal
 
-### 4. dir 살펴보기 : JS, 컴포넌트
+### 4. dir 살펴보기 : JS, CSS, 컴포넌트
 
-![](../../../.gitbook/assets/1%20%28134%29.png)
+![](../../../.gitbook/assets/1%20%28135%29.png)
 
 * create-react-app이 제공하는 기본 샘플 어플리케이션을 살펴보자 어떤 디렉토리 구조이며 어떤 파일을 수정해야하는지 알 수 있다.
 * public은 서버가 실행하는 index.html이 위치한다. index.html 의 &lt;body&gt;태그에 &lt;div&gt;태그가 작성되어있는데 화면에 표시되는 모든 컴포넌트들은 저 &lt;div&gt;태그 안에 존재해야 한다.
@@ -60,6 +60,11 @@ description: 2021.03.29 - 월요일
 ![chrome + &#xAC1C;&#xBC1C;&#xC790;&#xB3C4;&#xAD6C; + vscode](../../../.gitbook/assets/1%20%28132%29.png)
 
 * 이렇게 App.js의 return 태그를 수정하면 create-react-app에 의해 설정된 파일이 수정 &gt; save 할 때마다 브라우저를을 자동으로 reload해준다.
+
+![](../../../.gitbook/assets/1%20%28134%29.png)
+
+* js 컴포넌트에 css파일을 import해 지정한다. 서버가 화면을 읽어 브라우저를 구성할때 js컴포넌트를 로드하면서 css파일도 로드해 디자인 하게된다.
+* index.css는 index.js 시작문서의 css이고 App.css는 index.js가 돔 구성할때 가져오는 App.js 컴포넌트에 대한 css이다.
 
 ## 더보기
 
