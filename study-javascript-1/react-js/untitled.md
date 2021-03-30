@@ -110,3 +110,9 @@ class App extends Component {
 
 * App 클래스에서는 위와 같이 사용자 정의태그에 props로 지정된 속성을 넣어 출력할 수 있다.
 
+## 더보기
+
+### React Developer Tools
+
+* chrome [https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm\_source=chrome-ntp-icon](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm_source=chrome-ntp-icon)
+
