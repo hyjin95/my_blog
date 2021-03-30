@@ -115,4 +115,5 @@ class App extends Component {
 ### React Developer Tools
 
 * chrome [https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm\_source=chrome-ntp-icon](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm_source=chrome-ntp-icon)
+* 개발자 도구에서 컴포넌트를 확인할 수 있다. 리액트 분석에 용이한 도구
 
