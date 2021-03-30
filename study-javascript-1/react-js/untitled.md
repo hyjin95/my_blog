@@ -4,6 +4,8 @@ description: 2021.03.29 - 월요일 2021.03.30 - 화요일
 
 # 컴포넌트 제작
 
+## 컴포넌트 제작
+
 ### 1. react 없이 html 작성하기
 
 ```markup
@@ -74,4 +76,37 @@ export default App;
 
 ### 3. props
 
-* 
+* 컴포넌트로 사용자 태그를 정의해 패키징하면 다른 사용자들이 사용할 수 있게 된다. 재사용성이 높아지지만 항상 똑같은 결과를 보여줄것이다. 같은 컴포넌트를 사용하더라도 사용자마다 원하는 값을 넣어 표시할 수 있게 해주는 것이 바로 리액트의 props이다.
+
+```javascript
+class Subject extends Component {
+  render(){
+    return (
+      <header>
+            <h1>{this.props.title}</h1>
+            {this.props.sub}
+      </header>
+    );
+  }
+}
+```
+
+* 리액트 에서 this.props로 변수를 설정 할 수 있다.
+
+```javascript
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Subject title="WEB" sub="World Wide Web!"></Subject>
+        <Subject title="React" sub="For UI"></Subject>
+        <TOC></TOC>
+        <Content></Content>
+      </div>
+    );
+  }
+}
+```
+
+* App 클래스에서는 위와 같이 사용자 정의태그에 props로 지정된 속성을 넣어 출력할 수 있다.
+
