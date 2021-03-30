@@ -1,5 +1,5 @@
 ---
-description: 201.03.29 - 월요일
+description: 2021.03.29 - 월요일 2021.03.30 - 화요일
 ---
 
 # 컴포넌트 제작
@@ -72,6 +72,6 @@ export default App;
 
 ![&#xACB0;&#xACFC;](../../.gitbook/assets/1%20%28137%29.png)
 
-### 3. 
+### 3. props
 
 * 
