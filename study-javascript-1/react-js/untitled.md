@@ -115,5 +115,9 @@ class App extends Component {
 ### React Developer Tools
 
 * chrome [https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm\_source=chrome-ntp-icon](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm_source=chrome-ntp-icon)
+
+![](../../.gitbook/assets/1%20%28139%29.png)
+
 * 개발자 도구에서 컴포넌트를 확인할 수 있다. 리액트 분석에 용이한 도구
+* 위 사진과 같이 개발자도구에서 props를 수정 &gt; enter 시 브라우저에 바로 적용되는 것을 볼 수 있다.
 
