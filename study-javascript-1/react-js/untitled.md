@@ -135,6 +135,10 @@ class TOC extends Component {
 * src 디렉토리 밑에 'components'폴더를 만들어 컴포넌트들을 정리하자.
 * 위 소스는 TOC.js로 App.js에 정의했던 TOC class를 별도의 파일로 분리한 것이다. 1번 : react로부터 Component를 import해야 Component클래스를 상속받을 수 있다. 17번 : export default 이름; 이 작성되어 있어야 외부에서 TOC class를 사용할 수 있다.
 
+![](../../.gitbook/assets/2%20%28111%29.png)
+
+* 모든 컴포넌트를 정리한 모습이다.
+
 ## 더보기
 
 ### React Developer Tools
