@@ -110,6 +110,31 @@ class App extends Component {
 
 * App 클래스에서는 위와 같이 사용자 정의태그에 props로 지정된 속성을 넣어 출력할 수 있다.
 
+### 4. Component 파일 분리하기
+
+```javascript
+import { Component } from 'react';
+
+class TOC extends Component {
+    render(){
+      return (
+        <nav>
+            <ul>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ul>
+        </nav>
+      );
+    }
+  }
+
+  export default TOC;
+```
+
+* src 디렉토리 밑에 'components'폴더를 만들어 컴포넌트들을 정리하자.
+* 위 소스는 TOC.js로 App.js에 정의했던 TOC class를 별도의 파일로 분리한 것이다. 1번 : react로부터 Component를 import해야 Component클래스를 상속받을 수 있다. 17번 : export default 이름; 이 작성되어 있어야 외부에서 TOC.js를 사용할 수 있다.
+
 ## 더보기
 
 ### React Developer Tools
