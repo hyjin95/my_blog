@@ -29,7 +29,15 @@
 ```
 
 * 
+```markup
+<meta http-equiv="refresh" content="5;url=http://www.tcpschool.com">
+```
 
+* 
+```markup
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
+* 
 ## &lt;body&gt;
 
