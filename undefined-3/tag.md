@@ -28,9 +28,18 @@
 * **robots** content="noindex, nofollow" 위 처럼 content를 작성하면 구글에서 자신의 사이트가 색인화 되거나 링크연결이 되지 않도록 설정할 수 있다. 사이트 개발중이거나 일부 페이지가 노출되지 않길 원할때 사용하는 속성이다. content="index, follow" 페이지 색인화, 링크 연결을 다시 활성화 한다.
 * **generator** 해당문서를 생성하기 위해 사용된 소프트웨어 메타데이터
 * **content** name이나 http-equiv속성에 대한 메타 정보를 명시한다. name 또는 http-equiv속성이 명시되었다면 content속성이 반드시 작성되어야 한다. 반대로 content속성은 name이나 http-equiv속성이 없다면 작성될 수 없다
-* **http-equiv** - content-type : 문서의 문자 타입 지정, html5부터는 meta태그에 charset속성을 추가했다. - refresh : 새로고침, 페이지 이동을 위한 문서의 간격 및 url을 정의한다. - default-style : 선호 스타일 시트
+* **http-equiv** - content-type : 문서의 문자 타입 지정, html5부터는 meta태그에 charset속성을 추가했다. - refresh : 새로고침, 페이지 이동을 위한 문서의 간격 및 url을 정의한다. - default-style : 선호 스타일 시트 HTTP header대신 사용되기도 한다. http-equiv속성은 content에 명시된 값에 대한 헤더를 제공한다. 더보기 : HTTP header\(헤더\)
 * **charset** html5부터 지원하는 속성 기존의 http-equiv="content-type" content="html/text"방식보다 간결하다.
 * **scheme** html5부터 지원하지 않는 속성 scheme="format 또는 URI" 해당 문서의 내부 값을를 브라우저가 이해하기 위한 format이나 정보의 URI를 명시한다.  
 
 ## &lt;body&gt;
+
+## 더보기
+
+### HTTP header\(헤더\)
+
+* 클라이언트와 서버가 요청, 응답으로 부가적인 정보를 전송할 수 있다. 요청일때에는 요청에 대한 정보를, 응답일 때에는 응답에 대한 정보를 담아 서버, 클라이언트에 보낸다.
+* 공통헤더 요청, 응답 모두에서 사용되는 헤더 Date, Connectionm, Content-Length, Cache-Control, Content-Type, Content-Language
+* 요청 헤더 Host, User-Agent, Accept, Cookie, Origin, If-Modified-Since, Aurhorization
+* 응답 헤더 Server, Access-Control-Allow-Origin, Allow, Content-Disposition, Location, Content-Secutiry-Policy 
 
