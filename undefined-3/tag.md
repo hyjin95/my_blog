@@ -19,6 +19,16 @@
 
 * 검색엔진을 위한 키워드\(keyword\)를 정의하는 메타데이터 검색엔진에게 해당 문서의 중요 태그, 키워드 정보를 제공한다.
 
+```markup
+<meta name="description" content="HTML meta tag page">
+```
+
+* 
+```markup
+<meta name="author" content="TCPSchool">
+```
+
+* 
 
 
 ## &lt;body&gt;
