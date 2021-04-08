@@ -368,10 +368,11 @@
 * [Data Type \(자료형\)](undefined-3/data-type/README.md)
   * [참조형, 원시형](undefined-3/data-type/undefined-2-1.md)
 * [Java](undefined-3/java/README.md)
+  * [JSP](undefined-3/java/jsp.md)
   * [Spring](undefined-3/java/spring/README.md)
     * [Spring boot : annotation](undefined-3/java/spring/spring-boot-annotation.md)
-* [HTML](undefined-3/html.md)
-* [Tag 태그](undefined-3/tag.md)
+* [HTML](undefined-3/html/README.md)
+  * [Tag 태그](undefined-3/html/tag.md)
 
 ## study - javascript <a id="study-javascript-1"></a>
 
