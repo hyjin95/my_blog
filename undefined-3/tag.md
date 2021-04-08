@@ -16,33 +16,21 @@
 
 ```markup
 <meta name="keyword" content="HTML, meta, tag, element, reference">
-```
-
-* 검색엔진을 위한 키워드\(keyword\)를 정의하는 메타데이터 검색엔진에게 해당 문서의 중요 태그, 키워드 정보를 제공한다.
-
-```markup
 <meta name="description" content="HTML meta tag page">
-```
-
-* 웹 페이지에 대한 설명\(description\)을 정의하는 메타데이터
-
-```markup
 <meta name="author" content="TCPSchool">
-```
-
-* 문서의 저자\(author\)를 정의하는 메타데이터
-
-```markup
 <meta http-equiv="refresh" content="5;url=http://www.tcpschool.com">
-```
-
-* 5초뒤에 다른 페이지로 리다이렉트\(redirect\)시키는 메타데이터
-
-```markup
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-* 모든 장치\(디바이스\)에서 웹 사이트가 잘 보이도록 뷰포트\(viewport\)를 설정하는 메타데이터
+* keyword 검색엔진을 위한 키워드\(keyword\)를 정의하는 메타데이터 검색엔진에게 해당 문서의 중요 태그, 키워드 정보를 제공한다.
+* description 웹 페이지에 대한 설명\(description\)을 정의하는 메타데이터 검색엔진은 검색결과와 함께 이 설명을 가져간다.
+* author 문서의 저자\(author\)를 정의하는 메타데이터
+* refresh 5초뒤에 다른 페이지로 리다이렉트\(redirect\)시키는 메타데이터
+* viewport 모든 장치\(디바이스\)에서 웹 사이트가 잘 보이도록 뷰포트\(viewport\)를 설정하는 메타데이터
+* generator 해당문서를 생성하기 위해 사용된 소프트웨어 메타데이터
+* content name이나 http-equiv속성에 대한 메타 정보를 명시한다.
+* http-equiv - content-type : 문서의 문자 타입 지정, html5부터는 meta태그에 charset속성을 추가했다. - refresh : 새로고침, 페이지 이동을 위한 문서의 간격 및 url을 정의한다. - default-style : 선호 스타일 시트
+* charset html5부터 지원하는 속성으로 기존 http-equiv="content-type" content="html/text"방식보다 간결하다. 
 
 ## &lt;body&gt;
 
