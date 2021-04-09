@@ -358,9 +358,6 @@
 
 * [참고](undefined-3/undefined-2.md)
 * [cmd, git, terminal 명령어](undefined-3/undefined-1.md)
-* [Git](undefined-3/git/README.md)
-  * [용어](undefined-3/git/untitled.md)
-  * [설치 및 실행](undefined-3/git/undefined.md)
 * [DB](undefined-3/db-1/README.md)
   * [DB 릴레이션 용어](undefined-3/db-1/db.md)
 * [SQL](undefined-3/undefined/README.md)
@@ -384,4 +381,11 @@
   * [컴포넌트 제작](study-javascript-1/react-js/untitled.md)
   * [state](study-javascript-1/react-js/state.md)
 * [Node JS & React JS : Bolier-Plate](study-javascript-1/node-js-and-react-js-bolier-plate.md)
+
+## STUDY - 형상관리
+
+* [Git](study/git/README.md)
+  * [용어](study/git/untitled.md)
+  * [설치 및 실행](study/git/undefined.md)
+* [SVN](study/svn.md)
 
