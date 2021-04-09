@@ -12,12 +12,9 @@
 * [KOSMO](java-study/1-days/README.md)
   * [Git](java-study/1-days/untitled-11.md)
   * [Debug note](java-study/1-days/debug-note.md)
-  * [단축키](java-study/1-days/undefined.md)
   * [오류](java-study/1-days/undefined-1.md)
   * [세미 프로젝트 - 영화예매](java-study/1-days/undefined-3.md)
   * [파이널 프로젝트 - BoBeat](java-study/1-days/bobeat.md)
-  * [Spring-boot : annotation](java-study/1-days/spring-boot-annotation/README.md)
-    * [환경설정 annotation](java-study/1-days/spring-boot-annotation/annotation.md)
   * [1 Days - 설치 및 Java 자료형](java-study/1-days/1-days-java.md)
   * [2 Days - 인스턴스화, 변수, 초기화](java-study/1-days/2-days.md)
   * [3 Days - 변수, 연산자와 리턴값](java-study/1-days/3-days.md)
@@ -354,10 +351,16 @@
   * [Nexacro2](nextsystem/next/nexacro2.md)
   * [vue.js](nextsystem/next/vue.js.md)
 
+## STUDY - 참고 <a id="study-1"></a>
+
+* [참고 링크](study-1/undefined-2-1.md)
+* [단축키](study-1/undefined-2.md)
+* [Spring-boot : annotation](study-1/spring-boot-annotation/README.md)
+  * [환경설정 annotation](study-1/spring-boot-annotation/annotation.md)
+* [cmd, git, terminal 명령어](study-1/undefined-1.md)
+
 ## Study <a id="undefined-3"></a>
 
-* [참고](undefined-3/undefined-2.md)
-* [cmd, git, terminal 명령어](undefined-3/undefined-1.md)
 * [DB](undefined-3/db-1/README.md)
   * [DB 릴레이션 용어](undefined-3/db-1/db.md)
 * [SQL](undefined-3/undefined/README.md)
