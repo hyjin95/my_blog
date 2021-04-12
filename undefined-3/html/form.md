@@ -16,3 +16,11 @@ description: 2021.04.12 - 월요일
 
 * form data를 서버에 제출한 뒤 받는 응답이 열릴 위치를 명시한다.
 
+### JS에서의 사용
+
+```javascript
+form.target = '_self';
+```
+
+* form = form태그의 name값
+
