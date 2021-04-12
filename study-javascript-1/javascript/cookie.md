@@ -50,4 +50,11 @@ document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
 
 * 쿠키는 여러 옵션을 갖고있는데 몇가지 옵션은 반드시 명시해야 한다.
 * 옵션은 key=value의 뒤에 나열하고 ; 세미콜론으로 구분한다.
+* **path** path=/mypath, path=/admin, path=/ URL path의 접두사로 해당 경로나 경로의 하위에 있는 페이지에서만 cookie에 접근할 수 있도록 한다. 절대경로를 사용하고 기본값은 현재경로
+* **domain** domain=site.com cookie에 접근가능한 도메인을 지정한다. 제약이 존재한다. 옵션에 값이 없으면 쿠키를 설정한 도메인으로 지정된다. 서브도메인에서는 쿠키 정보를 얻을 수 없다. 서브도메인에서 접근하려면 쿠키 설정시 domain옵션에 설정해주어야 한다.
+* **exprise, max-age** 유효일자와 만료기간 옵션이 지정되지 않으면 쿠키는 브라우저가 닫힐때 삭제된다. = session cookie exprise나 max-age를 설정하면 브라우저를 닫아도 cookie는 삭제되지않는다.
+* **exprise\(유효일자\)** 유효일자는 GMT 포맷으로 설정해야한다. date.toUTCString으로 포맷을 GMT로 변경할 수 있다. 옵션값을 과거로 지정하면 쿠키는 삭제된다.
+* **max-age\(만료기간\)** 현재부터 설정하고자 하는 만료일시 까지의 시간을 초로 환산한 값을 갖는다. 0이나 음수값을 설정하면 쿠키는 삭제된다.
+* **secure** 이 옵션을 설정하면 Https로 통신하는 경우에만 cookie가 전송된다. 설정하지 않으면 기본값으로 http, https모두에서 쿠키에 접근할 수 있다. 쿠키에 보안을 지켜야해 암호화되지않는 http연결을 막을때 사용하는 옵션
+* **semesite** xx
 
