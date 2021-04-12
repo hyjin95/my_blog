@@ -379,6 +379,7 @@
 * [JavaScript](study-javascript-1/javascript/README.md)
   * [화살표 함수](study-javascript-1/javascript/undefined.md)
   * [JSON과 JavaScript Object 차이](study-javascript-1/javascript/json-javascript-object.md)
+  * [삼항연산자 : 물음표?와 콜론:](study-javascript-1/javascript/undefined-1.md)
 * [React JS](study-javascript-1/react-js/README.md)
   * [리액트 개발환경](study-javascript-1/react-js/undefined.md)
   * [컴포넌트 제작](study-javascript-1/react-js/untitled.md)
