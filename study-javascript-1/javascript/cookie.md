@@ -10,3 +10,11 @@
 
 ### document.cookie
 
+```javascript
+alert( document.cookie ); // cookie1=value1; cookie2=value2;...
+```
+
+* 현재 브라우저에 현재 페이지에 관련된 쿠키가 있는지 알아볼 수 있다.
+* name = value 의 쌍으로 구성되어 있다.
+* 각 쌍은 ; 세미 콜론으로 구분한다. 쌍 하나는 하나의 독립된 쿠키를 나타낸다.
+
