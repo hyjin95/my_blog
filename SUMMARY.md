@@ -395,11 +395,11 @@
   * [설치 및 실행](study/git/undefined.md)
 * [SVN](study/svn.md)
 
----
-
-* [Untitled](untitled.md)
-
 ## study - license
 
 * [SQLD](study-license/sqld.md)
+
+## study - window
+
+* [가상드라이브](study-window/undefined.md)
 
