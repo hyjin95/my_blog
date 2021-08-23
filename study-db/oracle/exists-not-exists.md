@@ -4,12 +4,29 @@ description: 2021.08.23  월요일
 
 # EXISTS, NOT EXISTS
 
-사용 예
+### EXISTS
+
+```sql
+--id를 기준으로 두 테이블에 모두 존재하는 데이터 조
+select * from tableA a 
+where exists (select * from tableB aa where a.id = aa.id ); 
+```
+
+* 두 테이블 간에 where절에 걸리는 값 기준으로 두 테이블에 함께 존재하는 데이터만 가져온다.
+
+### NOT EXISTS
 
 ```sql
 --id를 기준으로 a테이블에만 있는 데이터 조회
 select * from tableA a 
 where not exists (select * from tableB aa where a.id = aa.id ); 
+```
+
+* exists 명령어와 반대되는 명령어로 where절의 조건을 기준으로 서브쿼리에 작성되는 테이블에 존재하지 않고 A테이블에 존재하는 데이터만 출력한다.
+
+### 사용 예제
+
+```sql
 --id를 기준으로 a테이블에만 있는 데이터 삭제
 delete * from tableA a 
 where not exists (select * from tableB aa where a.id = aa.id ); 
