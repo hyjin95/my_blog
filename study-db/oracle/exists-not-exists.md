@@ -7,7 +7,7 @@ description: 2021.08.23  월요일
 ### EXISTS
 
 ```sql
---id를 기준으로 두 테이블에 모두 존재하는 데이터 조
+--id를 기준으로 두 테이블에 모두 존재하는 데이터 조회
 select * from tableA a 
 where exists (select * from tableB aa where a.id = aa.id ); 
 ```
