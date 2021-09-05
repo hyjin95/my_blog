@@ -356,6 +356,8 @@
 * [info](undefined/info.md)
 * [2021 - 2학기](undefined/2021-2/README.md)
   * [컴퓨터과학 개론](undefined/2021-2/undefined.md)
+  * [시뮬레이션](undefined/2021-2/undefined-1/README.md)
+    * [1강 : 결정적 시뮬레이션](undefined/2021-2/undefined-1/1.md)
   * [C++프로그래밍](undefined/2021-2/c++/README.md)
     * [1강 : C++소개](undefined/2021-2/c++/1-c++.md)
 
