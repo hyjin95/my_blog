@@ -27,8 +27,6 @@
 
 ### 1강 : C++소개
 
-{% file src="../../../.gitbook/assets/c++-01\_-.pdf" caption="C++ 프로그래밍 1강 " %}
-
 * 소스파일의 확장자 종류
   * '.cpp'
   * '.cxx'
@@ -56,7 +54,7 @@
   * 한 행에 한 문장만을 작성한다.
   * \#include : 헤더파일 삽입
   * \#define, \#undef : 매크로 선언 및 해제
-  * \#if, \#ifdef, \#ifndef : 조건부 컴파일
+  * \#if, \#ifdef, \#ifndef +  \#else, \#endif : 조건부 컴파일
 
 ```cpp
 #include <iostream>
