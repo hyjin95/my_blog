@@ -356,7 +356,8 @@
 * [info](undefined/info.md)
 * [2021 - 2학기](undefined/2021-2/README.md)
   * [컴퓨터과학 개론](undefined/2021-2/undefined.md)
-  * [C++프로그래밍](undefined/2021-2/c++.md)
+  * [C++프로그래밍](undefined/2021-2/c++/README.md)
+    * [1강 : C++소개](undefined/2021-2/c++/1-c++.md)
 
 ## STUDY - 참고 <a id="study-1"></a>
 
