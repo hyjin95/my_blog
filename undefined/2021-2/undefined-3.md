@@ -21,6 +21,11 @@ description: 21.09.11 토요일
 
 ### Azure 가상머신 연결하기
 
+* 상단 Microsofr Azure 클릭하여 메인페이지로 이동
+* 만들어진 가상머신 클릭
+
+![](../../.gitbook/assets/ssh-1.png)
+
 * '연결'탭 클릭
 
 ![](../../.gitbook/assets/ssh-.png)
