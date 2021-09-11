@@ -93,7 +93,14 @@ runcmd:
 
 ![](../../../.gitbook/assets/9%20%285%29.png)
 
-![](../../../.gitbook/assets/10%20%282%29.png)
+* DBeaver 프로그램 다운로드
+* 데이터베이스 &gt; 새 데이터베이스 연결
 
 ![](../../../.gitbook/assets/8%20%2811%29.png)
+
+* SQL Server선택
+
+![](../../../.gitbook/assets/10%20%282%29.png)
+
+* 서버이름 : HOST
 
