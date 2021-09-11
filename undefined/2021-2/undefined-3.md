@@ -17,3 +17,19 @@ description: 21.09.11 토요일
 * 학생용으로 가입 &gt; 기본적으로 100크레딧을 제공함
 * [https://azure.microsoft.com/ko-kr/free/students/](https://azure.microsoft.com/ko-kr/developer/students/)
 
+### Azure 가상머신 만들기
+
+### Azure 가상머신 연결하기
+
+* '연결'탭 클릭
+
+![](../../.gitbook/assets/ssh-.png)
+
+* 'SSH' 탭 클릭
+* 4.번의 명령어 복사
+*  Window : powerShell  Mac : Terminal
+
+![](../../.gitbook/assets/1%20%28141%29.png)
+
+* 복사한 명령어 붙여넣기 ssh -i  AzureUser@52.170.251.97 &gt; 
+
