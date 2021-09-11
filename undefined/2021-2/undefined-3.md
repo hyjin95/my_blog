@@ -36,5 +36,7 @@ description: 21.09.11 토요일
 
 ![](../../.gitbook/assets/1%20%28141%29.png)
 
-* 복사한 명령어 붙여넣기 ssh -i  AzureUser@52.170.251.97 &gt; 
+* 복사한 명령어 붙여넣기 ssh  AzureUser@52.170.251.97 &gt; '- i &lt; &gt;'부분은 삭제 enter
+* 암호 입력  enter
+* 연결됨 확인 끝
 
