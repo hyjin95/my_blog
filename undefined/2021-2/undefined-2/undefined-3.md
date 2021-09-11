@@ -17,7 +17,7 @@ description: 21.09.11 토요일
 * 학생용으로 가입 &gt; 기본적으로 100크레딧을 제공함
 * [https://azure.microsoft.com/ko-kr/free/students/](https://azure.microsoft.com/ko-kr/developer/students/)
 
-### Azure 가상머신 만들기
+### 수업자료
 
 {% file src="../../../.gitbook/assets/09.11-7.-\_-.pptx" %}
 
