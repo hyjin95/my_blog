@@ -41,7 +41,7 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
 	 String path = "C:\\workspace_java\\dev_java\\";//캡처이미지가 생성된 경로
 ```
 
-* 34번 : 새로고침을 위해 Container인스턴스 변수를 this\(JFrame\)의 패널을 읽어오는 getContentPane메서드로 구현한다.
+* 34번 : 새로고침을 위해 Container인스턴스 변수를 this(JFrame)의 패널을 읽어오는 getContentPane메서드로 구현한다.
 * 36번 : 캡처이미지가 생성되는 주소가 필요하다.
 
 ### 생성자
@@ -126,12 +126,17 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
 * key를 발급받으려면 clientID와 clientSecret이 필요하다.
 * 6번 : code변수로 요청한 일이 key발급인지, 값비교인지 구분한다.
 * 9번 : 사용자가 입력한 값을 네이버서버에 전송하기 위해 쿼리스트링을 작성한다.
-* 10번 : String,String타입의 Map 함수를 제공한다. - HashMap타입 변수로,  동기화를 지원하지않는다.
+* 10번 : String,String타입의 Map 함수를 제공한다.\
+  \- HashMap타입 변수로,  동기화를 지원하지않는다.
 * 11,12번 : put메서드를 이용해 지정된 key값과 id, secret을 담은 변수를 넣어준다.
-* 13번 : responseBody변수는 get메서드를 호출한다. - 파라미터에 apiURL와 id,Secret이 담긴 HashMap변수가 담긴다. - get메서드는 key값을 반환하는 메서드이다.
+* 13번 : responseBody변수는 get메서드를 호출한다.\
+  \- 파라미터에 apiURL와 id,Secret이 담긴 HashMap변수가 담긴다.\
+  \- get메서드는 key값을 반환하는 메서드이다.
 * 15번 : key값 출력 단위테스트
-* 17,18번 : Image를 발급받는 클래스를 호출하여 파라미터 key값으로 이미지이름을 받아온다. - 이미지 발급 클래스.getFileName\(responseBody=key\)
-* 19번 : file이름만 넘어온것으로, JVM이 이미지를 찾으려면 확장자까지 필요하다. - String값은 원본이 변하지않으므로 반드시 대입연산자를 이용해 값을 변경한다.
+* 17,18번 : Image를 발급받는 클래스를 호출하여 파라미터 key값으로 이미지이름을 받아온다.\
+  \- 이미지 발급 클래스.getFileName(responseBody=key)
+* 19번 : file이름만 넘어온것으로, JVM이 이미지를 찾으려면 확장자까지 필요하다.\
+  \- String값은 원본이 변하지않으므로 반드시 대입연산자를 이용해 값을 변경한다.
 * 21번 : fileName가 새로고침 되었는지 단위테스트
 
 ### actionPerformed - 새로고침
@@ -155,7 +160,7 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
 ```
 
 * 4-11번 : 새로고침 이벤트가 발생하면 getImage메서드를 실행해 새로운 fileName을 받아와 jlb에 새 이미지를 set한다.
-* 12번 : cont.ravalidate\( \)메서드로 화면 레이아웃을 새 이미지로 재설정한다.
+* 12번 : cont.ravalidate( )메서드로 화면 레이아웃을 새 이미지로 재설정한다.
 
 ### Nkey, NkeyResult클래스에서 가져온 메서드
 
@@ -224,4 +229,3 @@ public class NaverCaptcharTest extends JFrame implements ActionListener {
     }
     /////////////////////////가져온 메서드 key발급///////////////////////////////
 ```
-

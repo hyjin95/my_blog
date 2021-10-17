@@ -2,15 +2,17 @@
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
-* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+* 사용언어 : JAVA(JDK)1.8.0\_261 : Oracle.com
+* 사용Tool \
+  \- Eclipse : Eclipse.org\
+  \- Toad DBA Suite for Oracle 11.5
 
 ## level4 복습
 
 ### run메서드 호출
 
 * 실행시킬 run메서드의 소유주를 알고 start함수를 사용한다.
-* 소유주.start\( \);
+* 소유주.start( );
 
 ### while문 무한루프
 
@@ -25,10 +27,14 @@
 * 오라클서버나 톰캣과같은 웹서버와 연동할 때
 * 클라우드 서비스를 제공하는 경우
 
-### Thread&Vector
+### Thread\&Vector
 
-* 동시접속이 일어나는 경우에 thread를 부여해서 관리한다. - 동시접속하는 사람들의 행동을 별개로 동작시켜야 하므로 - 스레드를 부여하면 접속자의 행동에 대한 조작이 가능해진다.
-* 여러 접속자를 관리해야하므로 Vector에 접속자를 담아 관리한다. - Vector&lt;ChatServerThread&gt; - ChatServerThread타입이지만 실제로는 접속자들의 개별 thread를 담는 List이다.
+* 동시접속이 일어나는 경우에 thread를 부여해서 관리한다.\
+  \- 동시접속하는 사람들의 행동을 별개로 동작시켜야 하므로\
+  \- 스레드를 부여하면 접속자의 행동에 대한 조작이 가능해진다.
+* 여러 접속자를 관리해야하므로 Vector에 접속자를 담아 관리한다.\
+  \- Vector\<ChatServerThread>\
+  \- ChatServerThread타입이지만 실제로는 접속자들의 개별 thread를 담는 List이다.
 
 ### 사용자의 접속경로
 
@@ -45,16 +51,23 @@
 
 ### ServerThread의 oos, ois
 
-* chatServer의 socket과 serverSocket을 동기화한다. - socket.accept\( \)함수를 통과하면 server의 socket은 접속자 정보를 수집한다. - serverThread는 해당 접속자의 정보가 담긴 socket으로 oos, ois를 생성한다.
-* 말하기, 듣기를 위해서는 반드시 해당 소켓객체가 생성되어있어야한다. - socket이 먼저
-* oos : ObjectOutputStream\(client.getOutputStream\); - client정보가 담긴 socket으로 oos 생성
-* ois : ObjectInputStream\(client.getInputStream\); - client정보가 담긴 socket으로 ois 생성
+* chatServer의 socket과 serverSocket을 동기화한다.\
+  \- socket.accept( )함수를 통과하면 server의 socket은 접속자 정보를 수집한다.\
+  \- serverThread는 해당 접속자의 정보가 담긴 socket으로 oos, ois를 생성한다.
+* 말하기, 듣기를 위해서는 반드시 해당 소켓객체가 생성되어있어야한다.\
+  \- socket이 먼저
+* oos : ObjectOutputStream(client.getOutputStream);\
+  \- client정보가 담긴 socket으로 oos 생성
+* ois : ObjectInputStream(client.getInputStream);\
+  \- client정보가 담긴 socket으로 ois 생성
 * client정보가담긴 server의 socket이 null상태라면 nullPointerException이 발생한다.
 
 ### ServerThread생성자
 
 * serverthread에서 말하기는 send, broadCasting메서드가, 듣기는 run함수가 처리한다.
-* 생성자의 역할 - 접속과 동시에 입장방송을 한다. : 로그인처리 - 단톡방 생성시 벡터에 접속자 thread를 추가한다. : 멀티스레드제어
+* 생성자의 역할\
+  \- 접속과 동시에 입장방송을 한다. : 로그인처리\
+  \- 단톡방 생성시 벡터에 접속자 thread를 추가한다. : 멀티스레드제어
 
 ### ServerThread run메서드
 
@@ -63,8 +76,12 @@
 
 ### BroadCasting, send메서드
 
-* broadCasting - 멀티스레드 말하기용 - 조건 없이 Vector안의 모든 접속자에게 말한다.
-* send - 싱글스레드 말하기용 - 말하는 상대의 조건이 있는 경우에 사용한다.
+* broadCasting\
+  \- 멀티스레드 말하기용\
+  \- 조건 없이 Vector안의 모든 접속자에게 말한다.
+* send\
+  \- 싱글스레드 말하기용\
+  \- 말하는 상대의 조건이 있는 경우에 사용한다.
 
 ### 접속자 정보 유지
 
@@ -73,39 +90,55 @@
 3. 접속 변수마다 thread를 부여한다.
 4. Vector에 담아 관리, 유지한다.
 
-### 객체주입\(인스턴스화\)
+### 객체주입(인스턴스화)
 
-* server - serverThread가 server의 안에 주입
-* client - clientThread가 client의 안에 주입 - client가 login의 안에 주입 - pictureMessage가 client의 안에 주입 되어야한다.
+* server\
+  \- serverThread가 server의 안에 주입
+* client\
+  \- clientThread가 client의 안에 주입\
+  \- client가 login의 안에 주입\
+  \- pictureMessage가 client의 안에 주입 되어야한다.
 
 ## 이모티콘 구현
 
 ### PictureMessage
 
 1. 이모티콘선택 화면을 띄워주는 클래스
-2. 버튼과 이모티콘을 배열로 선언하여 버튼에 이미지를 붙인다. - setIcon\( \)함수 사용
-3. 선택한 이모티콘 값이 유지되어 server - serverThread - clientThread 까지 가야 한다. - 값을 담을 멤버변수 선언
-4. 이모티콘은 일반대화와 같이 처리 되면 될 것이다. - 일반대화와 같이 처리하기 위해서는 기본값이 필요하다. - 멤버변수에 String으로 기본값을 준다.
+2. 버튼과 이모티콘을 배열로 선언하여 버튼에 이미지를 붙인다.\
+   \- setIcon( )함수 사용
+3. 선택한 이모티콘 값이 유지되어 server - serverThread - clientThread 까지 가야 한다.\
+   \- 값을 담을 멤버변수 선언
+4. 이모티콘은 일반대화와 같이 처리 되면 될 것이다.\
+   \- 일반대화와 같이 처리하기 위해서는 기본값이 필요하다.\
+   \- 멤버변수에 String으로 기본값을 준다.
 5. actionPerformed에서 선택한 버튼에 따라 멤버변수 값이 해당 이모티콘으로 초기화되어야한다.
 
 ### ChatClient
 
-1. 이모티콘버튼을 누르면 PictureMessage화면이 나온다. - 인스턴스화, actionPerformed
-2. 기존의 입력내용을 말하는 구문에 이모티콘자리가 추가 되어야 한다. - protocol multi\#닉네임\#대화내용\#이모티콘
-3. 대화내용 없이 이모티콘만 있더라도 전송되는데 무리가 없어야 한다. - protocol multi\#닉네임\#\#이모티콘 - \#\#을 방지해야한다. - if문으로 대화입력값이 null 이거나 문자열이 1자 이하라면 기본 String값을 넣어준다. - JTextFeild의 기본값은 공백문자열이다.  - " "
+1. 이모티콘버튼을 누르면 PictureMessage화면이 나온다.\
+   \- 인스턴스화, actionPerformed
+2. 기존의 입력내용을 말하는 구문에 이모티콘자리가 추가 되어야 한다.\
+   \- protocol multi#닉네임#대화내용#이모티콘
+3. 대화내용 없이 이모티콘만 있더라도 전송되는데 무리가 없어야 한다.\
+   \- protocol multi#닉네임##이모티콘 - ##을 방지해야한다.\
+   \- if문으로 대화입력값이 null 이거나 문자열이 1자 이하라면 기본 String값을 넣어준다.\
+   \- JTextFeild의 기본값은 공백문자열이다.  - " "
 
 ### ChatServerThread
 
 1. run메서드에서 기존의 대화 처리 구문에 추가된다.
-2. if문을 사용해 이모티콘을 선택한 상황인지, 일반 대화를 하는 상황인지 구분해야한다. - 한번에 처리하기 위해 일반 대화를 하는 상황이라면 이모티콘을 담는 변수에 빈 문자열을 기본으로 초기화 시키고, 그 이후에 이모티콘이라면 변수에 이모티콘 값을 초기화 시킨다.
+2. if문을 사용해 이모티콘을 선택한 상황인지, 일반 대화를 하는 상황인지 구분해야한다.\
+   \- 한번에 처리하기 위해 일반 대화를 하는 상황이라면 이모티콘을 담는 변수에 빈 문자열을 기본으로 초기화 시키고, 그 이후에 이모티콘이라면 변수에 이모티콘 값을 초기화 시킨다.
 
 ### ChatClientThread
 
 1. 이모티콘을 불러와야 하는 클래스이므로 주소를 멤버변수로 생성한다.
 2. 기존의 대화 처리 구문에서 추가한다.
-3. 화면에 이모티콘을 '그리기'위해 스타일을 선언한다. - SimpleAttributeSet 클래스 사용
-4. 이모티콘이름이 넘어온 경우 - 해당 이름값과 PictureMessage의 멤버변수 이름값과 같다면, 위에서 만든 스타일을 해당 이미지+주소를 갖는 스타일로 초기화한다. - 화면에 해당 스타일\(이모티콘\)을 그리고, 다음 이모티콘을 받기 위해 clientThread에서 선언된 이름값을 초기화한다.
+3. 화면에 이모티콘을 '그리기'위해 스타일을 선언한다.\
+   \- SimpleAttributeSet 클래스 사용
+4. 이모티콘이름이 넘어온 경우\
+   \- 해당 이름값과 PictureMessage의 멤버변수 이름값과 같다면, 위에서 만든 스타일을 해당 이미지+주소를 갖는 스타일로 초기화한다.\
+   \- 화면에 해당 스타일(이모티콘)을 그리고, 다음 이모티콘을 받기 위해 clientThread에서 선언된 이름값을 초기화한다.
 5. 일반 대화인 경우 기존의 폰트 스타일을 적용하고 화면에 띄운다.
 
 후기 : 이제 추석연휴다. 재충전의 시간을 갖고 체력도 비축하고 그동한 했던 정리에 부족한 부분들을 메꾸는 시간을 가지도록 해야겠다.
-

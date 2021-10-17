@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 * 16번에서 MainActivity가 화면으로 그릴 xml을 지정
-* 17번에서 activity\_main에서 toolbar라는 id를 갖는 뷰객체를 가져와 Toolbar를 선언한다.
+* 17번에서 activity_main에서 toolbar라는 id를 갖는 뷰객체를 가져와 Toolbar를 선언한다.
 * 28번에서 기존 ActionBar에 toolbar를 set한다.
 
 ```java
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
 * 메뉴에 대한 리소스를 정의할 수 있는 메서드
 * 5번에서 메뉴로 사용할 xml을를 정한다.
-* 6번에서 menu\_main.xml로 만든 메뉴를 반환한다.
+* 6번에서 menu_main.xml로 만든 메뉴를 반환한다.
 
 ```java
     //액션 아이템 클릭 처리
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 * 아이템 선택 이벤트를 처리하느 메서드
 * 파라미터로 메뉴의 아이템을 받는다.
 * 3번의 switch문에서 선택된 아이텐의 아이디를 받아온다.
-* 4번 : 선택된 아이템의 아이디가 action\_create\_order라면
+* 4번 : 선택된 아이템의 아이디가 action_create_order라면
 * 6번 : Intent를 생성해 이동할 Acticity클래스를 지정한다.
 * 8번 : Activity이동 메서드
 
@@ -131,13 +131,13 @@ public class OrderActivity extends AppCompatActivity {
 ```
 
 * 18번 코드로 ActionBar의 참조를 받아온다.
-* 뒤로가기 버튼\(홈버튼\)을 추가하기위해 ActionBar의 기능을 빌려 쓰는 것이다.
+* 뒤로가기 버튼(홈버튼)을 추가하기위해 ActionBar의 기능을 빌려 쓰는 것이다.
 * 18번에서 ActionBar 유형의 객체를 반환해주고 20번 코드로 true값을 주면 뒤로가기 버튼이 toolbar에 생성된다.
 * OrderActivity화면에서 뒤로가기 버튼을 클릭하면 부모액티비티인 MainActivity로 이동한다.
 
-## res &gt; layout
+## res > layout
 
-### 코드 : activity\_main.xml
+### 코드 : activity_main.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -159,10 +159,10 @@ public class OrderActivity extends AppCompatActivity {
 </LinearLayout>
 ```
 
-* includ 태그를 이용해 res &gt; layout내의 xml을 id로 접근해 가져와 재사용할 수 있다.
+* includ 태그를 이용해 res > layout내의 xml을 id로 접근해 가져와 재사용할 수 있다.
 * res에서 가져오는 id값이기 때문에 '@+'를 붙여야 한다.
 
-### 코드 : activity\_order.xml
+### 코드 : activity_order.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -191,7 +191,7 @@ public class OrderActivity extends AppCompatActivity {
 * 부모 액티비티와 자식 액티비티의 관계를 이용해 화면을 그릴때에는 constraintLayout이 적합하다.
 * 16-19번 코드처럼 부모와의 관계에 layout을 설정 할 수 있기 때문이다.
 
-### 코드 : toolbar\_main.xml
+### 코드 : toolbar_main.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -204,11 +204,12 @@ public class OrderActivity extends AppCompatActivity {
 
 * ActionBar대신 사용할 Toolbar를 사용하기 위해 생성한 리소스 문서
 * 4번 : 툴바의 넓이는 기기와 맞기만 하면 된다.
-* 5번 : 툴바는 화면의 상단에만 존재해야하므로 기기와 맞추면 안된다. ?attr/actionBarSize 값을 줘 액션바와 같은 크기를 갖게 한다.
+* 5번 : 툴바는 화면의 상단에만 존재해야하므로 기기와 맞추면 안된다.\
+  ?attr/actionBarSize 값을 줘 액션바와 같은 크기를 갖게 한다.
 
-## res &gt; menu
+## res > menu
 
-### 코드 : menu\_main.xml
+### 코드 : menu_main.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -225,7 +226,7 @@ public class OrderActivity extends AppCompatActivity {
 
 * 7번 아이콘을 아이템으로서 자리가 있다면 첫번째 카테고리에 붙인다.
 
-## res &gt; values
+## res > values
 
 ### 코드 : strings.xml
 
@@ -236,7 +237,7 @@ public class OrderActivity extends AppCompatActivity {
 </resources>
 ```
 
-## res &gt; themes
+## res > themes
 
 ### 코드 : themes.xml
 
@@ -255,15 +256,14 @@ public class OrderActivity extends AppCompatActivity {
 
 ## 결과 : 애뮬레이터
 
-![](../../../.gitbook/assets/1%20%28100%29.png)
+![](<../../../.gitbook/assets/1 (100).png>)
 
 * 시작 화면. MainActivity
 * 오른쪽 상단에 + 아이콘이 붙어있다.
 * 아이콘을 클릭하면 OrderActivity로 이동한다.
 
-![](../../../.gitbook/assets/2%20%2877%29.png)
+![](<../../../.gitbook/assets/2 (77).png>)
 
 * OrderActivity화면
-* 왼쪽 상단에 홈버튼\(뒤로가기\)이 붙어있다.
+* 왼쪽 상단에 홈버튼(뒤로가기)이 붙어있다.
 * 뒤로가기를 누르면 부모액티비티인 MainActivity로 이동한다.
-

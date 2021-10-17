@@ -69,7 +69,7 @@ public List<BookVO> getBookList() {
 }
 ```
 
-* **타입이 List&lt;BookVO&gt;**인 메서드
+* **타입이 List\<BookVO>**인 메서드
 * ArrayList와 SELECT문을 이용한 sql이다.
 * SELECT문 이므로 executeQuery함수를 이용한다.
 * ResultSet의 next함수로 기본 커서를 조작한다.
@@ -107,10 +107,10 @@ public List<BookVO> procBookList() {
 }
 ```
 
-* **타입이 List&lt;BookVO&gt;**인 메서드
-* 5번 : 프로시저 PL/SQL문, { }자체가 파라미터이다. - 파라미터가 하나이다.\(? 갯수\)
-* 8번 : OUT\(반환\) 파라미터는 CURSOR타입이다.
+* **타입이 List\<BookVO>**인 메서드
+* 5번 : 프로시저 PL/SQL문, { }자체가 파라미터이다.\
+  \- 파라미터가 하나이다.(? 갯수)
+* 8번 : OUT(반환) 파라미터는 CURSOR타입이다.
 * 10번 : 프로시저 실행 : execute함수이용
 * 11번 : cstmt를 오라클 제공 인터페이스 타입으로 형전환한다.
 * 일반 SQL문이아닌 프로시저 호출이므로 SQL문 예외처리는 필요없다.
-

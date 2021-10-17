@@ -30,7 +30,8 @@ public class BookController implements Controller{
 ```
 
 * 11번 : 인스턴스 변수를 선언하고,
-* 13번 : setter메서드를 작성해 해당 객체가 호출될때에 외부에서 객체주입을 받는다. 이때 메서드의 이름은 xml문서에 작성된 property name값과 일치해야만 찾을 수 있다.
+* 13번 : setter메서드를 작성해 해당 객체가 호출될때에 외부에서 객체주입을 받는다.\
+  이때 메서드의 이름은 xml문서에 작성된 property name값과 일치해야만 찾을 수 있다.
 
 ### 코드 : BookLogic.java
 
@@ -101,4 +102,3 @@ public class BookLogic {
 ```
 
 * 여기서 10번 코드가 없다면 BookController.java의 18번에서 NullPointerException이 발생한다.
-

@@ -59,7 +59,7 @@ public class Pride extends Car {
 }
 ```
 
-* Pride클래스는 일반 클래스이지만 Car추상클래스를 상속받는다. -&gt; Car의 구현메서드가 존재해야한다. = overriding\(부모메서드와 같은 리턴타입, 같은 파라미터\)
+* Pride클래스는 일반 클래스이지만 Car추상클래스를 상속받는다. -> Car의 구현메서드가 존재해야한다. = overriding(부모메서드와 같은 리턴타입, 같은 파라미터)
 * 19번은 구현메서드가 아닌 다른 메서드이다. = overloading, 파라미터가 다르다.
 * 25번 : 자식클래스 Pride는 부모클래스 Car의 멤버변수를 가져다 쓸 수 있다.
 
@@ -99,7 +99,12 @@ public class CarSimulation {
 * 6번 : 인스턴스변수 myCar는 Car타입이지만 Pride풍선을 갖는다. = Pride의 함수를 호출할 수 없다.
 * 16번 : mycar의 타입이 Car로, himCar의 타입 Pride보다 크므로 성립한다. 
 * 17번 : 성립하지 않는다.
-* 18번 : myCar를 캐스팅연산자를 이용해 타입을 Pride로 강제 형전환시킨다. - himCar에 이를 대입해 둘다 같은 Pride를 바라보게된다. - myCar는 Pride타입으로, Pride의 함수를 호출 할 수 있다.
-* 출력결과 - 6번 : Car 디폴트 생성자 입니다. Pride디폴트 생성자 입니다. - 7번 : Car 디폴트 생성자 입니다. Pride 디폴트 생성자 입니다. - 20번 : himCar.speed 1 - 21번 : myCar.speed 1
+* 18번 : myCar를 캐스팅연산자를 이용해 타입을 Pride로 강제 형전환시킨다.\
+  \- himCar에 이를 대입해 둘다 같은 Pride를 바라보게된다.\
+  \- myCar는 Pride타입으로, Pride의 함수를 호출 할 수 있다.
+* 출력결과\
+  \- 6번 : Car 디폴트 생성자 입니다. Pride디폴트 생성자 입니다.\
+  \- 7번 : Car 디폴트 생성자 입니다. Pride 디폴트 생성자 입니다.\
+  \- 20번 : himCar.speed 1\
+  \- 21번 : myCar.speed 1
 * 18번이 없다면 20번은 0, 21번은 1이 출력된다.
-

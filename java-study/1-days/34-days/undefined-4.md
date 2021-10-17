@@ -45,7 +45,8 @@ public class PictureMessage extends JDialog implements ActionListener{
 * ImageIcon클래스의 배열을 선언, 생성
 * 이모티콘으로 사용할 이미지의 이름을 담을 배열을 선언, 생성
 * 버튼을 담는 배열을 선언, 생성
-* 대화 도중 이미지선택시 이모티콘을 출력시키기위해 default값을 넣어준다. - 대화처리와 같은 부분에서 처리해야 할 것이다.
+* 대화 도중 이미지선택시 이모티콘을 출력시키기위해 default값을 넣어준다.\
+  \- 대화처리와 같은 부분에서 처리해야 할 것이다.
 * 이미지 주소를 담는 String타입 변수를 선언, 생성
 
 ### 생성자 & main
@@ -99,7 +100,9 @@ public class PictureMessage extends JDialog implements ActionListener{
 
 * 2번 : JPanel의 Layout을 gridLayout으로 바꾼다.
 * 3번 : for문과 생성된 버튼 배열을 이용해 JPanel에 버튼을 add한다.
-* 4번 : 선언부에서 생성한 ImageIcon타입 배열을 새로 생성한다. - 파라미터로 이미지주소와 이름배열을 갖는다. - ImageIcon타입 배열이 이미지 주소를 담게된다.
+* 4번 : 선언부에서 생성한 ImageIcon타입 배열을 새로 생성한다.\
+  \- 파라미터로 이미지주소와 이름배열을 갖는다.\
+  \- ImageIcon타입 배열이 이미지 주소를 담게된다.
 * 5번 : 선언부에서 생성한 버튼 배열에 위에서 만든 이미지 주소배열을 setIcon함수를 이용해 set시킨다.
 * 6번 : 이렇게 만든 이미지가 붙은 버튼을 JPanel에 add한다.
 * 29번 : 이 클래스 호출전에는 보여지지 말아야하는 화면이므로 false로 감춰둔다.
@@ -184,8 +187,9 @@ public class ChatClient extends JFrame implements ActionListener{
 ```
 
 * 기존의 기본 대화 전송에 같이 구현한다.
-* jtf\_msg에서 가져온 text의 기본값은 null이 아닌 " ", 빈 문자열이 들어있다.
-* 7,8번 : 대화입력없이 이모티콘만 전송하는 경우, 200\#닉네임\#\#선택한이모티콘 이렇게 될 수 있으므로                 \#\#을 방지하기위해 넣은 if문
+* jtf_msg에서 가져온 text의 기본값은 null이 아닌 " ", 빈 문자열이 들어있다.
+* 7,8번 : 대화입력없이 이모티콘만 전송하는 경우, 200#닉네임##선택한이모티콘 이렇게 될 수 있으므로   \
+               \##을 방지하기위해 넣은 if문
 * 10번 : server와 연동하므로 예외처리가 필수
 * 11-16번 : 기존의 말하기 내용에 이모티콘 자리를 마련해준다.
 * 17번 : 입력창 초기화
@@ -239,7 +243,9 @@ public void run() {//ChatServer에서 thread가 배분된 다음 호출
 					
 ```
 
-* 10번에서 StringTokenizer를 선언하는 이유는 if문에서도 switch문에서도 사용해야하기 때문이다. - switch문을 이용하려면 구분번호인 protocol을 먼저 추출해야 한다.  - if문+Interger.parseInt\( \);
+* 10번에서 StringTokenizer를 선언하는 이유는 if문에서도 switch문에서도 사용해야하기 때문이다.\
+  \- switch문을 이용하려면 구분번호인 protocol을 먼저 추출해야 한다. \
+  \- if문+Interger.parseInt( );
 * 16-18 : switch문 단위테스트
 * 25번 : 우리는 이모티콘 멤버변수에 default값을 주었지만 주지않은 경우에는 nextToken이 공백이라 진행되지 않으므로 " "으로 초기화시킨다.
 * 26-28번 : 이모티콘을 받지않았으므로 token이 남아있다면 이모티콘 값이다. 그때 담는다.
@@ -290,7 +296,8 @@ public void run() {
 
 * 기존의 대화 처리 구문에서 구현한다.
 * 24번 : 이모티콘을 받는다. 없으면 " ", 있으면 이모티콘의 이름이 담긴다.
-* MutableAttributeSet 클래스타입의 변수를 simpleAttributeSet메서드로 구현한다. - 이모티콘을 위한 스타일 생성
+* MutableAttributeSet 클래스타입의 변수를 simpleAttributeSet메서드로 구현한다.\
+  \- 이모티콘을 위한 스타일 생성
 
 ### 이모티콘을 선택한 경우
 
@@ -313,7 +320,8 @@ public void run() {
 
 * 1번 : 이모티콘을 구분하는 멤버변수의 값이 설정해둔 기본값이 아니라, 이모티콘이름 이라면
 * 3번 : 이모티콘이름을 담는 배열안의 이름 갯수만큼 반복한다.
-* 4,5번 : 배열안의 이름과 사용자가 선택한 이모티콘값이 같다면 sas2변수의 스타일을 Icon으로 set한다. Icon = new ImaegeIcon\(path+cc.pm.imgNames\[i\]\) - 스타일에 해당 이모티콘을 담는다.
+* 4,5번 : 배열안의 이름과 사용자가 선택한 이모티콘값이 같다면 sas2변수의 스타일을 Icon으로 set한다. Icon = new ImaegeIcon(path+cc.pm.imgNames\[i])\
+  \- 스타일에 해당 이모티콘을 담는다.
 * 7번 : 사용자 화면에 이모티콘이 담긴 스타일을 출력한다.
 * 8번 : 다음 이모티콘 선택값을 위해 다시 기본값으로 초기화 한다.
 
@@ -336,4 +344,3 @@ public void run() {
 * 2번 : 이모티콘을 구분하는 멤버변수의 값이 설정해둔 기본값이라면 일반대화인 경우이다.
 * 3번 : 이모티콘이 아닌 문자를 출력하므로 문자에 대한 style을 생성한다. 
 * 5번 : 사용자 화면에 대화 출력
-

@@ -2,7 +2,7 @@
 
 ### A.java : JAVA
 
-![NullPointerException](../../../.gitbook/assets/3%20%2840%29.png)
+![NullPointerException](<../../../.gitbook/assets/3 (40).png>)
 
 ```java
 package com.basic;
@@ -37,7 +37,8 @@ public class A {//extends Object인 자바클래스이다. 서블릿아님
 * JAVA의 기본 상위객체인 Object를 상속하는 자바 클래스로, 서블릿이 아니다.
 * 10번처럼 doGet메서드를 생성할 수는 있지만, JAVA는 main메서드로 실행되는 local서비스만을 제공새 서버를 사용하지 않는다.
 * main메서드에서 req, res객체를 생성했지만 null이므로 NullPointerException이 발생한다.
-* 28번의 직접 호출구문은 Servlet으로 WAS와 통신하는 경우에는 필요없다. - WAS가 알아서 콜백메서드 처럼 지정된 url-pattern요청이 들어오면 호출해준다.
+* 28번의 직접 호출구문은 Servlet으로 WAS와 통신하는 경우에는 필요없다.\
+  \- WAS가 알아서 콜백메서드 처럼 지정된 url-pattern요청이 들어오면 호출해준다.
 
 ## A2.java : GenericServlet
 
@@ -69,8 +70,9 @@ public class A2 extends GenericServlet {
 }
 ```
 
-* GenericServlet은 Servlet인터페이스를 상속받는 클래스이므로 HttpServlet의 req, res객체를 사용할 수없고, doGet\( \), doPost\( \)메서드도 구분할 수 없다.
-* service메서드를 오버라이드 해서 서비스를 구현 할 수 있다. - 어떤 프로토콜을 이용하는 application인지에 따라 구현이 달라진다.
+* GenericServlet은 Servlet인터페이스를 상속받는 클래스이므로 HttpServlet의 req, res객체를 사용할 수없고, doGet( ), doPost( )메서드도 구분할 수 없다.
+* service메서드를 오버라이드 해서 서비스를 구현 할 수 있다.\
+  \- 어떤 프로토콜을 이용하는 application인지에 따라 구현이 달라진다.
 
 ## A3.java : HttpServlet
 
@@ -112,16 +114,17 @@ public class A3 extends HttpServlet {
 }
 ```
 
-* HttpServlet 클래스는 GenericServlet을 상속해 service\(\)메서드에 HTTP 프로토콜에 알맞는 동작을 수행하도록 구현한 클래스이다.
+* HttpServlet 클래스는 GenericServlet을 상속해 service()메서드에 HTTP 프로토콜에 알맞는 동작을 수행하도록 구현한 클래스이다.
 * HttpServlet을 상속받는 A3클래스는 req, res객체를 주입받아 사용할 수 있고, doGet, doPost메서드를 오버라이드 하여 방식을 구분할 수 있다.
 * A3 클래스와 같이 Service메서드에 수행문을 구현해 처리부분을 정리 할 수 있다.
-* HttpServletRequest, Respones객체를 주입받아 사용할 떄에는 항상 throws예외처리로 예외처리를 호출하는 곳에서 처리하도록 한다. 
+* HttpServletRequest, Respones객체를 주입받아 사용할 떄에는 항상 throws예외처리로 예외처리를 호출하는 곳에서 처리하도록 한다.\
+
 
 ### 쿼리스트링으로 servlet작동 테스트하기 : get방식
 
-![url &#xCFFC;&#xB9AC;&#xC2A4;&#xD2B8;&#xB9C1;&#xC73C;&#xB85C; &#xB2E8;&#xC704;&#xD14C;&#xC2A4;&#xD2B8;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.](../../../.gitbook/assets/2%20%2849%29.png)
+![url 쿼리스트링으로 단위테스트가 가능하다.](<../../../.gitbook/assets/2 (49).png>)
 
-![&#xB85C;&#xADF8; &#xD655;&#xC778;](../../../.gitbook/assets/2-1%20%283%29.png)
+![로그 확인](<../../../.gitbook/assets/2-1 (3).png>)
 
 ```java
 package com.basic;
@@ -187,4 +190,3 @@ public class A3 extends HttpServlet {
 	public void destroy() {	}	
 }
 ```
-

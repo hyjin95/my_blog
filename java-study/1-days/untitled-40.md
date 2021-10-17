@@ -6,7 +6,7 @@ description: 2020.12.10 - 82일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
 * 사용 서버 - WAS : Tomcat
 
@@ -17,22 +17,40 @@ description: 2020.12.10 - 82일차
 * 팀별 오라클 서버 컴퓨터 결정
 * 계정 이름과 비밀번호, SID이름 공유
 
-{% page-ref page="27-days-join/toad-db.md" %}
+{% content-ref url="27-days-join/toad-db.md" %}
+[toad-db.md](27-days-join/toad-db.md)
+{% endcontent-ref %}
 
 ### Tablespace
 
 * sys 관리자 계정에서 진행
-* 테이블 스페이스 추가 CREATE TABLESPACE 이름결정 detafile '경로' SIZE 100M;
-* 테이블 스페이스 수정 ALTER database detafile '경로' RESIZE 150M;
-* 테이블 스페이스 확인하기 SELECT tablespace\_name, file\_name, maxbytes FROM dba\_data\_files WHERE tablespace\_name = '테이블스페이스 이름_'_
-* 테이블 스페이스 삭제 DROP tablespace 테이블스페이스명
+* 테이블 스페이스 추가\
+  CREATE TABLESPACE 이름결정\
+  detafile '경로' SIZE 100M;
+* 테이블 스페이스 수정\
+  ALTER database detafile '경로' RESIZE 150M;
+* 테이블 스페이스 확인하기\
+  SELECT tablespace_name, file_name, maxbytes FROM dba_data_files\
+  WHERE tablespace_name = '테이블스페이스 이름_'_
+* 테이블 스페이스 삭제\
+  DROP tablespace 테이블스페이스명
 
 ### 계정 생성
 
 * sys 관리자 계정에서 진행
-* 계정 생성 및 테이블스페이스 할당 CREATE USER 계정이름 IDENTIFIED BY 비밀번호 default tablelspace 테이블스페이스 이름;
-* 권한 GRANT CREATE seqence to 계정이름  with admin option; \(시퀀스 생성권한\) GRANT CREATE trigger to 계정이름  with admin option;    \(트리거 생성권한\) GRANT CREATE view to 계정이름  with admin option;        \(뷰 생성권한\) GRANT CREATE table to 계정이름 with admin option;        \(테이블 생성권한\) GRANT CREATE session to 계정이름 with admin option;   \(DB 접속권한\) alter user 계정이름 quota unlimited on 테이블스페이스명;
-* Session &gt; New Connection에서 생성한 계정이름+비밀번호대로 계정 생성 - connect as : Nomal,  - SID : 는 오라클제품 설치시 지정한 초기 식별자 이므로 비워둬도 됨
+* 계정 생성 및 테이블스페이스 할당\
+  CREATE USER 계정이름 IDENTIFIED BY 비밀번호\
+  default tablelspace 테이블스페이스 이름;
+* 권한\
+  GRANT CREATE seqence to 계정이름  with admin option; (시퀀스 생성권한)\
+  GRANT CREATE trigger to 계정이름  with admin option;    (트리거 생성권한)\
+  GRANT CREATE view to 계정이름  with admin option;        (뷰 생성권한)\
+  GRANT CREATE table to 계정이름 with admin option;        (테이블 생성권한)\
+  GRANT CREATE session to 계정이름 with admin option;   (DB 접속권한)\
+  alter user 계정이름 quota unlimited on 테이블스페이스명;
+* Session > New Connection에서 생성한 계정이름+비밀번호대로 계정 생성\
+  \- connect as : Nomal, \
+  \- SID : 는 오라클제품 설치시 지정한 초기 식별자 이므로 비워둬도 됨
 
 ### Oracle : 저장경로, SID
 
@@ -40,7 +58,7 @@ description: 2020.12.10 - 82일차
 
 ### Oracle 서버 : 종료, 재시작
 
-![](../../.gitbook/assets/.png%20%2845%29.png)
+![](<../../.gitbook/assets/.png (45).png>)
 
 ### Trigger
 
@@ -154,8 +172,12 @@ SQL> create table imsi(no number(5));
 ### 관계형태
 
 * 1 : 1
-* 1 : n 이력관리 시스템에서는 반드시 필요한 관계
-* n : m 카타시안의 곱 조인하면 필요하지 않은 데이터까지 모두 보여주므로 최대한 1:n으로 구현해야한다. n : m가운데에 행위 엔티티를 추가한다.
+* 1 : n\
+  이력관리 시스템에서는 반드시 필요한 관계
+* n : m\
+  카타시안의 곱\
+  조인하면 필요하지 않은 데이터까지 모두 보여주므로 최대한 1:n으로 구현해야한다.\
+  n : m가운데에 행위 엔티티를 추가한다.
 
 ## Android Studio
 
@@ -176,12 +198,19 @@ SQL> create table imsi(no number(5));
 
 ### res
 
-* 각종 리소스들이 저장되는 폴더 문자열 리소스, 이미지 리소스, ....
+* 각종 리소스들이 저장되는 폴더\
+  문자열 리소스, 이미지 리소스, ....
 
 ### Activity
 
-* Object를 상속받으면 자바, HttpServlet을 상속받으면 서블릿인 것처럼  AppCompatActivity상속받아야 Activity이다.
-* 라이프 사이클 : 임의로 수정할 수 없음 - onCreate\(Bundle savedInstanceState\){ }   entry point가 되는 메서드로, 자바의 main과 역할이 같다.   파라미터 번들 ; 이전 어플이 실행되었던 상태를 기억하는 저장소 클래스 - super.onCreate\(savedInstanceState\);   상위 클래스의 메서드를 호출해주는 코드, 안전성이 보장된다.
+* Object를 상속받으면 자바, HttpServlet을 상속받으면 서블릿인 것처럼 \
+  AppCompatActivity상속받아야 Activity이다.
+* 라이프 사이클 : 임의로 수정할 수 없음\
+  \- onCreate(Bundle savedInstanceState){ }\
+    entry point가 되는 메서드로, 자바의 main과 역할이 같다.\
+    파라미터 번들 ; 이전 어플이 실행되었던 상태를 기억하는 저장소 클래스\
+  \- super.onCreate(savedInstanceState);\
+    상위 클래스의 메서드를 호출해주는 코드, 안전성이 보장된다.
 
 ### Apply code Changes
 
@@ -196,7 +225,6 @@ SQL> create table imsi(no number(5));
 
 ![](../../.gitbook/assets/android.png)
 
-* File &gt; Settings &gt; Editor &gt; General &gt; Auto import
+* File > Settings > Editor > General > Auto import
 
 후기 : 다음주에는 눈도 오고 엄청 춥다던데..
-

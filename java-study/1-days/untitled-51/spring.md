@@ -2,7 +2,7 @@
 
 ## 1. 첨부파일 등록 : View
 
-### 코드 : boardList.jsp \[WEB\_INF\]
+### 코드 : boardList.jsp \[WEB_INF]
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -30,7 +30,7 @@
 </html>
 ```
 
-* 입력 버튼을 누르면 addForm\( \)함수가 실행되어 writeForm화면이 popup형태로 띄워진다.
+* 입력 버튼을 누르면 addForm( )함수가 실행되어 writeForm화면이 popup형태로 띄워진다.
 
 ### 코드 : boardController.java
 
@@ -42,7 +42,7 @@ public void writeForm(HttpServletRequest req, HttpServletResponse res)
 	}
 ```
 
-### 코드 : writeForm.jsp \[webapp\]
+### 코드 : writeForm.jsp \[webapp]
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -91,7 +91,7 @@ public void writeForm(HttpServletRequest req, HttpServletResponse res)
 </html>
 ```
 
-* 파일을 등록하고 저장 버튼을 클릭하면 addAction함수가 실행되고 f\_write from이 전송된다.
+* 파일을 등록하고 저장 버튼을 클릭하면 addAction함수가 실행되고 f_write from이 전송된다.
 
 ## 2. 첨부파일 등록 처리 : Controller
 
@@ -141,7 +141,7 @@ public class BoardController extends MultiActionController {//spring제공 클�
 
 * 첨부파일은 반드시 post방식으로 전송되어야 처리가 가능하다.
 * 전송된 입력양식을 HashMapBind클래스를 활용해 파라미터로 넘길 pmap에 담는다.
-* insert성공시 webapp &gt; boardInsertOk.jsp를 호출한다.
+* insert성공시 webapp > boardInsertOk.jsp를 호출한다.
 
 ### 코드 : HashMapBinder.java
 
@@ -189,7 +189,9 @@ public class HashMapBinder {
 * 21번은 첨부파일에 대한 인코딩타입을 정하는 코드이다.
 * 23번에서는 멤버변수로 최대 사이즈로 사용할 사이즈를 정한다.
 * 25번에서는 첨부파일의 물리적위치를 담을 String변수를 선언한다.
-* 31번 생성자에서 HashMapBinder객체가 생성될때 파일의 물리적 경로를 지정하게 된다. 사진과 같은 파일 자료는 오라클에 관리하기 버겁기 때문에 따로 폴더에 관리하는 것이 일반적이다. 위와 같이 경로를 지정하면 톰캣이 web에서도 접근할 수 있게되는 것이다.
+* 31번 생성자에서 HashMapBinder객체가 생성될때 파일의 물리적 경로를 지정하게 된다.\
+  사진과 같은 파일 자료는 오라클에 관리하기 버겁기 때문에 따로 폴더에 관리하는 것이 일반적이다.\
+  위와 같이 경로를 지정하면 톰캣이 web에서도 접근할 수 있게되는 것이다.
 
 ```java
 	//첨부파일이 있는 경우
@@ -212,7 +214,8 @@ public class HashMapBinder {
 
 * 3번에서 값을 담을 파라미터 target을 clear한다.
 * 5번 : 첨부파일 처리에는 예외처리가 필수이다.
-* 7번 : 예외처리 안에서 MultipartRequest객체를 생성한다. - 파라미터 : 요청객체, 물리적위치, 최대크기, 인코딩타입, 파일정책관리인자
+* 7번 : 예외처리 안에서 MultipartRequest객체를 생성한다.\
+  \- 파라미터 : 요청객체, 물리적위치, 최대크기, 인코딩타입, 파일정책관리인자
 * 12번 : 자료구조에 접근할 수 있는 인터페이스 Enumeration을 사용해 요청에 접근한다.
 * 13번 : 자료구조에 값이 있는 동안에는
 * 14번 : String 변수에 key를 담는다.
@@ -233,13 +236,13 @@ public class HashMapBinder {
 				target.put("bs_file",  filename);
 ```
 
-* 이제 파일 이름을 담는 과정이다. - bs\_file
-* 똑같이 Enumeration인터페이스를 활용해 MultipartRequest가 제공해주는 getFileName\( \)메서드에 접근해 파일 이름의 존재 여부를 확인한다.
+* 이제 파일 이름을 담는 과정이다. - bs_file
+* 똑같이 Enumeration인터페이스를 활용해 MultipartRequest가 제공해주는 getFileName( )메서드에 접근해 파일 이름의 존재 여부를 확인한다.
 * 3번 : 파일이름이 있다면 = 첨부파일이 존재한다면
 * 5번 : File타입 변수를 선언한다.
 * 6번 : key값이 있는 동안에는
 * 7번 : String변수에 key값을 담는다.
-* 8번 : 파일이름을 getFilesystemName\(key\)메서드를 활용해 꺼내 String변수에 담는다.
+* 8번 : 파일이름을 getFilesystemName(key)메서드를 활용해 꺼내 String변수에 담는다.
 * 11번 : 파라미터에 담는다.
 
 ```java
@@ -260,16 +263,17 @@ public class HashMapBinder {
 	}
 ```
 
-* 이제 파일 사이즈를 담는 과정이다. - bs\_size
-* 파일의 크기를 계산하려면 File객체로 length함수를 사용해야 한다. 이를 위해 파일 이름으로 File객체를 생성한다.
+* 이제 파일 사이즈를 담는 과정이다. - bs_size
+* 파일의 크기를 계산하려면 File객체로 length함수를 사용해야 한다.\
+  이를 위해 파일 이름으로 File객체를 생성한다.
 * 2번 : 가져온 파일이름이 존재하고 문자열이 0이상이라면
 * 3번 : 물리적경로+파일이름 으로 File의 실제를 담은 File객체를 생성한다.
 * 8번 : size를 담을 double변수 선언
 * 9번 : file이 있다면
-* 10번 : double변수에 file.length\( \)를 담는다.
+* 10번 : double변수에 file.length( )를 담는다.
 * 11번 : 수식을 활용해 kb단위로 계산한다.
 * 12번 : 파라미터에 담는다.
-* 여기까지 하면 pmap\(=target\)에는 bm\_no, bsfile, bs\_size가 담기게된다.
+* 여기까지 하면 pmap(=target)에는 bm_no, bsfile, bs_size가 담기게된다.
 
 ## 3. 첨부파일 등록 처리 : Model
 
@@ -321,7 +325,7 @@ public int boardInsert(Map<String, Object> pMap) {//트랜잭션처리
 
 ## 4. 처리결과 반영
 
-### 코드 : boardInsertOk.jsp \[webapp\]
+### 코드 : boardInsertOk.jsp \[webapp]
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -403,5 +407,4 @@ public int boardInsert(Map<String, Object> pMap) {//트랜잭션처리
 
 ### 결과
 
-![](../../../.gitbook/assets/1%20%28104%29.png)
-
+![](<../../../.gitbook/assets/1 (104).png>)

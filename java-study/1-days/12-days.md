@@ -6,19 +6,29 @@ description: 2020.18.13 - 12일차
 
 ### 복습
 
-* 디폴트 생성자란? - 파라미터가 없는 기본 생성자를 말한다. - 호출방법 : new 클래스이름\(\);
-* 클래스의 종류 - 사용자 정의 클래스 : 생성자를 재정의 할 수 있다. \_ 자바 제공 클래스\(API\) : 정해져있어 수정하면 안된다.
+* 디폴트 생성자란?\
+  \- 파라미터가 없는 기본 생성자를 말한다.\
+  \- 호출방법 : new 클래스이름();
+* 클래스의 종류\
+  \- 사용자 정의 클래스 : 생성자를 재정의 할 수 있다.\
+  \_ 자바 제공 클래스(API) : 정해져있어 수정하면 안된다.
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
-* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Git
+* 사용언어 : JAVA(JDK)1.8.0\_261 : Oracle.com
+* 사용Tool \
+  \- Eclipse : Eclipse.org\
+  \- Toad DBA Suite for Oracle 11.5\
+  \- Git
 
 ### 인스턴스화 와 Call Back메서드
 
 * 내가 하는 인스턴스화
-* 남이 하는 인스턴스화\(==객체주입법\) - 자원관리를 외부에서 해준다.
-* Call Back 메서드는 Event가 감지돠면 시스템이 호출하는 메서드이다. - 시스템이 호출 == 주입 - ex\) ActionEvent
+* 남이 하는 인스턴스화(==객체주입법)\
+  \- 자원관리를 외부에서 해준다.
+* Call Back 메서드는 Event가 감지돠면 시스템이 호출하는 메서드이다.\
+  \- 시스템이 호출 == 주입\
+  \- ex) ActionEvent
 
 ### API 보는법
 
@@ -27,14 +37,21 @@ description: 2020.18.13 - 12일차
 
 ### 배열 선언
 
-1. int\[ \] x, y; - x는 int타입 배열이다. - y는 int타입 배열이다.
-2. int x\[ \], y; - x는 int타입 배열이다. - y는 int타입이다.
+1. int\[ ] x, y;\
+   \- x는 int타입 배열이다.\
+   \- y는 int타입 배열이다.
+2. int x\[ ], y;\
+   \- x는 int타입 배열이다.\
+   \- y는 int타입이다.
 3. 참고 : IntArray.java, JButtonArray.java
 
 ### 개선된 for문
 
-* **for\(변수명 : 배열명\)** - 변수명 : 객체배열 안에 들어있는 타입 / 변수이름 - 배열명 : Vector와같은 객체배열 이름
-* 전체 조회할 때 사용한다. - List인터페이스의 Vector나 ArrayList 같이 size가 유동적으로 변화하는 클래스에 사용한다.
+* **for(변수명 : 배열명)**\
+  ****- 변수명 : 객체배열 안에 들어있는 타입 / 변수이름\
+  \- 배열명 : Vector와같은 객체배열 이름
+* 전체 조회할 때 사용한다.\
+  \- List인터페이스의 Vector나 ArrayList 같이 size가 유동적으로 변화하는 클래스에 사용한다.
 * 참조 : [https://java119.tistory.com/107](https://java119.tistory.com/107)
 * 참고 : IntArray.java
 
@@ -134,7 +151,9 @@ public class DeptVO {//VO = value object
 
 * 9Days 에서는 하나하나 해당 private메서드를 public메서드로 만들어 주었었지만 생성자를 배운 지금은 저렇게 할 필요가 없다.
 * 11번 : 디폴트 생성자이다.
-* 13-17번 : 부서번호와 부서명, 지역을 파라미터로 갖는 생성자이다. - 클래스 밑에 생성된 값들을 사용할 수 있게 해준다. - this는 자기자신으로, 여기서는 DeptVO클래스를 가리킨다.
+* 13-17번 : 부서번호와 부서명, 지역을 파라미터로 갖는 생성자이다.\
+  \- 클래스 밑에 생성된 값들을 사용할 수 있게 해준다.\
+  \- this는 자기자신으로, 여기서는 DeptVO클래스를 가리킨다.
 
 ### 배열의 초기화, 생성자 만들고 호출하기
 
@@ -182,9 +201,10 @@ public class JButtonArray extends JFrame{
 
 1. git hub 가입
 2. 로컬 PC에 공유할 폴더 생성
-3. Git 다운로드 - 도스 : git --version
-4. 공유 폴더안에 숨겨진 git파일 만들기 - 공유 폴더 우클릭 -&gt; git bash -&gt; git init
+3. Git 다운로드\
+   \- 도스 : git --version
+4. 공유 폴더안에 숨겨진 git파일 만들기\
+   \- 공유 폴더 우클릭 -> git bash -> git init
 5. git hub에서 repositories 생성
 
 후기 : 휴일이 다가와서 늘어지는게 아닌가 하는 생각이 든다 ㅠㅠ 힘내서 끝까지!
-

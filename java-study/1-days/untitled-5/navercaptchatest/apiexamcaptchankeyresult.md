@@ -48,7 +48,8 @@ public class ApiExamCaptchaNkeyResult {
 
 * 클래스 자체를 화면구현 클래스에서 사용하기 위해 main메서드를 생성자로 변경하였다.
 * 6번 : 이미지변경 용도 접속이므로 code값을 "1"로 하여 구분하도록 한다.
-* 7-8번 : 인증을 위해서는 키 값, 사용자의 입력String값, URL이 필요하다. - URL의 쿼리스트링에는 code와 key 값, 사용자 입력값이 들어간다.
+* 7-8번 : 인증을 위해서는 키 값, 사용자의 입력String값, URL이 필요하다.\
+  \- URL의 쿼리스트링에는 code와 key 값, 사용자 입력값이 들어간다.
 
 ### get 메서드
 
@@ -111,4 +112,3 @@ public class ApiExamCaptchaNkeyResult {
     }
 }
 ```
-

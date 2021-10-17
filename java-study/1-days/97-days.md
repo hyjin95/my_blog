@@ -6,7 +6,7 @@ description: 2021.01.05 - 97일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
@@ -62,7 +62,7 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 	}
 ```
 
-* Controller에서 boardList\(전체조회\)업무도, boardDetail\(상세보기\)업무도 Logic의 같은 boardList를 활용하고 있기 때문에 두 업무를 
+* Controller에서 boardList(전체조회)업무도, boardDetail(상세보기)업무도 Logic의 같은 boardList를 활용하고 있기 때문에 두 업무를 
 
 ### SQL
 
@@ -85,11 +85,18 @@ public List<Map<String,Object>> boardList(Map<String, Object> pMap) {
 
 ### StopWatchAfter.apk
 
-* 현재상태를 저장하기 위해 메서드를 오버라이드 한다. - onSaveInstanceState\(Bundle savedInstanceState\) - 메서드 안에서 반드시 부모\(상위\)메서드를 불러와야 한다.
+* 현재상태를 저장하기 위해 메서드를 오버라이드 한다.\
+  \- onSaveInstanceState(Bundle savedInstanceState)\
+  \- 메서드 안에서 반드시 부모(상위)메서드를 불러와야 한다.
 * Bundle, 번들에는 여러 종류의 데이터를 한 객체로 저장가능하다.
-* 저장해야 되는 정보 - 시간\(int\) - 실행 상태\(boolean\) - 이전 실행 상태\(boolean\)
-* Life Cycle을 고려한 APK onStop함수가 호출되기 직전에 onSaveInstanceState\( \)메서드를 호출한다.
-* 화면이 회전되더라도 \(액티비티가 새로 시작되더라도\) 상태가 유지된다. 디바이스가 누웠을 때 액티비티가 새로 생성되는데 화면에 출력되기 전에 이전 상태 정보를 가져와 +1된 정보를 내보내야 한다. 0이 아닌 이전 상태에 +1하는 것
+* 저장해야 되는 정보\
+  \- 시간(int)\
+  \- 실행 상태(boolean)\
+  \- 이전 실행 상태(boolean)
+* Life Cycle을 고려한 APK\
+  onStop함수가 호출되기 직전에 onSaveInstanceState( )메서드를 호출한다.
+* 화면이 회전되더라도 (액티비티가 새로 시작되더라도) 상태가 유지된다.\
+  디바이스가 누웠을 때 액티비티가 새로 생성되는데 화면에 출력되기 전에 이전 상태 정보를 가져와 +1된 정보를 내보내야 한다. 0이 아닌 이전 상태에 +1하는 것
 
 ### 1. 멤버변수 선언
 
@@ -105,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
 * 변수 선언
 
-### 2. 상태값 변경 onStop\( \)
+### 2. 상태값 변경 onStop( )
 
 ```java
     //상태값을 변경할 수 있는 함수 --2
@@ -138,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
 * Bundle객체에는 여러 타입의 데이터를 담을 수 있다.
 * 5번에서 상위메서드롤 불러온다.
 * 6-8번에서 번들에 데이터를 저장한다.
-* 이 메서드는 onDestroy\( \)가 호출되기 이전에 호출된다.
+* 이 메서드는 onDestroy( )가 호출되기 이전에 호출된다.
 
 ### 4. 상태값 불러오기
 
@@ -160,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
 
 * 번들이 not null이라면 이전 정보가 저장되어있다는 뜻이므로 not null인 경우에만 변수들을 번들에서 가져와 초기화 시켜준다.
 
-### 5. 상태값 변경 on Start\( \)
+### 5. 상태값 변경 on Start( )
 
 ```java
     public void onStart() {//액티비티가 시작될때--2
@@ -171,26 +178,26 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
-* 액티비티가 시작되어 onStrat메서드가 호출될때 저장되어있던 정보를 반영한다. 처음 시작하는 경우에는 필요없는 동작이므로 if문을 활용한다.
-* onStart\( \)메서드는 onCreate\( \)가 호출된 뒤에 호출된다.
+* 액티비티가 시작되어 onStrat메서드가 호출될때 저장되어있던 정보를 반영한다.\
+  처음 시작하는 경우에는 필요없는 동작이므로 if문을 활용한다.
+* onStart( )메서드는 onCreate( )가 호출된 뒤에 호출된다.
 * 번들에서 가져온 wasRunning이 실행중 상태였다면 현재 상태를 실행중으로 변경한다.
 
 ## Android Studio : v7 네비게이션 드로워
 
 ### Fragment와 Activity의 차이
 
-| Activity | Fragment |
-| :---: | :---: |
-| activity\_main.xml | fragment\_inbox.xml |
-| onCreate\(Bundle\) | onCreateView\(레이아웃, 뷰그룹, Bundle\) |
-| setcontextView\(activity\_main.xml\) | inflater.inflate\(레이아웃, 뷰그룹, Bundle\) |
+|              Activity             |               Fragment              |
+| :-------------------------------: | :---------------------------------: |
+|         activity_main.xml         |          fragment_inbox.xml         |
+|          onCreate(Bundle)         |   onCreateView(레이아웃, 뷰그룹, Bundle)   |
+| setcontextView(activity_main.xml) | inflater.inflate(레이아웃, 뷰그룹, Bundle) |
 
-* Activity는 activity\_main.xml을 onCreate\(Bundle\)메서드 안에서 그린다.
-* Fragment는 fragment\_inbox.xml을 onCreateView\(레이아웃, 뷰그룹, Bundle\)메서드 안에서 그린다.
+* Activity는 activity_main.xml을 onCreate(Bundle)메서드 안에서 그린다.
+* Fragment는 fragment_inbox.xml을 onCreateView(레이아웃, 뷰그룹, Bundle)메서드 안에서 그린다.
 
 ### Android 네비게이션 드로워
 
 * androidX가 아닌 기존의 android v7버전에서 제공하는 네비게이션 드로워 기능 구현하기
 
 후기 : 
-

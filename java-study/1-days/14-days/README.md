@@ -2,26 +2,35 @@
 description: 2020.08.18 - 14일차
 ---
 
-# 14 Days - 코드 작성 순서, Container\(remove\(\),  revalidate\(\)\), Candidata
+# 14 Days - 코드 작성 순서, Container(remove(),  revalidate()), Candidata
 
 ### 4주차 학습목표
 
-1. 인스턴스화 분리 - 선언과 생성, null과 new - 메모리 누수 예방을 위한 자원관리
-2. 객체의 LifeCycle 이해 - ex\) 인스턴스화 new = 생성, 탄생
-3. 인스턴스화의 위치 - 멤버변수, 생성자, 메서드 - class 밑에서 선언만 할것인지, 생성까지 할것인지,  생성을 생성자에 할 것인지, 메서드에 할 것인지
+1. 인스턴스화 분리\
+   \- 선언과 생성, null과 new\
+   \- 메모리 누수 예방을 위한 자원관리
+2. 객체의 LifeCycle 이해\
+   \- ex) 인스턴스화 new = 생성, 탄생
+3. 인스턴스화의 위치\
+   \- 멤버변수, 생성자, 메서드\
+   \- class 밑에서 선언만 할것인지, 생성까지 할것인지,  생성을 생성자에 할 것인지, 메서드에 할 것인지
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
-* 사용Tool  - Eclipse : Eclipse.org
+* 사용언어 : JAVA(JDK)1.8.0\_261 : Oracle.com
+* 사용Tool \
+  \- Eclipse : Eclipse.org
 
 ### 상속관계에서의 인스턴스화
 
-* A class 가 parent고 B class가 child 이면, - B b = new A\(\);가 성립한다. - 왼쪽 항에 항상 더 큰 class가 온다.
+* A class 가 parent고 B class가 child 이면,\
+  \- B b = new A();가 성립한다.\
+  \- 왼쪽 항에 항상 더 큰 class가 온다.
 
 ### 코드 작성 순서
 
-1. 실행순서 - main -&gt; 생성자호출 -&gt; 버튼생성, 화면호출 -&gt; event처리
+1. 실행순서\
+   \- main -> 생성자호출 -> 버튼생성, 화면호출 -> event처리
 2. 선언부, 생성자, 화면처리, 이벤트, 메인메서드의 구분
 3. 생성자 생성
 4. 메인 메서드에서 생성자 호출
@@ -31,4 +40,3 @@ description: 2020.08.18 - 14일차
 8. 버튼에 해당되는 이벤트 처리 생성
 
 후기 : 코드가 점점 길어짐에따라 분리도 해보고 다양한 방법을 생각해보고있다. 깔끔하게 정리하는 방법을 찾아보자
-

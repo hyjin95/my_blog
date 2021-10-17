@@ -6,7 +6,7 @@ description: 2020.01.07 - 99일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio, Visual Studio Code
 * 사용 서버 - WAS : Tomcat
 
@@ -20,8 +20,8 @@ description: 2020.01.07 - 99일차
 
 ![](../../.gitbook/assets/setting2.png)
 
-* 다운로드된 파일 우클릭 &gt; 설
-* Next &gt; accept, Next &gt; Next &gt; Next &gt; Next &gt; Finish
+* 다운로드된 파일 우클릭 > 설
+* Next > accept, Next > Next > Next > Next > Finish
 
 ![](../../.gitbook/assets/node.js2.png)
 
@@ -41,12 +41,13 @@ description: 2020.01.07 - 99일차
 
 ![](../../.gitbook/assets/vscode-java.png)
 
-* JAVA &gt; JAVA Extension Pack - JAVA 언어지원, Maven프로젝트 관리
+* JAVA > JAVA Extension Pack\
+  \- JAVA 언어지원, Maven프로젝트 관리
 *  Language Support for Java 설치
 
 ![](../../.gitbook/assets/setting.png)
 
-* 왼쪽 하단의 설정 아이콘 &gt; Settings &gt;
+* 왼쪽 하단의 설정 아이콘 > Settings >
 
 ![](../../.gitbook/assets/java-setting.png)
 
@@ -56,7 +57,7 @@ description: 2020.01.07 - 99일차
 
 ![](../../.gitbook/assets/spring-in1.png)
 
-* 보기 &gt; 명령 팔레트
+* 보기 > 명령 팔레트
 
 ![](../../.gitbook/assets/spring-in-2.png)
 
@@ -72,15 +73,15 @@ description: 2020.01.07 - 99일차
 
 ![](../../.gitbook/assets/spring-in-5.png)
 
-* 프로젝트 패키징 타입 선택 &gt; war
+* 프로젝트 패키징 타입 선택 > war
 
 ![](../../.gitbook/assets/spring-in-6.png)
 
-* JVM version 선택 &gt; Enter
+* JVM version 선택 > Enter
 
 ![](../../.gitbook/assets/spring-in-7.png)
 
-* dependency Spring Boot Dev Tools, Spring Web 선택 &gt; Enter
+* dependency Spring Boot Dev Tools, Spring Web 선택 > Enter
 
 ![](../../.gitbook/assets/spring-in-8.png)
 
@@ -89,7 +90,6 @@ description: 2020.01.07 - 99일차
 ![](../../.gitbook/assets/spring-in-9.png)
 
 * pom.xml에 tomcat dependency 추가
-* src &gt; main &gt; webapp 폴더 추가 &gt; WEB-INF 폴더 추가
+* src > main > webapp 폴더 추가 > WEB-INF 폴더 추가
 
 후기 : 환경설정 어려운 것...
-

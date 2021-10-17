@@ -1,8 +1,8 @@
-# 인라인요소, &lt;span&gt;
+# 인라인요소, \<span>
 
 ## spanTest.html
 
-![&#xC778;&#xB77C;&#xC778;&#xC694;&#xC18C;](../../../.gitbook/assets/1%20%2827%29.png)
+![인라인요소](<../../../.gitbook/assets/1 (27).png>)
 
 ```markup
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
 
 ## tableTest.html
 
-![&amp;lt;span&amp;gt;](../../../.gitbook/assets/2%20%2819%29.png)
+![\<span>](<../../../.gitbook/assets/2 (19).png>)
 
 ```markup
 <!DOCTYPE html>
@@ -83,4 +83,3 @@
 </body>
 </html>
 ```
-

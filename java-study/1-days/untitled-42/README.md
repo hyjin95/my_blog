@@ -6,7 +6,7 @@ description: 2020.12.18 - 87일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
@@ -34,11 +34,11 @@ SELECT *
  WHERE bm.bm_no = bs.bm_no(+);
 ```
 
-* 하지만 실제로 게시판에서 update된 것은 두 건이므로 sub테이블의 첨부파일이 존재하지 않더라도 master테이블에는 게시글이 있기때문에 이를 보여주기 위해서는 null이 있는 테이블에 \(+\)를 추가한다.
+* 하지만 실제로 게시판에서 update된 것은 두 건이므로 sub테이블의 첨부파일이 존재하지 않더라도 master테이블에는 게시글이 있기때문에 이를 보여주기 위해서는 null이 있는 테이블에 (+)를 추가한다.
 
 ### WHERE : LIKE, AND, OR, NULL
 
-![](../../../.gitbook/assets/1%20%2891%29.png)
+![](<../../../.gitbook/assets/1 (91).png>)
 
 ```sql
 SELECT *
@@ -48,8 +48,9 @@ SELECT *
     OR bm.bm_content IS NULL;
 ```
 
-* OR이나 IN의 경우에는 \(+\)를 허용하지 않아 위의 문법을 사용해야 한다.
-* AND를 사용할 수록 조건이 많아져 SELECT결과물은 줄어들고, OR는 사용할 수록 조건이 광범위해져 SELECT결과물이 늘어난다.
+* OR이나 IN의 경우에는 (+)를 허용하지 않아 위의 문법을 사용해야 한다.
+* AND를 사용할 수록 조건이 많아져 SELECT결과물은 줄어들고,\
+  OR는 사용할 수록 조건이 광범위해져 SELECT결과물이 늘어난다.
 
 ### UPDATE : transaction, 변수
 
@@ -89,21 +90,21 @@ UPDATE board_master_t -- 목록화면인지 상세보기 화면인지, 목록 �
 
 ### 계층형 게시판
 
-![](../../../.gitbook/assets/1%20%2895%29.png)
+![](<../../../.gitbook/assets/1 (95).png>)
 
 * 계층형 게시판은 중간에 글 삽입이 일어나면 이전 글은 뒤로 밀려나야하고, 글 번호도 변경되어야 한다.
 * 트랜잭션 처리가 필요하다.
 
 ### 화면 정의서
 
-![](../../../.gitbook/assets/2%20%2872%29.png)
+![](<../../../.gitbook/assets/2 (72).png>)
 
 * 조건검색을 위한 콤보박스와 입력창, 조회 버튼 등이 필요할 것이다.
 * 게시판에 사용자에게 보여줄 컬럼과 페이지 네비게이션 바가 필요할 것이다.
 
 ### 업무 처리 개발 패턴
 
-![](../../../.gitbook/assets/3%20%2855%29.png)
+![](<../../../.gitbook/assets/3 (55).png>)
 
 ## Android Studio : fragment
 
@@ -111,15 +112,16 @@ UPDATE board_master_t -- 목록화면인지 상세보기 화면인지, 목록 �
 
 ![](../../../.gitbook/assets/fragment1.png)
 
-* Activity-java 패키지 우클릭 &gt; New &gt; Fragment &gt; Fragment\(Blank\) : 기본
+* Activity-java 패키지 우클릭 > New > Fragment > Fragment(Blank) : 기본
 
 ![](../../../.gitbook/assets/fragment2.png)
 
-* 이름 설정 &gt; Finish
+* 이름 설정 > Finish
 
 ### Fragment로 화면 재사용
 
-{% page-ref page="android-studio-fragment.md" %}
+{% content-ref url="android-studio-fragment.md" %}
+[android-studio-fragment.md](android-studio-fragment.md)
+{% endcontent-ref %}
 
 후기 : 파이널 프로젝트의 ERD를 컨펌받는 날이였다. 게시판이 많으니 솔루션으로 구현해보고, 채팅은 웹 소켓과 파이어베이스를 활용해 보라고 하셨다.
-

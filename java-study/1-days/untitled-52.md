@@ -2,11 +2,11 @@
 description: 2020.12.30 - 94일차
 ---
 
-# 94 Days - Spring:환경설정\(xml,propertiex,java\), JAVA로 환경설정하기, Test하기
+# 94 Days - Spring:환경설정(xml,propertiex,java), JAVA로 환경설정하기, Test하기
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
@@ -29,7 +29,9 @@ description: 2020.12.30 - 94일차
 ```
 
 * 응답페이지의 url-pattern을 정의한다.
-* xml 설정파일 spring-servlet.xml에 작성된다. ViewResolver중에서 jsp를 View로 사용할 때에는 InternalResourceViewResolver클래스를 사용한다. spring에서 제공하는 클래스를 xml에 작성해 사용하는 것이지만 JAVA에서도 import를 통해 구현가능
+* xml 설정파일 spring-servlet.xml에 작성된다.\
+  ViewResolver중에서 jsp를 View로 사용할 때에는 InternalResourceViewResolver클래스를 사용한다.\
+  spring에서 제공하는 클래스를 xml에 작성해 사용하는 것이지만 JAVA에서도 import를 통해 구현가능
 * Controller계층에서 응답시 사용하게된다.
 * 클라이언트의 직접 접근을 차단해 보안성을 높이는 코드로 jsp사용시 항상 필요하다.
 * ViewResolver로 연결되는 페이지들은 WEB-INF 하위에 위치한 페이지에 연결된다.
@@ -85,7 +87,8 @@ description: 2020.12.30 - 94일차
 
 * 첨부파일이 포함될 수 있으므로 Post방식으로 요청이 들어올것이므로 @PostMapping어노테이션을 사용했다.
 * RequestParam 1 : 사용자 입력값을 받아올 파라미터 Map, HashMapBinder클래스 역할을 수행한다.
-* RequestParam 2 : 첨부파일을 받아올 파라미터 MultipartFile - 첨부파일은 필수조건이 아니기 떄문에 required=falsle속성을 추가해 없더라도 지나가게 처리한다.
+* RequestParam 2 : 첨부파일을 받아올 파라미터 MultipartFile\
+  \- 첨부파일은 필수조건이 아니기 떄문에 required=falsle속성을 추가해 없더라도 지나가게 처리한다.
 * 타입이 String이므로 return이 필요하고 응답처리는 response객체를 주입받아 사용하지 않는다.
 
 ## Spring : JAVA 환경설정
@@ -130,7 +133,9 @@ public class MvcConfig implements WebMvcConfigurer {
 ```
 
 * 자바에서 어노테이션을 활용해 작성한 환결설정 클래스
-* 20번 registry.jsp\( \) - 첫번째 파라미터 : "perfix"\(접두어\) - 두번째 파라미터 : "suffix"\(접미어\)
+* 20번 registry.jsp( )\
+  \- 첫번째 파라미터 : "perfix"(접두어)\
+  \- 두번째 파라미터 : "suffix"(접미어)
 
 ```markup
     <dependency>
@@ -141,15 +146,15 @@ public class MvcConfig implements WebMvcConfigurer {
 ```
 
 * pom.xml에 spring-web dependency추가
-* 자바버전 1.6 -&gt; 1.8
-* org.springframework-version 3.1.1 -&gt; 5.1.16
+* 자바버전 1.6 -> 1.8
+* org.springframework-version 3.1.1 -> 5.1.16
 
-![](../../.gitbook/assets/1%20%28107%29.png)
+![](<../../.gitbook/assets/1 (107).png>)
 
 * 위 pom.xml의 수정을 마쳐야 spring-web에서 제공하는 ViewResolverResgistry을 사용할 수 있게된다.
 * registry.jsp를 지원하는 것을 볼 수 있다.
 
-### Package\(component\) Scan : xml
+### Package(component) Scan : xml
 
 ```markup
 <!-- spring_context.jar에서 제공하는 속성, 스캔할 베이스 패키지를 지정한다. -->
@@ -160,7 +165,7 @@ public class MvcConfig implements WebMvcConfigurer {
 * 기존에 spring-servlet.xml에서 작성했던 component-scan 설정 속성
 * 여러 패키지를 베이스 패키지로 스캔하도록 지정할 수 있다.
 
-### Package\(component\) Scan : JAVA
+### Package(component) Scan : JAVA
 
 ```java
 package config;
@@ -177,7 +182,8 @@ public class RootConfig {
 ```
 
 * @Configuration 어노테이션으로 작성한 자바 환경설정파일 클래스
-* @ComponentScan 어노테이션으로 component-scan설정을 할 수 있다. xml문서와 똑같이 여러 패키지를 베이스 패키지로 스캔하도록 지정할 수 있다.
+* @ComponentScan 어노테이션으로 component-scan설정을 할 수 있다.\
+  xml문서와 똑같이 여러 패키지를 베이스 패키지로 스캔하도록 지정할 수 있다.
 
 ### web.xml 수정
 
@@ -220,7 +226,7 @@ public class RootConfig {
 * 위는 자동으로 생성되었던 기존코드
 * 자동생성된 servlet-context.xml을 환경설정파일로 읽고 있다.
 
-![](../../.gitbook/assets/.png%20%2851%29.png)
+![](<../../.gitbook/assets/.png (51).png>)
 
 * servlet-context.xml
 * 기존에 자동으로 생성되는 ViewResolver를 정의한 xml문서를 web.xml에서 지정 해제 하고 작성한 java문서를 매칭시켜야 한다.
@@ -229,9 +235,9 @@ public class RootConfig {
 
 * Java파일이 제대로 설정, 등록이 완료되었는지 확인해보자
 
-![](../../.gitbook/assets/1%20%28106%29.png)
+![](<../../.gitbook/assets/1 (106).png>)
 
-* TestController를 생성하고 WEB-INF &gt; views에 test.jsp를 만들었다.
+* TestController를 생성하고 WEB-INF > views에 test.jsp를 만들었다.
 
 ```java
 package web.android;
@@ -258,11 +264,12 @@ public class TestController {
 
 * TestController 코드
 * 어노테이션 @Controller를 작성해 컨트롤러로 등록한다.
-* @RequestMapping 어노테이션을 메서드에 작성해 url-pattern을 등록한다. - value속성으로 인터셉트할 url-pattern지정 - method속성으로 GET방식을 받아오게 지정
+* @RequestMapping 어노테이션을 메서드에 작성해 url-pattern을 등록한다.\
+  \- value속성으로 인터셉트할 url-pattern지정\
+  \- method속성으로 GET방식을 받아오게 지정
 
-![](../../.gitbook/assets/2%20%2880%29.png)
+![](<../../.gitbook/assets/2 (80).png>)
 
 * url : /step3/test.jo로 요청하면 test.jsp가 보여지는것을 확인할 수 있다.
 
  후기 :  부트스트랩 너무 어려워.....
-

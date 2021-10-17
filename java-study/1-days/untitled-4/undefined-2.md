@@ -50,12 +50,21 @@ public class WaitRoom extends JPanel implements ActionListener{
 ```
 
 * 대기실에서 입장버튼 클릭시 이벤트가 발생한다.
-* 6번 : 방목록의 선택은이 JTable서 인지하므로 getSelectedRow\( \)함수를 이용해 int배열에 담는다. - 배열에 담는 이유는 방 선택값이 없는 경우를 정의하기 위함이다.
-* 7-10번 : 방을 선택하지 않은경우에 알림창을 띄운다. - showMessageDialog\(부모, 메세지, 알림창title, 알림타입\); - Panel은 자체로 존재할수 없으므로 JFrame을 상속받는 부모클래스 인스턴스변수를 파라미터로 한다. - 더 진행하지 못하므로 반드시 return;을 넣어 탈출시킨다. 
+* 6번 : 방목록의 선택은이 JTable서 인지하므로 getSelectedRow( )함수를 이용해 int배열에 담는다.\
+  \- 배열에 담는 이유는 방 선택값이 없는 경우를 정의하기 위함이다.
+* 7-10번 : 방을 선택하지 않은경우에 알림창을 띄운다.\
+  \- showMessageDialog(부모, 메세지, 알림창title, 알림타입);\
+  \- Panel은 자체로 존재할수 없으므로 JFrame을 상속받는 부모클래스 인스턴스변수를 파라미터로 한다.\
+  \- 더 진행하지 못하므로 반드시 return;을 넣어 탈출시킨다. 
 * 11,12번 : 방이 선택되면 입장을 server에 전송해야하므로 예외처리 구문안에서 처리한다.
-* 13,14번 : JTable의 방목록중에서 i번째 방을 선택했다면, - JTable의 방목록을 getRowCount\( \)메서드와 for문으로 돌려 선택을 확인한다.  - JTable의 목록이 소유주이고, isRowSelected\(i\)메서드를 이용해 i번째 방이 선택되면 진행한다.
-* 15번 : 선택한 JTable의 로우는 i번째 이고, 값은 dtm에 들어있다. - 해당 JTable의 dtm.getValueAt메서드로 i번째 로우의 0번째 컬럼 값을 String타입 변수에 담는다. - getValueAt메서드로 꺼낸 값은 Object타입이므로 캐스팅연산자로 형전환한다.
-* 16번 : WaitRoom에는 소켓이 없으므로 ChatClientVer2클래스에 구현된 oos를 통해 말한다. - Protocol.ROOM\_IN+선택한 방이름+'나'의 nickName \(ccv2.nickName\)
+* 13,14번 : JTable의 방목록중에서 i번째 방을 선택했다면,\
+  \- JTable의 방목록을 getRowCount( )메서드와 for문으로 돌려 선택을 확인한다. \
+  \- JTable의 목록이 소유주이고, isRowSelected(i)메서드를 이용해 i번째 방이 선택되면 진행한다.
+* 15번 : 선택한 JTable의 로우는 i번째 이고, 값은 dtm에 들어있다.\
+  \- 해당 JTable의 dtm.getValueAt메서드로 i번째 로우의 0번째 컬럼 값을 String타입 변수에 담는다.\
+  \- getValueAt메서드로 꺼낸 값은 Object타입이므로 캐스팅연산자로 형전환한다.
+* 16번 : WaitRoom에는 소켓이 없으므로 ChatClientVer2클래스에 구현된 oos를 통해 말한다.\
+  \- Protocol.ROOM_IN+선택한 방이름+'나'의 nickName (ccv2.nickName)
 
 ## ChatServerThread
 
@@ -109,17 +118,20 @@ public class ChatServerThread extends Thread {
 				//////////////////////////end of 방입장//////////////////////////////
 ```
 
-* Protocol.ROOM\_IN의 경우에 듣는것은 입장할 방이름과 입장할 nickName이다.
+* Protocol.ROOM_IN의 경우에 듣는것은 입장할 방이름과 입장할 nickName이다.
 * 일단 **대기실의 대화방 목록의 현재 인원수를 업데이트**해야한다.
 * 8번 : 같은방인지 확인해야하므로 ChatServer가 관리하는 roomList의 size만큼 for문을 돌린다.
 * 9번 : 방관리 클래스 Room의 인스턴스변수를 roomList의 i번째 방으로 생성한다.-반복
-* 10번 : 읽어온 방이름과 roomList의 i번째 방의 title이 같다면, - 아니라면 for문을 반복한다.
-* 11번 : 멤버변수 g\_title을 방이름으로 초기화한다.
-* 12번 : 멤버변수 g\_current를 room.current에 +1하여 초기화한다. - room.current : 해당 방의 원래 인원수
-* 14-18번 : i번째 방의 변수들을 업데이트해야한다. - **인원수를 업데이트**하고, userList에 **입장한 thread\(this\)를 추가**하고, nameList에 **닉네임을 추가**한다.
-* 21번 : 방이름, 방인원수, 입장한 사람의 정보를 말한다. - Protocol.ROOM\_IN+g\_title+g\_current+this.nickName
+* 10번 : 읽어온 방이름과 roomList의 i번째 방의 title이 같다면,\
+  \- 아니라면 for문을 반복한다.
+* 11번 : 멤버변수 g_title을 방이름으로 초기화한다.
+* 12번 : 멤버변수 g_current를 room.current에 +1하여 초기화한다.\
+  \- room.current : 해당 방의 원래 인원수
+* 14-18번 : i번째 방의 변수들을 업데이트해야한다.\
+  \- **인원수를 업데이트**하고, userList에 **입장한 thread(this)를 추가**하고, nameList에 **닉네임을 추가**한다.
+* 21번 : 방이름, 방인원수, 입장한 사람의 정보를 말한다.\
+  \- Protocol.ROOM_IN+g_title+g_current+this.nickName
 
 ## ChatClientThread
 
 * 37일차에 구현
-

@@ -21,9 +21,12 @@ public class Room {
 	int max = 0;
 ```
 
-* 현재 단톡방에 접속해 있는 사용자의 스레드만 관리하는 클래스 - 현재 단톡방 접속자의 닉네임, 현재 정원, 최대 정원, 단톡방 이름,...을 관리하는 클래스
-* 여러 thread를 관리해야한다. - List&lt;ChatServerThread&gt; 를 Vector로 선언, 생성
-* 접속자들의 모든 닉네임을 관리해야한다. - List&lt;String&gt;을 Vector로 선언, 생성
+* 현재 단톡방에 접속해 있는 사용자의 스레드만 관리하는 클래스\
+  \- 현재 단톡방 접속자의 닉네임, 현재 정원, 최대 정원, 단톡방 이름,...을 관리하는 클래스
+* 여러 thread를 관리해야한다.\
+  \- List\<ChatServerThread> 를 Vector로 선언, 생성
+* 접속자들의 모든 닉네임을 관리해야한다.\
+  \- List\<String>을 Vector로 선언, 생성
 
 ### 생성자
 
@@ -37,9 +40,10 @@ public class Room {
 ```
 
 * 톡방명, 상태, 현재 정원 수 를 파라미터로 가져와 단톡방을 구분하는 생성자를 구현
-* 멤버변수를 파라미터 값으로 초기화한다. - 단톡방마다 다른 값을 가질 것이므로
+* 멤버변수를 파라미터 값으로 초기화한다.\
+  \- 단톡방마다 다른 값을 가질 것이므로
 
-### getter&setter
+### getter\&setter
 
 ```java
 	public List<ChatServerThread> getUserList() {
@@ -80,4 +84,3 @@ public class Room {
 	}
 }
 ```
-

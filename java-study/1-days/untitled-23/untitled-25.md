@@ -2,7 +2,7 @@
 
 ## a3\_result.jsp : 직접호출
 
-![](../../../.gitbook/assets/1%20%2863%29.png)
+![](<../../../.gitbook/assets/1 (63).png>)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -23,11 +23,11 @@
 </html>
 ```
 
-## typeA.jsp : Servlet호출, &lt;form&gt;, post방식
+## typeA.jsp : Servlet호출, \<form>, post방식
 
-![](../../../.gitbook/assets/6%20%2818%29.png)
+![](<../../../.gitbook/assets/6 (18).png>)
 
-![URL&#xBCC0;&#xACBD;](../../../.gitbook/assets/6-14.png)
+![URL변경](../../../.gitbook/assets/6-14.png)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -46,11 +46,11 @@
 </html>
 ```
 
-## typeB.jsp : Servlet호출, &lt;form&gt;, get방식
+## typeB.jsp : Servlet호출, \<form>, get방식
 
-![](../../../.gitbook/assets/7%20%2811%29.png)
+![](<../../../.gitbook/assets/7 (11).png>)
 
-![&#xBC84;&#xD2BC; &#xD074;&#xB9AD;&#xC2DC; URL&#xBCC0;&#xACBD;](../../../.gitbook/assets/7-2.png)
+![버튼 클릭시 URL변경](../../../.gitbook/assets/7-2.png)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -95,7 +95,9 @@
 </web-app>
 ```
 
-* 11번 - 서블릿 : /EasyUI/a3.do - JSP : dev\_html - webcontent - EasyUI - ...
+* 11번\
+  \- 서블릿 : /EasyUI/a3.do\
+  \- JSP : dev_html - webcontent - EasyUI - ...
 
 ## A3.java : Servlet
 
@@ -163,4 +165,3 @@ public class A3 extends HttpServlet {
 	public void destroy() {	}	
 }
 ```
-

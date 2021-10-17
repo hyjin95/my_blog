@@ -6,7 +6,9 @@
 
 선언부, Run - 소켓생성, 접속 처리 메서드, main 메서드
 
-{% page-ref page="../30-days/talkserverthread-1.md" %}
+{% content-ref url="../30-days/talkserverthread-1.md" %}
+[talkserverthread-1.md](../30-days/talkserverthread-1.md)
+{% endcontent-ref %}
 
 ```java
 package net.tomato_step2;
@@ -67,13 +69,15 @@ public class BandServer extends JFrame implements Runnable {
 ```
 
 * 한정된 자원 Server를 제공하는 클래스
-* 서버이지만 로그출력 화면을 제공한다. - 24시간동안 일어난 모든 일에 대해 응답을 하기위한 안전장치
+* 서버이지만 로그출력 화면을 제공한다.\
+  \- 24시간동안 일어난 모든 일에 대해 응답을 하기위한 안전장치
 * JFrame : setSize, SetVisible 등 화면에 필요한 메서드를 사용할수있게 해준다.
 * Runnable implements
-* 27번 : 생성된 Vector는 BandServerThread에서 사용된다.            현재 메모리는 할당되었으나 List는 비어있어 v.size=0이다.
+* 27번 : 생성된 Vector는 BandServerThread에서 사용된다.\
+             현재 메모리는 할당되었으나 List는 비어있어 v.size=0이다.
 * 31번 : 생성된 ServerSocket은 대기상태이다.
-* 32번 : while의 조건문에  isStop변수를 넣은것은 무한루프가 일어날 수 있는 조건true대신           변수를 선언하여 탈출장치를 마련한 것이다.
+* 32번 : while의 조건문에  isStop변수를 넣은것은 무한루프가 일어날 수 있는 조건true대신\
+            변수를 선언하여 탈출장치를 마련한 것이다.
 * 35번 : 접속자의 소켓정보가 만들어둔 소켓3에 담긴다.
 * 39번 : 멀티스레드 관리자인 ServerThread클래스와의 연결통로 생성
 * 40번 : 다리를 건너가게 한다.
-

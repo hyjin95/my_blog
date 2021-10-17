@@ -23,7 +23,7 @@ public class TomatoClient extends JFrame implements ActionListener{
 	};
 ```
 
-* 이미지 경로의 끝에 \\를 붙여 마감한다.
+* 이미지 경로의 끝에 \\\를 붙여 마감한다.
 * JTextAread에 이미지를 넣을 것이므로 JTextAread클래스 안에서 paint함수를 구현한다.
 * 13번 : Graphics 변수에 Image를 draw할 위치를 초기화한다.
 * 14번 : 그릴 곳에 Scroll이 구현되어 있으므로 viewPort를 이용해 보여질 부분을 가져온다.
@@ -42,7 +42,6 @@ public void initDisplay() {
 		jta_display.setLineWrap(true);//자동줄바꿈처리
 ```
 
-* 5번 : jta\_display의 기본 배경을 투명하게 한다.
-* 6번 : jta\_display는 출력 화면이므로 입력기능을 비활성화시킨다.
-* 7번 : jta\_display에 자동 줄바꿈 설정을 활성화한다.
-
+* 5번 : jta_display의 기본 배경을 투명하게 한다.
+* 6번 : jta_display는 출력 화면이므로 입력기능을 비활성화시킨다.
+* 7번 : jta_display에 자동 줄바꿈 설정을 활성화한다.

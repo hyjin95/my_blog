@@ -2,11 +2,11 @@
 description: 2020.12.15 - 84일차
 ---
 
-# 84 Days - Spring : String, Annotation\(Board\), xml\(Book\), 생성자객체주입, Android : Event
+# 84 Days - Spring : String, Annotation(Board), xml(Book), 생성자객체주입, Android : Event
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring - Android Studio
 * 사용 서버 - WAS : Tomcat
 
@@ -14,7 +14,7 @@ description: 2020.12.15 - 84일차
 
 ### request, response
 
-* void\(Lv1\) -&gt; ModelAndView\(Lv2\) -&gt; String\(Lv3\)
+* void(Lv1) -> ModelAndView(Lv2) -> String(Lv3)
 * req, res를 사용해야한다는 것은 상속을 받아야 하므로 의존적인 구성이 된다는 것이다.
 * void타입과 ModelAndView타입을 활용하는 메서드를 갖는 클래스는 req, res를 상속받아야 한다.
 * 이를 벗어나기 위해 String타입을 사용하게 된다.
@@ -23,7 +23,8 @@ description: 2020.12.15 - 84일차
 
 * string 타입의 메서드를 활용하면서 req와 res를 주입받지 않아도 되게 되면서 페이지간의 관계가 더 자유로워 지게 되었다.
 * req, res를 받지 않으므로 forward와 sendRedirect, getAttirbute, getParamter, setAttribute를 사용할 수 없게 되는 대신, 어노테이션을 활용해 이와 같은 역할을 똑같이 수행할 수 있다.
-* 기존의 ModelAndView에 담던 페이지 이동은 리턴값을 이용한다. - return "redirect:xxx.jsp";
+* 기존의 ModelAndView에 담던 페이지 이동은 리턴값을 이용한다.\
+  \- return "redirect:xxx.jsp";
 
 ### 추상클래스와 인터페이스
 
@@ -35,25 +36,43 @@ description: 2020.12.15 - 84일차
 
 ### 어노테이션을 사용하지 않는 경우
 
-* spring-servlet.xml : Controll 계층 + ViewResolver + Resource\(상수 : 이미지, 애니메이션, 색상, ....\) spring-service.xml : Model 계층 spring-data.xml : Model 계층\(DB에 자원관리\) mybatis-config.xml
+* spring-servlet.xml : Controll 계층 + ViewResolver + Resource(상수 : 이미지, 애니메이션, 색상, ....)\
+  spring-service.xml : Model 계층\
+  spring-data.xml : Model 계층(DB에 자원관리)\
+  mybatis-config.xml
 * xml문서에 매번 빈을 등록해야 하고, java와 여러 xml문서를을 동기화해야하므로 복잡하다.
-* 동기화 - DispatcherServlet과 업무별 Controller - XXXController와 XXXLogic : java와 java - XXXLogic과 SqlXXXDao : java와 java - java와 java이지만 일반 인스턴스화가 아닌 xml을 통한 외부 주입을 받기 위한 코드가 필요하다.
+* 동기화\
+  \- DispatcherServlet과 업무별 Controller\
+  \- XXXController와 XXXLogic : java와 java\
+  \- XXXLogic과 SqlXXXDao : java와 java\
+  \- java와 java이지만 일반 인스턴스화가 아닌 xml을 통한 외부 주입을 받기 위한 코드가 필요하다.
 
 ### 응답페이지 : ViewResolver + ModelAndView
 
-* ViewResolver - 응답할 view 페이지에 대한 url정의 - 접두어 : "WEB-INF/views/"   접미어 : ".jsp" - 작성시 "/"와 응답페이지를 호출하는 클래스에서의 페이지 이름에 ".jsp"가 붙는지 주의 한다.
-* ViewName - Lv2   ModelAndView mav = new ModelAndView\( \);    mav.setViewName\("/XXX/xxxList"\)
+* ViewResolver\
+  \- 응답할 view 페이지에 대한 url정의\
+  \- 접두어 : "WEB-INF/views/"\
+    접미어 : ".jsp"\
+  \- 작성시 "/"와 응답페이지를 호출하는 클래스에서의 페이지 이름에 ".jsp"가 붙는지 주의 한다.
+* ViewName\
+  \- Lv2\
+    ModelAndView mav = new ModelAndView( ); \
+    mav.setViewName("/XXX/xxxList")
 * 응답페이지 : WEB-INF/views/XXX/xxxList.jsp
 * 컨트롤계층 안에서 모두 정해진다.
 
 ### spring-servlet.xml : Controller
 
-* &lt;bean id=" " class=" "&gt; : setter메서드를 호출하는 곳, class=실제 위치\(패키지 + 파일이름\)      &lt;property name=" " ref=" "/&gt; : setter메서드 이름 &lt;bean&gt;
+* \<bean id=" " class=" "> : setter메서드를 호출하는 곳, class=실제 위치(패키지 + 파일이름)\
+       \<property name=" " ref=" "/> : setter메서드 이름\
+  \<bean>
 * 이렇게 등록해야 필요한때, bean에 등록된 클래스의 id가 호출되면 작성된 setter메서드에 외부에서 객체를 생성해서 주입 해준다.
 
 ### spring-service.xml : Logic
 
-* &lt;bean id=" " class=" "&gt; : spring-servlet.xml의 proterty ref에 작성된 이름과 일치하는 id      &lt;property name=" " ref=" "/&gt; : 이 bean의 class가 주입받아야하는 객체의 setter메서드와 객체이름 &lt;bean&gt;
+* \<bean id=" " class=" "> : spring-servlet.xml의 proterty ref에 작성된 이름과 일치하는 id\
+       \<property name=" " ref=" "/> : 이 bean의 class가 주입받아야하는 객체의 setter메서드와 객체이름\
+  \<bean>
 
 ### spring-data.xml : Dao, 연동자원
 
@@ -89,18 +108,23 @@ description: 2020.12.15 - 84일차
 
 * service.xml에서 Dao를 호출해서 data.xml로 오는 것 까지는 java : xml이지만, mybatis와 연동되는 부분은 xml : xml이다.
 * 자바가 아니기 때문에 setter메서드가 아닌 생성자로 객체 주입을 해야한다. --22
-* SqlSessionTemplate : selectOne\( \), selectList\( \), insert\( \), update\( \), delete\( \) SqlSessionFactoryBean : DB와의 Connection 연결통로
-* 순서상으로 FactoryBean이 먼저 생성되어야 Template를 사용 할 수 있다. Template가 FactoryBean에게 의존해 있다.
+* SqlSessionTemplate : selectOne( ), selectList( ), insert( ), update( ), delete( )\
+  SqlSessionFactoryBean : DB와의 Connection 연결통로
+* 순서상으로 FactoryBean이 먼저 생성되어야 Template를 사용 할 수 있다.\
+  Template가 FactoryBean에게 의존해 있다.
 
 ### Book : xml
 
-{% page-ref page="book-xml.md" %}
+{% content-ref url="book-xml.md" %}
+[book-xml.md](book-xml.md)
+{% endcontent-ref %}
 
 ## Spring : Annotation O, XML X
 
 ### 어노테이션을 사용하는 경우
 
-* 컨트롤 계층 : @Controller 모델     계층 : @Service
+* 컨트롤 계층 : @Controller\
+  모델     계층 : @Service
 * @Autowired 어노테이션을 인스턴스 변수에 붙이기만 하면 된다.
 
 ### url-pattern : @RequestMapping
@@ -130,11 +154,13 @@ public class BoardController {
 
 * 어노테이션과 String을 활용한다면 기존의 url-pattern은 어떻게 작성 할까?
 * 역시 어노테이션을 활용한다. : @RequestMapping
-* Controller클래스는 @Controller 어노테이션을 작성하고, 그 밑에 url을 작성한다. @RequestMapping\(/member/\*\) or \(/order/\*\)
-* 그리고 Controller안에서 구현하는 메서드에 업무내용 url을 작성해 분류한다. @RequestMapping\(/memberList.do\) or \(/memberInsert.do\)
+* Controller클래스는 @Controller 어노테이션을 작성하고, 그 밑에 url을 작성한다.\
+  @RequestMapping(/member/\*) or (/order/\*)
+* 그리고 Controller안에서 구현하는 메서드에 업무내용 url을 작성해 분류한다.\
+  @RequestMapping(/memberList.do) or (/memberInsert.do)
 * 의존성 주입은 xml작성 대신에 멤버변수에 어노테이션 @Autowired를 붙인다.
 
-### DI : @Autowired\(required="true / false"\)
+### DI : @Autowired(required="true / false")
 
 ```java
 package com.mvc3.board;
@@ -192,14 +218,17 @@ public class BoardController {
 
 ### Board : Annotation
 
-{% page-ref page="board-annotation.md" %}
+{% content-ref url="board-annotation.md" %}
+[board-annotation.md](board-annotation.md)
+{% endcontent-ref %}
 
 ## Spring : 생성자 객체 주입
 
 ### spring의 IoC
 
 * 어노테이션을 작성하지 않는 경우에 외부에서 객체를 주입받는 방법은 두가지가 있다.
-* java에서 setter메서드를 활용하거나, \(java : xml\) xml을 통한 생성자 객체 주입법을 활용하거나 \(xml : xml\)
+* java에서 setter메서드를 활용하거나, (java : xml)\
+  xml을 통한 생성자 객체 주입법을 활용하거나 (xml : xml)
 
 ### 생성자 객체 주입법
 
@@ -371,4 +400,3 @@ public class MainActivity extends AppCompatActivity {
 * 27-28번
 
 후기 : 매일 최선을 다하자 프로젝트에도 수업에도! 
-

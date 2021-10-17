@@ -1,4 +1,4 @@
-# Dept - Java : Java, @ \(O\), xml \(X\) - spring
+# Dept - Java : Java, @ (O), xml (X) - spring
 
 ## web.xml
 
@@ -30,7 +30,7 @@
 
 * 위 코드는 기존 부분과 동일한 코드이다.
 
-### 수정된 &lt;init-param&gt;
+### 수정된 \<init-param>
 
 ```markup
 	<!-- Processes application requests -->
@@ -169,8 +169,9 @@ public class DeptController {
 
 * xml을 활용하지 않을때에는 어노테이션@을 사용해 주입받을 수 있다.
 * @Controller를 활용한 Controller클래스
-* 32번코드는 MainForDept.java에서 JVM으로 실행할때에는 객체주입이 정상적으로 일어나 문제가 되지 않지만, Web에서 url로 test할때에는 객체주입이 되지 않기때문에 NullPointerException이 발생한다. url로 테스트 할때에는 32번코드를 주석처리 해야 한다.
-* 33번은 res.sendRedirect\("deptList.jsp"\)와 같다.
+* 32번코드는 MainForDept.java에서 JVM으로 실행할때에는 객체주입이 정상적으로 일어나 문제가 되지 않지만, Web에서 url로 test할때에는 객체주입이 되지 않기때문에 NullPointerException이 발생한다.\
+  url로 테스트 할때에는 32번코드를 주석처리 해야 한다.
+* 33번은 res.sendRedirect("deptList.jsp")와 같다.
 
 ### 코드 : DeptLogic.java
 
@@ -221,7 +222,7 @@ public class DeptDao {
 ```
 
 * DAO에서 DB와 연동되어 deptList에 값이 담겨야 하지만 DB를 구현하지 않았기때문에 null이 발생한다.
-* nullPointerException을 방지하기 위해 13번에서 null이 아닌 new ArrayList\( \)로 생성한다.
+* nullPointerException을 방지하기 위해 13번에서 null이 아닌 new ArrayList( )로 생성한다.
 
 ## 결과
 
@@ -240,4 +241,3 @@ public class DeptDao {
 ![](../../../.gitbook/assets/url-jsp-console.png)
 
 * 객체 주입이 일어나지 않아 Logic과의 연결을 주석 처리 해놓았기때문에 Controller 클래스에서만 요청이 처리된다.
-

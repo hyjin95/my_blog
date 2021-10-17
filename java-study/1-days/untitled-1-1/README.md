@@ -6,7 +6,7 @@ description: 2020.11.09 - 59일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
 * 사용 서버 - WAS : Tomcat
 
@@ -17,19 +17,20 @@ description: 2020.11.09 - 59일차
 * automatic Variable, local Variable
 * 인스턴스화 하여 사용할 수 없다.
 * 서버마다 제공해주는 클래스가 달라 클래스 이름으로 해당 변수를 호출 할 수 없다.
-* 서버\(tomcat, jeus, ....\)마다 jar파일이 있으므로
+* 서버(tomcat, jeus, ....)마다 jar파일이 있으므로
 
 ### Servlet 라이프사이클
 
-* 생성 : init\( \)
-* 사용 : service\( \) - doGet\( \), doPost\( \)오버라이드
-* 종료 : destroy\( \)
+* 생성 : init( )
+* 사용 : service( )\
+  \- doGet( ), doPost( )오버라이드
+* 종료 : destroy( )
 
 ### html과 css
 
 * css가 html안에 들어가게되면 정적이 되어버리므로 CSS는 항상 외부에서 따로 관리한다.
 * 분리하는것이 표준
-* html, js, css는 서버\(thread, 소켓\)없이도 단독으로 처리가 가능한 언어이다.
+* html, js, css는 서버(thread, 소켓)없이도 단독으로 처리가 가능한 언어이다.
 * 하지만 비동기, 이미 결정된 정보만 보여준다.
 
 ### Java의 웹 통신, WAS
@@ -42,7 +43,7 @@ description: 2020.11.09 - 59일차
 ### war
 
 * 프로젝트 파일명
-* war안에는 src, WEB\_INF폴더가 반드시 존재해야한다.
+* war안에는 src, WEB_INF폴더가 반드시 존재해야한다.
 
 ### JSP 컴파일
 
@@ -53,7 +54,7 @@ description: 2020.11.09 - 59일차
 
 ### 1. location.href="xxx.jsp"
 
-* &lt;a&gt;태그 안에서 특정 조건시 이동한다.
+* \<a>태그 안에서 특정 조건시 이동한다.
 
 ### 2. url : "xxx.do" - easyui
 
@@ -63,30 +64,33 @@ description: 2020.11.09 - 59일차
 ### 3.AJAX
 
 * JS의 비동기통신 라이브러리
-* 브라우저가 갖고 있는 XMLHttpRequest객체를 이용해 정적 페이지의 일부만을 위해 데이터 로드 - 페이지 일부를 동적처리하고 싶을 때 , 페이지이동, 페이지 새로고침 없이 서버에 경유할 수 있다. - 검색 조건 조회시 결과 값만 조회하는 것
+* 브라우저가 갖고 있는 XMLHttpRequest객체를 이용해 정적 페이지의 일부만을 위해 데이터 로드\
+  \- 페이지 일부를 동적처리하고 싶을 때 , 페이지이동, 페이지 새로고침 없이 서버에 경유할 수 있다.\
+  \- 검색 조건 조회시 결과 값만 조회하는 것
 * 기본 ajax는 순수 JS라이브러리로, 이것보다는 Jquery의 정리된 ajax를 사용하는 것이 편리하다.
 
-### 4. response.sendRedirect\( "xxx.jsp" \)
+### 4. response.sendRedirect( "xxx.jsp" )
 
 * 코드 진행중, 해당 코드가 나타나면 바로 페이지가 이동한다.
 * URL이 변한다. 요청이 끊겼다가 새로 요청되므로 자료가 유지 되지 않는다.
-* 페이지 이동이 일어나더라도 해당 코드 다음의 자바 코드들은 진행된다. - 예매완료, 로그인완료시 초기화면으로 돌아가는것
+* 페이지 이동이 일어나더라도 해당 코드 다음의 자바 코드들은 진행된다.\
+  \- 예매완료, 로그인완료시 초기화면으로 돌아가는것
 
-### 5. requestDispatcher.forward\( "xxx.jsp" \)
+### 5. requestDispatcher.forward( "xxx.jsp" )
 
-* request.setAttribute\(" ", 값\)
+* request.setAttribute(" ", 값)
 * 코드 진행중에 해당 코드를 만나면 바로 페이지 이동이 일어난다.
 * URL은 변하지 않지만 페이지 전체가 xxx.jsp의 응답으로 갱신된다. 자료가 유지된다.
 
-### 6. requestDiapstcher.include\( "xxx.jsp" \)
+### 6. requestDiapstcher.include( "xxx.jsp" )
 
-* request.setAttribute\(" ", 값\)
+* request.setAttribute(" ", 값)
 
 ## local - Web - App
 
 ### Local
 
-* Java\(화면, 통신, 스레드, 로직까지\)
+* Java(화면, 통신, 스레드, 로직까지)
 * 동기화되지 않는다.
 * thread와 socket을 직접 구현해 서버를 구축해야 하므로 시간과 비용이 든다.
 * 자바에서도 http를 제공하는 클래스 API가 존재하기 때문에 웹 서비스를 제공할 수는 있다.
@@ -94,16 +98,16 @@ description: 2020.11.09 - 59일차
 
 ### Web App
 
-* **정적** : html, JS, CSS - 처리주체인 브라우저에는 객체가 내장되어 있어 이벤트 처리가 가능하다. - 하지만 비동기 - html은 재사용성이 떨어지고 유지보수가 불리하다. -&gt; xml
-* **동적** : JSP, Servlet, Java - 비동기를 보완하기위한 언어 - 통신을 이용해 정보를 동기화한다. - JSP\(View\) - 디바이스마다 다른 설정을 제공하는 반응형 웹 - Java\(로직, 제어문\) - WAS제품이 스레드 관리를 해주므로 java로 직접 스레드를 구현, 관리할 필요가 없다.
+* **정적** : html, JS, CSS - 처리주체인 브라우저에는 객체가 내장되어 있어 이벤트 처리가 가능하다. - 하지만 비동기 - html은 재사용성이 떨어지고 유지보수가 불리하다. -> xml
+* **동적** : JSP, Servlet, Java - 비동기를 보완하기위한 언어 - 통신을 이용해 정보를 동기화한다. - JSP(View) - 디바이스마다 다른 설정을 제공하는 반응형 웹 - Java(로직, 제어문) - WAS제품이 스레드 관리를 해주므로 java로 직접 스레드를 구현, 관리할 필요가 없다.
 * 페이지 이동이 빈번하게 일어나 URL이 바뀐다.
 * main메서드가 없는대신 WAS가 제공해주는 req, res객체로 doGet메서드를 오버라이드한다.
 * req, res객체로 듣기와 응답을 처리할 수 있다.
 * 기능처리를 위해서는 순수한 java가 필요하다. = Modal 계층
 
-### App\(Mobile - Android, IOS\)
+### App(Mobile - Android, IOS)
 
-* Android\(google\), IOS\(apple\)
+* Android(google), IOS(apple)
 * 모바일 스마트 서비스
 * 안드로이드는 xml형식으로 화면을 구현한다.
 * 하이브리드 방식
@@ -115,44 +119,55 @@ description: 2020.11.09 - 59일차
 
 1. 페이지 이동방법에 대해서 말할 수 있다.
    1. location.href='xxx.jsp'
-   2. url : 'xxx.do' - easyui-datagrid-이벤트발생시
-   3. ajax\( { url : 'xxx.jsp', dataType : 'json', success:function\(data\){ } } \)
+   2. url : 'xxx.do'\
+      \- easyui-datagrid-이벤트발생시
+   3. ajax( { url : 'xxx.jsp', dataType : 'json', success:function(data){ } } )
 2. 페이지 이동 시 자료를  유지하는 방법에 대해 설명하고 활용할 수 있다.
 
 ### JSP
 
-* JSP &lt; Servlet &lt; Java - JSP는 확장자가 jsp, Servlet은 확장자가 java - Java의 부모는 Object로 req, res를 지원하지 않아 직접 스레드를 구현, 관리 해야한다. - Servlet은 서버에게서 req, res를 객체주입 받아 스레드는 WAS가 관리해준다.
+* JSP < Servlet < Java - JSP는 확장자가 jsp, Servlet은 확장자가 java - Java의 부모는 Object로 req, res를 지원하지 않아 직접 스레드를 구현, 관리 해야한다. - Servlet은 서버에게서 req, res를 객체주입 받아 스레드는 WAS가 관리해준다.
 * mime타입에 따라 문서의 성격이 달라진다. - html, xml, json, ...등 - 서브타입이 html인 jsp문서라면 태그가 있더라도 html문서취급되어 내용만 보여진다.
 
 ### JSP와 HTML
 
-| JSP -  text/html | HTML |
-| :---: | :---: |
-| &lt;% 자바소스코드 %&gt; | 자바코드 사용 불가 |
+| JSP -  text/html |    HTML    |
+| :--------------: | :--------: |
+|   <% 자바소스코드 %>   | 자바코드 사용 불가 |
 
-* JSP안에서는 자바코드를 최소화 해야한다. - 재사용성과 scope를 위해 - request.sendRedirect = page scope, foward = request scope
+* JSP안에서는 자바코드를 최소화 해야한다.\
+  \- 재사용성과 scope를 위해\
+  \- request.sendRedirect = page scope, foward = request scope
 
-{% page-ref page="../untitled-20/" %}
+{% content-ref url="../untitled-20/" %}
+[untitled-20](../untitled-20/)
+{% endcontent-ref %}
 
 ### JSP에 자바코드 최소화하기
 
 * JSP안에는 가급적 자바코드를 적게 사용한다.
-* 자원관리는 직접하지 않는다. - 동시접속자가 많을수록 많은 스레드가 필요하고, 이 스레드들이 바라보는 객체\(JSP\)는 원본 하나다. - 자원관리를 싱글톤으로 이뤄져야한다. - 하나를 나눠써야 하므로 대기가 일어날 수 있다.
+* 자원관리는 직접하지 않는다.\
+  \- 동시접속자가 많을수록 많은 스레드가 필요하고, 이 스레드들이 바라보는 객체(JSP)는 원본 하나다.\
+  \- 자원관리를 싱글톤으로 이뤄져야한다.\
+  \- 하나를 나눠써야 하므로 대기가 일어날 수 있다.
 
-### &lt;% 자바소스코드 %&gt;
+### <% 자바소스코드 %>
 
 * 스크립틀릿
 * 자바코드를 작성할 수 있다.
 * 변수를 선언할 수 있지만 지역변수만 가능하다.
 * 메서드 선언은 불가능
 * 제어문은 사용할 수 있다.
-* document.write와 같은 역할을 할 수 있다. - out.print\( \); - String test;와 String test=null;은 다르다. 전자는 출력하면 500번이 뜨고, 후자는 null이 출력된다.
-* &lt;% out.pritn\( html코드 \); %&gt;
+* document.write와 같은 역할을 할 수 있다. - out.print( );\
+  \- String test;와 String test=null;은 다르다. 전자는 출력하면 500번이 뜨고, 후자는 null이 출력된다.
+* <% out.pritn( html코드 ); %>
 * 하지만 JS변수에 대입할 경우에는 정적이 되어버린다. 처음에 결정된 값을 가지므로
 
 ### scope
 
-{% page-ref page="../untitled-1/" %}
+{% content-ref url="../untitled-1/" %}
+[untitled-1](../untitled-1/)
+{% endcontent-ref %}
 
 ### JSP와 JAVA, URL변동
 
@@ -161,9 +176,11 @@ description: 2020.11.09 - 59일차
 3. URL이 변하면 data가 유지 되지 않을까?
 4. URL이 변하더라도 data를 유지하는 방법이 있을까?
 
-{% page-ref page="jsp-java-scope.md" %}
+{% content-ref url="jsp-java-scope.md" %}
+[jsp-java-scope.md](jsp-java-scope.md)
+{% endcontent-ref %}
 
-### response.sendRedirect\( \)
+### response.sendRedirect( )
 
 * sendRedirect로 지정된 페이지로 이동한다.
 * URL이 변하는 페이지 이동 방식이다.
@@ -171,9 +188,10 @@ description: 2020.11.09 - 59일차
 * 로그인완료나 결제완료시 홈페이지로 이동한다거나.
 * 단, 페이지가 이동되더라도 이후의 java 코드는 진행된다.
 
-### requestDispatcher.forward\( \)
+### requestDispatcher.forward( )
 
-* URL이 변하지 않는 페이지 이동 방식 - 웹 브라우저에서는 최초 호출된 URL만 표시되고 이동한 페이지의 URL은 볼 수 없다.
+* URL이 변하지 않는 페이지 이동 방식\
+  \- 웹 브라우저에서는 최초 호출된 URL만 표시되고 이동한 페이지의 URL은 볼 수 없다.
 * data가 유지된다.
 
 ## 페이지이동 : JSP와 Servlet
@@ -183,22 +201,30 @@ description: 2020.11.09 - 59일차
 * 페이지 이동이 일어나면 sessiond id가 새로 만들어지고, 이 session id는 cookie에 저장된다.
 * session id는 해당 접속을 식별하는 값이다.
 
-### 모델1\(기본\) : JSP - JSP
+### 모델1(기본) : JSP - JSP
 
 * 모델1 = JSP로 요청을 받았다.
-* 요청 -&gt; JSP\(로그인\)----- 이동 -----&gt; JSP\(처리\) -&gt; 응답
-* 요청 : URL로 요청한다. - Web서비스를 이용하는 브라우저가 처리주체이므로 url을 통한 요청을 한다.
-* JSP\(로그인\) : html역할로서의 JSP
-* 이동 : request.sendRedirect\( \)  - 이 메서드를 만나면 연결을 끊고 새 JSP페이지와 새 연결을 한다.
+* 요청 -> JSP(로그인)----- 이동 -----> JSP(처리) -> 응답
+* 요청 : URL로 요청한다.\
+  \- Web서비스를 이용하는 브라우저가 처리주체이므로 url을 통한 요청을 한다.
+* JSP(로그인) : html역할로서의 JSP
+* 이동 : request.sendRedirect( ) \
+  \- 이 메서드를 만나면 연결을 끊고 새 JSP페이지와 새 연결을 한다.
 * 클래스 이름을 알 수 없어 인스턴스화 할 수 없다.
-* 객체\(JSP\) 자원관리를 시스템\(WAS\)이 싱글톤으로 해준다. 화면상으로 볼 수 없다. - 개발자가 관리하는 것보다 일관성 있고 안전성이 높다.
+* 객체(JSP) 자원관리를 시스템(WAS)이 싱글톤으로 해준다. 화면상으로 볼 수 없다.\
+  \- 개발자가 관리하는 것보다 일관성 있고 안전성이 높다.
 
 ### 모델2 : Servlet - JSP
 
-* Servlet\(java\)로 요청을 받는다. - java이지만 main메서드가 없다. 브라우저에서 실행되므로 필요없다. - 그래서 URL이 필요하다.
-* java에서 JSP를 부를수 있게, 이동할 수 있게 해주는 것 - sendRedirect\( \); - Servlet과 JSP, JSP와 JSP간에 이동할수  있다. - 하지만 scope를 사용할 수 없다.
+* Servlet(java)로 요청을 받는다.\
+  \- java이지만 main메서드가 없다. 브라우저에서 실행되므로 필요없다.\
+  \- 그래서 URL이 필요하다.
+* java에서 JSP를 부를수 있게, 이동할 수 있게 해주는 것\
+  \- sendRedirect( );\
+  \- Servlet과 JSP, JSP와 JSP간에 이동할수  있다.\
+  \- 하지만 scope를 사용할 수 없다.
 
-### JSP -&gt; JSP페이지 이동 : sendRedirect
+### JSP -> JSP페이지 이동 : sendRedirect
 
 #### a.jsp
 
@@ -234,26 +260,27 @@ description: 2020.11.09 - 59일차
 
 ### 반응형 
 
-* 디바이스\(장치\)의 해상도에 따라 다르게 대응되는 웹을 반응형 웹이라 한다. - 컴퓨터, 태블릿, 노트북, 핸드폰 등 디바이스 마다 해상도가 다르다.
+* 디바이스(장치)의 해상도에 따라 다르게 대응되는 웹을 반응형 웹이라 한다.\
+  \- 컴퓨터, 태블릿, 노트북, 핸드폰 등 디바이스 마다 해상도가 다르다.
 * PC화면을 핸드폰에 최적화 하지않고 사용한다면 핸드폰으로 해당 사이트를 살펴보기에 힘들것이다.
 * PC와 모바일 페이지를 별도로 제작해 사용한다면, 관리자 입장에서는 새 페이지를 생성, 관리 하는 것이므로 비효율적이라 볼 수 있다.
 * 이러한 문제를 해결하기위한 반응형웹을 만들때  viewport가 사용된다.
 
 ### viewport 지정
 
-* &lt;head&gt;영역에서 작성한다.
-* &lt;meta name="viewport" content="속성=값", .... /&gt;
+* \<head>영역에서 작성한다.
+* \<meta name="viewport" content="속성=값", .... />
 
 ### viewport content 속성
 
-| 속성 | 설명 | 값 |
-| :---: | :---: | :---: |
-| width | 뷰포트 너비 | device-width |
-| height | 뷰포트 높이 | device-height |
-| user-scalable | 확대/축소 가능 여부 | yes\(기본값\) or no |
-| initial-scale | 초기 확대/축소 값 | 1\(기본값\)~10 |
-| minimum-scale | 최소 확대/축소 값 | 0~10 \(기본값 0.25\) |
-| maximum-scale | 최대 확대/축소 값 | 0~10 \(기본값 1.6\) |
+|       속성      |      설명     |         값        |
+| :-----------: | :---------: | :--------------: |
+|     width     |    뷰포트 너비   |   device-width   |
+|     height    |    뷰포트 높이   |   device-height  |
+| user-scalable | 확대/축소 가능 여부 |  yes(기본값) or no  |
+| initial-scale |  초기 확대/축소 값 |    1(기본값)\~10    |
+| minimum-scale |  최소 확대/축소 값 | 0\~10 (기본값 0.25) |
+| maximum-scale |  최대 확대/축소 값 |  0\~10 (기본값 1.6) |
 
 ### 화면 크기에 따라 색상 지정
 
@@ -291,7 +318,6 @@ description: 2020.11.09 - 59일차
 * 디바이스 화면 너비가 320px 이하 : 흰색
 * 디바이스 화면 너비가 320px 초과 668px이하 : 분홍색
 * 디바이스 화면 너비가 668px 초과 800px이하 : 회색
-* 디바이스 화면 너비가 800px 초과 : \#6fc0d1 색상
+* 디바이스 화면 너비가 800px 초과 : #6fc0d1 색상
 
 후기 : 읏추읏추
-

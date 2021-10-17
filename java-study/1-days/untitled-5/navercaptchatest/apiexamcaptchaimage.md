@@ -41,12 +41,15 @@ public class ApiExamCaptchaImage {
 ```
 
 * 이미지를 받아오려면 서버에 접근하기 위한 클라이언트 ID, 클라이언트Secret정보와 key값이 필요하다.
-* 6번 : k파라미터로 받아온 key값은 문자열 상태로, 키 값만 꺼내야한다. - 넘어온 형태 : {key : keyValue} - key.substring\(몇번째부터, 몇번째까지\); - 8번째 string부터 24번째 string까지만 꺼내 담는다.
+* 6번 : k파라미터로 받아온 key값은 문자열 상태로, 키 값만 꺼내야한다.\
+  \- 넘어온 형태 : {key : keyValue}\
+  \- key.substring(몇번째부터, 몇번째까지);\
+  \- 8번째 string부터 24번째 string까지만 꺼내 담는다.
 * 8번 : 서버 접속을 위한 URL
 * 10-12번 : Map타입 변수를 HashMap으로 생성해 id와 secret값을 담는다.
 * 13번 : 응답받을 변수에 URL과 id, secret을 파라미터로 넣어 get메서드를 호출한다.
 
-### getFileNam\(String key\) 메서드
+### getFileNam(String key) 메서드
 
 ```java
 	public String getFileName(String key) {
@@ -112,7 +115,8 @@ public class ApiExamCaptchaImage {
 * 파라미터로 서버에 접근할 URL과 필요한 id, secret을 받는다.
 * HttpURLConnection변수를 활용해 connect클래스에 URL을 파라미터로 넘겨 서버와 연결을 시도한다.
 * 2번 : 네이버 서버와의 연결통로 확보
-* 10번 : connect메서드의 반환값인 구분번호code가 정상호출 code라면 getImage메서드를 호출한다. - socket을 사용하지않고 http의 connect메서드를 이용해 getInputStream메서드로 들을 수 있다.
+* 10번 : connect메서드의 반환값인 구분번호code가 정상호출 code라면 getImage메서드를 호출한다.\
+  \- socket을 사용하지않고 http의 connect메서드를 이용해 getInputStream메서드로 들을 수 있다.
 * 18번 : 연결 종료
 
 ### connect 메서드
@@ -132,7 +136,7 @@ public class ApiExamCaptchaImage {
 
 * 파라미터로 받아온 URL로 서버와 연결을 시도하는 메서드
 
-### getIamge\(InputStream is\) 메서드
+### getIamge(InputStream is) 메서드
 
 ```java
     private static String getImage(InputStream is){
@@ -160,7 +164,7 @@ public class ApiExamCaptchaImage {
 * 7-11번 : 위에서 지정한 서식의 파일로 os를 구현해 말하기한다.
 * 13번 : 반환값 :  생성된 이미지파일 이름.jpg
 
-### error\(InputStream body\) 메서드
+### error(InputStream body) 메서드
 
 ```java
     private static String error(InputStream body) {
@@ -181,6 +185,4 @@ public class ApiExamCaptchaImage {
     }
 }
 ```
-
-
 

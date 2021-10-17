@@ -2,7 +2,7 @@
 
 ## 올바르지 않은 형식
 
-![](../../../.gitbook/assets/4%20%2824%29.png)
+![](<../../../.gitbook/assets/4 (24).png>)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -30,7 +30,7 @@
 
 ## 올바른 형식
 
-![](../../../.gitbook/assets/5%20%2817%29.png)
+![](<../../../.gitbook/assets/5 (17).png>)
 
 ```markup
 <%@ page language="java" contentType="application/json; charset=UTF-8"
@@ -59,5 +59,5 @@
 %>
 ```
 
-* mime타입 : application/json - text/html이여도 알아서 json으로 인식하기는 하지만 바꿔서 명시하도록한다.
-
+* mime타입 : application/json\
+  \- text/html이여도 알아서 json으로 인식하기는 하지만 바꿔서 명시하도록한다.

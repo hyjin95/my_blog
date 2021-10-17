@@ -1,4 +1,4 @@
-# google.chart API - \[\[ \]\], JSON\[{ }\]
+# google.chart API - \[\[ ]], JSON\[{ }]
 
 ## lineChart.jsp - google.Chart API살펴보기
 
@@ -49,7 +49,8 @@
 </html>
 ```
 
-* 보면 15번 drawChart메서드안에서 DataTable의 형식이 일반 JSON형식이 아님을 알 수 있다. \[ \[ '컬럼명', '컬럼명' \] , \[ '값', 값 \] \]
+* 보면 15번 drawChart메서드안에서 DataTable의 형식이 일반 JSON형식이 아님을 알 수 있다.\
+  \[ \[ '컬럼명', '컬럼명' ] , \[ '값', 값 ] ]
 
 ## Step 1 : lineChart2.jsp - Ajax와 JSON
 
@@ -128,7 +129,7 @@
 * 가져온 data가 JSON형식이기 떄문에 출력 되지 않는다. 
 * 차트 DataTable이 인식하지 못한다.
 
-## Step 2 : lineChart3 - Map&lt;String&gt;으로 꽂는다.
+## Step 2 : lineChart3 - Map\<String>으로 꽂는다.
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -224,4 +225,3 @@
 	out.print(imsi);	
 %>
 ```
-

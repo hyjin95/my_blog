@@ -2,7 +2,7 @@
 
 ### 사용 src, xml
 
-![](../../../.gitbook/assets/t%20%281%29.png)
+![](<../../../.gitbook/assets/t (1).png>)
 
 ## xml
 
@@ -46,9 +46,10 @@
 ```
 
 * .test로 끝나는 모든 url요청을 인터셉트해 DispatcherServlet에게 매핑해준다. 
-* &lt;listener&gt;태그의 ContextLodaderListener클래스가 spring-service.xml 과 spring-data.xml을 읽을 수 있게 해준다.
-* 8번의 &lt;context-param&gt;태그는 서버 기동시 한번 읽고 유지된다.
-* 23번의 &lt;init-param&gt;태그는 요청이 들어올때마다 읽는다. - 요청 발생 시 마다 spring-servlet.xml을 읽는다.
+* \<listener>태그의 ContextLodaderListener클래스가 spring-service.xml 과 spring-data.xml을 읽을 수 있게 해준다.
+* 8번의 \<context-param>태그는 서버 기동시 한번 읽고 유지된다.
+* 23번의 \<init-param>태그는 요청이 들어올때마다 읽는다.\
+  \- 요청 발생 시 마다 spring-servlet.xml을 읽는다.
 
 ### 코드 : spring-servlet.xml
 
@@ -146,7 +147,8 @@
 * 이 xml문서는 서버 기동시 서버가 읽고 계속 유지한다.
 * 31-33번은 SqlMemberDao에서 sqlSessionTemplate를 필요할떄 주입받을 수 있게 하기 위함이다.
 * 27번의 SqlSessionTemplate클래스는 sql문을 요청하는 클래스로, 28번 태그에서 연결통로를 주입받는다.
-* 21번의 sqlSessionFactoryBean은 연결통로를 제공해주는 클래스이다. 22번에서 MyBatis Layer의 xml과 연결되어 있고, data-source-target을 주입받아 DB와의 연결을 한다.
+* 21번의 sqlSessionFactoryBean은 연결통로를 제공해주는 클래스이다.\
+  22번에서 MyBatis Layer의 xml과 연결되어 있고, data-source-target을 주입받아 DB와의 연결을 한다.
 
 ### 코드 : mybatis-config.xml
 
@@ -182,7 +184,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 </mapper>
 ```
 
-* 프로시저를 호출하는 sql문으로, 프로시저를 활용하기떄문에 리턴타입은 필요없다. 파라미터로 받은 map에 응답을 출력한다.
+* 프로시저를 호출하는 sql문으로, 프로시저를 활용하기떄문에 리턴타입은 필요없다.\
+  파라미터로 받은 map에 응답을 출력한다.
 * spatamentType="CALLABLE"이 있어야 필요할때 자동으로 호출된다.
 
 ## JAVA
@@ -227,8 +230,10 @@ public class MemberController extends MultiActionController {
 }
 ```
 
-* Java 코드로 작성된 Controller클래스, Spring에서 제공하는 MultiActionController를 상속받는다. - MultiActionController를 상속받으면 여러 요청을 한 Controller에서 메서드를 구현해 처리할 수 있게된다. SimpleUrlController를 사용한다면 요청에 대해 각각의 업무 Controller를\(Controller인터페이스나 AbstractController추상클래스를 상속하는\) 구현해야한다.
-* MemberLogic의 인스턴스변수를 private로 선언해 놓고, setter메서드를 구현한다. - 필요한 순간에 객체를 주입받아 원본을 사용하기 위함 -- spring-servlet.xml
+* Java 코드로 작성된 Controller클래스, Spring에서 제공하는 MultiActionController를 상속받는다.\
+  \- MultiActionController를 상속받으면 여러 요청을 한 Controller에서 메서드를 구현해 처리할 수 있게된다. SimpleUrlController를 사용한다면 요청에 대해 각각의 업무 Controller를(Controller인터페이스나 AbstractController추상클래스를 상속하는) 구현해야한다.
+* MemberLogic의 인스턴스변수를 private로 선언해 놓고, setter메서드를 구현한다.\
+  \- 필요한 순간에 객체를 주입받아 원본을 사용하기 위함 -- spring-servlet.xml
 * login메서드 파라미터의  req, res는 DispatcherServlet이 주입해준다.
 
 ### 코드 : MemberLogic.java
@@ -261,7 +266,8 @@ public class MemberLogic {
 }
 ```
 
-* 11번에서 Dao의 인스턴스변수를 생성하고, setter메서드를 통해 필요할때 주입받는다. -- spring-service.xml
+* 11번에서 Dao의 인스턴스변수를 생성하고, setter메서드를 통해 필요할때 주입받는다.\
+  \-- spring-service.xml
 
 ### 코드 : SqlMemberDao.java
 
@@ -298,7 +304,8 @@ public class SqlMemberDao {
 ```
 
 * 11번에서 SqlSessionTemplate인스턴스변수를 생성해놓고, setter메서드를 통해 필요할때 주입받아 사용한다. --spring-data.xml
-* DB연결 Driver와 연결통로가 xml에 작성되어 있기때문에 sqlSessionTemplate만 주입받아 바로 sql문을 호출 하면된다. - MyBatis : selectOne, selectList, isert, update, delete, ....
+* DB연결 Driver와 연결통로가 xml에 작성되어 있기때문에 sqlSessionTemplate만 주입받아 바로 sql문을 호출 하면된다.\
+  \- MyBatis : selectOne, selectList, isert, update, delete, ....
 
 ## Log4j
 
@@ -329,4 +336,3 @@ log4j.logger.java.sql.Statement=INFO
 log4j.logger.java.sql.PreparedStatement=INFO
 log4j.logger.java.sql.ResultSet=INFO
 ```
-

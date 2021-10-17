@@ -2,7 +2,7 @@
 
 ## 코드
 
-### 코드 : boardList.jsp\[WEB-INF\]
+### 코드 : boardList.jsp\[WEB-INF]
 
 ```javascript
 	function download(pbs_file){
@@ -11,7 +11,8 @@
 ```
 
 * 목록의 첨부파일을 클릭하면 호출되는 함수
-* downLoad.jsp를 호출한다. 파라미터로받은 pbs\_file을 같이 넘겨준다.
+* downLoad.jsp를 호출한다.\
+  파라미터로받은 pbs_file을 같이 넘겨준다.
 
 ```markup
     <!---================== 조회결과가 있는 경우 ======================= -->    	
@@ -100,7 +101,6 @@
 
 ## 결과
 
-![](../../../.gitbook/assets/2%20%2879%29.png)
+![](<../../../.gitbook/assets/2 (79).png>)
 
 * 첨부파일을 클릭하면 바로 다운로드가 일어난다.
-

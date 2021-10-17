@@ -34,9 +34,9 @@
 </manifest>
 ```
 
-* 15번에서 OrderActivity에 resource의 string의 create\_order를 라벨로 하고 있다.
+* 15번에서 OrderActivity에 resource의 string의 create_order를 라벨로 하고 있다.
 
-## res &gt; values &gt; strings.xml
+## res > values > strings.xml
 
 ### 코드 : string.xml
 
@@ -91,7 +91,8 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 * 3번 코드에서 앱바에 메뉴를 추가한다.
-* 4번이 메뉴의 첫번째 아이템이다.  공유 아이템
+* 4번이 메뉴의 첫번째 아이템이다. \
+  공유 아이템
 * 5번에서 ShareActionProvider를 가져온다.
 * 6번에서 인텐트를 지정한다.
 
@@ -153,9 +154,9 @@ public class OrderActivity extends AppCompatActivity {
 }
 ```
 
-## XML : res &gt; layout
+## XML : res > layout
 
-### 코드 : activity\_main.xml
+### 코드 : activity_main.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -185,7 +186,7 @@ public class OrderActivity extends AppCompatActivity {
 </LinearLayout>
 ```
 
-### 코드 : activity\_order.xml
+### 코드 : activity_order.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -210,7 +211,7 @@ public class OrderActivity extends AppCompatActivity {
 </LinearLayout>
 ```
 
-### 코드 : toolbar\_main.xml
+### 코드 : toolbar_main.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -224,12 +225,11 @@ public class OrderActivity extends AppCompatActivity {
 
 ## 결과
 
-![](../../../.gitbook/assets/1%20%2898%29.png)
+![](<../../../.gitbook/assets/1 (98).png>)
 
 * MainActivity 
-* + 버튼, '주문하기' 버튼을 누르면 OrderActivity를 불러온다.
+* \+ 버튼, '주문하기' 버튼을 누르면 OrderActivity를 불러온다.
 
-![](../../../.gitbook/assets/2%20%2874%29.png)
+![](<../../../.gitbook/assets/2 (74).png>)
 
 * OrderActivity
-

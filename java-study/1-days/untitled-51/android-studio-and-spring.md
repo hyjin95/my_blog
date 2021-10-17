@@ -46,10 +46,14 @@
 %>
 ```
 
-* webapp &gt; android &gt; androidOracleConnection.jsp 여기에 위치해 Http url로 접근이 가능하다. 
+* webapp > android > androidOracleConnection.jsp\
+  여기에 위치해 Http url로 접근이 가능하다. 
 * 10-11번에서 POST방식으로 넘어온 값을 받는다.
 * 15번 : DB연결은 예외처리 필수
-* 16-23번 코드는 mybatis로 작성할 경우에 필요가 없어진다. - Class.forName + con -&gt; sqlSessionFactoryBean - stmt -&gt; sqlSession\(java\), sqlSessionTemplate\(spring\) - rs -&gt; mybatis의 xml에 작성되는 resultType을 통해 자동으로 Dao에 선언된 변수에 담긴다.
+* 16-23번 코드는 mybatis로 작성할 경우에 필요가 없어진다.\
+  \- Class.forName + con -> sqlSessionFactoryBean\
+  \- stmt -> sqlSession(java), sqlSessionTemplate(spring)\
+  \- rs -> mybatis의 xml에 작성되는 resultType을 통해 자동으로 Dao에 선언된 변수에 담긴다.
 * 31-34번 : DB연동에 있어서 자원반납은 필수
 
 ## Android Studio : Manifests
@@ -135,8 +139,11 @@ public class LoginActivity extends AppCompatActivity {
 }
 ```
 
-* 13번 : 결과를 출력할 공간, activity\_login.xml에 작성된 TextView태그의 id값을 담을 변수 선언 18번에서 해당 id를 가진 xml이 매칭된 후에 19번에서 id에 접근한다.
-* 24,26번에서 xml에서 사용자가 입력하는 EditText 태그의 id에 접근한다. 25, 27번에서 getText\( \).toString\( \) 함수를 사용해 입력 값을 String으로 꺼내 담는다. LoginLogic클래스에서 사용하기 위해 String으로 변환한다.
+* 13번 : 결과를 출력할 공간, activity_login.xml에 작성된 TextView태그의 id값을 담을 변수 선언\
+  18번에서 해당 id를 가진 xml이 매칭된 후에 19번에서 id에 접근한다.
+* 24,26번에서 xml에서 사용자가 입력하는 EditText 태그의 id에 접근한다.\
+  25, 27번에서 getText( ).toString( ) 함수를 사용해 입력 값을 String으로 꺼내 담는다.\
+  LoginLogic클래스에서 사용하기 위해 String으로 변환한다.
 
 ### 코드 : LoginLogic.java
 
@@ -196,9 +203,9 @@ public class LoginLogic extends AsyncTask<String,Void,String> {
 * 13번에서 통신 채널 오픈
 * 14번 : 개인 id, pw를 처리하는 것이므로 get방식이 아닌 post방식을 선택했다.
 * 19번에서 post방식으로 넘겨야하는 파라미터 값을 담는다.
-* 21번 : 만들어둔 쓰기객체를 활용해 말하기\(url 말하기\)한다.
-* 22번의 flush\( \)함수는 서버 전송이 이뤄진 뒤에 메모리를 비워주는 메서드이다.
-* 16번에서 쓰기\(말하기\)를 담당하는 OutputStreamWriter객체를 생성한다.
+* 21번 : 만들어둔 쓰기객체를 활용해 말하기(url 말하기)한다.
+* 22번의 flush( )함수는 서버 전송이 이뤄진 뒤에 메모리를 비워주는 메서드이다.
+* 16번에서 쓰기(말하기)를 담당하는 OutputStreamWriter객체를 생성한다.
 
 ```java
             //응답을 받아올 준비--성공시 200번
@@ -226,20 +233,21 @@ public class LoginLogic extends AsyncTask<String,Void,String> {
 }
 ```
 
-* 2번의 getResponseCode\( \)메서드를 활용하면 해당 연결의 통신상태를 가져올 수 있다. - 성공이면 200, 찾을 수 없으면 404 등 ...
+* 2번의 getResponseCode( )메서드를 활용하면 해당 연결의 통신상태를 가져올 수 있다.\
+  \- 성공이면 200, 찾을 수 없으면 404 등 ...
 * 3번 : BufferReader클래스를 활용해 문자열 응답을 받아오면 메모리 처리 효율이 높아진다. 한글자씩 인지하므로
 * 4번 : 연결이 성공했다면, 200번이라면
-* 5번에서 InputStreamReader\( \)클래스로 읽기\(듣기\)객체를 BufferdReader객체로 생성한다.
+* 5번에서 InputStreamReader( )클래스로 읽기(듣기)객체를 BufferdReader객체로 생성한다.
 * 6번에서 응답값을 받을 String변수를 선언한다.
-* 7번에서는 응답값을 append\(붙이기\)하기 위해 StringBuffer객체를 생성한다.
+* 7번에서는 응답값을 append(붙이기)하기 위해 StringBuffer객체를 생성한다.
 * 8번 : 응답으로 받아온 메세지가 존재하는 동안에는
-* 9번 : sb\_res에 메세지를 추가한다.
-* 12번 : 멤버변수에 선언해둔 최종 응답 변수에 받아온 메세지를 toString\( \)으로 담는다.
+* 9번 : sb_res에 메세지를 추가한다.
+* 12번 : 멤버변수에 선언해둔 최종 응답 변수에 받아온 메세지를 toString( )으로 담는다.
 * 21번 : return 멤버변수
 
 ## Android Studio : XML
 
-### 코드 : activity\_login.xml
+### 코드 : activity_login.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -321,7 +329,7 @@ public class LoginLogic extends AsyncTask<String,Void,String> {
 
 ### spring : /android/androidOracleConnection.jsp
 
-![](../../../.gitbook/assets/oracle-%20%281%29.png)
+![](<../../../.gitbook/assets/oracle- (1).png>)
 
 * 파라미터로 조건이 들어오지 않으면 나타나는 화면
 
@@ -338,4 +346,3 @@ public class LoginLogic extends AsyncTask<String,Void,String> {
 ![](../../../.gitbook/assets/oracle-3.png)
 
 * Android Studio의 logout
-

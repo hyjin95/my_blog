@@ -2,7 +2,7 @@
 
 ### oracle 참조
 
-![](../../../.gitbook/assets/5%20%287%29.png)
+![](<../../../.gitbook/assets/5 (7).png>)
 
 * java 참조 클래스가 아닌 oracle 참조 클래스를 이용하려면, Build Path에 파일이 있어야만 사용가능하다.
 * 소스파일 우클릭 - BuildPath - Configure Build Path - Libraries
@@ -33,7 +33,8 @@ import oracle.jdbc.OracleTypes;
  */
 ```
 
-* OracleCallableStatement 클래스는 PL/SQL 처리를 담당한다. - 오라클에서 생성한 객체\(프로시저\)를 오라클 서버에 전달해준다.
+* OracleCallableStatement 클래스는 PL/SQL 처리를 담당한다.\
+  \- 오라클에서 생성한 객체(프로시저)를 오라클 서버에 전달해준다.
 * oracle.jdbc 참조 클래스는 Build Path 라이브러리에 해당 클래스가 있어야 참조될 수 있다.
 * java.sql.CallableStatement와 oracle.jdbc.OracleCallableStatement 둘다 import한 것은 서로 다른 메서드를 호출 하기 위함이다.
 
@@ -119,4 +120,3 @@ public class MyProc {
 ```
 
 * List를 for문으로 출력하기
-

@@ -6,7 +6,7 @@ description: 2021.01.18 - 105일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio, Visual Studio Code, Nexacro
 * 사용 서버 - WAS : Tomcat
 
@@ -14,9 +14,12 @@ description: 2021.01.18 - 105일차
 
 ### 앱
 
-* 웹앱 네트워크, 인터넷 연결을 모두 종료하고 페이지를 호출하면 컨텐츠를 확인할 수 없다.
-* 네이티브앱 디바이스가 제공하는 카메라, gps등을 사용할 수 있다.
-* 하이브리드 앱 Activity\(Fragment+web view\), Session을 사용할 수 있다.
+* 웹앱\
+  네트워크, 인터넷 연결을 모두 종료하고 페이지를 호출하면 컨텐츠를 확인할 수 없다.
+* 네이티브앱\
+  디바이스가 제공하는 카메라, gps등을 사용할 수 있다.
+* 하이브리드 앱\
+  Activity(Fragment+web view), Session을 사용할 수 있다.
 
 ### Manifest : Permission
 
@@ -159,7 +162,7 @@ public class ScanActivity extends AppCompatActivity {
 ```
 
 * 이 액티비티가 시작될때 호출 되는 메서드 
-* btn\_exit버튼은 나가기 버튼이다.
+* btn_exit버튼은 나가기 버튼이다.
 
 ```java
         btn_move.setOnClickListener(new View.OnClickListener() {
@@ -187,8 +190,8 @@ public class ScanActivity extends AppCompatActivity {
     }
 ```
 
-* onCreate안에 정의된 btn\_move버튼의 이벤트 처리 및 초기 액티비티 설정
-* btn\_move버튼을 누르면 웹 뷰에대한 설정을 하고 url을 load한다.
+* onCreate안에 정의된 btn_move버튼의 이벤트 처리 및 초기 액티비티 설정
+* btn_move버튼을 누르면 웹 뷰에대한 설정을 하고 url을 load한다.
 * 19-22번 코드가 작성되어야 QR스캔이 가능하다.
 
 ```java
@@ -213,4 +216,3 @@ public class ScanActivity extends AppCompatActivity {
 * 활동, 작업 결과를 내보내주는 메서드
 
 후기 : 촉박한 시간과 파이널 프로젝트로 하루하루 정신이 없다 ㅠㅠㅠㅠㅠㅠ 조금만 더 화이팅하자!!!
-

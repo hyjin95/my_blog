@@ -6,15 +6,26 @@ description: 2020.08.19 - 15일차
 
 ### 복습
 
-1. 화면 - Conteiner : 가장 밑바닥 - JFrame : 속지, 단독으로 화면을 나타낼 수 있다. - JPanel : 속지 위에서 화면을 구성해주는 클래스
-2. Jpanel 인스턴스화와 생성자 - Jpanel jp = new JPanel\(\); - JPanel의 DefaultLayout은 FlowLayout이다. - BorderLayout으로 set 하는 법 : 소유주 주소번지.setLayout\(new BorderLayout\(\)\);
-3. FlowLayout, BorderLayout - Flow : 정렬레이아웃, 버튼이 2개 있는 창을 확대하면 두번째 버튼이 오른쪽에, 축소하면 아래로 내려간다. - Border : setLayout클래스에서 기본적으로 사용되는 레이아웃, 동서남북 방향으로 배치한다. 파라미터로 int, int가 오면 여백을 의미한다.
-4. 인스턴스화 분리 - 선언 : A a = null; - 생성 : a = new A;
+1. 화면\
+   \- Conteiner : 가장 밑바닥\
+   \- JFrame : 속지, 단독으로 화면을 나타낼 수 있다.\
+   \- JPanel : 속지 위에서 화면을 구성해주는 클래스
+2. Jpanel 인스턴스화와 생성자\
+   \- Jpanel jp = new JPanel();\
+   \- JPanel의 DefaultLayout은 FlowLayout이다.\
+   \- BorderLayout으로 set 하는 법 : 소유주 주소번지.setLayout(new BorderLayout());
+3. FlowLayout, BorderLayout\
+   \- Flow : 정렬레이아웃, 버튼이 2개 있는 창을 확대하면 두번째 버튼이 오른쪽에, 축소하면 아래로 내려간다.\
+   \- Border : setLayout클래스에서 기본적으로 사용되는 레이아웃, 동서남북 방향으로 배치한다. 파라미터로 int, int가 오면 여백을 의미한다.
+4. 인스턴스화 분리\
+   \- 선언 : A a = null;\
+   \- 생성 : a = new A;
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
-* 사용Tool  - Eclipse : Eclipse.org
+* 사용언어 : JAVA(JDK)1.8.0\_261 : Oracle.com
+* 사용Tool \
+  \- Eclipse : Eclipse.org
 
 ### 인스턴스화 위치
 
@@ -32,12 +43,13 @@ description: 2020.08.19 - 15일차
 
 * 클래스에 extends를 붙여 쓸 수 있다.
 * 상속의 개념을 갖는다. 기존 클래스가 child, 불러온 추상클래스가 parent가 된다.
-* 상속관계이며, child의 범위가 더 크므로 parent 주소번지 = new child\(\);가 성립한다.
-* 추상메서드, 일반메서드 둘다 갖는다. -&gt; 구현체 클래스가 필요하다.
+* 상속관계이며, child의 범위가 더 크므로 parent 주소번지 = new child();가 성립한다.
+* 추상메서드, 일반메서드 둘다 갖는다. -> 구현체 클래스가 필요하다.
 * 추상메서드에는 abstract를 붙인다
 * 결합도가 높고, 자유롭지 못하다.
-* 단독 인스턴스화 불가능하다 -&gt; 추상클래스 주소번지 = new 추상클래스\(\); : 성립 X 
-* 참고 : Duck.java, NickNameList.java - MallardDuck, WoodDuck, RubberDuck클래스 들이 Duck추상클래스를 parent로 상속한다.
+* 단독 인스턴스화 불가능하다 -> 추상클래스 주소번지 = new 추상클래스(); : 성립 X 
+* 참고 : Duck.java, NickNameList.java\
+  \- MallardDuck, WoodDuck, RubberDuck클래스 들이 Duck추상클래스를 parent로 상속한다.
 
 ### 인터페이스
 
@@ -46,9 +58,14 @@ description: 2020.08.19 - 15일차
 * 그래서 구현체 클래스가 반드시 필요
 * 클래스안에 구현메서드를 만들어 사용 가능하지만 구현체 클래스를 따로  빼서 쓰는게 더 편리하다.
 * 결합도가 낮다, 비교적 자유롭다.
-* **클래스 implements 인터페이스** - actionListener a = new NickNameList\(\);  - 왼쪽항이 더 크다, 오른쪽항에는 클래스가 와야 문법오류가 일어나지 않는다 - implements하면 override를 생성해주어야한다.
-* **개체.addActionListener\(new ActionListener\(actionPerformed\(\) \) \);** - add메서드\(new 인터페이스\(추상메서드\(\)구현 \) \);
-* 참고 : FlyBehavior.java, NickNameList-Sub.java - FlyWithWings, FlyNoWay 클래스들이 FlyBehavior의 구현체 클래스들이다.
+* **클래스 implements 인터페이스**\
+  \- actionListener a = new NickNameList(); \
+  \- 왼쪽항이 더 크다, 오른쪽항에는 클래스가 와야 문법오류가 일어나지 않는다\
+  \- implements하면 override를 생성해주어야한다.
+* **개체.addActionListener(new ActionListener(actionPerformed() ) );**\
+  ****- add메서드(new 인터페이스(추상메서드()구현 ) );
+* 참고 : FlyBehavior.java, NickNameList-Sub.java\
+  \- FlyWithWings, FlyNoWay 클래스들이 FlyBehavior의 구현체 클래스들이다.
 
 ### 클래스 안의 클래스
 
@@ -105,8 +122,10 @@ public class InstanceTest extends JFrame {
 }//end of class
 ```
 
-* extends\(상속\) -&gt; this함수를 사용할 수 있다. \(부모개체를 사용할수 있는 함수\)
-* static이 붙은 함수 안에서는 this를 사용할 수 없다. - static함수는 클래스 안에있지만 Heap내부에서 따로 떨어져 존재하기 때문이다.  - static : 싱글톤, 하나를 공유하는 것
+* extends(상속) -> this함수를 사용할 수 있다. (부모개체를 사용할수 있는 함수)
+* static이 붙은 함수 안에서는 this를 사용할 수 없다.\
+  \- static함수는 클래스 안에있지만 Heap내부에서 따로 떨어져 존재하기 때문이다. \
+  \- static : 싱글톤, 하나를 공유하는 것
 * JFrame이 부모클래, InstanceTest가 자식클래스이다.
 * 자식클래스가 부모클래스를 모두 가지므로 영역이 더 크다.
 * 11번 : 디폴트 생성자
@@ -150,7 +169,7 @@ public class FatherSmulation {
 ```
 
 * 26번은 상속관계시에만 성립한다.
-* 출력결과 : Son ---&gt; methodA 호출성공
+* 출력결과 : Son ---> methodA 호출성공
 
 ### Outter.java
 
@@ -191,4 +210,3 @@ public class OutterTest {
 * 24-26 : 인스턴스화이용
 
 후기 : 인스턴스화 생성 위치에 따라 null오류가 날수 있으니 주의해야한다. 생성자와 추상클래스, 인터페이스를 더 활용해보도록 하자!
-

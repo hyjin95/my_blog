@@ -6,7 +6,7 @@ description: 2020.12.16 - 85일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring - Android Studio
 * 사용 서버 - WAS : Tomcat
 
@@ -25,18 +25,19 @@ description: 2020.12.16 - 85일차
 
 ### url-pattern
 
-* 프로토콜 + 포트번호 + 업무명\(폴더명\) + 페이지이름 + .jsp / .do
+* 프로토콜 + 포트번호 + 업무명(폴더명) + 페이지이름 + .jsp / .do
 * .jsp : HttpServlet, 표준서블릿, sendRedirect
-* .do : DispatcherServlet\(Spring\), forward
-* 업무명 : SimpleUrlHandlerMapping클래스에서 업무Controller결정\(Spring\)
-* 페이지이름 : Properties에서 지정된 메서드 결정\(Spring\)
+* .do : DispatcherServlet(Spring), forward
+* 업무명 : SimpleUrlHandlerMapping클래스에서 업무Controller결정(Spring)
+* 페이지이름 : Properties에서 지정된 메서드 결정(Spring)
 * Spring에서 클래스등록은 spring-servlet.xml에 작성된다.
 
 ### Controller설계
 
 * 하나의 클래스 안에는 n개의 업무가 존재한다.
 * 이때 bookInsert업무는 BookInsertController, bookUpdate업무는 BookUpdateController이런식으로 설계를 하면 비효율적인 코드가 탄생할 것이다. 같은 Controller안에서 충분히 나눌 수 있는 업무에 대해 doGet과 같은 메서드 코드가 반복되어야 하는 상황이 발생한다. --기존 POJO방식
-* 위와 같은 업무는 BookController안에서 같이 처리하도록 해야 반복 코드를 줄일 수 있다. Spring에서 PropertiesMethodNameResolver클래스를 제공함으로서 이를 가능하게 해준다.
+* 위와 같은 업무는 BookController안에서 같이 처리하도록 해야 반복 코드를 줄일 수 있다.\
+  Spring에서 PropertiesMethodNameResolver클래스를 제공함으로서 이를 가능하게 해준다.
 
 ### PropertiesMethodNameResolver
 
@@ -69,14 +70,15 @@ description: 2020.12.16 - 85일차
 	</bean>
 ```
 
-* 13번에서 Controller클래스가 ref속성의 board-resolver이름을 가진 &lt;bean&gt;을를 참조하게 한다.
+* 13번에서 Controller클래스가 ref속성의 board-resolver이름을 가진 \<bean>을를 참조하게 한다.
 
 ## Eclipse : Spring-boot 
 
 ### Eclipse : Spring-boot
 
-* Help &gt; Eclipse-Marketplace에서 spring sts를 다운로드 하면 spring-boot프로젝트를 생성할 수 있다.
-* File &gt; New &gt; Spring Boot &gt; Spring Starter Project 자바버전을 맞추고 제공 서비스는 Web &gt; Web Service만 체크하고 생성한다.
+* Help > Eclipse-Marketplace에서 spring sts를 다운로드 하면 spring-boot프로젝트를 생성할 수 있다.
+* File > New > Spring Boot > Spring Starter Project\
+  자바버전을 맞추고 제공 서비스는 Web > Web Service만 체크하고 생성한다.
 
 ```elixir
 server.port=8080
@@ -88,7 +90,8 @@ server.tomcat.uri-encoding=UTF-8
 #spring.http.encoding.charset=UTF-8 내장되어있나?
 ```
 
-* spring-boot에서는 xml이 아닌 application.properties에 작성한다. 
+* spring-boot에서는 xml이 아닌 application.properties에 작성한다.\
+
 
 ### Eclipse : Spring-boot-log
 
@@ -109,28 +112,31 @@ server.tomcat.uri-encoding=UTF-8
 		</dependency>
 ```
 
-* MavenRepository : Log4JDBC Log4j2 JDBC4 &gt;&gt; 1.16
+*   MavenRepository : Log4JDBC Log4j2 JDBC4 >> 1.16
 
-  MavenRepository : Apache Log4 Web &gt;&gt; 2.13.3
-
+    MavenRepository : Apache Log4 Web >> 2.13.3
 * resources : log4j2.xml + log4jdbc.log4j2.properties + logback.xml
 
 ### 트랜잭션 처리
 
-{% page-ref page="eclipse-board-transaction.md" %}
+{% content-ref url="eclipse-board-transaction.md" %}
+[eclipse-board-transaction.md](eclipse-board-transaction.md)
+{% endcontent-ref %}
 
 ## Eclipse : Spring-boot + MyBatis
 
 ### dependency 설정
 
 * MavenRepository
-* MyBatis &gt;&gt; 3.5.6
-* MyBatis Spring &gt;&gt; 2.0.6
-* Gson &gt;&gt; 2.8.6
-* HikariCP &gt;&gt; 3.4.5 + application.properties
-* Spring Boot Starter JDBC &gt;&gt; 2.3.7 RELEASE
+* MyBatis >> 3.5.6
+* MyBatis Spring >> 2.0.6
+* Gson >> 2.8.6
+* HikariCP >> 3.4.5 + application.properties
+* Spring Boot Starter JDBC >> 2.3.7 RELEASE
 
-{% page-ref page="mavenrepository-pom.xml.md" %}
+{% content-ref url="mavenrepository-pom.xml.md" %}
+[mavenrepository-pom.xml.md](mavenrepository-pom.xml.md)
+{% endcontent-ref %}
 
 ### POJO와 Mybatis
 
@@ -151,17 +157,19 @@ while(rs.next()){
 
 ### Spring-boot와 Mybatis
 
-{% page-ref page="eclipse-mybatis.md" %}
+{% content-ref url="eclipse-mybatis.md" %}
+[eclipse-mybatis.md](eclipse-mybatis.md)
+{% endcontent-ref %}
 
 ## Android Studio
 
 ### Activity.java 생성
 
-![](../../../.gitbook/assets/2%20%2867%29.png)
+![](<../../../.gitbook/assets/2 (67).png>)
 
-* 패키지 우클릭 &gt; New &gt; Activity &gt; Empty Activity
+* 패키지 우클릭 > New > Activity > Empty Activity
 
-![](../../../.gitbook/assets/22%20%285%29.png)
+![](<../../../.gitbook/assets/22 (5).png>)
 
 * Generate a Layout File : xml문서를 같이 생성할 것인지 여부
 * Lancher Activity : manifest에서 메인 화면으로 지정할 것인지
@@ -170,7 +178,7 @@ while(rs.next()){
 
 ![](../../../.gitbook/assets/view1.png)
 
-* res &gt; layout우클릭 &gt; New &gt; Layout Resource File
+* res > layout우클릭 > New > Layout Resource File
 
 ![](../../../.gitbook/assets/view2.png)
 
@@ -178,4 +186,3 @@ while(rs.next()){
 * 보통은 Activity java문서를 생성하면 자동으로 xml이 생성된다.
 
 후기 : 저번에 세미프로젝트를 열심히 했던것이 파이널 프로젝트에서도 도움이 되는 것 같다. DB를 해보길 잘했다!
-

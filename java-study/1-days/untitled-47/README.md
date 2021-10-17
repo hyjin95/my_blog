@@ -6,7 +6,7 @@ description: 2020.12.23- 90일차
 
 ## 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
@@ -14,32 +14,63 @@ description: 2020.12.23- 90일차
 
 ### return type String
 
-1. "redirect : xxx.jsp" - 배포위치 webapp에 접근한다.
-2. "forward : xxx.jsp" - 배포위치 webapp에 접근한다.
-3. "xxx" - ViewResolver를 사용해 WEB-INF에 접근한다.
+1. "redirect : xxx.jsp"\
+   \- 배포위치 webapp에 접근한다.
+2. "forward : xxx.jsp"\
+   \- 배포위치 webapp에 접근한다.
+3. "xxx"\
+   \- ViewResolver를 사용해 WEB-INF에 접근한다.
 
 ### @RequestParam
 
-* @RequestParam 어노테이션을 활용하면 get, post방식 전송시 파라미터에 값이 자동으로 담겨 이전에 어노테이션을 사용하지 않고 request.getParameter\( \);로 받아와 pMap.put\(" ",값\)으로 일일히 담았던 반복되는 구문이 감소한다.
+* @RequestParam 어노테이션을 활용하면 get, post방식 전송시 파라미터에 값이 자동으로 담겨 이전에 어노테이션을 사용하지 않고 request.getParameter( );로 받아와 pMap.put(" ",값)으로 일일히 담았던 반복되는 구문이 감소한다.
 * 파라미터 안에 작성되므로 해당 변수는 지역변수이고 NullPointerException이 발생 할 수 있다.
 * spring-core.jar엔진에서 ApplicationContext와 BeanFactory클래스들이 관리, 객체를 주입해준다.
 
 ### XML설정 : annotation X
 
-* 장점 - xml문서안에서 모든 업무에 대한 내역을 확인할 수 있다. - xml문서만으로도 전체 클래스의 설계와 업무에 대한 클래스 정보를 확인할 수 있는 것이다. - 계층별로 xml문서를 따로 관리하기때문에 유지보수에도 편리하다. - 객체 주입관계가 직관적이다.
-* 단점 - 업무에 새로 투입된 개발자들이 바로 파악하기에 어렵다. - xml문서를 파악할 줄 알아야한다. - 자바와 다른 언어이다. - 진입장벽이 높아 코딩의 시작까지 시간이 늦어진다. - 개발자가 직접 구현하지 않은 클래스들이 많다. - 상속을 받아 처리하므로 의존적이다.
-*  표준서블릿 HttpServlet - 메서드 오버라이딩을 준수해 두개의 메서드만이 req, res객체를 주입받아 사용할 수 있다. - 요청, 응답객체에 의존적이다.
-* 사용자 입력 값 - Map을 선언하고 request.getParameter\("이름"\); 으로 가져와 map에 put해야한다. - 파라미터로 받아올 값의 갯수만큼 코드가 늘어나고 반복된다. - 이를 돕고자 만들어진것이 HashMapBinder 클래스이다.
+* 장점\
+  \- xml문서안에서 모든 업무에 대한 내역을 확인할 수 있다.\
+  \- xml문서만으로도 전체 클래스의 설계와 업무에 대한 클래스 정보를 확인할 수 있는 것이다.\
+  \- 계층별로 xml문서를 따로 관리하기때문에 유지보수에도 편리하다.\
+  \- 객체 주입관계가 직관적이다.
+* 단점\
+  \- 업무에 새로 투입된 개발자들이 바로 파악하기에 어렵다.\
+  \- xml문서를 파악할 줄 알아야한다.\
+  \- 자바와 다른 언어이다.\
+  \- 진입장벽이 높아 코딩의 시작까지 시간이 늦어진다.\
+  \- 개발자가 직접 구현하지 않은 클래스들이 많다.\
+  \- 상속을 받아 처리하므로 의존적이다.
+*  표준서블릿 HttpServlet\
+  \- 메서드 오버라이딩을 준수해 두개의 메서드만이 req, res객체를 주입받아 사용할 수 있다.\
+  \- 요청, 응답객체에 의존적이다.
+* 사용자 입력 값\
+  \- Map을 선언하고 request.getParameter("이름"); 으로 가져와 map에 put해야한다.\
+  \- 파라미터로 받아올 값의 갯수만큼 코드가 늘어나고 반복된다.\
+  \- 이를 돕고자 만들어진것이 HashMapBinder 클래스이다.
 
-{% page-ref page="hashmapbinder.md" %}
+{% content-ref url="hashmapbinder.md" %}
+[hashmapbinder.md](hashmapbinder.md)
+{% endcontent-ref %}
 
 ### Properties설정 : annotation O
 
-* 장점 - annotation을 활용해 완벽한 독립을 이뤘다. - HttpServlet을 상속받지 않는다.   HttpServletResponse객체 없이 sendRedirect를 사용할 수 있고 HttpServletRequest를 요청할 수 있다. - DispatcherServlet이 web.xml에 작성되지 않아도 된다.
-* @Controller - 컨트롤 계층 클래스를 선언할 때 작성한다.
-* @Service - 모델 계층 클래스를 선언할 때 작성한다. - 수업에서는 xxxLogic클래스와 xxxDao클래스에서 사용한다.
-* @RequestParam - 파라미터로 받아와야하는 사용자 입력값이 있을때 파라미터에 작성한다.
-* ModelMap - 메서드의 파라미터로 작성된다. - forward scope를 사용할 수 있게 해준다. - UI지원을 위한 별도 클래스가 제공된다.
+* 장점\
+  \- annotation을 활용해 완벽한 독립을 이뤘다.\
+  \- HttpServlet을 상속받지 않는다.\
+    HttpServletResponse객체 없이 sendRedirect를 사용할 수 있고 HttpServletRequest를 요청할 수 있다.\
+  \- DispatcherServlet이 web.xml에 작성되지 않아도 된다.
+* @Controller\
+  \- 컨트롤 계층 클래스를 선언할 때 작성한다.
+* @Service\
+  \- 모델 계층 클래스를 선언할 때 작성한다.\
+  \- 수업에서는 xxxLogic클래스와 xxxDao클래스에서 사용한다.
+* @RequestParam\
+  \- 파라미터로 받아와야하는 사용자 입력값이 있을때 파라미터에 작성한다.
+* ModelMap\
+  \- 메서드의 파라미터로 작성된다.\
+  \- forward scope를 사용할 수 있게 해준다.\
+  \- UI지원을 위한 별도 클래스가 제공된다.
 
 ## Spring : 새글 작성 - 그룹번호 채번
 
@@ -77,7 +108,8 @@ SELECT empno, ename FROM emp;
 
 * empno는 PK이지만 ename은 일반 컬럼으로 index를 갖고 있지 않다.
 * 이렇게 index를 갖지 않는 컬럼을 조회할때에는 옵티마이저가 테이블을 전체 스캔하는 과정을 거치기 때문에 데이터량이 많을 수록 속도가 느려질 수 밖에 없다.
-* 그러므로 nosql은 index를 제공하지 않아 대용량 데이터 처리에는 적합하지 않은 것이다. local data를 처리, 기록하는데 적합하다.
+* 그러므로 nosql은 index를 제공하지 않아 대용량 데이터 처리에는 적합하지 않은 것이다.\
+  local data를 처리, 기록하는데 적합하다.
 
 ### Where 색인 조건
 
@@ -96,7 +128,7 @@ SELECT /*+index_desc(board_master_t iboard_group)*/ bm_group
  WHERE bm_group > 0;
 ```
 
-* 위에서 생성한 index인 iboard\_group를 힌트문에 넣어 색인 검색을 할 수 도 있다.
+* 위에서 생성한 index인 iboard_group를 힌트문에 넣어 색인 검색을 할 수 도 있다.
 * 하지만 이경우에는 만드시 where문에 항상 일치하는 조건이라도 index를 갖는 컬럼에 부여해야한다.
 
 ### null과 NVL
@@ -107,7 +139,7 @@ SELECT NVL(comm,0) FROM emp;
 ```
 
 * 조회 결과가 null이라면 해당 결과를 활용하는 부분에서 에러가 발생할 수 있다.
-* 이럴때 사용하는 것이 NVL\( \) 구문이다.
+* 이럴때 사용하는 것이 NVL( ) 구문이다.
 * comm컬럼에 값이 존재한다면 그 값을, null이라면 0을 출력해준다.
 
 ### WHERE comm = null
@@ -118,7 +150,8 @@ SELECT comm FROM emp
 ```
 
 * 조건으로 컬럼 = null 은 찾을 수 없다.
-* null을 모르므로 null은 모르는 값이기때문에 +1을한다고 해서 1이 되는 것이 아니다.
+* null을 모르므로\
+  null은 모르는 값이기때문에 +1을한다고 해서 1이 되는 것이 아니다.
 
 ### NVL을 활용한 +1
 
@@ -160,27 +193,32 @@ SELECT
 
 ###  게시판 : 새글-댓글 작성 구현
 
-{% page-ref page="spring.md" %}
+{% content-ref url="spring.md" %}
+[spring.md](spring.md)
+{% endcontent-ref %}
 
 ## Android Studio : pizza 설계
 
 ### MainActivity
 
-* activity\_main.xml
+* activity_main.xml
 
 ### OrderActivity
 
-* activity\_order.xml
-* 구성 - 주문서 작성 - 플로팅 버튼 - UpButton 
+* activity_order.xml
+* 구성\
+  \- 주문서 작성\
+  \- 플로팅 버튼\
+  \- UpButton 
 
-### appBar -&gt; toolBar
+### appBar -> toolBar
 
 ```java
 ActionBar toolbar = findViewById(R.id.아이디값);
 setSupportActionBar(toolbar);
 ```
 
-* toolbar\_main.xml과 menu\_main.xml을 활용해 앱바를 꾸며본다.
+* toolbar_main.xml과 menu_main.xml을 활용해 앱바를 꾸며본다.
 
 ### parent 구조
 
@@ -191,7 +229,8 @@ setSupportActionBar(toolbar);
 
 * Main과 Order페이지를 부모와 자식 페이지로 구성해본다.
 * AndroidManifest.xml
-* 장점 여러개의 복잡한 액티비티 사이에서  UPButton을 사용해 한번에 부모페이지로 이동 할 수 있다.
+* 장점\
+  여러개의 복잡한 액티비티 사이에서  UPButton을 사용해 한번에 부모페이지로 이동 할 수 있다.
 
 ### UpButton추가
 
@@ -204,4 +243,3 @@ setSupportActionBar(toolbar);
 * gradle은 url-pattern처럼 관리하는것
 
 후기 : 안드로이드 수업을 따라가느라 한동안 또 허덕이고 있다. 모르는 클래스들 천지..
-

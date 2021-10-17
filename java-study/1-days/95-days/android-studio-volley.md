@@ -61,7 +61,8 @@ public class AppHelper {
 
 * 17번 : 사용할 Activity.java에서 requestQueue를 생성한다.
 * 7번 : 이벤트를 감지할 버튼을 xml리소스로 초기화한다.
-* 8-13번에서 버튼에 onClickListener를 부여해 이벤트 감지시 요청하도록 구현 한다. 11번의 sendRequest\( \)로 요청한다.
+* 8-13번에서 버튼에 onClickListener를 부여해 이벤트 감지시 요청하도록 구현 한다.\
+  11번의 sendRequest( )로 요청한다.
 
 ```java
 //영화관련 공공정보제공 서버에 접속해 필요한 정보를 요청한다.
@@ -99,9 +100,13 @@ public class AppHelper {
     }//////////////////////end of sendRequest
 ```
 
-* sendRequest메서드에서는 7번에서 request객체를 먼저 생성한다. - 파라미터 : 요청방식\(GET, POST\), 요청보낼 url, 응답시 호출될 메서드, 에러시 호출될 메서드
-* 8-14번 :  응답시 호출될 메서드를 정의했다. Response.Listener
-* 15-18번 : 에러시 호출될 메서드를 정의했다. Response.ErrorListener
-* 19-24번 : 요청시 포함할 파라미터를 정의했다. getParames\( \)매서드를 재정의해 Map에 데이터를 담아 return한다.
-* 27번은 이미 요청한 결과가 있더라도 다시 요청이 들어오면 새로 요청을 하게 하는 코드이다. 28-29번에서 새 요청을 위해 RequestQueue를 초기화하고 생성된 새 요청을 add한다.
-
+* sendRequest메서드에서는 7번에서 request객체를 먼저 생성한다.\
+  \- 파라미터 : 요청방식(GET, POST), 요청보낼 url, 응답시 호출될 메서드, 에러시 호출될 메서드
+* 8-14번 :  응답시 호출될 메서드를 정의했다.\
+  Response.Listener
+* 15-18번 : 에러시 호출될 메서드를 정의했다.\
+  Response.ErrorListener
+* 19-24번 : 요청시 포함할 파라미터를 정의했다.\
+  getParames( )매서드를 재정의해 Map에 데이터를 담아 return한다.
+* 27번은 이미 요청한 결과가 있더라도 다시 요청이 들어오면 새로 요청을 하게 하는 코드이다.\
+  28-29번에서 새 요청을 위해 RequestQueue를 초기화하고 생성된 새 요청을 add한다.

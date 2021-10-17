@@ -6,7 +6,7 @@ description: 2020.12.08 - 80일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
 * 사용 서버 - WAS : Tomcat
 
@@ -14,7 +14,8 @@ description: 2020.12.08 - 80일차
 
 ### 웹 서비스 제공
 
-* 주체 : 브라우저 - url주소 -&gt; http\(java처리\) -&gt; url로 업무분기\(if\)
+* 주체 : 브라우저\
+  \- url주소 -> http(java처리) -> url로 업무분기(if)
 * url : /프로젝트명/work name/업무이름.url-pattern
 * java로 처리된다 = 안드로이드와의 연계가 가능하다.
 
@@ -36,36 +37,46 @@ description: 2020.12.08 - 80일차
 
 ### 공통점
 
-* req, res에 의존적이다. - 없으면 사용할 수 없게 된다.\(sendRedirect, getAttribute, ...\)
-* 페이지 이동에 대한 처리설계가 필요하다. - sendRedirect, forward
+* req, res에 의존적이다.\
+  \- 없으면 사용할 수 없게 된다.(sendRedirect, getAttribute, ...)
+* 페이지 이동에 대한 처리설계가 필요하다.\
+  \- sendRedirect, forward
 
 ### 차이점
 
 * url패턴이 다르다.
-* return type 변경 - 표준 : void - settet, getter : ActionForward - ModelAndView\(1-2\)   jsp위치 주의 : webContent or WEB-INF - String\(1-3\)   redirect:xxx.jsp or forward:xxx.jsp   ' : '를 기준으로 문자열을 분리해 처리한다.   jsp위치 주의 : webContent or WEB-INF
+* return type 변경\
+  \- 표준 : void\
+  \- settet, getter : ActionForward\
+  \- ModelAndView(1-2)\
+    jsp위치 주의 : webContent or WEB-INF\
+  \- String(1-3)\
+    redirect:xxx.jsp or forward:xxx.jsp\
+    ' : '를 기준으로 문자열을 분리해 처리한다.\
+    jsp위치 주의 : webContent or WEB-INF
 
 ## Spring
 
 ### 1-1
 
 * url-pattern : \*.test
-* url인터셉트 : DispatcherServlet -&gt; FrontMVC1.java
+* url인터셉트 : DispatcherServlet -> FrontMVC1.java
 
 ### 1-2
 
 * url-pattern : \*.sp2
-* url인터셉트 : DispatcherServlet -&gt; ActionServlet.java
+* url인터셉트 : DispatcherServlet -> ActionServlet.java
 
 ### 1-3
 
 * url-pattern : \*.sp3
-* url인터셉트 : DispatcherServlet -&gt; ActionSupport.java
+* url인터셉트 : DispatcherServlet -> ActionSupport.java
 * ModelAndView3를 등록해 다중등록이 가능하도록 해보자
 
 ### SimpleUrlHandlerMapping
 
 * 어느 Controller클래스와 매핑할지 xml또는 java에서 정해준다.
-* SimpleUrlHandlerMapping의 &lt;property&gt;태그속성의 이름은 set메서드 이름과 일치해야 한다.
+* SimpleUrlHandlerMapping의 \<property>태그속성의 이름은 set메서드 이름과 일치해야 한다.
 
 ### java : java
 
@@ -127,7 +138,9 @@ description: 2020.12.08 - 80일차
 
 ![](../../.gitbook/assets/xml-.png)
 
-* root-context.xml에서 다른 의존성 주입도 받기위해 appServlet폴더로 이동한다. local에서 접근할 수 있도록 context.xml과 같은 경로상에 둔다. web.xml에서 경로설정도 수정해야한다.
+* root-context.xml에서 다른 의존성 주입도 받기위해 appServlet폴더로 이동한다.\
+  local에서 접근할 수 있도록 context.xml과 같은 경로상에 둔다.\
+  web.xml에서 경로설정도 수정해야한다.
 * xml : xml으로의 객체 주입이 일어나야 한다.
 
 ### 코드 : root-context.xml
@@ -178,11 +191,11 @@ description: 2020.12.08 - 80일차
 
 ### 개발
 
-* Back-End -&gt; Front\_End - xml -&gt; Java -&gt; 화면
+* Back-End -> Front_End\
+  \- xml -> Java -> 화면
 * DML SQL문을 반드시 먼저 테스트 해야한다.
-* PL : 복잡한 쿼리문\(조인, 프로시저, 인라인뷰, 서브쿼리, 집계, 통계\)작성을 미리 한다.
+* PL : 복잡한 쿼리문(조인, 프로시저, 인라인뷰, 서브쿼리, 집계, 통계)작성을 미리 한다.
 * PM : crew관리
 * 형상관리 담당자 한명 배정 : git관리, 운영, 테스트
 
 후기 : 파이널 프로젝트도 POJO로 먼저 구현하고 Spring으로의 이관작업을 해야한다.
-

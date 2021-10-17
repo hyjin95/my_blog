@@ -36,15 +36,22 @@
 </beans>
 ```
 
-* 8-10번은 객체주입을 받거나 외부에서 알아서 호출해야하는 클래스를 등록하는 코드이다. - 첫번째로 필요한 과정 : 클래스 등록
-* 15번의 member-controller라는 이름은 memberController클래스의 주소번지이다. - 두번째로 필요한 과정 : 클래스 매핑
-* 24번에서는 메서드를 등록하는 과정이 있다. - 두번째로 필요한 과정 : 메서드 등록
-* test/memberList.nhn이라는 요청이 들어오면, xml에서 찾아 15번에서 주소번지를 읽는다. 주소번지와 일치하는 id를 가진 8번에서 클래스를 찾고, property에 지정된 ref를 읽는다. ref와 일치하는 id를 가진 21번에서 메서드 이름을 확인한다.
-* Console로그를 살펴보면 다음과 같은 구문을 확인할 수 있다. - Mapped URL path \[/online/memberList.nhn\] onto handler 'member-controller' - 해당 path\(url\)이 member\_controller라는 메서드와 연결되어있다는 의미이다.
+* 8-10번은 객체주입을 받거나 외부에서 알아서 호출해야하는 클래스를 등록하는 코드이다.\
+  \- 첫번째로 필요한 과정 : 클래스 등록
+* 15번의 member-controller라는 이름은 memberController클래스의 주소번지이다.\
+  \- 두번째로 필요한 과정 : 클래스 매핑
+* 24번에서는 메서드를 등록하는 과정이 있다.\
+  \- 두번째로 필요한 과정 : 메서드 등록
+* test/memberList.nhn이라는 요청이 들어오면, xml에서 찾아 15번에서 주소번지를 읽는다.\
+  주소번지와 일치하는 id를 가진 8번에서 클래스를 찾고, property에 지정된 ref를 읽는다.\
+  ref와 일치하는 id를 가진 21번에서 메서드 이름을 확인한다.
+* Console로그를 살펴보면 다음과 같은 구문을 확인할 수 있다.\
+  \- Mapped URL path \[/online/memberList.nhn] onto handler 'member-controller'\
+  \- 해당 path(url)이 member_controller라는 메서드와 연결되어있다는 의미이다.
 
 ### 서버 실행시 : Console
 
-![](../../../.gitbook/assets/3%20%2846%29.png)
+![](<../../../.gitbook/assets/3 (46).png>)
 
 * 서버를 실행시켜보면 Console에서 xml문서를 읽는 과정을 볼 수 있다.
 * 먼저 root-context.xml을 스캔하고, servelet-context.xml을 스캔하는 것을 알 수 있다.
@@ -101,18 +108,18 @@ public class MemberController extends MultiActionController {
 
 ### http://localhost:8080/test/memberList.nhn
 
-![](../../../.gitbook/assets/2%20%2859%29.png)
+![](<../../../.gitbook/assets/2 (59).png>)
 
-* ModelAndView라는 Spring이 제공해주는 클래스로, 처리 결과를 담아 DispatcherServlet에게 전달할때 사용한다.  - 자바 forward와 비슷하고, request scope를 갖는다.
+* ModelAndView라는 Spring이 제공해주는 클래스로, 처리 결과를 담아 DispatcherServlet에게 전달할때 사용한다. \
+  \- 자바 forward와 비슷하고, request scope를 갖는다.
 * 지금은 저 경로에 a.jsp문서가 없어 페이지가 나오지는 않지만, messege문구를 보아 제대로 서블릿 처리가 되었고, a.jsp문서를 찾는단계까지 완료된 것을 볼 수 있다.
 
 ### http://localhost:8080/test/memberInsert.nhn
 
-![](../../../.gitbook/assets/1%20%2877%29.png)
+![](<../../../.gitbook/assets/1 (77).png>)
 
 * sendRedirect를 사용해 페이지 이동을 했기때문에 주소창은 서블릿 주소인 nhn이 아니라 jsp의 주소가 보여지는 것을 알 수 있다.
 
 ### Console
 
-![](../../../.gitbook/assets/.png%20%2836%29.png)
-
+![](<../../../.gitbook/assets/.png (36).png>)

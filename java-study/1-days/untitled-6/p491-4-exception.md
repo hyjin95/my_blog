@@ -1,4 +1,4 @@
-# p491~4 Exception 예외처리
+# p491\~4 Exception 예외처리
 
 ### p491.java - 기본형
 
@@ -29,16 +29,19 @@ public class p491 {
 
 * 6번 : arr배열은 방이 3개인 배열이다. = 0, 1, 2
 * 7번 : 일부러 runtime에러를 발생시킬것이므로 try-catch문을 작성한다.
-* 8번 : 0, 1, 2, 3 = 4번 반복되는 for문 = 0, 1, 2, 3 -&gt; 탈출
+* 8번 : 0, 1, 2, 3 = 4번 반복되는 for문 = 0, 1, 2, 3 -> 탈출
 * 9,11번 : 어디서 에러가 발생하는지, 탈출하는지 알아보기위해 넣은 출력문
-* 10번 : i=3이 되는 네번째 반복문에서 ArrayIndexOutOfBoundsException이 발생한다. - arr\[3\] = 3; - 4번째인 3번방은 존재 하지않는다.
+* 10번 : i=3이 되는 네번째 반복문에서 ArrayIndexOutOfBoundsException이 발생한다.\
+  \- arr\[3] = 3;\
+  \- 4번째인 3번방은 존재 하지않는다.
 * 15번 : Exception 출력
 * 16번 : Exception 메세지 출력
-* 17번 : Exception 라인번호 + 메세지 출력 - printStackTrace메서드는 throws 된 경우까지도 출력해준다.
+* 17번 : Exception 라인번호 + 메세지 출력\
+  \- printStackTrace메서드는 throws 된 경우까지도 출력해준다.
 
 ### p491\_2.java - 2단계
 
-![p491\_2](../../../.gitbook/assets/p491_2.png)
+![p491\_2](../../../.gitbook/assets/p491\_2.png)
 
 ```java
 package book.ch14;
@@ -69,7 +72,7 @@ public class p491_2 {
 
 ### p491\_3.java - 3단계
 
-![p491\_3](../../../.gitbook/assets/p491_3.png)
+![p491\_3](../../../.gitbook/assets/p491\_3.png)
 
 ```java
 package book.ch14;
@@ -103,7 +106,7 @@ public class p491_3 {
 
 ### p491\_4 - 4단계
 
-![p491\_4](../../../.gitbook/assets/p491_4.png)
+![p491\_4](../../../.gitbook/assets/p491\_4.png)
 
 ```java
 package book.ch14;
@@ -139,6 +142,4 @@ public class p491_4 {
 
 * Exception이 발생하는 구문을 메서드로 빼보자
 * main메서드에서 실행할때 예외처리 구문에 넣어주어야한다.
-
-
 

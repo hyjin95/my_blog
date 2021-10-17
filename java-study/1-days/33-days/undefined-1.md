@@ -52,7 +52,7 @@ public void initDisplay() {
 ```
 
 * this에 WindowListener 인터페이스를 add하는데 WindowAdapter메서드를 통해 생성함으로써  필요한 추상메서드만 재정의하여 사용한다.
-* 12번 : this의 JFame 화면이 종료될때 프로세서까지 종료하는 구문\
+* 12번 : this의 JFame 화면이 종료될때 프로세서까지 종료하는 구문\\
 * 스타일에 필요한 버튼에 event를 붙인다
 
 ### actionPerformed-1
@@ -96,7 +96,8 @@ public void initDisplay() {
 
 * 스타일버튼 클릭시 JDialog로 설정화면을 띄운다.
 * 7-9번 : TextField를 기본값을 넣어서, 버튼을 생성한다.
-* 26-33번 : 설정화면에 대한 반응값 - JTextField에 입력되는 text는 String이므로, Integer.parseInt함수를 이용해 형전환한다. 
+* 26-33번 : 설정화면에 대한 반응값\
+  \- JTextField에 입력되는 text는 String이므로, Integer.parseInt함수를 이용해 형전환한다. 
 
 ### actionPerformed-2
 
@@ -125,7 +126,9 @@ public void initDisplay() {
 * 3번 : JColorChooser클래스로 색상 선택화면을 생성한다.
 * 4번 : ColorSelectionModel함수의 변수에 선택된 색상을 담는다.
 * 6번 : 변경이벤트를 읽어오는 ChangeListener인터페이스를 생성하면서 메서드를 구현한다.
-* 7-11번 : 구현메서드 - 9번 : Color타입 변수에 선택된 색상정보를 담는다. - 10번 : fontColor에 위의 변수의 값을 RGB로 꺼내 String으로 형전환하여 담는다.
+* 7-11번 : 구현메서드\
+  \- 9번 : Color타입 변수에 선택된 색상정보를 담는다.\
+  \- 10번 : fontColor에 위의 변수의 값을 RGB로 꺼내 String으로 형전환하여 담는다.
 * 13번 : 색상모델에 구현메서드를 add한다.
 
 ### actionPerformed-3
@@ -251,5 +254,4 @@ public SimpleAttributeSet makeAttribute(String style[]) {
 * 2번 : 속성을 작성해주는 SimpleAttributeSet클래스 생성
 * 4번 :  위의 sas에 파라미터로 받아온 색상을 지정, 작성해준다.
 * 7-12번 : sas에 파라미터로 받은 style값에 따라 폰트를 작성한다.
-* 15번 : sas에 파라미터로 받은 폰트 사이즈를 작성한다. 
-
+* 15번 : sas에 파라미터로 받은 폰트 사이즈를 작성한다.\

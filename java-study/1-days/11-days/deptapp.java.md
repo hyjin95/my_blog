@@ -205,21 +205,20 @@ public class DeptApp extends JFrame implements ActionListener, MouseListener {
 * 98번  : con에 DBConnectionMgr 클래스 호출
 * 99번  : 주소 인터페이스 pstmt에 con값을 sql로 가져온다. =PreparedStatment
 * 102번: Resultset인터페이스 rs 에 가져온 값을 처리요청한다. =executeQuery 
-* 108번: rs.next\(\)메서드로 row의 갯수만큼,  끝날때까지 while, 반복한다. 
+* 108번: rs.next()메서드로 row의 갯수만큼,  끝날때까지 while, 반복한다. 
 
 #### Vector
 
-* 100번 : int 30이 들어있는 방을 조회한다. \(10 &gt; 20 &gt; 30 : 3번 조회\) 
+* 100번 : int 30이 들어있는 방을 조회한다. (10 > 20 > 30 : 3번 조회) 
 * 105번 : 객체배열을 사용하기위해  null로 선언한다. =row, 방의 갯수가 미
 * 106번 : Vector를 사용하기위해 인스턴스화 한다.
-* 118번 : Vector에 각기 다른 dvo를 기억시킨다. \(반복하는동안\)
-* 121번 : 선언된 dvos배열을 Vector의 size를 인덱스값으로 하는 객체배열로 생성, 인스턴스화한다. - Vector가 기억한 dvo의 갯수만큼 인덱스를 갖는다.
+* 118번 : Vector에 각기 다른 dvo를 기억시킨다. (반복하는동안)
+* 121번 : 선언된 dvos배열을 Vector의 size를 인덱스값으로 하는 객체배열로 생성, 인스턴스화한다.\
+  \- Vector가 기억한 dvo의 갯수만큼 인덱스를 갖는다.
 * 122번 : Vector에 담긴 정보를 dvos배열에 복사한다.
 * 125번 : 출력문구도 상수가 아닌, dvos.length만큼 반복한다.
 
 #### SELECT
 
 * 88번-95
-
-
 

@@ -1,8 +1,8 @@
-# JSP -Java간 인스턴스, scope, url-data유지\(forward\)
+# JSP -Java간 인스턴스, scope, url-data유지(forward)
 
 ## sonataSimulation.jsp : 1,2
 
-![](../../../.gitbook/assets/1%20%2861%29.png)
+![](<../../../.gitbook/assets/1 (61).png>)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -32,8 +32,11 @@
 ```
 
 * 다른 폴더 속의 자바소스코드를 사용할 수 있는 네가지 방법을 구현해본다.
-* 첫번쨰 - xml형식으로 스코프를 부여할 수 있는 방식 : 12번
-* 두번쨰 - java클래스 끼리의 인스턴스화 처럼 일반적인 인스턴스화 : 17번 - 스코프를 사용할 수 없다.
+* 첫번쨰\
+  \- xml형식으로 스코프를 부여할 수 있는 방식 : 12번
+* 두번쨰\
+  \- java클래스 끼리의 인스턴스화 처럼 일반적인 인스턴스화 : 17번\
+  \- 스코프를 사용할 수 없다.
 
 ### Sonata.java
 
@@ -74,7 +77,11 @@ public class Sonata {
 </html>
 ```
 
-* 세번째 - sendRedirect 메서드를 사용 : 22번 - null 출력 - URL 이 변경되는 페이지 이동, data는 유지 되지 않는다. - 18번이후에 코드가 있다면 페이지 이동 후에 코드가 진행된다.
+* 세번째\
+  \- sendRedirect 메서드를 사용 : 22번\
+  \- null 출력\
+  \- URL 이 변경되는 페이지 이동, data는 유지 되지 않는다.\
+  \- 18번이후에 코드가 있다면 페이지 이동 후에 코드가 진행된다.
 
 ### result.jsp
 
@@ -101,7 +108,7 @@ public class Sonata {
 
 ## sonataSimulation.jsp : 4
 
-![](../../../.gitbook/assets/2%20%2848%29.png)
+![](<../../../.gitbook/assets/2 (48).png>)
 
 ```markup
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -129,7 +136,10 @@ public class Sonata {
 </html>
 ```
 
-* 네번째 - RequestDispatcher의 forward메서드를 사용 : 24-26번 - myCar 주소번지 출력 - RequestDispatcher의 forward메서드가 값을 유지시켜준다.
+* 네번째\
+  \- RequestDispatcher의 forward메서드를 사용 : 24-26번\
+  \- myCar 주소번지 출력\
+  \- RequestDispatcher의 forward메서드가 값을 유지시켜준다.
 
 ### result.jsp
 
@@ -153,4 +163,3 @@ public class Sonata {
 </body>
 </html>
 ```
-

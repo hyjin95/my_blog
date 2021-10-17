@@ -1,10 +1,14 @@
 # 대기실 구현
 
-## Room&Protocol
+## Room\&Protocol
 
-{% page-ref page="room.md" %}
+{% content-ref url="room.md" %}
+[room.md](room.md)
+{% endcontent-ref %}
 
-{% page-ref page="protocol.md" %}
+{% content-ref url="protocol.md" %}
+[protocol.md](protocol.md)
+{% endcontent-ref %}
 
 ## Login
 
@@ -34,7 +38,7 @@ public class Login extends JFrame implements ActionListener {
 ```
 
 * 새로 만든 ChatClientVer2클래스와 연결한다.
-* 멤버변수 nickName을 사용하기위해 생성자\(this\)로 넘긴다.
+* 멤버변수 nickName을 사용하기위해 생성자(this)로 넘긴다.
 
 ## ChatClientVer2
 
@@ -71,7 +75,7 @@ public class ChatClientVer2 extends JFrame {
 * JFrame을 상속하는 패널을 붙일 메인 컨테이너 클래스
 * 14번 : Login의 멤버변수 nickName의 원본을 사용하기 위해 생성자로 넘겨 생성한다.
 * 16번 : 탭형식으로 화면을 구현하기위해 JTabbendPane클래스를 선언, 생성한다.
-* 17,18번 : 탭에 붙일 패널을 멤버변수 nickName을 공유하기 위해 생성자\(this\)로 넘겨 선언, 생성한다.
+* 17,18번 : 탭에 붙일 패널을 멤버변수 nickName을 공유하기 위해 생성자(this)로 넘겨 선언, 생성한다.
 
 ### 생성자
 
@@ -92,7 +96,7 @@ public class ChatClientVer2 extends JFrame {
 
 * 3,4번 : 생성자 파라미터로 Login을 받아 원본을 연결한다.
 * 5번 : Login의 멤버변수 원본을 받아 접속자를 동기화한다.
-* 6-11번 : 화면을 호출하고 말하기를 실행\(서버와의 연동\)이 일어나므로 예외처리는 필수
+* 6-11번 : 화면을 호출하고 말하기를 실행(서버와의 연동)이 일어나므로 예외처리는 필수
 
 ### 로그인 성공처리, 방 초기화
 
@@ -126,14 +130,16 @@ public class ChatClientVer2 extends JFrame {
 	////////////////////////////end of connect_process/////////////////////////////
 ```
 
-* 3번 : this\(JFrame\)의 title설정
+* 3번 : this(JFrame)의 title설정
 * 7-9번 : 접속자의 소켓으로 말하기, 듣기 구현
 * 12번 : 단톡방 정보를 저장하는 저장소클래스 Room타입의 변수를 선언, 생성한다.
-* 13-17번 : room변수에 필요한 값을 저장, 초기한다.  - title\(단톡방명\), current\(현재 정원\), state\(상태\)
+* 13-17번 : room변수에 필요한 값을 저장, 초기한다. \
+  \- title(단톡방명), current(현재 정원), state(상태)
 * 18번 : 로그인 성공 알림 말하기, 로그인 후 일단 대기 상태이므로 Protocol.WAIT변수를 사용
-* 21번 : 서버의 말하기를 듣는 ClientThread클래스가 말해주는 것을 듣기위한 준비 - \(this\)로 접속자와 동기화, 연동한다.
+* 21번 : 서버의 말하기를 듣는 ClientThread클래스가 말해주는 것을 듣기위한 준비\
+  \- (this)로 접속자와 동기화, 연동한다.
 
-### JFrame화면 구현&main
+### JFrame화면 구현\&main
 
 ```java
 	//화면처리
@@ -159,9 +165,10 @@ public class ChatClientVer2 extends JFrame {
 }
 ```
 
-* 5번 : this\(JFrame\)의 패널을 getContentPane함수를 이용해 얻어 Layout을 뭉갠다.
-* 7,8번 : JTabbedPane클래스가 제공하는 addTabl함수를 이용해 만들어둔 대기실클래스\(JPanel\) , 대화방 클래스 화면\(JPanel\)을 tab의 형식으로 JFrame에 붙인다.
-* 11번 : 접속자마다 새로운 화면을 보여줘야 하므로 화면을 초기화한다. - this\(JFrame\)의 패널을 얻어 null인 Tab을 붙인다.
+* 5번 : this(JFrame)의 패널을 getContentPane함수를 이용해 얻어 Layout을 뭉갠다.
+* 7,8번 : JTabbedPane클래스가 제공하는 addTabl함수를 이용해 만들어둔 대기실클래스(JPanel) , 대화방 클래스 화면(JPanel)을 tab의 형식으로 JFrame에 붙인다.
+* 11번 : 접속자마다 새로운 화면을 보여줘야 하므로 화면을 초기화한다.\
+  \- this(JFrame)의 패널을 얻어 null인 Tab을 붙인다.
 
 ## WaitRoom
 
@@ -229,7 +236,11 @@ public class WaitRoom extends JPanel implements ActionListener{
 	Room room = null;
 ```
 
-* 단톡방 마다 다른 값을 갖는 변수를 멤버변수에 선언한다. - nickName    접속자 닉네임 - roomTitle     단톡방 이름 - currentNum 현재 정원 - room             방 정보
+* 단톡방 마다 다른 값을 갖는 변수를 멤버변수에 선언한다.\
+  \- nickName    접속자 닉네임\
+  \- roomTitle     단톡방 이름\
+  \- currentNum 현재 정원\
+  \- room             방 정보
 
 ### 생성자&화면구현
 
@@ -324,4 +335,3 @@ public class MessageRoom extends JPanel{
 ```
 
 * 토대만 구현, 37일차에 완성한다.
-

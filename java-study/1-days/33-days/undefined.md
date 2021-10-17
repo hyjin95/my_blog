@@ -49,7 +49,7 @@ public void actionPerformed(ActionEvent e) {
 }
 ```
 
-* JOptionPane.showInputDialog\( \); 함수를 이용해 입력화면을 띄운다.
+* JOptionPane.showInputDialog( ); 함수를 이용해 입력화면을 띄운다.
 * 11번 : trim 함수를 이용해 글자 자릿수를 체크한다.
 
 ## TomatoServerThread
@@ -93,7 +93,8 @@ String msg = null;
 }
 ```
 
-* 22번 : 대화명 변경알림은 변경자와 현재 채팅방의 접속자 모두에게 말해야한다. - broadCasting메서드를 사용
+* 22번 : 대화명 변경알림은 변경자와 현재 채팅방의 접속자 모두에게 말해야한다.\
+  \- broadCasting메서드를 사용
 
 ## TomatoClientThread
 
@@ -146,7 +147,14 @@ public void run() {
 				}break;
 ```
 
-* 19-24번 : 현재 접속자 목록을 보여주는 JTabld의 dtm data를 변경시켜야한다. - 19번 : for문을 이용해 dtm의 모든 row와 비교한다. - 21번 : String타입 변수에 dtm에서 가져온 data를 담는다.   getVlaueAt\(모든row, 첫번째 컬럼\) - 22번 : 가져온 data와 기존data가 같다면 새로 설정된 after데이터를 set한다.   setValueAt\(변경된 대화명, 해당 row, 첫번째컬럼\)
+* 19-24번 : 현재 접속자 목록을 보여주는 JTabld의 dtm data를 변경시켜야한다.\
+  \- 19번 : for문을 이용해 dtm의 모든 row와 비교한다.\
+  \- 21번 : String타입 변수에 dtm에서 가져온 data를 담는다.\
+    getVlaueAt(모든row, 첫번째 컬럼)\
+  \- 22번 : 가져온 data와 기존data가 같다면 새로 설정된 after데이터를 set한다.\
+    setValueAt(변경된 대화명, 해당 row, 첫번째컬럼)
 * 27번 : 현재 모든 접속자에게 메세지를 출력한다.
-* client의 채팅방 title을 변경시켜야한다. - 30번 : 변경전 대화명이 tomatoClient의 멤버변수 nickName과 같다면 - 31번 : tamatoClient의 title을 변경된 대화명으로 set해주고, - 32번 : tomaroClient의 멤버변수 nickName도 변경된 대화명으로 초기화한다.
-
+* client의 채팅방 title을 변경시켜야한다.\
+  \- 30번 : 변경전 대화명이 tomatoClient의 멤버변수 nickName과 같다면\
+  \- 31번 : tamatoClient의 title을 변경된 대화명으로 set해주고,\
+  \- 32번 : tomaroClient의 멤버변수 nickName도 변경된 대화명으로 초기화한다.

@@ -39,7 +39,9 @@ public class ListMainApp {
 }
 ```
 
-* 외부에서 객체를 주입하기 위해서는 반드시 xml에 bean이 등록되어 있어야하고, 등록한 뒤에 객체를 관리해주는, 주체가 되는 클래스가 있어야한다. - Bean을 관리해주는 별도의 클래스    ApplicationContext or BeanFactory = Bean공장장
+* 외부에서 객체를 주입하기 위해서는 반드시 xml에 bean이 등록되어 있어야하고, 등록한 뒤에 객체를 관리해주는, 주체가 되는 클래스가 있어야한다.\
+  \- Bean을 관리해주는 별도의 클래스 \
+    ApplicationContext or BeanFactory = Bean공장장
 * 이 경우에는 insaBean이라는 xml에게서 값을 주입받으려고 한다.
 
 ### ListController.java
@@ -106,4 +108,3 @@ public class ListController extends AbstractController {
 ### 결과 : Console
 
 ![](../../../.gitbook/assets/list.png)
-

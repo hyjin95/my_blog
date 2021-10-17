@@ -6,14 +6,19 @@ description: 2020.08.14 - 13일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
-* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+* 사용언어 : JAVA(JDK)1.8.0\_261 : Oracle.com
+* 사용Tool \
+  \- Eclipse : Eclipse.org\
+  \- Toad DBA Suite for Oracle 11.5
 
 ### 클래스를 쪼갤때 고려해야 할 것
 
 1. 변수의 갯수와 위치
-2. 메서드 - 파라미터\(요청\), 리턴\(응답\)
-3. 생성자 - 파라미터O,  리턴타입X - 역할 : 클래스와 클래스를 매칭시켜준다.
+2. 메서드\
+   \- 파라미터(요청), 리턴(응답)
+3. 생성자\
+   \- 파라미터O,  리턴타입X\
+   \- 역할 : 클래스와 클래스를 매칭시켜준다.
 4. 클래스의 상속관계
 
 ### 예제
@@ -84,8 +89,15 @@ public class Sub extends JDialog {
 ### 생각하기
 
 1. 입력을 누르면 새 '입력'창이, 수정을 누르면 새 '수정'창이, 보기를 누르면 새 '보기'창을 띄워야한다.
-2. 사용할 메서드 - public ActionPerformed\(ActionEvent\):void - public bookIns\(n개\):int : 건수를 입력하는 메서드이므로 int타입을 갖는다. \(책제목 등을 입력\) - public bookUpd\(n개\):int : 위와 같다. \(이름, 번호, 주소 등을 수정\) - public booksel\(\_.no\):BookVO : 책넘버를 검색하면 가격, 목차 등 여러 정보를 보여줘야한다. - public exit\( \); : 종료기능, 파라미터와 리턴타입은 없다.
-3. BookManager -&gt; EventHandler -&gt; BookCURD - 화면에서 입력이 일어나면 Event가 새 창을 호출한다. - 기본적으로는 이벤트안에 CURD, Manager안에 이벤트가 인스턴스화 되어야 하지만, 유지보스 측면에서 봤을때 인스턴스화가 한 클래스 안에 있는게 좋다.
+2. 사용할 메서드\
+   \- public ActionPerformed(ActionEvent):void\
+   \- public bookIns(n개):int : 건수를 입력하는 메서드이므로 int타입을 갖는다. (책제목 등을 입력)\
+   \- public bookUpd(n개):int : 위와 같다. (이름, 번호, 주소 등을 수정)\
+   \- public booksel(\_.no):BookVO : 책넘버를 검색하면 가격, 목차 등 여러 정보를 보여줘야한다.\
+   \- public exit( ); : 종료기능, 파라미터와 리턴타입은 없다.
+3. BookManager -> EventHandler -> BookCURD\
+   \- 화면에서 입력이 일어나면 Event가 새 창을 호출한다.\
+   \- 기본적으로는 이벤트안에 CURD, Manager안에 이벤트가 인스턴스화 되어야 하지만, 유지보스 측면에서 봤을때 인스턴스화가 한 클래스 안에 있는게 좋다.
 4. JFrame이 상위, JDIalog클래스가 하위 개념으로 메인이 꺼지면 생성된 서브 창도 꺼진다.
 
 ### BookManager.java
@@ -201,7 +213,7 @@ public class BookManagerEventHandler implements ActionListener {
 * 이벤트 담당 클래스
 * 8번 : null해야 원본값을 그대로 가져올 수 있다.
 * 11-13번 : 주소번지를 담는 생성자이다. 
-* 17번 : 읽어온\(get\) 것을 String타입의 label에 담는다.
+* 17번 : 읽어온(get) 것을 String타입의 label에 담는다.
 * 21-23번 : BookManager에 인스턴스화 되어있는 CURD를 호출한다.
 
 ### BookCURD.java
@@ -221,13 +233,12 @@ public class BookCRUD extends JDialog {
 }
 ```
 
-* 새 창\(JDialong\) 띄우기 클래스
+* 새 창(JDialong) 띄우기 클래스
 * 이 창은 평소에는 보이지 않다가 event 발생시 보여야 하므로 setVisible의 기본값은 false이다.
 
 ### 숙제
 
-8일차에 만들었던 야구 숫자 게임을 4명의 팀원이서 클래스를 나누어 구현시켜보자.  
+8일차에 만들었던 야구 숫자 게임을 4명의 팀원이서 클래스를 나누어 구현시켜보자.\
 main, ui, event, logic
 
 후기 : 첫 팀 숙제를 주셨다. 우리가 잘 연결 할 수 있을까..? 화이팅화이팅!
-

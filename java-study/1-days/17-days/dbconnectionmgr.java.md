@@ -98,8 +98,7 @@ public class DBConnectionMgr {
 ```
 
 * 서버의 입장에서는 사용한 자원은 반드시 반납되어야한다.
-* 생성한 역순으로 한다. - Connection -&gt; PreparedStatment -&gt; ResultSet
+* 생성한 역순으로 한다.\
+  \- Connection -> PreparedStatment -> ResultSet
 * 4-6번 : 사용할 함수 인스턴스화
-
-
 

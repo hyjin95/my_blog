@@ -62,7 +62,9 @@
 
 ### 설명
 
-* 31-35번은 작동하지 않는다.  - JQuery에서는 get방식을 허용하지 않는 것 같다. - 이럴때에는 36-40번, 48번처럼 hidden 속성을 사용해 보이지 않는 값을 넘겨 처리할 수 있다.
+* 31-35번은 작동하지 않는다. \
+  \- JQuery에서는 get방식을 허용하지 않는 것 같다.\
+  \- 이럴때에는 36-40번, 48번처럼 hidden 속성을 사용해 보이지 않는 값을 넘겨 처리할 수 있다.
 
 ## Servlet : b.jsp
 
@@ -169,7 +171,7 @@ public class a extends HttpServlet {
 }
 ```
 
-## view : a\_result.jsp
+## view : a_result.jsp
 
 ```java
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -186,4 +188,3 @@ public class a extends HttpServlet {
 </body>
 </html>
 ```
-

@@ -2,7 +2,7 @@
 
 ## 공통코드에 cookie api 추가
 
-### 코드 : easyUI\_common.jsp
+### 코드 : easyUI_common.jsp
 
 ```javascript
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
@@ -12,7 +12,7 @@
 
 ## 로그인시 서블릿 요청
 
-### 코드 : index.jsp - login\( \)
+### 코드 : index.jsp - login( )
 
 ```javascript
 <head>
@@ -36,7 +36,7 @@
 * 사용자가 화면에서 로그인 버튼을 클릭하면 호출되는 login함수
 * 서블릿에 get방식으로 파라미터를 넘겨 요청을 처리하도록 한다.
 
-### 코드 : FrontController.java - doGet\( \)
+### 코드 : FrontController.java - doGet( )
 
 ```java
 @Override
@@ -60,7 +60,10 @@
 			}		
 ```
 
-* 파라미터를 받아 map에 담아 Logic의 메서드를 호출한다. Logic은 Dao의 메서드를 호출해 myBatis로 구현된 프로시저를 호출하게된다. 프로시저는 파라미터로 받은 map에 응답을 처리한다. 결과값은 map.get\("컬럼명"\)으로 꺼낼 수 있다.
+* 파라미터를 받아 map에 담아 Logic의 메서드를 호출한다.\
+  Logic은 Dao의 메서드를 호출해 myBatis로 구현된 프로시저를 호출하게된다.\
+  프로시저는 파라미터로 받은 map에 응답을 처리한다.\
+  결과값은 map.get("컬럼명")으로 꺼낼 수 있다.
 * 처리된 값 13번을 forward로 17번에게 처리 요청한다.
 
 ### 코드 : loginAction2.jsp
@@ -80,7 +83,7 @@
 
 * 로그인이 성공했다면, 여기서 쿠키가 생성된다.
 
-### 코드 : index.jsp - longin\( \)
+### 코드 : index.jsp - longin( )
 
 ```javascript
 <head>
@@ -115,4 +118,3 @@
 
 * 성공한 값을 html태그와 합쳐 로그인 부분을 새로 처리한다.
 * 이 과정이 모두 완료되고, 브라우저가 index.jsp를 다운로드 완료하면 브라우저에서 cookie를 확인 할 수 있다. --27번
-

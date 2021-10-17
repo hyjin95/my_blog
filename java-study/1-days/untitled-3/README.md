@@ -6,27 +6,35 @@ description: 2020.10.05 - 35일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261 : Oracle.com
-* 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5
+* 사용언어 : JAVA(JDK)1.8.0\_261 : Oracle.com
+* 사용Tool \
+  \- Eclipse : Eclipse.org\
+  \- Toad DBA Suite for Oracle 11.5
 
 ## 복습
 
 ### API
 
 * CollectionFramework
-* 패키지 -&gt; interfaces, classes, exceptions
+* 패키지 -> interfaces, classes, exceptions
 * interfaces를 확인하는 경우에는 추상클래스를 먼저 확인한다.
 * 보통 해당 클래스,인터페이스의 생성자, 메서드, 필드를 확인하는 용도
 
 ### interface 인스턴스화
 
-* 인터페이스 변수 = new 구현체클래스\( \); - 가장 재사용성이 높다. 권장사항 - 상속을 받는 구조가 아니므로 결합도가 낮고 독립적이다. - 단위테스트, 통합테스트 가능
-* 추상클래스 변수 = new 구현체클래스\( \); - 상속을 하는 구조이므로 독립적이지 않다. - 부모의 추상메서드를 강제로 오버라이딩해야한다.
-* 구현체클래스 변수 = new 구현체클래스\( \); - 변수\(구현체클래스\)가 제공해주는 변수, 메서드만 사용가능
+* 인터페이스 변수 = new 구현체클래스( );\
+  \- 가장 재사용성이 높다. 권장사항\
+  \- 상속을 받는 구조가 아니므로 결합도가 낮고 독립적이다.\
+  \- 단위테스트, 통합테스트 가능
+* 추상클래스 변수 = new 구현체클래스( );\
+  \- 상속을 하는 구조이므로 독립적이지 않다.\
+  \- 부모의 추상메서드를 강제로 오버라이딩해야한다.
+* 구현체클래스 변수 = new 구현체클래스( );\
+  \- 변수(구현체클래스)가 제공해주는 변수, 메서드만 사용가능
 
-### 제네릭 &lt; &gt;
+### 제네릭 < >
 
-* List&lt;Object&gt;, List&lt;Element&gt; = List&lt;E&gt;
+* List\<Object>, List\<Element> = List\<E>
 * 최상위 단위는 Object이지만 최근 여러 종류의 원소, 집합의 의미로 Element=E를 사용한다.
 * 의미적으로 Element가 Object보다 크다.
 
@@ -44,38 +52,60 @@ description: 2020.10.05 - 35일차
 * **데이터가 뭉텅이로 저장**된다. 저장속도가 빠르다.
 * **데이터범위를 순차적으로 표시할때** 사용된다. 
 * **데이터 특징이 포지션별로 존재할때 유리**하다.
-* **ArrayList** - 동기화를 지원하지 않는다. - 읽기, 쓰기가 빠르다. - 싱글스레드에서 안전하다.
-* **Vector** - 동기화 지원, data의 안전성과 신뢰성이 높다. - 읽기, 쓰기가 느리다. - 동기화를 하면 시간이 더 걸린다. 조건을 비교하므로, 순서를 따져 대기시킨다. - 멀티스레드에서 안전하다.      
+* **ArrayList**\
+  \- 동기화를 지원하지 않는다.\
+  \- 읽기, 쓰기가 빠르다.\
+  \- 싱글스레드에서 안전하다.
+* **Vector**\
+  \- 동기화 지원, data의 안전성과 신뢰성이 높다.\
+  \- 읽기, 쓰기가 느리다.\
+  \- 동기화를 하면 시간이 더 걸린다. 조건을 비교하므로, 순서를 따져 대기시킨다.\
+  \- 멀티스레드에서 안전하다.      
 
 ### Map 인터페이스
 
-* **Map&lt;key, value&gt;** : 데이터를 키와 값으로 관리
+* **Map\<key, value>** : 데이터를 키와 값으로 관리
 * **검색속도가 가장 빠른** 자료구조 인터페이스
 * 데이터가 저장될때 빈공간을 찾아 저장된다.
 * **저장할 데이터가 unique한 key값을 가질때** 사용된다. 
 * **빈번한 검색과, 특정데이터를 순간마다 캐치**해야할때 유리하다.
 * 대표적인 구현체 클래스 : HashMap, HashTable
-* key : 값을 읽을\(꺼낼\) 수 있게 해주는 중복불가능한 key, 구분자 역할로 List보다 검색효율이 높다.
-* **ORM**솔루션 중 하나인 MyBatis\(오픈소스\)에서 많이 사용된다.
-*  데이터 추가 : map.put\(key값, value값\);
-*  데이터 추출 : map.get\(key값\);
-* **HashMap**
+* key : 값을 읽을(꺼낼) 수 있게 해주는 중복불가능한 key, 구분자 역할로 List보다 검색효율이 높다.
+* **ORM**솔루션 중 하나인 MyBatis(오픈소스)에서 많이 사용된다.
+*  데이터 추가 : map.put(key값, value값);
+*  데이터 추출 : map.get(key값);
+*   **HashMap**
 
-  - **동기화를 지원하지 않는다.**  
-  - Map&lt;key타입, value타입&gt; map = new HashMap&lt;&gt;\(\);  
-  - 동기화를 지원하지 않는다.  
-  - 빠르다.  
-  - 싱글스레드에서 안전하다.  
-  - 하나의 null key, n개의 null value 허용  
-  - Fail-Fast Iterator 반환
+    \- **동기화를 지원하지 않는다.**\
+    ****- Map\<key타입, value타입> map = new HashMap<>();\
+    \- 동기화를 지원하지 않는다.\
+    \- 빠르다.\
+    \- 싱글스레드에서 안전하다.\
+    \- 하나의 null key, n개의 null value 허용\
+    \- Fail-Fast Iterator 반환
+* **HashTable**\
+  \- **동기화 지원**\
+  \- 느리다.\
+  \- 멀티스레드에서 안전하다.\
+  \- null 불허\
+  \- Enumeration 반환
 
-* **HashTable** - **동기화 지원** - 느리다. - 멀티스레드에서 안전하다. - null 불허 - Enumeration 반환
+### Enumeration\&Iterator
 
-### Enumeration&Iterator
-
-* 자료구조\(Collection\)에 저장된 값에 접근하거나 꺼낼때 사용되는 인터페이스
-* **enumeration**  - 웹 에서 사용 - 제거메서드가 없다. - hasMoreElements\( \) : 남은 데이터가 있으면 true, 없으면 false 반환. while문에서 사용 - nextElement\( \) : 자료구조의 다음 데이터 반환
-* **iterator** - 자바에서 사용 - 데이터 추출 방식을 표준화하여 코드의 재활용이 가능하다. - remove\( \) : 제거메서드가 있다. - hasNext\( \) : 남은 데이터가 있으면 true, 없으면 false 반환. while문에서 사용 - next\( \) : 자료구조의 다음 데이터 반환 - Fail-Fast Iterator : 다른 스레드에서 해당 스래드 자료를 수정하려고 하면                                          ConcurrentModificationException을 발생시켜 일관성을 보장하는 것
+* 자료구조(Collection)에 저장된 값에 접근하거나 꺼낼때 사용되는 인터페이스
+* **enumeration **\
+  \- 웹 에서 사용\
+  \- 제거메서드가 없다.\
+  \- hasMoreElements( ) : 남은 데이터가 있으면 true, 없으면 false 반환. while문에서 사용\
+  \- nextElement( ) : 자료구조의 다음 데이터 반환
+* **iterator**\
+  \- 자바에서 사용\
+  \- 데이터 추출 방식을 표준화하여 코드의 재활용이 가능하다.\
+  \- remove( ) : 제거메서드가 있다.\
+  \- hasNext( ) : 남은 데이터가 있으면 true, 없으면 false 반환. while문에서 사용\
+  \- next( ) : 자료구조의 다음 데이터 반환\
+  \- Fail-Fast Iterator : 다른 스레드에서 해당 스래드 자료를 수정하려고 하면       \
+                                    ConcurrentModificationException을 발생시켜 일관성을 보장하는 것
 
 ### syncronized
 
@@ -92,14 +122,18 @@ public class MapTest {
 * 여러 스레드가 하나의 자원을 사용할때 현재 데이터를 사용하는 스레드를 제외하고는 다른 스레드들은 데이터에 접근 할 수 없도록 막는 개념 : block, unblock
 * syncronized예약어를 과도하게 사용하게되면 성능저하가 일어난다.
 
-### ORM&Room
+### ORM\&Room
 
 * ObjectRelationMap
 * 데이터베이스와 객체지향 프로그래밍 언어간에 호환되지 않는 데이터를 변환해주는 프로그래밍 기법
 * DB테이블과 매핑되는 객체를 만들어 그 객체에서 DB를 관리하는 것
-* Room  - SQLite위에 추상화 계층을 제공하는 라이브러리 - 적은 양의 정형화된 데이터를 로컬에서 캐시와 같이 데이터를 유지하는 것 - 장치가 네트워크에 액세스 할 수 없는 상태라도 계속 탐색이 가능하다. - 이후에 온라인 상태가 되면 그동안의 모든 컨텐츠 변경 내용이 서버에 동기화 된다.
+* Room \
+  \- SQLite위에 추상화 계층을 제공하는 라이브러리\
+  \- 적은 양의 정형화된 데이터를 로컬에서 캐시와 같이 데이터를 유지하는 것\
+  \- 장치가 네트워크에 액세스 할 수 없는 상태라도 계속 탐색이 가능하다.\
+  \- 이후에 온라인 상태가 되면 그동안의 모든 컨텐츠 변경 내용이 서버에 동기화 된다.
 
-### List&lt;타입&gt;
+### List<타입>
 
 ```java
 public class MapTest {
@@ -158,10 +192,14 @@ public class MapTest {
 
 ### List의 map값 
 
-![List&amp;lt;Map&amp;gt;](../../../.gitbook/assets/1%20%2815%29.png)
+![List\<Map>](<../../../.gitbook/assets/1 (15).png>)
 
-* n개인 key를 Object타입의 배열에 담는다. - 소유주.keySet\( \)함수를 이용해 map의 key값을 set한다. - 소유주.toArray\( \)함수를 이용해 배열에 set한다. - 소유주.keySet\( \).toArray\( \);
-* n개의 key를 갖는 n개의 map을 List에 담아 유지한다. - List&lt;Map&lt; , &gt;&gt;
+* n개인 key를 Object타입의 배열에 담는다.\
+  \- 소유주.keySet( )함수를 이용해 map의 key값을 set한다.\
+  \- 소유주.toArray( )함수를 이용해 배열에 set한다.\
+  \- 소유주.keySet( ).toArray( );
+* n개의 key를 갖는 n개의 map을 List에 담아 유지한다.\
+  \- List\<Map< , >>
 
 ```java
 		//one,two,three는 컬럼, 뒤의 value는 row가 된다.
@@ -184,7 +222,7 @@ public class MapTest {
 	}}
 ```
 
-* Set클래스가 제공해주는 toArray\( \) 메서드를 이용해 추출할 수 있다.
+* Set클래스가 제공해주는 toArray( ) 메서드를 이용해 추출할 수 있다.
 * 2번 : 권장사항
 * 5번 : 검색되는 만큼 반복
 * 6번 : key를 map에서 받아온다.
@@ -195,26 +233,33 @@ public class MapTest {
 * 14번 : 방마다 key를 꺼내서 받는다.
 * 15번 : 14번에서 꺼낸 key로 rmap검색, 출력 반복
 
-{% page-ref page="map-list.md" %}
+{% content-ref url="map-list.md" %}
+[map-list.md](map-list.md)
+{% endcontent-ref %}
 
 ## 대기실&단톡방 구현
 
 ### Container
 
-![](../../../.gitbook/assets/1%20%2816%29.png)
+![](<../../../.gitbook/assets/1 (16).png>)
 
 * javax.swing 패키지에서 제공되는 화면 클래스
 * Object를 상속하는 Window, JFrame의 부모 클래스
-* window\(창\)의 역할을 하고, 컨테이너가 될수 있는 컨포넌트는 JFramem JPanel, JApplet이 있다. - JFrame, JApplet : 최소화, 최대화, 닫기 버튼을 갖는 윈도우 구조의 최종 컨테이너 - JPanel : 투명 윈도우로 중간 컨테이너의 역할로서 JFrame이나 JApplet에 추가된다.
-* JPanel을 JFrame에 추가할때 사용하는 클래스  - getContentPane\( \)
+* window(창)의 역할을 하고, 컨테이너가 될수 있는 컨포넌트는 JFramem JPanel, JApplet이 있다.\
+  \- JFrame, JApplet : 최소화, 최대화, 닫기 버튼을 갖는 윈도우 구조의 최종 컨테이너\
+  \- JPanel : 투명 윈도우로 중간 컨테이너의 역할로서 JFrame이나 JApplet에 추가된다.
+* JPanel을 JFrame에 추가할때 사용하는 클래스 \
+  \- getContentPane( )
 
-### getContentPane\( \)
+### getContentPane( )
 
 * java GUI library Swing에서 제공하는 JFrame의 객체 메서드
-* contentPane : 일반 컴포넌트를 가질 수 있는 패널 - 프레임 객체의 getContentPane\( \)메서드를 이용해 얻을 수 있다.
-* Container con = this.getContentPane\( \); - this에 연결된 패널을 얻어\(알아내서\) 패널\(con\)을 붙인다.
+* contentPane : 일반 컴포넌트를 가질 수 있는 패널\
+  \- 프레임 객체의 getContentPane( )메서드를 이용해 얻을 수 있다.
+* Container con = this.getContentPane( );\
+  \- this에 연결된 패널을 얻어(알아내서) 패널(con)을 붙인다.
 
-### JTabbedPane\( \)
+### JTabbedPane( )
 
 * 위에서 얻은 패널을 탭 형식으로 프레임에 보여주는 메서드
 
@@ -224,7 +269,7 @@ public class MapTest {
 
 ### ChatClientVer2
 
-![](../../../.gitbook/assets/2%20%2811%29.png)
+![](<../../../.gitbook/assets/2 (11).png>)
 
 * 패널과 contentPane을 이용해 대기실과 단톡방 화면을 구현한다.
 
@@ -238,7 +283,8 @@ public class MapTest {
 * 단톡방
 * JPanel 상속
 
-{% page-ref page="undefined/" %}
+{% content-ref url="undefined/" %}
+[undefined](undefined/)
+{% endcontent-ref %}
 
 후기 : 내일을 위해 구글에 검색해가면서 열심히 복습하자! 내일은 코로나때문에 쉬었던 운동을 다시 시작하려고 한다. 건강도 공부도 열심히 챙겨야지 성실하게 살자!
-

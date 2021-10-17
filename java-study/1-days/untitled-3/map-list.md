@@ -62,10 +62,14 @@
 			}
 ```
 
-* 2번 : n개의 Map을 담기위해 Map타입 Vector를 선언, 생성한다. - Map의 key값은 String타입, value는 Object타입
-* 3번 : key를 이용한 빠른 검색을 하기위해 Map을 선언, 생성한다. - Map의 key값은 String타입, value는 Object타입
-* 5번 : Map은 인터페이스 이므로 구현체 클래스인 HashMap\(싱글스레드용\)으로 생성한다. - 검색마다 새로운 map으로 생성되어야 하므로 생성을 while문 안에서 한다.
-* 6,7번 : 생성한 Map에 put함수를 이용해 key와 value를 담는다. - value가 Object타입이므로 어떤 타입이든 담을 수 있다.
+* 2번 : n개의 Map을 담기위해 Map타입 Vector를 선언, 생성한다.\
+  \- Map의 key값은 String타입, value는 Object타입
+* 3번 : key를 이용한 빠른 검색을 하기위해 Map을 선언, 생성한다.\
+  \- Map의 key값은 String타입, value는 Object타입
+* 5번 : Map은 인터페이스 이므로 구현체 클래스인 HashMap(싱글스레드용)으로 생성한다.\
+  \- 검색마다 새로운 map으로 생성되어야 하므로 생성을 while문 안에서 한다.
+* 6,7번 : 생성한 Map에 put함수를 이용해 key와 value를 담는다.\
+  \- value가 Object타입이므로 어떤 타입이든 담을 수 있다.
 * 8번 : Map타입으로 생성해둔 Vector에 add함수를 이용해 담는다.
 
 ### 꺼낸 값 조회, 출력
@@ -100,13 +104,13 @@
 
 * 자료구조에서 값을 꺼내주는 Iterator인터페이스를 사용한다.
 * 1번 : Vector에서 iterator함수로 값을 꺼내 Map타입의 Iterator인터페이스 변수에 담는다.
-* 4번 : 조회결과가 한 건도 없다면 알림창을 띄운다. - 반드시 return;예약어를 넣어 if문을 탈출한다.
+* 4번 : 조회결과가 한 건도 없다면 알림창을 띄운다.\
+  \- 반드시 return;예약어를 넣어 if문을 탈출한다.
 * 10번 : iterator인터페이스가 제공하는 hasNext함수를 이용해 값을 꺼내는 동안
-* 11번 : HashMap타입의 data변수에 출력되는 값을 담는다.  - \(HashMap\)캐스팅 연산자 사용
+* 11번 : HashMap타입의 data변수에 출력되는 값을 담는다. \
+  \- (HashMap)캐스팅 연산자 사용
 * 12번 : 생성해둔 keys배열에 위의 data변수안의 key값을 가져와 toArray함수를 이용해 담는다.
 * 13번 : dtm에 row를 순서대로 입력하기 위해 Object타입의 Vector를 선언, 생성한다.
-* 14번 : 생성한 Vector의 0번방에 HashMap타입 data변수에서 \[0\]번 key값으로 검색한 value를 담는다.
-* 15번 : Vector의 1번방에 HashMap타입 data변수에서 keys의 \[1\]번방 값으로 검색한 value를 담는다.
-
-
+* 14번 : 생성한 Vector의 0번방에 HashMap타입 data변수에서 \[0]번 key값으로 검색한 value를 담는다.
+* 15번 : Vector의 1번방에 HashMap타입 data변수에서 keys의 \[1]번방 값으로 검색한 value를 담는다.
 

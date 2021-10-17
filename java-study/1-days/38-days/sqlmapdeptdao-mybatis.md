@@ -28,9 +28,15 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 * DB연동 sql XML파일, mybatis의 설정 클래스
 * 10번 : 사용할 DB제품의 드라이버 클래스 경로
-* 11번 : URL - 사용하는 oracle.JDBC의 타입은 thin이다. - ip - port 번호 : oralce Listener의 포트번호는 1521이다. - 호스트이름
+* 11번 : URL\
+  \- 사용하는 oracle.JDBC의 타입은 thin이다.\
+  \- ip\
+  \- port 번호 : oralce Listener의 포트번호는 1521이다.\
+  \- 호스트이름
 * 12,13번 : 계정이름, 비밀번호
-* 19번 : &lt;mappers&gt;의 하위 엘리먼트 &lt;mapper&gt;태그 안에 resource속성으로 매퍼파일 경로를 지정한다.
+*   19번 : \<mappers>의 하위 엘리먼트 \<mapper>태그 안에 resource속성으로 매퍼파일 경로를 지정한다.
+
+
 
 ## dept.XML
 
@@ -83,7 +89,8 @@ public class SqlMapDeptDao {
 * 부서의 갯수를 출력하는 Dao클래스
 * mybatis 프레임워크를 이용해 sql문을 xml파일로 분리했다.
 * 15번 : 이를 이용하기 위해서 xml문서의 물리적인 위치를 멤버변수로 선언, 생성되어야한다.
-* 16번 : mybatis에서 제공하는 SqlSessionFactory클래스를 선언한다. - 서버와의 연결통로를 확보해주는 클래스.
+* 16번 : mybatis에서 제공하는 SqlSessionFactory클래스를 선언한다.\
+  \- 서버와의 연결통로를 확보해주는 클래스.
 
 ### getDeptList 메서드
 
@@ -111,11 +118,13 @@ public class SqlMapDeptDao {
 	}
 ```
 
-* Map제네릭 타입을 갖는 List타입 메서드 - List의 방안에 Map이 들어있다.
+* Map제네릭 타입을 갖는 List타입 메서드\
+  \- List의 방안에 Map이 들어있다.
 * 2번 : 반환값으로 사용할 변수 선언
 * 3번 : 서버와의 연결에서 개발자의 sql문 처리 요청을 하는 객체인 SqlSession을 선언한다.
 * 4번 : xml파일을 통해 서버와의 연결이 이루어지므로 예외처리를 한다.
-* 7번 : 문서를 읽는 Reader클래스를 이용해 멤버변수에 선언된 XML파일의 값을 사용할 수 있게한다. - Reader 변수이름 = Resources.getResourceAsReader\(XML파일 경로\)
+* 7번 : 문서를 읽는 Reader클래스를 이용해 멤버변수에 선언된 XML파일의 값을 사용할 수 있게한다.\
+  \- Reader 변수이름 = Resources.getResourceAsReader(XML파일 경로)
 * 9번 : builder클래스를 이용해 sqlSessionFactory의 인스턴스를 Reader로 생성한다.
 * 10번 : sqlSessionFactory가 생성된 다음에 SqlSession변수를 소유주.openSession메서드로 생성한다.
 * 11번 : 생성해둔 List 변수에 열린세션중 id가 getDeptList인 sql을 사용해 값을 담는다.
@@ -137,4 +146,3 @@ public class SqlMapDeptDao {
 * 2번 : 인스턴스화
 * 3번 : getDeptList의 반환값이 List타입이므로 List타입 변수를 하나 선언해, 담는다.
 * 4번 : List.size출력
-

@@ -8,33 +8,47 @@ description: 2020.12.04 ~ 진행중
 
 ### 담당
 
-* PM - 전반적 설계 - ppt제작 및 발
-* 웹  
-  - 게시판 솔루션   
-     UI + Controller + Logic + Dao + MyBatis + JDBC + SQL 처리  
-  - 조건검색  
+* PM\
+  \- 전반적 설계\
+  \- ppt제작 및 발
+*   웹\
+    \- 게시판 솔루션 \
+       UI + Controller + Logic + Dao + MyBatis + JDBC + SQL 처리\
+    \- 조건검색  
 
-    Controller + Logic + Dao + MyBatis + JDBC + SQL 처리
-
-* 안드로이드 - UI - 디바이스 Gps 가져오기   Geocoder를 이용해 디바이스의 위도, 경도를 주소로 불러온다. - 로그인, 회원가입     Activity + Fragment + Volley + Spring\(Controller\) 처리
+      Controller + Logic + Dao + MyBatis + JDBC + SQL 처리
+* 안드로이드\
+  \- UI\
+  \- 디바이스 Gps 가져오기\
+    Geocoder를 이용해 디바이스의 위도, 경도를 주소로 불러온다.\
+  \- 로그인, 회원가입 \
+     Activity + Fragment + Volley + Spring(Controller) 처리
 
 
 
 ### 공정표 및 업무 분담
 
-{% file src="../../.gitbook/assets/.xlsx \(1\).xlsx" caption="공정표, 업무분담 및 아이디어 회의" %}
+{% file src="../../.gitbook/assets/.xlsx (1).xlsx" %}
+공정표, 업무분담 및 아이디어 회의
+{% endfile %}
 
 ### 화면 정의서
 
-{% file src="../../.gitbook/assets/.xlsx \(2\).xlsx" caption="화면정의서" %}
+{% file src="../../.gitbook/assets/.xlsx (2).xlsx" %}
+화면정의서
+{% endfile %}
 
 ### 2021.01.11 1차 중간발표
 
-{% file src="../../.gitbook/assets/1-.pptx" caption="1차 발표 PPT" %}
+{% file src="../../.gitbook/assets/1-.pptx" %}
+1차 발표 PPT
+{% endfile %}
 
 ### 2021.01.19 2차 중간발
 
-{% file src="../../.gitbook/assets/2-.pptx" caption="2차 발표 PPT" %}
+{% file src="../../.gitbook/assets/2-.pptx" %}
+2차 발표 PPT
+{% endfile %}
 
 ## Solution
 
@@ -253,7 +267,8 @@ public class SolutionController implements Controller {
 }
 ```
 
-* 첫 페이지는 관리자계정에서 게시판 만들기 버튼을 클릭했을때 192.168.0.197:4444/solution/startList.solution 으로 서블릿을 거쳐 솔루션 페이지가 호출됩니다.
+* 첫 페이지는 관리자계정에서 게시판 만들기 버튼을 클릭했을때\
+  192.168.0.197:4444/solution/startList.solution 으로 서블릿을 거쳐 솔루션 페이지가 호출됩니다.
 * 솔루션을 통한 게시판 만들기 정보를 담아 게시판 테이블을 생성하기 위한 로직 호출이 일어납니다.
 
 ### SolutionLogic
@@ -568,8 +583,16 @@ public class SqlSolutionDao {
 }
 ```
 
-* 상황에 따라 Mybatis를 활용하기도, 기존의 JDBC를 사용하기도 합니다. 컬럼명에 변수가 들어가야할때 JDBC를 활용합니다. Create Table의 결과값을 boolean으로 받기위해 JDBC를 활용합니다.
-* 솔루션에서 앨범형 게시판 만들기 선택시 - 해당 게시판 Table생성 - 해당 게시판 Table의 PK를 FK로하는 첨부파일 테이블 생성 - 첨부파일 테이블 Sequence생성 - 해당 게시판 Table에 사용된 Sequence생성 - 게시판 정보\(사용자 입력 값\) 솔루션 테이블에 Insert 을 처리 합니다.
+* 상황에 따라 Mybatis를 활용하기도, 기존의 JDBC를 사용하기도 합니다.\
+  컬럼명에 변수가 들어가야할때 JDBC를 활용합니다.\
+  Create Table의 결과값을 boolean으로 받기위해 JDBC를 활용합니다.
+* 솔루션에서 앨범형 게시판 만들기 선택시\
+  \- 해당 게시판 Table생성\
+  \- 해당 게시판 Table의 PK를 FK로하는 첨부파일 테이블 생성\
+  \- 첨부파일 테이블 Sequence생성\
+  \- 해당 게시판 Table에 사용된 Sequence생성\
+  \- 게시판 정보(사용자 입력 값) 솔루션 테이블에 Insert\
+  을 처리 합니다.
 * 게시글 타입인 경우 첨부파일에 관한 부분이 필요없습니다.
 
 ### DBConnectionMgr
@@ -704,4 +727,3 @@ public class DBConnectionMgr {
 ```
 
 * MyBatis의 경우 DB연결을 xml문서에서 관리합니다.
-

@@ -30,9 +30,10 @@ public class TalkServer extends JFrame implements Runnable {
 * run메서드 활용을 위해 Runnable인터페이스를 implements한다.
 * 제일 먼저 ServerSocket생성, 선언은 run메서드에서 한다. --1번소켓
 * 그 다음 클라이언트 소켓 정보를 담을 소켓을 선언한다. --3번 소켓
-* Vector사용을 위해 List를 TalkServerThread타입으로 선언한다. - 멀티스레드 관리자인 tst타입으로 하는 이유는 List에 모든 접속자들을 담아야 하기 때문이다.
+* Vector사용을 위해 List를 TalkServerThread타입으로 선언한다.\
+  \- 멀티스레드 관리자인 tst타입으로 하는 이유는 List에 모든 접속자들을 담아야 하기 때문이다.
 
-### Run\( \) Override
+### Run( ) Override
 
 ```java
 	@Override
@@ -66,7 +67,8 @@ public class TalkServer extends JFrame implements Runnable {
 * 7번 : 서버소켓 생성 = 대문 열기 --대기상태 시작, 1번소켓 생성
 * 9번 : isStop상태가 true인 동안에 -- 대기상태
 * 12번 : 접속허용, 접속자의 정보를 받을 소켓 생성 및 대입 --대기상태 종료, 3번소켓 생성
-* 16번 : 멀티스레드 관리 클래스가 멤버변수 list와 socket들을 사용하기 위해 인스턴스화한다. - 단, 접속자 마다 다른 thread를 부여하기위해 while문 안에 인스턴스 변수를 생성한다. 
+* 16번 : 멀티스레드 관리 클래스가 멤버변수 list와 socket들을 사용하기 위해 인스턴스화한다.\
+  \- 단, 접속자 마다 다른 thread를 부여하기위해 while문 안에 인스턴스 변수를 생성한다. 
 
 ### Main&인터페이스 인스턴스화
 
@@ -86,5 +88,6 @@ public class TalkServer extends JFrame implements Runnable {
 * 5번 : 화면을 구현하고
 * 6번 : ts에 구현된 Thread-run메서드를 실행한다.
 
-{% page-ref page="untitled-3.md" %}
-
+{% content-ref url="untitled-3.md" %}
+[untitled-3.md](untitled-3.md)
+{% endcontent-ref %}

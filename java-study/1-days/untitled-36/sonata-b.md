@@ -98,10 +98,12 @@ public class SonataSimulation {
 }
 ```
 
-* xml을 주입받는 세가지 방법을 사용해 보았다. - ApplicationContext의 getBean \(\)메서드를 사용해 xml의 bean id에 접근하는 것 - BeanFactory의 getBean\( \)메서드를 사용해 xml의 bean id에 접근하는 것 - 직접 생성자를 호출하는 것
+* xml을 주입받는 세가지 방법을 사용해 보았다.\
+  \- ApplicationContext의 getBean ()메서드를 사용해 xml의 bean id에 접근하는 것\
+  \- BeanFactory의 getBean( )메서드를 사용해 xml의 bean id에 접근하는 것\
+  \- 직접 생성자를 호출하는 것
 * 가져온 값들의 반환값을 Sonata클래스로 캐스팅연산자를 사용해 맞춰준다.
 
 ### 결과 : console
 
 ![](../../../.gitbook/assets/car.png)
-

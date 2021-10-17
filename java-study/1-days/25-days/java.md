@@ -1,6 +1,6 @@
 # java 파라미터 활용
 
-### 파라미터\(String타입, VO타입, 클래스타입, 참조형타입\)
+### 파라미터(String타입, VO타입, 클래스타입, 참조형타입)
 
 ```java
 //가져온 값 bVO, 파라미터로 넘기는 pbVO, 리턴된 값을 담을 rbVO
@@ -36,5 +36,6 @@ public void setEditable(boolean e) {
 ```
 
 * 위 set메서드에서 textField를 비활성화 하기 위한 메서드이다.
-* 파라미터로 boolean타입 e를 갖는다. - 입력, 수정의 경우에는 true : 활성화 - 상세보기의 경우에는 false : 비활성화
-
+* 파라미터로 boolean타입 e를 갖는다.\
+  \- 입력, 수정의 경우에는 true : 활성화\
+  \- 상세보기의 경우에는 false : 비활성화

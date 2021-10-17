@@ -2,11 +2,11 @@
 
 ## onchange.html - 1단
 
-![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../../.gitbook/assets/1%20%2834%29.png)
+![기본 브라우저](<../../../.gitbook/assets/1 (34).png>)
 
-![check &#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8; - &#xB2E4;&#xC12F;&#xAE00;&#xC790; &#xC785;&#xB825;&#xC2DC;](../../../.gitbook/assets/2%20%2829%29.png)
+![check 함수 이벤트 - 다섯글자 입력시](<../../../.gitbook/assets/2 (29).png>)
 
-![check2 &#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8;](../../../.gitbook/assets/3%20%2821%29.png)
+![check2 함수 이벤트](<../../../.gitbook/assets/3 (21).png>)
 
 ```markup
 <!DOCTYPE html>
@@ -44,9 +44,9 @@
 
 ## onchange - 2단계
 
-![&#xAE30;&#xBCF8; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;](../../../.gitbook/assets/1%20%2839%29.png)
+![기본 브라우저](<../../../.gitbook/assets/1 (39).png>)
 
-![check2 -&amp;gt; check&#xD568;&#xC218; &#xC774;&#xBCA4;&#xD2B8;](../../../.gitbook/assets/2%20%2827%29.png)
+![check2 -> check함수 이벤트](<../../../.gitbook/assets/2 (27).png>)
 
 ```markup
 <!DOCTYPE html>
@@ -84,9 +84,10 @@
 </html>
 ```
 
-* innerHTML : body태그 안의 &lt;div&gt;로 innerHTML을 적용할 영역을 지정해  HTML 코드를 삽입 - &lt;div&gt;태그로 영역지정된 곳이 아니라면 사용할 수 없다. - 8번 처럼 value를 사용해서 값을 받는다.
+* innerHTML : body태그 안의 \<div>로 innerHTML을 적용할 영역을 지정해  HTML 코드를 삽입\
+  \- \<div>태그로 영역지정된 곳이 아니라면 사용할 수 없다.\
+  \- 8번 처럼 value를 사용해서 값을 받는다.
 * 12번 파라미터의 111값은 위에서 작성한 함수를 재사용하기위해 넣은 의미 없는 값이다.
 * 24-28번에서 의미를 갖는 값, Value로 꺼내지는 값과 화면에 보여지기 위해 작성한 값을 구별해야한다.
 
-## 
-
+##

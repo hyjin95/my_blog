@@ -29,9 +29,14 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 * DB연동 sql XML파일, mybatis의 설정 클래스
 * 10번 : 사용할 DB제품의 드라이버 클래스 경로
-* 11번 : URL - 사용하는 oracle.JDBC의 타입은 thin이다. - ip - port 번호 : oralce Listener의 포트번호는 1521이다. - 호스트이름
+* 11번 : URL\
+  \- 사용하는 oracle.JDBC의 타입은 thin이다.\
+  \- ip\
+  \- port 번호 : oralce Listener의 포트번호는 1521이다.\
+  \- 호스트이름
 * 12,13번 : 계정이름, 비밀번호
-* 19번 : &lt;mappers&gt;의 하위 엘리먼트 &lt;mapper&gt;태그 안에 resource속성으로 매퍼파일 경로를 지정한다.  - 매퍼파일이 늘어나면 추가한다.
+* 19번 : \<mappers>의 하위 엘리먼트 \<mapper>태그 안에 resource속성으로 매퍼파일 경로를 지정한다.\
+   \- 매퍼파일이 늘어나면 추가한다.
 
 ## EmpVO.java
 
@@ -95,7 +100,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 * 서버 접속이 일어나면 MapperConfig.xml의 Mapper인터페이스를 통해 호출되는 SQL문이다. 
 * 7-10번 : Sql문의 id는 getJobSumList, 파라미터 타입은 int, 반환타입은 Map이다.
-* 12-17번 : 두번째 Sql문의 id는 getJobSumList2이다. - 각 이름별 연봉의 합을 나타내주는 테이블
+* 12-17번 : 두번째 Sql문의 id는 getJobSumList2이다.\
+  \- 각 이름별 연봉의 합을 나타내주는 테이블
 
 ## SqlMapEmpDao.java
 
@@ -161,7 +167,8 @@ public class SqlMapEmpDao {
 * 8번 : Reader클래스로 멤버변수의 xml파일을 읽어와 그 안의 값을 사용할 수 있도록 한다.
 * 10번 : sqlSessionFactory 인스턴스화, 생성
 * 11번 : sqlSession 객체 생성
-* 12번 : 만들어둔 List변수에 사용할 xml ID값을 담아 그 반환값을 담는다. - 값이 n개의 row이므로 selectList메서드를 사용한다.
+* 12번 : 만들어둔 List변수에 사용할 xml ID값을 담아 그 반환값을 담는다.\
+  \- 값이 n개의 row이므로 selectList메서드를 사용한다.
 * 17-19번 : 세션 종료
 * 12-22 : nullPointException방지 구문
 
@@ -197,7 +204,8 @@ public class SqlMapEmpDao {
 * 5번 : Reader클래스로 xml의 값을 읽어온다.
 * 6번 : Builder클래스로 SqlSessionFactory연결통로를 생성한다.
 * 7번 : openSession메서드로 세션을 생성한다.
-* 8번 : Empvo인스턴스 변수에 ID가 getJobSumList2인 sql문의 반환값을 담는다. - selectOne메서드 이므로 하나의 Object만 반환하지만 empVO클래스 안에 나뉘어 담긴다.
+* 8번 : Empvo인스턴스 변수에 ID가 getJobSumList2인 sql문의 반환값을 담는다.\
+  \- selectOne메서드 이므로 하나의 Object만 반환하지만 empVO클래스 안에 나뉘어 담긴다.
 * 12-14번 : 세션 종료
 * 15-17번 : nullPointException 방지
 
@@ -227,4 +235,3 @@ public class SqlMapEmpDao {
 * 6번 : List안에 n개의 Map타입 객체들이 들어있어 Map타입 변수를 선언해 i번째 방의 Map을 담는다.
 * 7번 : i번째 map의 모든 정보가 출력된다. 사원번호+이름+연봉
 * 8-10번 : i번째 map의각 get메서드로 꺼낸 값만 출력된다. key값은 대문자로 한다.
-

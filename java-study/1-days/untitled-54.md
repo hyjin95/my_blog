@@ -6,7 +6,7 @@ description: 2021.01.06 - 98일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org, Toad DBA Suite for Oracle 11.5 , Spring, Android Studio
 * 사용 서버 - WAS : Tomcat
 
@@ -14,8 +14,13 @@ description: 2021.01.06 - 98일차
 
 ### UI솔루션
 
-* JS기반 솔루션\(무료\) - easyUI에서는 datagrid에 json형식을 담을 수 있다.
-* XML기반 솔루션\(유료\) - jsp와 같은 화면에 섞어 사용할 수 없다. - 해결방법 1 : url로 요청한다. location.href - 해결방법 2 : 탑재된 xml -&gt; js 변환엔진을 활용한다. - 조회결과를 xml포맷으로 출력해 데이터셋이 담아 grid와 매칭해야 한다.
+* JS기반 솔루션(무료)\
+  \- easyUI에서는 datagrid에 json형식을 담을 수 있다.
+* XML기반 솔루션(유료)\
+  \- jsp와 같은 화면에 섞어 사용할 수 없다.\
+  \- 해결방법 1 : url로 요청한다. location.href\
+  \- 해결방법 2 : 탑재된 xml -> js 변환엔진을 활용한다.\
+  \- 조회결과를 xml포맷으로 출력해 데이터셋이 담아 grid와 매칭해야 한다.
 * 솔루션을 활용하는 경우에는 개발자가 부여한 id로 해당 컴포넌트에 접근 할 수 없는 문제가 발생하기도 한다. 솔루션 자체에서 제공하는 UI가 개발자의 컴포넌트를 감싸기 때문으로 개발자도구에서 코드를 확인해 id를 찾아야 한다.
 
 ### ModelAndView
@@ -25,8 +30,13 @@ description: 2021.01.06 - 98일차
 
 ### String
 
-* return "redirect:XXX.jsp" - webapp에 배포된 경로에 접근하고, url주소가 변경되어 기존 요청은 끊어지고 새 요청이 발생한다.
-* return "forward:XXX.jsp" - webapp에 배포된 경로에 접근하고, url주소가 변경되지 않으면서 페이지 이동이 발생한다.   기존 요청이 유지되어 서블릿에서 처리된 값이 jsp페이지 에서 사용될 수 있다. - xml 기반인 넥사크로와 같은 솔루션에서는 사용될 수 없다. 
+* return "redirect:XXX.jsp"\
+  \- webapp에 배포된 경로에 접근하고, url주소가 변경되어 기존 요청은 끊어지고 새 요청이 발생한다.
+* return "forward:XXX.jsp"\
+  \- webapp에 배포된 경로에 접근하고, url주소가 변경되지 않으면서 페이지 이동이 발생한다.\
+    기존 요청이 유지되어 서블릿에서 처리된 값이 jsp페이지 에서 사용될 수 있다.\
+  \- xml 기반인 넥사크로와 같은 솔루션에서는 사용될 수 없다.\
+
 
 ## Spring : pageNavigation
 
@@ -74,7 +84,8 @@ description: 2021.01.06 - 98일차
 ```
 
 * 게시글을 뽑아 출력하기 전에 지정한 PagePerBlock 만큼만 한페이지에 보이도록 for문을 구성한다.
-* 게시글 번호는 1부터이지만 i의 초기값이 0이므로 마지막 페이지는 i -1을 작성해야한다. 마지막페이지에서 break를 작성하지 않으면 500번 에러가 발생한다.
+* 게시글 번호는 1부터이지만 i의 초기값이 0이므로 마지막 페이지는 i -1을 작성해야한다.\
+  마지막페이지에서 break를 작성하지 않으면 500번 에러가 발생한다.
 
 ```markup
  <table id="dg_board" title="글목록" style="width:950px;height:20px">
@@ -152,7 +163,8 @@ public class PageBar {
 ```
 
 * 멤버변수 선언
-* 19번의 적용할 페이지 이름은 서블릿 url-pattern이 와야 할까 jsp가 와야 할까? - url-pattern이 와야한다. pageBar를 적용할 페이지를 가르키는 변수이므로 jsp를 가르키게되면 DB를 경유하지 않기 때문이다.
+* 19번의 적용할 페이지 이름은 서블릿 url-pattern이 와야 할까 jsp가 와야 할까?\
+  \- url-pattern이 와야한다. pageBar를 적용할 페이지를 가르키는 변수이므로 jsp를 가르키게되면 DB를 경유하지 않기 때문이다.
 * 21번의 pagination멤버변수에는 무엇을 저장해야 할까?
 
 ```java
@@ -172,8 +184,11 @@ public class PageBar {
 ```
 
 * PageBar클래스의 생성자로서 PageBar생성에 필요한 값을들 초기화한다.
-* 17 / 2 = 8.5 data가 17건 일때 한페이지에 표시 데이터가이 2개라면 17 / 2는 8.5이므로 페이지는 9페이지가 필요하다.
-* 17 /3 = 5.xxx 페이지의 데이터 건을 3개로 한다면 페이지는 6페이지가 필요하다.
+* 17 / 2 = 8.5\
+  data가 17건 일때 한페이지에 표시 데이터가이 2개라면\
+  17 / 2는 8.5이므로 페이지는 9페이지가 필요하다.
+* 17 /3 = 5.xxx\
+  페이지의 데이터 건을 3개로 한다면 페이지는 6페이지가 필요하다.
 
 ```java
 	//setter메소드 선언
@@ -242,4 +257,3 @@ public class PageBar {
 * 전체 data row수를 구하는 쿼리문
 
 후기 : 머리아프다 이제 3주밖에 남지않은 시간 ㅠㅠㅠㅠ
-

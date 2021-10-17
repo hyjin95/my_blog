@@ -6,7 +6,7 @@ description: 2020.11.27 73일차
 
 ### 사용 프로그램
 
-* 사용언어 : JAVA\(JDK\)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
+* 사용언어 : JAVA(JDK)1.8.0\_261, JS, JQuery, JSP, Servlet, HTML, JSON
 * 사용Tool  - Eclipse : Eclipse.org - Toad DBA Suite for Oracle 11.5 - Spring
 * 사용 서버 - WAS : Tomcat
 
@@ -29,39 +29,49 @@ description: 2020.11.27 73일차
 * 순제어는 개발자가 객체의 생성부터 활동, 종료까지도 관리하는 것이다.
 * 2번 : 선언
 * 3번 : 생성, 활동
-* 10번 : Candidate상태, 종료 - 이때 호출되는 것이 destroy메서드이다. 사라지기 전에 호출된다.
+* 10번 : Candidate상태, 종료\
+  \- 이때 호출되는 것이 destroy메서드이다. 사라지기 전에 호출된다.
 
 ## Spring
 
-![](../../../.gitbook/assets/44%20%281%29.png)
+![](<../../../.gitbook/assets/44 (1).png>)
 
 ### Spring Frameworks Modules
 
 ![](../../../.gitbook/assets/spring.png)
 
-* 최근의 개발 트랜드는 개발자는 비즈니스 로직\(Model\)부분에만 관여하는 것이다. - Logic\(POJO\)에만 관여한다.
-* 나머지 Controller와 Dao, 조립의 영역은 F/W에게 담당하게 한다. - Spring framwork, 전자정부프레임워크, Dven, AnyFrame
-* 이런 F/W들은 DI, IoC를 위한 객체들을 지원한다. - 객체의 라이프사이클을 관리해주기 위함 - 객체=업무는 n개 일 것이다.    이를 관리하는 각각의 Controller가 있고, Controller는 xml에 등록되어야 한다.
+* 최근의 개발 트랜드는 개발자는 비즈니스 로직(Model)부분에만 관여하는 것이다.\
+  \- Logic(POJO)에만 관여한다.
+* 나머지 Controller와 Dao, 조립의 영역은 F/W에게 담당하게 한다.\
+  \- Spring framwork, 전자정부프레임워크, Dven, AnyFrame
+* 이런 F/W들은 DI, IoC를 위한 객체들을 지원한다.\
+  \- 객체의 라이프사이클을 관리해주기 위함\
+  \- 객체=업무는 n개 일 것이다. \
+    이를 관리하는 각각의 Controller가 있고, Controller는 xml에 등록되어야 한다.
 
 ### Spring : Controller
 
-* 업무\(객체\)마다 Controller가 필요하다.
-* 속도 개선, 분업화\(효율성\)을 위해
+* 업무(객체)마다 Controller가 필요하다.
+* 속도 개선, 분업화(효율성)을 위해
 * spring-webmvc.jar에서 AbstracController, MultuActionController를 제공한다.
 
 ### Spring : DI
 
 * 필요하지 않을때에는 비워두는 것이 공간의 효율성을 높인다.
 * 필요할때 외부에서 주입받기 위해서는 xml에 클래스가 등록되어 있어야한다.
-* Spring에서는 ApplicationContext, BeanFactory가 Bean을 관리한다. - spring-core.jar에 위치
+* Spring에서는 ApplicationContext, BeanFactory가 Bean을 관리한다.\
+  \- spring-core.jar에 위치
 
-## Spring Container\(=엔진, API\) 유형
+## Spring Container(=엔진, API) 유형
 
 ### 객체를 주입받는 방법 두가지
 
 * spring-core.jar에서 제공해주는 BeanFactory와 ApplicationContext
-* spring-core.jar는 Bean을 관리해주는 공장이다. - 공장장 : BeanFactory, ApplicationContext
-* Bean을 관리, 필요시 주입하는 역할 - 스프링에게 의존성 주입받는 메서드 : getBean\( \); - 주소번지를 얻는다.
+* spring-core.jar는 Bean을 관리해주는 공장이다.\
+  \- 공장장 : BeanFactory, ApplicationContext
+* Bean을 관리, 필요시 주입하는 역할\
+  \- 스프링에게 의존성 주입받는 메서드 : getBean( );\
+  \- 주소번지를 얻는다.
 
 ### ApplicationContext
 
@@ -85,14 +95,16 @@ description: 2020.11.27 73일차
 </bean>
 ```
 
-* Bean 생성시 필요한 속성을 정의 할 수 있다. - name속성을 정의하는 코드
+* Bean 생성시 필요한 속성을 정의 할 수 있다.\
+  \- name속성을 정의하는 코드
 
 ```java
 <Bean id="member-Controller" class="com.xxx.MemberController" 
         init-method="initMethod" destroy-method="destroyMethod"/>
 ```
 
-* bean의 LifeCycle에 대한 메서드를 호출 할 수 있다. - spring에서도 init\( \) - service\( \) - destory\( \) 메서드를 지원한다.
+* bean의 LifeCycle에 대한 메서드를 호출 할 수 있다.\
+  \- spring에서도 init( ) - service( ) - destory( ) 메서드를 지원한다.
 * init-method : 해당 bean이 초기화된 후 호출되는 메서드
 * destory-method : 해당 bean이 소멸되기 전에 호출되는 메서드
 
@@ -100,7 +112,7 @@ description: 2020.11.27 73일차
 
 ![ApplicationContext](../../../.gitbook/assets/applicationcontext.png)
 
-![BeanFactory](../../../.gitbook/assets/.png%20%2837%29.png)
+![BeanFactory](<../../../.gitbook/assets/.png (37).png>)
 
 * Spring Maven안에 저장된다.
 
@@ -150,17 +162,19 @@ public class ListMainApp {
 
 ### Console 출력
 
-![ApplicationContext](../../../.gitbook/assets/1%20%2879%29.png)
+![ApplicationContext](<../../../.gitbook/assets/1 (79).png>)
 
-![BeanFactory](../../../.gitbook/assets/2%20%2860%29.png)
+![BeanFactory](<../../../.gitbook/assets/2 (60).png>)
 
 ### Spring : 객체주입, 역제어 test
 
-{% page-ref page="spring-map.md" %}
+{% content-ref url="spring-map.md" %}
+[spring-map.md](spring-map.md)
+{% endcontent-ref %}
 
 ## UI : BootStrap
 
-### 공통코드 : bootstrap\_commom.jsp
+### 공통코드 : bootstrap_commom.jsp
 
 ```markup
 <!-- bootstrap 3.4.1 -->
@@ -177,4 +191,3 @@ public class ListMainApp {
 ```
 
 후기 : 다음주 금요일에는 팀프로젝트의 팀이 정해진다!
-

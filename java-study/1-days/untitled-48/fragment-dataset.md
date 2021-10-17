@@ -35,8 +35,10 @@ public class MainActivity2 extends AppCompatActivity {
 }
 ```
 
-* 20번코드에서 Fragment를 위치할 FrameLayout를 id로 지정해준다. 두번째 파라미터는 위치할 Fragment의 주소번지가 위치한다.
-* 24번에서 이동시 호출되는 메서드를 정의한다. Intent를 활용한 Activity 이동을 정의한다.
+* 20번코드에서 Fragment를 위치할 FrameLayout를 id로 지정해준다.\
+  두번째 파라미터는 위치할 Fragment의 주소번지가 위치한다.
+* 24번에서 이동시 호출되는 메서드를 정의한다.\
+  Intent를 활용한 Activity 이동을 정의한다.
 
 ### 코드 : MainActivity.java
 
@@ -119,7 +121,7 @@ public class PizzaFragment extends ListFragment {
 
 ## XML
 
-### 코드 : activity\_main2.xml
+### 코드 : activity_main2.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -145,7 +147,7 @@ public class PizzaFragment extends ListFragment {
 </LinearLayout>
 ```
 
-### 코드 : activity\_main.xml
+### 코드 : activity_main.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -157,7 +159,7 @@ public class PizzaFragment extends ListFragment {
     android:name="com.example.listfragment69.PizzaFragment"/>
 ```
 
-### 코드 : fragment\_blank.xml
+### 코드 : fragment_blank.xml
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>
@@ -175,4 +177,3 @@ public class PizzaFragment extends ListFragment {
 
 </FrameLayout>
 ```
-

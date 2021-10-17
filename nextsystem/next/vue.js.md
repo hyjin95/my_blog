@@ -6,22 +6,27 @@ description: 2021.02.19
 
 ### 참고
 
-{% file src="../../.gitbook/assets/js.pptx" caption="vue.js 교육용 ppt" %}
+{% file src="../../.gitbook/assets/js.pptx" %}
+vue.js 교육용 ppt
+{% endfile %}
 
 ### single page application
 
 * 화면에  data를 배치해 놓고 가져오는 data에 따라 html화면이 자동으로 재구성된다.
-* UIFramework : vue.js - 따로 프로젝트를 생성 - 또는 스크립트 선언을 통해 사용
-* 새로고침없이 data에 따라 화면이 변한다. - &lt;style scope&gt;태그로 css를 컴포넌트마다 적용해 테마를 만들 수 있다.
+* UIFramework : vue.js\
+  \- 따로 프로젝트를 생성\
+  \- 또는 스크립트 선언을 통해 사용
+* 새로고침없이 data에 따라 화면이 변한다.\
+  \- \<style scope>태그로 css를 컴포넌트마다 적용해 테마를 만들 수 있다.
 * 스크립트에 html코드를 최소화 하기 위함
 
 ### jsp와의 차이점
 
-* jsp는 화면에 변화를 주기위해서는 반드시 페이지이동\(새로고침\)이 필요하고 ajax를 사용하더라도 직접 html에 접근해 화면을 재구성해 주어야 한다.
+* jsp는 화면에 변화를 주기위해서는 반드시 페이지이동(새로고침)이 필요하고 ajax를 사용하더라도 직접 html에 접근해 화면을 재구성해 주어야 한다.
 
 ### Vue.js : 스크립트
 
-![](../../.gitbook/assets/1%20%28121%29.png)
+![](<../../.gitbook/assets/1 (121).png>)
 
 * JS에서 선언한 vue.js를 보면 JSON형식인 것을 확인할 수 있다.
 * el = element
@@ -29,32 +34,37 @@ description: 2021.02.19
 
 ### Vue.js : 프로젝트 생성
 
-![node.js](../../.gitbook/assets/2%20%2896%29.png)
+![node.js](<../../.gitbook/assets/2 (96).png>)
 
-![CMD](../../.gitbook/assets/1%20%28123%29.png)
+![CMD](<../../.gitbook/assets/1 (123).png>)
 
-* node.js LTS파일 다운로드 - CMD에서 'npm -version'으로 설치 확인
+* node.js LTS파일 다운로드\
+  \- CMD에서 'npm -version'으로 설치 확인
 
-![](../../.gitbook/assets/2%20%2898%29.png)
+![](<../../.gitbook/assets/2 (98).png>)
 
-* vue.js install 및 설치 확인 - npm install -g vue-cli - vue --version
+* vue.js install 및 설치 확인\
+  \- npm install -g vue-cli\
+  \- vue --version
 
-![](../../.gitbook/assets/3%20%2873%29.png)
+![](<../../.gitbook/assets/3 (73).png>)
 
 * c 드라이브에 사용할 폴더 생성 및 폴더 접근
 
-![](../../.gitbook/assets/4%20%2851%29.png)
+![](<../../.gitbook/assets/4 (51).png>)
 
-* vue init webpack my-project 입력 - vue 프로젝트 생성 설정
-* install이 끝나면 서버가 열리고 localhost를 보여준다. CMD에서 서버를 연 것이므로 CMD를 닫으면 서버도 닫혀버리니 주의
+* vue init webpack my-project 입력\
+  \- vue 프로젝트 생성 설정
+* install이 끝나면 서버가 열리고 localhost를 보여준다.\
+  CMD에서 서버를 연 것이므로 CMD를 닫으면 서버도 닫혀버리니 주의
 
-![](../../.gitbook/assets/5%20%2837%29.png)
+![](<../../.gitbook/assets/5 (37).png>)
 
 * 확인
 
-![](../../.gitbook/assets/.png%20%2855%29.png)
+![](<../../.gitbook/assets/.png (55).png>)
 
-* Atom 에서 File &gt; Open File &gt; 만든 프로젝트를 열면 위와같은 기본 구성을 확인할 수 있다. 
+* Atom 에서 File > Open File > 만든 프로젝트를 열면 위와같은 기본 구성을 확인할 수 있다. 
 
 ### 기본 소스 분석
 
@@ -127,7 +137,8 @@ export default {
 ```
 
 * App.vue
-* 9번 : export default - 다른 파일에 있는 양식을 참조해오기 위한 방식
+* 9번 : export default\
+  \- 다른 파일에 있는 양식을 참조해오기 위한 방식
 
 ```javascript
 import Vue from 'vue'
@@ -171,7 +182,8 @@ export default {
 </script>
 ```
 
-* componets &gt; vue파일 생성 - Template에 있는 것들만 화면에 출력된다.
+* componets > vue파일 생성\
+  \- Template에 있는 것들만 화면에 출력된다.
 * 3번과 12번 은 n 개 작성 할 수 있다.
 
 ```javascript
@@ -199,7 +211,7 @@ export default new Router({//url과 파일 지정.
 ```
 
 * index.js
-* index.js 에 컴포넌트\(vue파일\) 등록
+* index.js 에 컴포넌트(vue파일) 등록
 * router에 사용할 path 등록
 
 ### router-link : 링크 만들기
@@ -218,9 +230,9 @@ export default new Router({//url과 파일 지정.
 ```
 
 * App.vue
-* &lt;router-link&gt;는 html의 &lt;a&gt;태그와 같다.
+* \<router-link>는 html의 \<a>태그와 같다.
 
-![](../../.gitbook/assets/6%20%2825%29.png)
+![](<../../.gitbook/assets/6 (25).png>)
 
 * 확인
 
@@ -252,7 +264,7 @@ export default {
 
 * v-bind: 로 속성을 작성하면 등록한 data를 bind해 가져와 사용할 수 있다.
 
-![](../../.gitbook/assets/5%20%2836%29.png)
+![](<../../.gitbook/assets/5 (36).png>)
 
 * 출력
 * 마우스를 올려 title값 확인
@@ -276,9 +288,9 @@ export default {
 
 * v-if
 * seen이라는 data가 정의되어있지 않기때문에 if문의 결과는 false이다.
-* 해당 &lt;span&gt;태그는 보이지 않게된다.
+* 해당 \<span>태그는 보이지 않게된다.
 
-![](../../.gitbook/assets/2%20%2897%29.png)
+![](<../../.gitbook/assets/2 (97).png>)
 
 * 확인
 
@@ -316,7 +328,7 @@ export default {
 * v-else
 * v-else-if
 
-![](../../.gitbook/assets/3%20%2872%29.png)
+![](<../../.gitbook/assets/3 (72).png>)
 
 *  확인
 
@@ -357,11 +369,11 @@ export default {
 * template에 추가
 * todo는 todos의 알리아스명
 
-![](../../.gitbook/assets/4%20%2852%29.png)
+![](<../../.gitbook/assets/4 (52).png>)
 
 * 출력
 
-### Button과 함수\(method\) 선언
+### Button과 함수(method) 선언
 
 ```markup
 <template>
@@ -373,7 +385,7 @@ export default {
 </template>
 ```
 
-* template에 &lt;button&gt;선언
+* template에 \<button>선언
 * v-on으로 클릭에 대한 메서드 지정
 * 괄호가 없지만 파라미터로 값을 넘겨야 하는 함수라면 괄호를 작성한다.
 
@@ -411,7 +423,7 @@ export default {
 * methods 속성에서 함수 선언이 가능하다.
 * data에 접근할 수 있다.
 
-![](../../.gitbook/assets/1%20%28122%29.png)
+![](<../../.gitbook/assets/1 (122).png>)
 
 * 버튼을 누른 화면
 * 확인
@@ -419,7 +431,9 @@ export default {
 ### 컴포넌트 등록과 태그 사용
 
 * vue에서는 컴포넌트를 직접 정의해 사용한다.
-* script에서 컴포넌트를 정의하면 Template\(html\)에서 태그 형식으로 호출해 사용할 수 있다. - 화면단과 기능단의 적극적인 분리가 가능하다. - html코드의 재사용성이 높아진다.
+* script에서 컴포넌트를 정의하면 Template(html)에서 태그 형식으로 호출해 사용할 수 있다.\
+  \- 화면단과 기능단의 적극적인 분리가 가능하다.\
+  \- html코드의 재사용성이 높아진다.
 
 ```markup
 <template>
@@ -487,11 +501,12 @@ export default {
 ```
 
 * vueHello.vue 
-* script에 testComp.vue를 import한다. export default와 붙어있으면 import가 정상적으로 되지 않는다. 한 줄 띄우기
+* script에 testComp.vue를 import한다.\
+  export default와 붙어있으면 import가 정상적으로 되지 않는다. 한 줄 띄우기
 * export default에 components속성을 작성하고 testComp를 등록한다.
 * 4번 : 화면에서 태그로 호출해 출력한다.
 
-![](../../.gitbook/assets/2%20%2895%29.png)
+![](<../../.gitbook/assets/2 (95).png>)
 
 * 확인
 * 데이터 변경 버튼을 누르면 데이터 두군데 모두 이벤트가 적용된다.
@@ -570,7 +585,7 @@ export default {
 
 * vueHello.vue
 
-![](../../.gitbook/assets/3%20%2874%29.png)
+![](<../../.gitbook/assets/3 (74).png>)
 
 * 확인
 
@@ -607,5 +622,5 @@ export default {
 ```
 
 * 컬럼명 수정이 가능하게 끔 컬럼명과 row를 매칭시킨다.
-* &lt;template&gt;태그를 사용해 화면에는 출력되지 않지만 적용되도록 할 수 있다. - 이중 for문 을 사용할때 사용된다.
-
+* \<template>태그를 사용해 화면에는 출력되지 않지만 적용되도록 할 수 있다.\
+  \- 이중 for문 을 사용할때 사용된다.

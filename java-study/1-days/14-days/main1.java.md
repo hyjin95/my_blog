@@ -122,22 +122,30 @@ public class Main1 extends JFrame implements ActionListener {
 //먼저 호출하면 해당 버튼을 보지 못할 수도 있다.
 ```
 
-*  * 25번 : 생성자 생성
+*
+  * 25번 : 생성자 생성
   * 50번 : 메인 메서드에서 생성자 호출
   * 32번 : 생성자에서 화면처리 메서드 호출
   * 36번 : 화면처리 메서드에서 화면설정
-  * 14-19번 : 버튼및 입력TextField 선언 - 선언은 class 범위에서, 생성은 생성자 안에서, 구현은 화면처리안에서
+  * 14-19번 : 버튼및 입력TextField 선언\
+    \- 선언은 class 범위에서, 생성은 생성자 안에서, 구현은 화면처리안에서
   * 41-44번 : 버튼 화면에 호출
   * 26-30번 : 생성자 안에서 버튼및 입력Field 생성
-  * 37-40번 : 사용할 이벤트에 해당되는 버튼 및 입력Field 감지 코드 작성 - = enentHandler와 매칭 - 이벤트 생성시 : actionListener, 클래스에 implement actionListener, 오버라이드 
+  * 37-40번 : 사용할 이벤트에 해당되는 버튼 및 입력Field 감지 코드 작성\
+    \- = enentHandler와 매칭\
+    \- 이벤트 생성시 : actionListener, 클래스에 implement actionListener, 오버라이드 
   * 58번 : 이벤트 처리 콜백메서드
   * 59번 : obj = 감지된 이벤트
   * 60번 : msg = TextField에서 입력된 문자
   * 61-66번 : TextField에 "북쪽"입력시 버튼이 나타나는 이벤트
   * 67-70번 : TextField에 "북쪽"외 다른 글 입력시 알림창과 Field를 리셋해주는 이벤트
-  * 73-90번 : "서쪽\(버튼\)"클릭시 모든 버튼을 없애는 이벤트 
-  * 91-93번 : "동쪽\(버튼\)"클릭시 "메뉴"로 문자열을 변경하는 이벤트
-  * 95-110번 : "남쪽\(버튼\)"클릭시 TextField 입력창으로 바꿔주는 이벤트 - 사용 클래스 : Container cont = this.getContentPane\(\);    \(API : JFrame이 붙어있는 캔버스\) - **remove\(삭제할 화면정보\);** : ****클래스안의 메서드  - 삭제할 화면정보=null;까지 해주어야 주소번지까지 Candidate상태로 변환한다. - **Candidate** : 쓰레기값, 곧 전환될 값 - **revalidate\(\)**; : 갱신메서드
-
-
+  * 73-90번 : "서쪽(버튼)"클릭시 모든 버튼을 없애는 이벤트 
+  * 91-93번 : "동쪽(버튼)"클릭시 "메뉴"로 문자열을 변경하는 이벤트
+  * 95-110번 : "남쪽(버튼)"클릭시 TextField 입력창으로 바꿔주는 이벤트\
+    \- 사용 클래스 : Container cont = this.getContentPane(); \
+      (API : JFrame이 붙어있는 캔버스)\
+    \- **remove(삭제할 화면정보);** :** **클래스안의 메서드 \
+    \- 삭제할 화면정보=null;까지 해주어야 주소번지까지 Candidate상태로 변환한다.\
+    \- **Candidate** : 쓰레기값, 곧 전환될 값\
+    \-** revalidate()**; : 갱신메서드
 
