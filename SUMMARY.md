@@ -365,6 +365,7 @@
     * [3강 : 저축문제2, 확률변수 발생(이산형, 연속형)](undefined/2021-2/undefined-1/3-2.md)
   * [C++프로그래밍](undefined/2021-2/c++/README.md)
     * [1강 : C++소개](undefined/2021-2/c++/1-c++.md)
+    * [출석 수업(1장-3장)](undefined/2021-2/c++/1-3.md)
 
 ## STUDY - 참고 <a href="study-1" id="study-1"></a>
 
