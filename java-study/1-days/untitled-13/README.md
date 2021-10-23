@@ -138,7 +138,7 @@ description: 2020.10.22 - 47일차
 * 역할\
   \- 웹서버와의 통신지원(소켓생성, 말하기, 듣기 기능을  API로 제공한다,)\
   \- 서블릿 life Cycle관리\
-   (서블릿 클래스 인스턴스화->초기화->요청시 적절한 서블릿 메서드 호출->Garbage Collection 진행)\
+  &#x20;(서블릿 클래스 인스턴스화->초기화->요청시 적절한 서블릿 메서드 호출->Garbage Collection 진행)\
   \- 멀티스레드 지원, 관리(요청시마다 자바 스레드 생성, 운영해준다.)
 
 ### 페이지 호출하기
@@ -161,10 +161,10 @@ description: 2020.10.22 - 47일차
 * id는 중복값을 가지면 안되므로 배열로 생성되는 것 자체가 말이안되고, name은 중복될 수 있기 때문에 name을 key값으로 하는 Map에 사용자들의 정보를 담을 수 있다.
 * 또한 요청객체가 제공하는 메서드가 name을 받는다.\
   \- String getParameter(String name);\
-    name으로 전송된 파라미터값을 리턴\
-    HttpServeletRequest객체가 제공\
+  &#x20; name으로 전송된 파라미터값을 리턴\
+  &#x20; HttpServeletRequest객체가 제공\
   \- String getParameterValues(String paramName)\
-    여러개 파라미터 값을 처리
+  &#x20; 여러개 파라미터 값을 처리
 
 ### JSP의 요청, 응답객체
 
@@ -172,11 +172,11 @@ description: 2020.10.22 - 47일차
 * **요청객체**의 역할\
   \- **사용자가 입력한 값 읽어오기**\
   \- **저장소** 역할 : 요청이 유지되는 동안에만\
-    Session.setAttribute("id","test"); -시간\
-    request.setAttribute("id","test"); -저장\
+  &#x20; Session.setAttribute("id","test"); -시간\
+  &#x20; request.setAttribute("id","test"); -저장\
   \- **페이지를 이동**할 수 있다.\
-    sendRedirect(페이지이름:전송방식);\
-    전송방식 : get, post
+  &#x20; sendRedirect(페이지이름:전송방식);\
+  &#x20; 전송방식 : get, post
 * Java에는 없고, JSP, Servlet은 갖고있다.
 
 ## JQuery, JSP, HTML
@@ -186,12 +186,12 @@ description: 2020.10.22 - 47일차
 ![](<../../../.gitbook/assets/1 (43).png>)
 
 *   요청 객체가 제공하는 메서드로 사용자가 입력한 값을 읽어올 수 있다.\
-    \- ex) String id = request.getParameter("mem_id");
+    \- ex) String id = request.getParameter("mem\_id");
 
-             String pw = request.getParamenter("mem_pw");\
+    &#x20;        String pw = request.getParamenter("mem\_pw");\
     \- html body \
-      \<input type="text" name="mem_id">\
-      \<input type="text" name="mem_pw">
+    &#x20; \<input type="text" name="mem\_id">\
+    &#x20; \<input type="text" name="mem\_pw">
 * 요청 객체에 무언가를 담을 수 있다.\
   \- request.setAttribute("id","Test");
 * 응답 객체로 페이지를 이동한다.
@@ -216,7 +216,7 @@ description: 2020.10.22 - 47일차
   \- head안에 선언된 var 변수=멤버변수\
   \- html은 컴파일 하지 않으므로 타입은 적지 않는다.\
   \- onload와 read가 일어나기 전에는 브라우저가 스캔하기 이전이므로 null, 미정인 값이다.
-* 창이, 문서가 로딩되어 메모리에 스캔되면서 DOM tree 구성이 완료 되었을 
+* 창이, 문서가 로딩되어 메모리에 스캔되면서 DOM tree 구성이 완료 되었을&#x20;
 * JS는 window, 창에 접근하는 것
 * JQuery는 document, 문서에 접근하는 것\
   \- 문서에 접근한다는 것은 문서를 조작, 수정할 수있다는 것이다.\
@@ -326,4 +326,4 @@ description: 2020.10.22 - 47일차
 
 * index 사용
 
- 후기 : 스트레칭 하기!
+&#x20;후기 : 스트레칭 하기!
