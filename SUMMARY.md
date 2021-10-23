@@ -367,6 +367,7 @@
     * [1강 : C++소개](undefined/2021-2/c++/1-c++.md)
     * [출석 수업(1장-3장)](undefined/2021-2/c++/1-3.md)
     * [2강 C++언어의 기초(1)](undefined/2021-2/c++/2-c++-1.md)
+    * [3강 C++언어의 기초(2)](undefined/2021-2/c++/3-c++-2.md)
 
 ## STUDY - 참고 <a href="study-1" id="study-1"></a>
 
