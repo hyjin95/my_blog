@@ -358,6 +358,7 @@
   * [클라우드 컴퓨팅](undefined/2021-2/undefined-2/README.md)
     * [출석 수업](undefined/2021-2/undefined-2/undefined-3.md)
     * [1강.클라우드 컴퓨팅의 이해](undefined/2021-2/undefined-2/1-..md)
+    * [5강.클라우드 이용 모델](undefined/2021-2/undefined-2/5-..md)
   * [컴퓨터과학 개론](undefined/2021-2/undefined.md)
   * [시뮬레이션](undefined/2021-2/undefined-1/README.md)
     * [1강 : 결정적 시뮬레이션](undefined/2021-2/undefined-1/1.md)
