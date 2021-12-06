@@ -122,12 +122,12 @@ description: 2020.10.14 - 41일차
 * DB의 **DML명령이 있는 SQL구문의 한 작업 단위**를 트랜잭션이라고 한다.
 * **commit** : \
   \- 트랜잭션의 결과를 **DB에 반영**, 해당 SQL을 사용하면 수행했던 트랜잭션이 **로그에 저장**되며, 후에 rollback시 연산을 수행했던 트랜잭션단위를 rollback하는것을 돕는다.
-* **rollback **\
+* **rollback** \
   \- 트랜잭션의 **결과를 미반영**한 상태, 하나의 트랜잭션처리가 비정상적 종료되어 원자성이 깨진경우, 트랜잭션을 처음부터 다시 시작하거나 부분적으로만 연산된 결과를 다시 취소시킨다. \
   \- 해당 SQL작업단위의 기본개념이 유지되어야한다.=일관성
 * **원자성(Atomicity)**\
   \- 모든작업은 같이 완료되어야한다. 하나라도 에러발생시 모든 작업이 rollback(미반영) 되어야 한다.
-* **일관성(Condidtency) **\
+* **일관성(Condidtency)** \
   \- 작업 처리 결과가 항상 일관성이 있어야 한다는 것\
   \- 트랜잭션이 진행되는 동안에 DB가 변경 되더라도 업데이트된 DB로 트랜잭션이 진행되는것이 아니라, 처음에 트랜잭션을 진행 하기 위해 참조한 데이터베이스로 진행된다. \
   \- 각 사용자는 일관성 있는 데이터를 볼 수 있는 것이다.
@@ -161,7 +161,7 @@ description: 2020.10.14 - 41일차
   \- String zdo = rmap.get("ZDO").toString();해서 출력하면 덩어리가 나온다. \
   \- map으로 key, value를 나눠 담아야한다. \
   \- mybatis를 통해 값을 꺼낼때, **key는 대문자**여야한다.\
-    **mybatis가 map에 put할때 key값을 대문자로 넣기 때문**이다.
+  &#x20; **mybatis가 map에 put할때 key값을 대문자로 넣기 때문**이다.
 * 세션은 사용이 끝나면 close함수로 session을 닫아줘야한다.\
   \- try {  } catch( ) { } finally { session.close( ): }
 
@@ -182,7 +182,7 @@ description: 2020.10.14 - 41일차
 * 멀티스레드 환경에서도 안전하다. thread-safe
 * 6단계 장애레벨을 사용\
   \- TRACE, DEBUG, INFO, WARN, ERROR, FATAL
-* 로그 출력 대상, 출력방법은** Appender인터페이스**로 지정한다.
+* 로그 출력 대상, 출력방법은 **Appender인터페이스**로 지정한다.
 * 한 logger에 n개의 출력을 담당하는 Appender를 할당할 수 있다.
 
 ### Log4j 구조
@@ -322,32 +322,32 @@ log4j.logger.java.sql.ResultSet=INFO
 </mapper>
 ```
 
-* **collection **\
-  \- 전달받은 인자값 반드시 Array또는 List가 되어야한다. 
-* **index **\
+* **collection** \
+  \- 전달받은 인자값 반드시 Array또는 List가 되어야한다.&#x20;
+* **index** \
   \- 목록의 위치값(index, count, first, last, ....)
 * **item** \
   \- 전달받은 인자값의 이름 재정의시, 반복해서 다른 값을 넣을떄\
-  \- (foreach구문에서 사용할 변수명) 
-* **open **\
-  \- 해당 구문이 시작할떄 넣을 문자(foreach구문이 시작할때 넣을 문자) 
+  \- (foreach구문에서 사용할 변수명)&#x20;
+* **open** \
+  \- 해당 구문이 시작할떄 넣을 문자(foreach구문이 시작할때 넣을 문자)&#x20;
 * **close** \
-  \- 해당 구문이 끝날떄 넣을 문자(foreach 구문이 끝날 떄 넣을 문자) 
-* **separator **\
+  \- 해당 구문이 끝날떄 넣을 문자(foreach 구문이 끝날 떄 넣을 문자)&#x20;
+* **separator** \
   \- 한번이상 반복할 떄 반복되는 사이에 해당문을 넣어준다.(구분자)\
   \- separator가 ','라고 한다면\
-    insert구문은 foreach태그 안에 into 구문이 들어가므로 끝에 ,가 들어가는 순간 오류가 발생한다.\
-    into dept(-) values(-), into ...가되므로 sql에러가 발생한다.\
-   delete의 경우에는 foreach 태그안에 값만 들어가므로 끝에 ,를 넣어 구분하는 역할\
-   사용자가 직접 forea태그의 값, 을 붙여버리면 마지막 값뒤에도 ,이 들어가 sql오류가 발생한다.
+  &#x20; insert구문은 foreach태그 안에 into 구문이 들어가므로 끝에 ,가 들어가는 순간 오류가 발생한다.\
+  &#x20; into dept(-) values(-), into ...가되므로 sql에러가 발생한다.\
+  &#x20;delete의 경우에는 foreach 태그안에 값만 들어가므로 끝에 ,를 넣어 구분하는 역할\
+  &#x20;사용자가 직접 forea태그의 값, 을 붙여버리면 마지막 값뒤에도 ,이 들어가 sql오류가 발생한다.
 * insert문 자체를 반복하는 것이 아니다.\
   \- 반복되는 부분을 into구문으로 자동으로 만들어주어 한번에 insert all해준다.\
   \- INSERT All\
-      into dept(컬럼1, 컬럼2, 컬럼3)\
-       values (컬럼1값, 컬럼2값, 컬럼3값)\
-      into dept(컬럼1, 컬럼2, 컬럼3)\
-       values (컬럼1값2, 컬럼2값2, 컬럼3값2)\
-     ....\
+  &#x20;   into dept(컬럼1, 컬럼2, 컬럼3)\
+  &#x20;    values (컬럼1값, 컬럼2값, 컬럼3값)\
+  &#x20;   into dept(컬럼1, 컬럼2, 컬럼3)\
+  &#x20;    values (컬럼1값2, 컬럼2값2, 컬럼3값2)\
+  &#x20;  ....\
   \- 이런식으로 mybatis가 \<foreach>태그로 자동으로 into구문을 n개만들어 insert all한다.
 
 {% content-ref url="insert-mutiinsert.md" %}

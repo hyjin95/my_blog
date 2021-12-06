@@ -2,7 +2,7 @@
 description: 2020.09.17 - 26일차
 ---
 
-# 26 Days - DISTINCT, DUAL, NULL, ALIAS, NVL, TO_CHAR, ORDER BY, LOOP
+# 26 Days - DISTINCT, DUAL, NULL, ALIAS, NVL, TO\_CHAR, ORDER BY, LOOP
 
 ### 사용 프로그램
 
@@ -21,7 +21,7 @@ description: 2020.09.17 - 26일차
 * 값.setText( ); - 처리결과, 리턴값을 보여줄때, void타입이여도 된다.
 * 사용자가 요청하는 값은 사용자마다 변화하는 변수로, VO를 사용하는것이 일반적이다.\
   \- 변수 = table 컬럼\
-  \- ex) 로그인 : 아이디, 패스워드 
+  \- ex) 로그인 : 아이디, 패스워드&#x20;
 
 ### 전달자
 
@@ -79,7 +79,7 @@ description: 2020.09.17 - 26일차
 
 ![](<../../../.gitbook/assets/2 (8).png>)
 
-* 컬럼명에 부여해주는 별칭이다. 
+* 컬럼명에 부여해주는 별칭이다.&#x20;
 * 변수에 수식이 사용될때 ALIAS명을 붙여주면 출력시 수식이 아닌 ALIAS명이 출력된다.
 * 띄어쓰기가 포함되는 경우에는 반드시 " " 를 붙여주어야 한다.
 * 서브쿼리 안에서 정해진 alias명은 외부에서 사용할 수 없지만 인라인 뷰안에서 정해진 alias명은 외부에서 사용할 수 있다. WHERE절은 조건이고, FROM은 집합이기 때문
@@ -95,7 +95,7 @@ description: 2020.09.17 - 26일차
 ![](<../../../.gitbook/assets/4 (9).png>)
 
 * 형변환 함수
-* TO_CHAR, TO_NUMBER, TO_DATE, ....
+* TO\_CHAR, TO\_NUMBER, TO\_DATE, ....
 
 ![](../../../.gitbook/assets/dual-sysdate.png)
 
@@ -113,7 +113,7 @@ description: 2020.09.17 - 26일차
 
 ![](<../../../.gitbook/assets/6 (5).png>)
 
-* LOOP : 반복문** **\
+* LOOP : 반복문 **** \
   **Loop 실행문 exit; END Loop;**
 * 실행문의 종료시점에 exit; 해야한다.
 * BASIC LOOP  : 조건식이 없는 반복작문 무한루프 할 수 있다.\
@@ -125,7 +125,7 @@ description: 2020.09.17 - 26일차
 ![](../../../.gitbook/assets/6-2.png)
 
 * 프로시저로 저장하면 재사용성이 좋아진다.
-* BEGIN 부분에서 n_i를 입력되는 파라미터 p_i로 초기화한다.
+* BEGIN 부분에서 n\_i를 입력되는 파라미터 p\_i로 초기화한다.
 
 ![](<../../../.gitbook/assets/6-3 (1).png>)
 

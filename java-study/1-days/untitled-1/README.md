@@ -38,8 +38,8 @@ description: 2020.10.15 - 42일차
 
 * Local : 해당 컴퓨터 안에서만 사용가능
 * Web : 다른 디바이스, 밖에서도 접속이 가능하다.\
-             동시접속자 처리에 유리해 속도가 빠르다.\
-              세션과 쿠기를 가져 시간의 흐름에 따라 유지된다.
+  &#x20;          동시접속자 처리에 유리해 속도가 빠르다.\
+  &#x20;           세션과 쿠기를 가져 시간의 흐름에 따라 유지된다.
 
 ### 웹 서비스 개요도
 
@@ -56,8 +56,8 @@ description: 2020.10.15 - 42일차
 * 애플리케이션 스코프로 유지하는 방법\
   \- 1 : static, 싱글턴패턴, 인스턴스화 를 사용한다.\
   \- 2 : 구글 Guice나 Spring같은 의존성 삽입 컨테이너를 사용한다.\
-         프레임워크가 SqlSessionFactory의 생명주기를 싱글턴으로 관리하고, 직접 인스턴스화 하지않고    \
-         관리해주는 것을 주입받아 사용한다.
+  &#x20;      프레임워크가 SqlSessionFactory의 생명주기를 싱글턴으로 관리하고, 직접 인스턴스화 하지않고    \
+  &#x20;      관리해주는 것을 주입받아 사용한다.
 
 ### SqlSession
 
@@ -84,7 +84,7 @@ description: 2020.10.15 - 42일차
 
 ![](<../../../.gitbook/assets/1 (25).png>)
 
-* **Scope **\
+* **Scope** \
   ****- 변수를 어떤 범위내에서 사용할지를 정하는 기\
   \- 사용방법 : 값 저장-setAttribute, 값 읽기-getAttribute
 * **Page** 영역\
@@ -124,7 +124,7 @@ description: 2020.10.15 - 42일차
 * 서버와 클라이언트가 통신할때, 서버측에 있는 스크립트 형태의 프로그램 클라이언트가 서버에 하는 요청으로 서버 특정 기능 호출시 서버내에서 동작되는 기능들\
   \- DB접속, 내부 로직 등...\
   \- 서버내에서 동작하지만 클라이언트에게까지 코드가 내려오지는 않는것들\
-  \- 반환값이 전송될 수는 있다. 
+  \- 반환값이 전송될 수는 있다.&#x20;
 
 ## MyBatis delete, multiDelete, Update 구현
 
@@ -150,7 +150,7 @@ description: 2020.10.15 - 42일차
 
 * java.sql.Connection인터페이스의 setAutoCommit 메서드
 * 소유주에 대한 트랜잭션이 실행되고 하나를 실행했을떄, 자동으로 commit해주는 기능을 가졌다.
-* JDBC의 dafault값 = true(켜짐) 
+* JDBC의 dafault값 = true(켜짐)&#x20;
 * mybatis에서는 openSession메서드안에서 설정할 수 있다.\
   \- openSession(false); : default값으로 commit을 해주어야 commit 된다.\
   \- openSession(true); : 자동 commit
@@ -227,13 +227,13 @@ description: 2020.10.15 - 42일차
 ### Eclipse 웹 프로젝트 파일 생성하기
 
 * File -> New -> Dynamic Web Project 선택\
-     프로젝트 이름 지정\
-     프로젝트 위치 지정\
-     target runtime, 사용할 웹 서버 선택\
-     \-> Next -> Next\
-        프로젝트 파일 밑에 파일생성 페이지\
-        Generate web.xml deployment descriptor 체크 \
-        \-> Finish
+  &#x20;  프로젝트 이름 지정\
+  &#x20;  프로젝트 위치 지정\
+  &#x20;  target runtime, 사용할 웹 서버 선택\
+  &#x20;  \-> Next -> Next\
+  &#x20;     프로젝트 파일 밑에 파일생성 페이지\
+  &#x20;     Generate web.xml deployment descriptor 체크 \
+  &#x20;     \-> Finish
 * deployment descriptor = 배치서술자, dd 파일
 * 프로젝트 파일안에는 jaca코드를 배포한다. = src파일
 
@@ -245,7 +245,7 @@ description: 2020.10.15 - 42일차
 ### UTF-8 설정하기
 
 * Window -> Preperences -> General -> Content Types -> Text\
-    \- HTML, JavaScript Source File, JSON, JSP항목들을 UTF-8로 encoding -> Update
+  &#x20; \- HTML, JavaScript Source File, JSON, JSP항목들을 UTF-8로 encoding -> Update
 
 ### 연결 브라우저 선택하기
 
@@ -338,7 +338,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 * build - APK
 
-### activity_main.XML
+### activity\_main.XML
 
 ```markup
 <?xml version="1.0" encoding="utf-8"?>

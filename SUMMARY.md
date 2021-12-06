@@ -2,12 +2,12 @@
 
 * [Initial page](README.md)
 
-## Introduce <a href="undefined-4" id="undefined-4"></a>
+## Introduce <a href="#undefined-4" id="undefined-4"></a>
 
 * [기술소개서](undefined-4/undefined.md)
 * [자기소개서](undefined-4/undefined-1.md)
 
-## 국비 교육 <a href="java-study" id="java-study"></a>
+## 국비 교육 <a href="#java-study" id="java-study"></a>
 
 * [KOSMO](java-study/1-days/README.md)
   * [Git](java-study/1-days/untitled-11.md)
@@ -359,7 +359,8 @@
     * [출석 수업](undefined/2021-2/undefined-2/undefined-3.md)
     * [1강.클라우드 컴퓨팅의 이해](undefined/2021-2/undefined-2/1-..md)
     * [5강.클라우드 이용 모델](undefined/2021-2/undefined-2/5-..md)
-  * [컴퓨터과학 개론](undefined/2021-2/undefined.md)
+  * [컴퓨터과학 개론](undefined/2021-2/undefined/README.md)
+    * [1강.컴퓨터와 자료(1)](undefined/2021-2/undefined/1-.-1.md)
   * [시뮬레이션](undefined/2021-2/undefined-1/README.md)
     * [1강 : 결정적 시뮬레이션](undefined/2021-2/undefined-1/1.md)
     * [2강 : 확률적 시뮬레이션, 난수 발생(일양분포), 주사위](undefined/2021-2/undefined-1/2.md)
@@ -370,7 +371,7 @@
     * [2강 C++언어의 기초(1)](undefined/2021-2/c++/2-c++-1.md)
     * [3강 C++언어의 기초(2)](undefined/2021-2/c++/3-c++-2.md)
 
-## STUDY - 참고 <a href="study-1" id="study-1"></a>
+## STUDY - 참고 <a href="#study-1" id="study-1"></a>
 
 * [참고 링크](study-1/undefined-2-1.md)
 * [단축키](study-1/undefined-2.md)
@@ -378,7 +379,7 @@
   * [환경설정 annotation](study-1/spring-boot-annotation/annotation.md)
 * [cmd, git, terminal 명령어](study-1/undefined-1.md)
 
-## Study <a href="undefined-3" id="undefined-3"></a>
+## Study <a href="#undefined-3" id="undefined-3"></a>
 
 * [Data Type (자료형)](undefined-3/data-type/README.md)
   * [참조형, 원시형](undefined-3/data-type/undefined-2-1.md)
@@ -390,7 +391,7 @@
   * [Tag 태그](undefined-3/html/tag.md)
   * [form 태그](undefined-3/html/form.md)
 
-## study - javascript <a href="study-javascript-1" id="study-javascript-1"></a>
+## study - javascript <a href="#study-javascript-1" id="study-javascript-1"></a>
 
 * [JavaScript](study-javascript-1/javascript/README.md)
   * [화살표 함수](study-javascript-1/javascript/undefined.md)
