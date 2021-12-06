@@ -50,7 +50,7 @@ description: 2020.10.05 - 35일차
 * 배열형태의 자료 구조
 * 대표적인 구현체클래스 : ArrayList, Vector
 * **데이터가 뭉텅이로 저장**된다. 저장속도가 빠르다.
-* **데이터범위를 순차적으로 표시할때** 사용된다.&#x20;
+* **데이터범위를 순차적으로 표시할때** 사용된다. 
 * **데이터 특징이 포지션별로 존재할때 유리**하다.
 * **ArrayList**\
   \- 동기화를 지원하지 않는다.\
@@ -60,20 +60,20 @@ description: 2020.10.05 - 35일차
   \- 동기화 지원, data의 안전성과 신뢰성이 높다.\
   \- 읽기, 쓰기가 느리다.\
   \- 동기화를 하면 시간이 더 걸린다. 조건을 비교하므로, 순서를 따져 대기시킨다.\
-  \- 멀티스레드에서 안전하다.     &#x20;
+  \- 멀티스레드에서 안전하다.      
 
 ### Map 인터페이스
 
 * **Map\<key, value>** : 데이터를 키와 값으로 관리
 * **검색속도가 가장 빠른** 자료구조 인터페이스
 * 데이터가 저장될때 빈공간을 찾아 저장된다.
-* **저장할 데이터가 unique한 key값을 가질때** 사용된다.&#x20;
+* **저장할 데이터가 unique한 key값을 가질때** 사용된다. 
 * **빈번한 검색과, 특정데이터를 순간마다 캐치**해야할때 유리하다.
 * 대표적인 구현체 클래스 : HashMap, HashTable
 * key : 값을 읽을(꺼낼) 수 있게 해주는 중복불가능한 key, 구분자 역할로 List보다 검색효율이 높다.
 * **ORM**솔루션 중 하나인 MyBatis(오픈소스)에서 많이 사용된다.
-* &#x20;데이터 추가 : map.put(key값, value값);
-* &#x20;데이터 추출 : map.get(key값);
+*  데이터 추가 : map.put(key값, value값);
+*  데이터 추출 : map.get(key값);
 *   **HashMap**
 
     \- **동기화를 지원하지 않는다.**\
@@ -93,7 +93,7 @@ description: 2020.10.05 - 35일차
 ### Enumeration\&Iterator
 
 * 자료구조(Collection)에 저장된 값에 접근하거나 꺼낼때 사용되는 인터페이스
-* **enumeration** \
+* **enumeration **\
   \- 웹 에서 사용\
   \- 제거메서드가 없다.\
   \- hasMoreElements( ) : 남은 데이터가 있으면 true, 없으면 false 반환. while문에서 사용\
@@ -105,7 +105,7 @@ description: 2020.10.05 - 35일차
   \- hasNext( ) : 남은 데이터가 있으면 true, 없으면 false 반환. while문에서 사용\
   \- next( ) : 자료구조의 다음 데이터 반환\
   \- Fail-Fast Iterator : 다른 스레드에서 해당 스래드 자료를 수정하려고 하면       \
-  &#x20;                                 ConcurrentModificationException을 발생시켜 일관성을 보장하는 것
+                                    ConcurrentModificationException을 발생시켜 일관성을 보장하는 것
 
 ### syncronized
 
@@ -157,7 +157,7 @@ public class MapTest {
 
 * 더 작은 타입은 더 큰 타입의 안에 들어갈 수 있다.
 * 타입이 더 크더라도 제네릭타입이 다르면 성립하지 않는다.
-* 17번 : 동일한 Vector타입이지만 제네릭타입이 달라 성립하지 않는다.     &#x20;
+* 17번 : 동일한 Vector타입이지만 제네릭타입이 달라 성립하지 않는다.      
 
 ### List 유지, Map 검색
 
@@ -190,7 +190,7 @@ public class MapTest {
 * map을 담기위해 map타입의 List를 ArrayList로 생성한다.
 * map의 제네릭의 key는 String타입이고, 값은 여러종류를 담기위해 Object타입으로 한다.
 
-### List의 map값&#x20;
+### List의 map값 
 
 ![List\<Map>](<../../../.gitbook/assets/1 (15).png>)
 

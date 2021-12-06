@@ -27,7 +27,7 @@ description: 2021.01.04 - 96일차
 ### 자료구조
 
 * 자료구조 = 컬렉션프레임워크 = 파이썬(리스트(자바 list), 튜플(상수 리스트:순서는 있지만 변경불가), 딕셔너리(자바 map), 집합{자바 set) : 자료의 도식화
-* json(web,안드로이드0, 넥사크로(xml그리고 js변환해줌) - DataSet지원, Post방식이 기본&#x20;
+* json(web,안드로이드0, 넥사크로(xml그리고 js변환해줌) - DataSet지원, Post방식이 기본 
 
 ## Spring : 삭제
 
@@ -58,27 +58,27 @@ description: 2021.01.04 - 96일차
 * **ModelAndView**\
   \- req, res에 의존적\
   \- WEB-INF > views > board
-* **String** \
+* **String **\
   \- req, res가 없어도 된다.\
   \- webapp > board\
-  &#x20;**** return "redirect:xxx.jsp | xxx.do"\
-  &#x20; return "forward:xxx.jsp" - forward는 서블릿 요청이 불가\
+  ** ** return "redirect:xxx.jsp | xxx.do"\
+    return "forward:xxx.jsp" - forward는 서블릿 요청이 불가\
   \- WEB-INF > views > board\
-  &#x20; return "board/boardList"와 같이 하면 ModelAndView와 동일한 위치
+    return "board/boardList"와 같이 하면 ModelAndView와 동일한 위치
 
 ### UI와 DataSet
 
 * JS기반 \
   \- JSON으로 처리한다.\
-  &#x20;  json으로 만들어진 jsonBoardList.jsp페이지가 필요하지만,\
-  &#x20;  UI에서 직접 값을 꺼내 담는 자바 코드는 필요없다.\
+     json으로 만들어진 jsonBoardList.jsp페이지가 필요하지만,\
+     UI에서 직접 값을 꺼내 담는 자바 코드는 필요없다.\
   \- 부트스트랩, 시멘틱UI, easyUI, 안드로이드\
   \- 특별한 경우를 제외하면 오라클과 연동하지 않으므로 noSQL제품과 연동하는 경우가 많다.
 * XMl기반\
   \- 조회결과가 xml문서(text/xml)로 내보내져 xmlBoardList.jsp페이지가 필요하다.\
   \- 넥사크로, 플렉스, 트러스트폼, ....\
   \- 넥사크로에서 조회된 결과는 넥사크로에서 제공하는 DataSet객체에 담아야 한다.\
-  &#x20; 화면을 지원하는 Grid와 DataSet을 매핑해 UI에 출력, 완성한다.\
+    화면을 지원하는 Grid와 DataSet을 매핑해 UI에 출력, 완성한다.\
   \- 넥사크로에서는 xmlBoardList.jsp를 만드는 대신 직접 자바단에서 xml포맷을 생성해주는 API를 지원한다.
 
 ### FrameWork의 사용 의의
@@ -89,7 +89,7 @@ description: 2021.01.04 - 96일차
   \- 기존 반복 코드(POJO) : request.getParameter(여기만 다르다)
 * 예시2) select -> forward로 데이터 유지\
   \- Spring 제공클래스 Model, ModelMap지원 : ui를 지원하기위한 api\
-  \- POJO : request.setAttribute("이름",값);&#x20;
+  \- POJO : request.setAttribute("이름",값); 
 
 ### Spring-boot 첨부파일 코드분석 : Controller
 
@@ -210,9 +210,9 @@ description: 2021.01.04 - 96일차
    \- Thread를 구현해 해결한다. \
    \- Handler, Volley API 활용\
    \- 다른 스레드에서 사용자 인터페이스를 갱신하려면 예외가 발생하므로 메인 스레드에서 \
-   &#x20; 갱신하도록 처리해야한다. Handler API를 제공하는 이유가 바로 여기에 있다.\
+     갱신하도록 처리해야한다. Handler API를 제공하는 이유가 바로 여기에 있다.\
    \- Handler를 사용하면 특정코드를 미래 시점에 수행되도록 할 수 있다.\
-   &#x20; 매 초 스탑워치 코드를 실행한다.
+     매 초 스탑워치 코드를 실행한다.
 
 ### Handler
 
@@ -238,7 +238,7 @@ handler.postDelayed(Runnable, long);
   \- extends Thread\
   \- implemnets Runnable\
   \- thread를 생성해 thread.start( )하면 run( )메서드가 호출된다.\
-  &#x20; start를 호출하더라도 순서에 따라 진행된다.
+    start를 호출하더라도 순서에 따라 진행된다.
 
 {% content-ref url="../30-days/" %}
 [30-days](../30-days/)

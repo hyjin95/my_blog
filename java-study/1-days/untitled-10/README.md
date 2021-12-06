@@ -60,7 +60,7 @@ description: 2020.10.20 45 일차
 
 ### 전송방식
 
-1. **get** 방식\
+1. **get **방식\
    \- http프로토콜을 이용해 주소를 가지고 링크를 걸 수 있다.\
    \- 포장이 안되어 노출 된다.\
    \- URL+append하는 것이므로 주소창의 길이 한계에 부딪히는 제약이 있다.\
@@ -286,8 +286,8 @@ description: 2020.10.20 45 일차
   \- 이런 경우에는 함수를 재사용할 필요 없으므로 익명함수로 정의한다.\
   \- \~ = fucntion( ){ 구현 - 변수초기화, if, for, ... }; --재사용하지 않으므로 ; 으로종료\
   \- java에서의 내부클래스와 비슷하다.\
-  &#x20; btn\_send.addActionListener(new ActionListener( ){\
-  &#x20; public void actionPerformed(ActionEvent e){ 구현문});
+    btn_send.addActionListener(new ActionListener( ){\
+    public void actionPerformed(ActionEvent e){ 구현문});
 * 가입 버튼을 누르면 값을 비교하는 JS를 작성해보자
 * 버튼 요소 참고 : [https://jsunnylab.tistory.com/38](https://jsunnylab.tistory.com/38)
 

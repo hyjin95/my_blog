@@ -119,9 +119,9 @@ html
 * 브라우저가 인터프리터방식으로 읽어 body안의 contents만 보여준다.
 * 모든 태그들은 열린 순서대로 닫혀야한다.
 * 태그는 적용할 내용을 감싼다.
-* **블럭요소** : Layer로서 자체 크기를 갖기때문에 자동 줄바꿈된다. \
+* **블럭요소 **: Layer로서 자체 크기를 갖기때문에 자동 줄바꿈된다. \
   \- 대표적인 태그 : \<div>, .....
-* **인라인요소** : 자체 크기가 없어 자동줄바꿈이 일어나지 않는다.\
+* **인라인요소 **: 자체 크기가 없어 자동줄바꿈이 일어나지 않는다.\
   \- 대표적인 태그 : \<a>, \<span>, \<button>, \<image>, ....\
   \- 줄바꿈 태그 \<br>로 줄바꿈효과를 줄 수 있다.
 * 상속관계가 있다. \
@@ -218,7 +218,7 @@ html
   \- JS    : eventHandler\
   \- html이 먼저 메모리에 load가 완료 되어야 JS가 기능을 적용일할 수 있다\
   \- window(소유주).onload\
-  &#x20; function( ){구현} = 기능
+    function( ){구현} = 기능
 * JS에서 해당 이벤트를 감지하기 위해 ID속성을 사용한다.
 
 ### JQuery
@@ -288,7 +288,7 @@ $('#dg').datagrid({
 
 * 1번 : table id부여, 바디가 없지만 테이블은 출력된다.
 * 3번 : table tag Object에 접근한다.\
-  \- JQuery(document.getElemnetByID("#dg\_dept")) = $("#dg\_dept")로 작성가능
+  \- JQuery(document.getElemnetByID("#dg_dept")) = $("#dg_dept")로 작성가능
 * 4번 : JSON파일 지정
 * 여기서 id로 불러오는 table은 내장객체이다.
 

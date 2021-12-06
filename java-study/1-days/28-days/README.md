@@ -24,7 +24,7 @@ description: 2020.09.21 - 28일차
 * 공통되는 컬럼의 row 중, 같은 값을 가진 row를 기준으로 한다.
 * 값이 같은지만 비교할 수 있다.
 * **FROM 테이블명 NATURAL JOIN 테이블명**
-* **JOIN-ON :** 임의조건을 지정해야 하거나 컬럼을 지정하는 조인 조건은 ON절에, 다른 검색이나 필터조건은 그 다음에 WHERE절을 사용한다.
+* **JOIN-ON : **임의조건을 지정해야 하거나 컬럼을 지정하는 조인 조건은 ON절에, 다른 검색이나 필터조건은 그 다음에 WHERE절을 사용한다.
 
 ### OUTER JOIN
 
@@ -61,11 +61,11 @@ description: 2020.09.21 - 28일차
   \- WHERE절은 조건이므로
 
 {% content-ref url="toad-t_giftpoint-t_giftmem.md" %}
-[toad-t\_giftpoint-t\_giftmem.md](toad-t\_giftpoint-t\_giftmem.md)
+[toad-t_giftpoint-t_giftmem.md](toad-t_giftpoint-t_giftmem.md)
 {% endcontent-ref %}
 
 {% content-ref url="toad-t_worktime.md" %}
-[toad-t\_worktime.md](toad-t\_worktime.md)
+[toad-t_worktime.md](toad-t_worktime.md)
 {% endcontent-ref %}
 
 ## Java

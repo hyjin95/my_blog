@@ -120,7 +120,7 @@ public class BoardLogic {
 
 * Insert메서드의 시작
 * 필요한 변수들을 선언한다.
-* insert결과를 담을 result, 게시글 번호를 담을 bm\_no, 그룹번호를 담을 bm\_group
+* insert결과를 담을 result, 게시글 번호를 담을 bm_no, 그룹번호를 담을 bm_group
 
 ```java
 		if(pMap.get("bm_group")!=null) {
@@ -132,7 +132,7 @@ public class BoardLogic {
 
 * 게시글이라면 그룹번호를 갖고있지 않을 것이고, 댓글이라면 그룹번호를 갖고있게 된다.
 * 파라미터에 그룹번호가 null이아니라면 댓글일 것이다.\
-  파라미터에서 bm\_group를 꺼내 담는다. \
+  파라미터에서 bm_group를 꺼내 담는다. \
   혹시모를 배달사고를 방지하기위해 toString으로 꺼내 형변환 한다.
 * 글번호는 새 게시글 작성이던, 댓글작성이던 PK로서 SEQ를 순서대로 부여해야한다.\
   MDao의 메서드를 통해 다음에 부여될 글 번호를 가져와 pMap에 담는다.
@@ -146,8 +146,8 @@ public class BoardLogic {
 			int step = 0;
 ```
 
-* bm\_group변수가 >0 인 값을 담고 있다면 댓글업무이다.
-* if문의 bm\_group는 화면에서 가져온 것이므로 새 게시글이라면 0이겠지만 댓글의 경우는 read.jsp에서 __ 가져온 bmgroup이 담겨있다. 해당 bm\_group을 pMap에 담는다.
+* bm_group변수가 >0 인 값을 담고 있다면 댓글업무이다.
+* if문의 bm_group는 화면에서 가져온 것이므로 새 게시글이라면 0이겠지만 댓글의 경우는 read.jsp에서_ _가져온 bmgroup이 담겨있다. 해당 bm_group을 pMap에 담는다.
 * 댓글은 끼워넣기를 해야하기때문에 같은 게시글에 대한 댓글이 여러개 존재한다면 작성된 댓글을 끼워넣기 위해 기존 댓글들의 순서에 +1을 해야한다. 3번코드에서 MDao의 메서드를 호출해 update한다.
 * 이번에 작성된 댓글의 처리를 위해 글 차수와 순서를 담을 변수 두개를 선언한다.
 
@@ -191,7 +191,7 @@ public class BoardLogic {
 		int mresult = sqlBoardMDao.boardMInsert(pMap);
 ```
 
-* 이제 새 게시물 작성이든 댓글 작성이든 Insert를 해야한다.&#x20;
+* 이제 새 게시물 작성이든 댓글 작성이든 Insert를 해야한다. 
 * 만들어진 pMap을 파라미터로 보내 MDao의 Insert메서드를 호출한다.
 
 ```java
@@ -206,7 +206,7 @@ public class BoardLogic {
 ```
 
 * 첨부파일이 존재하는 경우는 따로 분류해 DDao에서 insert를 처리한다.
-* 파라미터로 받아온 첨부파일 bm\_file은 문자열일 것이기때문에 null체크와 같이 문자열 길이 체크도 해야한다.
+* 파라미터로 받아온 첨부파일 bm_file은 문자열일 것이기때문에 null체크와 같이 문자열 길이 체크도 해야한다.
 * 4번에서 첨부파일 파라미터가 존재한다면 DDao의 insert메서드를 호출한다.
 
 ### 코드 : BoardMDao.java
@@ -260,7 +260,7 @@ public class SqlBoardMDao {
 ```
 
 * 댓글 작성의 경우 Logic에서 호출되는 메서드이다.
-* 댓글을 끼워넣기 위해 같은 게시글에 대한 댓글들의 bm\_step에 +1한다.
+* 댓글을 끼워넣기 위해 같은 게시글에 대한 댓글들의 bm_step에 +1한다.
 
 ```java
 	public int getBmGroup() {
@@ -333,7 +333,7 @@ public class SqlBoardDDao {
 ```
 
 * Dao에서 새 글 작성시 호출되는 쿼리문이다.
-* 시퀀스로 만들어둔 bm\_no(PK)의 다음값을 불러온다. = 새 게시글의 번호 채번
+* 시퀀스로 만들어둔 bm_no(PK)의 다음값을 불러온다. = 새 게시글의 번호 채번
 
 ```markup
 	<update id="bmStepUpdate" parameterType="map">
@@ -347,7 +347,7 @@ public class SqlBoardDDao {
 * 댓글 작성은 게시글 상세보기 페이지에서 가능하기 때문에 선택된 하나의 게시글이 존재한다.\
   select된 한개 row를 갖고있다.
 * 해당 게시글의 그룹번호와 일치하고 게시글보다 순서가 높은 모든 댓글들의 차수에 +1해 update한다.
-* 해당 게시글의 1번 bm\_step은 새 댓글이다.
+* 해당 게시글의 1번 bm_step은 새 댓글이다.
 
 ```markup
 	<select id="getBmGroup" parameterType="map" resultType="map">
@@ -360,7 +360,7 @@ public class SqlBoardDDao {
 	</select>
 ```
 
-* 새 게시글 작성의 경우 새로운 그룹번호를 가져야한다.&#x20;
+* 새 게시글 작성의 경우 새로운 그룹번호를 가져야한다. 
 * 미리 index를 부여해놓은 그룹번호 컬럼을 통해 빠른 검색을 한다.
 * 가장 마지막에 부여된 그룹번호에 +1을 해서 채번한다.
 * 작성된 새 게시글이 첫 게시글이라면 해당 테이블 조회 값이 null이 나오고, 에러가 발생할 것이기 때문에 NVL구문을 작성해 이를 방지하고, null이라면 1을 가질수 있도록 했다.

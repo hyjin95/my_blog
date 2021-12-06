@@ -63,7 +63,7 @@ description: 2020.10.19 - 44일차
 
 ## 필기
 
-### &#x20;JQuery(JS)
+###  JQuery(JS)
 
 ```markup
 <!DOCTYPE html>
@@ -124,7 +124,7 @@ description: 2020.10.19 - 44일차
 
 ### \<form>태그
 
-* 웹 페이지에서의 **입력 양식**
+* 웹 페이지에서의** 입력 양식**
 * 입력된 데이터를 한 번에 서버로 전송한다. \
   \- 전송된 데이터를 웹 서버가 처리하고 결과에 따라 다른 웹 페이지를 보여주기도한다.
 * 속성\
@@ -133,7 +133,7 @@ description: 2020.10.19 - 44일차
   \- accept-charset : 폼 전송에 사용할 문자 인코딩 지정\
   \- target : action에서 지정한 스크립트 파일을 현재 창이 아닌 다른 창에 열도록 지정\
   \- method : 폼을 서버에 전송할 http메서드를 정한다.\
-  &#x20;                  get또는 post방식
+                     get또는 post방식
 * form태그는 전체 양식으로, 화면에 보이지않는 추상적 태그이다.\
   \- 실제로 사용자가 양식을 입력하려면 \<input>태그 등을 사용해야한다.
 
@@ -143,7 +143,7 @@ description: 2020.10.19 - 44일차
 * 인라인 요소
 * 속성\
   \- type : 종류 지정\
-  &#x20;            text, password, button, submit(양식제출용버튼), reset, radio(단일선택 컴포넌트), checkbox(다중선택 컴포넌트), file(파일 업로드), hidden(사용자에게 보이지 않음)\
+               text, password, button, submit(양식제출용버튼), reset, radio(단일선택 컴포넌트), checkbox(다중선택 컴포넌트), file(파일 업로드), hidden(사용자에게 보이지 않음)\
   \- name\
   \- value : 기본 값
 
@@ -186,7 +186,7 @@ description: 2020.10.19 - 44일차
 * html문서 파싱 -> 태그를 DOM 노드로 변환 -> 외부 css파일과 스타일 요소 파싱 -> 또 다른 트리 생성
 * DOM을 조작하는 객체\
   \- ex) img태그\
-  &#x20; \<img src="http://\~" />\
+    \<img src="http://\~" />\
   \- http://..... 은 절대경로이다.
 *   종류\
     \- Core DOM : 모든 문서 타입을 위한 DOM모델\
@@ -197,9 +197,9 @@ description: 2020.10.19 - 44일차
 
 ### Node
 
-![html node](../../../.gitbook/assets/img\_js\_htmldom.png)
+![html node](../../../.gitbook/assets/img_js_htmldom.png)
 
-* HTML **DOM은 노드들의 집합인 노트 트리라는 계층적 구조에 저장**된다.\
+* HTML** DOM은 노드들의 집합인 노트 트리라는 계층적 구조에 저장**된다.\
   \- tree구조에서 root 태그 하위의 모든 개체(태그)를 node라고 표현한다.
 * **노드 : 계층 단위**, html정보가 저장된다.
 * HTML DOM은 노드를 정의하고 관계를 설명하는 역할
@@ -287,11 +287,11 @@ description: 2020.10.19 - 44일차
    \- JS가 제공해주는 setInterval(적용할 기능, 시간간격)함수를 사용한다.\
    \- 함수, 실행문을 정해진 시간 간격마다 반복 수행한다.\
    \- 적용할 기능 : 실행문, 함수(재사용가능) -> { }를 사용할 수 있다.\
-   &#x20; 시간간격 : ms\
+     시간간격 : ms\
    \- \<script type="text/javascript>\
-   &#x20;  self.setInterval('timer( )', 100);\
-   &#x20;  function timer( ){ document.myForm.myTimer.value = new Date( );}\
-   &#x20; \</script> --기본형\
+      self.setInterval('timer( )', 100);\
+      function timer( ){ document.myForm.myTimer.value = new Date( );}\
+     \</script> --기본형\
    \- self=this
 4. onload이벤트를 사용한다.
 5. 만들어진 HTML문서는 DOM방식으로 브라우저가 인식한다.
@@ -313,4 +313,4 @@ description: 2020.10.19 - 44일차
 [untitled-1.md](untitled-1.md)
 {% endcontent-ref %}
 
-후기 :&#x20;
+후기 : 

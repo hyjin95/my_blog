@@ -173,7 +173,7 @@ public class WaitRoom extends JPanel implements ActionListener{
 * 5번 : 버튼이 눌리면 이름을 입력할수 있는 창을 띄운다.
 * 6-9번 : 이름이 입력되면 JFrame에 있는 소켓의 oos를 가져와 말하기 한다.\
   \- ChatClientVer2클래스에 구현된 oos를 사용해서 writeObject한다.\
-  \- 방생성 구분번호 = Protocol.ROOM\_CREATE\
+  \- 방생성 구분번호 = Protocol.ROOM_CREATE\
   \- 필요한 정보 : 구분번호, 방이름, 방인원\
   \- 방인원은 default가 0명이므로 0을 전송한다.
 
@@ -243,7 +243,7 @@ public class ChatServerThread extends Thread {
 * msg = (Protocol.WAIT+|+nickName+|+room.getState( ) );\
   \- state의 default는 "대기"이다.
 
-### 생성자 - 접속시 내정보 띄우기&#x20;
+### 생성자 - 접속시 내정보 띄우기 
 
 ```java
 			StringTokenizer st = null;
@@ -270,7 +270,7 @@ public class ChatServerThread extends Thread {
 * 5번 : msg가 존재하고 StringTokenizer에 다음 값이 존재 한다면,\
   \- hasMoreElements( )함수는 boolean타입으로 남은 값이 있다면 true를 반환하여 구현문을 진행한다.
 * 7,8번 : 닉네임, 그룹방이름 멤버변수를 가져온 값으로 초기화한다.\
-  \- g\_title의 값은 은 "대기"아니면 현재접속자가 입장한 그룹방의 이름이다.
+  \- g_title의 값은 은 "대기"아니면 현재접속자가 입장한 그룹방의 이름이다.
 * 10번 : ChatServer의 globalList, 즉 현재 접속자 모두만큼 반복한다.
 * 11,12번 : 접속자의 이름과 상태를 담을 변수를 선언, 생성한다. - 반복
 * 13번 : 현재 멤버변수 nickName인 '나'에게 send한다. -반복\
@@ -306,13 +306,13 @@ public class ChatServerThread extends Thread {
 * 4번 : 생성된 그룹방이 하나라도 있다면
 * 5번 : Room클래스를 인스턴스화 하여 인스턴스 변수에 roomList의 i번째 방정보를 담는다. -반복
 * 6번 : i번째 방의 이름을 담는 변수를 선언, 생성한다. - 반복
-* 7번 : 멤버변수 g\_title을 가져온 방의 이름으로 초기화한다. - 반복
+* 7번 : 멤버변수 g_title을 가져온 방의 이름으로 초기화한다. - 반복
 * 8번 : 변수를 하나 생성해서 기본 인원수를 0으로 초기화한다. -반복\
   \- 값이 이상해지지않도록 현재인원수를 꺼내기전에 계속 초기화해야한다.
 * 9번 : room.userList는 접속자정보가 담긴 Vector이므로 접속자가 있는경우 실행되는 if문이다. -반복
 * 10번 : 접속자가 있다면 current변수에 해당 방의 유저정보의 방 갯수를 담는다. -반복\
   \- 화면에 표시할 현재 입장인원 담기, 반복될때마다 새로운방의 새로운 인원정보를 담는다.
-* 12번 : 멤버변수 g\_current에 가져온 현재 인원을 담는다. - 반복
+* 12번 : 멤버변수 g_current에 가져온 현재 인원을 담는다. - 반복
 * 13번 : '나'에게 생성되어있는 방 이름, 현재 인원수를 전송한다. - 반복\
   \- **'나'가 접속시** '**나'의 화면에 현재 존재하는 모든 그룹방을 표시해주기**
 
@@ -348,7 +348,7 @@ public class ChatServerThread extends Thread {
 * 7번 : 방이름이 같다면 이제 모든 접속자에게 보내기위한 반복문이 필요하다. \
   \- Room클래스에서 userList의 size만큼 반복한다.
 * 8번 : ChatServerThread의 인스턴스변수에 userList의 i번째 방 정보를 담는다.\
-  \- **userList는 nickname같은 값이 아닌 thread를 담는 Vector이므로 ChatServerThread타입에 담는다.**
+  \-** userList는 nickname같은 값이 아닌 thread를 담는 Vector이므로 ChatServerThread타입에 담는다.**
 * 10번 : thread에 전송\
   \- 방이름이 같은 모든 접속자 thread에게 말한다.
 
@@ -386,11 +386,11 @@ public class ChatServerThread extends Thread {
 				////////////////////////////end of 방생성//////////////////////////////
 ```
 
-* 18번 : ROOM\_CREATE구분번호는 방생성시 화면에 방이름과 현재 인원을 띄우기 위함이다.
+* 18번 : ROOM_CREATE구분번호는 방생성시 화면에 방이름과 현재 인원을 띄우기 위함이다.
 * 19,20번 : 이를 위해 방이름과 현재인원을 담는 변수를 선언, 생성한다.
 * 22번 : 생성된 방을 **그룹방관리 클래스인 Room클래스에 반영**해야한다.\
   \- 만들어둔 Room클래스의 생성자 중에 파라미터로 방이름, 인원수를 갖는 생성자를 호출한다.
-* 24번 : 방이 생성되면 **ChatServer의 Vector인 roomList에 추가**해야한다.
+* 24번 : 방이 생성되면** ChatServer의 Vector인 roomList에 추가**해야한다.
 * 26번 : '내'가 생성한 방 정보에 대한 알림을 대기실의 모든 접속자에게 전송한다.\
   \- 대기실의 모든 접속자들의 화면에 해당 방이 보여져야한다.
 
@@ -455,8 +455,8 @@ public void run() {
   \- String타입으로 한다.\
   \- 테이블에 컬럼이 두개이므로 Vector를 사용한다.
 * 5,6번 : 들은 값을 Vector에 담는다.
-* 7번 : JFrame이 있는 ChatClientVer2클래스의 dtm\_wait에 addRow한다.
-* 9번 : jsp\_wait라는 JTable의 JScrollBar클래스의 세로스크롤바의 값을 읽어온다.\
+* 7번 : JFrame이 있는 ChatClientVer2클래스의 dtm_wait에 addRow한다.
+* 9번 : jsp_wait라는 JTable의 JScrollBar클래스의 세로스크롤바의 값을 읽어온다.\
   \- 소유주.getVerticalScrollBar( )
 * 10번 : 읽어온 스크롤바에 AdjustmentListener인터페이스를 add하고 바로 추상메서드를 구현한다.\
   \- 소유주.addAdjustmentListener(new AdjustmentListener( ) {사용 메서드 오버라이드}
@@ -466,7 +466,7 @@ public void run() {
 * 14번 : 생성한 스크롤바의 위치를 set한다. 최대위치로\
   \- 소유주.getValue(소유주.getMaximum( ));
 
-### run메서드 - Protocol.ROOM\_CREATE
+### run메서드 - Protocol.ROOM_CREATE
 
 ```java
 				case Protocol.ROOM_CREATAE:{
@@ -495,7 +495,7 @@ public void run() {
 	}/////////////////////////////////end of run///////////////////////////////////
 ```
 
-* Protocol.ROOM\_CREATE의 경우에는 생성된 방제목과 현재 인원수 정보를 듣게된다.
+* Protocol.ROOM_CREATE의 경우에는 생성된 방제목과 현재 인원수 정보를 듣게된다.
 * 5번 : dtm에 두개 컬럼의 값을 addRow하기 위해 String타입 Vector를 선언, 생성한다.
-* 6-8번 : Vector에 값을 담아 ChatClientVer2의 dtm\_room에 addRow한다.
+* 6-8번 : Vector에 값을 담아 ChatClientVer2의 dtm_room에 addRow한다.
 * 9-16번 : 테이블 증가에 따른 스크롤 자동이동 처리
