@@ -50,7 +50,7 @@ description: 2020.10.08 - 38일차
   \- equal조인은 양쪽 테이블에 모두 존재하는 데이터를 검색할때
 * outter 조인\
   \- 양쪽테이블 중 한쪽에는 존재하지만 다른 쪽에는 존재하지 않더라도\
-    양쪽 중 어느 한쪽이라도 존재하면 검색해준다.
+  &#x20; 양쪽 중 어느 한쪽이라도 존재하면 검색해준다.
 
 ## mybatis & mySQL
 
@@ -127,12 +127,12 @@ mybatis-user-guide
   \- 선언문, 할당, 종료같은 부수적인 코드가 줄어들거나 사라진다.\
   \- 재사용, 유지보수에 편리하다.\
   \- DBMS에 대한 종속성이 떨어진다. \
-    SQL을 자동생성하므로 RDBMS데이터 구조와 Java의 객체지향 모델 사이의 간격을 좁힌다.
+  &#x20; SQL을 자동생성하므로 RDBMS데이터 구조와 Java의 객체지향 모델 사이의 간격을 좁힌다.
 * 단점\
   \- ORM으로만 서비스를 구현하기는 힘들다.\
   \- 프로젝트가 복잡해질수록 잘못 구현되면 속도저하, 일관성이 무너질 수 있다.\
   \- 프로시저가 많은 시스템에서는 객체지향적인 장점을 활용하기 어렵다.\
-    프로시저를 다시 객체로 바꿔야하므로
+  &#x20; 프로시저를 다시 객체로 바꿔야하므로
 
 ### Spring
 
@@ -145,7 +145,7 @@ mybatis-user-guide
 * 의존성 주입(DI, Dependency Injection) :\
   \- 각 계층이나 서비스들 간의 의존성이 존재하면 스프링 프레임워크가 서로 연결시켜준다.
 * 관점지향 프로그래밍(AOP, Aspect-Oriented Programming)\
-  \- 여러모듈에서** 공통적으로 사용하는 기능을 분리하여 관리**가 가능하다.
+  \- 여러모듈에서 **공통적으로 사용하는 기능을 분리하여 관리**가 가능하다.
 * 배치 프레임워크\
   \- 특정 시간대에 실행하거나 대용량의 자료를 처리하는데 쓰이는 일괄처리를 지원하는 배치프레임워크를 지원한다.
 
@@ -164,10 +164,10 @@ mybatis-user-guide
 * 개발자가 지정한 SQL저장프로시저 = 스토어프로시저
 *   JDBC코드와 수동으로 셋팅하는 파라미터와 결과 매핑을 제거한다.
 
-     while(rs.next(0){\
-         DeptVO dvo = new DeptVO( );\
-         dvo.serDeptno(rs.getInt(1));  } \
-        위와 같이 수동으로 값을 꺼내오는 작업이 생략가능하다. 해준다.
+    &#x20;while(rs.next(0){\
+    &#x20;    DeptVO dvo = new DeptVO( );\
+    &#x20;    dvo.serDeptno(rs.getInt(1));  } \
+    &#x20;   위와 같이 수동으로 값을 꺼내오는 작업이 생략가능하다. 해준다.
 * 자바 POJO를 설정하고 매핑하기위해 XML과 애노테이션을 사용할 수 있다.
 
 ### mybatis 제공
@@ -187,7 +187,7 @@ mybatis-user-guide
 
 ### sqlSessionFactory
 
-* 물리적으로 떨어져있는 오라클** 서버와 연결통로를 확보**하는데 필요한 객체\
+* 물리적으로 떨어져있는 오라클 **서버와 연결통로를 확보**하는데 필요한 객체\
   \- 연결통로로서 sqlSession객체 생성에 대해 필요한 사전처리
 * **sqlSession**은 위에서 연결되었을 때 개발자가 작성한 **sql문 처리 요청**을 하는데 필요한 객체\
   \- sqlSession.commit( ), sqlSession.rollback( )이 가능하다.\
@@ -220,7 +220,7 @@ mybatis-user-guide
 
 * mybatis프레임워크를 사용할때 사용하게되는 파일타입
 * Eclipse에서 패키지 우클릭 -> new -> other -> XML -> XML File -> 이름지정 -> XML파일 생성
-* SQL문을 한번에 볼수 있게되며, 각** sql마다 id를 부여해 구분, 호출**할 수 있도록한다.
+* SQL문을 한번에 볼수 있게되며, 각 **sql마다 id를 부여해 구분, 호출**할 수 있도록한다.
 * 다른 두 업체가 다른 DB제품을 사용하거나 할때 사용하기 용이하다.
 * 자바에서 따로 관리하는 장점\
   \- 컴파일하지 않는다.\
@@ -293,7 +293,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 ## Toad
 
 {% content-ref url="toad-t_orderbasket-decode-and-sum.md" %}
-[toad-t_orderbasket-decode-and-sum.md](toad-t_orderbasket-decode-and-sum.md)
+[toad-t\_orderbasket-decode-and-sum.md](toad-t\_orderbasket-decode-and-sum.md)
 {% endcontent-ref %}
 
 후기 : 내일은 한글날! 잘 쉬고 오자 운동도하고!

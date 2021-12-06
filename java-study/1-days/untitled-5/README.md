@@ -35,9 +35,9 @@ description: 2020.10.07 - 37일차
 * URL에 정보를 담으므로 해당 페이지의 정보가 외부에 노출될 수 있다.\
   \- 중요한 정보는 절대로 쿼리스트링으로 내보내지 않는다.\
   \- 스크립트 코드도 노출되지 않도록 외부에 별도 작성하여 import로 사용한다.\
-    XXX.js, XXX.css\
+  &#x20; XXX.js, XXX.css\
   \- 경로의 경우도 절대경로가 노출되면 서버정보가 외부에 노출되는 것이므로 상대경로를 사용한다.\
-     상대경로를 사용해면 전체경로를 알수 없으므로
+  &#x20;  상대경로를 사용해면 전체경로를 알수 없으므로
 
 ### http 프로토콜
 
@@ -58,7 +58,7 @@ description: 2020.10.07 - 37일차
   \- 서버에 연결하고 응답을 받으면 연결을 끊는다.\
   \- 접속유지를 최소화하므로 불특정 다수를 대상으로하는 서비스에 적합하다. = 브라우저\
   \- 연결을 끊어버려 클라이언트의 이전상태를 알 수 없다. = stateless\
-    로그인을 성공햇더라도 정보를 유지 할 수 없다. = cookie를 이용해 해결하고있다.
+  &#x20; 로그인을 성공햇더라도 정보를 유지 할 수 없다. = cookie를 이용해 해결하고있다.
 * 제공 메서드\
   \- GET        : 정보 요청         = SELECT\
   \- POST     : 정보 밀어넣기 = INSERT\
@@ -104,7 +104,7 @@ description: 2020.10.07 - 37일차
   \- 태그는 해석하고 내용만 출력해준다.\
   \- 인터프리너틔 역할을 브라우저가 한다.
 * 마임타입이 선언되어 있어야 브라우저가 알맞은 해석을 할 수 있다.
-* mime type : **메인타입/서브타입 **\
+* mime type : **메인타입/서브타입** \
   \- text/html text/xml text/javascript = 마임타입\
   \- ex) 메인타입 : image 서브타입 : jpg, png, ......
 
@@ -126,11 +126,11 @@ description: 2020.10.07 - 37일차
 7. 만들어둔 도메인 index.jsp on server로 실행 후 상단의 주소복사\
    \- 5번 서비스환경에 붙여넣기\
    \- 제일 끝단의 파일 이름은 지우고 주소만 넣는다.
-8. client ID, client Secret 배포, 기록해두기 
+8. client ID, client Secret 배포, 기록해두기&#x20;
 
 ### Eclipse
 
-1. window 
+1. window&#x20;
 2. preferences
 3. General
 4. Workspace : Refresh using native hooks or polling 체크
@@ -196,11 +196,11 @@ description: 2020.10.07 - 37일차
 ## 대기실&그룹방 구현 마무리
 
 1. 그룹방 생성시 생성자 외의 대기실 접속자들의 화면에도 생성된 그룹방이 나타나야한다.\
-   \- ChatClientThreadVer2의 run메서드안에 case ROOM_LIST 구현\
-   \- Protocol.ROOM_LIST : 방 목록
+   \- ChatClientThreadVer2의 run메서드안에 case ROOM\_LIST 구현\
+   \- Protocol.ROOM\_LIST : 방 목록
 2. 그룹방에 입장시, 입장한 사람의 화면은 대화방으로 변경되고, 상태도 대화방이름으로 변경돼야한다.\
-   \- ChatServerThread의 run메서드안에 case ROOM_INLIST 구현\
-   \- Protocol.ROOM_INLIST : 방 입장인원 목록\
+   \- ChatServerThread의 run메서드안에 case ROOM\_INLIST 구현\
+   \- Protocol.ROOM\_INLIST : 방 입장인원 목록\
    \- MessageRoom클래스에서 말하는 내용이다.
 
 {% content-ref url="and-+/" %}

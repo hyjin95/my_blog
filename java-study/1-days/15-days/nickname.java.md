@@ -61,7 +61,7 @@ getter, setter, 생성자, 인스턴스화 분리, 배열, 이벤트처리, UI(�
   \- Layout뭉개기 = null;\
   \- setBound( x , y , width , height);
 * 사용자가 입력창에 입력하는 값 가져오기\
-  \-** public void SetGender(jtf\_gender.getText( ) );**\
+  \- **public void SetGender(jtf\_gender.getText( ) );**\
   \- jtf에 쓰기 : jtf\_gender.SetText( )\
   \- ( ) : jtf에 무엇을 쓸까요? = get에서 반환된 obj값 = jtf\_gender.getText( );\
   \- getText는 반환타입이 String이다.

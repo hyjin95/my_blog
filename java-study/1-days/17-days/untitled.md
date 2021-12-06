@@ -69,7 +69,7 @@ public class ZipCodeDao {//조회하기
   \- oracle 에서 불러오는 것으로 oracle에 쓰인대로 적혀야 제대로 호출이 된다.\
   \- 띄어쓰기를 항상 주의하자
 * 9번에 변수를 넣는 방법1\
-  \-** **sql.append(" WHERE dong LIKE "+"'"+dong+"%'"); 하거나\
+  \- **** sql.append(" WHERE dong LIKE "+"'"+dong+"%'"); 하거나\
   \- sql.append("'"+dong+"%'"); 을 밑줄에 추가한다.
 * 9번에 변수를 넣는 방법2\
   \- 15번 참고

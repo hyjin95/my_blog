@@ -27,7 +27,7 @@ description: 2020.10.28 - 51일차
   \- 화면, 입력 값을 읽고 응답을 화면에 쓴다.\
   \- html : input, easyui : textbox\
   \- easyui.js와 같은 API를 사용하면 화면 생성시 별도의 태그를 생성해준다.\
-  \- html** id는 JS**가 사용한다.** name은 서버(자바-servlet,jsp)**에서 사용한다.\
+  \- html **id는 JS**가 사용한다. **name은 서버(자바-servlet,jsp)**에서 사용한다.\
   \- name으로 JAVA와 소통한다.
 * **JS**\
   \- 동적처리의 시작, html의 event담당\
@@ -68,13 +68,13 @@ description: 2020.10.28 - 51일차
 ### datebox
 
 * easyui제공 : [http://jeasyui.com/documentation/index.php#](http://jeasyui.com/documentation/index.php#)
-* required옵션 : 
+* required옵션 :&#x20;
 
 ### \<label>
 
 * html\
   \- \<label>이름\</label>\
-    \<input type="text">
+  &#x20; \<input type="text">
 * easyui\
   \- \<input label="이름">
 
@@ -154,7 +154,7 @@ description: 2020.10.28 - 51일차
 
 * Eclipse같은 Tool
 * 깃과 연동 가능
-* 정적 작업 
+* 정적 작업&#x20;
 
 ### 설치 및 설정
 
@@ -162,7 +162,7 @@ description: 2020.10.28 - 51일차
 
 1. 구글 - Visual Studio Code 검색
 2. Window - System Installer - 64 bit 설치
-3. 관리자 모드로 실행 
+3. 관리자 모드로 실행&#x20;
 
 ## Eclipse-Git 설정
 
@@ -173,6 +173,6 @@ description: 2020.10.28 - 51일차
 ![General - Workspace - Build](<../../../.gitbook/assets/3 (31).png>)
 
 * visual studio code와 연동해서 사용할 때에도 필요하다. 자동 동기화 시켜준다.
-* Eclipse : 동적 작업 
+* Eclipse : 동적 작업&#x20;
 
 후기 : 홈트를 위해 요가매트랑 폼롤러를 주문했고 삼성전자 주식을 사버렷다!

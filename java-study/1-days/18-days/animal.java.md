@@ -75,5 +75,5 @@ public class ObjectTest {
 ```
 
 * 8번 : **d.getClass( )**  : 어떤 클래스의 인스턴스인지를 알 수 있도록 객체의 클래스를 반환한다.
-* 9번 :** d.hashCode( )**  : 고유 ID를 말한다. 그 객체가 가지는 고유한 ID
+* 9번 : **d.hashCode( )**  : 고유 ID를 말한다. 그 객체가 가지는 고유한 ID
 * 10번 : **d.toString( )**  : UI 솔루션을 자바코드로 말아서 사용할 때 사용한다.
