@@ -2,7 +2,7 @@
 
 ### git
 
-* [https://git-scm.com/](https://git-scm.com)
+* [https://git-scm.com/](https://git-scm.com/)
 * git-bash 에서 git 입력 > 설치확인
 
 ### 1. git-bash 실행 > 형상관리 디렉토리 만들기
@@ -28,7 +28,7 @@
   \- 명령어 입력이 가능하다.
 * :wq\
   \- 저장 및 vim 에디터 종료
-*  ls -al \
+* &#x20;ls -al \
   \- 생성된 파일 확인
 
 ![cat f1.txt](<../../.gitbook/assets/3 (75).png>)
@@ -43,7 +43,7 @@
 
 * git 디렉토리에서 git status 명령어를 작성하면\
   \- f1.txt라는 파일은 추적되고 있지 않다.
-* f1.txt는 버전관리가 되고있는 gittest파일 안에 있지만 git에게 버전관리를 할 파일이라고 알리지 않았기때문에 해당문서는 git 에게서 무시된다. 
+* f1.txt는 버전관리가 되고있는 gittest파일 안에 있지만 git에게 버전관리를 할 파일이라고 알리지 않았기때문에 해당문서는 git 에게서 무시된다.&#x20;
 
 ![git add, git status](<../../.gitbook/assets/5 (38).png>)
 

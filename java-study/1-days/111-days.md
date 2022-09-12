@@ -22,7 +22,7 @@ description: 2021.01.27 - 112일차
 
 * 커맨더
 * 윈도우명령어/리눅스/깃명령가능
-* [https://cmder.net/](https://cmder.net)
+* [https://cmder.net/](https://cmder.net/)
 
 ### ubuntu 20.04
 
@@ -54,7 +54,7 @@ description: 2021.01.27 - 112일차
 
 * cd.. : 경로나가기
 * cd + 생성한 로컬 폴더 이름
-* git clone + git clone Https url 
+* git clone + git clone Https url&#x20;
 
 ### 3. PyCharm Community 설정
 
@@ -91,7 +91,7 @@ description: 2021.01.27 - 112일차
 ![](<../../.gitbook/assets/10 (1).png>)
 
 * Star up > Environment\
-  set LANG=ko_KR.UTF-8 입력 > Save settings
+  set LANG=ko\_KR.UTF-8 입력 > Save settings
 
 ### 5. gitignore에 가상환경 폴더(venv)추가하기
 
