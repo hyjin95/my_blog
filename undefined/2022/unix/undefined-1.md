@@ -113,3 +113,34 @@
 #### 2. 가상 머신에 설치
 
 * root 계정의 암호를 반드시 기억해야 한다.
+
+1. CentOS 다운로드 - [https://centos.org/](https://centos.org/)\
+   Download > CentOS Linux > Order Version > Archived Versions > 6.10 > isos > x86\_64/ \
+   \> CentOS-6.10-x86\_64-bin-DVD1.iso
+2. 가상머신 소프트웨어 VMware 다운로드 - [https://www.vmware.com/](https://www.vmware.com/)\
+   Workspace > Worstation Player(무료) > Download For Free > 하단 go to downloads > VMware Workstation 16.2.4 Player for Windows 64-bit Operating Systems
+3. VMware 설치\
+   VMware.exe 설치 > Next > 약관동의 Next > 설치경로선택 Next > Next > Next > Install > Finish
+4. VMware 에서 가상머신 만들기\
+   VMware실행 > Create a New Virtual Machine > Install disc image file - CentOS 이미지 파일 지정  / 강의에서는 나중에 설정하기 선택 Next > Linux, CentOS 6 64-bit 선택 Next > 가상 머신 이름, 경로 지정 Next > 디스크 용량 및 싱글/멀티 파일 지정 Next > Finish
+5. 리눅스 운영체제 가상머신에 설치하기\
+   생성한 가상머신 선택 > Edit virtual machine settings >  Hadware CD/DVD Use ISO image file 다운로드한 CentOS 이미지 파일 지정 > OK > 가상머신 Play > 자동 부팅 > Disc Found : SKIP > CentOS CD로 부팅이 된다. > Next > 언어선택 Next > 키보드언어선택 Next > 기본 저장 장치 Next > Y > 호스트명 설정, 네트워크 설정 - 유선 네크워트 변경하기에서 자동연결 선택 Next > 시간설정 Next > root계정 설정 > 모든 공간 사용, 파티션 레이아웃 확인 및 변경 체크 Next > Next > 포맷 > 디스크에 변경사항 기록 > Next > 소프트웨어 설치 - Desktop, 지금선택 Next > 설치 가능한 소프트웨어 확인 및 선택 > CentOS 설치 진행 > 재부팅 > 앞으로 > 라이선스 조항 동의 Next > 사용자 생성 Next > 네트워크 시간 동기화  Next > 완료&#x20;
+6. 시스템 종료\
+   시스템 > 끄기
+
+#### 생성된 파티션 확
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+* 하나의 하드디스크 sda아래 1번 파티션, 2번 파티션이 생성되어있다.
+* sda1는 부팅 영역, sda2 파티션에는 LVM 볼륨그룹이 담겨있다.
+* 볼륨그룹은 root파티션, swap파티션으로 나뉘어있다.\
+  리눅스는 root 파티션 아래 설치된다.
+
+#### 리눅스&#x20;
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>가상머신에 설치한 리눅스</p></figcaption></figure>
+
+* 터미널 - 프로그램 > 시스템도구 > 터미널\
+  &#x20;           \- 바탕화면 우클릭 > Open in Terminal
+* 터미널에서 한/영 전환 - Ctrl+Space

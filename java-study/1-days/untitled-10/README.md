@@ -109,7 +109,7 @@ description: 2020.10.20 45 일차
 
 ### URI
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
 * Uniform Resource Identifier
 * 통합 자원 식별자
