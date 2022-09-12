@@ -370,9 +370,11 @@
     * [출석 수업(1장-3장)](undefined/2021-2/c++/1-3.md)
     * [2강 C++언어의 기초(1)](undefined/2021-2/c++/2-c++-1.md)
     * [3강 C++언어의 기초(2)](undefined/2021-2/c++/3-c++-2.md)
-* [2022](undefined/2022/README.md)
-  * [C프로그래밍](undefined/2022/c/README.md)
-    * [1강.C언어의 개요](undefined/2022/c/1-.c.md)
+* [2022](undefined/2022-2/README.md)
+  * [C프로그래밍](undefined/2022-2/c/README.md)
+    * [1강.C언어의 개요](undefined/2022-2/c/1-.c.md)
+  * [UNIX 프로그래밍](undefined/2022/unix/README.md)
+    * [리눅스 소개](undefined/2022/unix/undefined.md)
 * [Page 1](undefined/page-1.md)
 
 ## STUDY - 참고 <a href="#study-1" id="study-1"></a>
