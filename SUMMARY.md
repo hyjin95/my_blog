@@ -376,7 +376,6 @@
   * [UNIX 프로그래밍](undefined/2022/unix/README.md)
     * [리눅스 소개](undefined/2022/unix/undefined.md)
     * [리눅스 설치](undefined/2022/unix/undefined-1.md)
-* [Page 1](undefined/page-1.md)
 
 ## STUDY - 참고 <a href="#study-1" id="study-1"></a>
 
