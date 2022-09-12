@@ -354,7 +354,7 @@
 ## 방송통신대학교
 
 * [info](undefined/info.md)
-* [2021 - 2학기](undefined/2021-2/README.md)
+* [2021](undefined/2021-2/README.md)
   * [클라우드 컴퓨팅](undefined/2021-2/undefined-2/README.md)
     * [출석 수업](undefined/2021-2/undefined-2/undefined-3.md)
     * [1강.클라우드 컴퓨팅의 이해](undefined/2021-2/undefined-2/1-..md)
