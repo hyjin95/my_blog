@@ -153,7 +153,7 @@ class TOC extends Component {
 ### React Developer Tools
 
 * chrome\
-  [https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm\_source=chrome-ntp-icon](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm\_source=chrome-ntp-icon)
+  [https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?utm_source=chrome-ntp-icon](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related)
 
 ![](<../../.gitbook/assets/1 (139).png>)
 

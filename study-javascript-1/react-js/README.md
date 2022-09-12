@@ -6,7 +6,7 @@
 
 ### React 리액트
 
-[https://ko.reactjs.org/](https://ko.reactjs.org/)
+[https://ko.reactjs.org/](https://ko.reactjs.org)
 
 ### React 개발환경의 종류
 
